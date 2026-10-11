@@ -1,0 +1,33 @@
+name: Publish to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Generate SEO URLs for GitHub Pages
+        run: python3 prepare_seo.py "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+      - name: Assemble public static site
+        run: |
+          mkdir -p dist/app
+          cp index.html landing.css styles.css app.js config.js icon.svg manifest.webmanifest privacy.html terms.html sitemap.xml robots.txt dist/
+          cp app/index.html dist/app/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

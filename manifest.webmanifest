@@ -1,0 +1,18 @@
+{
+  "name": "하루한칸 · 나에게 맞는 하루",
+  "short_name": "하루한칸",
+  "start_url": "./app/",
+  "scope": "./app/",
+  "display": "standalone",
+  "background_color": "#f6f8fc",
+  "theme_color": "#f6f8fc",
+  "description": "나만의 루틴, 일정, 가계부를 쉽게 관리하는 앱",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
