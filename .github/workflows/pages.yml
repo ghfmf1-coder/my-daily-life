@@ -19,6 +19,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Check JavaScript syntax before deployment
+        run: |
+          node --check app.js
+          node --check config.js
       - name: Generate SEO URLs for GitHub Pages
         run: python3 prepare_seo.py "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
       - name: Assemble public static site
