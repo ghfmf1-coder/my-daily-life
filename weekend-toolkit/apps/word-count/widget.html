@@ -1,0 +1,12 @@
+<section class="widget panel" aria-label="글자 수 계산기">
+  <label class="label" for="word-input">계산할 글을 입력해 주세요</label>
+  <textarea id="word-input" rows="9" placeholder="여기에 글을 쓰거나 붙여 넣으면 바로 계산됩니다."></textarea>
+  <div class="stats" aria-live="polite">
+    <div class="stat"><strong id="wc-all">0</strong><span>공백 포함 글자</span></div>
+    <div class="stat"><strong id="wc-no-space">0</strong><span>공백 제외 글자</span></div>
+    <div class="stat"><strong id="wc-words">0</strong><span>단어</span></div>
+    <div class="stat"><strong id="wc-lines">0</strong><span>줄</span></div>
+    <div class="stat"><strong id="wc-bytes">0</strong><span>UTF-8 바이트</span></div>
+  </div>
+  <div class="widget-actions"><button class="btn subtle" type="button" id="wc-clear">내용 지우기</button></div>
+</section>
