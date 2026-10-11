@@ -26,8 +26,38 @@ jobs:
           mkdir -p dist/app
           cp index.html landing.css styles.css app.js config.js icon.svg manifest.webmanifest privacy.html terms.html sitemap.xml robots.txt dist/
           cp app/index.html dist/app/index.html
+          cp 009bd80b09e04b4e82564b5ae044a4e7.txt dist/009bd80b09e04b4e82564b5ae044a4e7.txt
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify deployed pages and sitemap
+        id: website
+        shell: bash
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          ready=false
+          for attempt in 1 2 3 4 5 6; do
+            if curl -fsSL --max-time 15 "${base}/" | grep -q '하루한칸'; then
+              if curl -fsSL --max-time 15 "${base}/sitemap.xml" | grep -q '<urlset'; then
+                if curl -fsSL --max-time 15 "${base}/009bd80b09e04b4e82564b5ae044a4e7.txt" | grep -q '009bd80b09e04b4e82564b5ae044a4e7'; then
+                  ready=true
+                  break
+                fi
+              fi
+            fi
+            echo "Waiting for public site propagation, try ${attempt}/6..."
+            sleep 10
+          done
+          echo "ready=${ready}" >> "$GITHUB_OUTPUT"
+          echo "Public site ready: ${ready}"
+      - name: Notify IndexNow search engines
+        if: steps.website.outputs.ready == 'true'
+        shell: bash
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          result=$(curl -sS --max-time 25 -o /tmp/indexnow-response.txt -w "%{http_code}" --get 'https://api.indexnow.org/indexnow' --data-urlencode "url=${base}/" --data-urlencode "key=009bd80b09e04b4e82564b5ae044a4e7" --data-urlencode "keyLocation=${base}/009bd80b09e04b4e82564b5ae044a4e7.txt" || true)
+          echo "IndexNow response HTTP ${result}; 200/202 means received, not indexed."
+          head -c 600 /tmp/indexnow-response.txt || true
+          echo
