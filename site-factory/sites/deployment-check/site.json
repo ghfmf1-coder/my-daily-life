@@ -1,0 +1,9 @@
+{
+  "slug": "deployment-check",
+  "project": "tb-deployment-check",
+  "title": "작은도구함 배포 검증",
+  "description": "신규 정적 사이트 자동 생성과 클라이언트 실행을 검증하는 비색인 기술 테스트",
+  "approved": false,
+  "domain": null,
+  "canonical_url": null
+}
