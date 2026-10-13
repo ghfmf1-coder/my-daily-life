@@ -1,0 +1,95 @@
+name: Toolbox approved-site auto-deploy
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site-factory/sites/**'
+      - 'site-factory/scripts/**'
+      - '.github/workflows/toolbox-pages.yml'
+  workflow_dispatch:
+    inputs:
+      site:
+        description: 'Approved site slug, or all'
+        type: string
+        required: true
+        default: all
+      attach_domain:
+        description: 'Attach approved custom domain (DNS must be ready)'
+        type: boolean
+        required: true
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: toolbox-pages-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.targets.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run local factory tests
+        run: python3 -m unittest discover -s site-factory/tests -v
+      - name: Find changed approved sites
+        id: targets
+        env:
+          PREVIOUS_SHA: ${{ github.event.before }}
+          REQUESTED_SITE: ${{ inputs.site }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == 'workflow_dispatch' ]]; then
+            python3 site-factory/scripts/targets.py --site "$REQUESTED_SITE" > /tmp/targets.txt
+          else
+            python3 site-factory/scripts/targets.py --before "$PREVIOUS_SHA" --after "$GITHUB_SHA" > /tmp/targets.txt
+          fi
+          cat /tmp/targets.txt
+          grep '^MATRIX=' /tmp/targets.txt | sed 's/^MATRIX=/matrix=/' >> "$GITHUB_OUTPUT"
+  deploy:
+    needs: checks
+    if: needs.checks.outputs.matrix != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        site: ${{ fromJSON(needs.checks.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Cloudflare Wrangler
+        run: npm install --no-save --no-package-lock wrangler@4
+      - name: Syntax-check JavaScript in selected public site
+        env:
+          SITE_SLUG: ${{ matrix.site }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' file; do node --check "$file"; done < <(find "site-factory/sites/$SITE_SLUG/public" -type f -name '*.js' -print0)
+      - name: Verify secrets are configured
+        env:
+          CF_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          test -n "$CF_ID" || { echo 'Missing secret: CLOUDFLARE_ACCOUNT_ID'; exit 1; }
+          test -n "$CF_TOKEN" || { echo 'Missing secret: CLOUDFLARE_API_TOKEN'; exit 1; }
+      - name: Create Pages project if needed, then publish
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          SITE_SLUG: ${{ matrix.site }}
+          ATTACH_DOMAIN: ${{ inputs.attach_domain }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == 'workflow_dispatch' && "$ATTACH_DOMAIN" == 'true' ]]; then
+            python3 site-factory/scripts/deploy_site.py --site "$SITE_SLUG" --attach-domain
+          else
+            python3 site-factory/scripts/deploy_site.py --site "$SITE_SLUG"
+          fi
