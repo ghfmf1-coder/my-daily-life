@@ -108,7 +108,12 @@
     return out;
   }
   function save(){
-    try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));storageWorks=true;return true;}
+    try{
+      localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+      storageWorks=true;
+      if(window.TOOLBOX_CLOUD?.save)void window.TOOLBOX_CLOUD.save(state);
+      return true;
+    }
     catch(e){storageWorks=false;toast('저장 실패: 브라우저 저장 공간을 확인하고 JSON으로 백업하세요.');return false;}
   }
   function activity(label){state.activity.unshift({id:uid(),text:label.slice(0,160),timestamp:nowIso()});state.activity=state.activity.slice(0,60);}
