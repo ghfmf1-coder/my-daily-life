@@ -200,6 +200,23 @@ def check_site(site):
             target=urllib.parse.urljoin(origin+"/en/",item)
             if urllib.parse.urlparse(target).hostname == urllib.parse.urlparse(origin).hostname:
                 check_file(site,result,urllib.parse.urlparse(target).path,kind="script")
+    if site["slug"] == "toolbox-hub":
+        # Metricool can consume these public RSS feeds for owner-authorized autolists.
+        for feed_path in ("/feed.xml", "/en/feed.xml"):
+            rss=check_file(site,result,feed_path,kind="text")
+            if not rss:continue
+            try:
+                data=ET.fromstring(rss["body"])
+                entries=data.findall("./channel/item")
+                links=[(x.findtext("link") or "") for x in entries]
+                record(result,"rss_"+feed_path.strip("/").replace("/","_"),
+                       data.tag=="rss" and data.attrib.get("version")=="2.0"
+                       and bool(entries) and all(x.startswith("https://") for x in links)
+                       and len(links)==len(set(links))
+                       and not any("toolbox-admin" in x or "deployment-check" in x for x in links),
+                       str(len(entries))+" valid RSS entries")
+            except ET.ParseError as ex:
+                record(result,"rss_xml",False,str(ex))
     if site["slug"] == "my-daily-life":
         safe_page(site,result,"/app/",lang="ko",indexable=False)
         safe_page(site,result,"/en/app/",lang="en",indexable=False)
