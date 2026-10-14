@@ -1,19 +1,893 @@
 {
   "schemaVersion": 1,
-  "checkedAt": null,
-  "status": "pending",
+  "checkedAt": "2026-10-14T10:02:14+00:00",
+  "status": "fail",
   "summary": {
-    "sites": 0,
-    "sitePassed": 0,
+    "sites": 6,
+    "sitePassed": 4,
     "siteWarnings": 0,
-    "siteFailed": 0,
-    "browserPassed": 0,
-    "browserFailed": 0,
-    "sourceTestsPassed": false,
-    "issues": 0
+    "siteFailed": 2,
+    "browserPassed": 8,
+    "browserFailed": 2,
+    "sourceTestsPassed": true,
+    "issues": 9
   },
-  "sites": [],
-  "browserChecks": [],
-  "issues": [],
-  "scope": "Maintenance first run not yet completed"
+  "sites": [
+    {
+      "slug": "my-daily-life",
+      "name": "하루한칸",
+      "url": "https://my-daily-life.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "하루한칸 | 루틴 관리·체크리스트·가계부를 한곳에"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "하루한칸은 매일의 루틴 체크리스트, 습관 관리, 목표 달성률, 교대근무 일정, 가계부와 주간 성과를 한곳에서 관리하는 생활 기록 앱입니다. 내 생활에 맞게 목표를 자유롭게 바꿔보세요."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "하루한칸 | 루틴 관리·체크리스트·가계부를 한곳에"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "하루한칸은 매일의 루틴 체크리스트, 습관 관리, 목표 달성률, 교대근무 일정, 가계부와 주간 성과를 한곳에서 관리하는 생활 기록 앱입니다. 내 생활에 맞게 목표를 자유롭게 바꿔보세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://my-daily-life.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP 200, 7915 bytes"
+        },
+        {
+          "check": "svg_icon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 754 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 92 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 303 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "fail",
+          "detail": "entries: 3"
+        },
+        {
+          "check": "page_app",
+          "status": "pass",
+          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "하루한칸 앱 | 내 루틴과 생활 기록"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "내 생활에 맞추는 루틴, 근무 캘린더, 가계부 — 하루한칸"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "noindex,nofollow"
+        },
+        {
+          "check": "page_en_app",
+          "status": "pass",
+          "detail": "HTTP 200, 112ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "하루한칸 | 루틴 관리·체크리스트·가계부를 한곳에"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "하루한칸은 매일의 루틴 체크리스트, 습관 관리, 목표 달성률, 교대근무 일정, 가계부와 주간 성과를 한곳에서 관리하는 생활 기록 앱입니다. 내 생활에 맞게 목표를 자유롭게 바꿔보세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "fail",
+          "detail": "index,follow,max-image-preview:large"
+        }
+      ],
+      "warnings": [],
+      "failures": [
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://my-daily-life.pages.dev/",
+        "icon_favicon.ico: HTTP 200, 7915 bytes",
+        "sitemap_content: entries: 3",
+        "html_lang_en: expected en; got ko",
+        "index_directive_en: index,follow,max-image-preview:large"
+      ]
+    },
+    {
+      "slug": "csv-merge-studio",
+      "name": "CSV 맞춤 병합기 | 열 이름 통일·중복 제거·파일 합치기",
+      "url": "https://tb-csv-merge-studio.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "CSV 맞춤 병합기 | 열 이름 통일·중복 제거·파일 합치기"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "서로 다른 열 이름을 자동으로 매칭하고 직접 수정해 여러 CSV 파일을 하나로 병합하세요. 중복행 제거, UTF-8·CP949 한글 CSV, 엑셀 다운로드용 CSV 지원. 파일은 서버로 전송하지 않"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-csv-merge-studio.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-csv-merge-studio.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-csv-merge-studio.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Merge CSV Files Online | Match Columns & Remove Duplicates"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Free CSV merge tool with automatic column header matching, custom field mapping, duplicate removal, and Excel-"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-csv-merge-studio.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-csv-merge-studio.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-csv-merge-studio.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 522 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 82 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 239 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        },
+        {
+          "check": "script_csv-core.js",
+          "status": "pass",
+          "detail": "HTTP 200, 7673 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 7685 bytes"
+        },
+        {
+          "check": "script_csv-core.js",
+          "status": "pass",
+          "detail": "HTTP 200, 7673 bytes"
+        },
+        {
+          "check": "script_en_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 7427 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "deployment-check",
+      "name": "작은도구함 배포 검증",
+      "url": "https://tb-deployment-check.pages.dev/",
+      "type": "internal",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_internal",
+          "status": "pass",
+          "detail": "HTTP 200, 216ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "배포 연결 확인 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "작은도구함 신규 사이트 자동 배포를 기술적으로 확인하는 임시 테스트 화면입니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "noindex,nofollow,noarchive"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 508 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 25 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "noindex internal"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 110 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 0"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 529 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "manuscript-lens",
+      "name": "웹소설 원고돋보기 | 반복 표현·대사·문장 분석",
+      "url": "https://tb-manuscript-lens.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "웹소설 원고돋보기 | 반복 표현·대사·문장 검사"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "웹소설 원고를 붙여넣으면 반복 단어·긴 문장·대사 비율·문단 길이를 분석하고 문제 위치를 표시하는 무료 퇴고 도구."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-manuscript-lens.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-manuscript-lens.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-manuscript-lens.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Novel Manuscript Analyzer | Repeated Words, Dialogue & Long Paragraphs"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Free novel manuscript analysis and editing helper. Find repeated English words, long lines, dialogue-line rati"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-manuscript-lens.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-manuscript-lens.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-manuscript-lens.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 637 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 81 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 237 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3320 bytes"
+        },
+        {
+          "check": "script_en_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3422 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "novel-planner",
+      "name": "웹소설 연재 설계실 | 회차·복선·인물 관리",
+      "url": "https://tb-novel-planner.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 215ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "웹소설 연재 설계실 | 복선·회차·인물 관리"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "웹소설 회차별 사건과 복선의 심기·회수, 인물 등장 회차를 한 화면에서 관리하고 JSON으로 백업하는 무료 연재 설계 도구."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-novel-planner.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-novel-planner.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-novel-planner.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 179ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Web Novel Plot Planner | Track Chapters, Foreshadowing & Characters"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Free web novel plot planner: organize chapters, track foreshadowing and payoffs, and manage character appearan"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-novel-planner.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-novel-planner.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-novel-planner.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 621 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 79 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 233 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3456 bytes"
+        },
+        {
+          "check": "script_en_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3494 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "toolbox-admin",
+      "name": "작은 도구함 통합 관리자 v1.2",
+      "url": "https://tb-toolbox-admin.pages.dev/",
+      "type": "internal",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_internal",
+          "status": "pass",
+          "detail": "HTTP 200, 203ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "작은 도구함 | 운영 콘솔"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "작은 도구함 통합 관리자 운영 콘솔 v1.2. 사이트, 아이디어, 작업, 성과, 정책과 배포 상태를 관리합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "noindex,nofollow,noarchive"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 685 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 26 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "noindex internal"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 110 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 0"
+        },
+        {
+          "check": "script_admin-config.js",
+          "status": "fail",
+          "detail": "HTTP 200, 265 bytes"
+        },
+        {
+          "check": "script_auth.js",
+          "status": "pass",
+          "detail": "HTTP 200, 7560 bytes"
+        },
+        {
+          "check": "admin_login_gate",
+          "status": "pass",
+          "detail": "login gate present"
+        },
+        {
+          "check": "text_auth.js",
+          "status": "pass",
+          "detail": "HTTP 200, 7560 bytes"
+        },
+        {
+          "check": "text_admin-config.js",
+          "status": "pass",
+          "detail": "HTTP 200, 265 bytes"
+        },
+        {
+          "check": "text_sites-catalog.json",
+          "status": "pass",
+          "detail": "HTTP 200, 1530 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": [
+        "script_admin-config.js: HTTP 200, 265 bytes"
+      ]
+    }
+  ],
+  "browserChecks": [
+    {
+      "name": "Korean plot planner",
+      "url": "https://tb-novel-planner.pages.dev/",
+      "device": "desktop",
+      "status": "pass",
+      "detail": "Local chapter and plot thread functions",
+      "elapsedMs": 302
+    },
+    {
+      "name": "English plot planner",
+      "url": "https://tb-novel-planner.pages.dev/en/",
+      "device": "mobile",
+      "status": "pass",
+      "detail": "English chapter and character saved locally on mobile",
+      "elapsedMs": 225
+    },
+    {
+      "name": "Korean manuscript",
+      "url": "https://tb-manuscript-lens.pages.dev/",
+      "device": "desktop",
+      "status": "pass",
+      "detail": "Korean word repetition detection",
+      "elapsedMs": 196
+    },
+    {
+      "name": "English manuscript",
+      "url": "https://tb-manuscript-lens.pages.dev/en/",
+      "device": "mobile",
+      "status": "pass",
+      "detail": "English phrase search and repetition detection",
+      "elapsedMs": 196
+    },
+    {
+      "name": "Korean CSV merger",
+      "url": "https://tb-csv-merge-studio.pages.dev/",
+      "device": "desktop",
+      "status": "pass",
+      "detail": "CSV header mapping and deduplication",
+      "elapsedMs": 255
+    },
+    {
+      "name": "English CSV merger",
+      "url": "https://tb-csv-merge-studio.pages.dev/en/",
+      "device": "mobile",
+      "status": "pass",
+      "detail": "English CSV header mapping and deduplication",
+      "elapsedMs": 209
+    },
+    {
+      "name": "Haru English landing",
+      "url": "https://my-daily-life.pages.dev/en/",
+      "device": "mobile",
+      "status": "fail",
+      "detail": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for getByRole('heading', { name: /better routine/i }) to be visible\n",
+      "elapsedMs": 14180
+    },
+    {
+      "name": "Haru English app",
+      "url": "https://my-daily-life.pages.dev/en/app/",
+      "device": "mobile",
+      "status": "fail",
+      "detail": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#authForm') to be visible\n",
+      "elapsedMs": 14146
+    },
+    {
+      "name": "Admin authentication gate",
+      "url": "https://tb-toolbox-admin.pages.dev/",
+      "device": "mobile",
+      "status": "pass",
+      "detail": "Owner login required before dashboard rendering",
+      "elapsedMs": 171
+    },
+    {
+      "name": "Technical deployment smoke",
+      "url": "https://tb-deployment-check.pages.dev/",
+      "device": "desktop",
+      "status": "pass",
+      "detail": "Deployment-check JavaScript functional",
+      "elapsedMs": 237
+    }
+  ],
+  "issues": [
+    {
+      "scope": "my-daily-life",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "my-daily-life",
+      "details": "canonical_en: https://my-daily-life.pages.dev/"
+    },
+    {
+      "scope": "my-daily-life",
+      "details": "icon_favicon.ico: HTTP 200, 7915 bytes"
+    },
+    {
+      "scope": "my-daily-life",
+      "details": "sitemap_content: entries: 3"
+    },
+    {
+      "scope": "my-daily-life",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "my-daily-life",
+      "details": "index_directive_en: index,follow,max-image-preview:large"
+    },
+    {
+      "scope": "toolbox-admin",
+      "details": "script_admin-config.js: HTTP 200, 265 bytes"
+    },
+    {
+      "scope": "browser:Haru English landing",
+      "details": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for getByRole('heading', { name: /better routine/i }) to be visible\n"
+    },
+    {
+      "scope": "browser:Haru English app",
+      "details": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#authForm') to be visible\n"
+    }
+  ],
+  "scope": "Factory registry + Haruhankan; private manual-only records excluded",
+  "definitions": {
+    "pass": "Checks passed (not a guarantee of no defects)",
+    "warning": "Non-critical issue or missing optional asset",
+    "fail": "Checks detected actionable failures"
+  }
 }
