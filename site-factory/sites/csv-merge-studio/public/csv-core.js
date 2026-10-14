@@ -124,7 +124,7 @@
         file.mapping.forEach((target,i)=>{if(target)record[target]=row[i]??''});
         if(key && String(record[key]).trim()){
           const normValue=String(record[key]).normalize('NFKC').trim().toLowerCase();
-          const nkey=key==='전화번호'?normValue.replace(/[\s()+\-]/g,''):normValue;
+          const nkey=(key==='전화번호'||key==='Phone')?normValue.replace(/[\s()+\-]/g,''):normValue;
           if(lookup.has(nkey)){
             ignored++;
             if(keep==='last')kept[lookup.get(nkey)]=record;

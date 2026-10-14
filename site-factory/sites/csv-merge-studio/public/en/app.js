@@ -37,7 +37,7 @@
       const head=node('h3',file.name+' · '+file.headers.length+' input columns');block.append(head);
       file.headers.forEach((header,ci)=>{
         const row=node('div');row.className='mapping-row';
-        const src=node('span',header);src.title='원본 열: '+header;
+        const src=node('span',header);src.title='original column: '+header;
         const arrow=node('i','→');arrow.setAttribute('aria-hidden','true');
         const select=node('select');
         select.setAttribute('aria-label',file.name+' — '+header+' column mapping');

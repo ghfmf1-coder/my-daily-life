@@ -5,6 +5,11 @@ on:
     paths:
       - 'site-factory/sites/**'
       - 'site-factory/scripts/**'
+      - 'site-factory/tests/**'
+      - 'en/**'
+      - 'index.html'
+      - 'sitemap.xml'
+      - 'robots.txt'
       - '.github/workflows/toolbox-pages.yml'
   workflow_dispatch:
     inputs:
