@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /app/
-Sitemap: https://ghfmf1-coder.github.io/my-daily-life/sitemap.xml
+Disallow: /en/app/
+Sitemap: https://my-daily-life.pages.dev/sitemap.xml

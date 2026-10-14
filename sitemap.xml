@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ghfmf1-coder.github.io/my-daily-life/</loc></url>
-  <url><loc>https://ghfmf1-coder.github.io/my-daily-life/privacy.html</loc></url>
-  <url><loc>https://ghfmf1-coder.github.io/my-daily-life/terms.html</loc></url>
+  <url><loc>https://my-daily-life.pages.dev/</loc></url>
+  <url><loc>https://my-daily-life.pages.dev/en/</loc></url>
+  <url><loc>https://my-daily-life.pages.dev/privacy.html</loc></url>
+  <url><loc>https://my-daily-life.pages.dev/terms.html</loc></url>
 </urlset>
