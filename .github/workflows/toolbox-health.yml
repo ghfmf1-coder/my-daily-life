@@ -1,0 +1,170 @@
+name: Toolbox daily maintenance
+on:
+  schedule:
+    - cron: '20 0 * * *' # UTC; 09:20 KST
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Toolbox approved-site auto-deploy']
+    types: [completed]
+  push:
+    branches: [main]
+    paths: ['.github/workflows/toolbox-health.yml', 'site-factory/monitoring/**']
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: toolbox-automated-health
+  cancel-in-progress: false
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Python and CSV regression suite
+        shell: bash
+        run: |
+          set +e
+          python3 -m unittest discover -s site-factory/tests -v > /tmp/source.log 2>&1
+          A=$?
+          node site-factory/tests/test_csv_core.js >> /tmp/source.log 2>&1
+          B=$?
+          cat /tmp/source.log
+          if [[ "$A" -eq 0 && "$B" -eq 0 ]]; then echo SOURCE_OK=1 >> "$GITHUB_ENV"; else echo SOURCE_OK=0 >> "$GITHUB_ENV"; fi
+          exit 0
+      - name: HTTPS metadata sitemap and asset health
+        shell: bash
+        run: |
+          set +e
+          python3 site-factory/monitoring/check_sites.py --output /tmp/live.json
+          echo "LIVE_RC=$?" >> "$GITHUB_ENV"
+          exit 0
+      - name: Install Chromium and Wrangler
+        id: tools
+        continue-on-error: true
+        run: |
+          npm install --no-save --no-package-lock playwright@1.55.0 wrangler@4
+          npx --no-install playwright install --with-deps chromium
+      - name: Run desktop and mobile functional smoke tests
+        shell: bash
+        env:
+          TOOLS_OUTCOME: ${{ steps.tools.outcome }}
+        run: |
+          set +e
+          if [[ "$TOOLS_OUTCOME" == "success" ]]; then
+            node site-factory/monitoring/browser_smoke.js --output /tmp/browser.json
+            CODE=$?
+          else
+            echo 'Chromium setup failed'
+            CODE=1
+          fi
+          echo "BROWSER_RC=$CODE" >> "$GITHUB_ENV"
+          exit 0
+      - name: Merge results and mark incidents
+        shell: bash
+        run: |
+          set +e
+          python3 site-factory/monitoring/merge_report.py --live /tmp/live.json --browser /tmp/browser.json --source-ok "$SOURCE_OK" --output /tmp/maintenance.json
+          echo "REPORT_RC=$?" >> "$GITHUB_ENV"
+          python3 - <<'PY'
+          import json,os
+          d=json.load(open('/tmp/maintenance.json',encoding='utf8'))
+          s=d['summary']
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as f:
+            f.write('## Automated Small Toolbox maintenance\n')
+            f.write(f"- **{d['status']}**, sites={s['sites']}, site errors={s['siteFailed']}\n")
+            f.write(f"- Browser: {s['browserPassed']} passed, {s['browserFailed']} failed\n")
+            f.write(f"- Source regression passed: {s['sourceTestsPassed']}\n")
+          PY
+          exit 0
+      - name: Archive maintenance details
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: toolbox-maintenance-diagnostics
+          path: |
+            /tmp/live.json
+            /tmp/browser.json
+            /tmp/maintenance.json
+            /tmp/source.log
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Store and deploy latest manager report
+        id: publish
+        continue-on-error: true
+        shell: bash
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -s /tmp/maintenance.json
+          file=site-factory/sites/toolbox-admin/public/maintenance-report.json
+          cp /tmp/maintenance.json "$file"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$file"
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update maintenance report [skip ci]"
+            SUCCESS=0
+            for i in 1 2 3; do
+              if git pull --rebase origin main && git push origin HEAD:main; then SUCCESS=1; break; fi
+              sleep 3
+            done
+            test "$SUCCESS" = 1
+          fi
+          test -n "$CLOUDFLARE_ACCOUNT_ID" && test -n "$CLOUDFLARE_API_TOKEN"
+          npm install --no-save --no-package-lock wrangler@4
+          python3 site-factory/scripts/deploy_site.py --site toolbox-admin
+      - name: Create or resolve one diagnostic GitHub issue
+        if: always()
+        continue-on-error: true
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
+        run: |
+          set +e
+          TITLE='[작은도구함] 자동 유지보수 점검 실패'
+          ISSUE=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --json number,title --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1)
+          python3 - <<'PY'
+          import json,os
+          try:d=json.load(open('/tmp/maintenance.json',encoding='utf8'))
+          except Exception:d={'status':'fail','issues':[{'scope':'report','details':'No report produced'}]}
+          with open('/tmp/maintenance-issue.md','w',encoding='utf8') as f:
+            f.write('### Automatic maintenance regression\n\n')
+            f.write(f"Status: {d.get('status')}\n")
+            f.write(f"Run: {os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}\n\n")
+            for x in d.get('issues',[])[:15]:f.write(f"- {x.get('scope','unknown')}: {x.get('details','error')}\n")
+            f.write('\nPublic-site diagnostics only; no credentials or customer data.\n')
+          PY
+          if [[ "$REPORT_RC" != 0 || "$PUBLISH_OUTCOME" != success ]]; then
+            if [[ -n "$ISSUE" ]]; then
+              gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body-file /tmp/maintenance-issue.md
+            else
+              gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --body-file /tmp/maintenance-issue.md
+            fi
+          elif [[ -n "$ISSUE" ]]; then
+            gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body 'Automated verification has recovered.'
+            gh issue close "$ISSUE" --repo "$GITHUB_REPOSITORY" --reason completed
+          fi
+          exit 0
+      - name: Fail job on unhealthy sites or failed report publishing
+        if: always()
+        env:
+          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
+        run: |
+          test "$SOURCE_OK" = 1
+          test "$LIVE_RC" = 0
+          test "$BROWSER_RC" = 0
+          test "$REPORT_RC" = 0
+          test "$PUBLISH_OUTCOME" = success
