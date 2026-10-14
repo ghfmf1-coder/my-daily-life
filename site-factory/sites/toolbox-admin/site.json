@@ -1,8 +1,8 @@
 {
   "slug": "toolbox-admin",
   "project": "tb-toolbox-admin",
-  "title": "작은도구함 운영 현황판",
-  "description": "작은도구함 사이트 목록과 배포 검증 상태를 표시하는 비색인 운영 현황 페이지",
+  "title": "작은 도구함 통합 관리자 v1.2",
+  "description": "기존 운영 콘솔 v1.2를 기반으로 사이트·아이디어·작업·성과·정책을 관리하고 웹소설 도구를 등록한 비색인 내부 관리 페이지",
   "approved": true,
   "domain": null,
   "canonical_url": null
