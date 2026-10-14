@@ -168,39 +168,43 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     shutil.copytree(src, out)
     canonical = (data.get('canonical_url') or f"https://{data['project']}.pages.dev").rstrip('/')
     html_pages = sorted(p for p in out.rglob('*.html') if p.is_file())
-    # Admin and technical smoke-test environments must never appear in public sitemaps.
+    # Private admin and smoke tests must not appear in public sitemaps.
     robots_source = out / 'robots.txt'
     disallow_all = robots_source.is_file() and bool(re.search(
-        r'(?im)^\\s*Disallow:\\s*/\\s*$', robots_source.read_text(encoding='utf-8')))
-    localized = data.get('locales') == ['ko','en']
-    alternates = {'ko': canonical + '/', 'en': canonical + '/en/'} if localized else {}
+        r'(?im)^\s*Disallow:\s*/\s*$', robots_source.read_text(encoding='utf-8')))
+    localized = data.get('locales') == ['ko', 'en']
+    alternatives = {'ko': canonical + '/', 'en': canonical + '/en/'} if localized else {}
     indexed_pages = []
     for p in html_pages:
         content = p.read_text(encoding='utf-8')
         rel = p.relative_to(out).as_posix()
         if 'rel="icon"' not in content and "rel='icon'" not in content:
-            icon_link = '<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">'
-            content = content.replace('</head>', icon_link + '\\n</head>', 1)
-        page_url = canonical + ('/' if rel == 'index.html' else '/en/' if rel == 'en/index.html' else '/' + rel)
+            content = content.replace('</head>',
+                '<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">\n</head>', 1)
+        page_url = canonical + ('/' if rel == 'index.html' else
+                                '/en/' if rel == 'en/index.html' else '/' + rel)
         if 'rel="canonical"' not in content and "rel='canonical'" not in content:
-            link = '<link rel="canonical" href="' + escape(page_url, quote=True) + '">'
-            content = content.replace('</head>', link + '\\n</head>', 1)
-        if localized and rel in ('index.html','en/index.html') and 'hreflang=' not in content:
-            tag = ''.join('<link rel="alternate" hreflang="' + language + '" href="' +
-                          escape(url, quote=True) + '">' for language, url in alternates.items())
-            tag += '<link rel="alternate" hreflang="x-default" href="' + escape(alternates['ko'],quote=True) + '">'
-            content = content.replace('</head>', tag + '\\n</head>', 1)
+            content = content.replace('</head>',
+                '<link rel="canonical" href="' + escape(page_url, quote=True) + '">\n</head>', 1)
+        if localized and rel in ('index.html', 'en/index.html') and 'hreflang=' not in content:
+            tags = ''.join('<link rel="alternate" hreflang="' + lang + '" href="' +
+                           escape(url, quote=True) + '">' for lang, url in alternatives.items())
+            tags += '<link rel="alternate" hreflang="x-default" href="' + \
+                    escape(alternatives['ko'], quote=True) + '">'
+            content = content.replace('</head>', tags + '\n</head>', 1)
         p.write_text(content, encoding='utf-8')
-        is_noindex = bool(re.search(r'<meta[^>]+name=["\\\']robots["\\\'][^>]*content=["\\\'][^"\\\']*noindex', content, flags=re.I))
-        if not disallow_all and not is_noindex and not any(x in {'admin','private'} for x in p.parts):
+        is_noindex = any('noindex' in tag.lower() for tag in
+                         re.findall(r'<meta[^>]+>', content, flags=re.I)
+                         if 'name="robots"' in tag.lower() or "name='robots'" in tag.lower())
+        if not disallow_all and not is_noindex and not any(x in {'admin', 'private'} for x in p.parts):
             indexed_pages.append(page_url)
-    # AUTO_BRAND_FAVICON: a unique square favicon for every site, localized paths inherit it.
     if not (out / 'favicon.svg').is_file():
         (out / 'favicon.svg').write_text(render_icon(data['title'], slug), encoding='utf-8')
     if not (out / 'sitemap.xml').exists():
-        xml = '<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n'
-        xml += ''.join('  <url><loc>' + escape(url) + '</loc></url>\\n' for url in indexed_pages)
-        (out / 'sitemap.xml').write_text(xml + '</urlset>\\n',encoding='utf-8')
+        xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        xml += ''.join('  <url><loc>' + escape(url) + '</loc></url>\n' for url in indexed_pages)
+        (out / 'sitemap.xml').write_text(xml + '</urlset>\n', encoding='utf-8')
     if not (out / 'robots.txt').exists():
-        (out / 'robots.txt').write_text('User-agent: *\\nAllow: /\\nSitemap: ' + canonical + '/sitemap.xml\\n',encoding='utf-8')
+        (out / 'robots.txt').write_text(
+            'User-agent: *\nAllow: /\nSitemap: ' + canonical + '/sitemap.xml\n',encoding='utf-8')
     return data, canonical
