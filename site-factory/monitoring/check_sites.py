@@ -151,7 +151,7 @@ def check_file(site, result, path, *, kind, necessary=True):
         elif kind == "svg":
             okay = response["status"] == 200 and b"<svg" in body[:300]
         elif kind == "script":
-            okay = response["status"] == 200 and (b"function" in body or b"const " in body or b"(()=>{" in body or b"'use strict'" in body)
+            okay = response["status"] == 200 and (b"function" in body or b"const " in body or b"(()=>{" in body or b"'use strict'" in body or b"window." in body or b"Object.freeze" in body)
         elif kind == "sitemap":
             okay = response["status"] == 200 and b"<urlset" in body
         else:

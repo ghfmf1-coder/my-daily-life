@@ -41,6 +41,11 @@ jobs:
           cat /tmp/source.log
           if [[ "$A" -eq 0 && "$B" -eq 0 ]]; then echo SOURCE_OK=1 >> "$GITHUB_ENV"; else echo SOURCE_OK=0 >> "$GITHUB_ENV"; fi
           exit 0
+      - name: Inspect root Cloudflare deployment configuration
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 site-factory/monitoring/cloudflare_root_info.py
       - name: HTTPS metadata sitemap and asset health
         shell: bash
         run: |
