@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const STORAGE_KEY = 'small-toolbox-admin-v1'; // keep browser data from earlier releases
-  const VIEWS = {overview:'전체 현황',sites:'사이트 관리',domains:'도메인 관리',ideas:'아이디어 검토',tasks:'작업 관리',traffic:'방문자 분석',metrics:'성과 기록',policies:'정책·색인',maintenance:'자동 유지보수',settings:'백업·설정'};
+  const VIEWS = {overview:'전체 현황',sites:'사이트 관리',domains:'도메인 관리',ideas:'아이디어 검토',tasks:'작업 관리',traffic:'방문자 분석',metrics:'성과 기록',policies:'정책·색인',maintenance:'자동 유지보수',promotion:'홍보 운영',settings:'백업·설정'};
   const STATUS = {
     site:{review:'상태 확인',planning:'기획',build:'개발 중',testing:'테스트',live:'운영 중',paused:'중단'},
     domain:{planned:'구매 예정',registered:'등록 완료',connected:'DNS 연결',issue:'문제 확인',expired:'만료'},
@@ -29,6 +29,7 @@
   let state;
   const analyticsView = {days: 1, loading: false, started: false, data: null, error: ''};
   const maintenance = {data:null,error:'첫 자동 점검을 기다리고 있습니다.'};
+  const promotion={data:null,error:''};
 
   // 과거 대화에서 실제로 검토한 이름·제약만 기록. 승인 또는 수요 검증으로 간주하지 않는다.
   const SEED_IDEAS = [
@@ -197,6 +198,65 @@
     }catch(ex){maintenance.error=String(ex.message||ex);}
     if(view==='maintenance'||view==='overview')render();
   }
+
+  function promotionView(){
+    const p=promotion.data;
+    let content=header('홍보 운영','사이트별 한국어·영어 홍보 문안과 허용되는 배포 채널을 준비합니다. 실제 외부 게시 전에 운영자 확인이 필요합니다.');
+    content+='<div class="notice"><strong>✅ 자동 준비, ✋ 게시 전 최종 확인</strong> — 도구 소개·유입 확인용 링크는 자동 생성합니다. 관련 없는 게시판 자동 댓글, 무차별 게시, 가짜 평가, 업보트 요청은 하지 않습니다. Google·네이버 색인 여부는 별도 검증이 필요합니다.</div>';
+    if(!p)return content+'<div class="notice warn">⏳ '+esc(promotion.error||'홍보 계획을 불러오는 중입니다.')+'</div>';
+    const known=new Map((p.channels||[]).map(x=>[x.id,x]));
+    for(const tool of p.sites||[]){
+      const needs=tool.status!=='draft-ready';
+      const chunks=['<div class="panel-body">',
+        '<div class="item-title">'+esc(tool.title)+'</div>',
+        '<p class="status-text">'+esc(tool.url)+'</p>'];
+      if(needs){
+        chunks.push('<div class="notice warn">홍보 문안의 실제 기능·정책 확인이 필요합니다. 검증 전 자동 게시하거나 복사본을 생성하지 않습니다.</div>');
+      }else{
+        for(const lang of tool.langs||[]){
+          const draft=tool.copy?.[lang];
+          if(!draft)continue;
+          chunks.push('<div class="detail-note" style="margin:13px 0">',
+            '<h3>'+esc(lang==='ko'?'한국어 홍보 문안':'English promotion draft')+'</h3>',
+            '<p style="white-space:pre-line">'+esc(draft.title)+'</p>',
+            '<p style="white-space:pre-line;margin-top:9px">'+esc(draft.copy)+'</p>',
+            '<button type="button" class="btn secondary" data-action="promo-copy" data-slug="'+esc(tool.slug)+'" data-lang="'+esc(lang)+'" data-channel="community">문안 + 홍보 링크 복사</button>',
+            '</div>');
+        }
+        chunks.push('<h3 style="margin:18px 0 9px">배포 채널 (게시 전 규칙 확인)</h3>');
+        for(const id of tool.recommendedChannels||[]){
+          const ch=known.get(id);if(!ch)continue;
+          chunks.push('<div class="work-item"><span class="work-dot"></span><div>',
+            '<h3>'+esc(ch.name)+' · '+esc(ch.audience)+'</h3>',
+            '<p>'+esc(ch.mode)+' · '+esc(ch.rule)+'</p>',
+            '<div style="margin:6px 0">'+link(ch.url,'공식 안내 ↗')+'</div>',
+            '<button type="button" class="btn small secondary" data-action="promo-copy" data-slug="'+esc(tool.slug)+'" data-lang="en" data-channel="'+esc(id)+'">English 문안과 전용 링크 복사</button>',
+            '</div></div>');
+        }
+      }
+      chunks.push('</div>');
+      content+=panel(tool.title,needs?'검토 대기':'한국어·영어 초안 준비 완료',chunks.join(''));
+    }
+    return content;
+  }
+  async function refreshPromotion(){
+    try{
+      const response=await fetch('/promotion-packets.json',{cache:'no-store'});
+      if(!response.ok)throw Error('HTTP '+response.status);
+      const data=await response.json();
+      if(!data || !Array.isArray(data.sites) || !Array.isArray(data.channels))throw Error('잘못된 홍보 데이터 형식');
+      promotion.data=data;promotion.error='';
+    }catch(ex){promotion.error=String(ex.message||ex)}
+    if(view==='promotion')render();
+  }
+  async function copyPromotion(slug,lang,channel){
+    const tool=promotion.data?.sites?.find(x=>x.slug===slug);
+    const draft=tool?.copy?.[lang],source=tool?.shareLinks?.[channel]?.[lang];
+    if(!draft || !source){toast('이 언어 또는 홍보 채널에 준비된 문안이 없습니다.');return;}
+    const text=[draft.title,'',draft.copy,'',source].join('\n');
+    try{await navigator.clipboard.writeText(text);toast('문안과 전용 링크를 복사했습니다. 게시판 정책 확인 후 직접 게시하세요.');}
+    catch{toast('클립보드 권한이 없어 복사하지 못했습니다. 브라우저 권한을 확인하세요.');}
+  }
   const tiny = (type,id) => `<div class="split-actions"><button class="tiny-action" data-action="edit-${type}" data-id="${esc(id)}">수정</button><button class="tiny-action danger-text" data-action="delete-${type}" data-id="${esc(id)}">삭제</button></div>`;
   function sites(){
     const rows=state.sites.map(s=>`<tr data-search="${esc([s.name,s.category,s.language,s.url].join(' ').toLowerCase())}" data-status="${esc(s.status)}"><td><div class="item-title">${esc(s.name)}</div><div class="sub-line">${esc(s.category||'미분류')} · ${esc(s.language||'언어 미입력')}</div></td><td>${badge(s.status,STATUS.site)}</td><td>${esc(s.host||'미기록')}</td><td>${badge(s.google,STATUS.index)}</td><td>${badge(s.policy,STATUS.policy)}</td><td>${link(s.url,'사이트 ↗')} <span class="hide-mobile">${link(s.repo,'GitHub ↗')}</span></td><td>${tiny('site',s.id)}</td></tr>`).join('');
@@ -294,7 +354,7 @@
     document.getElementById('breadcrumb').textContent=VIEWS[view];
     document.querySelectorAll('.nav-btn').forEach(x=>x.classList.toggle('active',x.dataset.view===view));
     document.getElementById('navSiteCount').textContent=state.sites.length;
-    host.innerHTML=({overview,sites,domains,ideas,tasks,traffic,metrics,policies,maintenance:maintenanceView,settings:adminPanel}[view])();
+    host.innerHTML=({overview,sites,domains,ideas,tasks,traffic,metrics,policies,maintenance:maintenanceView,promotion:promotionView,settings:adminPanel}[view])();
     document.getElementById('sidebar').classList.remove('open');
     if(view==='traffic' && !analyticsView.started)queueMicrotask(refreshAnalytics);
   }
@@ -462,6 +522,7 @@
     const nav=e.target.closest('.nav-btn');if(nav){view=nav.dataset.view;render();return;}
     const b=e.target.closest('[data-action]');if(!b)return;
     const action=b.dataset.action;
+    if(action==='promo-copy'){void copyPromotion(b.dataset.slug,b.dataset.lang,b.dataset.channel);return;}
     if(action==='goto'){view=b.dataset.view;render();}
     else if(action==='analytics-reload')refreshAnalytics();
     else if(action==='analytics-days'){analyticsView.days=Number(b.dataset.days)||1;refreshAnalytics();}
@@ -551,6 +612,7 @@
   load();registerApprovedSites();render();
   void refreshSiteCatalog();
   void refreshMaintenance();
+  void refreshPromotion();
   setInterval(()=>void refreshMaintenance(),30*60*1000);
   // Browser-only smoke-test hooks for automated local testing, not a remote API.
   window.__toolboxTest = {navigate(name){if(VIEWS[name]){view=name;render();}},getCount(type){return state[type]?.length||0;},readState(){return JSON.parse(JSON.stringify(state));},openEditor};
