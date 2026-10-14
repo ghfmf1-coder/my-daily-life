@@ -10,7 +10,7 @@ from urllib.parse import urlencode
 from factory import ROOT, SITES, read_site, site_list
 
 SOURCE = ROOT / "marketing" / "briefs.json"
-CHANNEL_IDS = {"showhn", "producthunt", "community", "blog"}
+CHANNEL_IDS = {"producthunt", "community", "blog"}
 def packet_url(url: str, source: str, slug: str, *, language: str = "ko") -> str:
     from urllib.parse import urlsplit, urlunsplit
     if source not in CHANNEL_IDS: raise ValueError("Unknown promotion channel")
@@ -19,7 +19,7 @@ def packet_url(url: str, source: str, slug: str, *, language: str = "ko") -> str
     if parsed.scheme != "https" or not parsed.hostname or parsed.query or parsed.fragment:
         raise ValueError("Valid HTTPS canonical required")
     if language=="en":parsed=parsed._replace(path=parsed.path.rstrip("/")+"/en/")
-    params=urlencode({"utm_source":source,"utm_medium":"community" if source in ("showhn","community") else "referral",
+    params=urlencode({"utm_source":source,"utm_medium":"community" if source == "community" else "referral",
                        "utm_campaign":"toolbox_"+slug.replace("-","_")})
     return urlunsplit(parsed._replace(query=params))
 def build_packets():

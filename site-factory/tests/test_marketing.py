@@ -30,9 +30,9 @@ class MarketingTests(unittest.TestCase):
    self.assertNotIn('tb-toolbox-admin.pages.dev/',ko)
    self.assertNotIn('AUTO_CATALOG_CARDS',ko)
  def test_tracking_links_preserve_language_and_canonical(self):
-  x=marketing.packet_url("https://tb-a.pages.dev/","showhn","a",language="en")
+  x=marketing.packet_url("https://tb-a.pages.dev/","community","a",language="en")
   self.assertTrue(x.startswith("https://tb-a.pages.dev/en/"))
-  self.assertIn("utm_source=showhn",x)
+  self.assertIn("utm_source=community",x)
   with self.assertRaises(ValueError):
-   marketing.packet_url("javascript:alert(1)","showhn","a")
+   marketing.packet_url("javascript:alert(1)","community","a")
 if __name__=='__main__':unittest.main()

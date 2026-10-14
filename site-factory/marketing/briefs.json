@@ -2,14 +2,6 @@
   "schemaVersion": 1,
   "channels": [
     {
-      "id": "showhn",
-      "name": "Show HN",
-      "url": "https://news.ycombinator.com/showhn.html",
-      "audience": "해외 개발자·도구 이용자",
-      "mode": "계정 로그인 후 직접 게시",
-      "rule": "실제로 작동하는 도구, 기능 설명과 직접 사용 링크가 중요. 동일 프로젝트 반복 투고 금지."
-    },
-    {
       "id": "producthunt",
       "name": "Product Hunt",
       "url": "https://www.producthunt.com/launch",
@@ -60,7 +52,6 @@
         "copy": "I built a free browser-only CSV merge tool for mismatched headers. Map 'Customer Name' and 'Full Name' to 'Name', choose a deduplication key, preview the merged rows, and download a spreadsheet-friendly CSV. Your files stay in the browser. I'd appreciate feedback from people who routinely clean spreadsheet exports."
       },
       "channels": [
-        "showhn",
         "producthunt",
         "community",
         "blog"
@@ -77,8 +68,7 @@
       },
       "channels": [
         "community",
-        "blog",
-        "showhn"
+        "blog"
       ]
     },
     "manuscript-lens": {
@@ -92,8 +82,7 @@
       },
       "channels": [
         "community",
-        "blog",
-        "showhn"
+        "blog"
       ]
     }
   }
