@@ -34,6 +34,8 @@ jobs:
           fetch-depth: 0
       - name: Run local factory tests
         run: python3 -m unittest discover -s site-factory/tests -v
+      - name: Run CSV core regression tests
+        run: node site-factory/tests/test_csv_core.js
       - name: Find changed approved sites
         id: targets
         env:

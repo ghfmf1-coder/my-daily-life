@@ -438,6 +438,7 @@
   // Newly approved toolbox services. Merge without overwriting previous browser records.
   function registerApprovedSites(){
     const records=[
+      ['csv-merge-studio','CSV 맞춤 병합기','파일 · 데이터 도구','https://tb-csv-merge-studio.pages.dev/','CSV 열 이름 자동 매칭, 파일별 수동 연결, 중복 제거·다운로드. 배포 검증 대기.'],
       ['novel-planner','웹소설 연재 설계실','웹소설 · 창작 도구','https://tb-novel-planner.pages.dev/','회차·등장인물·복선 추적 도구. GitHub에 구현 완료, 실제 공개 주소 검증 대기.'],
       ['manuscript-lens','웹소설 원고돋보기','웹소설 · 원고 검사','https://tb-manuscript-lens.pages.dev/','반복 어절·긴 문장·대사 비율·표현 찾기. GitHub에 구현 완료, 실접속 검증 대기.'],
       ['toolbox-admin','작은 도구함 통합 관리자','운영 · 내부 관리','https://tb-toolbox-admin.pages.dev/','운영 콘솔 v1.2. 사이트 접근 제한 미설정 시 공개 주소임. 브라우저별 개별 저장, 실시간 동기화 미구현.']

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08785b">
+<title>CSV 맞춤 병합기 | 열 이름 통일·중복 제거·파일 합치기</title>
+<meta name="description" content="서로 다른 열 이름을 자동으로 매칭하고 직접 수정해 여러 CSV 파일을 하나로 병합하세요. 중복행 제거, UTF-8·CP949 한글 CSV, 엑셀 다운로드용 CSV 지원. 파일은 서버로 전송하지 않습니다.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website"><meta property="og:site_name" content="작은 도구함"><meta property="og:title" content="CSV 맞춤 병합기 — 열 이름 통일·중복 제거"><meta property="og:description" content="CSV 파일을 올리고 열 이름을 매칭하면 하나의 CSV로 다운로드. 로컬 처리, 회원가입 불필요.">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" sizes="any">
+<style>
+:root{color-scheme:light;--primary:#047b59;--ink:#1b3036;--muted:#617276;--line:#d9e5e0;--pale:#edf7f3}
+*{box-sizing:border-box}body{margin:0;background:#f5f9f7;color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Pretendard","Malgun Gothic",sans-serif}main{max-width:1080px;margin:0 auto;padding:0 18px 70px}
+header{padding:44px 0 24px}header small{font-weight:800;color:var(--primary);letter-spacing:.12em}h1{margin:8px 0;font-size:clamp(1.9rem,5vw,3rem);line-height:1.3;letter-spacing:-.04em}h2{margin:0 0 12px;font-size:1.3rem}h3{font-size:1rem;margin:0 0 8px}.intro{color:var(--muted);font-size:1.05rem;max-width:760px}.pill{display:inline-block;background:#d8f4e7;border-radius:999px;color:#077957;padding:4px 12px;font-size:.8rem;font-weight:800}
+section{margin:22px 0;padding:24px;background:#fff;border:1px solid var(--line);border-radius:17px;box-shadow:0 4px 22px #0b624c0a}
+label{display:block;font-size:.95rem;font-weight:750;margin:12px 0 6px}
+input,select,button{font:inherit}input[type=file],input[type=text],select{width:100%;max-width:100%;padding:11px;background:#fff;border:1px solid #aebdb7;border-radius:9px}input[type=file]{background:var(--pale)}
+button{padding:12px 20px;border:0;border-radius:9px;background:var(--primary);color:#fff;font-weight:750;cursor:pointer;margin:8px 8px 0 0}button:hover{filter:brightness(.93)}button:disabled{background:#b0c1b9;cursor:not-allowed}button.secondary{background:#e5f1ec;color:#1a5946}button.ghost{background:#eef2f2;color:#45605c}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.meta{color:var(--muted);font-size:.87rem}.hint{background:#f0f8f4;color:#365e50;border:1px solid #d4ece0;padding:13px 16px;border-radius:10px;margin:12px 0}
+.file-card{border:1px solid #e1ebe5;border-radius:12px;padding:16px;margin:12px 0;overflow:hidden}.file-name{font-size:1rem;font-weight:800;overflow-wrap:anywhere}
+.table-scroll{overflow:auto;max-width:100%;border:1px solid #e2e9e5;border-radius:10px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:500px}th,td{border-bottom:1px solid #e8eee9;text-align:left;padding:10px 12px;white-space:normal;overflow-wrap:anywhere}th{background:#eef6f2;font-weight:750}tr:last-child td{border:0}
+.mapping-row{display:grid;grid-template-columns:minmax(100px,1fr) 26px minmax(140px,1.3fr);align-items:center;gap:12px;margin:10px 0}.mapping-row select{padding:8px}.mapping-row span{word-break:break-all}.mapping-row i{font-style:normal;text-align:center;color:#679c8c}
+.badge{background:#e7f0ed;color:#236651;padding:3px 10px;border-radius:999px;font-size:.82rem}.inline{display:flex;align-items:end;gap:10px;flex-wrap:wrap}.inline>*{flex:1 1 160px}.inline button{flex:0 0 auto}
+#status{padding:12px 14px;border-radius:9px;background:#e9f6ef;color:#135a42;min-height:48px}#status.error{background:#fff0ee;color:#b03c32}
+#results[hidden],#mappingSection[hidden],#filesSection[hidden]{display:none}
+.statbar{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}.statbar b{background:#e5f3ee;padding:8px 12px;border-radius:9px}
+details{padding:13px 0;border-bottom:1px solid #edf2ee}summary{font-weight:750;cursor:pointer}footer{padding-top:18px;color:var(--muted);font-size:.84rem}
+a{color:var(--primary)}@media(max-width:600px){section{padding:18px 14px}header{padding-top:24px}.mapping-row{grid-template-columns:minmax(80px,1fr) 14px minmax(110px,1fr);gap:6px}.mapping-row select{font-size:.86rem}}
+</style>
+</head><body><main>
+<header><small>SMALL TOOLBOX / DATA TOOLS</small><h1>CSV 맞춤 병합기</h1><p class="intro">열 이름이 다른 CSV도 한 번에 합치세요. <strong>열 이름 자동 통일 → 열 연결 직접 확인 → 중복 제거 → 다운로드</strong>까지 한 화면에서 처리합니다.</p><span class="pill">파일 서버 전송 없음 · 회원가입 없음</span></header>
+<section aria-labelledby="uploadHead"><h2 id="uploadHead">1. CSV 파일 불러오기</h2>
+<p class="meta">최대 10개 파일, 파일당 8MB, 전체 20MB. 첫 행은 열 이름으로 인식합니다. CSV·TSV·세미콜론 구분 파일을 지원합니다.</p>
+<label for="csvFiles">병합할 파일 선택</label><input id="csvFiles" type="file" accept=".csv,.tsv,text/csv,text/tab-separated-values" multiple>
+<div class="inline"><div><label for="charset">한글 파일 인코딩</label><select id="charset"><option value="auto">자동 감지 (UTF-8 → CP949)</option><option value="utf-8">UTF-8</option><option value="euc-kr">CP949 / EUC-KR</option></select></div><button id="demoBtn" type="button" class="secondary">예제 데이터로 체험</button><button id="resetBtn" type="button" class="ghost">초기화</button></div>
+<p id="status" role="status" aria-live="polite">파일을 선택하거나 예제를 눌러 시작하세요.</p></section>
+<section id="filesSection" hidden><h2>2. 업로드 파일 확인</h2><div id="fileList"></div><p class="hint">원본 파일은 변형되지 않습니다. 열 매핑은 결과 CSV에만 적용됩니다.</p></section>
+<section id="mappingSection" hidden><h2>3. 열 이름 매핑</h2><p class="meta">예를 들어 ‘고객명’과 ‘성명’을 모두 ‘이름’ 열로 연결합니다. 자동 제안을 원하는 대로 변경하거나, 열을 제외할 수 있습니다.</p>
+<div class="inline"><div><label for="newColumn">결과 CSV에 새 열 만들기</label><input id="newColumn" type="text" maxlength="60" placeholder="예: 주문번호"></div><button id="addColumn" type="button" class="secondary">결과 열 추가</button></div>
+<div id="mappingList"></div>
+<h3>중복 제거 설정</h3>
+<div class="grid"><div><label for="dedupKey">중복 판단 기준 열</label><select id="dedupKey"><option value="">중복 제거하지 않음</option></select></div><div><label for="dedupMode">같은 값이 있을 때</label><select id="dedupMode"><option value="first">처음 나온 행 유지</option><option value="last">마지막 나온 행 유지</option></select></div></div>
+<p class="meta">선택한 열의 값이 비어 있다면 그 행은 중복 제거 대상에서 제외됩니다. 여러 열을 조합한 중복 판별은 아직 지원하지 않습니다.</p><button id="mergeBtn" type="button">병합 실행 및 미리보기</button>
+</section>
+<section id="results" hidden><h2>4. 결과 확인 및 다운로드</h2><div id="stats" class="statbar" aria-live="polite"></div><div class="table-scroll" id="preview"></div>
+<div><label for="formulaSafe"><input id="formulaSafe" type="checkbox" checked> 엑셀 수식 실행 위험 문자 보호 (=, +, @, 일부 - 값)</label></div>
+<button id="downloadBtn" type="button">합친 CSV 다운로드</button><p class="meta">다운로드는 UTF-8(BOM 포함) CSV로 저장됩니다. 결과 미리보기는 처음 20행만 표시합니다.</p></section>
+<section><h2>사용 방법과 주의사항</h2><details open><summary>열 구조가 다른 CSV 파일을 어떻게 병합하나요?</summary><p>여러 CSV를 선택하면 제목행을 읽고 ‘이름/성명/고객명’, ‘휴대폰/연락처’ 같은 흔한 열 이름을 자동 매칭합니다. 결과 열 연결을 확인한 다음 병합을 실행하세요.</p></details><details><summary>기존 엑셀 파일(.xlsx)도 올릴 수 있나요?</summary><p>현재는 CSV·TSV 형식만 지원합니다. 엑셀의 ‘다른 이름으로 저장 → CSV UTF-8’ 기능으로 내보낸 뒤 사용할 수 있습니다.</p></details><details><summary>개인정보가 서버로 전송되나요?</summary><p>아니요. 파일 파싱과 병합 및 다운로드는 브라우저 안에서만 처리합니다. 다만 공유 컴퓨터에서 작업할 때는 다운로드한 CSV 파일의 보관에 주의하세요.</p></details><details><summary>병합 결과를 그대로 믿어도 되나요?</summary><p>병합 기준과 중복 제거 결과를 검토하세요. 연락처 형식, 날짜, 숫자의 의미를 자동 판단하거나 검증하지 않습니다.</p></details><p class="meta">안내: 이 도구의 분석·변환 결과는 참고용이며 최종 확인과 이용 판단은 사용자가 해야 합니다. 관련 법령상 배제할 수 없는 운영자의 책임까지 면제하지 않습니다.</p></section>
+<footer>작은 도구함 · 귀찮은 파일 정리를 한 번에</footer></main>
+<script src="./csv-core.js" defer></script><script src="./app.js" defer></script>
+</body></html>
