@@ -10,6 +10,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 from factory import ROOT, SiteError, prepare
+from indexnow import generate_verification, ping_indexnow
 
 class CFError(Exception):
     pass
@@ -72,6 +73,8 @@ def main():
     for env in ('CLOUDFLARE_ACCOUNT_ID','CLOUDFLARE_API_TOKEN'):
         if not os.environ.get(env):
             raise SystemExit('Missing GitHub Actions secret: '+env)
+    # Put the IndexNow ownership proof in the exact site build BEFORE publishing.
+    indexnow_key=generate_verification(out,data)
     ensure_project(data['project'])
     # Never pass secrets as positional arguments; Wrangler reads env vars.
     cmd=['npx','--no-install','wrangler','pages','deploy',str(out),
@@ -80,6 +83,14 @@ def main():
         cmd += ['--commit-hash',sha]
     subprocess.run(cmd,check=True,cwd=ROOT)
     print(f'PUBLISHED: https://{data["project"]}.pages.dev')
+    # Search engine discovery only: never claim Google submission or guaranteed indexing.
+    # Do not interrupt a successful deployment when the remote search endpoint is unavailable.
+    if indexnow_key:
+        try:
+            notice=ping_indexnow(out,canonical,data,indexnow_key)
+            print("INDEXNOW: "+json.dumps(notice,ensure_ascii=False))
+        except (OSError,ValueError,urllib.error.URLError) as ex:
+            print(f"INDEXNOW_NOT_CONFIRMED: {type(ex).__name__}: {ex}")
     if args.attach_domain:
         if not data.get('domain'):
             raise SystemExit('Cannot attach: site.json domain not set')
