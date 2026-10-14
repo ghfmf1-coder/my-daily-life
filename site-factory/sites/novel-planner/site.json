@@ -5,5 +5,9 @@
   "description": "웹소설 회차별 사건과 복선, 등장인물을 한 화면에서 연결해 연재 누락을 점검하는 무료 브라우저 도구",
   "approved": true,
   "domain": null,
-  "canonical_url": null
+  "canonical_url": null,
+  "locales": [
+    "ko",
+    "en"
+  ]
 }

@@ -73,6 +73,33 @@ class SiteFactoryTests(unittest.TestCase):
         self.save()
         with self.assertRaisesRegex(factory.SiteError,'canonical_url'):
             factory.validate_site(self.slug)
+    def test_locales_requires_real_english_ui(self):
+        self.config['locales']=['ko','en']
+        self.config['approved']=True
+        self.save()
+        html=self.html.replace('<html>','<html lang="ko">')
+        (self.site/'public'/'index.html').write_text(html)
+        with self.assertRaisesRegex(factory.SiteError,'en 실제 번역'):
+            factory.validate_site(self.slug)
+        (self.site/'public'/'en').mkdir()
+        english='<html lang="en"><head><title>English Writer</title><meta name="description" content="English page"><meta name="viewport" content="width=device-width"></head><body><h1>English Writer</h1>'+' '.join(['Tools to edit your chapters and story drafts in English without login']*8)+'</body></html>'
+        (self.site/'public'/'en'/'index.html').write_text(english,encoding='utf8')
+        out=Path(self.temp.name)/'out-locales'
+        factory.prepare(self.slug,out)
+        root=(out/'index.html').read_text()
+        en=(out/'en'/'index.html').read_text()
+        self.assertIn('hreflang="en"',root)
+        self.assertIn('hreflang="ko"',en)
+        self.assertIn('hreflang="x-default"',en)
+        self.assertIn('rel="canonical" href="https://tb-clean-writer.pages.dev/en/"',en)
+        self.assertIn('https://tb-clean-writer.pages.dev/en/',(out/'sitemap.xml').read_text())
+    def test_noindex_is_not_sitemapped(self):
+        self.config['approved']=True
+        self.save()
+        (self.site/'public'/'robots.txt').write_text('User-agent: *\\nDisallow: /\\n')
+        out=Path(self.temp.name)/'out-noindex'
+        factory.prepare(self.slug,out)
+        self.assertNotIn('<url>',(out/'sitemap.xml').read_text())
     def test_api_creates_project_only_if_missing(self):
         with mock.patch.object(deploy_site,'request',side_effect=[(404,None),(200,{'name':'tb-clean-writer'})]) as req:
             deploy_site.ensure_project('tb-clean-writer')

@@ -5,5 +5,9 @@
   "description": "서로 다른 CSV 컬럼명을 자동 매칭하고 수동 조정한 뒤 중복을 제거해 하나로 합치는 무료 로컬 파일 병합 도구",
   "approved": true,
   "domain": null,
-  "canonical_url": null
+  "canonical_url": null,
+  "locales": [
+    "ko",
+    "en"
+  ]
 }

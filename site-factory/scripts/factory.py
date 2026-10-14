@@ -80,6 +80,34 @@ def read_site(slug: str, require_approval: bool = False) -> tuple[dict, Path]:
             raise SiteError(f'{slug}: canonical_url은 배포 주소 또는 확인된 도메인이어야 합니다.')
     return data, directory
 
+def validate_locale_pages(data: dict, public: Path) -> list[str]:
+    """Require real, discoverable English interfaces for multilingual public tools.
+
+    Never fabricate localized pages by duplicating Korean content for search bots.
+    Explicitly declared locales are a publishing contract, not SEO keywords.
+    """
+    locales = data.get('locales')
+    if locales is None:
+        return []
+    if locales != ['ko', 'en']:
+        raise SiteError('현재 다국어 공개 도구는 locales=["ko","en"]을 사용해야 합니다.')
+    for language, rel in (('ko', 'index.html'), ('en', 'en/index.html')):
+        path = public / rel
+        if not path.is_file():
+            raise SiteError(f'{data["slug"]}: {language} 실제 번역 페이지가 필요합니다: {rel}')
+        text = path.read_text(encoding='utf-8')
+        if 'FACTORY_STARTER_DO_NOT_PUBLISH' in text:
+            if data['approved']:
+                raise SiteError(f'{data["slug"]}: {language} 미완성 번역 페이지 공개 금지')
+        if f'lang="{language}"' not in text:
+            raise SiteError(f'{data["slug"]}: {rel}의 html lang 속성이 잘못되었습니다.')
+        if language == 'en' and data['approved']:
+            stripped = re.sub(r'<[^>]+>', ' ', re.sub(r'<style[^>]*>.*?</style>', ' ', text, flags=re.I | re.S))
+            english_words = re.findall(r'\b[A-Za-z]{3,}\b', stripped)
+            if len(english_words) < 65 or '<h1' not in text.lower():
+                raise SiteError(f'{data["slug"]}: 영어 이용자에게 제공할 충분한 실제 UI·설명이 필요합니다.')
+    return locales
+
 def validate_site(slug: str, require_approval: bool = False) -> dict:
     data, site = read_site(slug, require_approval)
     public = site / 'public'
@@ -88,6 +116,7 @@ def validate_site(slug: str, require_approval: bool = False) -> dict:
     index = public / 'index.html'
     if not index.is_file() or index.is_symlink():
         raise SiteError(f'{slug}: public/index.html 없음')
+    validate_locale_pages(data, public)
     if data['approved'] and 'FACTORY_STARTER_DO_NOT_PUBLISH' in index.read_text(encoding='utf-8'):
         raise SiteError(f'{slug}: 빈 템플릿은 공개할 수 없습니다.')
     files = 0
@@ -139,25 +168,39 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     shutil.copytree(src, out)
     canonical = (data.get('canonical_url') or f"https://{data['project']}.pages.dev").rstrip('/')
     html_pages = sorted(p for p in out.rglob('*.html') if p.is_file())
-    # Do not silently replace a developer-provided sitemap or robots policy.
-    if not (out / 'sitemap.xml').exists():
-        pages = [p.relative_to(out).as_posix() for p in html_pages if not any(n in {'admin', 'private'} for n in p.parts)]
-        xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        xml += ''.join(f'  <url><loc>{escape(canonical + ("/" if x=="index.html" else "/"+x))}</loc></url>\n' for x in pages)
-        (out / 'sitemap.xml').write_text(xml + '</urlset>\n', encoding='utf-8')
-    if not (out / 'robots.txt').exists():
-        (out / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {canonical}/sitemap.xml\n', encoding='utf-8')
-    # AUTO_BRAND_FAVICON: enforce a square, locally hosted favicon in EVERY published tool.
-    # Prefer a site-specific designer-provided file; generate a stable original otherwise.
-    if not (out / 'favicon.svg').is_file():
-        (out / 'favicon.svg').write_text(render_icon(data['title'], slug), encoding='utf-8')
-    # Only build in explicit canonical when author has not supplied one.
+    # Admin and technical smoke-test environments must never appear in public sitemaps.
+    robots_source = out / 'robots.txt'
+    disallow_all = robots_source.is_file() and bool(re.search(
+        r'(?im)^\\s*Disallow:\\s*/\\s*$', robots_source.read_text(encoding='utf-8')))
+    localized = data.get('locales') == ['ko','en']
+    alternates = {'ko': canonical + '/', 'en': canonical + '/en/'} if localized else {}
+    indexed_pages = []
     for p in html_pages:
         content = p.read_text(encoding='utf-8')
+        rel = p.relative_to(out).as_posix()
         if 'rel="icon"' not in content and "rel='icon'" not in content:
-            content = content.replace('</head>', '<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">\\n</head>', 1)
-        if 'rel="canonical"' not in content:
-            suffix = '/' if p.name == 'index.html' and p.parent == out else '/' + p.relative_to(out).as_posix()
-            content = content.replace('</head>', f'<link rel="canonical" href="{escape(canonical + suffix, quote=True)}">\n</head>', 1)
-            p.write_text(content, encoding='utf-8')
+            icon_link = '<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">'
+            content = content.replace('</head>', icon_link + '\\n</head>', 1)
+        page_url = canonical + ('/' if rel == 'index.html' else '/en/' if rel == 'en/index.html' else '/' + rel)
+        if 'rel="canonical"' not in content and "rel='canonical'" not in content:
+            link = '<link rel="canonical" href="' + escape(page_url, quote=True) + '">'
+            content = content.replace('</head>', link + '\\n</head>', 1)
+        if localized and rel in ('index.html','en/index.html') and 'hreflang=' not in content:
+            tag = ''.join('<link rel="alternate" hreflang="' + language + '" href="' +
+                          escape(url, quote=True) + '">' for language, url in alternates.items())
+            tag += '<link rel="alternate" hreflang="x-default" href="' + escape(alternates['ko'],quote=True) + '">'
+            content = content.replace('</head>', tag + '\\n</head>', 1)
+        p.write_text(content, encoding='utf-8')
+        is_noindex = bool(re.search(r'<meta[^>]+name=["\\\']robots["\\\'][^>]*content=["\\\'][^"\\\']*noindex', content, flags=re.I))
+        if not disallow_all and not is_noindex and not any(x in {'admin','private'} for x in p.parts):
+            indexed_pages.append(page_url)
+    # AUTO_BRAND_FAVICON: a unique square favicon for every site, localized paths inherit it.
+    if not (out / 'favicon.svg').is_file():
+        (out / 'favicon.svg').write_text(render_icon(data['title'], slug), encoding='utf-8')
+    if not (out / 'sitemap.xml').exists():
+        xml = '<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n'
+        xml += ''.join('  <url><loc>' + escape(url) + '</loc></url>\\n' for url in indexed_pages)
+        (out / 'sitemap.xml').write_text(xml + '</urlset>\\n',encoding='utf-8')
+    if not (out / 'robots.txt').exists():
+        (out / 'robots.txt').write_text('User-agent: *\\nAllow: /\\nSitemap: ' + canonical + '/sitemap.xml\\n',encoding='utf-8')
     return data, canonical
