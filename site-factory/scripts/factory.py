@@ -9,6 +9,7 @@ from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
+from branding import render_icon
 
 ROOT = Path(__file__).resolve().parents[1]
 SITES = ROOT / 'sites'
@@ -146,9 +147,15 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         (out / 'sitemap.xml').write_text(xml + '</urlset>\n', encoding='utf-8')
     if not (out / 'robots.txt').exists():
         (out / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {canonical}/sitemap.xml\n', encoding='utf-8')
+    # AUTO_BRAND_FAVICON: enforce a square, locally hosted favicon in EVERY published tool.
+    # Prefer a site-specific designer-provided file; generate a stable original otherwise.
+    if not (out / 'favicon.svg').is_file():
+        (out / 'favicon.svg').write_text(render_icon(data['title'], slug), encoding='utf-8')
     # Only build in explicit canonical when author has not supplied one.
     for p in html_pages:
         content = p.read_text(encoding='utf-8')
+        if 'rel="icon"' not in content and "rel='icon'" not in content:
+            content = content.replace('</head>', '<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">\\n</head>', 1)
         if 'rel="canonical"' not in content:
             suffix = '/' if p.name == 'index.html' and p.parent == out else '/' + p.relative_to(out).as_posix()
             content = content.replace('</head>', f'<link rel="canonical" href="{escape(canonical + suffix, quote=True)}">\n</head>', 1)
