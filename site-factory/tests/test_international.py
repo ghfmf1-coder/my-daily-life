@@ -37,6 +37,15 @@ class InternationalizationTests(unittest.TestCase):
                 factory.prepare(slug,Path(d)/'build')
                 sitemap=(Path(d)/'build/sitemap.xml').read_text(encoding='utf-8')
                 self.assertNotIn('<url>',sitemap)
+    def test_catalog_registered_automatically(self):
+        with tempfile.TemporaryDirectory() as d:
+            factory.prepare('toolbox-admin',Path(d)/'build')
+            import json
+            catalog=json.loads((Path(d)/'build/sites-catalog.json').read_text(encoding='utf-8'))
+            names={x['slug'] for x in catalog['sites']}
+            self.assertTrue({'novel-planner','manuscript-lens','csv-merge-studio'}.issubset(names))
+            self.assertNotIn('toolbox-admin',names)
+            self.assertNotIn('deployment-check',names)
     def test_haruhankan_english_and_sitemap(self):
         ko=(REPO/'index.html').read_text(encoding='utf-8')
         en=(REPO/'en/index.html').read_text(encoding='utf-8')

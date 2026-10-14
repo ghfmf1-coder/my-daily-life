@@ -23,6 +23,9 @@ else:
         changed=subprocess.check_output(['git','diff','--name-only',a.before,a.after],text=True).splitlines()
     shared=any(n.startswith('site-factory/scripts/') or n=='.github/workflows/toolbox-pages.yml' for n in changed)
     selected=all_sites if shared else sorted(set(p.split('/')[2] for p in changed if p.startswith('site-factory/sites/') and len(p.split('/'))>=4))
+# auto-deploy toolbox-admin catalog after any public site source change
+if 'toolbox-admin' in all_sites and selected and 'toolbox-admin' not in selected:
+    selected=sorted(set(selected+['toolbox-admin']))
 approved=[]
 for slug in selected:
     try:

@@ -452,7 +452,54 @@
     }
     if(changes){activity('신규 도구·관리자 사이트 '+changes+'건 자동 등록 (배포 상태 별도 확인 필요)');save();}
   }
+
+  // Updated from the same Git revision as the factory deployment.
+  // Never infer Google indexing from availability. Only verify page assets loaded.
+  async function refreshSiteCatalog(){
+    try{
+      const response=await fetch('/sites-catalog.json',{cache:'no-store'});
+      if(!response.ok)throw new Error('site catalog unavailable');
+      const payload=await response.json();
+      if(!payload||!Array.isArray(payload.sites))throw new Error('invalid catalog');
+      let changed=false;
+      for(const item of payload.sites){
+        if(!item.url||!/^https:\/\/tb-[a-z0-9-]+\.pages\.dev\/$/.test(item.url))continue;
+        const existing=state.sites.find(x=>x.url===item.url);
+        if(!existing){
+          state.sites.push({
+            id:'catalog-'+item.slug,name:item.title,category:item.category||'공개 도구',
+            status:'testing',language:Array.isArray(item.locales)?item.locales.join(' · '):'한국어',
+            url:item.url,repo:item.repo,host:'Cloudflare Pages',releaseDate:'',
+            google:'unknown',naver:'unknown',policy:'unchecked',
+            notes:'자동 등록된 도구입니다. 검색 색인과 배포 성공은 별도로 확인합니다.',
+            createdAt:nowIso(),updatedAt:nowIso()
+          });
+          changed=true;
+        }
+      }
+      if(changed){activity('신규 공개 사이트 목록 자동 동기화');save();render();}
+      // A successful favicon image load confirms an accessible deployed asset,
+      // not functional correctness, indexation or search-console property ownership.
+      const targets=state.sites.filter(x=>/^https:\/\/tb-[a-z0-9-]+\.pages\.dev\/$/.test(x.url));
+      const probe=site=>new Promise(resolve=>{
+        const image=new Image();let settled=false;
+        const done=ok=>{if(settled)return;settled=true;image.onload=null;image.onerror=null;resolve(ok)};
+        image.onload=()=>done(true);image.onerror=()=>done(false);
+        image.src=site.url+'favicon.svg';
+        setTimeout(()=>done(false),9000);
+      });
+      const results=await Promise.all(targets.map(probe));
+      let updated=false;
+      targets.forEach((site,i)=>{
+        if(results[i] && ['testing','review','build','planning'].includes(site.status)){
+          site.status='live';site.updatedAt=nowIso();updated=true;
+        }
+      });
+      if(updated){activity('접속 가능한 도구 상태 자동 확인 (파비콘 HTTP 이미지 검사)');save();render();}
+    }catch(e){console.warn('Site catalog refresh unavailable:',String(e.message||e));}
+  }
   load();registerApprovedSites();render();
+  void refreshSiteCatalog();
   // Browser-only smoke-test hooks for automated local testing, not a remote API.
   window.__toolboxTest = {navigate(name){if(VIEWS[name]){view=name;render();}},getCount(type){return state[type]?.length||0;},readState(){return JSON.parse(JSON.stringify(state));},openEditor};
 })();

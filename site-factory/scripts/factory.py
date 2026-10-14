@@ -207,4 +207,26 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     if not (out / 'robots.txt').exists():
         (out / 'robots.txt').write_text(
             'User-agent: *\nAllow: /\nSitemap: ' + canonical + '/sitemap.xml\n',encoding='utf-8')
+    # AUTO_ADMIN_CATALOG: build a current, non-sensitive catalog for the manager.
+    # New approved public sites appear automatically after the manager redeploys.
+    if slug == 'toolbox-admin':
+        catalog = []
+        for other in site_list():
+            if other in {'toolbox-admin', 'deployment-check'}:
+                continue
+            site_config, _ = read_site(other)
+            if not site_config.get('approved'):
+                continue
+            catalog.append({
+                'slug': other,
+                'title': site_config['title'],
+                'description': site_config['description'],
+                'url': f"https://{site_config['project']}.pages.dev/",
+                'repo': 'https://github.com/ghfmf1-coder/my-daily-life',
+                'category': '공개 도구',
+                'locales': site_config.get('locales', ['ko'])
+            })
+        (out / 'sites-catalog.json').write_text(
+            json.dumps({'version': 1, 'sites': catalog}, ensure_ascii=False, indent=2),
+            encoding='utf-8')
     return data, canonical
