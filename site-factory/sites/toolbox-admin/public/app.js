@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const STORAGE_KEY = 'small-toolbox-admin-v1'; // keep browser data from earlier releases
-  const VIEWS = {overview:'전체 현황',sites:'사이트 관리',domains:'도메인 관리',ideas:'아이디어 검토',tasks:'작업 관리',traffic:'방문자 분석',metrics:'성과 기록',policies:'정책·색인',settings:'백업·설정'};
+  const VIEWS = {overview:'전체 현황',sites:'사이트 관리',domains:'도메인 관리',ideas:'아이디어 검토',tasks:'작업 관리',traffic:'방문자 분석',metrics:'성과 기록',policies:'정책·색인',maintenance:'자동 유지보수',settings:'백업·설정'};
   const STATUS = {
     site:{review:'상태 확인',planning:'기획',build:'개발 중',testing:'테스트',live:'운영 중',paused:'중단'},
     domain:{planned:'구매 예정',registered:'등록 완료',connected:'DNS 연결',issue:'문제 확인',expired:'만료'},
@@ -28,6 +28,7 @@
   let storageWorks = true;
   let state;
   const analyticsView = {days: 1, loading: false, started: false, data: null, error: ''};
+  const maintenance = {data:null,error:'첫 자동 점검을 기다리고 있습니다.'};
 
   // 과거 대화에서 실제로 검토한 이름·제약만 기록. 승인 또는 수요 검증으로 간주하지 않는다.
   const SEED_IDEAS = [
@@ -148,9 +149,53 @@
     const activities=state.activity.slice(0,5);
     return header('운영 현황','우리가 만든 도구를 한곳에서 관리하고, 다음 작업을 결정합니다.',button('+ 사이트 등록','new-site')+button('+ 아이디어 추가','new-idea','secondary'))+
     (!storageWorks?'<div class="notice warn">⚠ 브라우저 저장소 접근이 차단되어 있습니다. 변경 내역이 보존되지 않을 수 있습니다. JSON 백업을 이용하세요.</div>':'')+
+    maintenanceSummary()+
     '<div class="notice">📌 <strong>실제 데이터 원칙</strong> — 방문자·검색·수익 실적은 계정 연동 전까지 자동 수집되지 않습니다. 출처 없는 숫자는 표시하지 않고, 정책 준수·색인은 자동 판정하지 않습니다.</div>'+cards+
     `<div class="dashboard-shortcut"><span>도메인 관리</span> <strong>${state.domains.length}개 기록</strong> <button class="link-btn" data-action="goto" data-view="domains">구매·DNS 연결 현황 →</button></div>`+
     `<div class="cols"><div>${panel('사이트 포트폴리오','최근 수정된 서비스',state.sites.length?recentSitesTable([...state.sites].sort((a,b)=>(b.updatedAt||'').localeCompare(a.updatedAt||'')).slice(0,5)):empty('아직 사이트가 없습니다.'),`<button class="link-btn" data-action="goto" data-view="sites">전체 보기 →</button>`)}${panel('누적 수기 성과','입력한 날짜·사이트의 기록 합계이며 중복 입력값도 합산됩니다.',`<div class="panel-body"><div class="metric-grid"><div class="metric-box"><small>방문자</small><strong>${esc(summary.visitors)}</strong></div><div class="metric-box"><small>검색 노출</small><strong>${esc(summary.impressions)}</strong></div><div class="metric-box"><small>검색 클릭</small><strong>${esc(summary.clicks)}</strong></div><div class="metric-box"><small>수익 (KRW)</small><strong>${esc(summary.revenue)}</strong></div></div><div class="footnote">지표 입력 단위(일간)와 출처를 확인하세요. Google Search Console과 AdSense는 연결되지 않았습니다.</div></div>`,`<button class="link-btn" data-action="goto" data-view="metrics">성과 기록 →</button>`)}</div><div>${panel('우선 작업','완료되지 않은 할 일',taskList,`<button class="link-btn" data-action="new-task">+ 할 일</button>`)}${panel('최근 변경','운영 기록',activities.length?`<div class="panel-body">${activities.map(t=>`<div class="work-item"><span class="work-dot done"></span><div><h3>${esc(t.text)}</h3><p>${esc(dateText(t.timestamp))}</p></div></div>`).join('')}</div>`:empty('아직 변경 내역이 없습니다.'))}</div></div>`;
+  }
+  function maintenanceSummary(){
+    if(!maintenance.data || maintenance.data.status==='pending')
+      return '<div class="notice">⏳ 자동 유지보수 첫 점검을 준비 중입니다. 최근 결과를 불러올 때까지 기다려 주세요.</div>';
+    const report=maintenance.data,summary=report.summary||{};
+    const age=Date.now()-Date.parse(report.checkedAt||0),stale=!Number.isFinite(age)||age>48*3600000;
+    const level=stale?'상태 미확인 (48시간 이상 경과)':report.status==='fail'?'문제 발견':report.status==='warning'?'경고 있음':'정상';
+    const color=stale||report.status==='fail'?'warn':'';
+    return '<div class="notice '+color+'"><strong>🔎 최근 자동 점검: '+esc(level)+'</strong> · '+
+      esc((report.checkedAt||'').replace('T',' ').slice(0,16))+' UTC<br>'+
+      '점검 사이트 '+esc(summary.sites||0)+'개 · 사이트 오류 '+esc(summary.siteFailed||0)+'개 · '+
+      '브라우저 테스트 '+esc(summary.browserPassed||0)+'개 통과 / '+esc(summary.browserFailed||0)+'개 실패'+
+      ' · 상세 문제 '+esc(summary.issues||0)+'건'+
+      '<div style="margin-top:8px">'+link('https://github.com/ghfmf1-coder/my-daily-life/actions/workflows/toolbox-health.yml','GitHub 자동 점검 이력 ↗')+'</div></div>';
+  }
+  function maintenanceView(){
+    const d=maintenance.data;
+    const intro=header('자동 유지보수','매일 공개 사이트와 실제 브라우저 기능을 점검합니다. 결과는 Google 색인 상태를 뜻하지 않습니다.');
+    if(!d||d.status==='pending')return intro+maintenanceSummary();
+    const rows=(d.sites||[]).map(site=>{
+      const failed=site.failures||[],warn=site.warnings||[];
+      const detail=failed.length?failed.join(' / '):warn.length?warn.join(' / '):'자동 검증 항목 통과';
+      const state=site.status==='fail'?'문제':site.status==='warning'?'경고':'통과';
+      return '<tr><td><div class="item-title">'+esc(site.name||site.slug)+'</div><div class="sub-line">'+esc(site.slug)+'</div></td><td>'+esc(state)+'</td><td>'+esc((site.checks||[]).length)+'항목</td><td>'+esc(detail.slice(0,350))+'</td><td>'+link(site.url,'열기 ↗')+'</td></tr>';
+    }).join('');
+    const browserRows=(d.browserChecks||[]).map(t=>'<tr><td>'+esc(t.name)+'</td><td>'+esc(t.device||'')+'</td><td>'+
+      esc(t.status==='pass'?'통과':'실패')+'</td><td>'+esc((t.detail||'').slice(0,250))+'</td></tr>').join('');
+    return intro+maintenanceSummary()+
+      panel('사이트별 점검','응답·검색·보안·아이콘·파일 검증',
+        '<div class="table-scroll"><table><thead><tr><th>사이트</th><th>결과</th><th>검사</th><th>상세</th><th>링크</th></tr></thead><tbody>'+rows+'</tbody></table></div>')+
+      panel('브라우저 기능 테스트','로그인 없이 PC·모바일에서 실행하고 개인정보는 사용하지 않습니다.',
+        '<div class="table-scroll"><table><thead><tr><th>검사</th><th>기기</th><th>결과</th><th>상세</th></tr></thead><tbody>'+browserRows+'</tbody></table></div>')+
+      '<div class="notice">ℹ 새 도구는 제작 공장 등록 시 점검 목록에 자동 포함됩니다. 관리자에서만 수동 등록한 외부 주소는 별도 승인·등록 전까지 자동 점검하지 않습니다. 통과는 검색 색인 또는 완전한 무결성을 보장하지 않습니다.</div>';
+  }
+  async function refreshMaintenance(){
+    try{
+      const response=await fetch('/maintenance-report.json',{cache:'no-store'});
+      if(!response.ok)throw Error('HTTP '+response.status);
+      const payload=await response.json();
+      if(!payload||!payload.summary||!Array.isArray(payload.sites))throw Error('Invalid maintenance report');
+      maintenance.data=payload;maintenance.error='';
+    }catch(ex){maintenance.error=String(ex.message||ex);}
+    if(view==='maintenance'||view==='overview')render();
   }
   const tiny = (type,id) => `<div class="split-actions"><button class="tiny-action" data-action="edit-${type}" data-id="${esc(id)}">수정</button><button class="tiny-action danger-text" data-action="delete-${type}" data-id="${esc(id)}">삭제</button></div>`;
   function sites(){
@@ -249,7 +294,7 @@
     document.getElementById('breadcrumb').textContent=VIEWS[view];
     document.querySelectorAll('.nav-btn').forEach(x=>x.classList.toggle('active',x.dataset.view===view));
     document.getElementById('navSiteCount').textContent=state.sites.length;
-    host.innerHTML=({overview,sites,domains,ideas,tasks,traffic,metrics,policies,settings:adminPanel}[view])();
+    host.innerHTML=({overview,sites,domains,ideas,tasks,traffic,metrics,policies,maintenance:maintenanceView,settings:adminPanel}[view])();
     document.getElementById('sidebar').classList.remove('open');
     if(view==='traffic' && !analyticsView.started)queueMicrotask(refreshAnalytics);
   }
@@ -505,6 +550,8 @@
   }
   load();registerApprovedSites();render();
   void refreshSiteCatalog();
+  void refreshMaintenance();
+  setInterval(()=>void refreshMaintenance(),30*60*1000);
   // Browser-only smoke-test hooks for automated local testing, not a remote API.
   window.__toolboxTest = {navigate(name){if(VIEWS[name]){view=name;render();}},getCount(type){return state[type]?.length||0;},readState(){return JSON.parse(JSON.stringify(state));},openEditor};
 })();

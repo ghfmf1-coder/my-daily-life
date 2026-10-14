@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": null,
+  "status": "pending",
+  "summary": {
+    "sites": 0,
+    "sitePassed": 0,
+    "siteWarnings": 0,
+    "siteFailed": 0,
+    "browserPassed": 0,
+    "browserFailed": 0,
+    "sourceTestsPassed": false,
+    "issues": 0
+  },
+  "sites": [],
+  "browserChecks": [],
+  "issues": [],
+  "scope": "Maintenance first run not yet completed"
+}
