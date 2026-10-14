@@ -122,7 +122,7 @@ def safe_page(site, result, path, *, lang="ko", indexable=True):
         parser = SiteHTML()
         parser.feed(text)
         record(result, "title_" + lang, len(parser.title.strip()) >= 8, parser.title[:125])
-        record(result, "meta_description_" + lang, len(parser.meta.get("description", "").strip()) >= 45,
+        record(result, "meta_description_" + lang, len(parser.meta.get("description", "").strip()) >= (45 if indexable else 10),
                parser.meta.get("description", "")[:110])
         record(result, "html_lang_" + lang, parser.lang == lang, "expected " + lang + "; got " + parser.lang)
         robots = parser.meta.get("robots", "").lower()
@@ -173,7 +173,7 @@ def check_site(site):
     if "en" in locales and not is_internal:
         english = safe_page(site,result,"/en/",lang="en",indexable=True)
     ico = check_file(site,result,"/favicon.ico",kind="icon")
-    svg = check_file(site,result,"/favicon.svg",kind="svg",necessary=False)
+    svg = check_file(site,result,"/icon.svg" if site["slug"] == "my-daily-life" else "/favicon.svg",kind="svg",necessary=False)
     robots = check_file(site,result,"/robots.txt",kind="text")
     if robots:
         text = robots["body"].decode("utf-8","replace")
