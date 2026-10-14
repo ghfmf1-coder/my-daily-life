@@ -38,4 +38,10 @@ const kit=require('../sites/csv-merge-studio/public/csv-core.js');
   assert.throws(()=>kit.parseCsv('x\nabc"def'),/따옴표 위치/);
   assert.equal(kit.safeCell('a,b'),'"a,b"');
 }
+{
+ const files=[{name:'US export',...kit.parseCsv('Customer Name,Phone Number,Price\\nAlice,555-0101,100')},{name:'International export',...kit.parseCsv('Full Name,Mobile Number,Amount\\nBob,555-0102,200')}];
+ const x=kit.proposeMappings(files,'en');
+ assert.deepEqual(x.columns,['Name','Phone','Amount']);
+ assert.equal(kit.merge(x.datasets,x.columns).rows.length,2);
+}
 console.log('CSV core tests passed: parsing, aliases, merging, dedup, formula protection, error cases');

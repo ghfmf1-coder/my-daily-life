@@ -6,21 +6,22 @@
 })(typeof window!=='undefined'?window:globalThis,function(){
   'use strict';
   const ALIASES=[
-    ['이름',['이름','성명','고객명','고객이름','name','full name','fullname']],
-    ['전화번호',['전화번호','전화','휴대폰','핸드폰','연락처','휴대전화','전화 번호','phone','mobile','tel']],
-    ['이메일',['이메일','메일','전자우편','email','e-mail','mail']],
+    ['이름',['이름','성명','고객명','고객이름','name','full name','fullname','customer name','customer','client name','client']],
+    ['전화번호',['전화번호','전화','휴대폰','핸드폰','연락처','휴대전화','전화 번호','phone','mobile','tel','phone number','mobile number','telephone number']],
+    ['이메일',['이메일','메일','전자우편','email','e-mail','mail','email address']],
     ['주소',['주소','배송지','거주지','address']],
     ['날짜',['날짜','일자','등록일','작성일','거래일','date']],
-    ['금액',['금액','가격','결제액','합계금액','판매금액','price','amount','total']],
+    ['금액',['금액','가격','결제액','합계금액','판매금액','price','amount','total','cost','unit price']],
     ['수량',['수량','개수','수량(개)','qty','quantity','count']],
-    ['비고',['비고','메모','참고','notes','memo']]
+    ['비고',['비고','메모','참고','notes','memo','comment','comments']]
   ];
+  const ENGLISH_COLUMNS={"이름":"Name","전화번호":"Phone","이메일":"Email","주소":"Address","날짜":"Date","금액":"Amount","수량":"Quantity","비고":"Notes"};
   const normal=s=>String(s??'').normalize('NFKC').trim().toLowerCase().replace(/[\s_.\-()[\]{}]/g,'');
-  function suggestedHeader(value){
+  function suggestedHeader(value, locale='ko'){
     const clean=String(value??'').replace(/^\uFEFF/,'').trim();
     if(!clean)return '';
     const key=normal(clean);
-    for(const [target,alts] of ALIASES)if(alts.some(a=>normal(a)===key))return target;
+    for(const [target,alts] of ALIASES)if(alts.some(a=>normal(a)===key))return locale==='en'?ENGLISH_COLUMNS[target]:target;
     return clean;
   }
   function detectDelimiter(text){
@@ -85,12 +86,12 @@
     });
     return {headers,rows,delimiter:sep};
   }
-  function proposeMappings(files){
+  function proposeMappings(files,locale='ko'){
     const columns=[];const normed=new Set();
     const datasets=files.map(file=>{
       const used=new Set();
       const mapping=file.headers.map(name=>{
-        let target=suggestedHeader(name)||name;
+        let target=suggestedHeader(name,locale)||name;
         if(used.has(normal(target))){
           target=name;
           let n=2;
