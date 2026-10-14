@@ -208,6 +208,15 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             if '<!-- AUTO_CATALOG_CARDS -->' not in source:
                 raise SiteError('toolbox-hub: missing catalog placeholder in '+relative)
             path.write_text(source.replace('<!-- AUTO_CATALOG_CARDS -->',cards(language)),encoding='utf-8')
+    # AUTO_RELEASE_RSS: one stable, human-useful announcement feed for each language.
+    # The owner can connect these opt-in feeds to Metricool RSS Autolists.
+    # Creating a feed does not authorize or perform social posting.
+    if slug == 'toolbox-hub':
+        from marketing import build_packets
+        from release_feed import generate_feed
+        published=build_packets()
+        (out / 'feed.xml').write_bytes(generate_feed(published,'ko'))
+        (out / 'en' / 'feed.xml').write_bytes(generate_feed(published,'en'))
     html_pages = sorted(p for p in out.rglob('*.html') if p.is_file())
     # Private admin and smoke tests must not appear in public sitemaps.
     robots_source = out / 'robots.txt'
@@ -219,6 +228,10 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     for p in html_pages:
         content = p.read_text(encoding='utf-8')
         rel = p.relative_to(out).as_posix()
+        if slug == 'toolbox-hub' and rel in ('index.html','en/index.html'):
+            feed_ref='/feed.xml' if rel == 'index.html' else '/en/feed.xml'
+            if 'application/rss+xml' not in content:
+                content=content.replace('</head>','<link rel="alternate" type="application/rss+xml" title="Small Toolbox releases" href="'+feed_ref+'">\n</head>',1)
         if 'rel="icon"' not in content and "rel='icon'" not in content:
             content = content.replace('</head>',
                 '<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">\n</head>', 1)
