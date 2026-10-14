@@ -96,7 +96,7 @@ class SiteFactoryTests(unittest.TestCase):
     def test_noindex_is_not_sitemapped(self):
         self.config['approved']=True
         self.save()
-        (self.site/'public'/'robots.txt').write_text('User-agent: *\\nDisallow: /\\n')
+        (self.site/'public'/'robots.txt').write_text('User-agent: *\nDisallow: /\n')
         out=Path(self.temp.name)/'out-noindex'
         factory.prepare(self.slug,out)
         self.assertNotIn('<url>',(out/'sitemap.xml').read_text())
