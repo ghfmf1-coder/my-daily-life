@@ -9,7 +9,7 @@ from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
-from branding import render_icon
+from branding import render_icon, render_ico
 
 ROOT = Path(__file__).resolve().parents[1]
 SITES = ROOT / 'sites'
@@ -192,6 +192,9 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             tags += '<link rel="alternate" hreflang="x-default" href="' + \
                     escape(alternatives['ko'], quote=True) + '">'
             content = content.replace('</head>', tags + '\n</head>', 1)
+        if 'href="/favicon.ico"' not in content:
+            content = content.replace('</head>',
+                '<link rel="icon" type="image/x-icon" href="/favicon.ico">\n</head>', 1)
         p.write_text(content, encoding='utf-8')
         is_noindex = any('noindex' in tag.lower() for tag in
                          re.findall(r'<meta[^>]+>', content, flags=re.I)
@@ -200,6 +203,9 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             indexed_pages.append(page_url)
     if not (out / 'favicon.svg').is_file():
         (out / 'favicon.svg').write_text(render_icon(data['title'], slug), encoding='utf-8')
+    # AUTO_SEARCH_ICO: supported favicon format for Google Search results.
+    if not (out / 'favicon.ico').is_file():
+        (out / 'favicon.ico').write_bytes(render_ico(data['title'], slug))
     if not (out / 'sitemap.xml').exists():
         xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         xml += ''.join('  <url><loc>' + escape(url) + '</loc></url>\n' for url in indexed_pages)

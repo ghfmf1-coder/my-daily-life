@@ -47,6 +47,15 @@ class SiteFactoryTests(unittest.TestCase):
         self.assertIn('tb-clean-writer.pages.dev/',(out/'sitemap.xml').read_text())
         self.assertIn('rel="canonical"',(out/'index.html').read_text())
         self.assertFalse((out/'site.json').exists())
+    def test_search_ico_asset(self):
+        self.config['approved']=True
+        self.save()
+        out=Path(self.temp.name)/'out-ico'
+        factory.prepare(self.slug,out)
+        ico=(out/'favicon.ico').read_bytes()
+        self.assertEqual(ico[:4],b'\x00\x00\x01\x00')
+        self.assertEqual(ico[6],64)
+        self.assertIn('href="/favicon.ico"',(out/'index.html').read_text())
     def test_forbids_missing_asset(self):
         (self.site/'public'/'a.js').unlink()
         with self.assertRaisesRegex(factory.SiteError,'없는 내부 에셋'):
