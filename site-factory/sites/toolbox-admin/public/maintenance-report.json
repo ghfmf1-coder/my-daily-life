@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-14T10:02:14+00:00",
+  "checkedAt": "2026-10-14T10:05:53+00:00",
   "status": "fail",
   "summary": {
     "sites": 6,
-    "sitePassed": 4,
+    "sitePassed": 5,
     "siteWarnings": 0,
-    "siteFailed": 2,
+    "siteFailed": 1,
     "browserPassed": 8,
     "browserFailed": 2,
     "sourceTestsPassed": true,
-    "issues": 9
+    "issues": 8
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -133,7 +133,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -158,7 +158,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 112ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -201,7 +201,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -241,7 +241,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -342,7 +342,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 216ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -413,7 +413,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -453,7 +453,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -544,7 +544,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 215ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -584,7 +584,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 179ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -670,12 +670,12 @@
       "name": "작은 도구함 통합 관리자 v1.2",
       "url": "https://tb-toolbox-admin.pages.dev/",
       "type": "internal",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 203ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -729,7 +729,7 @@
         },
         {
           "check": "script_admin-config.js",
-          "status": "fail",
+          "status": "pass",
           "detail": "HTTP 200, 265 bytes"
         },
         {
@@ -759,9 +759,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "script_admin-config.js: HTTP 200, 265 bytes"
-      ]
+      "failures": []
     }
   ],
   "browserChecks": [
@@ -771,7 +769,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 302
+      "elapsedMs": 307
     },
     {
       "name": "English plot planner",
@@ -779,7 +777,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 225
+      "elapsedMs": 244
     },
     {
       "name": "Korean manuscript",
@@ -787,7 +785,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 196
+      "elapsedMs": 195
     },
     {
       "name": "English manuscript",
@@ -795,7 +793,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 196
+      "elapsedMs": 278
     },
     {
       "name": "Korean CSV merger",
@@ -803,7 +801,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 255
+      "elapsedMs": 289
     },
     {
       "name": "English CSV merger",
@@ -811,7 +809,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 209
+      "elapsedMs": 223
     },
     {
       "name": "Haru English landing",
@@ -819,7 +817,7 @@
       "device": "mobile",
       "status": "fail",
       "detail": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for getByRole('heading', { name: /better routine/i }) to be visible\n",
-      "elapsedMs": 14180
+      "elapsedMs": 14193
     },
     {
       "name": "Haru English app",
@@ -827,7 +825,7 @@
       "device": "mobile",
       "status": "fail",
       "detail": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#authForm') to be visible\n",
-      "elapsedMs": 14146
+      "elapsedMs": 14181
     },
     {
       "name": "Admin authentication gate",
@@ -835,7 +833,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Owner login required before dashboard rendering",
-      "elapsedMs": 171
+      "elapsedMs": 157
     },
     {
       "name": "Technical deployment smoke",
@@ -843,7 +841,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 237
+      "elapsedMs": 196
     }
   ],
   "issues": [
@@ -870,10 +868,6 @@
     {
       "scope": "my-daily-life",
       "details": "index_directive_en: index,follow,max-image-preview:large"
-    },
-    {
-      "scope": "toolbox-admin",
-      "details": "script_admin-config.js: HTTP 200, 265 bytes"
     },
     {
       "scope": "browser:Haru English landing",
