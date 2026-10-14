@@ -23,13 +23,16 @@ jobs:
         run: |
           node --check app.js
           node --check config.js
+          node --check en/app/translate.js
       - name: Generate SEO URLs for GitHub Pages
         run: python3 prepare_seo.py "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
       - name: Assemble public static site
         run: |
-          mkdir -p dist/app
-          cp index.html landing.css styles.css app.js config.js icon.svg manifest.webmanifest privacy.html terms.html sitemap.xml robots.txt dist/
+          mkdir -p dist/app dist/en/app
+          cp index.html landing.css styles.css app.js config.js icon.svg favicon.ico manifest.webmanifest privacy.html terms.html sitemap.xml robots.txt dist/
           cp app/index.html dist/app/index.html
+          cp en/index.html dist/en/index.html
+          cp en/app/index.html en/app/translate.js dist/en/app/
           cp 009bd80b09e04b4e82564b5ae044a4e7.txt dist/009bd80b09e04b4e82564b5ae044a4e7.txt
       - uses: actions/upload-pages-artifact@v3
         with:

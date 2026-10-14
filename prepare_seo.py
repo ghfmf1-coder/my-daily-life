@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
-"""Bind SEO metadata/sitemap to the actual production URL *after* first deployment."""
+"""Bind public SEO metadata to the actual deployment base URL, preserving locales."""
+from __future__ import annotations
 from pathlib import Path
 from urllib.parse import urlparse
 from xml.sax.saxutils import escape
-import html,sys
+import html
+import re
+import sys
+
 if len(sys.argv)!=2:
     raise SystemExit('Usage: python prepare_seo.py https://YOUR-REAL-DEPLOYMENT-DOMAIN[/optional-prefix]')
 base=sys.argv[1].rstrip('/')
@@ -11,18 +15,37 @@ u=urlparse(base)
 if u.scheme!='https' or not u.hostname or u.query or u.fragment:
     raise SystemExit('Actual HTTPS deployment URL required')
 root=Path(__file__).resolve().parent
-index=root/'index.html';s=index.read_text()
-if '<link rel="canonical"' not in s:
-    s=s.replace('<meta name="description"','<link rel="canonical" href="'+html.escape(base+'/')+'">\n<meta property="og:url" content="'+html.escape(base+'/')+'">\n<meta name="description"',1)
-else:
-    import re
-    s=re.sub(r'<link rel="canonical" href="[^"]*">','<link rel="canonical" href="'+html.escape(base+'/')+'">',s)
-    s=re.sub(r'<meta property="og:url" content="[^"]*">','<meta property="og:url" content="'+html.escape(base+'/')+'">',s)
-index.write_text(s)
-entries=['','privacy.html','terms.html']
+def update_head(path:Path, page_url:str):
+    text=path.read_text(encoding='utf-8')
+    target=html.escape(page_url,quote=True)
+    if re.search(r'<link rel="canonical" href="[^"]*">',text):
+        text=re.sub(r'<link rel="canonical" href="[^"]*">','<link rel="canonical" href="'+target+'">',text)
+    else:
+        text=text.replace('</head>','<link rel="canonical" href="'+target+'">\n</head>',1)
+    if re.search(r'<meta property="og:url" content="[^"]*">',text):
+        text=re.sub(r'<meta property="og:url" content="[^"]*">','<meta property="og:url" content="'+target+'">',text)
+    else:
+        text=text.replace('</head>','<meta property="og:url" content="'+target+'">\n</head>',1)
+    if (root/'en/index.html').exists():
+        for language,path_url in [('ko',base+'/'),('en',base+'/en/'),('x-default',base+'/')]:
+            url=html.escape(path_url,quote=True)
+            pattern=r'(<link rel="alternate" hreflang="'+re.escape(language)+r'" href=")[^"]*(")'
+            replace=lambda m:m.group(1)+url+m.group(2)
+            if re.search(pattern,text):
+                text=re.sub(pattern,replace,text)
+            else:
+                text=text.replace('</head>','<link rel="alternate" hreflang="'+language+'" href="'+url+'">\n</head>',1)
+    path.write_text(text,encoding='utf-8')
+
+update_head(root/'index.html',base+'/')
+has_en=(root/'en/index.html').exists()
+if has_en:update_head(root/'en/index.html',base+'/en/')
+entries=['']+(['en/'] if has_en else [])+['privacy.html','terms.html']
 xml='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-for item in entries:
-    xml+='  <url><loc>'+escape(base+'/'+item)+'</loc></url>\n'
-(root/'sitemap.xml').write_text(xml+'</urlset>\n')
-(root/'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /app/\nSitemap: '+base+'/sitemap.xml\n')
-print('Wrote sitemap.xml, robots.txt, canonical and og:url for',base)
+xml+=''.join('  <url><loc>'+escape(base+'/'+item)+'</loc></url>\n' for item in entries)
+(root/'sitemap.xml').write_text(xml+'</urlset>\n',encoding='utf-8')
+robots='User-agent: *\nAllow: /\nDisallow: /app/\n'
+if has_en:robots+='Disallow: /en/app/\n'
+robots+='Sitemap: '+base+'/sitemap.xml\n'
+(root/'robots.txt').write_text(robots,encoding='utf-8')
+print('Prepared deployment SEO URLs including English locale:',base,'/en/ enabled:',has_en)
