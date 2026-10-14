@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-14T10:05:53+00:00",
-  "status": "fail",
+  "checkedAt": "2026-10-14T10:09:00+00:00",
+  "status": "pass",
   "summary": {
     "sites": 6,
-    "sitePassed": 5,
+    "sitePassed": 6,
     "siteWarnings": 0,
-    "siteFailed": 1,
-    "browserPassed": 8,
-    "browserFailed": 2,
+    "siteFailed": 0,
+    "browserPassed": 10,
+    "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 8
+    "issues": 0
   },
   "sites": [
     {
@@ -18,12 +18,12 @@
       "name": "하루한칸",
       "url": "https://my-daily-life.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 153ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,22 +63,22 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
           "status": "pass",
-          "detail": "하루한칸 | 루틴 관리·체크리스트·가계부를 한곳에"
+          "detail": "Daily Habit Tracker & Routine Checklist | Haruhankan"
         },
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "하루한칸은 매일의 루틴 체크리스트, 습관 관리, 목표 달성률, 교대근무 일정, 가계부와 주간 성과를 한곳에서 관리하는 생활 기록 앱입니다. 내 생활에 맞게 목표를 자유롭게 바꿔보세요."
+          "detail": "Manage daily habits, personal goals, shift work schedules and a simple expense tracker in one free routine das"
         },
         {
           "check": "html_lang_en",
-          "status": "fail",
-          "detail": "expected en; got ko"
+          "status": "pass",
+          "detail": "expected en; got en"
         },
         {
           "check": "index_directive_en",
@@ -87,8 +87,8 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "https://my-daily-life.pages.dev/"
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
@@ -102,8 +102,8 @@
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP 200, 7915 bytes"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_icon.svg",
@@ -113,7 +113,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 92 bytes"
+          "detail": "HTTP 200, 111 bytes"
         },
         {
           "check": "robots_publicity",
@@ -123,17 +123,17 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 303 bytes"
+          "detail": "HTTP 200, 363 bytes"
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
-          "detail": "entries: 3"
+          "status": "pass",
+          "detail": "entries: 4"
         },
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -158,38 +158,31 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
           "status": "pass",
-          "detail": "하루한칸 | 루틴 관리·체크리스트·가계부를 한곳에"
+          "detail": "Haruhankan — Daily Routine App"
         },
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "하루한칸은 매일의 루틴 체크리스트, 습관 관리, 목표 달성률, 교대근무 일정, 가계부와 주간 성과를 한곳에서 관리하는 생활 기록 앱입니다. 내 생활에 맞게 목표를 자유롭게 바꿔보세요."
+          "detail": "Haruhankan account-based English daily habit tracker, shift calendar and expense planner."
         },
         {
           "check": "html_lang_en",
-          "status": "fail",
-          "detail": "expected en; got ko"
+          "status": "pass",
+          "detail": "expected en; got en"
         },
         {
           "check": "index_directive_en",
-          "status": "fail",
-          "detail": "index,follow,max-image-preview:large"
+          "status": "pass",
+          "detail": "noindex,nofollow"
         }
       ],
       "warnings": [],
-      "failures": [
-        "html_lang_en: expected en; got ko",
-        "canonical_en: https://my-daily-life.pages.dev/",
-        "icon_favicon.ico: HTTP 200, 7915 bytes",
-        "sitemap_content: entries: 3",
-        "html_lang_en: expected en; got ko",
-        "index_directive_en: index,follow,max-image-preview:large"
-      ]
+      "failures": []
     },
     {
       "slug": "csv-merge-studio",
@@ -201,7 +194,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -241,7 +234,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -342,7 +335,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 177ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -413,7 +406,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 121ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -453,7 +446,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -544,7 +537,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -584,7 +577,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -675,7 +668,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -769,7 +762,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 307
+      "elapsedMs": 372
     },
     {
       "name": "English plot planner",
@@ -777,7 +770,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 244
+      "elapsedMs": 274
     },
     {
       "name": "Korean manuscript",
@@ -785,7 +778,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 195
+      "elapsedMs": 229
     },
     {
       "name": "English manuscript",
@@ -793,7 +786,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 278
+      "elapsedMs": 261
     },
     {
       "name": "Korean CSV merger",
@@ -801,7 +794,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 289
+      "elapsedMs": 356
     },
     {
       "name": "English CSV merger",
@@ -809,23 +802,23 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 223
+      "elapsedMs": 291
     },
     {
       "name": "Haru English landing",
       "url": "https://my-daily-life.pages.dev/en/",
       "device": "mobile",
-      "status": "fail",
-      "detail": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for getByRole('heading', { name: /better routine/i }) to be visible\n",
-      "elapsedMs": 14193
+      "status": "pass",
+      "detail": "English landing search content and mobile layout",
+      "elapsedMs": 218
     },
     {
       "name": "Haru English app",
       "url": "https://my-daily-life.pages.dev/en/app/",
       "device": "mobile",
-      "status": "fail",
-      "detail": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#authForm') to be visible\n",
-      "elapsedMs": 14181
+      "status": "pass",
+      "detail": "Unauthenticated English login displayed",
+      "elapsedMs": 276
     },
     {
       "name": "Admin authentication gate",
@@ -833,7 +826,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Owner login required before dashboard rendering",
-      "elapsedMs": 157
+      "elapsedMs": 247
     },
     {
       "name": "Technical deployment smoke",
@@ -841,43 +834,10 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 196
+      "elapsedMs": 329
     }
   ],
-  "issues": [
-    {
-      "scope": "my-daily-life",
-      "details": "html_lang_en: expected en; got ko"
-    },
-    {
-      "scope": "my-daily-life",
-      "details": "canonical_en: https://my-daily-life.pages.dev/"
-    },
-    {
-      "scope": "my-daily-life",
-      "details": "icon_favicon.ico: HTTP 200, 7915 bytes"
-    },
-    {
-      "scope": "my-daily-life",
-      "details": "sitemap_content: entries: 3"
-    },
-    {
-      "scope": "my-daily-life",
-      "details": "html_lang_en: expected en; got ko"
-    },
-    {
-      "scope": "my-daily-life",
-      "details": "index_directive_en: index,follow,max-image-preview:large"
-    },
-    {
-      "scope": "browser:Haru English landing",
-      "details": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for getByRole('heading', { name: /better routine/i }) to be visible\n"
-    },
-    {
-      "scope": "browser:Haru English app",
-      "details": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#authForm') to be visible\n"
-    }
-  ],
+  "issues": [],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
