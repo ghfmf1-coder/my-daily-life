@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "channels": [
+    {
+      "id": "showhn",
+      "name": "Show HN",
+      "url": "https://news.ycombinator.com/showhn.html",
+      "audience": "해외 개발자·도구 이용자",
+      "mode": "계정 로그인 후 직접 게시",
+      "rule": "실제로 작동하는 도구, 기능 설명과 직접 사용 링크가 중요. 동일 프로젝트 반복 투고 금지."
+    },
+    {
+      "id": "producthunt",
+      "name": "Product Hunt",
+      "url": "https://www.producthunt.com/launch",
+      "audience": "해외 신규 서비스 탐색 이용자",
+      "mode": "개인 계정 가입 및 제품 출시 게시",
+      "rule": "자사 제품 소개 가능. 업보트 요구·조작, 무작위 DM, 반복 출시 금지. 출시 전 소개 페이지 준비."
+    },
+    {
+      "id": "community",
+      "name": "관련 커뮤니티",
+      "url": "https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam",
+      "audience": "실제 문제를 가진 이용자",
+      "mode": "게시판 개별 규칙 확인 후 관련성이 있을 때만 게시",
+      "rule": "커뮤니티마다 자기홍보 규정 다름. 자동 게시·무작위 댓글 금지. 문제 해결 경험을 공유하고 명확히 제작자임을 밝힘."
+    },
+    {
+      "id": "blog",
+      "name": "본인 블로그·자체 채널",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ko",
+      "audience": "Google·네이버 정보 검색자",
+      "mode": "본인에게 게시 권한이 있는 채널에서 설명글 게시",
+      "rule": "실제 예제·원본 스크린샷·사용법 중심. 같은 설명을 다른 블로그에 대량 복제하지 않음."
+    }
+  ],
+  "briefs": {
+    "my-daily-life": {
+      "ko": {
+        "title": "하루한칸 — 하루 루틴·교대근무·지출 관리",
+        "copy": "매일 할 일을 체크하고, 교대근무 일정과 지출까지 한곳에서 관리하는 하루한칸을 만들었습니다. 주간·야간 교대 일정을 쓰는 사람도 맞춤 목표를 관리할 수 있습니다. 직접 사용해 보시고 불편한 부분을 알려주시면 개선하겠습니다."
+      },
+      "en": {
+        "title": "Haruhankan — a daily habit and shift-work planner",
+        "copy": "I built Haruhankan, a daily routine checklist for personal goals, rotating day/night shifts, and simple expense tracking. It has an English interface and account-based sync. Feedback on the actual daily workflow is welcome."
+      },
+      "channels": [
+        "producthunt",
+        "community",
+        "blog"
+      ]
+    },
+    "csv-merge-studio": {
+      "ko": {
+        "title": "CSV 파일 열 이름이 달라도 한 번에 병합하고 중복 제거하기",
+        "copy": "CSV 두 파일을 합치려는데 하나는 '고객명', 다른 하나는 '성명'이라면? 무료 CSV 맞춤 병합기를 만들어 봤습니다. 열 이름을 자동으로 맞추거나 직접 연결하고, 특정 열 기준으로 중복을 제거한 뒤 엑셀용 CSV로 내려받을 수 있습니다. 파일은 서버로 업로드하지 않습니다. 실제 CSV 예제에서 어떤 부분이 불편한지 의견 부탁드립니다."
+      },
+      "en": {
+        "title": "Merge CSV files with mismatched column names — free browser tool",
+        "copy": "I built a free browser-only CSV merge tool for mismatched headers. Map 'Customer Name' and 'Full Name' to 'Name', choose a deduplication key, preview the merged rows, and download a spreadsheet-friendly CSV. Your files stay in the browser. I'd appreciate feedback from people who routinely clean spreadsheet exports."
+      },
+      "channels": [
+        "showhn",
+        "producthunt",
+        "community",
+        "blog"
+      ]
+    },
+    "novel-planner": {
+      "ko": {
+        "title": "웹소설 회차·복선·등장인물을 한 화면에서 추적하는 연재 설계실",
+        "copy": "웹소설을 연재하면서 '몇 화에 복선을 심었는지', '어떤 인물이 언제 처음 나왔는지' 헷갈리는 문제를 줄이려고 회차·복선·등장인물 관리 도구를 만들었습니다. 미회수 복선을 따로 보여주고 JSON으로 백업할 수 있습니다. 웹소설 작가분들이 실제로 필요로 하는 기능이 무엇인지 듣고 싶습니다."
+      },
+      "en": {
+        "title": "Track chapters, foreshadowing, and characters in a web serial",
+        "copy": "I made a free browser-based planning tool for serial fiction writers: keep episode notes, character debuts, and planted/paid-off plot threads in one place. It highlights unresolved foreshadowing and exports a JSON backup. I'd love practical feedback from writers working on a serial novel."
+      },
+      "channels": [
+        "community",
+        "blog",
+        "showhn"
+      ]
+    },
+    "manuscript-lens": {
+      "ko": {
+        "title": "웹소설 원고의 반복 표현과 긴 문장을 빠르게 확인하는 원고돋보기",
+        "copy": "원고를 쓰고 퇴고할 때 반복 어절이나 너무 긴 문장을 찾아보는 시간을 줄이려고 '원고돋보기'를 만들었습니다. 원고를 붙여넣으면 반복 표현·문장 길이·대사 비율을 보여주고 원문 위치로 이동할 수 있습니다. 원고는 서버로 전송하지 않습니다. 작가분들의 실제 퇴고 흐름에 맞는지 의견 부탁드립니다."
+      },
+      "en": {
+        "title": "A private manuscript repetition and long-paragraph checker",
+        "copy": "I built a small browser-only manuscript checker for writers. Paste a draft to find repeated English words, long lines and paragraphs, dialogue-leading lines, and matching phrases. Your text never leaves the browser. This isn't a grammar or AI-prose evaluator; it helps flag passages worth reviewing."
+      },
+      "channels": [
+        "community",
+        "blog",
+        "showhn"
+      ]
+    }
+  }
+}

@@ -235,4 +235,9 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         (out / 'sites-catalog.json').write_text(
             json.dumps({'version': 1, 'sites': catalog}, ensure_ascii=False, indent=2),
             encoding='utf-8')
+    # AUTO_PROMOTION_PACKETS: human-reviewed, platform-compliant promotion library.
+    if slug == 'toolbox-admin':
+        from marketing import build_packets
+        (out / 'promotion-packets.json').write_text(
+            json.dumps(build_packets(),ensure_ascii=False,indent=2),encoding='utf-8')
     return data, canonical
