@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-14T10:50:11+00:00",
+  "checkedAt": "2026-10-14T10:51:05+00:00",
   "status": "pass",
   "summary": {
     "sites": 6,
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 160ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 123ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -133,7 +133,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 116ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 48ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -158,7 +158,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -194,7 +194,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -234,7 +234,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -335,7 +335,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 223ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -406,7 +406,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 121ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -446,7 +446,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -537,7 +537,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -577,7 +577,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 45ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -668,7 +668,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 261ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -762,7 +762,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 314
+      "elapsedMs": 251
     },
     {
       "name": "English plot planner",
@@ -770,7 +770,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 261
+      "elapsedMs": 197
     },
     {
       "name": "Korean manuscript",
@@ -778,7 +778,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 212
+      "elapsedMs": 178
     },
     {
       "name": "English manuscript",
@@ -786,7 +786,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 262
+      "elapsedMs": 196
     },
     {
       "name": "Korean CSV merger",
@@ -794,7 +794,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 339
+      "elapsedMs": 254
     },
     {
       "name": "English CSV merger",
@@ -802,7 +802,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 271
+      "elapsedMs": 227
     },
     {
       "name": "Haru English landing",
@@ -810,7 +810,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 239
+      "elapsedMs": 143
     },
     {
       "name": "Haru English app",
@@ -818,7 +818,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 229
+      "elapsedMs": 158
     },
     {
       "name": "Admin authentication gate",
@@ -826,7 +826,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Owner login required before dashboard rendering",
-      "elapsedMs": 169
+      "elapsedMs": 127
     },
     {
       "name": "Technical deployment smoke",
@@ -834,7 +834,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 231
+      "elapsedMs": 190
     }
   ],
   "issues": [],
