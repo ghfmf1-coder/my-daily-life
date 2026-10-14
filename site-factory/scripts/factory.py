@@ -167,6 +167,47 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         shutil.rmtree(out)
     shutil.copytree(src, out)
     canonical = (data.get('canonical_url') or f"https://{data['project']}.pages.dev").rstrip('/')
+    # AUTO_HUB_CATALOG: genuine human-useful navigation, server-rendered for
+    # people and crawlers; no thin keyword pages, hidden content or fake links.
+    if slug == 'toolbox-hub':
+        from marketing import build_packets
+        items=build_packets()['sites']
+        category_map={'my-daily-life':'routine','csv-merge-studio':'data',
+                      'novel-planner':'writing','manuscript-lens':'writing'}
+        def cards(language: str) -> str:
+            blocks=[]
+            for site in items:
+                if site['slug'] == 'toolbox-hub':
+                    continue
+                info=site.get('copy',{}).get(language,{})
+                name=info.get('title') or site['title']
+                intro=info.get('copy') or site['description']
+                intro=intro[:260] + ('…' if len(intro)>260 else '')
+                category=category_map.get(site['slug'],'other')
+                cat_label={
+                    'ko':{'routine':'일상·루틴','data':'데이터·파일','writing':'웹소설·글쓰기','other':'기타 도구'},
+                    'en':{'routine':'Daily life','data':'Data & files','writing':'Writing','other':'Other tools'},
+                }[language][category]
+                target=site['url'] if language=='ko' or 'en' not in site['langs'] else site['url']+'en/'
+                label='바로 사용하기 ↗' if language=='ko' else 'Open tool ↗'
+                alt_label='English' if language=='ko' else '한국어'
+                alt=site['url']+'en/' if language=='ko' else site['url']
+                alternate=(' <a href="'+escape(alt,quote=True)+'" rel="noopener noreferrer">'
+                           +alt_label+'</a>') if 'en' in site['langs'] else ''
+                blocks.append(
+                    '<article class="tool" data-category="'+escape(category,quote=True)+'" data-search="'+
+                    escape(' '.join((name,site['title'],site['description'],intro,site['slug'])),quote=True)+'">'+
+                    '<span class="tag">'+escape(cat_label)+'</span><h3>'+escape(name)+'</h3><p>'+
+                    escape(intro)+'</p><div class="actions"><a href="'+escape(target,quote=True)+'" rel="noopener noreferrer">'+
+                    label+'</a>'+alternate+'</div></article>'
+                )
+            return '\n'.join(blocks)
+        for language, relative in (('ko','index.html'),('en','en/index.html')):
+            path=out/relative
+            source=path.read_text(encoding='utf-8')
+            if '<!-- AUTO_CATALOG_CARDS -->' not in source:
+                raise SiteError('toolbox-hub: missing catalog placeholder in '+relative)
+            path.write_text(source.replace('<!-- AUTO_CATALOG_CARDS -->',cards(language)),encoding='utf-8')
     html_pages = sorted(p for p in out.rglob('*.html') if p.is_file())
     # Private admin and smoke tests must not appear in public sitemaps.
     robots_source = out / 'robots.txt'
@@ -195,6 +236,16 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         if 'href="/favicon.ico"' not in content:
             content = content.replace('</head>',
                 '<link rel="icon" type="image/x-icon" href="/favicon.ico">\n</head>', 1)
+        # A single authentic brand-navigation link. Do not link to private admin.
+        if slug not in {'toolbox-hub','toolbox-admin','deployment-check'} \
+                and rel in {'index.html','en/index.html'} \
+                and 'tb-toolbox-hub.pages.dev' not in content:
+            caption=('Browse other useful web tools' if rel=='en/index.html' else
+                     '작은 도구함의 다른 무료 웹 도구 보기')
+            footer=('<footer style="padding:18px 12px;text-align:center;font-size:.9rem">'+
+                    '<a href="https://tb-toolbox-hub.pages.dev/" rel="noopener noreferrer">'+
+                    caption+'</a></footer>')
+            content=content.replace('</body>',footer+'</body>',1)
         p.write_text(content, encoding='utf-8')
         is_noindex = any('noindex' in tag.lower() for tag in
                          re.findall(r'<meta[^>]+>', content, flags=re.I)

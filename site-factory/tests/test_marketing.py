@@ -15,6 +15,20 @@ class MarketingTests(unittest.TestCase):
    self.assertEqual(sites[slug]['status'],'draft-ready')
    self.assertIn('en',sites[slug]['copy'])
    self.assertTrue(sites[slug]['shareLinks'])
+ def test_hub_is_real_navigation(self):
+  import tempfile
+  from pathlib import Path
+  import factory
+  with tempfile.TemporaryDirectory() as d:
+   out=Path(d)/'hub'
+   factory.prepare('toolbox-hub',out)
+   ko=(out/'index.html').read_text()
+   en=(out/'en/index.html').read_text()
+   self.assertIn('data-category="writing"',ko)
+   self.assertIn('https://tb-csv-merge-studio.pages.dev/',en)
+   self.assertIn('https://tb-novel-planner.pages.dev/en/',en)
+   self.assertNotIn('tb-toolbox-admin.pages.dev/',ko)
+   self.assertNotIn('AUTO_CATALOG_CARDS',ko)
  def test_tracking_links_preserve_language_and_canonical(self):
   x=marketing.packet_url("https://tb-a.pages.dev/","showhn","a",language="en")
   self.assertTrue(x.startswith("https://tb-a.pages.dev/en/"))

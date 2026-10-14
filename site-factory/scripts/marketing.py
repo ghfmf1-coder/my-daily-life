@@ -28,7 +28,7 @@ def build_packets():
     channels=metadata["channels"]
     allowed={x["id"] for x in channels}
     packets=[]
-    all_slugs=["my-daily-life"]+[s for s in site_list() if s not in ("toolbox-admin","deployment-check")]
+    all_slugs=["my-daily-life"]+[s for s in site_list() if s not in ("toolbox-admin","deployment-check","toolbox-hub")]
     for slug in all_slugs:
         if slug=="my-daily-life":
             url="https://my-daily-life.pages.dev/"
