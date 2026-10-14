@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-14T10:51:05+00:00",
+  "checkedAt": "2026-10-14T10:56:07+00:00",
   "status": "pass",
   "summary": {
-    "sites": 6,
-    "sitePassed": 6,
+    "sites": 7,
+    "sitePassed": 7,
     "siteWarnings": 0,
     "siteFailed": 0,
     "browserPassed": 10,
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 223ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -133,7 +133,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 48ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -158,7 +158,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -194,7 +194,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 151ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -234,7 +234,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -335,7 +335,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 164ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -406,7 +406,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -446,7 +446,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -537,7 +537,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 150ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -577,7 +577,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 45ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -668,7 +668,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 242ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -748,7 +748,138 @@
         {
           "check": "text_sites-catalog.json",
           "status": "pass",
-          "detail": "HTTP 200, 1530 bytes"
+          "detail": "HTTP 200, 2031 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "toolbox-hub",
+      "name": "작은 도구함 | 무료 업무·창작·일상 웹 도구 모음",
+      "url": "https://tb-toolbox-hub.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 169ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "CSV 파일 열 이름 맞춤 병합·중복 제거, 웹소설 회차·복선·인물 관리, 원고 반복 표현 검사, 하루 루틴 관리를 한곳에서 찾으세요. 실제 작동하는 무료 웹 도구 모음."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-toolbox-hub.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-toolbox-hub.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-toolbox-hub.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Small Toolbox — Free practical web tools for data, writing & daily life"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Browse genuinely usable free browser tools: merge CSV files, find repeated manuscript words, plan web novel ch"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-toolbox-hub.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-toolbox-hub.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-toolbox-hub.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 533 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 77 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 229 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 915 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 915 bytes"
         }
       ],
       "warnings": [],
@@ -762,7 +893,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 251
+      "elapsedMs": 352
     },
     {
       "name": "English plot planner",
@@ -770,7 +901,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 197
+      "elapsedMs": 294
     },
     {
       "name": "Korean manuscript",
@@ -778,7 +909,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 178
+      "elapsedMs": 230
     },
     {
       "name": "English manuscript",
@@ -786,7 +917,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 196
+      "elapsedMs": 293
     },
     {
       "name": "Korean CSV merger",
@@ -794,7 +925,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 254
+      "elapsedMs": 305
     },
     {
       "name": "English CSV merger",
@@ -802,7 +933,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 227
+      "elapsedMs": 320
     },
     {
       "name": "Haru English landing",
@@ -810,7 +941,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 143
+      "elapsedMs": 321
     },
     {
       "name": "Haru English app",
@@ -818,7 +949,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 158
+      "elapsedMs": 255
     },
     {
       "name": "Admin authentication gate",
@@ -826,7 +957,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Owner login required before dashboard rendering",
-      "elapsedMs": 127
+      "elapsedMs": 247
     },
     {
       "name": "Technical deployment smoke",
@@ -834,7 +965,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 190
+      "elapsedMs": 275
     }
   ],
   "issues": [],
