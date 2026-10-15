@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-15T10:37:46+00:00",
-  "status": "pass",
+  "checkedAt": "2026-10-15T13:29:22+00:00",
+  "status": "fail",
   "summary": {
     "sites": 7,
-    "sitePassed": 7,
+    "sitePassed": 2,
     "siteWarnings": 0,
-    "siteFailed": 0,
-    "browserPassed": 11,
-    "browserFailed": 0,
+    "siteFailed": 5,
+    "browserPassed": 10,
+    "browserFailed": 1,
     "sourceTestsPassed": true,
-    "issues": 0
+    "issues": 35
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 107ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 285ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -133,7 +133,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -158,7 +158,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -187,14 +187,14 @@
     {
       "slug": "csv-merge-studio",
       "name": "CSV 맞춤 병합기 | 열 이름 통일·중복 제거·파일 합치기",
-      "url": "https://tb-csv-merge-studio.pages.dev/",
+      "url": "https://csv.abreda.com/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 267ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -218,23 +218,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-csv-merge-studio.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-csv-merge-studio.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-csv-merge-studio.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 174ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -258,17 +258,17 @@
         },
         {
           "check": "canonical_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-csv-merge-studio.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-csv-merge-studio.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-csv-merge-studio.pages.dev/en/"
         },
         {
@@ -298,7 +298,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 2"
         },
         {
@@ -323,7 +323,15 @@
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "canonical_ko: https://tb-csv-merge-studio.pages.dev/",
+        "hreflang_ko_ko: https://tb-csv-merge-studio.pages.dev/",
+        "hreflang_ko_en: https://tb-csv-merge-studio.pages.dev/en/",
+        "canonical_en: https://tb-csv-merge-studio.pages.dev/en/",
+        "hreflang_en_ko: https://tb-csv-merge-studio.pages.dev/",
+        "hreflang_en_en: https://tb-csv-merge-studio.pages.dev/en/",
+        "sitemap_content: entries: 2"
+      ]
     },
     {
       "slug": "deployment-check",
@@ -335,7 +343,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 181ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -399,14 +407,14 @@
     {
       "slug": "manuscript-lens",
       "name": "웹소설 원고돋보기 | 반복 표현·대사·문장 분석",
-      "url": "https://tb-manuscript-lens.pages.dev/",
+      "url": "https://manuscript.abreda.com/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 112ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 176ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -430,23 +438,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-manuscript-lens.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-manuscript-lens.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-manuscript-lens.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 157ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 148ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -470,17 +478,17 @@
         },
         {
           "check": "canonical_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-manuscript-lens.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-manuscript-lens.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-manuscript-lens.pages.dev/en/"
         },
         {
@@ -510,7 +518,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 2"
         },
         {
@@ -525,19 +533,27 @@
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "canonical_ko: https://tb-manuscript-lens.pages.dev/",
+        "hreflang_ko_ko: https://tb-manuscript-lens.pages.dev/",
+        "hreflang_ko_en: https://tb-manuscript-lens.pages.dev/en/",
+        "canonical_en: https://tb-manuscript-lens.pages.dev/en/",
+        "hreflang_en_ko: https://tb-manuscript-lens.pages.dev/",
+        "hreflang_en_en: https://tb-manuscript-lens.pages.dev/en/",
+        "sitemap_content: entries: 2"
+      ]
     },
     {
       "slug": "novel-planner",
       "name": "웹소설 연재 설계실 | 회차·복선·인물 관리",
-      "url": "https://tb-novel-planner.pages.dev/",
+      "url": "https://novel.abreda.com/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 198ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -561,23 +577,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-novel-planner.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-novel-planner.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-novel-planner.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -601,17 +617,17 @@
         },
         {
           "check": "canonical_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-novel-planner.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-novel-planner.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-novel-planner.pages.dev/en/"
         },
         {
@@ -641,7 +657,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 2"
         },
         {
@@ -656,115 +672,117 @@
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "canonical_ko: https://tb-novel-planner.pages.dev/",
+        "hreflang_ko_ko: https://tb-novel-planner.pages.dev/",
+        "hreflang_ko_en: https://tb-novel-planner.pages.dev/en/",
+        "canonical_en: https://tb-novel-planner.pages.dev/en/",
+        "hreflang_en_ko: https://tb-novel-planner.pages.dev/",
+        "hreflang_en_en: https://tb-novel-planner.pages.dev/en/",
+        "sitemap_content: entries: 2"
+      ]
     },
     {
       "slug": "toolbox-admin",
       "name": "작은 도구함 통합 관리자 v1.2",
       "url": "https://tb-toolbox-admin.pages.dev/",
       "type": "internal",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 750ms, text/html"
         },
         {
           "check": "title_ko",
           "status": "pass",
-          "detail": "작은 도구함 | 운영 콘솔"
+          "detail": "Sign in ・ Cloudflare Access"
         },
         {
           "check": "meta_description_ko",
-          "status": "pass",
-          "detail": "작은 도구함 통합 관리자 운영 콘솔 v1.2. 사이트, 아이디어, 작업, 성과, 정책과 배포 상태를 관리합니다."
+          "status": "fail",
+          "detail": ""
         },
         {
           "check": "html_lang_ko",
-          "status": "pass",
-          "detail": "expected ko; got ko"
+          "status": "fail",
+          "detail": "expected ko; got "
         },
         {
           "check": "index_directive_ko",
           "status": "pass",
-          "detail": "noindex,nofollow,noarchive"
+          "detail": "noindex"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "pass",
-          "detail": "HTTP 200, 16958 bytes"
+          "status": "fail",
+          "detail": "HTTP 200, 51339 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "pass",
-          "detail": "HTTP 200, 685 bytes"
+          "status": "warning",
+          "detail": "HTTP 200, 51339 bytes"
         },
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 26 bytes"
+          "detail": "HTTP 200, 51340 bytes"
         },
         {
           "check": "robots_publicity",
-          "status": "pass",
-          "detail": "noindex internal"
+          "status": "fail",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "pass",
-          "detail": "HTTP 200, 110 bytes"
-        },
-        {
-          "check": "sitemap_content",
-          "status": "pass",
-          "detail": "entries: 0"
-        },
-        {
-          "check": "script_admin-config.js",
-          "status": "pass",
-          "detail": "HTTP 200, 265 bytes"
-        },
-        {
-          "check": "script_auth.js",
-          "status": "pass",
-          "detail": "HTTP 200, 7560 bytes"
+          "status": "fail",
+          "detail": "HTTP 200, 51339 bytes"
         },
         {
           "check": "admin_login_gate",
-          "status": "pass",
-          "detail": "login gate present"
+          "status": "fail",
+          "detail": "login gate missing"
         },
         {
           "check": "text_auth.js",
           "status": "pass",
-          "detail": "HTTP 200, 7560 bytes"
+          "detail": "HTTP 200, 51328 bytes"
         },
         {
           "check": "text_admin-config.js",
           "status": "pass",
-          "detail": "HTTP 200, 265 bytes"
+          "detail": "HTTP 200, 51352 bytes"
         },
         {
           "check": "text_sites-catalog.json",
           "status": "pass",
-          "detail": "HTTP 200, 2031 bytes"
+          "detail": "HTTP 200, 51364 bytes"
         }
       ],
-      "warnings": [],
-      "failures": []
+      "warnings": [
+        "svg_favicon.svg: HTTP 200, 51339 bytes"
+      ],
+      "failures": [
+        "meta_description_ko: ",
+        "html_lang_ko: expected ko; got ",
+        "icon_favicon.ico: HTTP 200, 51339 bytes",
+        "robots_publicity: crawlable public",
+        "sitemap_sitemap.xml: HTTP 200, 51339 bytes",
+        "admin_login_gate: login gate missing"
+      ]
     },
     {
       "slug": "toolbox-hub",
       "name": "작은 도구함 | 무료 업무·창작·일상 웹 도구 모음",
-      "url": "https://tb-toolbox-hub.pages.dev/",
+      "url": "https://abreda.com/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 224ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -788,23 +806,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-toolbox-hub.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-toolbox-hub.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-toolbox-hub.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 150ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -828,17 +846,17 @@
         },
         {
           "check": "canonical_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-toolbox-hub.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-toolbox-hub.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "pass",
+          "status": "fail",
           "detail": "https://tb-toolbox-hub.pages.dev/en/"
         },
         {
@@ -868,7 +886,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 2"
         },
         {
@@ -894,7 +912,7 @@
         {
           "check": "text_en_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2591 bytes"
+          "detail": "HTTP 200, 1956 bytes"
         },
         {
           "check": "rss_en_feed.xml",
@@ -903,57 +921,65 @@
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "canonical_ko: https://tb-toolbox-hub.pages.dev/",
+        "hreflang_ko_ko: https://tb-toolbox-hub.pages.dev/",
+        "hreflang_ko_en: https://tb-toolbox-hub.pages.dev/en/",
+        "canonical_en: https://tb-toolbox-hub.pages.dev/en/",
+        "hreflang_en_ko: https://tb-toolbox-hub.pages.dev/",
+        "hreflang_en_en: https://tb-toolbox-hub.pages.dev/en/",
+        "sitemap_content: entries: 2"
+      ]
     }
   ],
   "browserChecks": [
     {
       "name": "Korean plot planner",
-      "url": "https://tb-novel-planner.pages.dev/",
+      "url": "https://novel.abreda.com/",
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 312
+      "elapsedMs": 387
     },
     {
       "name": "English plot planner",
-      "url": "https://tb-novel-planner.pages.dev/en/",
+      "url": "https://novel.abreda.com/en/",
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 242
+      "elapsedMs": 310
     },
     {
       "name": "Korean manuscript",
-      "url": "https://tb-manuscript-lens.pages.dev/",
+      "url": "https://manuscript.abreda.com/",
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 212
+      "elapsedMs": 281
     },
     {
       "name": "English manuscript",
-      "url": "https://tb-manuscript-lens.pages.dev/en/",
+      "url": "https://manuscript.abreda.com/en/",
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 494
+      "elapsedMs": 294
     },
     {
       "name": "Korean CSV merger",
-      "url": "https://tb-csv-merge-studio.pages.dev/",
+      "url": "https://csv.abreda.com/",
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 305
+      "elapsedMs": 520
     },
     {
       "name": "English CSV merger",
-      "url": "https://tb-csv-merge-studio.pages.dev/en/",
+      "url": "https://csv.abreda.com/en/",
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 256
+      "elapsedMs": 376
     },
     {
       "name": "Haru English landing",
@@ -961,7 +987,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 196
+      "elapsedMs": 240
     },
     {
       "name": "Haru English app",
@@ -969,23 +995,23 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 198
+      "elapsedMs": 244
     },
     {
       "name": "Admin authentication gate",
       "url": "https://tb-toolbox-admin.pages.dev/",
       "device": "mobile",
-      "status": "pass",
-      "detail": "Owner login required before dashboard rendering",
-      "elapsedMs": 175
+      "status": "fail",
+      "detail": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#adminLoginForm') to be visible\n",
+      "elapsedMs": 14315
     },
     {
       "name": "Toolbox hub search",
-      "url": "https://tb-toolbox-hub.pages.dev/",
+      "url": "https://abreda.com/",
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 274
+      "elapsedMs": 267
     },
     {
       "name": "Technical deployment smoke",
@@ -993,10 +1019,151 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 219
+      "elapsedMs": 301
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "scope": "csv-merge-studio",
+      "details": "canonical_ko: https://tb-csv-merge-studio.pages.dev/"
+    },
+    {
+      "scope": "csv-merge-studio",
+      "details": "hreflang_ko_ko: https://tb-csv-merge-studio.pages.dev/"
+    },
+    {
+      "scope": "csv-merge-studio",
+      "details": "hreflang_ko_en: https://tb-csv-merge-studio.pages.dev/en/"
+    },
+    {
+      "scope": "csv-merge-studio",
+      "details": "canonical_en: https://tb-csv-merge-studio.pages.dev/en/"
+    },
+    {
+      "scope": "csv-merge-studio",
+      "details": "hreflang_en_ko: https://tb-csv-merge-studio.pages.dev/"
+    },
+    {
+      "scope": "csv-merge-studio",
+      "details": "hreflang_en_en: https://tb-csv-merge-studio.pages.dev/en/"
+    },
+    {
+      "scope": "csv-merge-studio",
+      "details": "sitemap_content: entries: 2"
+    },
+    {
+      "scope": "manuscript-lens",
+      "details": "canonical_ko: https://tb-manuscript-lens.pages.dev/"
+    },
+    {
+      "scope": "manuscript-lens",
+      "details": "hreflang_ko_ko: https://tb-manuscript-lens.pages.dev/"
+    },
+    {
+      "scope": "manuscript-lens",
+      "details": "hreflang_ko_en: https://tb-manuscript-lens.pages.dev/en/"
+    },
+    {
+      "scope": "manuscript-lens",
+      "details": "canonical_en: https://tb-manuscript-lens.pages.dev/en/"
+    },
+    {
+      "scope": "manuscript-lens",
+      "details": "hreflang_en_ko: https://tb-manuscript-lens.pages.dev/"
+    },
+    {
+      "scope": "manuscript-lens",
+      "details": "hreflang_en_en: https://tb-manuscript-lens.pages.dev/en/"
+    },
+    {
+      "scope": "manuscript-lens",
+      "details": "sitemap_content: entries: 2"
+    },
+    {
+      "scope": "novel-planner",
+      "details": "canonical_ko: https://tb-novel-planner.pages.dev/"
+    },
+    {
+      "scope": "novel-planner",
+      "details": "hreflang_ko_ko: https://tb-novel-planner.pages.dev/"
+    },
+    {
+      "scope": "novel-planner",
+      "details": "hreflang_ko_en: https://tb-novel-planner.pages.dev/en/"
+    },
+    {
+      "scope": "novel-planner",
+      "details": "canonical_en: https://tb-novel-planner.pages.dev/en/"
+    },
+    {
+      "scope": "novel-planner",
+      "details": "hreflang_en_ko: https://tb-novel-planner.pages.dev/"
+    },
+    {
+      "scope": "novel-planner",
+      "details": "hreflang_en_en: https://tb-novel-planner.pages.dev/en/"
+    },
+    {
+      "scope": "novel-planner",
+      "details": "sitemap_content: entries: 2"
+    },
+    {
+      "scope": "toolbox-admin",
+      "details": "meta_description_ko: "
+    },
+    {
+      "scope": "toolbox-admin",
+      "details": "html_lang_ko: expected ko; got "
+    },
+    {
+      "scope": "toolbox-admin",
+      "details": "icon_favicon.ico: HTTP 200, 51339 bytes"
+    },
+    {
+      "scope": "toolbox-admin",
+      "details": "robots_publicity: crawlable public"
+    },
+    {
+      "scope": "toolbox-admin",
+      "details": "sitemap_sitemap.xml: HTTP 200, 51339 bytes"
+    },
+    {
+      "scope": "toolbox-admin",
+      "details": "admin_login_gate: login gate missing"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "canonical_ko: https://tb-toolbox-hub.pages.dev/"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "hreflang_ko_ko: https://tb-toolbox-hub.pages.dev/"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "hreflang_ko_en: https://tb-toolbox-hub.pages.dev/en/"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "canonical_en: https://tb-toolbox-hub.pages.dev/en/"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "hreflang_en_ko: https://tb-toolbox-hub.pages.dev/"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "hreflang_en_en: https://tb-toolbox-hub.pages.dev/en/"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "sitemap_content: entries: 2"
+    },
+    {
+      "scope": "browser:Admin authentication gate",
+      "details": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#adminLoginForm') to be visible\n"
+    }
+  ],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
