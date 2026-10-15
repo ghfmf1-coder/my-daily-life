@@ -19,6 +19,15 @@ class ReleaseFeedTests(unittest.TestCase):
         self.assertFalse(any("toolbox-admin" in x or "deployment-check" in x for x in links))
         self.assertEqual(len(links),len(set(links)))
         self.assertTrue(all(e.find("guid").get("isPermaLink")=="true" for e in en.findall("./channel/item")))
+    def test_social_post_is_below_bluesky_limit(self):
+        for lang in ("ko","en"):
+            root=ET.fromstring(generate_feed(marketing.build_packets(),lang))
+            for item in root.findall("./channel/item"):
+                title=item.findtext("title") or ""
+                desc=item.findtext("description") or ""
+                url=item.findtext("link") or ""
+                self.assertLessEqual(len(title + " " + desc + " " + url),280,
+                                     f"too long for social auto-post: {url}")
     def test_syndication_uses_stable_guid_not_a_new_id_per_build(self):
         x=marketing.build_packets()
         self.assertEqual(generate_feed(x,"ko"),generate_feed(x,"ko"))

@@ -33,11 +33,18 @@ def generate_feed(packets: dict, lang: str="ko") -> bytes:
             continue
         link=item["url"] if lang=="ko" else item["url"].rstrip("/")+"/en/"
         summary=item.get("copy",{}).get(lang,{})
-        title=summary.get("title") or item.get("title") or slug
-        description=summary.get("copy") or item.get("description") or title
+        title=" ".join(str(summary.get("title") or item.get("title") or slug).split())[:75]
+        description=" ".join(str(summary.get("copy") or item.get("description") or title).split())
+        # Metricool maps RSS entries to social posts. Leave room for the canonical
+        # link, markup and client-added whitespace under Bluesky's 300-char limit.
+        # RSS is for *announcements*, not the full product description.
+        max_description=max(0,min(120,275-len(title)-len(link)-8))
+        description=description[:max_description].rstrip()
+        if max_description and len(description)<len(str(summary.get("copy") or item.get("description") or title)):
+            description=description.rstrip(" .,;") + "…"
         entry=ET.SubElement(channel,"item")
         text("title",title,entry)
-        text("description",description[:1200],entry)
+        text("description",description,entry)
         text("link",link,entry)
         text("guid",link,entry).set("isPermaLink","true")
         # Only include factual first-published dates explicitly maintained for the site.
