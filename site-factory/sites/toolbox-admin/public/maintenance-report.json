@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-15T13:30:52+00:00",
-  "status": "fail",
+  "checkedAt": "2026-10-15T13:33:53+00:00",
+  "status": "pass",
   "summary": {
     "sites": 7,
-    "sitePassed": 6,
+    "sitePassed": 7,
     "siteWarnings": 0,
-    "siteFailed": 1,
-    "browserPassed": 10,
-    "browserFailed": 1,
+    "siteFailed": 0,
+    "browserPassed": 11,
+    "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 7
+    "issues": 0
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 192ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 118ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -133,7 +133,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -158,7 +158,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -194,7 +194,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 186ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 178ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -234,7 +234,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 212ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 166ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -335,7 +335,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 140ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -406,7 +406,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 212ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 220ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -446,7 +446,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 224ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -537,7 +537,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 293ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 258ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -577,7 +577,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 224ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 186ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -663,90 +663,16 @@
       "name": "작은 도구함 통합 관리자 v1.2",
       "url": "https://tb-toolbox-admin.pages.dev/",
       "type": "internal",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
-          "check": "page_internal",
+          "check": "admin_access_protection",
           "status": "pass",
-          "detail": "HTTP 200, 817ms, text/html"
-        },
-        {
-          "check": "title_ko",
-          "status": "pass",
-          "detail": "Sign in ・ Cloudflare Access"
-        },
-        {
-          "check": "meta_description_ko",
-          "status": "fail",
-          "detail": ""
-        },
-        {
-          "check": "html_lang_ko",
-          "status": "fail",
-          "detail": "expected ko; got "
-        },
-        {
-          "check": "index_directive_ko",
-          "status": "pass",
-          "detail": "noindex"
-        },
-        {
-          "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP 200, 51339 bytes"
-        },
-        {
-          "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP 200, 51339 bytes"
-        },
-        {
-          "check": "text_robots.txt",
-          "status": "pass",
-          "detail": "HTTP 200, 51340 bytes"
-        },
-        {
-          "check": "robots_publicity",
-          "status": "fail",
-          "detail": "crawlable public"
-        },
-        {
-          "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP 200, 51339 bytes"
-        },
-        {
-          "check": "admin_login_gate",
-          "status": "fail",
-          "detail": "login gate missing"
-        },
-        {
-          "check": "text_auth.js",
-          "status": "pass",
-          "detail": "HTTP 200, 51328 bytes"
-        },
-        {
-          "check": "text_admin-config.js",
-          "status": "pass",
-          "detail": "HTTP 200, 51352 bytes"
-        },
-        {
-          "check": "text_sites-catalog.json",
-          "status": "pass",
-          "detail": "HTTP 200, 51364 bytes"
+          "detail": "Cloudflare Access login challenge"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP 200, 51339 bytes"
-      ],
-      "failures": [
-        "meta_description_ko: ",
-        "html_lang_ko: expected ko; got ",
-        "icon_favicon.ico: HTTP 200, 51339 bytes",
-        "robots_publicity: crawlable public",
-        "sitemap_sitemap.xml: HTTP 200, 51339 bytes",
-        "admin_login_gate: login gate missing"
-      ]
+      "warnings": [],
+      "failures": []
     },
     {
       "slug": "toolbox-hub",
@@ -758,7 +684,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 337ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 349ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -798,7 +724,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 250ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -907,7 +833,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 590
+      "elapsedMs": 423
     },
     {
       "name": "English plot planner",
@@ -915,7 +841,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 344
+      "elapsedMs": 357
     },
     {
       "name": "Korean manuscript",
@@ -923,7 +849,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 261
+      "elapsedMs": 329
     },
     {
       "name": "English manuscript",
@@ -939,7 +865,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 371
+      "elapsedMs": 422
     },
     {
       "name": "English CSV merger",
@@ -947,7 +873,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 458
+      "elapsedMs": 373
     },
     {
       "name": "Haru English landing",
@@ -955,7 +881,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 262
+      "elapsedMs": 693
     },
     {
       "name": "Haru English app",
@@ -963,15 +889,15 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 313
+      "elapsedMs": 239
     },
     {
       "name": "Admin authentication gate",
       "url": "https://tb-toolbox-admin.pages.dev/",
       "device": "mobile",
-      "status": "fail",
-      "detail": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#adminLoginForm') to be visible\n",
-      "elapsedMs": 14237
+      "status": "pass",
+      "detail": "Cloudflare Access authentication gate visible",
+      "elapsedMs": 368
     },
     {
       "name": "Toolbox hub search",
@@ -979,7 +905,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 427
+      "elapsedMs": 484
     },
     {
       "name": "Technical deployment smoke",
@@ -987,39 +913,10 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 286
+      "elapsedMs": 348
     }
   ],
-  "issues": [
-    {
-      "scope": "toolbox-admin",
-      "details": "meta_description_ko: "
-    },
-    {
-      "scope": "toolbox-admin",
-      "details": "html_lang_ko: expected ko; got "
-    },
-    {
-      "scope": "toolbox-admin",
-      "details": "icon_favicon.ico: HTTP 200, 51339 bytes"
-    },
-    {
-      "scope": "toolbox-admin",
-      "details": "robots_publicity: crawlable public"
-    },
-    {
-      "scope": "toolbox-admin",
-      "details": "sitemap_sitemap.xml: HTTP 200, 51339 bytes"
-    },
-    {
-      "scope": "toolbox-admin",
-      "details": "admin_login_gate: login gate missing"
-    },
-    {
-      "scope": "browser:Admin authentication gate",
-      "details": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#adminLoginForm') to be visible\n"
-    }
-  ],
+  "issues": [],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
