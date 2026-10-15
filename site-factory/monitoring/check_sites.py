@@ -163,9 +163,30 @@ def check_file(site, result, path, *, kind, necessary=True):
         record(result, kind + "_" + path.strip("/").replace("/", "_"), False, str(ex),warn=not necessary)
         return None
 
+def is_access_challenge(response):
+    """A verified Cloudflare Access login page is the healthy public boundary.
+
+    Do not fetch or crawl an owner-only site behind its Access challenge.
+    """
+    if response.get("status") != 200 or "text/html" not in response.get("content_type",""):
+        return False
+    body=response.get("body",b"").decode("utf-8","replace")
+    return ("Cloudflare Access" in body or "cloudflareaccess.com" in body) and (
+        "Log in" in body or "Sign in" in body or "cloudflareaccess.com" in body)
+
 def check_site(site):
     result = create_site_record(site)
     origin = site["origin"]
+    # The admin console may now be guarded by Cloudflare Access even at pages.dev.
+    # Report that the login boundary works rather than treating private routes as broken.
+    if site["slug"] == "toolbox-admin":
+        try:
+            challenge=fetch(origin+"/")
+            if is_access_challenge(challenge):
+                record(result,"admin_access_protection",True,"Cloudflare Access login challenge")
+                return result
+        except (RuntimeError, ValueError):
+            pass
     is_internal = site["internal"]
     locales = site["locales"]
     root = safe_page(site,result,"/",lang="ko",indexable=not is_internal)

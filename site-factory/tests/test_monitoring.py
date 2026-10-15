@@ -25,6 +25,12 @@ class HealthMonitoringTests(unittest.TestCase):
         self.assertEqual(p.canonical(),"https://tb-sample.pages.dev/en/")
         self.assertEqual(p.alternate("ko"),"https://tb-sample.pages.dev/")
         self.assertIn("adminGate",p.ids)
+    def test_owner_only_admin_access_challenge_is_healthy(self):
+        response={"status":200,"content_type":"text/html; charset=utf-8",
+                  "body":b"<title>Cloudflare Access</title><p>Log in to adminivo.com</p>"}
+        self.assertTrue(mod.is_access_challenge(response))
+        self.assertFalse(mod.is_access_challenge({**response,"body":b"<title>Normal app</title>"}))
+        self.assertFalse(mod.is_access_challenge({**response,"status":403}))
     def test_result_does_not_expose_user_records(self):
         s=mod.roster()[0]
         record=mod.create_site_record(s)

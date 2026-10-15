@@ -89,9 +89,15 @@ function finalize(extraFailure){
   return 'Unauthenticated English login displayed';
  });
  await check('Admin authentication gate',origin('tb-toolbox-admin'),'mobile',async page=>{
-  await page.locator('#adminLoginForm').waitFor();
-  assert(await page.locator('#adminGate').isVisible(),'Login gate hidden');
-  assert(!(await page.locator('.app-shell').isVisible()),'Admin private UI visible');
+  if(await page.locator('#adminLoginForm').count()){
+   assert(await page.locator('#adminGate').isVisible(),'Login gate hidden');
+   assert(!(await page.locator('.app-shell').isVisible()),'Admin private UI visible');
+   return 'Owner login gate visible';
+  }
+  const text=(await page.locator('body').innerText()).slice(0,6000);
+  assert(text.includes('Cloudflare Access') || page.url().includes('cloudflareaccess.com'),
+         'Neither Cloudflare Access nor application authentication gate appeared');
+  return 'Cloudflare Access authentication gate visible';
   return 'Owner login required before dashboard rendering';
  });
  await check('Toolbox hub search','https://abreda.com/','mobile',async page=>{
