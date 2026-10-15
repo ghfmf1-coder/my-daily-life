@@ -37,7 +37,7 @@ function finalize(extraFailure){
 }
 (async()=>{
  browser=await chromium.launch({headless:true});
- const novel=origin('tb-novel-planner'),lens=origin('tb-manuscript-lens'),csv=origin('tb-csv-merge-studio');
+ const novel='https://novel.abreda.com/',lens='https://manuscript.abreda.com/',csv='https://csv.abreda.com/';
  await check('Korean plot planner',novel,'desktop',async page=>{
   await page.locator('#epTitle').fill('자동 테스트 회차');await page.locator('#addEp').click();
   assert((await page.locator('#episodes').innerText()).includes('자동 테스트 회차'),'Chapter not saved');
@@ -94,7 +94,7 @@ function finalize(extraFailure){
   assert(!(await page.locator('.app-shell').isVisible()),'Admin private UI visible');
   return 'Owner login required before dashboard rendering';
  });
- await check('Toolbox hub search','https://tb-toolbox-hub.pages.dev/','mobile',async page=>{
+ await check('Toolbox hub search','https://abreda.com/','mobile',async page=>{
   await page.locator('#toolSearch').fill('CSV');
   assert(await page.locator('.tool:visible').count()===1,'Hub search should find CSV tool');
   assert((await page.locator('.tool:visible').innerText()).includes('CSV'),'Wrong result');

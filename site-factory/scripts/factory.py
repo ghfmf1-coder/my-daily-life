@@ -252,11 +252,11 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         # A single authentic brand-navigation link. Do not link to private admin.
         if slug not in {'toolbox-hub','toolbox-admin','deployment-check'} \
                 and rel in {'index.html','en/index.html'} \
-                and 'tb-toolbox-hub.pages.dev' not in content:
+                and 'https://abreda.com/' not in content:
             caption=('Browse other useful web tools' if rel=='en/index.html' else
                      '작은 도구함의 다른 무료 웹 도구 보기')
             footer=('<footer style="padding:18px 12px;text-align:center;font-size:.9rem">'+
-                    '<a href="https://tb-toolbox-hub.pages.dev/" rel="noopener noreferrer">'+
+                    '<a href="https://abreda.com/" rel="noopener noreferrer">'+
                     caption+'</a></footer>')
             content=content.replace('</body>',footer+'</body>',1)
         p.write_text(content, encoding='utf-8')
@@ -291,7 +291,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 'slug': other,
                 'title': site_config['title'],
                 'description': site_config['description'],
-                'url': f"https://{site_config['project']}.pages.dev/",
+                'url': (site_config.get('canonical_url') or f"https://{site_config['project']}.pages.dev") + '/',
                 'repo': 'https://github.com/ghfmf1-coder/my-daily-life',
                 'category': '공개 도구',
                 'locales': site_config.get('locales', ['ko'])

@@ -25,8 +25,8 @@ class MarketingTests(unittest.TestCase):
    ko=(out/'index.html').read_text()
    en=(out/'en/index.html').read_text()
    self.assertIn('data-category="writing"',ko)
-   self.assertIn('https://tb-csv-merge-studio.pages.dev/',en)
-   self.assertIn('https://tb-novel-planner.pages.dev/en/',en)
+   self.assertIn('https://csv.abreda.com/',en)
+   self.assertIn('https://novel.abreda.com/en/',en)
    self.assertNotIn('tb-toolbox-admin.pages.dev/',ko)
    self.assertNotIn('AUTO_CATALOG_CARDS',ko)
  def test_tracking_links_preserve_language_and_canonical(self):

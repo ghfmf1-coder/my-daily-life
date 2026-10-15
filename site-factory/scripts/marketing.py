@@ -32,6 +32,7 @@ def build_packets():
     for slug in all_slugs:
         if slug=="my-daily-life":
             url="https://my-daily-life.pages.dev/"
+            guid_base=url
             langs=["ko","en"]
             title="하루한칸 — 루틴·교대근무 관리"
             description="하루 목표·일정·지출 관리"
@@ -39,6 +40,7 @@ def build_packets():
             info,_=read_site(slug)
             if not info["approved"]:continue
             url=(info.get("canonical_url") or f"https://{info['project']}.pages.dev")+"/"
+            guid_base=f"https://{info['project']}.pages.dev/"
             title=info["title"];description=info["description"]
             langs=info.get("locales",["ko"])
         copy=briefs.get(slug,{})
@@ -48,7 +50,7 @@ def build_packets():
         sharelinks={channel:{lang:packet_url(url,channel,slug,language=lang)
                              for lang in langs} for channel in selected}
         packets.append({
-           "slug":slug,"title":title,"description":description,"url":url,
+           "slug":slug,"title":title,"description":description,"url":url,"guid_base":guid_base,
            "langs":langs,"status":"draft-ready" if verified_copy else "needs-editorial-review",
            "copy":{lang:copy[lang] for lang in langs} if verified_copy else {},
            "recommendedChannels":selected,"shareLinks":sharelinks

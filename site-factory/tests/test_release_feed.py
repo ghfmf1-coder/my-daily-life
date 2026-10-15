@@ -14,11 +14,14 @@ class ReleaseFeedTests(unittest.TestCase):
         self.assertEqual(ko.tag,"rss")
         self.assertEqual(en.findtext("./channel/language"),"en")
         links=[x.findtext("link") for x in en.findall("./channel/item")]
-        self.assertIn("https://tb-csv-merge-studio.pages.dev/en/",links)
+        self.assertIn("https://csv.abreda.com/en/",links)
         self.assertIn("https://my-daily-life.pages.dev/en/",links)
         self.assertFalse(any("toolbox-admin" in x or "deployment-check" in x for x in links))
         self.assertEqual(len(links),len(set(links)))
         self.assertTrue(all(e.find("guid").get("isPermaLink")=="true" for e in en.findall("./channel/item")))
+        # RSS GUIDs must not change solely because branding moves to abreda.com.
+        csv=next(e for e in en.findall("./channel/item") if e.findtext("link")=="https://csv.abreda.com/en/")
+        self.assertEqual(csv.findtext("guid"),"https://tb-csv-merge-studio.pages.dev/en/")
     def test_social_post_is_below_bluesky_limit(self):
         for lang in ("ko","en"):
             root=ET.fromstring(generate_feed(marketing.build_packets(),lang))

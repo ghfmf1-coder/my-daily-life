@@ -4,8 +4,8 @@
   "title": "작은 도구함 | 무료 업무·창작·일상 웹 도구 모음",
   "description": "실제 이용 가능한 CSV 정리, 웹소설·원고 관리, 하루 습관 추적 웹 도구를 검색하고 빠르게 여는 편의 도구 모음",
   "approved": true,
-  "domain": null,
-  "canonical_url": null,
+  "domain": "abreda.com",
+  "canonical_url": "https://abreda.com",
   "locales": [
     "ko",
     "en"

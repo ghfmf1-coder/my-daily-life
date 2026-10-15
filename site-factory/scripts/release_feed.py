@@ -46,7 +46,11 @@ def generate_feed(packets: dict, lang: str="ko") -> bytes:
         text("title",title,entry)
         text("description",description,entry)
         text("link",link,entry)
-        text("guid",link,entry).set("isPermaLink","true")
+        # Keep the original item GUID when a Pages site gains a branded domain.
+        # Metricool RSS autolists must not confuse this URL migration with a launch.
+        guid_base=item.get("guid_base") or item["url"]
+        guid=guid_base if lang=="ko" else guid_base.rstrip("/")+"/en/"
+        text("guid",guid,entry).set("isPermaLink","true")
         # Only include factual first-published dates explicitly maintained for the site.
         if published:=item.get("published_at"):
             try:

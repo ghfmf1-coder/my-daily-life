@@ -549,15 +549,20 @@
   // Newly approved toolbox services. Merge without overwriting previous browser records.
   function registerApprovedSites(){
     const records=[
-      ['csv-merge-studio','CSV 맞춤 병합기','파일 · 데이터 도구','https://tb-csv-merge-studio.pages.dev/','CSV 열 이름 자동 매칭, 파일별 수동 연결, 중복 제거·다운로드. 배포 검증 대기.'],
-      ['novel-planner','웹소설 연재 설계실','웹소설 · 창작 도구','https://tb-novel-planner.pages.dev/','회차·등장인물·복선 추적 도구. GitHub에 구현 완료, 실제 공개 주소 검증 대기.'],
-      ['manuscript-lens','웹소설 원고돋보기','웹소설 · 원고 검사','https://tb-manuscript-lens.pages.dev/','반복 어절·긴 문장·대사 비율·표현 찾기. GitHub에 구현 완료, 실접속 검증 대기.'],
-      ['toolbox-admin','작은 도구함 통합 관리자','운영 · 내부 관리','https://tb-toolbox-admin.pages.dev/','운영 콘솔 v1.2. 사이트 접근 제한 미설정 시 공개 주소임. 브라우저별 개별 저장, 실시간 동기화 미구현.']
+      ['csv-merge-studio','CSV 맞춤 병합기','파일 · 데이터 도구','https://csv.abreda.com','CSV 열 이름 자동 매칭, 파일별 수동 연결, 중복 제거·다운로드. 배포 검증 대기.'],
+      ['novel-planner','웹소설 연재 설계실','웹소설 · 창작 도구','https://novel.abreda.com','회차·등장인물·복선 추적 도구. GitHub에 구현 완료, 실제 공개 주소 검증 대기.'],
+      ['manuscript-lens','웹소설 원고돋보기','웹소설 · 원고 검사','https://manuscript.abreda.com','반복 어절·긴 문장·대사 비율·표현 찾기. GitHub에 구현 완료, 실접속 검증 대기.'],
+      ['toolbox-admin','작은 도구함 통합 관리자','운영 · 내부 관리','https://adminivo.com/','운영 콘솔 v1.2. 사이트 접근 제한 미설정 시 공개 주소임. 브라우저별 개별 저장, 실시간 동기화 미구현.']
     ];
     let changes=0;
     for(const [slug,name,category,url,notes] of records){
-      const found=state.sites.some(x=>x.url===url || x.id==='toolbox-'+slug);
-      if(found)continue;
+      const oldUrl='https://tb-'+slug+'.pages.dev/';
+      const found=state.sites.find(x=>x.url===url || x.url===oldUrl || x.id==='toolbox-'+slug);
+      if(found){
+        // Migrate only untouched factory URLs; preserve user-entered overrides.
+        if(found.url===oldUrl && url!==oldUrl){found.url=url;found.updatedAt=nowIso();changes++;}
+        continue;
+      }
       state.sites.push({id:'toolbox-'+slug,name,category,status:'testing',language:'한국어',url,repo:'https://github.com/ghfmf1-coder/my-daily-life',host:'Cloudflare Pages',releaseDate:'',google:'unknown',naver:'unknown',policy:'unchecked',notes,createdAt:nowIso(),updatedAt:nowIso()});
       changes++;
     }
@@ -574,8 +579,10 @@
       if(!payload||!Array.isArray(payload.sites))throw new Error('invalid catalog');
       let changed=false;
       for(const item of payload.sites){
-        if(!item.url||!/^https:\/\/tb-[a-z0-9-]+\.pages\.dev\/$/.test(item.url))continue;
-        const existing=state.sites.find(x=>x.url===item.url);
+        if(!item.url||!/^https:\/\/(?:tb-[a-z0-9-]+\.pages\.dev|(?:[a-z0-9-]+\.)?abreda\.com)\/$/.test(item.url))continue;
+        const oldUrl='https://tb-'+item.slug+'.pages.dev/';
+        const existing=state.sites.find(x=>x.url===item.url || x.url===oldUrl || x.id==='toolbox-'+item.slug || x.id==='catalog-'+item.slug);
+        if(existing && existing.url===oldUrl && item.url!==oldUrl){existing.url=item.url;existing.updatedAt=nowIso();changed=true;}
         if(!existing){
           state.sites.push({
             id:'catalog-'+item.slug,name:item.title,category:item.category||'공개 도구',
@@ -591,7 +598,7 @@
       if(changed){activity('신규 공개 사이트 목록 자동 동기화');save();render();}
       // A successful favicon image load confirms an accessible deployed asset,
       // not functional correctness, indexation or search-console property ownership.
-      const targets=state.sites.filter(x=>/^https:\/\/tb-[a-z0-9-]+\.pages\.dev\/$/.test(x.url));
+      const targets=state.sites.filter(x=>/^https:\/\/(?:tb-[a-z0-9-]+\.pages\.dev|(?:[a-z0-9-]+\.)?abreda\.com)\/$/.test(x.url) && x.url!=='https://adminivo.com/');
       const probe=site=>new Promise(resolve=>{
         const image=new Image();let settled=false;
         const done=ok=>{if(settled)return;settled=true;image.onload=null;image.onerror=null;resolve(ok)};
