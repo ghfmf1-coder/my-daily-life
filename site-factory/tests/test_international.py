@@ -46,6 +46,20 @@ class InternationalizationTests(unittest.TestCase):
             self.assertTrue({'novel-planner','manuscript-lens','csv-merge-studio'}.issubset(names))
             self.assertNotIn('toolbox-admin',names)
             self.assertNotIn('deployment-check',names)
+    def test_hub_has_branding_policy_pages(self):
+        with tempfile.TemporaryDirectory() as d:
+            factory.prepare('toolbox-hub',Path(d)/'build')
+            out=Path(d)/'build'
+            for path in ('privacy.html','terms.html','en/privacy.html','en/terms.html'):
+                self.assertTrue((out/path).is_file(),path)
+                doc=(out/path).read_text(encoding='utf-8')
+                self.assertIn('ghfmf1@gmail.com',doc)
+                self.assertIn('rel="canonical"',doc)
+            self.assertIn('href="/privacy.html"',(out/'index.html').read_text(encoding='utf-8'))
+            self.assertIn('href="/en/privacy.html"',(out/'en/index.html').read_text(encoding='utf-8'))
+            xml=(out/'sitemap.xml').read_text(encoding='utf-8')
+            self.assertIn('https://abreda.com/privacy.html',xml)
+            self.assertIn('https://abreda.com/terms.html',xml)
     def test_haruhankan_english_and_sitemap(self):
         ko=(REPO/'index.html').read_text(encoding='utf-8')
         en=(REPO/'en/index.html').read_text(encoding='utf-8')
