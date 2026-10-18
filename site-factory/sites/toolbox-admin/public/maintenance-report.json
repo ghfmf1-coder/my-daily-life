@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-18T12:07:01+00:00",
+  "checkedAt": "2026-10-18T12:11:08+00:00",
   "status": "pass",
   "summary": {
     "sites": 7,
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 178ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 246ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 152ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -133,7 +133,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 48ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 124ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -158,7 +158,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -194,7 +194,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 191ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 288ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -234,7 +234,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 202ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -335,7 +335,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 196ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -406,7 +406,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -446,7 +446,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -537,7 +537,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 225ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -577,7 +577,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 139ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -684,7 +684,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 157ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -724,7 +724,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -843,7 +843,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 353
+      "elapsedMs": 411
     },
     {
       "name": "English plot planner",
@@ -851,7 +851,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 274
+      "elapsedMs": 293
     },
     {
       "name": "Korean manuscript",
@@ -859,7 +859,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 245
+      "elapsedMs": 229
     },
     {
       "name": "English manuscript",
@@ -867,7 +867,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 328
+      "elapsedMs": 294
     },
     {
       "name": "Korean CSV merger",
@@ -875,7 +875,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 320
+      "elapsedMs": 303
     },
     {
       "name": "English CSV merger",
@@ -883,7 +883,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 258
+      "elapsedMs": 326
     },
     {
       "name": "Haru English landing",
@@ -891,7 +891,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 153
+      "elapsedMs": 245
     },
     {
       "name": "Haru English app",
@@ -899,7 +899,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 220
+      "elapsedMs": 233
     },
     {
       "name": "Admin authentication gate",
@@ -907,7 +907,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 234
+      "elapsedMs": 240
     },
     {
       "name": "Toolbox hub search",
@@ -915,7 +915,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 198
+      "elapsedMs": 219
     },
     {
       "name": "Technical deployment smoke",
@@ -923,7 +923,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 192
+      "elapsedMs": 244
     }
   ],
   "issues": [],
