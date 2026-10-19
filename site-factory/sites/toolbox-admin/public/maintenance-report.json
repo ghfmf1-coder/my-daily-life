@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-19T03:35:34+00:00",
+  "checkedAt": "2026-10-19T03:36:57+00:00",
   "status": "pass",
   "summary": {
     "sites": 7,
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 200ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 264ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 207ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -355,7 +355,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -426,7 +426,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 222ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -466,7 +466,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -567,7 +567,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 201ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -607,7 +607,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 124ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -724,7 +724,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 228ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -734,7 +734,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "CSV 파일 열 이름 맞춤 병합·중복 제거, 웹소설 회차·복선·인물 관리, 원고 반복 표현 검사, 하루 루틴 관리를 한곳에서 찾으세요. 실제 작동하는 무료 웹 도구 모음."
+          "detail": "CSV 파일 병합과 중복 제거, 웹소설 회차·복선 관리, 원고 반복 표현 검사, 하루 루틴 관리까지. 설치 없이 바로 사용하는 무료 웹 도구 모음."
         },
         {
           "check": "html_lang_ko",
@@ -764,7 +764,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 102ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -774,7 +774,7 @@
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "Browse genuinely usable free browser tools: merge CSV files, find repeated manuscript words, plan web novel ch"
+          "detail": "Find free browser tools for CSV merging, manuscript revision, web novel planning, and daily habit tracking. Se"
         },
         {
           "check": "html_lang_en",
@@ -814,7 +814,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 83 bytes"
+          "detail": "HTTP 200, 145 bytes"
         },
         {
           "check": "robots_publicity",
@@ -824,7 +824,7 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 427 bytes"
+          "detail": "HTTP 200, 407 bytes"
         },
         {
           "check": "sitemap_content",
@@ -883,7 +883,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 375
+      "elapsedMs": 374
     },
     {
       "name": "English plot planner",
@@ -891,7 +891,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 324
+      "elapsedMs": 377
     },
     {
       "name": "Korean manuscript",
@@ -899,7 +899,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 264
+      "elapsedMs": 263
     },
     {
       "name": "English manuscript",
@@ -907,7 +907,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 312
+      "elapsedMs": 313
     },
     {
       "name": "Korean CSV merger",
@@ -915,7 +915,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 454
+      "elapsedMs": 386
     },
     {
       "name": "English CSV merger",
@@ -923,7 +923,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 325
+      "elapsedMs": 327
     },
     {
       "name": "Haru English landing",
@@ -931,7 +931,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 194
+      "elapsedMs": 237
     },
     {
       "name": "Haru English app",
@@ -939,7 +939,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 479
+      "elapsedMs": 212
     },
     {
       "name": "Admin authentication gate",
@@ -947,7 +947,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 197
+      "elapsedMs": 299
     },
     {
       "name": "Toolbox hub search",
@@ -955,7 +955,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 233
+      "elapsedMs": 279
     },
     {
       "name": "Technical deployment smoke",
@@ -963,7 +963,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 228
+      "elapsedMs": 241
     }
   ],
   "issues": [],
