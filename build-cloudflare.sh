@@ -10,7 +10,7 @@ node --check en/app/translate.js
 python3 prepare_seo.py "https://my-daily-life.pages.dev"
 
 mkdir -p dist/app dist/en/app
-cp index.html landing.css styles.css app.js config.js icon.svg favicon.ico manifest.webmanifest privacy.html terms.html sitemap.xml robots.txt dist/
+cp toolbox-traffic.js index.html landing.css styles.css app.js config.js icon.svg favicon.ico manifest.webmanifest privacy.html terms.html sitemap.xml robots.txt dist/
 cp app/index.html dist/app/index.html
 cp en/index.html dist/en/index.html
 cp en/app/index.html en/app/translate.js dist/en/app/
