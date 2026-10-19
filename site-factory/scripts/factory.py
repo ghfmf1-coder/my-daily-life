@@ -173,7 +173,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         from marketing import build_packets
         items=build_packets()['sites']
         category_map={'my-daily-life':'routine','csv-merge-studio':'data',
-                      'novel-planner':'writing','manuscript-lens':'writing'}
+                      'novel-planner':'writing','manuscript-lens':'writing','subtitle-sync-studio':'data'}
         def cards(language: str) -> str:
             blocks=[]
             for site in items:
@@ -221,6 +221,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         'csv-merge-studio': 'toolbox-csv-merge-studio',
         'novel-planner': 'toolbox-novel-planner',
         'manuscript-lens': 'toolbox-manuscript-lens',
+        'subtitle-sync-studio': 'toolbox-subtitle-sync-studio',
         'toolbox-hub': 'catalog-toolbox-hub',
     }
     if slug in tracking_ids:

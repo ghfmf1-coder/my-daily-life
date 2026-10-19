@@ -41,6 +41,8 @@ jobs:
         run: python3 -m unittest discover -s site-factory/tests -v
       - name: Run CSV core regression tests
         run: node site-factory/tests/test_csv_core.js
+      - name: Run subtitle timing and format regression tests
+        run: node site-factory/tests/test_subtitle_core.js
       - name: Find changed approved sites
         id: targets
         env:
