@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="SRT·VTT 자막 파일의 시간 싱크를 초 단위로 이동하고 FPS를 변환하세요. 겹친 자막·시간 오류 검사와 텍스트 교체까지, 파일 업로드 없이 브라우저에서 처리합니다."><meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#006d66"><title>자막 싱크 조정 · SRT VTT 변환 및 자막 오류 검사 | 무료 온라인 자막 편집기</title>
+<link rel="stylesheet" href="/styles.css"><link rel="icon" href="/favicon.svg" type="image/svg+xml"></head>
+<body><header><div class="wrap"><nav><a class="brand" href="https://abreda.com/">◈ SMALL TOOLBOX</a><a href="/en/" lang="en">English</a></nav>
+<p class="tag">SUBTITLE SYNC STUDIO · SRT / VTT</p><h1>자막 싱크가 안 맞을 때, 파일 전체를 한 번에 조정하세요.</h1><p class="lead">SRT와 VTT 자막을 열어 시작 시간을 일괄 이동하거나 프레임레이트를 변환하세요. 시간 겹침과 빈 자막도 자동으로 검사하고, 수정한 파일을 즉시 내려받습니다.</p>
+<div class="chips"><span>서버 전송 없음</span><span>SRT ↔ VTT 변환</span><span>시간 겹침 검사</span><span>가입·결제 없음</span></div></div></header>
+<main class="wrap"><p id="status" role="status" aria-live="polite"></p>
+<div class="grid"><div>
+<section class="panel" aria-labelledby="uploadTitle"><h2 id="uploadTitle">1. 자막 파일 불러오기</h2>
+<label class="upload" id="dropZone"><strong>파일을 선택하거나 이곳에 끌어 놓으세요</strong><small>SRT 또는 VTT · 최대 5MB · 브라우저에서만 읽음</small><input id="inputFile" type="file" accept=".srt,.vtt,text/plain,text/vtt"></label>
+<label for="pasteText">파일이 없다면 자막 텍스트 붙여넣기</label><textarea id="pasteText" placeholder="1\n00:00:01,000 --> 00:00:03,500\n안녕하세요!"></textarea>
+<button id="loadPaste" type="button" class="secondary">붙여넣은 자막 읽기</button></section>
+<section class="panel"><h2>2. 자막 시간 및 내용 편집</h2><fieldset id="editControls" disabled>
+<div class="formrow"><label for="offset">시간 일괄 이동 (초)</label><p>+ 값은 늦게, - 값은 빠르게 표시합니다. 예: 1.5 또는 -2.25</p><input id="offset" type="number" step="0.05" value="1.5"><button id="applyOffset" type="button" style="margin-top:10px">시간 이동 적용</button></div>
+<div class="formrow"><h3>FPS 변환</h3><p>예: 23.976 → 25. 영상의 재생속도가 변경된 경우에만 사용하세요.</p><div class="line"><div><label for="fpsFrom">기존 FPS</label><input id="fpsFrom" type="number" min="1" step=".001" value="23.976"></div><div><label for="fpsTo">변경 FPS</label><input id="fpsTo" type="number" min="1" step=".001" value="25"></div></div><button id="applyFps" type="button" style="margin-top:10px">FPS 변환 적용</button></div>
+<div class="formrow"><div class="line"><div><label for="findText">찾을 글자</label><input id="findText" type="text"></div><div><label for="replaceText">바꿀 글자</label><input id="replaceText" type="text"></div></div><button id="applyReplace" type="button" class="secondary" style="margin-top:10px">전체 자막 글자 바꾸기</button></div></fieldset></section>
+<section class="panel"><h2>3. 파일 다운로드</h2><label for="outputFormat">저장 형식</label><select id="outputFormat"><option value="srt">SRT (.srt)</option><option value="vtt">WebVTT (.vtt)</option></select><div class="actions" style="margin-top:14px"><button id="saveBtn" type="button" disabled>수정한 자막 다운로드</button><button id="resetBtn" class="secondary" type="button" disabled>원본으로 되돌리기</button></div></section>
+</div><div>
+<section class="panel"><h2>검사 요약</h2><div class="line"><div class="metric"><span>자막 수</span><strong id="cueCount">—</strong></div><div class="metric"><span>발견된 경고</span><strong id="issueCount">—</strong></div></div><div class="metric" style="margin-top:12px"><span>마지막 종료 시각</span><strong id="duration">—</strong></div><h3 style="margin-top:20px">시간 오류 상세</h3><ul id="issueList" class="issue-list"></ul></section>
+<section class="panel"><h2>수정 결과 미리보기 (최대 100개)</h2><div class="tablewrap"><table><thead><tr><th>번호</th><th>시간 구간</th><th>자막 내용</th></tr></thead><tbody id="previewBody"></tbody></table></div></section>
+</div></div><section class="panel info"><h2>이 도구로 해결하는 문제</h2><p>영상보다 자막이 늦거나 빠를 때 전체 시간을 같은 간격으로 이동합니다.</p><p>23.976fps 자막을 25fps 영상에 맞추는 등 프레임레이트 차이로 서서히 어긋나는 싱크를 조정합니다.</p><p>SRT와 WebVTT 파일을 상호 변환하고, 자막 간 겹침·역순·빈 내용·잘못된 길이를 확인합니다.</p></section>
+<section class="panel faq"><h2>자주 묻는 질문</h2>
+<details><summary>영상 파일도 업로드해야 하나요?</summary><p>아니요. 자막 파일만 필요합니다. 영상의 실제 음성을 분석하는 자동 싱크 맞춤 기능은 제공하지 않습니다.</p></details><details><summary>SRT 파일과 VTT 파일은 어떻게 다른가요?</summary><p>SRT는 쉼표로 밀리초를 구분하고 자막 번호를 사용하며, WebVTT는 마침표로 밀리초를 구분하고 WEBVTT 헤더를 사용합니다. 변환할 때 시간과 내용은 유지합니다.</p></details>
+<details><summary>내 자막이 외부 서버에 저장되나요?</summary><p>아니요. 선택한 자막은 브라우저 안에서 처리합니다. 웹사이트 접속을 위한 일반적인 호스팅 요청 외에 자막 내용을 업로드하지 않습니다.</p></details><details><summary>변환 후 자막이 여전히 안 맞으면요?</summary><p>일정한 시간 차이는 초 이동으로 해결할 수 있지만, 영상 편집으로 부분마다 시간이 달라진 경우에는 구간별 수동 편집이 필요합니다. 이 도구는 일괄 조정만 제공합니다.</p></details></section>
+<p class="muted">이 도구는 파일을 서버로 전송하지 않습니다. 모든 편집은 현재 브라우저에서 실행되며, 페이지를 닫으면 편집 데이터가 사라집니다. 개인 콘텐츠는 원본을 따로 보관하세요.</p><p class="muted">작업 결과는 참고용입니다. 중요한 자막은 원본을 백업하고 실제 영상과 다시 확인하세요.</p></main>
+<footer><div class="wrap">© Small Toolbox · <a href="https://abreda.com/">작은도구함으로</a><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용 안내</a></div></footer>
+<script defer src="/subtitle-core.js"></script><script defer src="/app.js"></script></body></html>

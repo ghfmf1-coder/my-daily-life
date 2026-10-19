@@ -1,0 +1,13 @@
+{
+  "slug": "subtitle-sync-studio",
+  "project": "tb-subtitle-sync-studio",
+  "title": "자막 싱크 조정기 | SRT VTT 변환·자막 시간 오류 검사",
+  "description": "SRT·VTT 자막 파일 싱크를 일괄 조정하고 프레임레이트 변환, 겹침·오류 검사 및 변환 다운로드를 제공하는 무료 브라우저 자막 도구",
+  "approved": true,
+  "domain": null,
+  "canonical_url": null,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
