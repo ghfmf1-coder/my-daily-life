@@ -27,6 +27,7 @@
   let editor = null;
   let storageWorks = true;
   let state;
+  const googleAdsView={started:false,busy:false,configured:null,connected:null,accounts:[],results:[],error:'',customer:'',seeds:'웹소설 연재, CSV 병합',country:'KR'};
   const analyticsView = {days: 1, loading: false, started: false, data: null, error: ''};
   const maintenance = {data:null,error:'첫 자동 점검을 기다리고 있습니다.'};
   const promotion={data:null,error:''};
@@ -274,9 +275,77 @@
       '<div class="notice">🌐 <strong>구매 예정 도메인은 실제 소유가 아닙니다.</strong> 등록 여부 및 DNS 정보는 가비아·Cloudflare에서 직접 확인한 뒤 갱신하세요. 이 메뉴는 자동 조회를 하지 않습니다.</div>'+
       panel('도메인 목록',`${state.domains.length}개 기록됨`,state.domains.length?`<div class="table-scroll"><table><thead><tr><th>도메인</th><th>진행 상태</th><th>연결 사이트</th><th>네임서버</th><th>만료일</th><th>관리</th></tr></thead><tbody>${rows}</tbody></table></div>`:empty('도메인이 아직 없습니다.','10월 15~16일 구매 예정인 도메인은 실제 구매한 뒤 등록해도 됩니다.'));
   }
+  function googleAdsPanel(){
+    const g=googleAdsView;
+    const status=g.configured===false?'서버 인증 정보 확인 필요':g.connected===true?'Google 계정 연결 완료':g.connected===false?'Google 계정 승인 대기':'연결 상태 확인 전';
+    const statusNote=g.error?'<p style="color:#b42318">오류: '+esc(g.error)+'</p>':'';
+    const list=Array.isArray(g.results)?g.results:[];
+    const rows=list.map(r=>'<tr><td>'+esc(r.keyword||'—')+'</td><td>'+
+      (r.metrics?.avgMonthlySearches!==undefined?fmt(r.metrics.avgMonthlySearches):'미제공')+'</td><td>'+
+      esc(r.metrics?.competition||'미제공')+'</td><td>'+
+      (r.metrics?.lowTopOfPageBidMicros!==undefined?fmt((Number(r.metrics.lowTopOfPageBidMicros)||0)/1e6):'미제공')+'</td></tr>').join('');
+    const options=g.accounts.map(s=>'<option value="'+esc(s)+'" '+(s===g.customer?'selected':'')+'>'+esc(s)+'</option>').join('');
+    return panel('Google 키워드 데이터','Google Ads API Basic · 실시간 데이터만 표시',
+      '<div class="panel-body">'+
+      '<p><strong>연결 상태: '+esc(status)+'</strong></p>'+statusNote+
+      '<div class="utility-buttons">'+
+      button('연결 상태 확인','google-status','secondary')+
+      button('Google 계정 권한 승인','google-start')+
+      (g.connected?button('연결된 광고 계정 조회','google-accounts','secondary'):'')+
+      '</div>'+
+      (g.connected?'<p class="desc">인증된 계정이 접근할 수 있는 Google Ads 고객 ID 중 하나를 사용합니다.</p>'+
+      '<label for="googleCustomer">Google Ads 고객 ID</label> '+
+      (g.accounts.length?'<select id="googleCustomer"><option value="">계정 선택</option>'+options+'</select>':
+      '<input id="googleCustomer" inputmode="numeric" placeholder="10자리 고객 ID" value="'+esc(g.customer)+'">')+
+      '<label for="googleSeeds">조사할 키워드(쉼표 구분, 최대 20개)</label><input id="googleSeeds" value="'+esc(g.seeds)+'" style="width:100%;max-width:540px">'+
+      '<label for="googleCountry">대상 국가</label><select id="googleCountry"><option value="KR" '+(g.country==='KR'?'selected':'')+'>대한민국</option><option value="US" '+(g.country==='US'?'selected':'')+'>미국</option></select>'+
+      button('실제 검색량 조회','google-keywords')+
+      (list.length?'<div class="table-scroll"><table><thead><tr><th>키워드</th><th>월평균 검색량</th><th>경쟁도</th><th>최저 상단 입찰가(통화 단위)</th></tr></thead><tbody>'+rows+'</tbody></table></div>':
+      '<p class="desc">실제 API에서 조회한 키워드 결과는 여기에 표시됩니다. 미조회 상태에서 숫자를 만들지 않습니다.</p>'):'<p class="desc">먼저 Google 계정 권한 승인을 완료하세요. 암호화된 갱신 토큰은 서버에만 보관됩니다.</p>')+
+      (g.busy?'<p class="desc">연결 및 조회 요청 처리 중…</p>':'')+
+      '</div>'
+    );
+  }
+  async function googleAdsStatus(){
+    if(googleAdsView.busy)return;
+    googleAdsView.busy=true;googleAdsView.started=true;googleAdsView.error='';
+    if(view==='ideas')render();
+    try{
+      const result=await window.TOOLBOX_CLOUD.googleAds('status');
+      googleAdsView.configured=!!result.configured;googleAdsView.connected=!!result.connected;
+    }catch(e){googleAdsView.error=String(e.message||e);}
+    finally{googleAdsView.busy=false;if(view==='ideas')render();}
+  }
+  async function googleAdsAction(action){
+    if(googleAdsView.busy)return;
+    googleAdsView.busy=true;googleAdsView.error='';
+    try{
+      if(action==='google-start'){
+        const res=await window.TOOLBOX_CLOUD.googleAds('start',{});
+        if(!/^https:\/\/accounts\.google\.com\//.test(res.authorizationUrl))throw Error('Google 인증 주소 확인 실패');
+        window.location.assign(res.authorizationUrl);
+        return;
+      }
+      if(action==='google-accounts'){
+        const res=await window.TOOLBOX_CLOUD.googleAds('accounts');
+        googleAdsView.accounts=Array.isArray(res.accounts)?res.accounts:[];
+        if(googleAdsView.accounts.length===1)googleAdsView.customer=googleAdsView.accounts[0];
+        if(!googleAdsView.accounts.length)googleAdsView.error='접근 가능한 Google Ads 계정이 없습니다. ads.google.com 계정 권한을 확인하세요.';
+      }
+      if(action==='google-keywords'){
+        const el=document.getElementById('googleCustomer'),input=document.getElementById('googleSeeds'),country=document.getElementById('googleCountry');
+        googleAdsView.customer=el?.value||'';googleAdsView.seeds=input?.value||'';googleAdsView.country=country?.value||'KR';
+        const kws=googleAdsView.seeds.split(',').map(s=>s.trim()).filter(Boolean);
+        const res=await window.TOOLBOX_CLOUD.googleAds('keywords',{customerId:googleAdsView.customer,keywords:kws,target:googleAdsView.country});
+        googleAdsView.results=Array.isArray(res.results)?res.results:[];
+      }
+    }catch(e){googleAdsView.error=String(e.message||e);}
+    finally{googleAdsView.busy=false;if(view==='ideas')render();}
+  }
+
   function ideas(){
     return header('아이디어 검토','검증 근거와 실패 조건을 남기고, 승인된 아이디어만 개발합니다.',button('+ 아이디어 기록','new-idea'))+
-    '<div class="notice">🔍 키워드 검색량·매출 가능성 등은 검증한 1차 자료가 있을 때만 근거란에 기록하세요. 자료가 없으면 공란으로 두는 것이 원칙입니다.</div>'+panel('후보 파이프라인',`${state.ideas.length}개 후보 · 과거 대화에서 복원한 항목 포함`,state.ideas.length?`<div class="table-scroll"><table><thead><tr><th>아이디어</th><th>해결할 문제</th><th>검증 상태</th><th>난이도</th><th>근거</th><th>관리</th></tr></thead><tbody>${[...state.ideas].reverse().map(i=>`<tr><td><div class="item-title">${esc(i.title)}</div><div class="sub-line">${esc((i.difference||'차별점 미입력').slice(0,55))}</div></td><td>${esc((i.problem||'—').slice(0,90))}</td><td>${badge(i.status,STATUS.idea)}</td><td>${esc(i.effort||'미입력')}</td><td>${link(i.sourceUrl,'출처 ↗')}</td><td>${tiny('idea',i.id)}</td></tr>`).join('')}</tbody></table></div>`:empty('조사된 아이디어가 없습니다.'));
+    '<div class="notice">🔍 키워드 검색량·매출 가능성 등은 검증한 1차 자료가 있을 때만 근거란에 기록하세요. 자료가 없으면 공란으로 두는 것이 원칙입니다.</div>'+panel('후보 파이프라인',`${state.ideas.length}개 후보 · 과거 대화에서 복원한 항목 포함`,state.ideas.length?`<div class="table-scroll"><table><thead><tr><th>아이디어</th><th>해결할 문제</th><th>검증 상태</th><th>난이도</th><th>근거</th><th>관리</th></tr></thead><tbody>${[...state.ideas].reverse().map(i=>`<tr><td><div class="item-title">${esc(i.title)}</div><div class="sub-line">${esc((i.difference||'차별점 미입력').slice(0,55))}</div></td><td>${esc((i.problem||'—').slice(0,90))}</td><td>${badge(i.status,STATUS.idea)}</td><td>${esc(i.effort||'미입력')}</td><td>${link(i.sourceUrl,'출처 ↗')}</td><td>${tiny('idea',i.id)}</td></tr>`).join('')}</tbody></table></div>`:empty('조사된 아이디어가 없습니다.'))+googleAdsPanel();
   }
   function tasks(){
     const counts=Object.keys(STATUS.task).map(k=>`${STATUS.task[k]} ${state.tasks.filter(t=>t.status===k).length}개`).join(' · ');
@@ -366,6 +435,7 @@
     host.innerHTML=({overview,sites,domains,ideas,tasks,traffic,metrics,policies,maintenance:maintenanceView,promotion:promotionView,settings:adminPanel}[view])();
     document.getElementById('sidebar').classList.remove('open');
     if(view==='traffic' && !analyticsView.started)queueMicrotask(refreshAnalytics);
+    if(view==='ideas' && !googleAdsView.started)queueMicrotask(googleAdsStatus);
   }
   const schema={
     domain:[
@@ -531,6 +601,8 @@
     const nav=e.target.closest('.nav-btn');if(nav){view=nav.dataset.view;render();return;}
     const b=e.target.closest('[data-action]');if(!b)return;
     const action=b.dataset.action;
+    if(action==='google-status'){void googleAdsStatus();return;}
+    if(['google-start','google-accounts','google-keywords'].includes(action)){void googleAdsAction(action);return;}
     if(action==='promo-copy'){void copyPromotion(b.dataset.slug,b.dataset.lang,b.dataset.channel);return;}
     if(action==='goto'){view=b.dataset.view;render();}
     else if(action==='analytics-reload')refreshAnalytics();
@@ -543,8 +615,8 @@
     else if(action==='import-audit')document.getElementById('auditFile').click();
     else if(action==='export-csv')exportCSV();
   });
-  document.addEventListener('input',e=>{if(e.target.id==='searchInput')filterRows();});
-  document.addEventListener('change',e=>{if(e.target.id==='statusFilter')filterRows();});
+  document.addEventListener('input',e=>{if(e.target.id==='googleSeeds')googleAdsView.seeds=e.target.value;if(e.target.id==='googleCustomer')googleAdsView.customer=e.target.value;if(e.target.id==='searchInput')filterRows();});
+  document.addEventListener('change',e=>{if(e.target.id==='googleCountry')googleAdsView.country=e.target.value;if(e.target.id==='googleCustomer')googleAdsView.customer=e.target.value;if(e.target.id==='statusFilter')filterRows();});
   document.getElementById('auditFile').addEventListener('change',async e=>{await importAudit(e.target.files?.[0]);e.target.value='';});
   document.getElementById('importFile').addEventListener('change',async e=>{await importBackup(e.target.files?.[0]);e.target.value='';});
   document.getElementById('closeDialog').addEventListener('click',()=>dlg.close());

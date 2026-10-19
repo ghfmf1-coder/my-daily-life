@@ -83,6 +83,19 @@ function enqueue(data){
  writing=current;
  return current;
 }
+async function googleAdsApi(action,body=null){
+  const auth=await token();
+  const url=BASE+'/functions/v1/toolbox-google-ads-oauth/'+action;
+  const response=await fetch(url,{
+    method:body===null?'GET':'POST',
+    headers:{'Authorization':'Bearer '+auth,apikey:KEY,Accept:'application/json',...(body===null?{}:{'Content-Type':'application/json'})},
+    cache:'no-store',...(body===null?{}:{body:JSON.stringify(body)})
+  });
+  const data=await response.json().catch(()=>({}));
+  if(!response.ok)throw Error(String(data.error||'HTTP '+response.status).slice(0,130));
+  return data;
+}
+
 async function authenticate(){
   const auth=await token();
   const account=await call('/auth/v1/user',{token:auth});
@@ -106,7 +119,7 @@ async function authenticate(){
     // Existing browser data is preserved and uploaded after the manager initializes.
     if(local&&typeof local==='object')await enqueue(local);
   }
-  window.TOOLBOX_CLOUD=Object.freeze({save:enqueue,readMetrics:async()=>{const ws=await readWorkspace();if(ws)remoteVersion=Number(ws.version)||remoteVersion;return Array.isArray(ws?.payload?.metrics)?ws.payload.metrics:[];}});
+  window.TOOLBOX_CLOUD=Object.freeze({googleAds:googleAdsApi,save:enqueue,readMetrics:async()=>{const ws=await readWorkspace();if(ws)remoteVersion=Number(ws.version)||remoteVersion;return Array.isArray(ws?.payload?.metrics)?ws.payload.metrics:[];}});
   gate.hidden=true;shell.style.display='flex';signout.hidden=false;
   if(!booted){
     booted=true;
