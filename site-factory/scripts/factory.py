@@ -179,21 +179,25 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             for site in items:
                 if site['slug'] == 'toolbox-hub':
                     continue
+                # Keep language-specific catalogues separate; never show untranslated tools.
+                if language not in site.get('langs',[]):
+                    continue
                 info=site.get('copy',{}).get(language,{})
                 name=info.get('title') or site['title']
-                intro=info.get('copy') or site['description']
+                intro=info.get('copy') or (site['description'] if language=='ko' else '')
+                if language=='en' and not info.get('title'):
+                    continue  # Do not expose Korean-only or generic fallback cards on English search
                 intro=intro[:260] + ('…' if len(intro)>260 else '')
                 category=category_map.get(site['slug'],'other')
                 cat_label={
                     'ko':{'routine':'일상·루틴','data':'데이터·파일','writing':'웹소설·글쓰기','other':'기타 도구'},
                     'en':{'routine':'Daily life','data':'Data & files','writing':'Writing','other':'Other tools'},
                 }[language][category]
-                target=site['url'] if language=='ko' or 'en' not in site['langs'] else site['url']+'en/'
+                target=site['url'] if language=='ko' else site['url'].rstrip('/')+'/en/'
                 label='바로 사용하기 ↗' if language=='ko' else 'Open tool ↗'
                 alt_label='English' if language=='ko' else '한국어'
                 alt=site['url']+'en/' if language=='ko' else site['url']
-                alternate=(' <a href="'+escape(alt,quote=True)+'" rel="noopener noreferrer">'
-                           +alt_label+'</a>') if 'en' in site['langs'] else ''
+                alternate=''  # Language switching belongs in the global header, not every card.
                 blocks.append(
                     '<article class="tool" data-category="'+escape(category,quote=True)+'" data-search="'+
                     escape(' '.join((name,site['title'],site['description'],intro,site['slug'])),quote=True)+'">'+
