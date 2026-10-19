@@ -124,7 +124,7 @@ async function authenticate(){
   if(!booted){
     booted=true;
     const script=document.createElement('script');
-    script.src='./app.js';script.async=false;
+    script.src='./app.js?v=20261019-keyword-diagnostic';script.async=false;
     script.onerror=()=>{error('Could not load the operations console.');gate.hidden=false;shell.style.display='none'};
     document.head.appendChild(script);
   }
