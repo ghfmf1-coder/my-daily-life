@@ -1,0 +1,37 @@
+name: Verify Google Ads OAuth endpoint
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/google-ads-connection-check.yml'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify configured callback server (no credentials printed)
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-google-ads-oauth'
+          curl --fail --silent --show-error --max-time 20 "${URL}/health" -o /tmp/health.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open('/tmp/health.json',encoding='utf8'))
+          if d.get('ok') is not True:
+              raise SystemExit('Google Ads function health not healthy')
+          if d.get('configured') is not True:
+              raise SystemExit('Google Ads OAuth credentials not available to the backend')
+          print('Server online and OAuth credentials configured (values never printed).')
+          PY
+      - name: Check owner authentication is required
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-google-ads-oauth'
+          STATUS=$(curl --silent --show-error --max-time 20 -o /tmp/status.json -w '%{http_code}' \
+            -H 'Origin: https://tb-toolbox-admin.pages.dev' "${URL}/status")
+          test "$STATUS" = "401"
+          echo "Unauthenticated access denied as expected."
