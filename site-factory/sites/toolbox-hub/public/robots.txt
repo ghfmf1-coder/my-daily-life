@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+# Cloudflare-managed internal routes are not indexable pages.
 Disallow: /cdn-cgi/
 Sitemap: https://abreda.com/sitemap.xml
