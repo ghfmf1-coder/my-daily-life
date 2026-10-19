@@ -53,7 +53,10 @@ class InternationalizationTests(unittest.TestCase):
             for path in ('privacy.html','terms.html','en/privacy.html','en/terms.html'):
                 self.assertTrue((out/path).is_file(),path)
                 doc=(out/path).read_text(encoding='utf-8')
-                self.assertIn('ghfmf1@gmail.com',doc)
+                self.assertIn('rel="canonical"',doc)
+                if 'privacy' in path:
+                    self.assertNotIn('ghfmf1@gmail.com',doc)
+                    self.assertIn('contact',doc)
                 self.assertIn('rel="canonical"',doc)
             self.assertIn('href="/privacy"',(out/'index.html').read_text(encoding='utf-8'))
             self.assertIn('href="/en/privacy"',(out/'en/index.html').read_text(encoding='utf-8'))
