@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-19T00:06:18+00:00",
+  "checkedAt": "2026-10-19T00:09:53+00:00",
   "status": "pass",
   "summary": {
     "sites": 7,
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 325ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -133,17 +133,17 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1173 bytes"
+          "detail": "HTTP 200, 1166 bytes"
         },
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1173 bytes"
+          "detail": "HTTP 200, 1166 bytes"
         },
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 43ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 46ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 326ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 436ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 314ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 300ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -324,7 +324,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1173 bytes"
+          "detail": "HTTP 200, 1166 bytes"
         },
         {
           "check": "script_csv-core.js",
@@ -339,7 +339,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1173 bytes"
+          "detail": "HTTP 200, 1166 bytes"
         }
       ],
       "warnings": [],
@@ -355,7 +355,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 174ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 150ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -426,7 +426,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 551ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -466,7 +466,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 358ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 243ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -541,7 +541,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1173 bytes"
+          "detail": "HTTP 200, 1166 bytes"
         },
         {
           "check": "script_en_app.js",
@@ -551,7 +551,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1173 bytes"
+          "detail": "HTTP 200, 1166 bytes"
         }
       ],
       "warnings": [],
@@ -567,7 +567,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 343ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -607,7 +607,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 309ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 295ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -682,7 +682,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1173 bytes"
+          "detail": "HTTP 200, 1166 bytes"
         },
         {
           "check": "script_en_app.js",
@@ -692,7 +692,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1173 bytes"
+          "detail": "HTTP 200, 1166 bytes"
         }
       ],
       "warnings": [],
@@ -724,7 +724,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 339ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -764,7 +764,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 285ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 320ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -844,7 +844,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1173 bytes"
+          "detail": "HTTP 200, 1166 bytes"
         },
         {
           "check": "script_cdn-cgi_scripts_5c5dd728_cloudflare-static_email-decode.min.js",
@@ -859,7 +859,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1173 bytes"
+          "detail": "HTTP 200, 1166 bytes"
         },
         {
           "check": "text_feed.xml",
@@ -893,7 +893,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 775
+      "elapsedMs": 614
     },
     {
       "name": "English plot planner",
@@ -901,7 +901,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 578
+      "elapsedMs": 290
     },
     {
       "name": "Korean manuscript",
@@ -909,7 +909,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 561
+      "elapsedMs": 696
     },
     {
       "name": "English manuscript",
@@ -917,7 +917,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 661
+      "elapsedMs": 545
     },
     {
       "name": "Korean CSV merger",
@@ -925,7 +925,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 637
+      "elapsedMs": 372
     },
     {
       "name": "English CSV merger",
@@ -933,7 +933,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 708
+      "elapsedMs": 591
     },
     {
       "name": "Haru English landing",
@@ -941,7 +941,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 416
+      "elapsedMs": 210
     },
     {
       "name": "Haru English app",
@@ -949,7 +949,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 171
+      "elapsedMs": 194
     },
     {
       "name": "Admin authentication gate",
@@ -957,7 +957,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 449
+      "elapsedMs": 193
     },
     {
       "name": "Toolbox hub search",
@@ -965,7 +965,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 671
+      "elapsedMs": 486
     },
     {
       "name": "Technical deployment smoke",
@@ -973,7 +973,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 220
+      "elapsedMs": 216
     }
   ],
   "issues": [],
