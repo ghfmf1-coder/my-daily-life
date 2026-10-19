@@ -1,0 +1,12 @@
+{
+  "slug": "csv-empty-row-remover",
+  "project": "tb-pages-csv-empty-row-remover",
+  "title": "csv empty row remover | Small Toolbox",
+  "description": "Free bilingual browser-based file and text processing tool. Local processing, no account required.",
+  "approved": true,
+  "canonical_url": "https://tb-pages-csv-empty-row-remover.pages.dev",
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
