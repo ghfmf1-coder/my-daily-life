@@ -92,7 +92,7 @@ async function googleAdsApi(action,body=null){
     cache:'no-store',...(body===null?{}:{body:JSON.stringify(body)})
   });
   const data=await response.json().catch(()=>({}));
-  if(!response.ok)throw Error(String(data.error||'HTTP '+response.status).slice(0,130));
+  if(!response.ok)throw Error([String(data.error||'HTTP '+response.status),data.httpStatus?'Google HTTP '+data.httpStatus:'',data.googleCode||data.googleStatus||'',data.googleMessage||'',data.requestId?'Request ID '+data.requestId:''].filter(Boolean).join(' · ').slice(0,650));
   return data;
 }
 
