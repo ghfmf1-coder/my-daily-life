@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-19T03:31:47+00:00",
-  "status": "pass",
+  "checkedAt": "2026-10-19T03:34:23+00:00",
+  "status": "fail",
   "summary": {
     "sites": 7,
     "sitePassed": 7,
@@ -9,8 +9,8 @@
     "siteFailed": 0,
     "browserPassed": 11,
     "browserFailed": 0,
-    "sourceTestsPassed": true,
-    "issues": 0
+    "sourceTestsPassed": false,
+    "issues": 1
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 218ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 123ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 134ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 202ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 160ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 265ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 224ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -355,7 +355,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 183ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -426,7 +426,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 494ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 310ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -466,7 +466,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 123ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -567,7 +567,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 153ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 197ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -607,7 +607,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 160ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -724,7 +724,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 210ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 300ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -764,7 +764,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 168ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 177ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -883,7 +883,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 416
+      "elapsedMs": 418
     },
     {
       "name": "English plot planner",
@@ -891,7 +891,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 394
+      "elapsedMs": 344
     },
     {
       "name": "Korean manuscript",
@@ -899,7 +899,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 312
+      "elapsedMs": 328
     },
     {
       "name": "English manuscript",
@@ -907,7 +907,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 329
+      "elapsedMs": 378
     },
     {
       "name": "Korean CSV merger",
@@ -915,7 +915,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 336
+      "elapsedMs": 454
     },
     {
       "name": "English CSV merger",
@@ -923,7 +923,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 508
+      "elapsedMs": 390
     },
     {
       "name": "Haru English landing",
@@ -931,7 +931,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 238
+      "elapsedMs": 259
     },
     {
       "name": "Haru English app",
@@ -939,7 +939,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 1143
+      "elapsedMs": 259
     },
     {
       "name": "Admin authentication gate",
@@ -947,7 +947,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 317
+      "elapsedMs": 300
     },
     {
       "name": "Toolbox hub search",
@@ -955,7 +955,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 336
+      "elapsedMs": 353
     },
     {
       "name": "Technical deployment smoke",
@@ -963,10 +963,15 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 196
+      "elapsedMs": 273
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "scope": "source",
+      "details": "Repository unit/regression checks failed."
+    }
+  ],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
