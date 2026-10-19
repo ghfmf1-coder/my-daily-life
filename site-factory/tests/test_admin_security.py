@@ -9,7 +9,7 @@ class AdminSecurityTests(unittest.TestCase):
         self.assertIn('id="adminGate"',html)
         self.assertIn('id="adminLoginForm"',html)
         self.assertIn('style="display:none"',html)
-        self.assertRegex(html,r'src="\\./auth\\.js(?:\\?[^\"]+)?"')
+        self.assertIn('src="./auth.js?v=',html)
         self.assertNotIn('src="./app.js" defer',html)
         self.assertIn("connect-src 'self' https://ytifxhpizractdeytrok.supabase.co",html)
     def test_cloud_save_hook_and_rls_client(self):
