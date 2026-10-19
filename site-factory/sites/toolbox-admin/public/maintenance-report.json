@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-19T18:16:53+00:00",
+  "checkedAt": "2026-10-19T18:17:42+00:00",
   "status": "fail",
   "summary": {
     "sites": 13,
@@ -9,8 +9,8 @@
     "siteFailed": 5,
     "browserPassed": 0,
     "browserFailed": 0,
-    "sourceTestsPassed": false,
-    "issues": 27
+    "sourceTestsPassed": true,
+    "issues": 23
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 132ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -203,44 +203,121 @@
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 176ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "CSV 특정 열 추출기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "CSV 파일에서 필요한 열만 선택하여 다운로드"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 210ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Extract CSV Columns | 작은도구함"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Choose columns from a CSV file and download the result"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 447 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 92 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 345 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 3"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: CSV 파일에서 필요한 열만 선택하여 다운로드",
+        "canonical_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/",
+        "hreflang_ko_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/",
+        "hreflang_en_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/"
       ]
     },
     {
@@ -252,44 +329,122 @@
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 181ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "CSV 빈 행 제거기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "CSV 파일에서 빈 행과 공백 행 제거"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 178ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Remove Empty CSV Rows | 작은도구함"
+        },
+        {
+          "check": "meta_description_en",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "Remove empty or whitespace-only CSV rows"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 448 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 93 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 348 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 3"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: CSV 파일에서 빈 행과 공백 행 제거",
+        "canonical_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/",
+        "hreflang_ko_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/",
+        "meta_description_en: Remove empty or whitespace-only CSV rows",
+        "hreflang_en_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
       ]
     },
     {
@@ -302,7 +457,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 700ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 239ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -342,7 +497,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 632ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -453,7 +608,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -523,44 +678,122 @@
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 163ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "JSONL 오류 행 검사기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "JSONL 파일에서 JSON 오류 행 번호 확인"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "JSONL Error Line Checker | 작은도구함"
+        },
+        {
+          "check": "meta_description_en",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "Find invalid JSONL lines and error details"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 529 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 87 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 330 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 3"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: JSONL 파일에서 JSON 오류 행 번호 확인",
+        "canonical_ko: https://tb-pages-jsonl-validator.pages.dev/ko/",
+        "hreflang_ko_ko: https://tb-pages-jsonl-validator.pages.dev/ko/",
+        "meta_description_en: Find invalid JSONL lines and error details",
+        "hreflang_en_ko: https://tb-pages-jsonl-validator.pages.dev/ko/"
       ]
     },
     {
@@ -573,7 +806,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 734ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 220ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -613,7 +846,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 376ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 482ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -714,7 +947,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 204ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 556ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -754,7 +987,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 488ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 695ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -854,44 +1087,121 @@
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 142ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "SRT 효과음 제거기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "SRT 자막에서 효과음과 화자 표기를 정리"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "SRT SDH Cleaner | 작은도구함"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Remove sound cues and speaker labels from SRT subtitles"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 529 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 87 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 330 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 3"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: SRT 자막에서 효과음과 화자 표기를 정리",
+        "canonical_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/",
+        "hreflang_ko_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/",
+        "hreflang_en_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
       ]
     },
     {
@@ -904,7 +1214,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -944,7 +1254,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1071,7 +1381,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 313ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 225ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1111,7 +1421,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 217ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 188ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1231,44 +1541,121 @@
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "VTT 시간·화자 제거기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "VTT 자막의 시간과 화자 표시를 제거"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "VTT Timestamp Remover | 작은도구함"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Remove timestamps and speaker tags from VTT subtitles"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/ko/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 525 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 83 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 318 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 3"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: VTT 자막의 시간과 화자 표시를 제거",
+        "canonical_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/",
+        "hreflang_ko_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/",
+        "hreflang_en_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/"
       ]
     }
   ],
@@ -1276,107 +1663,91 @@
   "issues": [
     {
       "scope": "csv-column-extractor",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_ko: CSV 파일에서 필요한 열만 선택하여 다운로드"
     },
     {
       "scope": "csv-column-extractor",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/"
     },
     {
       "scope": "csv-column-extractor",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/"
     },
     {
       "scope": "csv-column-extractor",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "csv-column-extractor",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_en_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/"
     },
     {
       "scope": "csv-empty-row-remover",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_ko: CSV 파일에서 빈 행과 공백 행 제거"
     },
     {
       "scope": "csv-empty-row-remover",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
     },
     {
       "scope": "csv-empty-row-remover",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
     },
     {
       "scope": "csv-empty-row-remover",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_en: Remove empty or whitespace-only CSV rows"
     },
     {
       "scope": "csv-empty-row-remover",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_en_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
     },
     {
       "scope": "jsonl-validator",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_ko: JSONL 파일에서 JSON 오류 행 번호 확인"
     },
     {
       "scope": "jsonl-validator",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://tb-pages-jsonl-validator.pages.dev/ko/"
     },
     {
       "scope": "jsonl-validator",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://tb-pages-jsonl-validator.pages.dev/ko/"
     },
     {
       "scope": "jsonl-validator",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_en: Find invalid JSONL lines and error details"
     },
     {
       "scope": "jsonl-validator",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_en_ko: https://tb-pages-jsonl-validator.pages.dev/ko/"
     },
     {
       "scope": "srt-sdh-cleaner",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_ko: SRT 자막에서 효과음과 화자 표기를 정리"
     },
     {
       "scope": "srt-sdh-cleaner",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
     },
     {
       "scope": "srt-sdh-cleaner",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
     },
     {
       "scope": "srt-sdh-cleaner",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_en_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
     },
     {
       "scope": "vtt-cleaner",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_ko: VTT 자막의 시간과 화자 표시를 제거"
     },
     {
       "scope": "vtt-cleaner",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/"
     },
     {
       "scope": "vtt-cleaner",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/"
     },
     {
       "scope": "vtt-cleaner",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "source",
-      "details": "Repository unit/regression checks failed."
+      "details": "hreflang_en_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/"
     },
     {
       "scope": "browser",
