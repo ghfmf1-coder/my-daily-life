@@ -217,6 +217,16 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         published=build_packets()
         (out / 'feed.xml').write_bytes(generate_feed(published,'ko'))
         (out / 'en' / 'feed.xml').write_bytes(generate_feed(published,'en'))
+    tracking_ids = {
+        'csv-merge-studio': 'toolbox-csv-merge-studio',
+        'novel-planner': 'toolbox-novel-planner',
+        'manuscript-lens': 'toolbox-manuscript-lens',
+        'toolbox-hub': 'catalog-toolbox-hub',
+    }
+    if slug in tracking_ids:
+        (out / 'toolbox-traffic.js').write_text(
+            (Path(__file__).with_name('traffic_beacon.js')).read_text(encoding='utf-8'),
+            encoding='utf-8')
     html_pages = sorted(p for p in out.rglob('*.html') if p.is_file())
     # Private admin and smoke tests must not appear in public sitemaps.
     robots_source = out / 'robots.txt'
@@ -259,6 +269,10 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                     '<a href="https://abreda.com/" rel="noopener noreferrer">'+
                     caption+'</a></footer>')
             content=content.replace('</body>',footer+'</body>',1)
+        if slug in tracking_ids and '</body>' in content:
+            content = content.replace('</body>',
+                '<script defer src="/toolbox-traffic.js" data-toolbox-site="' +
+                tracking_ids[slug] + '"></script></body>', 1)
         p.write_text(content, encoding='utf-8')
         is_noindex = any('noindex' in tag.lower() for tag in
                          re.findall(r'<meta[^>]+>', content, flags=re.I)

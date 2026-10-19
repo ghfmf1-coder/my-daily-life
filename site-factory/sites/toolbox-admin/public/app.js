@@ -285,19 +285,19 @@
   }
   function metrics(){
     const k=metricSummary();
-    return header('성과 기록','검색·수익 수기는 직접 입력하고, Cloudflare 자동 방문 분석은 방문자 분석에서 별도 조회합니다.',button('+ 성과 입력','new-metric'))+
-    '<div class="notice warn">⚠ 방문자 숫자의 봇 제외 여부를 기록하세요. <strong>일자·사이트별 기록</strong>입니다. 동일 날짜의 데이터를 중복 등록하면 합계도 중복됩니다. 원천 시스템의 측정 기준이 서로 다를 수 있습니다.</div>'+`<div class="metric-grid"><div class="metric-box"><small>누적 방문자 입력 합계</small><strong>${esc(k.visitors)}</strong></div><div class="metric-box"><small>누적 검색 노출 입력 합계</small><strong>${esc(k.impressions)}</strong></div><div class="metric-box"><small>누적 검색 클릭 입력 합계</small><strong>${esc(k.clicks)}</strong></div><div class="metric-box"><small>수익 입력 합계</small><strong>${esc(k.revenue)}</strong></div></div>`+
-    panel('입력 이력',`${state.metrics.length}건`,state.metrics.length?`<div class="table-scroll"><table><thead><tr><th>날짜 / 서비스</th><th>방문자</th><th>검색 노출</th><th>검색 클릭</th><th>수익</th><th>봇 제외</th><th>출처</th><th>관리</th></tr></thead><tbody>${[...state.metrics].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).map(m=>`<tr><td><div class="item-title">${esc(m.date||'—')}</div><div class="sub-line">${esc(state.sites.find(s=>s.id===m.siteId)?.name||'사이트 미확인')}</div></td><td>${m.visitors===null?'미입력':fmt(m.visitors)}</td><td>${m.impressions===null?'미입력':fmt(m.impressions)}</td><td>${m.clicks===null?'미입력':fmt(m.clicks)}</td><td>${m.revenue===null?'미입력':money(m.revenue)}</td><td>${esc(m.botFilter==='cf_exclude_bots'?'Cloudflare 필터':m.botFilter==='ga4_known_bots'?'GA4 필터':'미확인')}</td><td>${esc(m.source||'미기록')}</td><td>${tiny('metric',m.id)}</td></tr>`).join('')}</tbody></table></div>`:empty('입력된 방문·검색·수익 데이터가 없습니다.'));
+    return header('성과 기록','검색·수익 수기는 직접 입력하고 브라우저 방문 통계는 DB에서 자동 수집합니다.',button('+ 성과 입력','new-metric'))+
+    '<div class="notice warn">⚠ 방문자 숫자의 봇 제외 여부를 기록하세요. <strong>일자·사이트별 기록</strong>입니다. 동일 날짜의 데이터를 중복 등록하면 합계도 중복됩니다. 원천 시스템의 측정 기준이 서로 다를 수 있습니다.</div>'+`<div class="metric-grid"><div class="metric-box"><small>누적 방문 세션 합계</small><strong>${esc(k.visitors)}</strong></div><div class="metric-box"><small>누적 검색 노출 입력 합계</small><strong>${esc(k.impressions)}</strong></div><div class="metric-box"><small>누적 검색 클릭 입력 합계</small><strong>${esc(k.clicks)}</strong></div><div class="metric-box"><small>수익 입력 합계</small><strong>${esc(k.revenue)}</strong></div></div>`+
+    panel('입력 이력',`${state.metrics.length}건`,state.metrics.length?`<div class="table-scroll"><table><thead><tr><th>날짜 / 서비스</th><th>방문자</th><th>검색 노출</th><th>검색 클릭</th><th>수익</th><th>봇 제외</th><th>출처</th><th>관리</th></tr></thead><tbody>${[...state.metrics].sort((a,b)=>(b.date||'').localeCompare(a.date||'')).map(m=>`<tr><td><div class="item-title">${esc(m.date||'—')}</div><div class="sub-line">${esc(state.sites.find(s=>s.id===m.siteId)?.name||'사이트 미확인')}</div></td><td>${m.visitors===null?'미입력':fmt(m.visitors)}</td><td>${m.impressions===null?'미입력':fmt(m.impressions)}</td><td>${m.clicks===null?'미입력':fmt(m.clicks)}</td><td>${m.revenue===null?'미입력':money(m.revenue)}</td><td>${esc(m.botFilter==='cf_exclude_bots'?'Cloudflare 필터':m.botFilter==='ga4_known_bots'?'GA4 필터':m.botFilter==='js_beacon'?'JS 비콘(봇 미보장)':'미확인')}</td><td>${esc(m.source||'미기록')}</td><td>${tiny('metric',m.id)}</td></tr>`).join('')}</tbody></table></div>`:empty('입력된 방문·검색·수익 데이터가 없습니다.'));
   }
   function safeMetric(value) { return Number.isSafeInteger(value) && value >= 0 ? fmt(value) : '미확인'; }
   function analyticsTable(){
     const arr=analyticsView.data?.results;
     if (!Array.isArray(arr)) return empty('아직 API 조회 결과가 없습니다.', '연결 후 방문 수와 페이지뷰 수를 자동으로 읽어옵니다.');
-    const rows=arr.map(item=>`<tr><td><div class="item-title">${esc(item.site)}</div><div class="sub-line">Cloudflare RUM · ${esc(item.days)}일 구간</div></td><td>${safeMetric(item.visits)}</td><td>${safeMetric(item.pageviews)}</td><td>${item.sampled?'표본집계 (정확한 건수 미확인)':item.status==='no_data'?'데이터 없음':'봇 제외 요청'}</td><td>${esc(String(item.retrievedAt||'').replace('T',' ').slice(0,19))}</td></tr>`).join('');
+    const rows=arr.map(item=>`<tr><td><div class="item-title">${esc(item.site)}</div><div class="sub-line">자체 JS 비콘 · ${esc(item.days)}일 구간</div></td><td>${safeMetric(item.visits)}</td><td>${safeMetric(item.pageviews)}</td><td>${item.sampled?'표본집계 (정확한 건수 미확인)':item.status==='no_data'?'아직 수집된 데이터 없음':'브라우저 JS 측정 (봇 완전 제외 아님)'}</td><td>${esc(String(item.retrievedAt||'').replace('T',' ').slice(0,19))}</td></tr>`).join('');
     return `<div class="table-scroll"><table><thead><tr><th>사이트</th><th>방문 (Visits)</th><th>페이지뷰</th><th>데이터 상태</th><th>조회 시각 (UTC)</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
   function traffic(){
-    const recognized=['cf_exclude_bots','ga4_known_bots'];
+    const recognized=['cf_exclude_bots','ga4_known_bots','js_beacon'];
     const valid=state.metrics.filter(m=>recognized.includes(m.botFilter) && Number.isSafeInteger(m.visitors) && m.visitors>=0);
     const daily=valid.filter(m=>m.date===today());
     const sum=records=>records.reduce((n,m)=>n+m.visitors,0);
@@ -306,39 +306,48 @@
       const known=rows.length>0;
       const last=rows.slice().sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')))[0];
       const total=rows.length?sum(rows):null;
-      return `<tr><td><div class="item-title">${esc(s.name)}</div><div class="sub-line">${esc(s.url||'URL 미등록')}</div></td><td>${known?fmt(total):'연결·입력 전'}</td><td>${last?esc(last.date):'—'}</td><td>${last?esc(last.botFilter==='cf_exclude_bots'?'Cloudflare: 봇 제외':'GA4: 알려진 봇 제외'):'미확인'}</td><td>${link('https://dash.cloudflare.com/','Cloudflare ↗')}</td></tr>`;
+      return `<tr><td><div class="item-title">${esc(s.name)}</div><div class="sub-line">${esc(s.url||'URL 미등록')}</div></td><td>${known?fmt(total):'연결·입력 전'}</td><td>${last?esc(last.date):'—'}</td><td>${last?esc(last.botFilter==='cf_exclude_bots'?'Cloudflare: 봇 제외':last.botFilter==='ga4_known_bots'?'GA4: 알려진 봇 제외':'JS 비콘: 봇 완전 제외 아님'):'미확인'}</td><td>${link('https://dash.cloudflare.com/','Cloudflare ↗')}</td></tr>`;
     }).join('');
     const isSingleSite=analyticsView.data?.results?.length===1;
     const remote=isSingleSite?analyticsView.data.results[0]:null;
     const fetchState=analyticsView.loading?'조회 중':analyticsView.data?'연결됨':'연결 대기';
     const period=analyticsView.days===1?'24시간':analyticsView.days===7?'7일':'30일';
     const loadingNote=analyticsView.loading?'Cloudflare 원천 데이터를 조회하고 있습니다.':analyticsView.error||'서버 API가 연결되면 실측 수치만 표시됩니다.';
-    return header('방문자 분석','Cloudflare 실측 데이터와 기존 수기 기록을 구분해서 확인합니다.',button('새로 조회','analytics-reload','secondary')+button('+ 측정값 입력','new-metric'))+
-      `<div class="notice"><strong>Cloudflare Web Analytics · Exclude Bots 조건 적용</strong> — API에서 알려진 봇을 필터링합니다. 정확한 순방문자 수가 아니라 Visits(방문)이며, 표본집계일 때는 숫자를 만들지 않고 미확인으로 표시합니다. 브라우저가 차단한 비콘은 누락될 수 있습니다.</div>`+
-      `<div class="toolbar"><span class="section-title">조회 기간</span>${[1,7,30].map(d=>`<button type="button" class="btn ${analyticsView.days===d?'primary':'secondary'}" data-action="analytics-days" data-days="${d}">${d===1?'최근 24시간':`최근 ${d}일`}</button>`).join('')}</div>`+
-      `<div class="stats-grid">${stats('봇 제외 방문 (Visits)',analyticsView.data?(isSingleSite?safeMetric(remote?.visits):'사이트별 확인'):'미확인',period+' · 고유 이용자 수 아님','◫')}${stats('페이지뷰',analyticsView.data?(isSingleSite?safeMetric(remote?.pageviews):'사이트별 확인'):'미확인',period+' · 서버 응답 기준 RUM','▤')}${stats('분석 대상',analyticsView.data?fmt(analyticsView.data.results.length):'미확인','등록된 Cloudflare 분석 호스트','◎')}${stats('데이터 연결 상태',fetchState,analyticsView.data?String(analyticsView.data.generatedAt||'').slice(0,19)+' UTC':loadingNote,'◈',analyticsView.error?'amber':'')}</div>`+
+    return header('방문자 분석','브라우저 방문 세션의 DB 집계와 기존 수기 기록을 구분합니다.',button('새로 조회','analytics-reload','secondary')+button('+ 측정값 입력','new-metric'))+
+      `<div class="notice"><strong>자체 JS 비콘 일별 집계</strong> — 동일 탭 세션의 첫 방문을 기록합니다. 고유 사람 수가 아니며, 봇·비콘 차단·중복 탭으로 실제 방문과 차이가 날 수 있습니다. IP·쿠키·지문 정보는 저장하지 않습니다.</div>`+
+      `<div class="toolbar"><span class="section-title">조회 기간</span>${[1,7,30].map(d=>`<button type="button" class="btn ${analyticsView.days===d?'primary':'secondary'}" data-action="analytics-days" data-days="${d}">${d===1?'최근 1일':`최근 ${d}일`}</button>`).join('')}</div>`+
+      `<div class="stats-grid">${stats('브라우저 방문 세션',analyticsView.data?(isSingleSite?safeMetric(remote?.visits):'사이트별 확인'):'미확인',period+' · 고유 이용자 수 아님','◫')}${stats('페이지뷰',analyticsView.data?(isSingleSite?safeMetric(remote?.pageviews):'사이트별 확인'):'미확인',period+' · 브라우저 전송 페이지뷰','▤')}${stats('분석 대상',analyticsView.data?fmt(analyticsView.data.results.length):'미확인','관리 대상 사이트','◎')}${stats('데이터 연결 상태',fetchState,analyticsView.data?String(analyticsView.data.generatedAt||'').slice(0,19)+' UTC':loadingNote,'◈',analyticsView.error?'amber':'')}</div>`+
       (analyticsView.error?`<div class="notice warn">API 연결 상태: ${esc(analyticsView.error)}</div>`:'')+
-      panel('Cloudflare 자동 집계',analyticsView.data?`원천 조회 시각: ${analyticsView.data.generatedAt||'미확인'} · Cloudflare GraphQL / 봇 제외 조건`:loadingNote,analyticsTable())+
+      panel('브라우저 DB 자동 집계',analyticsView.data?`원천 조회 시각: ${analyticsView.data.generatedAt||'미확인'} · Supabase 일별 DB 집계`:loadingNote,analyticsTable())+
       `<div class="notice warn">아래 수동 기록은 자동 집계와 별개야. 두 데이터를 더하지 않으며, 방문자·방문·페이지뷰·색인 수치를 혼동하지 않습니다.</div>`+
-      `<div class="stats-grid">${stats('오늘 수기 방문 합계',daily.length?fmt(sum(daily)):'미확인','수기 입력된 봇 제외 기록만','◫')}${stats('수기 기록 건수',fmt(valid.length),'이용자가 직접 입력한 기록','▤')}${stats('관리 대상 사이트',fmt(state.sites.length),'개발·운영 목록 기준','◎')}${stats('수기 기록 원천',valid.length?'입력됨':'미입력','Cloudflare 자동 수집과 별도','◈','amber')}</div>`+
+      `<div class="stats-grid">${stats('오늘 기록된 방문 세션 합계',daily.length?fmt(sum(daily)):'미확인','자동 브라우저 집계와 승인된 수기 기록','◫')}${stats('자동·수기 기록 건수',fmt(valid.length),'이용자가 직접 입력한 기록','▤')}${stats('관리 대상 사이트',fmt(state.sites.length),'개발·운영 목록 기준','◎')}${stats('기록 원천',valid.length?'입력됨':'미입력','JS 비콘과 수기 기록 구분 필요','◈','amber')}</div>`+
       panel('서비스별 수동 기록','서로 다른 사이트에 동일인이 방문할 수 있으므로 총합을 고유 방문자 수라고 부르지 않습니다.',state.sites.length?`<div class="table-scroll"><table><thead><tr><th>서비스</th><th>기록된 방문 합계</th><th>마지막 기록일</th><th>봇 처리 근거</th><th>측정</th></tr></thead><tbody>${siteRows}</tbody></table></div>`:empty('사이트 등록 후 이용할 수 있습니다.'));
   }
   async function refreshAnalytics(){
     if(analyticsView.loading)return;
-    analyticsView.started=true;
-    analyticsView.loading=true;
-    analyticsView.error='';
-    analyticsView.data=null;
+    analyticsView.started=true;analyticsView.loading=true;analyticsView.error='';
     if(view==='traffic')render();
     try{
-      if(location.protocol==='file:')throw new Error('로컬 파일 미리보기에서는 API를 실행할 수 없습니다. 보안 설정 후 Cloudflare에서 조회하세요.');
-      const res=await fetch(`/api/analytics?days=${analyticsView.days}`,{cache:'no-store',headers:{Accept:'application/json'}});
-      const body=await res.json();
-      if(!res.ok)throw new Error(body.error==='analytics_not_configured'?'Cloudflare 읽기 전용 토큰 연결 대기':
-        body.error==='analytics_query_failed'?'분석 API 조회 실패 · Cloudflare 권한·데이터셋 확인':`서버 상태 ${res.status}`);
-      if(!Array.isArray(body.results))throw new Error('분석 응답 형식 오류');
-      analyticsView.data=body;
-    }catch(e){analyticsView.error=String(e.message||'분석 API 연결 오류').slice(0,220);}
+      if(!window.TOOLBOX_CLOUD?.readMetrics)throw new Error('로그인된 관리자 DB에 연결되지 않았습니다.');
+      const remoteMetrics=await window.TOOLBOX_CLOUD.readMetrics();
+      state.metrics=remoteMetrics;
+      try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch{}
+      const formatter=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'});
+      const todaySeoul=formatter.format(new Date());
+      const base=new Date(todaySeoul+'T12:00:00+09:00');
+      const oldest=new Date(base.getTime()-(analyticsView.days-1)*86400000);
+      const lower=formatter.format(oldest);
+      const entries=remoteMetrics.filter(m=>m.botFilter==='js_beacon'&&m.date>=lower&&m.date<=todaySeoul&&Number.isSafeInteger(m.visitors)&&Number.isSafeInteger(m.pageviews));
+      const results=state.sites.map(s=>{
+        const rows=entries.filter(m=>m.siteId===s.id);
+        return {site:s.name,days:analyticsView.days,
+          visits:rows.length?rows.reduce((n,m)=>n+m.visitors,0):null,
+          pageviews:rows.length?rows.reduce((n,m)=>n+m.pageviews,0):null,
+          sampled:false,status:rows.length?'observed':'no_data',
+          retrievedAt:new Date().toISOString()};
+      });
+      analyticsView.data={results,generatedAt:new Date().toISOString(),source:'Supabase JS beacon'};
+    }catch(e){analyticsView.error=String(e.message||'DB 방문 집계 조회 실패').slice(0,220);analyticsView.data=null;}
     finally{analyticsView.loading=false;if(view==='traffic')render();}
   }
   function policies(){

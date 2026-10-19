@@ -106,7 +106,7 @@ async function authenticate(){
     // Existing browser data is preserved and uploaded after the manager initializes.
     if(local&&typeof local==='object')await enqueue(local);
   }
-  window.TOOLBOX_CLOUD=Object.freeze({save:enqueue});
+  window.TOOLBOX_CLOUD=Object.freeze({save:enqueue,readMetrics:async()=>{const ws=await readWorkspace();if(ws)remoteVersion=Number(ws.version)||remoteVersion;return Array.isArray(ws?.payload?.metrics)?ws.payload.metrics:[];}});
   gate.hidden=true;shell.style.display='flex';signout.hidden=false;
   if(!booted){
     booted=true;
