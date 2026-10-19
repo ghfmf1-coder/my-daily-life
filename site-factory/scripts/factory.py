@@ -187,23 +187,40 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 intro=info.get('copy') or (site['description'] if language=='ko' else '')
                 if language=='en' and not info.get('title'):
                     continue  # Do not expose Korean-only or generic fallback cards on English search
-                intro=intro[:260] + ('…' if len(intro)>260 else '')
                 category=category_map.get(site['slug'],'other')
+                slug=site['slug'].lower()
+                if any(word in slug for word in ('csv','tsv','json','jsonl','table','column','row','data')):
+                    category='data'
+                elif any(word in slug for word in ('novel','manuscript','markdown','writing')):
+                    category='writing'
+                elif any(word in slug for word in ('subtitle','srt','vtt')):
+                    category='data'
+                elif any(word in slug for word in ('daily','habit','routine')):
+                    category='routine'
                 cat_label={
                     'ko':{'routine':'일상·루틴','data':'데이터·파일','writing':'웹소설·글쓰기','other':'기타 도구'},
                     'en':{'routine':'Daily life','data':'Data & files','writing':'Writing','other':'Other tools'},
                 }[language][category]
                 target=site['url'] if language=='ko' else site['url'].rstrip('/')+'/en/'
                 label='바로 사용하기 ↗' if language=='ko' else 'Open tool ↗'
-                alt_label='English' if language=='ko' else '한국어'
-                alt=site['url']+'en/' if language=='ko' else site['url']
-                alternate=''  # Language switching belongs in the global header, not every card.
+                # Each card has its own meaningful, lightweight SVG illustration.
+                # The descriptions remain in data-search and on the destination page,
+                # but are deliberately not displayed in the visual catalogue.
+                if any(x in slug for x in ('subtitle','srt','vtt')):
+                    motif='<rect x="28" y="25" width="104" height="70" rx="12" fill="#fff" stroke="#b6c9ee" stroke-width="3"/><rect x="44" y="65" width="72" height="7" rx="3.5" fill="#7d9cdb"/><rect x="58" y="80" width="44" height="6" rx="3" fill="#b3c8ec"/><path d="M53 46h55" stroke="#4076df" stroke-width="6" stroke-linecap="round"/>'
+                elif any(x in slug for x in ('novel','manuscript','markdown','writing')):
+                    motif='<path d="M36 31q23-8 44 7v65q-21-14-44-7zM80 38q21-15 44-7v65q-23-7-44 7z" fill="#fff" stroke="#7598d8" stroke-width="3" stroke-linejoin="round"/><path d="M46 52h23M46 64h20M92 52h22M92 64h20" stroke="#8ca8d9" stroke-width="4" stroke-linecap="round"/>'
+                elif any(x in slug for x in ('daily','habit','routine')):
+                    motif='<rect x="42" y="23" width="76" height="82" rx="12" fill="#fff" stroke="#8aa7db" stroke-width="3"/><path d="m54 51 7 7 13-15m-20 33 7 7 13-15" stroke="#2fbd9d" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M85 52h22M85 78h22" stroke="#8ca8d9" stroke-width="4" stroke-linecap="round"/>'
+                else:
+                    motif='<rect x="23" y="30" width="48" height="65" rx="7" fill="#fff" stroke="#8ba9d9" stroke-width="3"/><rect x="89" y="30" width="48" height="65" rx="7" fill="#fff" stroke="#8ba9d9" stroke-width="3"/><path d="M32 48h30M32 59h30M32 70h30M98 48h30M98 59h30M98 70h30" stroke="#8ba9d9" stroke-width="3"/><path d="M68 63h23m-8-8 8 8-8 8" stroke="#2f78e5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+                visual='<div class="tool-art" aria-hidden="true"><svg viewBox="0 0 160 124" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg">'+motif+'</svg></div>'
                 blocks.append(
                     '<article class="tool" data-category="'+escape(category,quote=True)+'" data-search="'+
                     escape(' '.join((name,site['title'],site['description'],intro,site['slug'])),quote=True)+'">'+
-                    '<span class="tag">'+escape(cat_label)+'</span><h3>'+escape(name)+'</h3><p>'+
-                    escape(intro)+'</p><div class="actions"><a href="'+escape(target,quote=True)+'" rel="noopener noreferrer">'+
-                    label+'</a>'+alternate+'</div></article>'
+                    '<span class="tag">'+escape(cat_label)+'</span>'+visual+
+                    '<h3>'+escape(name)+'</h3><div class="actions"><a href="'+escape(target,quote=True)+'" rel="noopener noreferrer">'+
+                    label+'</a></div></article>'
                 )
             return '\n'.join(blocks)
         for language, relative in (('ko','index.html'),('en','en/index.html')):
