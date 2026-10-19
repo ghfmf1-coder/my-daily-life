@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-19T00:02:25+00:00",
-  "status": "fail",
+  "checkedAt": "2026-10-19T00:05:06+00:00",
+  "status": "pass",
   "summary": {
     "sites": 7,
-    "sitePassed": 6,
+    "sitePassed": 7,
     "siteWarnings": 0,
-    "siteFailed": 1,
+    "siteFailed": 0,
     "browserPassed": 11,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 1
+    "issues": 0
   },
   "sites": [
     {
@@ -18,12 +18,12 @@
       "name": "하루한칸",
       "url": "https://my-daily-life.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 107ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -132,13 +132,13 @@
         },
         {
           "check": "script_toolbox-traffic.js",
-          "status": "fail",
-          "detail": "HTTP 200, 8022 bytes"
+          "status": "pass",
+          "detail": "HTTP 200, 1173 bytes"
         },
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 136ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -163,7 +163,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -187,9 +187,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "script_toolbox-traffic.js: HTTP 200, 8022 bytes"
-      ]
+      "failures": []
     },
     {
       "slug": "csv-merge-studio",
@@ -201,7 +199,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 547ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 375ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -241,7 +239,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 178ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 405ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -321,7 +319,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1078 bytes"
+          "detail": "HTTP 200, 1173 bytes"
         },
         {
           "check": "script_csv-core.js",
@@ -336,7 +334,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1078 bytes"
+          "detail": "HTTP 200, 1173 bytes"
         }
       ],
       "warnings": [],
@@ -352,7 +350,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 179ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -423,7 +421,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 190ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 587ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -463,7 +461,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 243ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 475ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -538,7 +536,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1078 bytes"
+          "detail": "HTTP 200, 1173 bytes"
         },
         {
           "check": "script_en_app.js",
@@ -548,7 +546,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1078 bytes"
+          "detail": "HTTP 200, 1173 bytes"
         }
       ],
       "warnings": [],
@@ -564,7 +562,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 121ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 486ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -604,7 +602,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 442ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -679,7 +677,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1078 bytes"
+          "detail": "HTTP 200, 1173 bytes"
         },
         {
           "check": "script_en_app.js",
@@ -689,7 +687,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1078 bytes"
+          "detail": "HTTP 200, 1173 bytes"
         }
       ],
       "warnings": [],
@@ -721,7 +719,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 240ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 449ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -761,7 +759,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 374ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 428ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -841,7 +839,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1078 bytes"
+          "detail": "HTTP 200, 1173 bytes"
         },
         {
           "check": "script_cdn-cgi_scripts_5c5dd728_cloudflare-static_email-decode.min.js",
@@ -856,7 +854,7 @@
         {
           "check": "script_toolbox-traffic.js",
           "status": "pass",
-          "detail": "HTTP 200, 1078 bytes"
+          "detail": "HTTP 200, 1173 bytes"
         },
         {
           "check": "text_feed.xml",
@@ -890,7 +888,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 658
+      "elapsedMs": 699
     },
     {
       "name": "English plot planner",
@@ -898,7 +896,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 794
+      "elapsedMs": 645
     },
     {
       "name": "Korean manuscript",
@@ -906,7 +904,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 296
+      "elapsedMs": 710
     },
     {
       "name": "English manuscript",
@@ -914,7 +912,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 296
+      "elapsedMs": 643
     },
     {
       "name": "Korean CSV merger",
@@ -922,7 +920,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 471
+      "elapsedMs": 785
     },
     {
       "name": "English CSV merger",
@@ -930,7 +928,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 456
+      "elapsedMs": 658
     },
     {
       "name": "Haru English landing",
@@ -938,7 +936,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 226
+      "elapsedMs": 238
     },
     {
       "name": "Haru English app",
@@ -946,7 +944,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 270
+      "elapsedMs": 195
     },
     {
       "name": "Admin authentication gate",
@@ -954,7 +952,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 225
+      "elapsedMs": 748
     },
     {
       "name": "Toolbox hub search",
@@ -962,7 +960,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 289
+      "elapsedMs": 557
     },
     {
       "name": "Technical deployment smoke",
@@ -970,15 +968,10 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 273
+      "elapsedMs": 208
     }
   ],
-  "issues": [
-    {
-      "scope": "my-daily-life",
-      "details": "script_toolbox-traffic.js: HTTP 200, 8022 bytes"
-    }
-  ],
+  "issues": [],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
