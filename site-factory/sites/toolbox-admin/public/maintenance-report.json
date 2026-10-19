@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-19T18:14:13+00:00",
+  "checkedAt": "2026-10-19T18:16:53+00:00",
   "status": "fail",
   "summary": {
-    "sites": 8,
+    "sites": 13,
     "sitePassed": 8,
     "siteWarnings": 0,
-    "siteFailed": 0,
+    "siteFailed": 5,
     "browserPassed": 0,
     "browserFailed": 0,
     "sourceTestsPassed": false,
-    "issues": 2
+    "issues": 27
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 227ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 132ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 275ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -195,6 +195,104 @@
       "failures": []
     },
     {
+      "slug": "csv-column-extractor",
+      "name": "csv column extractor | Small Toolbox",
+      "url": "https://tb-pages-csv-column-extractor.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
+      "slug": "csv-empty-row-remover",
+      "name": "csv empty row remover | Small Toolbox",
+      "url": "https://tb-pages-csv-empty-row-remover.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "csv-merge-studio",
       "name": "CSV 맞춤 병합기 | 열 이름 통일·중복 제거·파일 합치기",
       "url": "https://csv.abreda.com/",
@@ -204,7 +302,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 220ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 700ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +342,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -355,7 +453,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -417,6 +515,55 @@
       "failures": []
     },
     {
+      "slug": "jsonl-validator",
+      "name": "jsonl validator | Small Toolbox",
+      "url": "https://tb-pages-jsonl-validator.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "manuscript-lens",
       "name": "웹소설 원고돋보기 | 반복 표현·대사·문장 분석",
       "url": "https://manuscript.abreda.com/",
@@ -426,7 +573,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 734ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -466,7 +613,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 124ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 376ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -567,7 +714,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 204ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -607,7 +754,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 926ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 488ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -699,6 +846,55 @@
       "failures": []
     },
     {
+      "slug": "srt-sdh-cleaner",
+      "name": "srt sdh cleaner | Small Toolbox",
+      "url": "https://tb-pages-srt-sdh-cleaner.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "subtitle-sync-studio",
       "name": "자막 싱크 조정기 | SRT VTT 변환·자막 시간 오류 검사",
       "url": "https://tb-subtitle-sync-studio.pages.dev/",
@@ -708,7 +904,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 121ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -748,7 +944,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 107ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -875,7 +1071,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 134ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 313ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -915,7 +1111,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 217ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -975,12 +1171,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 407 bytes"
+          "detail": "HTTP 200, 512 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 6"
+          "detail": "entries: 8"
         },
         {
           "check": "script_app.js",
@@ -1005,30 +1201,179 @@
         {
           "check": "text_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 3127 bytes"
+          "detail": "HTTP 200, 4913 bytes"
         },
         {
           "check": "rss_feed.xml",
           "status": "pass",
-          "detail": "5 valid RSS entries"
+          "detail": "10 valid RSS entries"
         },
         {
           "check": "text_en_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2396 bytes"
+          "detail": "HTTP 200, 4212 bytes"
         },
         {
           "check": "rss_en_feed.xml",
           "status": "pass",
-          "detail": "5 valid RSS entries"
+          "detail": "10 valid RSS entries"
         }
       ],
       "warnings": [],
       "failures": []
+    },
+    {
+      "slug": "vtt-cleaner",
+      "name": "vtt cleaner | Small Toolbox",
+      "url": "https://tb-pages-vtt-cleaner.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
     }
   ],
   "browserChecks": [],
   "issues": [
+    {
+      "scope": "csv-column-extractor",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "csv-column-extractor",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "csv-column-extractor",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "csv-column-extractor",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "csv-column-extractor",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "csv-empty-row-remover",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "csv-empty-row-remover",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "csv-empty-row-remover",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "csv-empty-row-remover",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "csv-empty-row-remover",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "jsonl-validator",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "jsonl-validator",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "jsonl-validator",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "jsonl-validator",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "jsonl-validator",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "srt-sdh-cleaner",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "srt-sdh-cleaner",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "srt-sdh-cleaner",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "srt-sdh-cleaner",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "srt-sdh-cleaner",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "vtt-cleaner",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "vtt-cleaner",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "vtt-cleaner",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "vtt-cleaner",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "vtt-cleaner",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
     {
       "scope": "source",
       "details": "Repository unit/regression checks failed."
