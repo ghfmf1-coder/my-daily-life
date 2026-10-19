@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-19T03:36:57+00:00",
-  "status": "pass",
+  "checkedAt": "2026-10-19T04:04:23+00:00",
+  "status": "fail",
   "summary": {
-    "sites": 7,
+    "sites": 8,
     "sitePassed": 7,
     "siteWarnings": 0,
-    "siteFailed": 0,
+    "siteFailed": 1,
     "browserPassed": 11,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 0
+    "issues": 5
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 235ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 264ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 255ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 207ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 123ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -355,7 +355,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 171ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -426,7 +426,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 222ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 193ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -466,7 +466,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -567,7 +567,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 201ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 206ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -607,7 +607,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -699,6 +699,55 @@
       "failures": []
     },
     {
+      "slug": "subtitle-sync-studio",
+      "name": "자막 싱크 조정기 | SRT VTT 변환·자막 시간 오류 검사",
+      "url": "https://tb-subtitle-sync-studio.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "toolbox-admin",
       "name": "작은 도구함 통합 관리자 v1.2",
       "url": "https://tb-toolbox-admin.pages.dev/",
@@ -724,7 +773,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 228ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 275ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -764,7 +813,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -854,22 +903,22 @@
         {
           "check": "text_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2661 bytes"
+          "detail": "HTTP 200, 3127 bytes"
         },
         {
           "check": "rss_feed.xml",
           "status": "pass",
-          "detail": "4 valid RSS entries"
+          "detail": "5 valid RSS entries"
         },
         {
           "check": "text_en_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 1924 bytes"
+          "detail": "HTTP 200, 2396 bytes"
         },
         {
           "check": "rss_en_feed.xml",
           "status": "pass",
-          "detail": "4 valid RSS entries"
+          "detail": "5 valid RSS entries"
         }
       ],
       "warnings": [],
@@ -883,7 +932,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 374
+      "elapsedMs": 459
     },
     {
       "name": "English plot planner",
@@ -891,7 +940,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 377
+      "elapsedMs": 344
     },
     {
       "name": "Korean manuscript",
@@ -899,7 +948,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 263
+      "elapsedMs": 344
     },
     {
       "name": "English manuscript",
@@ -907,7 +956,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 313
+      "elapsedMs": 379
     },
     {
       "name": "Korean CSV merger",
@@ -915,7 +964,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 386
+      "elapsedMs": 370
     },
     {
       "name": "English CSV merger",
@@ -923,7 +972,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 327
+      "elapsedMs": 357
     },
     {
       "name": "Haru English landing",
@@ -931,7 +980,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 237
+      "elapsedMs": 388
     },
     {
       "name": "Haru English app",
@@ -939,7 +988,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 212
+      "elapsedMs": 411
     },
     {
       "name": "Admin authentication gate",
@@ -947,7 +996,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 299
+      "elapsedMs": 437
     },
     {
       "name": "Toolbox hub search",
@@ -955,7 +1004,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 279
+      "elapsedMs": 273
     },
     {
       "name": "Technical deployment smoke",
@@ -963,10 +1012,31 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 241
+      "elapsedMs": 270
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "scope": "subtitle-sync-studio",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "subtitle-sync-studio",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "subtitle-sync-studio",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "subtitle-sync-studio",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "subtitle-sync-studio",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    }
+  ],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
