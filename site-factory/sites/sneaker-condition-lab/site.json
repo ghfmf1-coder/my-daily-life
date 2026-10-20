@@ -1,0 +1,11 @@
+{
+  "slug": "sneaker-condition-lab",
+  "project": "tb-sneaker-condition-lab",
+  "title": "스니커즈 중고 상태 검수",
+  "description": "한정판 스니커즈의 외관, 밑창, 주름, 오염을 기록하고 중고 거래용 상태 보고서를 만듭니다.",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
