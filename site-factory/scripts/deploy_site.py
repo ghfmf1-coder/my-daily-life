@@ -93,7 +93,7 @@ def main():
             print(f"INDEXNOW_NOT_CONFIRMED: {type(ex).__name__}: {ex}")
     # Attach verified user-owned abreda.com subdomains as part of ordinary deployments.
     # DNS and certificate activation are independently verified by Cloudflare.
-    should_attach = args.attach_domain or (data.get('domain','').endswith('.abreda.com'))
+    should_attach = args.attach_domain or ((data.get('domain') or '').endswith('.abreda.com'))
     if should_attach:
         if not data.get('domain'):
             raise SystemExit('Cannot attach: site.json domain not set')
