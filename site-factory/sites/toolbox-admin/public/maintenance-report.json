@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T13:22:59+00:00",
+  "checkedAt": "2026-10-20T13:24:25+00:00",
   "status": "fail",
   "summary": {
     "sites": 24,
-    "sitePassed": 16,
+    "sitePassed": 17,
     "siteWarnings": 0,
-    "siteFailed": 8,
+    "siteFailed": 7,
     "browserPassed": 11,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 40
+    "issues": 46
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 157ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 169ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -197,99 +197,252 @@
     {
       "slug": "aquarium-water-lab",
       "name": "수족관 수질 분석실",
-      "url": "https://aquarium-water-lab.abreda.com/",
+      "url": "https://tb-aquarium-water-lab.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 166ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "수족관 수질 분석실 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "pH, 수온, 암모니아, 아질산염, 질산염 수치를 기록하고 주의가 필요한 항목을 확인합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/en/"
         },
         {
           "check": "page_en",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 343ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Aquarium Water Lab | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Log aquarium pH, temperature, ammonia, nitrite and nitrate, with general caution flags."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 398 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 84 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 243 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
-      "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ]
+      "warnings": [],
+      "failures": []
     },
     {
       "slug": "camera-lens-check",
       "name": "중고 카메라 렌즈 검수",
-      "url": "https://camera-lens-check.abreda.com/",
+      "url": "https://tb-camera-lens-check.pages.dev/",
       "type": "public",
       "status": "fail",
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "중고 카메라 렌즈 검수 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "렌즈 외관과 AF, 조리개, 촬영 테스트 결과를 기록합니다"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "fail",
+          "detail": "https://camera-lens-check.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://camera-lens-check.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "https://camera-lens-check.abreda.com/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Used Camera Lens Check | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Record lens condition, autofocus, aperture and test-shot findings."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://camera-lens-check.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://camera-lens-check.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://camera-lens-check.abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 435 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 81 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 237 bytes"
+        },
+        {
+          "check": "sitemap_content",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: 렌즈 외관과 AF, 조리개, 촬영 테스트 결과를 기록합니다",
+        "canonical_ko: https://camera-lens-check.abreda.com/",
+        "hreflang_ko_ko: https://camera-lens-check.abreda.com/",
+        "hreflang_ko_en: https://camera-lens-check.abreda.com/en/",
+        "canonical_en: https://camera-lens-check.abreda.com/en/",
+        "hreflang_en_ko: https://camera-lens-check.abreda.com/",
+        "hreflang_en_en: https://camera-lens-check.abreda.com/en/",
+        "sitemap_content: entries: 2"
       ]
     },
     {
@@ -302,7 +455,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 160ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -342,7 +495,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -416,50 +569,131 @@
     {
       "slug": "comic-condition-lab",
       "name": "코믹북·만화책 상태 검수",
-      "url": "https://comic-condition-lab.abreda.com/",
+      "url": "https://tb-comic-condition-lab.pages.dev/",
       "type": "public",
       "status": "fail",
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "코믹북·만화책 상태 검수 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "책등, 표지, 페이지 손상과 누락을 검수하고 보고서를 생성합니다"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "fail",
+          "detail": "https://comic-condition-lab.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://comic-condition-lab.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "https://comic-condition-lab.abreda.com/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 151ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Comic Book Condition Lab | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Record spine, cover, page damage and missing pages for comics."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://comic-condition-lab.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://comic-condition-lab.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://comic-condition-lab.abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 409 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 83 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 241 bytes"
+        },
+        {
+          "check": "sitemap_content",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: 책등, 표지, 페이지 손상과 누락을 검수하고 보고서를 생성합니다",
+        "canonical_ko: https://comic-condition-lab.abreda.com/",
+        "hreflang_ko_ko: https://comic-condition-lab.abreda.com/",
+        "hreflang_ko_en: https://comic-condition-lab.abreda.com/en/",
+        "canonical_en: https://comic-condition-lab.abreda.com/en/",
+        "hreflang_en_ko: https://comic-condition-lab.abreda.com/",
+        "hreflang_en_en: https://comic-condition-lab.abreda.com/en/",
+        "sitemap_content: entries: 2"
       ]
     },
     {
@@ -472,7 +706,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 107ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 139ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -512,7 +746,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -593,7 +827,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 171ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -633,7 +867,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -714,7 +948,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 152ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -754,7 +988,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -865,7 +1099,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 231ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 220ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -929,50 +1163,130 @@
     {
       "slug": "gem-photo-inspection",
       "name": "보석·원석 외관 검수",
-      "url": "https://gem-photo-inspection.abreda.com/",
+      "url": "https://tb-gem-photo-inspection.pages.dev/",
       "type": "public",
       "status": "fail",
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "보석·원석 외관 검수 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "원석 사진과 크기, 관찰된 손상 및 촬영 조건을 기록하는 비공식 검수 도구입니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://gem-photo-inspection.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://gem-photo-inspection.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "https://gem-photo-inspection.abreda.com/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Gemstone Photo Inspection | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Document gemstone dimensions, visible marks and photography conditions before professional inspection."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://gem-photo-inspection.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://gem-photo-inspection.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://gem-photo-inspection.abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 333 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 84 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 243 bytes"
+        },
+        {
+          "check": "sitemap_content",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "canonical_ko: https://gem-photo-inspection.abreda.com/",
+        "hreflang_ko_ko: https://gem-photo-inspection.abreda.com/",
+        "hreflang_ko_en: https://gem-photo-inspection.abreda.com/en/",
+        "canonical_en: https://gem-photo-inspection.abreda.com/en/",
+        "hreflang_en_ko: https://gem-photo-inspection.abreda.com/",
+        "hreflang_en_en: https://gem-photo-inspection.abreda.com/en/",
+        "sitemap_content: entries: 2"
       ]
     },
     {
@@ -985,7 +1299,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 121ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 112ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1025,7 +1339,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1099,50 +1413,131 @@
     {
       "slug": "keyboard-switch-diagnostics",
       "name": "키보드 키 입력 진단실",
-      "url": "https://keyboard-switch-diagnostics.abreda.com/",
+      "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
       "type": "public",
       "status": "fail",
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "키보드 키 입력 진단실 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "키 입력을 시각화하고 반복 입력 기록을 생성하는 브라우저 키보드 검사 도구"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "fail",
+          "detail": "https://keyboard-switch-diagnostics.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://keyboard-switch-diagnostics.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "https://keyboard-switch-diagnostics.abreda.com/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Keyboard Switch Diagnostics | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Visualize keyboard events and log repeated presses locally in your browser."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://keyboard-switch-diagnostics.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://keyboard-switch-diagnostics.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://keyboard-switch-diagnostics.abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 382 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 91 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 257 bytes"
+        },
+        {
+          "check": "sitemap_content",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: 키 입력을 시각화하고 반복 입력 기록을 생성하는 브라우저 키보드 검사 도구",
+        "canonical_ko: https://keyboard-switch-diagnostics.abreda.com/",
+        "hreflang_ko_ko: https://keyboard-switch-diagnostics.abreda.com/",
+        "hreflang_ko_en: https://keyboard-switch-diagnostics.abreda.com/en/",
+        "canonical_en: https://keyboard-switch-diagnostics.abreda.com/en/",
+        "hreflang_en_ko: https://keyboard-switch-diagnostics.abreda.com/",
+        "hreflang_en_en: https://keyboard-switch-diagnostics.abreda.com/en/",
+        "sitemap_content: entries: 2"
       ]
     },
     {
@@ -1155,7 +1550,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 142ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 201ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1195,7 +1590,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 136ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1296,7 +1691,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 148ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 180ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1336,7 +1731,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1430,50 +1825,130 @@
     {
       "slug": "sneaker-condition-lab",
       "name": "스니커즈 중고 상태 검수",
-      "url": "https://sneaker-condition-lab.abreda.com/",
+      "url": "https://tb-sneaker-condition-lab.pages.dev/",
       "type": "public",
       "status": "fail",
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 123ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "스니커즈 중고 상태 검수 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "한정판 스니커즈의 외관, 밑창, 주름, 오염을 기록하고 중고 거래용 상태 보고서를 만듭니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://sneaker-condition-lab.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://sneaker-condition-lab.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "https://sneaker-condition-lab.abreda.com/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Sneaker Condition Lab | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Record sneaker outsole wear, creases, stains and condition for resale documentation."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://sneaker-condition-lab.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://sneaker-condition-lab.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://sneaker-condition-lab.abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 356 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 85 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 245 bytes"
+        },
+        {
+          "check": "sitemap_content",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "canonical_ko: https://sneaker-condition-lab.abreda.com/",
+        "hreflang_ko_ko: https://sneaker-condition-lab.abreda.com/",
+        "hreflang_ko_en: https://sneaker-condition-lab.abreda.com/en/",
+        "canonical_en: https://sneaker-condition-lab.abreda.com/en/",
+        "hreflang_en_ko: https://sneaker-condition-lab.abreda.com/",
+        "hreflang_en_en: https://sneaker-condition-lab.abreda.com/en/",
+        "sitemap_content: entries: 2"
       ]
     },
     {
@@ -1486,7 +1961,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1607,7 +2082,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 198ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1647,7 +2122,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1728,7 +2203,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 116ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1768,7 +2243,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1895,7 +2370,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 202ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1935,7 +2410,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2049,99 +2524,253 @@
     {
       "slug": "used-car-inspection",
       "name": "중고차 구매 전 검수실",
-      "url": "https://used-car-inspection.abreda.com/",
+      "url": "https://tb-used-car-inspection.pages.dev/",
       "type": "public",
       "status": "fail",
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 107ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "중고차 구매 전 검수실 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "차량 외관, 정비 기록, 도막 두께 측정값을 정리하고 구매 전 확인 질문을 생성합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://used-car-inspection.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "https://used-car-inspection.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "https://used-car-inspection.abreda.com/en/"
         },
         {
           "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Used Car Inspection | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Record used-car inspection observations, paint thickness readings and follow-up questions."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "https://used-car-inspection.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://used-car-inspection.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://used-car-inspection.abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 384 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 83 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 241 bytes"
+        },
+        {
+          "check": "sitemap_content",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "canonical_ko: https://used-car-inspection.abreda.com/",
+        "hreflang_ko_ko: https://used-car-inspection.abreda.com/",
+        "hreflang_ko_en: https://used-car-inspection.abreda.com/en/",
+        "canonical_en: https://used-car-inspection.abreda.com/en/",
+        "hreflang_en_ko: https://used-car-inspection.abreda.com/",
+        "hreflang_en_en: https://used-car-inspection.abreda.com/en/",
+        "sitemap_content: entries: 2"
       ]
     },
     {
       "slug": "vinyl-condition-lab",
       "name": "LP 레코드 상태 검수",
-      "url": "https://vinyl-condition-lab.abreda.com/",
+      "url": "https://tb-vinyl-condition-lab.pages.dev/",
       "type": "public",
       "status": "fail",
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "LP 레코드 상태 검수 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "LP 레코드 표면과 재생 상태를 별도로 기록하고 거래용 검수 보고서를 만듭니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/en/"
         },
         {
           "check": "page_en",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Vinyl Record Condition | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Document vinyl surface and playback condition separately for collection and resale."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 422 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 85 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 245 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: LP 레코드 표면과 재생 상태를 별도로 기록하고 거래용 검수 보고서를 만듭니다."
       ]
     },
     {
@@ -2154,7 +2783,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 146ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2194,7 +2823,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2275,7 +2904,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 166ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 169ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2315,7 +2944,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2394,7 +3023,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 342
+      "elapsedMs": 396
     },
     {
       "name": "English plot planner",
@@ -2402,7 +3031,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 327
+      "elapsedMs": 310
     },
     {
       "name": "Korean manuscript",
@@ -2410,7 +3039,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 262
+      "elapsedMs": 295
     },
     {
       "name": "English manuscript",
@@ -2418,7 +3047,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 296
+      "elapsedMs": 295
     },
     {
       "name": "Korean CSV merger",
@@ -2426,7 +3055,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 352
+      "elapsedMs": 319
     },
     {
       "name": "English CSV merger",
@@ -2434,7 +3063,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 311
+      "elapsedMs": 293
     },
     {
       "name": "Haru English landing",
@@ -2450,7 +3079,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 211
+      "elapsedMs": 213
     },
     {
       "name": "Admin authentication gate",
@@ -2458,7 +3087,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 779
+      "elapsedMs": 739
     },
     {
       "name": "Toolbox hub search",
@@ -2466,7 +3095,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 218
+      "elapsedMs": 211
     },
     {
       "name": "Technical deployment smoke",
@@ -2474,169 +3103,193 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 235
+      "elapsedMs": 265
     }
   ],
   "issues": [
     {
-      "scope": "aquarium-water-lab",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "aquarium-water-lab",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "aquarium-water-lab",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "aquarium-water-lab",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "aquarium-water-lab",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "scope": "camera-lens-check",
+      "details": "meta_description_ko: 렌즈 외관과 AF, 조리개, 촬영 테스트 결과를 기록합니다"
     },
     {
       "scope": "camera-lens-check",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://camera-lens-check.abreda.com/"
     },
     {
       "scope": "camera-lens-check",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://camera-lens-check.abreda.com/"
     },
     {
       "scope": "camera-lens-check",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_en: https://camera-lens-check.abreda.com/en/"
     },
     {
       "scope": "camera-lens-check",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_en: https://camera-lens-check.abreda.com/en/"
     },
     {
       "scope": "camera-lens-check",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_en_ko: https://camera-lens-check.abreda.com/"
+    },
+    {
+      "scope": "camera-lens-check",
+      "details": "hreflang_en_en: https://camera-lens-check.abreda.com/en/"
+    },
+    {
+      "scope": "camera-lens-check",
+      "details": "sitemap_content: entries: 2"
     },
     {
       "scope": "comic-condition-lab",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_ko: 책등, 표지, 페이지 손상과 누락을 검수하고 보고서를 생성합니다"
     },
     {
       "scope": "comic-condition-lab",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://comic-condition-lab.abreda.com/"
     },
     {
       "scope": "comic-condition-lab",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://comic-condition-lab.abreda.com/"
     },
     {
       "scope": "comic-condition-lab",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_en: https://comic-condition-lab.abreda.com/en/"
     },
     {
       "scope": "comic-condition-lab",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_en: https://comic-condition-lab.abreda.com/en/"
+    },
+    {
+      "scope": "comic-condition-lab",
+      "details": "hreflang_en_ko: https://comic-condition-lab.abreda.com/"
+    },
+    {
+      "scope": "comic-condition-lab",
+      "details": "hreflang_en_en: https://comic-condition-lab.abreda.com/en/"
+    },
+    {
+      "scope": "comic-condition-lab",
+      "details": "sitemap_content: entries: 2"
     },
     {
       "scope": "gem-photo-inspection",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://gem-photo-inspection.abreda.com/"
     },
     {
       "scope": "gem-photo-inspection",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://gem-photo-inspection.abreda.com/"
     },
     {
       "scope": "gem-photo-inspection",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_en: https://gem-photo-inspection.abreda.com/en/"
     },
     {
       "scope": "gem-photo-inspection",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_en: https://gem-photo-inspection.abreda.com/en/"
     },
     {
       "scope": "gem-photo-inspection",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_en_ko: https://gem-photo-inspection.abreda.com/"
+    },
+    {
+      "scope": "gem-photo-inspection",
+      "details": "hreflang_en_en: https://gem-photo-inspection.abreda.com/en/"
+    },
+    {
+      "scope": "gem-photo-inspection",
+      "details": "sitemap_content: entries: 2"
     },
     {
       "scope": "keyboard-switch-diagnostics",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_ko: 키 입력을 시각화하고 반복 입력 기록을 생성하는 브라우저 키보드 검사 도구"
     },
     {
       "scope": "keyboard-switch-diagnostics",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://keyboard-switch-diagnostics.abreda.com/"
     },
     {
       "scope": "keyboard-switch-diagnostics",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://keyboard-switch-diagnostics.abreda.com/"
     },
     {
       "scope": "keyboard-switch-diagnostics",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_en: https://keyboard-switch-diagnostics.abreda.com/en/"
     },
     {
       "scope": "keyboard-switch-diagnostics",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_en: https://keyboard-switch-diagnostics.abreda.com/en/"
+    },
+    {
+      "scope": "keyboard-switch-diagnostics",
+      "details": "hreflang_en_ko: https://keyboard-switch-diagnostics.abreda.com/"
+    },
+    {
+      "scope": "keyboard-switch-diagnostics",
+      "details": "hreflang_en_en: https://keyboard-switch-diagnostics.abreda.com/en/"
+    },
+    {
+      "scope": "keyboard-switch-diagnostics",
+      "details": "sitemap_content: entries: 2"
     },
     {
       "scope": "sneaker-condition-lab",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://sneaker-condition-lab.abreda.com/"
     },
     {
       "scope": "sneaker-condition-lab",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://sneaker-condition-lab.abreda.com/"
     },
     {
       "scope": "sneaker-condition-lab",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_en: https://sneaker-condition-lab.abreda.com/en/"
     },
     {
       "scope": "sneaker-condition-lab",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_en: https://sneaker-condition-lab.abreda.com/en/"
     },
     {
       "scope": "sneaker-condition-lab",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_en_ko: https://sneaker-condition-lab.abreda.com/"
+    },
+    {
+      "scope": "sneaker-condition-lab",
+      "details": "hreflang_en_en: https://sneaker-condition-lab.abreda.com/en/"
+    },
+    {
+      "scope": "sneaker-condition-lab",
+      "details": "sitemap_content: entries: 2"
     },
     {
       "scope": "used-car-inspection",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_ko: https://used-car-inspection.abreda.com/"
     },
     {
       "scope": "used-car-inspection",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_ko: https://used-car-inspection.abreda.com/"
     },
     {
       "scope": "used-car-inspection",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_ko_en: https://used-car-inspection.abreda.com/en/"
     },
     {
       "scope": "used-car-inspection",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "canonical_en: https://used-car-inspection.abreda.com/en/"
     },
     {
       "scope": "used-car-inspection",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "hreflang_en_ko: https://used-car-inspection.abreda.com/"
+    },
+    {
+      "scope": "used-car-inspection",
+      "details": "hreflang_en_en: https://used-car-inspection.abreda.com/en/"
+    },
+    {
+      "scope": "used-car-inspection",
+      "details": "sitemap_content: entries: 2"
     },
     {
       "scope": "vinyl-condition-lab",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_ko: LP 레코드 표면과 재생 상태를 별도로 기록하고 거래용 검수 보고서를 만듭니다."
     }
   ],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
