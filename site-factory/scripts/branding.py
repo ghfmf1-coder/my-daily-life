@@ -22,8 +22,7 @@ SPECIALIST_MARKS = {
 def render_icon(title: str, slug: str) -> str:
     if slug in SPECIALIST_MARKS:
         bg, symbol = SPECIALIST_MARKS[slug]
-        return '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><title>'+escape(title)+'</title><rect width="64" height="64" rx="14" fill="'+bg+'"/>'+symbol+'</svg>\
-'
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><title>'+escape(title)+'</title><rect width="64" height="64" rx="14" fill="'+bg+'"/>'+symbol+'</svg>'
     digest=hashlib.sha256((slug+':'+title).encode('utf-8')).digest()
     palette=('#185ce5','#008775','#643cc8','#ae513b','#0a779e','#34557d')
     bg=palette[digest[0] % len(palette)]
@@ -49,7 +48,9 @@ def render_ico(title: str, slug: str) -> bytes:
     size=64
     pixels=bytearray(size*size*4)
     low=(title+' '+slug).lower()
-    if slug in SPECIALIST_MARKS:\n        color=tuple(int(SPECIALIST_MARKS[slug][0][i:i+2],16) for i in (1,3,5));theme='specialist'\n    elif any(x in low for x in ('csv','파일','엑셀','sheet','merge')):
+    if slug in SPECIALIST_MARKS:
+        color=tuple(int(SPECIALIST_MARKS[slug][0][i:i+2],16) for i in (1,3,5));theme='specialist'
+    elif any(x in low for x in ('csv','파일','엑셀','sheet','merge')):
         color=(6,122,87);theme='csv'
     elif any(x in low for x in ('원고','문장','manuscript','proofread')):
         color=(6,111,156);theme='lens'
@@ -78,7 +79,36 @@ def render_ico(title: str, slug: str) -> bytes:
             disc(x,y,max(1,width//2),c)
     rect(0,0,size,size,color)
     white=(255,255,255);shade=(182,218,244);accent=(30,112,232)
-    if theme=='specialist':\n        # Distinct compact glyphs remain legible at 16px tab size.\n        n=list(SPECIALIST_MARKS).index(slug)\n        if n in (0,7,8):\n            rect(16,11,48,53,white);rect(22,18,42,46,shade)\n            if n==7:\n                line(22,20,42,41,color,4);line(42,20,22,41,color,4)\n            elif n==8:\n                line(23,26,41,26,color,4);line(23,36,41,36,color,4)\n            else:\n                rect(25,22,39,41,color)\n        elif n in (1,6,9):\n            disc(32,32,22,white);disc(32,32,15,color);disc(32,32,9,shade)\n            if n==1:line(32,32,32,22,white,3);line(32,32,41,37,white,3)\n            elif n==6:disc(32,32,3,white)\n            else:disc(32,32,5,color)\n        elif n in (2,3,4,5,10):\n            rect(9,18,55,49,white)\n            if n==10:\n                for y in (27,36):\n                    for x in (17,29,41):rect(x,y,x+7,y+5,color)\n            elif n==4:\n                disc(31,33,12,color);disc(36,29,3,white)\n            elif n==5:\n                rect(17,25,47,37,shade);disc(20,48,5,color);disc(44,48,5,color)\n            elif n==3:\n                line(15,41,49,41,color,5);line(23,38,34,27,color,5)\n            else:\n                line(16,27,32,38,color,4);line(32,38,48,27,color,4);line(32,38,32,48,color,4)\n    elif theme=='day':
+    if theme=='specialist':
+        # Distinct compact glyphs remain legible at 16px tab size.
+        n=list(SPECIALIST_MARKS).index(slug)
+        if n in (0,7,8):
+            rect(16,11,48,53,white);rect(22,18,42,46,shade)
+            if n==7:
+                line(22,20,42,41,color,4);line(42,20,22,41,color,4)
+            elif n==8:
+                line(23,26,41,26,color,4);line(23,36,41,36,color,4)
+            else:
+                rect(25,22,39,41,color)
+        elif n in (1,6,9):
+            disc(32,32,22,white);disc(32,32,15,color);disc(32,32,9,shade)
+            if n==1:line(32,32,32,22,white,3);line(32,32,41,37,white,3)
+            elif n==6:disc(32,32,3,white)
+            else:disc(32,32,5,color)
+        elif n in (2,3,4,5,10):
+            rect(9,18,55,49,white)
+            if n==10:
+                for y in (27,36):
+                    for x in (17,29,41):rect(x,y,x+7,y+5,color)
+            elif n==4:
+                disc(31,33,12,color);disc(36,29,3,white)
+            elif n==5:
+                rect(17,25,47,37,shade);disc(20,48,5,color);disc(44,48,5,color)
+            elif n==3:
+                line(15,41,49,41,color,5);line(23,38,34,27,color,5)
+            else:
+                line(16,27,32,38,color,4);line(32,38,48,27,color,4);line(32,38,32,48,color,4)
+    elif theme=='day':
         rect(12,16,52,52,white);rect(12,16,52,27,shade)
         line(22,11,22,21,white,4);line(42,11,42,21,white,4)
         rect(21,31,43,46,accent);line(26,38,31,42,white,4);line(31,42,39,33,white,4)
