@@ -7,5 +7,7 @@
   "locales": [
     "ko",
     "en"
-  ]
+  ],
+  "domain": "gem-photo-inspection.abreda.com",
+  "canonical_url": "https://gem-photo-inspection.abreda.com/"
 }
