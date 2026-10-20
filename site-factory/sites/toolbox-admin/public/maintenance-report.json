@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T03:52:15+00:00",
+  "checkedAt": "2026-10-20T03:53:11+00:00",
   "status": "fail",
   "summary": {
     "sites": 13,
-    "sitePassed": 8,
+    "sitePassed": 9,
     "siteWarnings": 0,
-    "siteFailed": 5,
+    "siteFailed": 4,
     "browserPassed": 0,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 23
+    "issues": 18
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 353ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 159ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 270ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 196ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 187ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 204ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -325,12 +325,12 @@
       "name": "csv empty row remover | Small Toolbox",
       "url": "https://tb-pages-csv-empty-row-remover.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 265ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -339,8 +339,8 @@
         },
         {
           "check": "meta_description_ko",
-          "status": "fail",
-          "detail": "CSV 파일에서 빈 행과 공백 행 제거"
+          "status": "pass",
+          "detail": "CSV 파일의 완전히 빈 행과 공백만 있는 행을 한 번에 정리하세요. 정리 결과를 미리 확인하고 CSV로 다운로드할 수 있으며 파일은 브라우저에서 처리됩니다."
         },
         {
           "check": "html_lang_ko",
@@ -354,13 +354,13 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
@@ -370,7 +370,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 186ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -379,8 +379,8 @@
         },
         {
           "check": "meta_description_en",
-          "status": "fail",
-          "detail": "Remove empty or whitespace-only CSV rows"
+          "status": "pass",
+          "detail": "Remove blank and whitespace-only rows from CSV files in your browser. Preview cleaned data and download a CSV "
         },
         {
           "check": "html_lang_en",
@@ -399,8 +399,8 @@
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
@@ -439,13 +439,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "meta_description_ko: CSV 파일에서 빈 행과 공백 행 제거",
-        "canonical_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/",
-        "hreflang_ko_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/",
-        "meta_description_en: Remove empty or whitespace-only CSV rows",
-        "hreflang_en_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
-      ]
+      "failures": []
     },
     {
       "slug": "csv-merge-studio",
@@ -457,7 +451,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 254ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -497,7 +491,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 169ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 215ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -608,7 +602,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 166ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 187ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -679,7 +673,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 165ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -719,7 +713,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 172ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -806,7 +800,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 308ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 282ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -846,7 +840,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 185ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 245ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -947,7 +941,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 208ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 241ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -987,7 +981,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 257ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 232ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1088,7 +1082,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1128,7 +1122,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 107ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1214,7 +1208,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 214ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1254,7 +1248,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 116ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 218ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1381,7 +1375,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 437ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 240ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1421,7 +1415,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 238ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 188ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1542,7 +1536,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 216ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1582,7 +1576,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 47ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1676,26 +1670,6 @@
     {
       "scope": "csv-column-extractor",
       "details": "hreflang_en_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "meta_description_ko: CSV 파일에서 빈 행과 공백 행 제거"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "canonical_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "hreflang_ko_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "meta_description_en: Remove empty or whitespace-only CSV rows"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "hreflang_en_ko: https://tb-pages-csv-empty-row-remover.pages.dev/ko/"
     },
     {
       "scope": "jsonl-validator",
