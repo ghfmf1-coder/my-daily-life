@@ -7,5 +7,7 @@
   "locales": [
     "ko",
     "en"
-  ]
+  ],
+  "domain": "keyboard-switch-diagnostics.abreda.com",
+  "canonical_url": "https://keyboard-switch-diagnostics.abreda.com/"
 }
