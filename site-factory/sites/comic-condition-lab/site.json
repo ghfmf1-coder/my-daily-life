@@ -7,5 +7,7 @@
   "locales": [
     "ko",
     "en"
-  ]
+  ],
+  "domain": "comic-condition-lab.abreda.com",
+  "canonical_url": "https://comic-condition-lab.abreda.com/"
 }
