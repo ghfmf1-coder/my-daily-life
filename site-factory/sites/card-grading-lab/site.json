@@ -1,0 +1,11 @@
+{
+  "slug": "card-grading-lab",
+  "project": "tb-card-grading-lab",
+  "title": "카드 감정 사전 검수 연구소 | 센터링 분석",
+  "description": "포켓몬·원피스·스포츠 카드의 앞뒷면 센터링을 직접 측정하고 사진 품질과 결함을 확인하는 무료 사전 검수 도구",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
