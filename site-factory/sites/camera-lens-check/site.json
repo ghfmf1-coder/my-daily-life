@@ -7,5 +7,7 @@
   "locales": [
     "ko",
     "en"
-  ]
+  ],
+  "domain": "camera-lens-check.abreda.com",
+  "canonical_url": "https://camera-lens-check.abreda.com/"
 }
