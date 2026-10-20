@@ -362,7 +362,7 @@
   function analyticsTable(){
     const arr=analyticsView.data?.results;
     if (!Array.isArray(arr)) return empty('아직 API 조회 결과가 없습니다.', '연결 후 방문 수와 페이지뷰 수를 자동으로 읽어옵니다.');
-    const rows=arr.map(item=>`<tr><td><div class="item-title">${esc(item.site)}</div><div class="sub-line">자체 JS 비콘 · ${esc(item.days)}일 구간</div></td><td>${safeMetric(item.visits)}</td><td>${safeMetric(item.pageviews)}</td><td>${item.sampled?'표본집계 (정확한 건수 미확인)':item.status==='no_data'?'아직 수집된 데이터 없음':'브라우저 JS 측정 (봇 완전 제외 아님)'}</td><td>${esc(String(item.retrievedAt||'').replace('T',' ').slice(0,19))}</td></tr>`).join('');
+    const rows=arr.map(item=>`<tr><td><div class="item-title">${esc(item.site)}</div><div class="sub-line">자체 JS 비콘 · ${esc(item.days)}일 구간</div></td><td>${safeMetric(item.visits)}</td><td>${safeMetric(item.pageviews)}</td><td>${item.sampled?'표본집계 / 판별 불가':item.status==='no_data'?'수집 자료 없음':'판별 불가 — JS 실행은 사람 인증이 아님'}</td><td>${esc(String(item.retrievedAt||'').replace('T',' ').slice(0,19))}</td></tr>`).join('');
     return `<div class="table-scroll"><table><thead><tr><th>사이트</th><th>방문 (Visits)</th><th>페이지뷰</th><th>데이터 상태</th><th>조회 시각 (UTC)</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
   function traffic(){
@@ -383,9 +383,9 @@
     const period=analyticsView.days===1?'24시간':analyticsView.days===7?'7일':'30일';
     const loadingNote=analyticsView.loading?'Cloudflare 원천 데이터를 조회하고 있습니다.':analyticsView.error||'서버 API가 연결되면 실측 수치만 표시됩니다.';
     return header('방문자 분석','브라우저 방문 세션의 DB 집계와 기존 수기 기록을 구분합니다.',button('새로 조회','analytics-reload','secondary')+button('+ 측정값 입력','new-metric'))+
-      `<div class="notice"><strong>자체 JS 비콘 일별 집계</strong> — 동일 탭 세션의 첫 방문을 기록합니다. 고유 사람 수가 아니며, 봇·비콘 차단·중복 탭으로 실제 방문과 차이가 날 수 있습니다. IP·쿠키·지문 정보는 저장하지 않습니다.</div>`+
+      `<div class="notice"><strong>방문자 판별 기준</strong> — ① 사람으로 추정: 신뢰할 수 있는 서버측 봇 필터를 통과한 트래픽(사람 확정 아님). ② 봇·자동화: 서버측 검증으로 식별된 요청. ③ 판별 불가: 현재 자체 JS 비콘 및 출처 불명 수치. 현재 비콘은 navigator.webdriver만 제외하므로 <strong>판별 불가</strong>로 표시하며 사람 방문자로 합산하지 않습니다. 이 세 분류는 서로 다른 데이터 원천을 단순 차감해 계산할 수 없습니다. IP·쿠키·지문은 자체 비콘에 저장하지 않습니다.</div>`+
       `<div class="toolbar"><span class="section-title">조회 기간</span>${[1,7,30].map(d=>`<button type="button" class="btn ${analyticsView.days===d?'primary':'secondary'}" data-action="analytics-days" data-days="${d}">${d===1?'최근 1일':`최근 ${d}일`}</button>`).join('')}</div>`+
-      `<div class="stats-grid">${stats('브라우저 방문 세션',analyticsView.data?(isSingleSite?safeMetric(remote?.visits):'사이트별 확인'):'미확인',period+' · 고유 이용자 수 아님','◫')}${stats('페이지뷰',analyticsView.data?(isSingleSite?safeMetric(remote?.pageviews):'사이트별 확인'):'미확인',period+' · 브라우저 전송 페이지뷰','▤')}${stats('분석 대상',analyticsView.data?fmt(analyticsView.data.results.length):'미확인','관리 대상 사이트','◎')}${stats('데이터 연결 상태',fetchState,analyticsView.data?String(analyticsView.data.generatedAt||'').slice(0,19)+' UTC':loadingNote,'◈',analyticsView.error?'amber':'')}</div>`+
+      `<div class="stats-grid">${stats('판별 불가 · JS 방문 세션',analyticsView.data?(isSingleSite?safeMetric(remote?.visits):'사이트별 확인'):'미확인',period+' · 고유 이용자 수 아님','◫')}${stats('페이지뷰',analyticsView.data?(isSingleSite?safeMetric(remote?.pageviews):'사이트별 확인'):'미확인',period+' · 브라우저 전송 페이지뷰','▤')}${stats('분석 대상',analyticsView.data?fmt(analyticsView.data.results.length):'미확인','관리 대상 사이트','◎')}${stats('데이터 연결 상태',fetchState,analyticsView.data?String(analyticsView.data.generatedAt||'').slice(0,19)+' UTC':loadingNote,'◈',analyticsView.error?'amber':'')}</div>`+
       (analyticsView.error?`<div class="notice warn">API 연결 상태: ${esc(analyticsView.error)}</div>`:'')+
       panel('브라우저 DB 자동 집계',analyticsView.data?`원천 조회 시각: ${analyticsView.data.generatedAt||'미확인'} · Supabase 일별 DB 집계`:loadingNote,analyticsTable())+
       `<div class="notice warn">아래 수동 기록은 자동 집계와 별개야. 두 데이터를 더하지 않으며, 방문자·방문·페이지뷰·색인 수치를 혼동하지 않습니다.</div>`+
