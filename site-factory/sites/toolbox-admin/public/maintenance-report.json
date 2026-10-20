@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T04:43:32+00:00",
+  "checkedAt": "2026-10-20T04:44:22+00:00",
   "status": "fail",
   "summary": {
     "sites": 14,
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 209ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 156ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 43ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 136ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,12 +204,12 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 207ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
           "status": "pass",
-          "detail": "카드 감정 사전 검수 연구소 | 포켓몬·원피스·스포츠 카드 센터링 분석"
+          "detail": "트레이딩 카드 PSA 사전 감정 분석 | 포켓몬·원피스·스포츠 카드 센터링"
         },
         {
           "check": "meta_description_ko",
@@ -244,12 +244,12 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 48ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 139ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
           "status": "pass",
-          "detail": "Card Pre-Grading Lab | Pokémon, One Piece & Sports Card Centering"
+          "detail": "Trading Card PSA Pre-Grading | Pokémon, One Piece & Sports Cards"
         },
         {
           "check": "meta_description_en",
@@ -289,7 +289,7 @@
         {
           "check": "svg_favicon.svg",
           "status": "pass",
-          "detail": "HTTP 200, 554 bytes"
+          "detail": "HTTP 200, 583 bytes"
         },
         {
           "check": "text_robots.txt",
@@ -325,7 +325,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -365,7 +365,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -446,7 +446,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 179ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -486,7 +486,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 121ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -567,7 +567,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 231ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -607,7 +607,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 185ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -718,7 +718,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 166ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -789,7 +789,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 170ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -829,7 +829,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 118ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -910,7 +910,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 291ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -950,7 +950,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1051,7 +1051,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 150ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1091,7 +1091,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 161ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1192,7 +1192,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 162ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1232,7 +1232,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 173ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1313,7 +1313,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1353,7 +1353,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1480,7 +1480,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 171ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 323ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1520,7 +1520,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1610,7 +1610,7 @@
         {
           "check": "text_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 5335 bytes"
+          "detail": "HTTP 200, 5364 bytes"
         },
         {
           "check": "rss_feed.xml",
@@ -1620,7 +1620,7 @@
         {
           "check": "text_en_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 4640 bytes"
+          "detail": "HTTP 200, 4669 bytes"
         },
         {
           "check": "rss_en_feed.xml",
@@ -1641,7 +1641,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 153ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1681,7 +1681,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
