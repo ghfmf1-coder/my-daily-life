@@ -21,6 +21,7 @@ else:
         changed=subprocess.check_output(['git','ls-files'],text=True).splitlines()
     else:
         changed=subprocess.check_output(['git','diff','--name-only',a.before,a.after],text=True).splitlines()
+    # A shared factory change intentionally redeploys every approved site, repairing any missed per-site pushes.
     shared=any(n.startswith('site-factory/scripts/') or n=='.github/workflows/toolbox-pages.yml' for n in changed)
     selected=all_sites if shared else sorted(set(p.split('/')[2] for p in changed if p.startswith('site-factory/sites/') and len(p.split('/'))>=4))
 # Redeploy the live directory whenever another approved public tool changes.
