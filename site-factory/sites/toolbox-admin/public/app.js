@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const STORAGE_KEY = 'small-toolbox-admin-v1'; // keep browser data from earlier releases
-  const VIEWS = {overview:'전체 현황',sites:'사이트 관리',domains:'도메인 관리',ideas:'아이디어 검토',tasks:'작업 관리',traffic:'방문자 분석',metrics:'성과 기록',policies:'정책·색인',maintenance:'자동 유지보수',promotion:'홍보 운영',settings:'백업·설정'};
+  const VIEWS = {overview:'전체 현황',sites:'사이트 관리',domains:'도메인 관리',ideas:'아이디어 검토',tasks:'작업 관리',traffic:'방문자 분석',metrics:'성과 기록',policies:'정책·색인',maintenance:'자동 유지보수',promotion:'홍보 운영',apiRegistry:'API 라이브러리',settings:'백업·설정'};
   const STATUS = {
     site:{review:'상태 확인',planning:'기획',build:'개발 중',testing:'테스트',live:'운영 중',paused:'중단'},
     domain:{planned:'구매 예정',registered:'등록 완료',connected:'DNS 연결',issue:'문제 확인',expired:'만료'},
@@ -440,12 +440,37 @@
     panel('사이트별 검수 결과','검수 상태 및 검색엔진 제출 현황',state.sites.length?`<div class="table-scroll"><table><thead><tr><th>사이트</th><th>Google</th><th>Naver</th><th>정책 체크</th><th>최종 기록</th><th>관리</th></tr></thead><tbody>${state.sites.map(s=>`<tr><td><div class="item-title">${esc(s.name)}</div><div class="sub-line">${esc(s.url||'URL 없음')}</div></td><td>${badge(s.google,STATUS.index)}</td><td>${badge(s.naver,STATUS.index)}</td><td>${badge(s.policy,STATUS.policy)}</td><td>${esc((s.notes||'').slice(0,55)||'—')}</td><td><button type="button" class="tiny-action" data-action="edit-site" data-id="${esc(s.id)}">검수 수정</button></td></tr>`).join('')}</tbody></table></div>`:empty('검수할 사이트가 없습니다.'))+
     `<div class="meta-info">${panel('확인할 체크리스트','출시 전에 직접 확인',`<div class="panel-body"><div class="checklist"><label>□ 실제 기능이 작동하는가</label><label>□ 모바일에서 사용할 수 있는가</label><label>□ 검색용 빈 페이지를 양산하지 않는가</label><label>□ 개인정보 안내와 면책 고지가 적절한가</label><label>□ robots.txt / sitemap.xml / canonical이 맞는가</label><label>□ 광고 배치 및 정책 위험은 없는가</label></div></div>`)}${panel('공식 검증 도구','실제 상태는 각 서비스에서 확인',`<div class="panel-body">${checklist.map(([name,url])=>`<div class="work-item"><span class="work-dot"></span><div><h3>${link(url,`${name} ↗`)}</h3><p>직접 로그인해 확인한 상태만 관리 콘솔에 기록</p></div></div>`).join('')}</div>`)}</div>`;
   }
+  const apiInventory={started:false,data:null,error:null};
+  function apiRegistryView(){
+    const intro=header('API 라이브러리','중앙 API 목록 · 발급 및 연결 상태를 구분합니다. API 키는 이 화면에 입력하거나 저장하지 않습니다.');
+    if(apiInventory.error)return intro+panel('목록 로드 실패','배포된 API 메타데이터를 확인하세요.',`<div class="panel-body">${esc(apiInventory.error)}</div>`);
+    if(!apiInventory.data)return intro+panel('API 목록 불러오는 중','실제 연결 상태가 아닙니다.','<div class="panel-body">조회 중…</div>');
+    const entries=apiInventory.data.providers||[];
+    const rows=entries.map(p=>{
+      const status=({researching:'검증 전',eligible:'이용 조건 검증',blocked:'사용 불가',connected:'실제 연결 확인'})[p.status]||'상태 미확인';
+      return `<tr><td><strong>${esc(p.name)}</strong><div class="sub-line">${esc(p.category)}</div></td><td>${esc(status)}</td><td>${p.requires_billing?'결제 설정 가능성 있음':'별도 요금 확인 필요'}</td><td>${p.last_verified?esc(p.last_verified):'미검증'}</td><td><a href="${esc(p.docs)}" target="_blank" rel="noopener noreferrer">공식 문서 ↗</a></td></tr>`;
+    }).join('');
+    return intro+panel('등록된 API '+entries.length+'개','실제 발급·승인·연결 완료를 의미하지 않습니다.',`<div class="table-wrap"><table><thead><tr><th>제공업체</th><th>상태</th><th>비용 주의</th><th>검증일</th><th>자료</th></tr></thead><tbody>${rows}</tbody></table></div><div class="footnote">비밀키는 Cloudflare Secrets 등 서버 전용 저장소에서만 관리합니다. 후보 목록에 등록됐다는 이유로 API 사용이 가능한 것은 아닙니다.</div>`);
+  }
+  async function loadApiInventory(){
+    if(apiInventory.started)return;
+    apiInventory.started=true;
+    try{
+      const response=await fetch('./api-providers.json',{cache:'no-store',credentials:'same-origin'});
+      if(!response.ok)throw new Error('HTTP '+response.status);
+      const data=await response.json();
+      if(data.schema_version!==1||!Array.isArray(data.providers))throw new Error('목록 형식이 올바르지 않습니다.');
+      apiInventory.data=data;
+    }catch(error){apiInventory.error=String(error.message||error)}
+    if(view==='apiRegistry')render();
+  }
   function render(){
     document.getElementById('breadcrumb').textContent=VIEWS[view];
     document.querySelectorAll('.nav-btn').forEach(x=>x.classList.toggle('active',x.dataset.view===view));
     document.getElementById('navSiteCount').textContent=state.sites.length;
-    host.innerHTML=({overview,sites,domains,ideas,tasks,traffic,metrics,policies,maintenance:maintenanceView,promotion:promotionView,settings:adminPanel}[view])();
+    host.innerHTML=({overview,sites,domains,ideas,tasks,traffic,metrics,policies,maintenance:maintenanceView,promotion:promotionView,apiRegistry:apiRegistryView,settings:adminPanel}[view])();
     document.getElementById('sidebar').classList.remove('open');
+    if(view==='apiRegistry' && !apiInventory.started)queueMicrotask(loadApiInventory);
     if(view==='traffic' && !analyticsView.started)queueMicrotask(refreshAnalytics);
     if(view==='ideas' && !googleAdsView.started)queueMicrotask(googleAdsStatus);
   }
