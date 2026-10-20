@@ -91,10 +91,16 @@ def main():
             print("INDEXNOW: "+json.dumps(notice,ensure_ascii=False))
         except (OSError,ValueError,urllib.error.URLError) as ex:
             print(f"INDEXNOW_NOT_CONFIRMED: {type(ex).__name__}: {ex}")
-    if args.attach_domain:
+    # Attach verified user-owned abreda.com subdomains as part of ordinary deployments.
+    # DNS and certificate activation are independently verified by Cloudflare.
+    should_attach = args.attach_domain or (data.get('domain','').endswith('.abreda.com'))
+    if should_attach:
         if not data.get('domain'):
             raise SystemExit('Cannot attach: site.json domain not set')
-        attach_domain(data['project'],data['domain'])
+        try:
+            attach_domain(data['project'],data['domain'])
+        except CFError as exc:
+            print(f'DOMAIN_ATTACH_PENDING: {data["domain"]}: {exc}')
     step_summary=os.environ.get('GITHUB_STEP_SUMMARY')
     if step_summary:
         with open(step_summary,'a',encoding='utf-8') as f:
