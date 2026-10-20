@@ -2,9 +2,10 @@ name = "toolbox-api-gateway"
 main = "worker.js"
 compatibility_date = "2026-10-20"
 # Bind a dedicated KV namespace as USAGE before deploying.
-# Configure ADMIN_TOKEN, SITE_TOKENS_JSON, USDA_API_KEY using wrangler secret put.
+# Configure ADMIN_TOKEN, SITE_TOKENS_JSON, VISITOR_HASH_SECRET and USDA_API_KEY using wrangler secret put.
 # Set ENABLE_PROVIDER_CALLS=true only after commercial/license approval.
 [vars]
 ENABLE_PROVIDER_CALLS = "false"
-DAILY_SITE_LIMIT = "20"
+DAILY_SITE_LIMIT = "100"
+DAILY_VISITOR_LIMIT = "5"
 ADMIN_ORIGIN = "https://adminivo.com"
