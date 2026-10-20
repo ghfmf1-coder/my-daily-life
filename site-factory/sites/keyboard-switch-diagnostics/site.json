@@ -1,0 +1,11 @@
+{
+  "slug": "keyboard-switch-diagnostics",
+  "project": "tb-keyboard-switch-diagnostics",
+  "title": "키보드 키 입력 진단실",
+  "description": "키 입력을 시각화하고 반복 입력 기록을 생성하는 브라우저 키보드 검사 도구",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
