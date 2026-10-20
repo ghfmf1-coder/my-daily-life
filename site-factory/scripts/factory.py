@@ -265,6 +265,46 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         published=build_packets()
         (out / 'feed.xml').write_bytes(generate_feed(published,'ko'))
         (out / 'en' / 'feed.xml').write_bytes(generate_feed(published,'en'))
+    # Contextual cross-tool navigation. Only published tools, language-matched, no self-links.
+    related_groups = {
+      'csv-column-extractor':['csv-empty-row-remover','csv-merge-studio','jsonl-validator'],
+      'csv-empty-row-remover':['csv-column-extractor','csv-merge-studio','jsonl-validator'],
+      'csv-merge-studio':['csv-column-extractor','csv-empty-row-remover','jsonl-validator'],
+      'jsonl-validator':['csv-column-extractor','csv-empty-row-remover','csv-merge-studio'],
+      'novel-planner':['manuscript-lens'],
+      'manuscript-lens':['novel-planner'],
+      'srt-sdh-cleaner':['vtt-cleaner','subtitle-sync-studio'],
+      'vtt-cleaner':['srt-sdh-cleaner','subtitle-sync-studio'],
+      'subtitle-sync-studio':['srt-sdh-cleaner','vtt-cleaner'],
+    }
+    related_titles = {
+      'csv-column-extractor':('CSV 열 선택 추출기','CSV Column Extractor','필요한 열만 골라 저장','Extract only the columns you need','▦'),
+      'csv-empty-row-remover':('CSV 빈 행 제거기','CSV Empty Row Remover','빈 행과 공백 행 정리','Clean blank rows','⌫'),
+      'csv-merge-studio':('CSV 병합·중복 제거','CSV Merge & Deduplicate','여러 CSV를 하나로 병합','Combine multiple CSV files','⇄'),
+      'jsonl-validator':('JSONL 오류 검사기','JSONL Validator','잘못된 JSON 행 찾기','Find invalid JSON lines','{}'),
+      'novel-planner':('웹소설 연재 설계실','Web Serial Planner','회차·복선·등장인물 관리','Plan chapters and characters','✎'),
+      'manuscript-lens':('웹소설 원고돋보기','Manuscript Lens','반복 표현과 긴 문장 검사','Find repetition in writing','◉'),
+      'srt-sdh-cleaner':('SRT 자막 효과음 정리','SRT SDH Cleaner','효과음과 화자 표시 정리','Remove SDH cues','▤'),
+      'vtt-cleaner':('VTT 자막 정리기','VTT Subtitle Cleaner','VTT 자막 텍스트 정리','Clean VTT subtitles','▶'),
+      'subtitle-sync-studio':('자막 싱크 조정기','Subtitle Sync Studio','자막 시간 오차 수정','Adjust subtitle timing','◷'),
+    }
+    def related_panel(current: str, lang: str) -> str:
+        cards=[]
+        for candidate in related_groups.get(current,[]):
+            try:
+                other,_=read_site(candidate)
+            except (OSError,SiteError,ValueError):
+                continue
+            if not other.get('approved') or lang not in other.get('locales',[]): continue
+            ko,en,ko_desc,en_desc,icon=related_titles[candidate]
+            url=(other.get('canonical_url') or 'https://'+other['project']+'.pages.dev').rstrip('/')+'/' + ('en/' if lang=='en' else '')
+            title,desc=(en,en_desc) if lang=='en' else (ko,ko_desc)
+            cards.append('<a class="tb-related-link" href="'+escape(url,quote=True)+'"><span class="tb-related-icon" aria-hidden="true">'+escape(icon)+'</span><span><strong>'+escape(title)+'</strong><small>'+escape(desc)+'</small></span><span aria-hidden="true">↗</span></a>')
+        if not cards:return ''
+        heading='Try related tools' if lang=='en' else '함께 쓰면 좋은 도구'
+        sub='Useful tools for the next step' if lang=='en' else '지금 작업과 관련된 기능'
+        css='<style>.tb-related{font:14px/1.5 system-ui,-apple-system,sans-serif;color:#1b2b45;background:#f7f9fd;border:1px solid #dce5f1;border-radius:12px;padding:18px;box-sizing:border-box}.tb-related h2{font-size:18px;margin:0 0 5px}.tb-related p{font-size:12px;color:#64748b;margin:0 0 15px}.tb-related-link{display:flex;align-items:center;gap:10px;padding:11px 9px;background:#fff;border:1px solid #e2e8f0;border-radius:9px;margin:8px 0;text-decoration:none;color:#24364f;min-width:0}.tb-related-link:hover{border-color:#4b75df;box-shadow:0 2px 8px #17346b12}.tb-related-link span:nth-child(2){flex:1;min-width:0}.tb-related-link strong{display:block;font-size:13px}.tb-related-link small{display:block;color:#64748b;font-size:11px;margin-top:2px}.tb-related-icon{display:grid;place-items:center;width:35px;height:35px;flex:none;border-radius:9px;background:#eaf0ff;color:#315cce;font-weight:700;font-size:18px}@media(min-width:1160px){body.tb-with-related{padding-right:285px!important}.tb-related{position:fixed;top:28px;right:20px;width:245px;max-height:calc(100vh - 56px);overflow:auto;z-index:10}}@media(max-width:1159px){.tb-related{max-width:880px;margin:24px auto}}</style>'
+        return css+'<aside class="tb-related" aria-label="'+escape(heading,quote=True)+'"><h2>'+heading+'</h2><p>'+sub+'</p>'+''.join(cards)+'</aside>'
     tracking_ids = {
         'csv-merge-studio': 'toolbox-csv-merge-studio',
         'novel-planner': 'toolbox-novel-planner',
@@ -308,6 +348,12 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         if 'href="/favicon.ico"' not in content:
             content = content.replace('</head>',
                 '<link rel="icon" type="image/x-icon" href="/favicon.ico">\n</head>', 1)
+        if slug in related_groups and rel in ('index.html','en/index.html') and '</body>' in content:
+            lang='en' if rel=='en/index.html' else 'ko'
+            sidebar=related_panel(slug,lang)
+            if sidebar:
+                content=content.replace('<body','<body class="tb-with-related"',1) if '<body>' in content else content
+                content=content.replace('</body>',sidebar+'</body>',1)
         # A single authentic brand-navigation link. Do not link to private admin.
         if slug not in {'toolbox-hub','toolbox-admin','deployment-check'} \
                 and rel in {'index.html','en/index.html'} \
