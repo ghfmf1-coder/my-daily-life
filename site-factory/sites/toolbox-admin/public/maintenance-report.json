@@ -1,27 +1,2617 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T05:00:13+00:00",
+  "checkedAt": "2026-10-20T05:04:00+00:00",
   "status": "fail",
   "summary": {
-    "sites": 0,
-    "sitePassed": 0,
+    "sites": 24,
+    "sitePassed": 15,
     "siteWarnings": 0,
-    "siteFailed": 0,
+    "siteFailed": 9,
     "browserPassed": 0,
     "browserFailed": 0,
-    "sourceTestsPassed": false,
-    "issues": 3
+    "sourceTestsPassed": true,
+    "issues": 38
   },
-  "sites": [],
+  "sites": [
+    {
+      "slug": "my-daily-life",
+      "name": "하루한칸",
+      "url": "https://my-daily-life.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "하루한칸 | 루틴 관리·체크리스트·가계부를 한곳에"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "하루한칸은 매일의 루틴 체크리스트, 습관 관리, 목표 달성률, 교대근무 일정, 가계부와 주간 성과를 한곳에서 관리하는 생활 기록 앱입니다. 내 생활에 맞게 목표를 자유롭게 바꿔보세요."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Daily Habit Tracker & Routine Checklist | Haruhankan"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Manage daily habits, personal goals, shift work schedules and a simple expense tracker in one free routine das"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://my-daily-life.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_icon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 754 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 111 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 363 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 4"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        },
+        {
+          "check": "page_app",
+          "status": "pass",
+          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "하루한칸 앱 | 내 루틴과 생활 기록"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "내 생활에 맞추는 루틴, 근무 캘린더, 가계부 — 하루한칸"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "noindex,nofollow"
+        },
+        {
+          "check": "page_en_app",
+          "status": "pass",
+          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Haruhankan — Daily Routine App"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Haruhankan account-based English daily habit tracker, shift calendar and expense planner."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "noindex,nofollow"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "aquarium-water-lab",
+      "name": "수족관 수질 분석실",
+      "url": "https://tb-aquarium-water-lab.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
+      "slug": "camera-lens-check",
+      "name": "중고 카메라 렌즈 검수",
+      "url": "https://tb-camera-lens-check.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "중고 카메라 렌즈 검수 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "fail",
+          "detail": "렌즈 외관과 AF, 조리개, 촬영 테스트 결과를 기록합니다"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Used Camera Lens Check | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Record lens condition, autofocus, aperture and test-shot findings."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 435 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 83 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 241 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        }
+      ],
+      "warnings": [],
+      "failures": [
+        "meta_description_ko: 렌즈 외관과 AF, 조리개, 촬영 테스트 결과를 기록합니다"
+      ]
+    },
+    {
+      "slug": "card-grading-lab",
+      "name": "트레이딩 카드 PSA 사전 감정 분석 | 포켓몬·원피스·스포츠 카드",
+      "url": "https://tb-card-grading-lab.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "트레이딩 카드 PSA 사전 감정 분석 | 포켓몬·원피스·스포츠 카드 센터링"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "사진을 브라우저에서만 처리하며 포켓몬, 원피스, 스포츠 카드의 센터링을 직접 측정하고 감정 전 결함을 기록하세요."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-card-grading-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-card-grading-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-card-grading-lab.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Trading Card PSA Pre-Grading | Pokémon, One Piece & Sports Cards"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Measure card centering in your browser, review surface and corner defects, and prepare for PSA submission. Pho"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-card-grading-lab.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-card-grading-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-card-grading-lab.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 583 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 82 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 239 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "comic-condition-lab",
+      "name": "코믹북·만화책 상태 검수",
+      "url": "https://tb-comic-condition-lab.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
+      "slug": "csv-column-extractor",
+      "name": "csv column extractor | Small Toolbox",
+      "url": "https://tb-pages-csv-column-extractor.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "CSV 특정 열 추출기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "CSV 파일에서 필요한 열만 선택해 추출하고 새 CSV로 다운로드하세요. 헤더를 확인해 열을 고르고 결과를 미리 볼 수 있으며 파일은 브라우저에서 처리됩니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Extract CSV Columns | 작은도구함"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Choose columns from a CSV file and download the result"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 447 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 92 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 345 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 3"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "csv-empty-row-remover",
+      "name": "csv empty row remover | Small Toolbox",
+      "url": "https://tb-pages-csv-empty-row-remover.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "CSV 빈 행 제거기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "CSV 파일의 완전히 빈 행과 공백만 있는 행을 한 번에 정리하세요. 정리 결과를 미리 확인하고 CSV로 다운로드할 수 있으며 파일은 브라우저에서 처리됩니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Remove Empty CSV Rows | 작은도구함"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Remove blank and whitespace-only rows from CSV files in your browser. Preview cleaned data and download a CSV "
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-pages-csv-empty-row-remover.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 448 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 93 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 348 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 3"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "csv-merge-studio",
+      "name": "CSV 맞춤 병합기 | 열 이름 통일·중복 제거·파일 합치기",
+      "url": "https://csv.abreda.com/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "CSV 맞춤 병합기 | 열 이름 통일·중복 제거·파일 합치기"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "서로 다른 열 이름을 자동으로 매칭하고 직접 수정해 여러 CSV 파일을 하나로 병합하세요. 중복행 제거, UTF-8·CP949 한글 CSV, 엑셀 다운로드용 CSV 지원. 파일은 서버로 전송하지 않"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://csv.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://csv.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://csv.abreda.com/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Merge CSV Files Online | Match Columns & Remove Duplicates"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Free CSV merge tool with automatic column header matching, custom field mapping, duplicate removal, and Excel-"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://csv.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://csv.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://csv.abreda.com/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 522 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 67 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 209 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        },
+        {
+          "check": "script_csv-core.js",
+          "status": "pass",
+          "detail": "HTTP 200, 7673 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 7685 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        },
+        {
+          "check": "script_csv-core.js",
+          "status": "pass",
+          "detail": "HTTP 200, 7673 bytes"
+        },
+        {
+          "check": "script_en_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 7427 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "deployment-check",
+      "name": "작은도구함 배포 검증",
+      "url": "https://tb-deployment-check.pages.dev/",
+      "type": "internal",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_internal",
+          "status": "pass",
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "배포 연결 확인 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "작은도구함 신규 사이트 자동 배포를 기술적으로 확인하는 임시 테스트 화면입니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "noindex,nofollow,noarchive"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 508 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 25 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "noindex internal"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 110 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 0"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 529 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "gem-photo-inspection",
+      "name": "보석·원석 외관 검수",
+      "url": "https://tb-gem-photo-inspection.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "보석·원석 외관 검수 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "원석 사진과 크기, 관찰된 손상 및 촬영 조건을 기록하는 비공식 검수 도구입니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Gemstone Photo Inspection | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Document gemstone dimensions, visible marks and photography conditions before professional inspection."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 526 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 86 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 247 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "jsonl-validator",
+      "name": "jsonl validator | Small Toolbox",
+      "url": "https://tb-pages-jsonl-validator.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "JSONL 오류 행 검사기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "JSONL 파일을 검사해 잘못된 JSON 행 번호와 오류 내용을 확인하세요. 줄 단위 검증 결과를 브라우저에서 바로 확인할 수 있으며 파일은 서버로 전송하지 않습니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "JSONL Error Line Checker | 작은도구함"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Validate JSONL files line by line, identify invalid JSON with line numbers and error details, and review resul"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 529 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 87 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 330 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 3"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "keyboard-switch-diagnostics",
+      "name": "키보드 키 입력 진단실",
+      "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "키보드 키 입력 진단실 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "fail",
+          "detail": "키 입력을 시각화하고 반복 입력 기록을 생성하는 브라우저 키보드 검사 도구"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Keyboard Switch Diagnostics | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Visualize keyboard events and log repeated presses locally in your browser."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 528 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 93 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 261 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        }
+      ],
+      "warnings": [],
+      "failures": [
+        "meta_description_ko: 키 입력을 시각화하고 반복 입력 기록을 생성하는 브라우저 키보드 검사 도구"
+      ]
+    },
+    {
+      "slug": "manuscript-lens",
+      "name": "웹소설 원고돋보기 | 반복 표현·대사·문장 분석",
+      "url": "https://manuscript.abreda.com/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "웹소설 원고돋보기 | 반복 표현·대사·문장 검사"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "웹소설 원고를 붙여넣으면 반복 단어·긴 문장·대사 비율·문단 길이를 분석하고 문제 위치를 표시하는 무료 퇴고 도구."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://manuscript.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://manuscript.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://manuscript.abreda.com/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Novel Manuscript Analyzer | Repeated Words, Dialogue & Long Paragraphs"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Free novel manuscript analysis and editing helper. Find repeated English words, long lines, dialogue-line rati"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://manuscript.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://manuscript.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://manuscript.abreda.com/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 637 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 74 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 223 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3320 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        },
+        {
+          "check": "script_en_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3422 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "novel-planner",
+      "name": "웹소설 연재 설계실 | 회차·복선·인물 관리",
+      "url": "https://novel.abreda.com/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "웹소설 연재 설계실 | 복선·회차·인물 관리"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "웹소설 회차별 사건과 복선의 심기·회수, 인물 등장 회차를 한 화면에서 관리하고 JSON으로 백업하는 무료 연재 설계 도구."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://novel.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://novel.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://novel.abreda.com/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Web Novel Plot Planner | Track Chapters, Foreshadowing & Characters"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Free web novel plot planner: organize chapters, track foreshadowing and payoffs, and manage character appearan"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://novel.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://novel.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://novel.abreda.com/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 621 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 69 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 213 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3456 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        },
+        {
+          "check": "script_en_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3494 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "sneaker-condition-lab",
+      "name": "스니커즈 중고 상태 검수",
+      "url": "https://tb-sneaker-condition-lab.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
+      "slug": "srt-sdh-cleaner",
+      "name": "srt sdh cleaner | Small Toolbox",
+      "url": "https://tb-pages-srt-sdh-cleaner.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "SRT 효과음 제거기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "SRT 자막에서 효과음·화자 표시와 불필요한 태그를 정리하세요. 결과를 확인하고 자막 텍스트를 다운로드할 수 있으며 입력 내용은 브라우저에서 처리됩니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "SRT SDH Cleaner | 작은도구함"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Remove sound cues and speaker labels from SRT subtitles"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 529 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 87 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 330 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 3"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "stl-print-check",
+      "name": "3D 프린팅 출력 사전 점검",
+      "url": "https://tb-stl-print-check.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
+      "slug": "subtitle-sync-studio",
+      "name": "자막 싱크 조정기 | SRT VTT 변환·자막 시간 오류 검사",
+      "url": "https://tb-subtitle-sync-studio.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "자막 싱크 조정 · SRT VTT 변환 및 자막 오류 검사 | 무료 온라인 자막 편집기"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "SRT·VTT 자막 파일의 시간 싱크를 초 단위로 이동하고 FPS를 변환하세요. 겹친 자막·시간 오류 검사와 텍스트 교체까지, 파일 업로드 없이 브라우저에서 처리합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Free Subtitle Sync & SRT VTT Converter | Fix Subtitle Timing Online"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Shift subtitle timing, convert SRT to VTT or VTT to SRT, adjust for frame rates, find overlaps and empty cues."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 461 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 106 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 545 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 6"
+        },
+        {
+          "check": "script_subtitle-core.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3730 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 6501 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        },
+        {
+          "check": "script_subtitle-core.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3730 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 6501 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "toolbox-admin",
+      "name": "작은 도구함 통합 관리자 v1.2",
+      "url": "https://tb-toolbox-admin.pages.dev/",
+      "type": "internal",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "admin_access_protection",
+          "status": "pass",
+          "detail": "Cloudflare Access login challenge"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "toolbox-hub",
+      "name": "작은 도구함 | 무료 업무·창작·일상 웹 도구 모음",
+      "url": "https://abreda.com/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "CSV 파일 병합과 중복 제거, 웹소설 회차·복선 관리, 원고 반복 표현 검사, 하루 루틴 관리까지. 설치 없이 바로 사용하는 무료 웹 도구 모음."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Small Toolbox — Free practical web tools for data, writing & daily life"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Find free browser tools for CSV merging, manuscript revision, web novel planning, and daily habit tracking. Se"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 533 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 145 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 512 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 8"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 915 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 915 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        },
+        {
+          "check": "text_feed.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 8946 bytes"
+        },
+        {
+          "check": "rss_feed.xml",
+          "status": "pass",
+          "detail": "21 valid RSS entries"
+        },
+        {
+          "check": "text_en_feed.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 8311 bytes"
+        },
+        {
+          "check": "rss_en_feed.xml",
+          "status": "pass",
+          "detail": "21 valid RSS entries"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "used-car-inspection",
+      "name": "중고차 구매 전 검수실",
+      "url": "https://tb-used-car-inspection.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
+      "slug": "vinyl-condition-lab",
+      "name": "LP 레코드 상태 검수",
+      "url": "https://tb-vinyl-condition-lab.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
+      "slug": "vtt-cleaner",
+      "name": "vtt cleaner | Small Toolbox",
+      "url": "https://tb-pages-vtt-cleaner.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "VTT 시간·화자 제거기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "VTT 자막의 시간 표시와 화자 태그를 제거해 읽기 편한 텍스트로 정리하세요. 브라우저에서 처리한 결과를 복사하거나 파일로 내려받을 수 있습니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/en/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "VTT Timestamp Remover | 작은도구함"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Remove timestamps and speaker tags from VTT subtitles"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/en/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 525 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 83 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 318 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 3"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "watch-inspection-lab",
+      "name": "명품시계 외관 검수",
+      "url": "https://tb-watch-inspection-lab.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    }
+  ],
   "browserChecks": [],
   "issues": [
     {
-      "scope": "source",
-      "details": "Repository unit/regression checks failed."
+      "scope": "aquarium-water-lab",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "monitor",
-      "details": "Could not produce a live site report."
+      "scope": "aquarium-water-lab",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "aquarium-water-lab",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "aquarium-water-lab",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "aquarium-water-lab",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "camera-lens-check",
+      "details": "meta_description_ko: 렌즈 외관과 AF, 조리개, 촬영 테스트 결과를 기록합니다"
+    },
+    {
+      "scope": "comic-condition-lab",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "comic-condition-lab",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "comic-condition-lab",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "comic-condition-lab",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "comic-condition-lab",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "keyboard-switch-diagnostics",
+      "details": "meta_description_ko: 키 입력을 시각화하고 반복 입력 기록을 생성하는 브라우저 키보드 검사 도구"
+    },
+    {
+      "scope": "sneaker-condition-lab",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "sneaker-condition-lab",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "sneaker-condition-lab",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "sneaker-condition-lab",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "sneaker-condition-lab",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "stl-print-check",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "stl-print-check",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "stl-print-check",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "stl-print-check",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "stl-print-check",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "used-car-inspection",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "used-car-inspection",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "used-car-inspection",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "used-car-inspection",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "used-car-inspection",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "vinyl-condition-lab",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "vinyl-condition-lab",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "vinyl-condition-lab",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "vinyl-condition-lab",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "vinyl-condition-lab",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "watch-inspection-lab",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "watch-inspection-lab",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "watch-inspection-lab",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "watch-inspection-lab",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "watch-inspection-lab",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
       "scope": "browser",
