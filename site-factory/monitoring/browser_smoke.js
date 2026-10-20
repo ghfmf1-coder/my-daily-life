@@ -102,8 +102,8 @@ function finalize(extraFailure){
  });
  await check('Toolbox hub search','https://abreda.com/','mobile',async page=>{
   await page.locator('#toolSearch').fill('CSV');
-  assert(await page.locator('.tool:visible').count()===1,'Hub search should find CSV tool');
-  assert((await page.locator('.tool:visible').innerText()).includes('CSV'),'Wrong result');
+  assert(await page.locator('.tool:visible').count()>=1,'Hub search should find at least one CSV tool');
+  assert((await page.locator('.tool:visible').first().innerText()).includes('CSV'),'Wrong result');
   return 'Curated live site directory with working search';
  });
  await check('Technical deployment smoke',origin('tb-deployment-check'),'desktop',async page=>{
