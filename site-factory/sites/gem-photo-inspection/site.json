@@ -1,0 +1,11 @@
+{
+  "slug": "gem-photo-inspection",
+  "project": "tb-gem-photo-inspection",
+  "title": "보석·원석 외관 검수",
+  "description": "원석 사진과 크기, 관찰된 손상 및 촬영 조건을 기록하는 비공식 검수 도구입니다.",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
