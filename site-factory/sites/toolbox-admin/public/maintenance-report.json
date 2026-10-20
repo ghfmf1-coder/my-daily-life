@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T04:13:05+00:00",
+  "checkedAt": "2026-10-20T04:13:49+00:00",
   "status": "fail",
   "summary": {
     "sites": 13,
-    "sitePassed": 10,
+    "sitePassed": 11,
     "siteWarnings": 0,
-    "siteFailed": 3,
+    "siteFailed": 2,
     "browserPassed": 0,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 14
+    "issues": 10
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 140ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -199,12 +199,12 @@
       "name": "csv column extractor | Small Toolbox",
       "url": "https://tb-pages-csv-column-extractor.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -213,8 +213,8 @@
         },
         {
           "check": "meta_description_ko",
-          "status": "fail",
-          "detail": "CSV 파일에서 필요한 열만 선택하여 다운로드"
+          "status": "pass",
+          "detail": "CSV 파일에서 필요한 열만 선택해 추출하고 새 CSV로 다운로드하세요. 헤더를 확인해 열을 고르고 결과를 미리 볼 수 있으며 파일은 브라우저에서 처리됩니다."
         },
         {
           "check": "html_lang_ko",
@@ -228,13 +228,13 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-csv-column-extractor.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-csv-column-extractor.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -273,8 +273,8 @@
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-csv-column-extractor.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-csv-column-extractor.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
@@ -313,12 +313,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "meta_description_ko: CSV 파일에서 필요한 열만 선택하여 다운로드",
-        "canonical_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/",
-        "hreflang_ko_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/",
-        "hreflang_en_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/"
-      ]
+      "failures": []
     },
     {
       "slug": "csv-empty-row-remover",
@@ -330,7 +325,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 146ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -370,7 +365,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 174ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -451,7 +446,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 228ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 183ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -491,7 +486,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 196ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -602,7 +597,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -673,7 +668,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -713,7 +708,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -800,7 +795,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 184ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 222ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -840,7 +835,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 160ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -941,7 +936,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 213ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 292ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -981,7 +976,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 162ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1082,7 +1077,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 162ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1122,7 +1117,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1208,7 +1203,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1248,7 +1243,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1375,7 +1370,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 217ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1415,7 +1410,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 170ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 139ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1536,7 +1531,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 210ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 124ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1576,7 +1571,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 153ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1650,22 +1645,6 @@
   ],
   "browserChecks": [],
   "issues": [
-    {
-      "scope": "csv-column-extractor",
-      "details": "meta_description_ko: CSV 파일에서 필요한 열만 선택하여 다운로드"
-    },
-    {
-      "scope": "csv-column-extractor",
-      "details": "canonical_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/"
-    },
-    {
-      "scope": "csv-column-extractor",
-      "details": "hreflang_ko_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/"
-    },
-    {
-      "scope": "csv-column-extractor",
-      "details": "hreflang_en_ko: https://tb-pages-csv-column-extractor.pages.dev/ko/"
-    },
     {
       "scope": "jsonl-validator",
       "details": "meta_description_ko: JSONL 파일에서 JSON 오류 행 번호 확인"
