@@ -7,5 +7,7 @@
   "locales": [
     "ko",
     "en"
-  ]
+  ],
+  "domain": "aquarium-water-lab.abreda.com",
+  "canonical_url": "https://aquarium-water-lab.abreda.com/"
 }
