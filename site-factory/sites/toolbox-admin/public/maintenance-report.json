@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T04:13:49+00:00",
+  "checkedAt": "2026-10-20T04:15:47+00:00",
   "status": "fail",
   "summary": {
     "sites": 13,
-    "sitePassed": 11,
+    "sitePassed": 13,
     "siteWarnings": 0,
-    "siteFailed": 2,
+    "siteFailed": 0,
     "browserPassed": 0,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 10
+    "issues": 1
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 140ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -325,7 +325,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -365,7 +365,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 174ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -446,7 +446,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 183ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 185ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -486,7 +486,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 196ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -597,7 +597,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 223ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -663,12 +663,12 @@
       "name": "jsonl validator | Small Toolbox",
       "url": "https://tb-pages-jsonl-validator.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 207ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -677,8 +677,8 @@
         },
         {
           "check": "meta_description_ko",
-          "status": "fail",
-          "detail": "JSONL 파일에서 JSON 오류 행 번호 확인"
+          "status": "pass",
+          "detail": "JSONL 파일을 검사해 잘못된 JSON 행 번호와 오류 내용을 확인하세요. 줄 단위 검증 결과를 브라우저에서 바로 확인할 수 있으며 파일은 서버로 전송하지 않습니다."
         },
         {
           "check": "html_lang_ko",
@@ -692,13 +692,13 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-jsonl-validator.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-jsonl-validator.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
@@ -708,7 +708,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -717,8 +717,8 @@
         },
         {
           "check": "meta_description_en",
-          "status": "fail",
-          "detail": "Find invalid JSONL lines and error details"
+          "status": "pass",
+          "detail": "Validate JSONL files line by line, identify invalid JSON with line numbers and error details, and review resul"
         },
         {
           "check": "html_lang_en",
@@ -737,8 +737,8 @@
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-jsonl-validator.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-jsonl-validator.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
@@ -777,13 +777,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "meta_description_ko: JSONL 파일에서 JSON 오류 행 번호 확인",
-        "canonical_ko: https://tb-pages-jsonl-validator.pages.dev/ko/",
-        "hreflang_ko_ko: https://tb-pages-jsonl-validator.pages.dev/ko/",
-        "meta_description_en: Find invalid JSONL lines and error details",
-        "hreflang_en_ko: https://tb-pages-jsonl-validator.pages.dev/ko/"
-      ]
+      "failures": []
     },
     {
       "slug": "manuscript-lens",
@@ -795,7 +789,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 222ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 191ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -835,7 +829,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 160ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -936,7 +930,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 292ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 401ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -976,7 +970,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1072,12 +1066,12 @@
       "name": "srt sdh cleaner | Small Toolbox",
       "url": "https://tb-pages-srt-sdh-cleaner.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 123ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1086,8 +1080,8 @@
         },
         {
           "check": "meta_description_ko",
-          "status": "fail",
-          "detail": "SRT 자막에서 효과음과 화자 표기를 정리"
+          "status": "pass",
+          "detail": "SRT 자막에서 효과음·화자 표시와 불필요한 태그를 정리하세요. 결과를 확인하고 자막 텍스트를 다운로드할 수 있으며 입력 내용은 브라우저에서 처리됩니다."
         },
         {
           "check": "html_lang_ko",
@@ -1101,13 +1095,13 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
@@ -1117,7 +1111,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 190ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1146,8 +1140,8 @@
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-srt-sdh-cleaner.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
@@ -1186,12 +1180,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "meta_description_ko: SRT 자막에서 효과음과 화자 표기를 정리",
-        "canonical_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/",
-        "hreflang_ko_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/",
-        "hreflang_en_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
-      ]
+      "failures": []
     },
     {
       "slug": "subtitle-sync-studio",
@@ -1203,7 +1192,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1243,7 +1232,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1370,7 +1359,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 217ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 165ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1410,7 +1399,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 139ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1531,7 +1520,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 124ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1571,7 +1560,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 153ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1645,42 +1634,6 @@
   ],
   "browserChecks": [],
   "issues": [
-    {
-      "scope": "jsonl-validator",
-      "details": "meta_description_ko: JSONL 파일에서 JSON 오류 행 번호 확인"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "canonical_ko: https://tb-pages-jsonl-validator.pages.dev/ko/"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "hreflang_ko_ko: https://tb-pages-jsonl-validator.pages.dev/ko/"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "meta_description_en: Find invalid JSONL lines and error details"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "hreflang_en_ko: https://tb-pages-jsonl-validator.pages.dev/ko/"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "meta_description_ko: SRT 자막에서 효과음과 화자 표기를 정리"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "canonical_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "hreflang_ko_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "hreflang_en_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
-    },
     {
       "scope": "browser",
       "details": "Could not produce a browser smoke report."
