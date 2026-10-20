@@ -7,5 +7,7 @@
   "locales": [
     "ko",
     "en"
-  ]
+  ],
+  "domain": "stl-print-check.abreda.com",
+  "canonical_url": "https://stl-print-check.abreda.com/"
 }
