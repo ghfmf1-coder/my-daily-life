@@ -17,22 +17,44 @@ function authenticate(request,env,admin=false){
   }
   return null;
 }
-async function budget(env,site,provider){
+// KST calendar-day window; next reset is midnight Asia/Seoul.
+function quotaWindow(now=Date.now()){
+  const shifted=now+9*60*60*1000;
+  const day=new Date(shifted).toISOString().slice(0,10);
+  const resetAt=new Date((Math.floor(shifted/86400000)+1)*86400000-9*3600000).toISOString();
+  return {day,resetAt};
+}
+async function visitorHash(request,env,day){
+  const ip=request.headers.get('CF-Connecting-IP');
+  if(!ip||!env.VISITOR_HASH_SECRET)throw Error('Visitor identification unavailable');
+  const key=await crypto.subtle.importKey('raw',new TextEncoder().encode(env.VISITOR_HASH_SECRET),'HMAC',false,['sign']);
+  const signed=await crypto.subtle.sign('HMAC',key,new TextEncoder().encode(day+':'+ip));
+  return Array.from(new Uint8Array(signed)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+async function budget(request,env,site,provider){
   if(!env.USAGE)throw Error('Usage KV is not configured');
-  const day=new Date().toISOString().slice(0,10);
-  const key='usage:'+day+':'+site+':'+provider;
-  const max=Math.min(Math.max(Number(env.DAILY_SITE_LIMIT)||20,1),1000);
-  const count=Number(await env.USAGE.get(key)||0);
-  if(count>=max)return {ok:false,count,max};
-  // KV counters are best-effort and not atomic. Strict paid quotas require Durable Objects.
-  await env.USAGE.put(key,String(count+1),{expirationTtl:172800});
-  return {ok:true,count:count+1,max};
+  const {day,resetAt}=quotaWindow();
+  const visitor=await visitorHash(request,env,day);
+  const visitorLimit=Math.min(Math.max(Number(env.DAILY_VISITOR_LIMIT)||5,1),100);
+  const siteLimit=Math.min(Math.max(Number(env.DAILY_SITE_LIMIT)||100,1),10000);
+  const userKey='visitor:'+day+':'+site+':'+provider+':'+visitor;
+  const siteKey='usage:'+day+':'+site+':'+provider;
+  const [used,siteUsed]=await Promise.all([env.USAGE.get(userKey),env.USAGE.get(siteKey)]);
+  const count=Number(used||0),total=Number(siteUsed||0);
+  if(count>=visitorLimit)return {ok:false,reason:'daily_limit_reached',count,limit:visitorLimit,resetAt};
+  if(total>=siteLimit)return {ok:false,reason:'site_capacity_reached',count,limit:visitorLimit,resetAt};
+  // Best-effort KV counters; not atomic under concurrency. Paid providers remain disabled.
+  await Promise.all([
+    env.USAGE.put(userKey,String(count+1),{expirationTtl:172800}),
+    env.USAGE.put(siteKey,String(total+1),{expirationTtl:172800})
+  ]);
+  return {ok:true,count:count+1,limit:visitorLimit,resetAt};
 }
 export default {async fetch(request,env){
   const url=new URL(request.url);
   if(!allowedOrigin(request,env))return json({error:'origin_not_allowed'},403);
   if(request.method==='OPTIONS')return new Response(null,{status:204,headers:{...corsHeaders(request,env),'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'authorization, content-type','access-control-max-age':'600'}});
-  if(request.method==='GET'&&url.pathname==='/health')return json({status:'ok',provider_calls_enabled:env.ENABLE_PROVIDER_CALLS==='true',quota_mode:'kv_best_effort'});
+  if(request.method==='GET'&&url.pathname==='/health')return json({status:'ok',provider_calls_enabled:env.ENABLE_PROVIDER_CALLS==='true',quota_mode:'daily_kst_kv_best_effort'});
   if(request.method==='GET'&&url.pathname==='/admin/providers'){
     if(!authenticate(request,env,true))return json({error:'unauthorized'},401);
     return json({providers:providers.providers.map(({id,name,status,category,last_verified,live_test})=>({id,name,status,category,last_verified,live_test}))});
@@ -58,8 +80,8 @@ export default {async fetch(request,env){
   // Explicit adapter allowlist: never accept arbitrary URLs or provider paths from callers.
   if(provider.id!=='usda-fooddata')return json({error:'adapter_unavailable'},503);
   if(!env.USDA_API_KEY)return json({error:'provider_secret_missing'},503);
-  let quota;try{quota=await budget(env,caller.id,provider.id)}catch{return json({error:'quota_unavailable'},503)}
-  if(!quota.ok)return json({error:'upgrade_required',message:'무료 사용량을 모두 사용했어요. 유료 이용권을 확인하거나 내일 다시 이용할 수 있어요.',upgrade_url:env.UPGRADE_URL||null,reset:'next_utc_day'},429);
+  let quota;try{quota=await budget(request,env,caller.id,provider.id)}catch{return json({error:'quota_unavailable'},503)}
+  if(!quota.ok)return json({error:quota.reason,message:quota.reason==='daily_limit_reached'?'오늘 무료 이용 횟수를 모두 사용했어요. 내일 오전 0시부터 다시 이용할 수 있어요.':'현재 무료 API 제공량이 소진됐어요. 내일 다시 이용해 주세요.',used:quota.count,limit:quota.limit,reset_at:quota.resetAt},429);
   const upstream=new URL('https://api.nal.usda.gov/fdc/v1/foods/search');
   upstream.searchParams.set('api_key',env.USDA_API_KEY);
   let response;try{
@@ -67,5 +89,5 @@ export default {async fetch(request,env){
   }catch{return json({error:'provider_unavailable'},502)}
   if(!response.ok)return json({error:'provider_temporarily_unavailable',retryable:[429,500,502,503,504].includes(response.status)},502);
   const result=await response.json();
-  return json({provider:provider.id,foods:(result.foods||[]).slice(0,5).map(x=>({description:x.description,fdcId:x.fdcId,brandOwner:x.brandOwner||null})),usage:quota.count,limit:quota.max});
+  return json({provider:provider.id,foods:(result.foods||[]).slice(0,5).map(x=>({description:x.description,fdcId:x.fdcId,brandOwner:x.brandOwner||null})),usage:quota.count,limit:quota.limit,reset_at:quota.resetAt});
 }};
