@@ -23,3 +23,11 @@ No API has been activated or verified. This is a safe deployable foundation, not
 6. Deploy the Worker only after owner approval. Test unauthorized access, quota exhaustion, CORS, provider timeouts, and no-secret logging.
 
 **Limitations:** KV usage counters are non-atomic, so this gateway is not production-ready for paid provider calls. API requests are not yet tied to a verified user account or purchase. The browser admin cannot safely carry ADMIN_TOKEN. No payment processor has been integrated or approved.
+
+## Free usage policy (implemented, not deployed)
+- Each visitor gets 5 API lookups per site/provider per calendar day in Asia/Seoul; resets at 00:00 KST. DAILY_VISITOR_LIMIT can change the allowance.
+- Site-level emergency budget defaults to 100 requests/day/provider; this is a safety threshold, not a guaranteed hard cap.
+- Visitors are distinguished by a daily-rotating HMAC of Cloudflare's connecting IP using server-side VISITOR_HASH_SECRET. Raw IPs are not stored in KV. Shared IPs (offices, carriers, NAT) can share a quota; this is not an authenticated per-person quota.
+- 429 responses include remaining reset timestamp and an explanation; no payment prompts or checkout.
+- KV counters are eventually consistent and non-atomic; simultaneous calls can exceed a limit. Do not activate paid APIs without atomic quotas and billing controls.
+- Client browsers must never receive SITE_TOKENS_JSON or ADMIN_TOKEN. An authenticated server-side mediator is required for public sites.
