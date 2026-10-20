@@ -166,6 +166,15 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     if out.exists():
         shutil.rmtree(out)
     shutil.copytree(src, out)
+    if slug == 'toolbox-admin':
+        # Publish only non-secret API inventory metadata inside authenticated admin app.
+        registry = ROOT / 'api-registry' / 'providers.json'
+        from importlib.util import spec_from_file_location, module_from_spec
+        spec = spec_from_file_location('api_registry_validation', ROOT / 'api-registry' / 'validate.py')
+        module = module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.validate(registry)
+        shutil.copy2(registry, out / 'api-providers.json')
     canonical = (data.get('canonical_url') or f"https://{data['project']}.pages.dev").rstrip('/')
     # AUTO_HUB_CATALOG: genuine human-useful navigation, server-rendered for
     # people and crawlers; no thin keyword pages, hidden content or fake links.
