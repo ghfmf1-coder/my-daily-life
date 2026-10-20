@@ -225,6 +225,10 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 # but are deliberately not displayed in the visual catalogue.
                 # Each tool gets its own illustration: subject-specific, no shared generic icon.
                 artwork={
+                  'manuscript-quality-lab':('<path d="M37 18h65l21 22v66H37z" fill="#fff" stroke="#536ea5" stroke-width="3"/><path d="M102 18v22h21M49 54h60M49 67h42M49 80h34" fill="none" stroke="#9bb0d3" stroke-width="3"/><path d="m91 87 9 10 19-23" fill="none" stroke="#d38b3d" stroke-width="6"/>'),
+                  'camera-lens-inspector':('<circle cx="80" cy="62" r="43" fill="#25374d" stroke="#6384a6" stroke-width="5"/><circle cx="80" cy="62" r="29" fill="#466f91" stroke="#d0e2ef" stroke-width="4"/><path d="M64 37 95 85M53 68l54-15M66 86l26-49" stroke="#94c8dd" stroke-width="5"/><circle cx="80" cy="62" r="11" fill="#172e47"/><path d="m114 94 16 16" stroke="#dba35a" stroke-width="8" stroke-linecap="round"/>'),
+                  'trading-card-psa-analyzer':('<rect x="39" y="13" width="82" height="102" rx="8" fill="#fff" stroke="#8b72bb" stroke-width="4"/><rect x="48" y="23" width="64" height="18" rx="3" fill="#dc5a63"/><text x="60" y="36" font-size="13" font-weight="bold" fill="#fff">PSA</text><path d="m80 47 23 14-9 30H66l-9-30z" fill="#d8b8f0" stroke="#8b72bb" stroke-width="3"/><path d="m80 52 6 14 14 1-11 9 3 13-12-7-12 7 3-13-11-9 14-1z" fill="#f0b949"/>'),
+                  'comic-condition-inspector':('<path d="M30 24h92v82H30z" fill="#fff" stroke="#4f8a9d" stroke-width="4"/><path d="M39 33h35v32H39zM81 33h32v32H81zM39 71h74v26H39z" fill="#a9e0e6" stroke="#3d899d" stroke-width="2"/><path d="m47 55 10-12 8 8m24 6 8-14 9 8" fill="none" stroke="#28667c" stroke-width="3"/><path d="m117 92 12 13" stroke="#e59a49" stroke-width="7"/><circle cx="110" cy="84" r="15" fill="none" stroke="#e59a49" stroke-width="5"/>'),
                   'my-daily-life':('<rect x="30" y="22" width="100" height="82" rx="12" fill="#fff" stroke="#5d91d9" stroke-width="3"/><path d="M30 43h100" stroke="#5d91d9" stroke-width="3"/><path d="M53 22v14m54-14v14" stroke="#275eb7" stroke-width="5"/><path d="m46 62 8 8 14-18m8 12 7 7 14-18" fill="none" stroke="#19ad83" stroke-width="5" stroke-linecap="round"/><circle cx="110" cy="84" r="10" fill="#ffe3a2"/>'),
                   'csv-column-extractor':('<rect x="22" y="23" width="116" height="80" rx="8" fill="#fff" stroke="#5385ca" stroke-width="3"/><path d="M22 44h116M60 23v80M99 23v80M22 65h116M22 84h116" stroke="#a3bfe9" stroke-width="2"/><rect x="61" y="45" width="37" height="57" fill="#ffdc78" opacity=".9"/><path d="m82 80 12 14 4-9 11-3z" fill="#2d69e0" stroke="#fff" stroke-width="2"/>'),
                   'csv-empty-row-remover':('<rect x="18" y="22" width="85" height="81" rx="8" fill="#fff" stroke="#4eae94" stroke-width="3"/><path d="M18 43h85M18 65h85M50 22v81" stroke="#9ad4c2" stroke-width="3"/><path d="M65 54h21" stroke="#ef7676" stroke-width="5"/><path d="m111 48 15 16-15 16" stroke="#1db98a" stroke-width="5" fill="none"/><rect x="124" y="41" width="23" height="44" rx="5" fill="#ddf8ef" stroke="#39ad89" stroke-width="2"/>'),
@@ -245,7 +249,9 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 elif 'novel' in slug or 'manuscript' in slug:
                     motif='<path d="M24 30q26-9 56 9v62q-30-18-56-9zm56 9q30-18 56-9v62q-26-9-56 9z" fill="#fff2dc" stroke="#b48b5a" stroke-width="3"/>'
                 else:
-                    motif='<rect x="28" y="24" width="104" height="79" rx="12" fill="#fff" stroke="#78a5ca" stroke-width="3"/><circle cx="80" cy="64" r="23" fill="#dff4ec" stroke="#39b39a" stroke-width="4"/><path d="m70 64 8 8 15-18" fill="none" stroke="#248f79" stroke-width="5"/>'
+                    # Never silently reuse a generic checkmark for unrelated tools.
+                    # An unillustrated site is a build error until unique artwork exists.
+                    raise SiteError('toolbox-hub: missing unique card artwork for '+slug)
                 visual='<div class="tool-art" aria-hidden="true"><svg viewBox="0 0 160 124" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg">'+motif+'</svg></div>'
                 blocks.append(
                     '<article class="tool" data-category="'+escape(category,quote=True)+'" data-search="'+
