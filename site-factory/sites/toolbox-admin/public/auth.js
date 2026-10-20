@@ -119,7 +119,7 @@ async function authenticate(){
     // Existing browser data is preserved and uploaded after the manager initializes.
     if(local&&typeof local==='object')await enqueue(local);
   }
-  window.TOOLBOX_CLOUD=Object.freeze({googleAds:googleAdsApi,save:enqueue,readMetrics:async()=>{const ws=await readWorkspace();if(ws)remoteVersion=Number(ws.version)||remoteVersion;return Array.isArray(ws?.payload?.metrics)?ws.payload.metrics:[];}});
+  window.TOOLBOX_CLOUD=Object.freeze({googleAds:googleAdsApi,save:enqueue,readClassifiedTraffic:async(days=7)=>{const auth=await token();const data=await call('/rest/v1/rpc/toolbox_traffic_classified_summary',{method:'POST',token:auth,body:{p_days:days}});return Array.isArray(data)?data:[];},readMetrics:async()=>{const ws=await readWorkspace();if(ws)remoteVersion=Number(ws.version)||remoteVersion;return Array.isArray(ws?.payload?.metrics)?ws.payload.metrics:[];}});
   gate.hidden=true;shell.style.display='flex';signout.hidden=false;
   if(!booted){
     booted=true;
