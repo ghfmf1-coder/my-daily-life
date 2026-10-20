@@ -3,8 +3,24 @@ from __future__ import annotations
 import hashlib
 from html import escape
 
+
+# Subject-specific original vector marks for the specialist tools.
+SPECIALIST_MARKS = {
+ 'card-grading-lab': ('#174e78','<rect x="17" y="11" width="30" height="42" rx="4" fill="white"/><rect x="22" y="17" width="20" height="30" rx="2" fill="#cceaf5"/><path d="M22 25h20M22 39h20" stroke="#174e78" stroke-width="2"/>'),
+ 'watch-inspection-lab': ('#564283','<circle cx="32" cy="32" r="21" fill="#f4eaff"/><circle cx="32" cy="32" r="15" fill="none" stroke="#564283" stroke-width="3"/><path d="M32 20v13l8 6" stroke="#564283" stroke-width="4" stroke-linecap="round" fill="none"/>'),
+ 'stl-print-check': ('#1c6581','<path d="m32 10 20 12v23L32 56 12 45V22z" fill="#e0f6ff" stroke="#9bdef2" stroke-width="2"/><path d="M12 22 32 34 52 22M32 34v22" fill="none" stroke="#1c6581" stroke-width="3"/>'),
+ 'sneaker-condition-lab': ('#98502f','<path d="M10 37q11 0 18-14l10 11 13 4q5 3 4 11H10z" fill="#fff3e3"/><path d="M10 45h45M28 31l8 4M25 36l7 3" stroke="#98502f" stroke-width="3" stroke-linecap="round"/>'),
+ 'aquarium-water-lab': ('#087b86','<path d="M10 17h44v32H10z" fill="#d8f9ff"/><path d="M10 39q11-5 22 0t22 0" stroke="#39a8cc" stroke-width="3" fill="none"/><path d="m18 30 12-8 12 8-12 8z" fill="#087b86"/><circle cx="36" cy="29" r="2" fill="white"/>'),
+ 'used-car-inspection': ('#37598c','<path d="m15 34 6-13h22l6 13 5 3v13H10V37z" fill="#e5f0ff"/><path d="M18 34h28l-5-9H23z" fill="#8fb6e5"/><circle cx="20" cy="49" r="5" fill="#162b49"/><circle cx="44" cy="49" r="5" fill="#162b49"/>'),
+ 'vinyl-condition-lab': ('#61417e','<circle cx="32" cy="32" r="23" fill="#171627" stroke="#e7d8fc" stroke-width="2"/><circle cx="32" cy="32" r="12" fill="#bc87e8"/><circle cx="32" cy="32" r="4" fill="#171627"/><path d="M13 25a20 20 0 0 1 13-12" stroke="#837d97" fill="none"/>'),
+ 'gem-photo-inspection': ('#8b3e73','<path d="M18 14h28l12 16-26 27L6 30z" fill="#ffd4f2"/><path d="M6 30h52M18 14l8 16 6 27 7-27 7-16" stroke="#8b3e73" stroke-width="2.5" fill="none"/>'),
+ 'comic-condition-lab': ('#b74b3e','<path d="M12 13h40v39H12z" fill="#fff0e3"/><path d="m16 16 31 31M45 16 17 45" stroke="#e7bfa7" stroke-width="2"/><path d="m20 31 12-13 12 13-12 14z" fill="#b74b3e"/><path d="M32 20v22" stroke="white" stroke-width="3"/>'),
+ 'camera-lens-check': ('#286f6b','<rect x="8" y="21" width="48" height="34" rx="7" fill="#e4fff8"/><path d="M18 21l5-8h18l5 8" fill="#b3eadf"/><circle cx="32" cy="38" r="13" fill="#286f6b"/><circle cx="32" cy="38" r="7" fill="#b9ece6"/><circle cx="32" cy="38" r="3" fill="#286f6b"/>'),
+ 'keyboard-switch-diagnostics': ('#556d2b','<rect x="8" y="18" width="48" height="31" rx="6" fill="#f1ffd5"/><path d="M15 27h6m5 0h6m5 0h6m5 0h2M15 35h6m5 0h6m5 0h6m5 0h2M21 43h22" stroke="#556d2b" stroke-width="4" stroke-linecap="round"/>'),
+}
+
 def render_icon(title: str, slug: str) -> str:
-    digest=hashlib.sha256((slug+':'+title).encode('utf-8')).digest()
+    if slug in SPECIALIST_MARKS:\n        bg, symbol = SPECIALIST_MARKS[slug]\n        return '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><title>'+escape(title)+'</title><rect width="64" height="64" rx="14" fill="'+bg+'"/>'+symbol+'</svg>\\n'\n    digest=hashlib.sha256((slug+':'+title).encode('utf-8')).digest()
     palette=('#185ce5','#008775','#643cc8','#ae513b','#0a779e','#34557d')
     bg=palette[digest[0] % len(palette)]
     low=title.lower()+' '+slug.lower()
@@ -29,7 +45,7 @@ def render_ico(title: str, slug: str) -> bytes:
     size=64
     pixels=bytearray(size*size*4)
     low=(title+' '+slug).lower()
-    if any(x in low for x in ('csv','파일','엑셀','sheet','merge')):
+    if slug in SPECIALIST_MARKS:\n        color=tuple(int(SPECIALIST_MARKS[slug][0][i:i+2],16) for i in (1,3,5));theme='specialist'\n    elif any(x in low for x in ('csv','파일','엑셀','sheet','merge')):
         color=(6,122,87);theme='csv'
     elif any(x in low for x in ('원고','문장','manuscript','proofread')):
         color=(6,111,156);theme='lens'
@@ -58,7 +74,7 @@ def render_ico(title: str, slug: str) -> bytes:
             disc(x,y,max(1,width//2),c)
     rect(0,0,size,size,color)
     white=(255,255,255);shade=(182,218,244);accent=(30,112,232)
-    if theme=='day':
+    if theme=='specialist':\n        # Distinct compact glyphs remain legible at 16px tab size.\n        n=list(SPECIALIST_MARKS).index(slug)\n        if n in (0,7,8):\n            rect(16,11,48,53,white);rect(22,18,42,46,shade)\n            if n==7:\n                line(22,20,42,41,color,4);line(42,20,22,41,color,4)\n            elif n==8:\n                line(23,26,41,26,color,4);line(23,36,41,36,color,4)\n            else:\n                rect(25,22,39,41,color)\n        elif n in (1,6,9):\n            disc(32,32,22,white);disc(32,32,15,color);disc(32,32,9,shade)\n            if n==1:line(32,32,32,22,white,3);line(32,32,41,37,white,3)\n            elif n==6:disc(32,32,3,white)\n            else:disc(32,32,5,color)\n        elif n in (2,3,4,5,10):\n            rect(9,18,55,49,white)\n            if n==10:\n                for y in (27,36):\n                    for x in (17,29,41):rect(x,y,x+7,y+5,color)\n            elif n==4:\n                disc(31,33,12,color);disc(36,29,3,white)\n            elif n==5:\n                rect(17,25,47,37,shade);disc(20,48,5,color);disc(44,48,5,color)\n            elif n==3:\n                line(15,41,49,41,color,5);line(23,38,34,27,color,5)\n            else:\n                line(16,27,32,38,color,4);line(32,38,48,27,color,4);line(32,38,32,48,color,4)\n    elif theme=='day':
         rect(12,16,52,52,white);rect(12,16,52,27,shade)
         line(22,11,22,21,white,4);line(42,11,42,21,white,4)
         rect(21,31,43,46,accent);line(26,38,31,42,white,4);line(31,42,39,33,white,4)
