@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T05:04:00+00:00",
+  "checkedAt": "2026-10-20T05:06:42+00:00",
   "status": "fail",
   "summary": {
     "sites": 24,
@@ -10,7 +10,7 @@
     "browserPassed": 0,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 38
+    "issues": 30
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -197,7 +197,7 @@
     {
       "slug": "aquarium-water-lab",
       "name": "수족관 수질 분석실",
-      "url": "https://tb-aquarium-water-lab.pages.dev/",
+      "url": "https://aquarium-water-lab.abreda.com/",
       "type": "public",
       "status": "fail",
       "checks": [
@@ -253,7 +253,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -293,7 +293,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 193ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -376,7 +376,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -416,7 +416,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -461,7 +461,7 @@
         {
           "check": "svg_favicon.svg",
           "status": "pass",
-          "detail": "HTTP 200, 583 bytes"
+          "detail": "HTTP 200, 436 bytes"
         },
         {
           "check": "text_robots.txt",
@@ -496,44 +496,118 @@
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "코믹북·만화책 상태 검수 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "책등, 표지, 페이지 손상과 누락을 검수하고 보고서를 생성합니다"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/en/"
         },
         {
           "check": "page_en",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Comic Book Condition Lab | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Record spine, cover, page damage and missing pages for comics."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 409 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 85 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 245 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: 책등, 표지, 페이지 손상과 누락을 검수하고 보고서를 생성합니다"
       ]
     },
     {
@@ -546,7 +620,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -586,7 +660,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 50ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -667,7 +741,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -707,7 +781,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 243ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -788,7 +862,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -828,7 +902,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -939,7 +1013,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1010,7 +1084,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1050,7 +1124,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1095,7 +1169,7 @@
         {
           "check": "svg_favicon.svg",
           "status": "pass",
-          "detail": "HTTP 200, 526 bytes"
+          "detail": "HTTP 200, 333 bytes"
         },
         {
           "check": "text_robots.txt",
@@ -1131,7 +1205,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1171,7 +1245,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1252,7 +1326,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1292,7 +1366,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1337,7 +1411,7 @@
         {
           "check": "svg_favicon.svg",
           "status": "pass",
-          "detail": "HTTP 200, 528 bytes"
+          "detail": "HTTP 200, 382 bytes"
         },
         {
           "check": "text_robots.txt",
@@ -1375,7 +1449,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 146ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1415,7 +1489,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1516,7 +1590,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 160ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1556,7 +1630,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1650,7 +1724,7 @@
     {
       "slug": "sneaker-condition-lab",
       "name": "스니커즈 중고 상태 검수",
-      "url": "https://tb-sneaker-condition-lab.pages.dev/",
+      "url": "https://sneaker-condition-lab.abreda.com/",
       "type": "public",
       "status": "fail",
       "checks": [
@@ -1706,7 +1780,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1746,7 +1820,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1820,7 +1894,7 @@
     {
       "slug": "stl-print-check",
       "name": "3D 프린팅 출력 사전 점검",
-      "url": "https://tb-stl-print-check.pages.dev/",
+      "url": "https://stl-print-check.abreda.com/",
       "type": "public",
       "status": "fail",
       "checks": [
@@ -1876,7 +1950,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1916,7 +1990,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2043,7 +2117,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2083,7 +2157,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2197,7 +2271,7 @@
     {
       "slug": "used-car-inspection",
       "name": "중고차 구매 전 검수실",
-      "url": "https://tb-used-car-inspection.pages.dev/",
+      "url": "https://used-car-inspection.abreda.com/",
       "type": "public",
       "status": "fail",
       "checks": [
@@ -2252,44 +2326,118 @@
       "checks": [
         {
           "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 176ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "LP 레코드 상태 검수 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
           "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "detail": "LP 레코드 표면과 재생 상태를 별도로 기록하고 거래용 검수 보고서를 만듭니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/en/"
         },
         {
           "check": "page_en",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Vinyl Record Condition | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Document vinyl surface and playback condition separately for collection and resale."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 422 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 85 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 245 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
+      "warnings": [],
       "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        "meta_description_ko: LP 레코드 표면과 재생 상태를 별도로 기록하고 거래용 검수 보고서를 만듭니다."
       ]
     },
     {
@@ -2302,7 +2450,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2342,7 +2490,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2416,7 +2564,7 @@
     {
       "slug": "watch-inspection-lab",
       "name": "명품시계 외관 검수",
-      "url": "https://tb-watch-inspection-lab.pages.dev/",
+      "url": "https://watch-inspection-lab.abreda.com/",
       "type": "public",
       "status": "fail",
       "checks": [
@@ -2491,23 +2639,7 @@
     },
     {
       "scope": "comic-condition-lab",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_ko: 책등, 표지, 페이지 손상과 누락을 검수하고 보고서를 생성합니다"
     },
     {
       "scope": "keyboard-switch-diagnostics",
@@ -2575,23 +2707,7 @@
     },
     {
       "scope": "vinyl-condition-lab",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "details": "meta_description_ko: LP 레코드 표면과 재생 상태를 별도로 기록하고 거래용 검수 보고서를 만듭니다."
     },
     {
       "scope": "watch-inspection-lab",
