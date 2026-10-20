@@ -1,0 +1,11 @@
+{
+  "slug": "vinyl-condition-lab",
+  "project": "tb-vinyl-condition-lab",
+  "title": "LP 레코드 상태 검수",
+  "description": "LP 레코드 표면과 재생 상태를 별도로 기록하고 거래용 검수 보고서를 만듭니다.",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
