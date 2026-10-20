@@ -1,0 +1,11 @@
+{
+  "slug": "aquarium-water-lab",
+  "project": "tb-aquarium-water-lab",
+  "title": "수족관 수질 분석실",
+  "description": "pH, 수온, 암모니아, 아질산염, 질산염 수치를 기록하고 주의가 필요한 항목을 확인합니다.",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
