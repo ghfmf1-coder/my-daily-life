@@ -1,0 +1,11 @@
+{
+  "slug": "watch-inspection-lab",
+  "project": "tb-watch-inspection-lab",
+  "title": "명품시계 외관 검수",
+  "description": "시계 케이스, 유리, 다이얼, 크라운, 버클과 작동 상태를 기록하는 중고 시계 검수 도구",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
