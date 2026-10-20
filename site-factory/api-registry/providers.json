@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-20",
+  "providers": [
+    {
+      "id": "google-cloud-vision",
+      "name": "Google Cloud Vision",
+      "category": "ocr",
+      "status": "researching",
+      "credentials": "server_secret",
+      "requires_billing": true,
+      "docs": "https://cloud.google.com/vision/docs",
+      "pricing": "https://cloud.google.com/vision/pricing",
+      "commercial_rights": "review_required",
+      "data_storage_rights": "review_required",
+      "last_verified": null,
+      "live_test": null
+    },
+    {
+      "id": "google-document-ai",
+      "name": "Google Document AI",
+      "category": "document_parsing",
+      "status": "researching",
+      "credentials": "server_secret",
+      "requires_billing": true,
+      "docs": "https://cloud.google.com/document-ai/docs",
+      "pricing": "https://cloud.google.com/document-ai/pricing",
+      "commercial_rights": "review_required",
+      "data_storage_rights": "review_required",
+      "last_verified": null,
+      "live_test": null
+    },
+    {
+      "id": "remove-bg",
+      "name": "remove.bg",
+      "category": "background_removal",
+      "status": "researching",
+      "credentials": "server_secret",
+      "requires_billing": true,
+      "docs": "https://www.remove.bg/api",
+      "pricing": "https://www.remove.bg/pricing",
+      "commercial_rights": "review_required",
+      "data_storage_rights": "review_required",
+      "last_verified": null,
+      "live_test": null
+    },
+    {
+      "id": "usda-fooddata",
+      "name": "USDA FoodData Central",
+      "category": "food_data",
+      "status": "researching",
+      "credentials": "server_secret",
+      "requires_billing": false,
+      "docs": "https://fdc.nal.usda.gov/api-guide",
+      "pricing": "https://fdc.nal.usda.gov/api-guide",
+      "commercial_rights": "review_required",
+      "data_storage_rights": "review_required",
+      "last_verified": null,
+      "live_test": null
+    },
+    {
+      "id": "ebay-browse",
+      "name": "eBay Browse API",
+      "category": "marketplace_listings",
+      "status": "researching",
+      "credentials": "server_secret",
+      "requires_billing": false,
+      "docs": "https://developer.ebay.com/api-docs/buy/browse/overview.html",
+      "pricing": "https://developer.ebay.com/develop/get-started/api-call-limits",
+      "commercial_rights": "review_required",
+      "data_storage_rights": "review_required",
+      "last_verified": null,
+      "live_test": null
+    },
+    {
+      "id": "open-food-facts",
+      "name": "Open Food Facts",
+      "category": "food_data",
+      "status": "researching",
+      "credentials": "varies_by_endpoint",
+      "requires_billing": false,
+      "docs": "https://openfoodfacts.github.io/openfoodfacts-server/api/",
+      "pricing": "https://openfoodfacts.github.io/openfoodfacts-server/api/",
+      "commercial_rights": "review_required",
+      "data_storage_rights": "review_required",
+      "last_verified": null,
+      "live_test": null
+    }
+  ]
+}
