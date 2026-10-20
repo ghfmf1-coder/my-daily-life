@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T05:15:35+00:00",
+  "checkedAt": "2026-10-20T11:39:31+00:00",
   "status": "fail",
   "summary": {
     "sites": 24,
-    "sitePassed": 14,
+    "sitePassed": 16,
     "siteWarnings": 0,
-    "siteFailed": 10,
+    "siteFailed": 8,
     "browserPassed": 0,
     "browserFailed": 0,
-    "sourceTestsPassed": true,
-    "issues": 51
+    "sourceTestsPassed": false,
+    "issues": 42
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 140ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -302,7 +302,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -342,7 +342,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -472,7 +472,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -512,7 +512,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -593,7 +593,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -633,7 +633,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 102ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 459ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -714,7 +714,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 148ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -754,7 +754,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 174ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -865,7 +865,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -985,7 +985,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1025,7 +1025,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1155,7 +1155,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 178ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1195,7 +1195,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1296,7 +1296,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 153ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1336,7 +1336,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1486,7 +1486,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 134ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1526,7 +1526,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1602,49 +1602,121 @@
       "name": "3D 프린팅 출력 사전 점검",
       "url": "https://stl-print-check.abreda.com/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "3D 프린팅 출력 사전 점검 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "STL 파일의 삼각형 수, 바운딩박스, 메쉬 폐합 여부를 점검하고 출력 준비 보고서를 생성합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://stl-print-check.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://stl-print-check.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://stl-print-check.abreda.com/en/"
         },
         {
           "check": "page_en",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 182ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "3D Print Preflight | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Inspect STL triangle count, bounding box and watertight edge topology before printing."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://stl-print-check.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://stl-print-check.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://stl-print-check.abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 367 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 79 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 233 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
-      "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ]
+      "warnings": [],
+      "failures": []
     },
     {
       "slug": "subtitle-sync-studio",
@@ -1656,7 +1728,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 123ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1696,7 +1768,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 201ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1823,7 +1895,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 162ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 318ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1863,7 +1935,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1923,12 +1995,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 512 bytes"
+          "detail": "HTTP 200, 1201 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 8"
+          "detail": "entries: 18"
         },
         {
           "check": "script_app.js",
@@ -2082,7 +2154,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2122,7 +2194,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2198,49 +2270,121 @@
       "name": "명품시계 외관 검수",
       "url": "https://watch-inspection-lab.abreda.com/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 102ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "명품시계 외관 검수 | Small Toolbox"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "시계 케이스, 유리, 다이얼, 크라운, 버클과 작동 상태를 기록하는 중고 시계 검수 도구"
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://watch-inspection-lab.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://watch-inspection-lab.abreda.com/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://watch-inspection-lab.abreda.com/en/"
         },
         {
           "check": "page_en",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Luxury Watch Inspection | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Document watch case, crystal, dial, crown, clasp and operation before buying or selling."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://watch-inspection-lab.abreda.com/en/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://watch-inspection-lab.abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://watch-inspection-lab.abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 402 bytes"
         },
         {
           "check": "text_robots.txt",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 84 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+          "status": "pass",
+          "detail": "HTTP 200, 243 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ],
-      "failures": [
-        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
-        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-      ]
+      "warnings": [],
+      "failures": []
     }
   ],
   "browserChecks": [],
@@ -2366,26 +2510,6 @@
       "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "stl-print-check",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "stl-print-check",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "stl-print-check",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "stl-print-check",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "stl-print-check",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
       "scope": "used-car-inspection",
       "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
@@ -2426,24 +2550,8 @@
       "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "watch-inspection-lab",
-      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "watch-inspection-lab",
-      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "watch-inspection-lab",
-      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "watch-inspection-lab",
-      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
-    },
-    {
-      "scope": "watch-inspection-lab",
-      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      "scope": "source",
+      "details": "Repository unit/regression checks failed."
     },
     {
       "scope": "browser",
