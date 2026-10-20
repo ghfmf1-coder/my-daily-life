@@ -1,0 +1,11 @@
+{
+  "slug": "used-car-inspection",
+  "project": "tb-used-car-inspection",
+  "title": "중고차 구매 전 검수실",
+  "description": "차량 외관, 정비 기록, 도막 두께 측정값을 정리하고 구매 전 확인 질문을 생성합니다.",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
