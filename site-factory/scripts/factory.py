@@ -213,7 +213,12 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                     'ko':{'routine':'일상·루틴','data':'데이터·파일','writing':'웹소설·글쓰기','other':'기타 도구'},
                     'en':{'routine':'Daily life','data':'Data & files','writing':'Writing','other':'Other tools'},
                 }[language][category]
-                target=site['url'] if language=='ko' else site['url'].rstrip('/')+'/en/'
+                # Only migrated tools use the unified domain; other tools keep their verified URLs.
+                unified_slugs={'csv-column-extractor','csv-empty-row-remover','jsonl-validator','srt-sdh-cleaner','vtt-cleaner'}
+                if site['slug'] in unified_slugs:
+                    target='https://abreda.com/'+('en/' if language=='en' else '')+'tools/'+site['slug']+'/'
+                else:
+                    target=site['url'] if language=='ko' else site['url'].rstrip('/')+'/en/'
                 label='바로 사용하기 ↗' if language=='ko' else 'Open tool ↗'
                 # Each card has its own meaningful, lightweight SVG illustration.
                 # The descriptions remain in data-search and on the destination page,
@@ -256,6 +261,49 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             if '<!-- AUTO_CATALOG_CARDS -->' not in source:
                 raise SiteError('toolbox-hub: missing catalog placeholder in '+relative)
             path.write_text(source.replace('<!-- AUTO_CATALOG_CARDS -->',cards(language)),encoding='utf-8')
+    # UNIFIED_DOMAIN_PHASE_1: serve proven bilingual browser-only utilities on
+    # abreda.com/tools/<slug>/ and abreda.com/en/tools/<slug>/.
+    # Legacy Pages domains remain live until redirects are separately verified.
+    if slug == 'toolbox-hub':
+        migrated=('csv-column-extractor','csv-empty-row-remover',
+                  'jsonl-validator','srt-sdh-cleaner','vtt-cleaner')
+        for tool_slug in migrated:
+            source=SITES/tool_slug/'public'
+            for lang,prefix in (('ko','tools'),('en','en/tools')):
+                original=source/('index.html' if lang=='ko' else 'en/index.html')
+                if not original.is_file():
+                    raise SiteError('Missing bilingual tool: '+str(original))
+                dest=out/prefix/tool_slug
+                dest.mkdir(parents=True,exist_ok=True)
+                html=original.read_text(encoding='utf-8')
+                page_url='https://abreda.com/'+prefix+'/'+tool_slug+'/'
+                html=re.sub(r'<link\s+rel=["\']canonical["\'][^>]*>','',html,flags=re.I)
+                html=re.sub(r'<link\s+rel=["\']alternate["\'][^>]*hreflang=[^>]*>','',html,flags=re.I)
+                ko_url='https://abreda.com/tools/'+tool_slug+'/'
+                en_url='https://abreda.com/en/tools/'+tool_slug+'/'
+                tags=('<link rel="canonical" href="'+page_url+'">'
+                      '<link rel="alternate" hreflang="ko" href="'+ko_url+'">'
+                      '<link rel="alternate" hreflang="en" href="'+en_url+'">'
+                      '<link rel="alternate" hreflang="x-default" href="'+ko_url+'">')
+                html=html.replace('</head>',tags+'</head>',1)
+                (dest/'index.html').write_text(html,encoding='utf-8')
+                # Copy only safe, referenced local assets from the same locale.
+                origin_dir=original.parent
+                for asset in origin_dir.iterdir():
+                    if asset.is_file() and asset.suffix.lower() in ALLOWED_EXT and asset.name!='index.html':
+                        shutil.copy2(asset,dest/asset.name)
+        # The hub sitemap is a stable, single submitted index for both locales.
+        # Include all already-listed hub URLs and the migrated tool URLs.
+        sitemap=out/'sitemap.xml'
+        if sitemap.is_file():
+            xml=sitemap.read_text(encoding='utf-8')
+            urls=['https://abreda.com/'+prefix+'/'+name+'/'
+                  for name in migrated for prefix in ('tools','en/tools')]
+            additions=''.join('  <url><loc>'+url+'</loc></url>\n' for url in urls)
+            if '</urlset>' not in xml:
+                raise SiteError('Invalid hub sitemap: missing urlset close tag')
+            xml=xml.replace('</urlset>',additions+'</urlset>')
+            sitemap.write_text(xml,encoding='utf-8')
     # AUTO_RELEASE_RSS: one stable, human-useful announcement feed for each language.
     # The owner can connect these opt-in feeds to Metricool RSS Autolists.
     # Creating a feed does not authorize or perform social posting.
