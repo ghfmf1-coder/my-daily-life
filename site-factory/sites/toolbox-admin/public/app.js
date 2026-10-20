@@ -28,7 +28,7 @@
   let storageWorks = true;
   let state;
   const googleAdsView={started:false,busy:false,configured:null,connected:null,accounts:[],results:[],error:'',customer:'',seeds:'웹소설 연재, CSV 병합',country:'KR'};
-  const analyticsView = {days: 1, loading: false, started: false, data: null, error: ''};
+  const analyticsView = {days: 1, loading: false, started: false, data: null, classified: null, error: ''};
   const maintenance = {data:null,error:'첫 자동 점검을 기다리고 있습니다.'};
   const promotion={data:null,error:''};
 
@@ -365,6 +365,16 @@
     const rows=arr.map(item=>`<tr><td><div class="item-title">${esc(item.site)}</div><div class="sub-line">자체 JS 비콘 · ${esc(item.days)}일 구간</div></td><td>${safeMetric(item.visits)}</td><td>${safeMetric(item.pageviews)}</td><td>${item.sampled?'표본집계 / 판별 불가':item.status==='no_data'?'수집 자료 없음':'판별 불가 — JS 실행은 사람 인증이 아님'}</td><td>${esc(String(item.retrievedAt||'').replace('T',' ').slice(0,19))}</td></tr>`).join('');
     return `<div class="table-scroll"><table><thead><tr><th>사이트</th><th>방문 (Visits)</th><th>페이지뷰</th><th>데이터 상태</th><th>조회 시각 (UTC)</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
+  function classifiedTrafficPanel(){
+    if(!Array.isArray(analyticsView.classified))return panel('방문자 구분 · 서버 집계','봇 / 사람 추정 / 판별 불가',empty('집계 연결 대기','관리자 로그인 후 새로 조회하세요.'));
+    const categories=[['likely_human','사람 추정'],['automated','봇·자동화'],['unknown','판별 불가']];
+    const sum=(cat,key)=>analyticsView.classified.filter(r=>r.category===cat).reduce((v,r)=>v+(Number(r[key])||0),0);
+    const cards=categories.map(([key,label])=>stats(label,fmt(sum(key,'visits')),'방문 세션 추정 · 페이지뷰 '+fmt(sum(key,'pageviews')),'◉')).join('');
+    const rows=analyticsView.classified.map(r=>`<tr><td>${esc(r.site_id)}</td><td>${esc(categories.find(x=>x[0]===r.category)?.[1]||'판별 불가')}</td><td>${safeMetric(Number(r.visits))}</td><td>${safeMetric(Number(r.pageviews))}</td></tr>`).join('');
+    return panel('서버측 방문자 구분','최근 '+analyticsView.days+'일 · 새 분류 집계 도입 이후의 이벤트만 포함',
+      `<div class="stats-grid">${cards}</div><div class="notice">사람 추정은 브라우저 요청 특성으로 분류한 것이며 실제 사람임을 보증하지 않습니다. 알려진 자동화 User-Agent는 봇으로 분류하고, 판단 근거가 부족한 요청은 판별 불가로 표시합니다. 기존 JS 비콘 누적치와 새 집계는 합산하지 않습니다. 개인정보 식별자·IP·지문은 저장하지 않습니다.</div>`+
+      (rows?`<div class="table-scroll"><table><thead><tr><th>사이트 ID</th><th>분류</th><th>방문</th><th>페이지뷰</th></tr></thead><tbody>${rows}</tbody></table></div>`:empty('새 분류 이벤트 없음','이전 방문 기록은 분류할 근거가 없어 소급 분류하지 않습니다.')));
+  }
   function traffic(){
     const recognized=['cf_exclude_bots','ga4_known_bots','js_beacon'];
     const valid=state.metrics.filter(m=>recognized.includes(m.botFilter) && Number.isSafeInteger(m.visitors) && m.visitors>=0);
@@ -387,6 +397,7 @@
       `<div class="toolbar"><span class="section-title">조회 기간</span>${[1,7,30].map(d=>`<button type="button" class="btn ${analyticsView.days===d?'primary':'secondary'}" data-action="analytics-days" data-days="${d}">${d===1?'최근 1일':`최근 ${d}일`}</button>`).join('')}</div>`+
       `<div class="stats-grid">${stats('판별 불가 · JS 방문 세션',analyticsView.data?(isSingleSite?safeMetric(remote?.visits):'사이트별 확인'):'미확인',period+' · 고유 이용자 수 아님','◫')}${stats('페이지뷰',analyticsView.data?(isSingleSite?safeMetric(remote?.pageviews):'사이트별 확인'):'미확인',period+' · 브라우저 전송 페이지뷰','▤')}${stats('분석 대상',analyticsView.data?fmt(analyticsView.data.results.length):'미확인','관리 대상 사이트','◎')}${stats('데이터 연결 상태',fetchState,analyticsView.data?String(analyticsView.data.generatedAt||'').slice(0,19)+' UTC':loadingNote,'◈',analyticsView.error?'amber':'')}</div>`+
       (analyticsView.error?`<div class="notice warn">API 연결 상태: ${esc(analyticsView.error)}</div>`:'')+
+      classifiedTrafficPanel()+
       panel('브라우저 DB 자동 집계',analyticsView.data?`원천 조회 시각: ${analyticsView.data.generatedAt||'미확인'} · Supabase 일별 DB 집계`:loadingNote,analyticsTable())+
       `<div class="notice warn">아래 수동 기록은 자동 집계와 별개야. 두 데이터를 더하지 않으며, 방문자·방문·페이지뷰·색인 수치를 혼동하지 않습니다.</div>`+
       `<div class="stats-grid">${stats('오늘 기록된 방문 세션 합계',daily.length?fmt(sum(daily)):'미확인','자동 브라우저 집계와 승인된 수기 기록','◫')}${stats('자동·수기 기록 건수',fmt(valid.length),'이용자가 직접 입력한 기록','▤')}${stats('관리 대상 사이트',fmt(state.sites.length),'개발·운영 목록 기준','◎')}${stats('기록 원천',valid.length?'입력됨':'미입력','JS 비콘과 수기 기록 구분 필요','◈','amber')}</div>`+
@@ -398,6 +409,7 @@
     if(view==='traffic')render();
     try{
       if(!window.TOOLBOX_CLOUD?.readMetrics)throw new Error('로그인된 관리자 DB에 연결되지 않았습니다.');
+      analyticsView.classified=await window.TOOLBOX_CLOUD.readClassifiedTraffic(analyticsView.days);
       const remoteMetrics=await window.TOOLBOX_CLOUD.readMetrics();
       state.metrics=remoteMetrics;
       try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch{}
@@ -416,7 +428,7 @@
           retrievedAt:new Date().toISOString()};
       });
       analyticsView.data={results,generatedAt:new Date().toISOString(),source:'Supabase JS beacon'};
-    }catch(e){analyticsView.error=String(e.message||'DB 방문 집계 조회 실패').slice(0,220);analyticsView.data=null;}
+    }catch(e){analyticsView.error=String(e.message||'DB 방문 집계 조회 실패').slice(0,220);analyticsView.data=null;analyticsView.classified=null;}
     finally{analyticsView.loading=false;if(view==='traffic')render();}
   }
   function policies(){
