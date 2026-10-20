@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T04:36:26+00:00",
+  "checkedAt": "2026-10-20T04:41:53+00:00",
   "status": "fail",
   "summary": {
-    "sites": 13,
+    "sites": 14,
     "sitePassed": 13,
     "siteWarnings": 0,
-    "siteFailed": 0,
+    "siteFailed": 1,
     "browserPassed": 0,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 1
+    "issues": 6
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 236ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 187ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -195,6 +195,55 @@
       "failures": []
     },
     {
+      "slug": "card-grading-lab",
+      "name": "카드 감정 사전 검수 연구소 | 센터링 분석",
+      "url": "https://tb-card-grading-lab.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "csv-column-extractor",
       "name": "csv column extractor | Small Toolbox",
       "url": "https://tb-pages-csv-column-extractor.pages.dev/",
@@ -204,7 +253,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 196ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 288ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +293,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 159ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 166ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -325,7 +374,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 212ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -365,7 +414,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 167ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -446,7 +495,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 235ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 218ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -486,7 +535,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 474ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 324ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -597,7 +646,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 124ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 237ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -668,7 +717,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 227ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -708,7 +757,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 188ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -789,7 +838,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 200ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 214ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -829,7 +878,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 142ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 205ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -930,7 +979,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 335ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 286ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -970,7 +1019,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 169ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 140ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1071,7 +1120,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 173ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 240ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1111,7 +1160,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 156ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1192,7 +1241,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 234ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 286ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1232,7 +1281,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 283ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1359,7 +1408,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 173ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 304ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1399,7 +1448,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 241ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1489,22 +1538,22 @@
         {
           "check": "text_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 4913 bytes"
+          "detail": "HTTP 200, 5335 bytes"
         },
         {
           "check": "rss_feed.xml",
           "status": "pass",
-          "detail": "10 valid RSS entries"
+          "detail": "11 valid RSS entries"
         },
         {
           "check": "text_en_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 4212 bytes"
+          "detail": "HTTP 200, 4640 bytes"
         },
         {
           "check": "rss_en_feed.xml",
           "status": "pass",
-          "detail": "10 valid RSS entries"
+          "detail": "11 valid RSS entries"
         }
       ],
       "warnings": [],
@@ -1520,7 +1569,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 296ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1560,7 +1609,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 202ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1634,6 +1683,26 @@
   ],
   "browserChecks": [],
   "issues": [
+    {
+      "scope": "card-grading-lab",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "card-grading-lab",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "card-grading-lab",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "card-grading-lab",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "card-grading-lab",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
     {
       "scope": "browser",
       "details": "Could not produce a browser smoke report."
