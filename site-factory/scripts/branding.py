@@ -20,7 +20,11 @@ SPECIALIST_MARKS = {
 }
 
 def render_icon(title: str, slug: str) -> str:
-    if slug in SPECIALIST_MARKS:\n        bg, symbol = SPECIALIST_MARKS[slug]\n        return '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><title>'+escape(title)+'</title><rect width="64" height="64" rx="14" fill="'+bg+'"/>'+symbol+'</svg>\\n'\n    digest=hashlib.sha256((slug+':'+title).encode('utf-8')).digest()
+    if slug in SPECIALIST_MARKS:
+        bg, symbol = SPECIALIST_MARKS[slug]
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><title>'+escape(title)+'</title><rect width="64" height="64" rx="14" fill="'+bg+'"/>'+symbol+'</svg>\
+'
+    digest=hashlib.sha256((slug+':'+title).encode('utf-8')).digest()
     palette=('#185ce5','#008775','#643cc8','#ae513b','#0a779e','#34557d')
     bg=palette[digest[0] % len(palette)]
     low=title.lower()+' '+slug.lower()
