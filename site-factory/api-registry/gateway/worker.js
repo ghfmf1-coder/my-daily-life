@@ -5,6 +5,7 @@ import providers from '../providers.json';
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'}});
 const same=(a,b)=>{if(!a||!b||a.length!==b.length)return false;let n=0;for(let i=0;i<a.length;i++)n|=a.charCodeAt(i)^b.charCodeAt(i);return n===0};
 const allowedOrigin=(request,env)=>{const origin=request.headers.get('origin');return !origin||origin===env.ADMIN_ORIGIN};
+const corsHeaders=(request,env)=>request.headers.get('origin')===env.ADMIN_ORIGIN?{'access-control-allow-origin':env.ADMIN_ORIGIN,'vary':'Origin'}:{};
 function authenticate(request,env,admin=false){
   const header=request.headers.get('authorization')||'';
   if(!header.startsWith('Bearer '))return null;
@@ -30,10 +31,19 @@ async function budget(env,site,provider){
 export default {async fetch(request,env){
   const url=new URL(request.url);
   if(!allowedOrigin(request,env))return json({error:'origin_not_allowed'},403);
-  if(request.method==='GET'&&url.pathname==='/health')return json({status:'ok',mode:'disabled_by_default'});
+  if(request.method==='OPTIONS')return new Response(null,{status:204,headers:{...corsHeaders(request,env),'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'authorization, content-type','access-control-max-age':'600'}});
+  if(request.method==='GET'&&url.pathname==='/health')return json({status:'ok',provider_calls_enabled:env.ENABLE_PROVIDER_CALLS==='true',quota_mode:'kv_best_effort'});
   if(request.method==='GET'&&url.pathname==='/admin/providers'){
     if(!authenticate(request,env,true))return json({error:'unauthorized'},401);
     return json({providers:providers.providers.map(({id,name,status,category,last_verified,live_test})=>({id,name,status,category,last_verified,live_test}))});
+  }
+  if(request.method==='GET'&&url.pathname==='/admin/usage'){
+    if(!authenticate(request,env,true))return json({error:'unauthorized'},401);
+    if(!env.USAGE)return json({error:'usage_storage_unavailable'},503);
+    const day=/^\\d{4}-\\d{2}-\\d{2}$/.test(url.searchParams.get('day')||'')?url.searchParams.get('day'):new Date().toISOString().slice(0,10);
+    const prefix='usage:'+day+':';let cursor;const rows=[];
+    do{const page=await env.USAGE.list({prefix,limit:100,...(cursor?{cursor}:{})});for(const key of page.keys){if(rows.length>=500)break;rows.push({key:key.name.slice(prefix.length),count:Number(await env.USAGE.get(key.name)||0)});}cursor=page.list_complete?null:page.cursor;}while(cursor&&rows.length<500);
+    return json({day,usage:rows,truncated:!!cursor});
   }
   if(request.method!=='POST'||url.pathname!=='/v1/lookup')return json({error:'not_found'},404);
   const caller=authenticate(request,env);
