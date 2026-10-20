@@ -49,13 +49,13 @@ export default {async fetch(request,env){
   if(provider.id!=='usda-fooddata')return json({error:'adapter_unavailable'},503);
   if(!env.USDA_API_KEY)return json({error:'provider_secret_missing'},503);
   let quota;try{quota=await budget(env,caller.id,provider.id)}catch{return json({error:'quota_unavailable'},503)}
-  if(!quota.ok)return json({error:'daily_quota_exceeded'},429);
+  if(!quota.ok)return json({error:'upgrade_required',message:'무료 사용량을 모두 사용했어요. 유료 이용권을 확인하거나 내일 다시 이용할 수 있어요.',upgrade_url:env.UPGRADE_URL||null,reset:'next_utc_day'},429);
   const upstream=new URL('https://api.nal.usda.gov/fdc/v1/foods/search');
   upstream.searchParams.set('api_key',env.USDA_API_KEY);
   let response;try{
     response=await fetch(upstream,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({query:input.query,pageSize:5}),signal:AbortSignal.timeout(8000)});
   }catch{return json({error:'provider_unavailable'},502)}
-  if(!response.ok)return json({error:'provider_error',status:response.status},502);
+  if(!response.ok)return json({error:'provider_temporarily_unavailable',retryable:[429,500,502,503,504].includes(response.status)},502);
   const result=await response.json();
   return json({provider:provider.id,foods:(result.foods||[]).slice(0,5).map(x=>({description:x.description,fdcId:x.fdcId,brandOwner:x.brandOwner||null})),usage:quota.count,limit:quota.max});
 }};
