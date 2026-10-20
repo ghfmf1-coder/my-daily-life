@@ -1,0 +1,11 @@
+{
+  "slug": "stl-print-check",
+  "project": "tb-stl-print-check",
+  "title": "3D 프린팅 출력 사전 점검",
+  "description": "STL 파일의 삼각형 수, 바운딩박스, 메쉬 폐합 여부를 점검하고 출력 준비 보고서를 생성합니다.",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
