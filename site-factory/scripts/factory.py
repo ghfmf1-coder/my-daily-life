@@ -197,8 +197,8 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 if language=='en' and re.search(r'[가-힣]',name):
                     continue
                 intro=info.get('copy') or (site['description'] if language=='ko' else '')
-                if language=='en' and not info.get('title'):
-                    continue  # Do not expose Korean-only or generic fallback cards on English search
+                if language=='en' and not info.get('title') and site['slug'] not in localized_titles:
+                    continue  # Only allow explicitly translated English titles
                 category=category_map.get(site['slug'],'other')
                 slug=site['slug'].lower()
                 if any(word in slug for word in ('csv','tsv','json','jsonl','table','column','row','data')):
