@@ -183,7 +183,19 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 if language not in site.get('langs',[]):
                     continue
                 info=site.get('copy',{}).get(language,{})
-                name=info.get('title') or site['title']
+                localized_titles={
+                    'csv-column-extractor':{'ko':'CSV 열 선택 추출기','en':'CSV Column Extractor'},
+                    'csv-empty-row-remover':{'ko':'CSV 빈 행 제거기','en':'CSV Empty Row Remover'},
+                    'jsonl-validator':{'ko':'JSONL 파일 오류 검사기','en':'JSONL File Validator'},
+                    'srt-sdh-cleaner':{'ko':'SRT 자막 효과음·화자 표시 제거기','en':'SRT SDH Cleaner'},
+                    'vtt-cleaner':{'ko':'VTT 자막 정리기','en':'VTT Subtitle Cleaner'},
+                }
+                name=localized_titles.get(site['slug'],{}).get(language) or info.get('title') or site['title']
+                # No raw slug or generic English title may leak into the Korean catalogue.
+                if language=='ko' and not re.search(r'[가-힣]',name):
+                    continue
+                if language=='en' and re.search(r'[가-힣]',name):
+                    continue
                 intro=info.get('copy') or (site['description'] if language=='ko' else '')
                 if language=='en' and not info.get('title'):
                     continue  # Do not expose Korean-only or generic fallback cards on English search
