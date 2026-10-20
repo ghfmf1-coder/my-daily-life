@@ -1,0 +1,11 @@
+{
+  "slug": "camera-lens-check",
+  "project": "tb-camera-lens-check",
+  "title": "중고 카메라 렌즈 검수",
+  "description": "렌즈 외관과 AF, 조리개, 촬영 테스트 결과를 기록합니다",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
