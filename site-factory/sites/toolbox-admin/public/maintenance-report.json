@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-20T03:53:11+00:00",
+  "checkedAt": "2026-10-20T03:53:53+00:00",
   "status": "fail",
   "summary": {
     "sites": 13,
-    "sitePassed": 9,
+    "sitePassed": 10,
     "siteWarnings": 0,
-    "siteFailed": 4,
+    "siteFailed": 3,
     "browserPassed": 0,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 18
+    "issues": 14
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 353ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 269ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 159ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 196ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 187ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 204ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 102ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -330,7 +330,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 265ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 267ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -370,7 +370,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 186ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 201ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -451,7 +451,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 254ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 189ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -491,7 +491,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 215ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 132ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -602,7 +602,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 187ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 202ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -673,7 +673,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 165ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 215ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -713,7 +713,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 172ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -800,7 +800,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 282ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 231ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -840,7 +840,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 245ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -941,7 +941,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 241ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 208ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -981,7 +981,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 232ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 139ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1082,7 +1082,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 166ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1122,7 +1122,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 121ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1208,7 +1208,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 214ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 153ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1248,7 +1248,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 218ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1375,7 +1375,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 240ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 265ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1415,7 +1415,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 188ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 221ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1531,12 +1531,12 @@
       "name": "vtt cleaner | Small Toolbox",
       "url": "https://tb-pages-vtt-cleaner.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 209ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1545,8 +1545,8 @@
         },
         {
           "check": "meta_description_ko",
-          "status": "fail",
-          "detail": "VTT 자막의 시간과 화자 표시를 제거"
+          "status": "pass",
+          "detail": "VTT 자막의 시간 표시와 화자 태그를 제거해 읽기 편한 텍스트로 정리하세요. 브라우저에서 처리한 결과를 복사하거나 파일로 내려받을 수 있습니다."
         },
         {
           "check": "html_lang_ko",
@@ -1560,13 +1560,13 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-vtt-cleaner.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-vtt-cleaner.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
@@ -1576,7 +1576,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1605,8 +1605,8 @@
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://tb-pages-vtt-cleaner.pages.dev/ko/"
+          "status": "pass",
+          "detail": "https://tb-pages-vtt-cleaner.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
@@ -1645,12 +1645,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "meta_description_ko: VTT 자막의 시간과 화자 표시를 제거",
-        "canonical_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/",
-        "hreflang_ko_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/",
-        "hreflang_en_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/"
-      ]
+      "failures": []
     }
   ],
   "browserChecks": [],
@@ -1706,22 +1701,6 @@
     {
       "scope": "srt-sdh-cleaner",
       "details": "hreflang_en_ko: https://tb-pages-srt-sdh-cleaner.pages.dev/ko/"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "meta_description_ko: VTT 자막의 시간과 화자 표시를 제거"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "canonical_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "hreflang_ko_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "hreflang_en_ko: https://tb-pages-vtt-cleaner.pages.dev/ko/"
     },
     {
       "scope": "browser",
