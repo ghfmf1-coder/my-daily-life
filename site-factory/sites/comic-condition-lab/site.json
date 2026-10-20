@@ -1,0 +1,11 @@
+{
+  "slug": "comic-condition-lab",
+  "project": "tb-comic-condition-lab",
+  "title": "코믹북·만화책 상태 검수",
+  "description": "책등, 표지, 페이지 손상과 누락을 검수하고 보고서를 생성합니다",
+  "approved": true,
+  "locales": [
+    "ko",
+    "en"
+  ]
+}
