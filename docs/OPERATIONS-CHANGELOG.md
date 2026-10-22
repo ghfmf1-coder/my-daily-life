@@ -35,3 +35,19 @@
 임시 검증용 새 사이트를 생성하지 않았습니다.
 새 사이트 배포→원장 반영의 새 실험은 수행하지 않았고, 기존 30개 실제 배포와 현재 원장 일치·최근 동기화 정상 기록을 확인했습니다.
 추가 유료 서비스·새 관제센터를 도입하지 않았습니다.
+
+## Google 재승인 이후 확인 및 자동화
+
+- 기존 연결의 refresh 응답에서 searchConsoleManagement=true, newSiteVerification=true를 확인했습니다.
+- 감사 실행 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39798149557 은 최종 success입니다. 이전 queued 불일치는 이 실행에서 해소됐습니다.
+- 서버 v12에서 실제 부여 권한 판정을 추가했습니다.
+- cdf2ac93f606903a17db02d0d555fa6d0601a7f3: 별도 Google setup OIDC identity, 소유권 확인·원본 인증 태그 보존·기존 Pages 배포·검증된 사이트맵 제출 자동화 추가.
+- 6b84439916e2959a3b1233b1301c97417722cc38: setup 완료 후 읽기 감사 연결.
+- e7b43f9f8bc92a71338e1d32f69cfad5cc646b29: 실제 운영 태그가 있으면 재배포를 생략하도록 보완.
+- 1f78e731b07c1277bf50995d45e31f3eb2826fba: 공식 Google API 활성화 링크만 검증해 전달하도록 보완. 서버 v15.
+- 실제 setup 실행 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39799288557 에서 Site Verification API 비활성 HTTP 403 / PERMISSION_DENIED / serviceDisabled=true 확인. 권한 재승인 실패와 구분합니다.
+- 같은 실행에서 stl-print-check.abreda.com/sitemap.xml 및 watch-inspection-lab.abreda.com/sitemap.xml 제출 성공 응답 확인.
+- 신규 인증은 API 활성화 전까지 미완료입니다. 인증 태그 발급이 막혔으므로 해당 실행에서 신규 사이트 원본을 변경하거나 배포하지 않았습니다.
+- 03684db19cecfcaab6e72bbf47c626d9b43f3702: 정확한 API 활성화 요구를 수집하기 위한 idempotent 재실행 요청.
+- 9bef9734f468c21130c92f7174d3f92e7b816d03: audit/setup 신원 교차 사용 거부 검사 추가·통과.
+- 사용자 지침에 따라 루트 AGENTS.md, CURRENT-STATE.md, 실행 안내, 변경 이력을 함께 저장했습니다.
