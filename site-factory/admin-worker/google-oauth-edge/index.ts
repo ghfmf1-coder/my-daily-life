@@ -206,6 +206,13 @@ async function githubReporting(req:Request){
 async function githubSetup(req:Request){
  if(req.method!=='POST')return reply({error:'POST_only'},405);
  if(!await githubAuthenticated(req.headers.get('Authorization'),fetch,'setup'))return reply({error:'github_setup_identity_rejected'},401);
+ try{
+  const control=await fetch('https://raw.githubusercontent.com/ghfmf1-coder/my-daily-life/main/site-factory/ops/search-setup-request.json?check='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(10000)});
+  if(!control.ok)return reply({error:'setup_control_unavailable'},503);
+  const state=await control.json();
+  if(state.paused!==false)return reply({error:'owner_paused'},423);
+ }catch{return reply({error:'setup_control_unavailable'},503)}
+
  const raw=await req.text();if(raw.length>24000)return reply({error:'request_too_large'},413);
  let urls:string[],action:string;
  try{
