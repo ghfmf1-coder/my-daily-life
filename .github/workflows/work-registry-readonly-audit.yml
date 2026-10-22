@@ -8,7 +8,7 @@ on:
   schedule:
     - cron: '37 */6 * * *'
   workflow_run:
-    workflows: ['Toolbox approved-site auto-deploy', 'Work twenty standalone preview sites', 'Work toolbox nine site builds and test deployments', 'Work shipping audit - tests and independent Pages deployment']
+    workflows: ['Toolbox Google ownership and sitemap setup', 'Toolbox approved-site auto-deploy', 'Work twenty standalone preview sites', 'Work toolbox nine site builds and test deployments', 'Work shipping audit - tests and independent Pages deployment']
     types: [completed]
 concurrency:
   group: work-registry-readonly-audit
