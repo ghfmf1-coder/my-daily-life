@@ -1,0 +1,48 @@
+name: Audit legacy public sites SEO and reachability
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/legacy-public-seo-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect legacy approved public pages without touching admin
+        run: |
+          python3 - <<'PY'
+          import pathlib,json,re,urllib.request,time
+          root=pathlib.Path('site-factory/sites')
+          excluded={'toolbox-admin','deployment-check'}
+          fails=[];total=0
+          def get(url):
+              last=None
+              for i in range(3):
+                  try:
+                      req=urllib.request.Request(url,headers={'User-Agent':'SmallToolbox-QA/1.0'})
+                      with urllib.request.urlopen(req,timeout=15) as r:return r.status,r.read(700000).decode('utf-8','replace')
+                  except Exception as e:last=e;time.sleep(2)
+              raise last
+          for conf in sorted(root.glob('*/site.json')):
+              data=json.loads(conf.read_text(encoding='utf-8'))
+              slug=data['slug']
+              if not data.get('approved') or slug in excluded:continue
+              url=(data.get('canonical_url') or 'https://'+data['project']+'.pages.dev').rstrip('/')+'/'
+              total+=1
+              try:
+                  local=(conf.parent/'public/index.html').read_text(encoding='utf-8')
+                  if re.search(r'<meta[^>]+name=["\x27]robots["\x27][^>]+noindex',local,re.I):raise ValueError('noindex in published source')
+                  status,html=get(url)
+                  if status!=200:raise ValueError('HTTP '+str(status))
+                  if re.search(r'<meta[^>]+name=["\x27]robots["\x27][^>]+noindex',html,re.I):raise ValueError('noindex in live site')
+                  print('PUBLIC_OK',slug,url)
+              except Exception as e:
+                  print('PUBLIC_ERROR',slug,url,str(e));fails.append((slug,str(e)))
+          assert total>=18, 'unexpectedly few public sites'
+          print('LEGACY_PUBLIC_TOTAL',total)
+          if fails:raise SystemExit('Legacy SEO issues: '+repr(fails))
+          PY
