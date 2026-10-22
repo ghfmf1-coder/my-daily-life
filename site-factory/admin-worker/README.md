@@ -2,7 +2,7 @@
 
 운영 주소: https://adminivo.com/next/
 
-배포된 Cloudflare Worker: `tb-toolbox-admin-rebuild`, 활성 코드 버전 `5575de32`.
+배포된 Cloudflare Worker: `tb-toolbox-admin-rebuild`, Google 연동 코드 버전 `a2471a88`.
 
 ## 변경
 
@@ -29,6 +29,14 @@
 
 조회용 Cloudflare API 토큰은 해당 계정의 **Pages 읽기**만 허용하며 Worker의 `CF_PAGES_READ_TOKEN` 암호화 시크릿에 저장되어 있다. 저장소에 키를 넣지 않는다.
 
-GSC, AdSense, Buffer 공급자 자격 증명은 현재 Worker에 미설정되어 있으므로 정상 수치로 표시하지 않는다. 이 작업은 그 외부 계정의 신규 OAuth 승인을 수행하지 않았다.
+Google OAuth 연결을 완료했다. Supabase `toolbox-google-ads-oauth` v9가 기존 암호화 refresh token 저장 방식과 Google Ads 경로를 유지하면서 `reporting-start` 및 `reporting-data`를 제공한다. Search Console 및 AdSense 읽기 권한만 추가했다. Google client secret과 refresh token은 Supabase 내부에 유지한다.
+
+전용 보고서 키는 Worker의 암호화 시크릿 `REPORTING_BRIDGE_KEY`에 저장하고 Supabase 비공개 RLS 테이블에는 SHA-256 해시만 저장한다. 키는 기존 작은도구함 호스트의 검색·수익 보고서를 읽는 용도다. 6시간 Cron과 수동 수집 모두 같은 키 인증 경로를 사용한다.
+
+실서버에서 Google 최종 검색 자료 1건 수집 및 AdSense 계정·보고서 조회 성공을 확인했다. 조회 기간의 작은도구함 페이지별 수익 행은 없으며 0원으로 치환하지 않는다. 기존 데이터는 삭제하지 않는다. 신규 인증, OAuth PKCE, 날짜 범위, 키 인증, 빈 응답 보존, upsert 및 호스트 검증 테스트를 통과했다.
+
+Buffer 이메일 인증과 API 연동을 완료했다. 키 권한은 `account:read`, `posts:read`, `insights:read` 3개이며 게시·계정 변경 권한은 없다. 사용자 승인으로 Worker의 `BUFFER_API_KEY` 암호화 시크릿에 저장했다. 키 만료는 2026-11-21이다. 운영 SNS 화면에서 Buffer API 정상, 연결 채널 0, 예약/발행 게시물 0을 실제 API 응답으로 확인했다.
+
+SNS 채널 자체는 아직 연결하지 않았다. Buffer 무료 요금제는 3개 채널까지 허용하므로 기존 9개 중 우선 연결할 구성을 사용자에게 요청했다. 요금제 변경·결제·SNS 게시를 수행하지 않았다. Make 이벤트도 미연결이다. 이 부분이 완료되기 전에는 전체 운영 자동화 완료로 표현하지 않는다.
 
 검증용 임시 사이트는 재생성하거나 일반 서비스로 복구하지 않는다. 실제 신규 사이트는 승인된 tb-* Pages production 배포가 성공하면 다음 분당 동기화에서 반영되며, 공식 디렉터리에 없는 항목은 “배포 성공·목록 미등록”으로 표시한다.
