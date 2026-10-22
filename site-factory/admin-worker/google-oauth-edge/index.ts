@@ -198,12 +198,65 @@ async function githubReporting(req:Request){
  const report=await reportingData(start,end);
  const scopes=grantedScopes as string[]|null;
  return reply({status:'ok',capabilities:{scopeMetadataAvailable:scopes!==null,searchConsoleManagement:scopes?scopes.includes('https://www.googleapis.com/auth/webmasters'):null,newSiteVerification:scopes?(scopes.includes('https://www.googleapis.com/auth/siteverification.verify_only')||scopes.includes('https://www.googleapis.com/auth/siteverification')):null},generatedAt:new Date().toISOString(),sites:output,gsc:report.gsc,start,end,
-  sitemapSubmission:'read_only_scope_no_submission_attempted',naver:'not_connected_to_this_bridge',
+  sitemapSubmission:'not_attempted_by_readonly_audit_endpoint',naver:'not_connected_to_this_bridge',
   inspectionMeaning:'Google indexed-version report for the supplied URL, not a live test or whole-site indexing guarantee'});
+}
+
+
+async function githubSetup(req:Request){
+ if(req.method!=='POST')return reply({error:'POST_only'},405);
+ if(!await githubAuthenticated(req.headers.get('Authorization'),fetch,'setup'))return reply({error:'github_setup_identity_rejected'},401);
+ const raw=await req.text();if(raw.length>24000)return reply({error:'request_too_large'},413);
+ let urls:string[],action:string;
+ try{
+  const input=JSON.parse(raw);action=input.action;
+  if(!['tokens','verify','sitemaps'].includes(action)||!Array.isArray(input.urls)||input.urls.length>100)throw Error();
+  urls=[...new Set(input.urls)] as string[];
+  if(urls.some(v=>typeof v!=='string'||!relevantPage(v)||new URL(v).pathname!=='/'||new URL(v).search||new URL(v).hash||v.length>300))throw Error();
+ }catch{return reply({error:'invalid_setup_request'},400)}
+ let token:string;try{token=await reportingAccess()}catch{return reply({error:'oauth_refresh_failed'},503)}
+ async function api(url:string,method='GET',body?:unknown){
+  const r=await fetch(url,{method,headers:{Authorization:'Bearer '+token,...(body===undefined?{}:{'content-type':'application/json'})},...(body===undefined?{}:{body:JSON.stringify(body)}),signal:AbortSignal.timeout(20000)});
+  const data=await r.json().catch(()=>({}));
+  if(!r.ok){const error:any=new Error('google_request_failed');error.httpStatus=r.status;error.apiStatus=String(data.error?.status||'UNKNOWN').replace(/[^A-Z_]/g,'').slice(0,80);error.serviceDisabled=(data.error?.details||[]).some((d:any)=>d.reason==='SERVICE_DISABLED');throw error}
+  return data;
+ }
+ let properties:any[];
+ try{properties=(await api('https://www.googleapis.com/webmasters/v3/sites')).siteEntry||[]}catch{return reply({error:'google_sites_unavailable'},502)}
+ const propertyFor=(url:string)=>properties.filter((s:any)=>s.permissionLevel!=='siteUnverifiedUser'&&(s.siteUrl.startsWith('sc-domain:')?(new URL(url).hostname===s.siteUrl.slice(10)||new URL(url).hostname.endsWith('.'+s.siteUrl.slice(10))):url.startsWith(s.siteUrl))).sort((a:any,b:any)=>b.siteUrl.length-a.siteUrl.length)[0];
+ const rows:any[]=new Array(urls.length);let next=0;
+ await Promise.all(Array.from({length:4},async()=>{
+  while(next<urls.length){
+   const i=next++,url=urls[i],existing=propertyFor(url);
+   try{
+    if(action==='tokens'){
+     if(existing){rows[i]={url,status:'already_accessible'};continue}
+     const data=await api('https://www.googleapis.com/siteVerification/v1/token','POST',{site:{type:'SITE',identifier:url},verificationMethod:'META'});
+     const match=String(data.token||'').match(/content=["']([A-Za-z0-9_-]+)["']/);
+     if(!match)throw Error('invalid_verification_tag');
+     rows[i]={url,status:'verification_tag_ready',verificationContent:match[1]};
+    }else if(action==='verify'){
+     if(existing){rows[i]={url,status:'already_accessible'};continue}
+     await api('https://www.googleapis.com/siteVerification/v1/webResource?verificationMethod=META','POST',{site:{type:'SITE',identifier:url}});
+     await api('https://www.googleapis.com/webmasters/v3/sites/'+encodeURIComponent(url),'PUT');
+     rows[i]={url,status:'verified_and_property_added'};
+    }else{
+     if(!existing){rows[i]={url,status:'property_access_missing'};continue}
+     const sitemap=new URL('/sitemap.xml',url).toString();
+     const listed=await api('https://www.googleapis.com/webmasters/v3/sites/'+encodeURIComponent(existing.siteUrl)+'/sitemaps');
+     if((listed.sitemap||[]).some((s:any)=>s.path===sitemap)){rows[i]={url,status:'already_submitted',sitemap};continue}
+     await api('https://www.googleapis.com/webmasters/v3/sites/'+encodeURIComponent(existing.siteUrl)+'/sitemaps/'+encodeURIComponent(sitemap),'PUT');
+     rows[i]={url,status:'submitted',sitemap};
+    }
+   }catch(error){const e=error as any;rows[i]={url,status:'error',httpStatus:e.httpStatus||null,apiStatus:e.apiStatus||'REQUEST_FAILED',serviceDisabled:!!e.serviceDisabled}}
+  }
+ }));
+ return reply({action,generatedAt:new Date().toISOString(),rows});
 }
 
 Deno.serve(async(req:Request)=>{
   const u=new URL(req.url),route=u.pathname.split("/").pop();
+  if(route==="reporting-github-setup"){try{return await githubSetup(req)}catch{return reply({error:"github_setup_failed"},503)}}
   if(route==="reporting-github-data"){try{return await githubReporting(req)}catch{return reply({error:"github_reporting_failed"},503)}}
   if(route?.startsWith("reporting-")){try{return await reportingRoute(req,u,route);}catch{return reply({error:"reporting_unavailable"},503);}}
   if(route==="health"&&req.method==="GET")return reply({ok:true,version:2,configured:!!(clientId()&&clientSecret()),callback:CALLBACK});

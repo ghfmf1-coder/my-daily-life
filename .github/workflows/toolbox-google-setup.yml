@@ -1,0 +1,48 @@
+name: Toolbox Google ownership and sitemap setup
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 */6 * * *'
+  workflow_run:
+    workflows: ['Toolbox approved-site auto-deploy', 'Work twenty standalone preview sites', 'Work toolbox nine site builds and test deployments', 'Work shipping audit - tests and independent Pages deployment']
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/toolbox-google-setup.yml'
+      - 'site-factory/ops/google_search_setup.py'
+      - 'site-factory/ops/search-setup-request.json'
+permissions:
+  contents: write
+  id-token: write
+concurrency:
+  group: toolbox-google-search-setup
+  cancel-in-progress: false
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install existing Pages deployment tooling
+        run: npm install --no-save --no-package-lock wrangler@4
+      - name: Reconcile Google ownership and submit validated sitemaps
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_D1_READ_TOKEN: ${{ secrets.CLOUDFLARE_D1_READ_TOKEN }}
+          CLOUDFLARE_PAGES_DEPLOY_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 site-factory/ops/google_search_setup.py
+      - name: Preserve non-secret setup results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: toolbox-google-search-setup-result
+          path: /tmp/toolbox-google-setup-result.json
+          retention-days: 30
+          if-no-files-found: warn
