@@ -14,3 +14,9 @@ const valid=await token(claims);const parts=valid.split('.');parts[1]=b64({...cl
 assert.equal(await githubAuthenticated(parts.join('.'),fetcher),false);
 assert.equal(await githubAuthenticated(valid,async()=>Response.json({keys:[]})),false);
 console.log('PASS: trusted signature accepted; wrong audience, repository, owner, branch, workflow, event, time, issuer, algorithm, tampering and missing key rejected');
+
+const setupClaims={...claims,aud:'small-toolbox-google-setup',workflow_ref:'ghfmf1-coder/my-daily-life/.github/workflows/toolbox-google-setup.yml@refs/heads/main'};
+assert.equal(await githubAuthenticated(await token(setupClaims),fetcher,'setup'),true);
+assert.equal(await githubAuthenticated(await token(setupClaims),fetcher),false);
+assert.equal(await githubAuthenticated(await token(claims),fetcher,'setup'),false);
+console.log('PASS: setup identity accepted only by setup validator; audit and setup identities cannot cross paths');
