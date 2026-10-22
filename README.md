@@ -48,4 +48,4 @@ Repository Settings → Pages → Source: GitHub Actions를 활성화하면, `ma
 
 ## 작은도구함 통합 관제센터 운영
 
-현재 운영 주소는 https://adminivo.com/next/ 입니다. 일반 ChatGPT에서 GitHub 연결로 점검할 때는 [운영 안내](docs/CHATGPT-OPERATIONS.md)를 먼저 읽으세요. [실제 운영 검증 기록](docs/OPS-VERIFICATION-2026-10-22.md)은 확인된 결과와 미확인 항목을 구분합니다.
+현재 운영 주소는 https://adminivo.com/next/ 입니다. **먼저 [현재 상태](docs/CURRENT-STATE.md)를 읽으세요.** 일반 ChatGPT에서 GitHub 연결로 점검할 때는 [운영 안내](docs/CHATGPT-OPERATIONS.md)를 먼저 읽으세요. [실제 운영 검증 기록](docs/OPS-VERIFICATION-2026-10-22.md)은 확인된 결과와 미확인 항목을 구분합니다.
