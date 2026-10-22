@@ -1,5 +1,7 @@
 # 작은도구함: 일반 ChatGPT 운영 안내
 
+**먼저 [CURRENT-STATE.md](CURRENT-STATE.md)를 읽습니다. 이 파일은 실행 설명이며 현재 권한·차단 상태는 CURRENT-STATE.md가 우선합니다.**
+
 운영 주소는 https://adminivo.com/next/ 입니다. 저장소는 ghfmf1-coder/my-daily-life 입니다.
 구형 관제센터로 되돌리거나 새 관제센터를 생성하지 않습니다.
 
@@ -42,8 +44,9 @@ Google 소유권·검색 성과·사이트맵·홈페이지 색인 보고서를 
 - CLOUDFLARE_ACCOUNT_ID: 기존 값을 유지합니다.
 - Google OAuth refresh token과 client secret은 기존 Supabase 내부에 유지합니다.
 - Google 조회는 GitHub OIDC로 인증합니다. issuer·audience·숫자 저장소 ID·소유자 ID·main ref·워크플로 경로·허용 이벤트·시간·RSA 서명을 검증합니다.
+- 감사와 설정의 OIDC audience·workflow_ref는 각각 구분합니다. 설정 워크플로만 공개 인증 태그 커밋에 필요한 contents: write를 가집니다.
 - 새 장기 Google 비밀키, 관리자 브라우저 쿠키, OAuth token을 GitHub에 복사하지 않습니다.
-- GitHub 권한은 contents: read와 id-token: write입니다. 저장소 쓰기·이슈 쓰기 권한을 부여하지 않습니다.
+- 읽기 감사의 GitHub 권한은 contents: read와 id-token: write입니다. 저장소 쓰기·이슈 쓰기 권한을 부여하지 않습니다.
 - reporting-github-data 경로는 조회만 허용합니다. 원장 변경, OAuth 시작, SNS 발행 기능을 제공하지 않습니다.
 
 ## 로그 해석
@@ -62,7 +65,7 @@ Google 소유권·검색 성과·사이트맵·홈페이지 색인 보고서를 
 - sitemaps query_failed: 조회 실패. entries가 비었다고 미제출 확정하지 않음
 - sitemaps status=ok, entries=[]: 해당 속성에서 API가 반환한 같은 호스트의 사이트맵 없음. 다른 속성·교차 호스트 제출 여부까지 부인하지 않음
 - index status=ok: supplied URL의 Google 색인 버전 보고서. 홈페이지 결과를 전체 사이트 색인으로 확대하지 않음
-- sitemapSubmission=read_only_scope_no_submission_attempted: 읽기 인증으로 제출하지 않았음
+- sitemapSubmission=not_attempted_by_readonly_audit_endpoint: 해당 읽기 감사 경로는 제출 작업을 수행하지 않았음. 별도 setup 로그로 실제 제출을 확인
 - naver=not_connected_to_this_bridge: 이 경로는 네이버 계정 상태를 조회하지 못함
 - 검색 자료 없음은 클릭·노출 0 확정 또는 미색인 확정이 아님
 
@@ -75,7 +78,7 @@ Google 소유권·검색 성과·사이트맵·홈페이지 색인 보고서를 
 - github_identity_rejected: 워크플로 경로·main ref·OIDC 권한·audience 확인. 인증 검사를 끄지 않음
 - GOOGLE_BRIDGE_HTTP_503: 기존 Google refresh 실패 여부 확인. 기존 연결 삭제 없이 필요한 경우만 재인증
 - GOOGLE_PROPERTY_ACCESS_MISSING: 기존 Google 계정에서 해당 사이트 속성과 소유권 인증을 확인. 새로운 OAuth 연결을 먼저 만들지 않음
-- 사이트맵 제출: 현재 Google OAuth는 webmasters.readonly입니다. 제출에는 webmasters 권한과 해당 속성 접근 권한이 필요합니다. 안전한 재동의 또는 Search Console 공식 UI 제출이 필요하며 실제 응답 확인 전 제출 완료로 표시하지 않습니다.
+- 사이트맵 제출: 최초 인증은 webmasters.readonly였으나 이후 사용자 재동의로 관리·신규 소유권 확인 권한이 실제 승인됐습니다. 최신 capability 결과를 확인합니다. 제출에는 webmasters 권한과 해당 속성 접근 권한이 필요합니다. 안전한 재동의 또는 Search Console 공식 UI 제출이 필요하며 실제 응답 확인 전 제출 완료로 표시하지 않습니다.
 - 네이버: 기존 서치어드바이저 계정의 등록·소유확인·제출 상태를 공식 화면에서 확인해야 합니다. API 조회 근거 없이 연결·색인을 완료로 표시하지 않습니다.
 
 ## 보존 및 운영 범위
@@ -84,3 +87,24 @@ D1 원장·성과 기록·방문 통계·기존 OAuth 연결을 삭제하거나 
 추가 유료 서비스를 도입하지 않았습니다.
 자동화는 GitHub Actions와 기존 Cloudflare/Supabase 서비스에서 실행되며 ChatGPT 대화가 계속 열려 있을 필요가 없습니다.
 일반 ChatGPT의 도구 제공 범위와 호출 권한은 실제 그 대화에서 확인합니다. 이 문서는 모든 채팅에 동일 도구가 있다고 보장하지 않습니다.
+
+## Google 소유권·사이트맵 설정 실행
+
+- 워크플로: .github/workflows/toolbox-google-setup.yml
+- 이름: Toolbox Google ownership and sitemap setup
+- 실행 화면: https://github.com/ghfmf1-coder/my-daily-life/actions/workflows/toolbox-google-setup.yml
+- 수동 실행, UTC 매 6시간 47분, 지정 배포 완료 후 실행합니다. GitHub 예약 실행은 지연될 수 있습니다.
+- Plus에서 재실행 도구가 없거나 현재 run이 이미 끝난 경우, search-setup-request.json의 requestId를 새로운 작업 식별자로 변경하여 main에 저장하면 실행됩니다. 이 파일의 본문은 임의 명령이나 URL 실행 입력으로 사용하지 않습니다.
+- 드라이버는 실제 D1 원장에서 공개 사이트 루트를 수집하고, Google에서 접근 가능한 속성을 확인합니다.
+- 신규 사이트는 META 인증 태그를 발급받아 승인된 기존 소스의 index.html에 추가합니다. 기존 인증 태그와 본문을 제거하지 않습니다.
+- 변경한 공개 HTML만 커밋하고 기존 Pages 프로젝트에 배포합니다. 새 프로젝트를 만들지 않습니다.
+- 이미 태그가 운영 화면에서 확인되면 불필요한 재배포를 생략합니다.
+- 실제 태그를 조회한 뒤 Google 소유권 확인·Search Console 속성 추가를 요청합니다. 기존 소유자를 삭제하는 API는 사용하지 않습니다.
+- 실제 운영 sitemap.xml을 XML로 확인하고, Google 목록에 이미 있으면 제출을 반복하지 않습니다.
+- 로그는 GOOGLE_SETUP_TOKEN / SOURCE / DEPLOY / VERIFY / SITEMAP을 구분합니다.
+- serviceDisabled=true는 Google Cloud의 API 사용 설정 문제입니다. OAuth 재동의를 반복하지 않습니다.
+- activationUrl은 Google이 반환한 공식 console 호스트와 Site Verification API 경로를 서버에서 검증한 경우만 제공합니다.
+- attention 항목 수는 사이트 수가 아닙니다. 동일 사이트의 인증 오류·사이트맵 접근 오류가 별도 항목일 수 있습니다.
+- 실패 실행도 결과 JSON artifact를 보존합니다. 실패한 URL을 성공으로 표시하지 않습니다.
+- source mapping 누락이나 배포 오류는 소스/운영 상태 확인 후 재실행합니다. 원장 삭제나 새 관제센터 생성으로 해결하지 않습니다.
+- setup 완료 뒤 읽기 감사가 실행되므로 Google 속성·사이트맵·색인 보고서를 다시 확인합니다.
