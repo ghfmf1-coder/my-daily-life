@@ -132,10 +132,22 @@ def main():
             emit('DEPLOY',row)
             if row['status']=='verification_tag_live':deployed.append(row['url'])
             else:failures.append(row)
-    verified=bridge('verify',deployed)
-    for row in verified:
-        emit('VERIFY',row)
-        if row['status'] not in ('verified_and_property_added','already_accessible'):failures.append(row)
+    verified=[]
+    for index,url in enumerate(deployed):
+        if index:time.sleep(4)
+        results=bridge('verify',[url])
+        if any(row.get('httpStatus')==429 for row in results):
+            print('GOOGLE_SETUP_RATE_LIMIT_BACKOFF: waiting before one retry',flush=True)
+            time.sleep(20)
+            results=bridge('verify',[url])
+        for row in results:
+            verified.append(row);emit('VERIFY',row)
+            if row['status'] not in ('verified_and_property_added','already_accessible'):failures.append(row)
+        if any(row.get('httpStatus')==429 for row in results):
+            for pending_url in deployed[index+1:]:
+                row={'url':pending_url,'status':'deferred_after_provider_quota'}
+                verified.append(row);failures.append(row);emit('VERIFY',row)
+            break
     ready=[]
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
         for url,valid in zip(urls,pool.map(sitemap_valid,urls)):
