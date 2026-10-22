@@ -27,7 +27,7 @@ jobs:
           EXPECTED: '["shipping-audit","invoice-reconcile","purchase-three-way","class-schedule-check","inventory-diff","certificate-batch","pdf-preflight","static-site-check","video-delivery-check","svg-laser-check","lease-registry-diff","webtoon-preflight","option-combinations","move-evidence","exam-variants","epub-preflight","silence-finder","photo-contact-sheet","survey-review","question-similarity","event-seating","photo-duplicates","audio-quality","detail-image-review","moving-boxes","tournament-maker","trip-supplies","shotlist-maker","show-cues","dst-embroidery"]'
         run: |
           python3 - <<'PY'
-          import os,json,urllib.request,urllib.error
+          import os,json,urllib.request,urllib.error,urllib.parse,datetime,re
           account=os.environ['CLOUDFLARE_ACCOUNT_ID'];token=os.environ['CLOUDFLARE_API_TOKEN']
           if not account or not token:raise SystemExit('AUTH_BLOCKED: configure CLOUDFLARE_D1_READ_TOKEN with Account D1 Read only; keep Pages token unchanged')
           base='https://api.cloudflare.com/client/v4/accounts/'+account
@@ -47,7 +47,7 @@ jobs:
           db=next((x for x in inventory.get('result',[]) if x.get('name')=='tb-admin-reporting'),None)
           if not db:raise SystemExit('REGISTRY_ACCESS_UNAVAILABLE: Work reporting database not listed')
           try:
-              query=call('/d1/database/'+db['uuid']+'/query',{'sql':"SELECT service_id,cf_project,status FROM services WHERE status != 'verification_archived'"})
+              query=call('/d1/database/'+db['uuid']+'/query',{'sql':"SELECT service_id,canonical_url,cf_project,status FROM services WHERE status != 'verification_archived'"})
           except urllib.error.HTTPError as ex:
               raise SystemExit('REGISTRY_ACCESS_UNAVAILABLE: query HTTP '+str(ex.code))
           if not query.get('success'):raise SystemExit('REGISTRY_QUERY_FAILED')
@@ -55,6 +55,17 @@ jobs:
           registered={r['cf_project'] for r in rows if r.get('status')!='verification_archived'}
           wanted={'tb-'+x for x in json.loads(os.environ['EXPECTED'])}
           missing=wanted-registered
+          def safe_url(value):
+              try:
+                  u=urllib.parse.urlsplit(value)
+                  return u.scheme=='https' and not u.username and not u.password and not u.query and not u.fragment and (u.hostname=='abreda.com' or u.hostname.endswith('.abreda.com') or re.fullmatch(r'(tb-[a-z0-9-]+|my-daily-life)\.pages\.dev',u.hostname or ''))
+              except (ValueError,AttributeError):return False
+          for row in rows:
+              url=row.get('canonical_url','')
+              if safe_url(url):
+                  print('PUBLIC_SERVICE:',json.dumps({k:row.get(k) for k in ('canonical_url','cf_project','status')},ensure_ascii=True))
+          duplicate_urls=len(rows)-len({r['canonical_url'] for r in rows})
+          print('DUPLICATE_CANONICAL_URLS:',duplicate_urls)
           print('ACTIVE_LEDGER_SERVICE_COUNT:',len(rows))
           print('DUPLICATE_SERVICE_IDS:',len(rows)-len({r['service_id'] for r in rows}))
           print('EXPECTED_NEW_PUBLIC_SITES:',len(wanted))
@@ -62,11 +73,41 @@ jobs:
           print('MISSING_PROJECT_NAMES:',','.join(sorted(missing)) or 'NONE')
           state=call('/d1/database/'+db['uuid']+'/query',{'sql':'SELECT source,last_check_at,status FROM report_sync ORDER BY source'})
           if not state.get('success'):raise SystemExit('SYNC_STATUS_QUERY_FAILED')
-          for row in (state.get('result') or [{}])[0].get('results',[]):
+          sync_rows=(state.get('result') or [{}])[0].get('results',[])
+          sync_failures=[]
+          for row in sync_rows:
               print('SYNC_SOURCE_STATUS:',json.dumps({k:row.get(k) for k in ('source','last_check_at','status')},ensure_ascii=True))
+              source=row.get('source')
+              if source in ('CATALOG','GSC'):
+                  try:
+                      checked=datetime.datetime.fromisoformat(row['last_check_at'].replace('Z','+00:00'))
+                      if checked.tzinfo is None:checked=checked.replace(tzinfo=datetime.timezone.utc)
+                      age=(datetime.datetime.now(datetime.timezone.utc)-checked).total_seconds()
+                      limit=900 if source=='CATALOG' else 32400
+                      if age<0 or age>limit or row.get('status') not in ('ok','no_rows'):sync_failures.append(source)
+                  except (KeyError,ValueError,TypeError):sync_failures.append(source)
+          for source in ('CATALOG','GSC'):
+              if not any(r.get('source')==source for r in sync_rows):sync_failures.append(source)
+          metrics=call('/d1/database/'+db['uuid']+'/query',{'sql':"SELECT date,page_url,clicks,impressions FROM gsc_metrics WHERE date >= date('now','-28 days') AND page_url != '__PROPERTY__' ORDER BY date DESC,page_url"})
+          if not metrics.get('success'):raise SystemExit('GSC_METRICS_QUERY_FAILED')
+          metric_rows=(metrics.get('result') or [{}])[0].get('results',[])
+          grouped={}
+          for metric in metric_rows:
+              url=metric.get('page_url','')
+              if not safe_url(url):continue
+              item=grouped.setdefault(url,{'clicks':0,'impressions':0,'firstDate':metric['date'],'lastDate':metric['date'],'rows':0})
+              item['clicks']+=metric['clicks'];item['impressions']+=metric['impressions'];item['rows']+=1
+              item['firstDate']=min(item['firstDate'],metric['date']);item['lastDate']=max(item['lastDate'],metric['date'])
+          for url,item in sorted(grouped.items()):print('GSC_STORED_PAGE_METRICS:',json.dumps({'url':url,**item},ensure_ascii=True))
+          print('GSC_STORED_PAGE_COUNT:',len(grouped))
+          print('GSC_NO_ROW_MEANING: no stored page row is UNKNOWN, not zero traffic or confirmed non-indexing')
+          print('SYNC_STALE_OR_ERROR_SOURCES:',','.join(sorted(set(sync_failures))) or 'NONE')
+          print('D1_READ_TOKEN_EXPIRES_ON:',verified.get('result',{}).get('expires_on') or 'not_provided')
           print('GOOGLE_LIVE_OAUTH_VALIDITY: NOT_VERIFIED_BY_DATABASE_SNAPSHOT')
           print('SITEMAP_SUBMISSION_STATUS: NOT_VERIFIED')
           print('NAVER_CONNECTION_STATUS: NOT_VERIFIED')
           if missing:raise SystemExit('REGISTRY_SYNC_NOT_COMPLETE')
+          if duplicate_urls:raise SystemExit('DUPLICATE_CANONICAL_URLS_FOUND')
+          if sync_failures:raise SystemExit('SYNC_SOURCE_STALE_OR_ERROR')
           print('WORK_ADMIN_REGISTRY_SYNC_VERIFIED')
           PY
