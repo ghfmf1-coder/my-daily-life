@@ -1,0 +1,96 @@
+name: Work twenty standalone preview sites
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'work-sites/**'
+      - '.github/workflows/work-twenty-apps.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: work-twenty-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Static HTML and embedded JS checks
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import subprocess,tempfile
+          sites=["lease-registry-diff","webtoon-preflight","option-combinations","move-evidence","exam-variants","epub-preflight","silence-finder","photo-contact-sheet","survey-review","question-similarity","event-seating","photo-duplicates","audio-quality","detail-image-review","moving-boxes","tournament-maker","trip-supplies","shotlist-maker","show-cues","dst-embroidery"]
+          for name in sites:
+              path=Path('work-sites')/name/'public/index.html'
+              source=path.read_text(encoding='utf-8')
+              assert '<html lang="ko">' in source and '<meta name="robots" content="noindex,nofollow">' in source
+              assert '<script>' in source and '</script>' in source
+              assert 'async function analyze(f)' in source
+              script=source.split('<script>',1)[1].split('</script>',1)[0]
+              with tempfile.NamedTemporaryFile('w',suffix='.js') as output:
+                  output.write(script);output.flush()
+                  subprocess.run(['node','--check',output.name],check=True)
+              print('PASSED',name)
+          PY
+  deploy:
+    needs: inspect
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        site: ["lease-registry-diff","webtoon-preflight","option-combinations","move-evidence","exam-variants","epub-preflight","silence-finder","photo-contact-sheet","survey-review","question-similarity","event-seating","photo-duplicates","audio-quality","detail-image-review","moving-boxes","tournament-maker","trip-supplies","shotlist-maker","show-cues","dst-embroidery"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Cloudflare token prerequisite
+        env:
+          ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          test -n "$ID" && test -n "$TOKEN"
+      - name: Create isolated project only if absent
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          SITE: ${{ matrix.site }}
+        run: |
+          set -euo pipefail
+          BASE="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects"
+          PROJECT="tb-$SITE"
+          CODE=$(curl -sS -o /tmp/cf.json -w '%{http_code}' -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$BASE/$PROJECT")
+          if [ "$CODE" = "404" ]; then
+            curl -fsS -X POST "$BASE" -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H 'Content-Type: application/json' --data "{\"name\":\"$PROJECT\",\"production_branch\":\"main\"}" > /tmp/cf-created.json
+            python3 -c 'import json; assert json.load(open("/tmp/cf-created.json"))["success"]'
+          elif [ "$CODE" = "200" ]; then
+            python3 -c 'import json,os; x=json.load(open("/tmp/cf.json")); assert x["success"] and x["result"]["name"]=="tb-"+os.environ["SITE"]; assert (x["result"].get("source") or {}).get("type")!="github"'
+          else
+            echo "Cloudflare inspection HTTP $CODE"; exit 1
+          fi
+      - name: Deploy preview to isolated Cloudflare Pages production branch
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          SITE: ${{ matrix.site }}
+        run: npx --yes wrangler@4 pages deploy "work-sites/$SITE/public" --project-name "tb-$SITE" --branch main --commit-hash "$GITHUB_SHA"
+      - name: Smoke-check actual deployed page
+        env:
+          SITE: ${{ matrix.site }}
+        run: |
+          set -euo pipefail
+          for n in {1..10}; do
+            if curl -fsSL --max-time 15 "https://tb-$SITE.pages.dev/" -o /tmp/live.html &&
+               grep -q "async function analyze(f)" /tmp/live.html; then
+              echo "PASS: https://tb-$SITE.pages.dev/"
+              exit 0
+            fi
+            sleep 10
+          done
+          exit 1
