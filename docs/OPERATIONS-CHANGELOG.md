@@ -51,3 +51,6 @@
 - 03684db19cecfcaab6e72bbf47c626d9b43f3702: 정확한 API 활성화 요구를 수집하기 위한 idempotent 재실행 요청.
 - 9bef9734f468c21130c92f7174d3f92e7b816d03: audit/setup 신원 교차 사용 거부 검사 추가·통과.
 - 사용자 지침에 따라 루트 AGENTS.md, CURRENT-STATE.md, 실행 안내, 변경 이력을 함께 저장했습니다.
+
+- 활성화 진단 실행 39799853704에서 Google이 기존 프로젝트 376649321415의 Site Verification API 활성화 주소를 반환했습니다. 현재 상태 문서에 정확한 주소를 보존했습니다.
+- 후속 감사 39799411215의 Google 응답에서 STL·시계 사이트맵이 실제 다운로드됐고 isPending=false, errors=0, warnings=0인 것을 확인했습니다. 홈페이지 색인은 여전히 NEUTRAL로 보존했습니다.
