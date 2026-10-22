@@ -58,7 +58,7 @@ async function unprotect(link:Record<string,string>){
   const key=await cryptoKey(un64(link.encryption_salt),["decrypt"]);
   return d.decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:un64(link.encryption_iv) as BufferSource},key,un64(link.encrypted_refresh) as BufferSource));
 }
-async function access(ownerId:string){
+async function access(ownerId:string,onScopes?:(scopes:string[]|null)=>void){
   const rows=await db("toolbox_google_ads_connections?select=encrypted_refresh,encryption_iv,encryption_salt&owner_id=eq."+encodeURIComponent(ownerId));
   if(!Array.isArray(rows)||rows.length!==1)throw Error("google_not_connected");
   const refresh=await unprotect(rows[0]);
@@ -67,6 +67,7 @@ async function access(ownerId:string){
   if(!r.ok)throw Error("google_refresh_failed");
   const result=await r.json();
   if(!result.access_token)throw Error("google_refresh_failed");
+  if(onScopes)onScopes(typeof result.scope==="string"?result.scope.split(/\s+/).filter(Boolean):null);
   return result.access_token as string;
 }
 async function listCustomers(ownerId:string){
@@ -86,7 +87,7 @@ async function reportingJob(req:Request){
  const rows=await db('toolbox_reporting_job_keys?select=key_hash&key_name=eq.worker-reporting&key_hash=eq.'+hash);
  return Array.isArray(rows)&&rows.length===1;
 }
-async function reportingAccess(){return access(REPORTING_OWNER)}
+async function reportingAccess(onScopes?:(scopes:string[]|null)=>void){return access(REPORTING_OWNER,onScopes)}
 async function googleRead(token:string,url:string,body?:unknown){
  const r=await fetch(url,{method:body===undefined?'GET':'POST',headers:{Authorization:'Bearer '+token,...(body===undefined?{}:{'content-type':'application/json'})},...(body===undefined?{}:{body:JSON.stringify(body)}),signal:AbortSignal.timeout(18000)});
  const data=await r.json().catch(()=>({}));
@@ -163,7 +164,7 @@ async function githubReporting(req:Request){
   urls=[...new Set(input.urls)] as string[];
   if(urls.some(value=>typeof value!=='string'||!relevantPage(value)||new URL(value).search||new URL(value).hash||value.length>1000))throw Error();
  }catch{return reply({error:'invalid_site_urls'},400)}
- let token:string;try{token=await reportingAccess()}catch{return reply({status:'oauth_refresh_failed',sites:[]},503)}
+ let token:string,grantedScopes:string[]|null=null;try{token=await reportingAccess(scopes=>{grantedScopes=scopes})}catch{return reply({status:'oauth_refresh_failed',sites:[]},503)}
  let available:any[];try{
   const data=await googleRead(token,'https://www.googleapis.com/webmasters/v3/sites');
   available=(data.siteEntry||[]).filter((s:any)=>s.permissionLevel!=='siteUnverifiedUser'&&(s.siteUrl==='sc-domain:abreda.com'||relevantPage(s.siteUrl)));
@@ -195,7 +196,8 @@ async function githubReporting(req:Request){
  }));
  const end=new Date(Date.now()-3*86400000).toISOString().slice(0,10),start=new Date(Date.now()-27*86400000).toISOString().slice(0,10);
  const report=await reportingData(start,end);
- return reply({status:'ok',generatedAt:new Date().toISOString(),sites:output,gsc:report.gsc,start,end,
+ const scopes=grantedScopes as string[]|null;
+ return reply({status:'ok',capabilities:{scopeMetadataAvailable:scopes!==null,searchConsoleManagement:scopes?scopes.includes('https://www.googleapis.com/auth/webmasters'):null,newSiteVerification:scopes?(scopes.includes('https://www.googleapis.com/auth/siteverification.verify_only')||scopes.includes('https://www.googleapis.com/auth/siteverification')):null},generatedAt:new Date().toISOString(),sites:output,gsc:report.gsc,start,end,
   sitemapSubmission:'read_only_scope_no_submission_attempted',naver:'not_connected_to_this_bridge',
   inspectionMeaning:'Google indexed-version report for the supplied URL, not a live test or whole-site indexing guarantee'});
 }
