@@ -141,7 +141,7 @@ async function reportingRoute(req:Request,u:URL,route:string){
   const hash=b64(new Uint8Array(await crypto.subtle.digest('SHA-256',encoder.encode(verifier))));
   await db('toolbox_google_ads_oauth_flows','POST',{state_hash:await sha(state),owner_id:REPORTING_OWNER,code_verifier:verifier,expires_at:new Date(Date.now()+10*60000).toISOString()});
   const auth=new URL('https://accounts.google.com/o/oauth2/v2/auth');
-  Object.entries({client_id:clientId(),redirect_uri:CALLBACK,response_type:'code',scope:REPORTING_SCOPES.join(' '),access_type:'offline',prompt:'consent',include_granted_scopes:'true',state,code_challenge:hash,code_challenge_method:'S256'}).forEach(([k,v])=>auth.searchParams.set(k,v));
+  Object.entries({client_id:clientId(),redirect_uri:CALLBACK,response_type:'code',scope:[...REPORTING_SCOPES,'https://www.googleapis.com/auth/webmasters','https://www.googleapis.com/auth/siteverification.verify_only'].join(' '),access_type:'offline',prompt:'consent',include_granted_scopes:'true',state,code_challenge:hash,code_challenge_method:'S256'}).forEach(([k,v])=>auth.searchParams.set(k,v));
   return reply({authorizationUrl:auth.toString()});
  }
  if(!admin&&!await reportingJob(req))return reply({error:'not_authorized'},401);
