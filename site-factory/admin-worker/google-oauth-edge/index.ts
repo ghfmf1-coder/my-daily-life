@@ -218,7 +218,7 @@ async function githubSetup(req:Request){
  async function api(url:string,method='GET',body?:unknown){
   const r=await fetch(url,{method,headers:{Authorization:'Bearer '+token,...(body===undefined?{}:{'content-type':'application/json'})},...(body===undefined?{}:{body:JSON.stringify(body)}),signal:AbortSignal.timeout(20000)});
   const data=await r.json().catch(()=>({}));
-  if(!r.ok){const error:any=new Error('google_request_failed');error.httpStatus=r.status;error.apiStatus=String(data.error?.status||'UNKNOWN').replace(/[^A-Z_]/g,'').slice(0,80);error.serviceDisabled=(data.error?.details||[]).some((d:any)=>d.reason==='SERVICE_DISABLED');throw error}
+  if(!r.ok){const error:any=new Error('google_request_failed');error.httpStatus=r.status;error.apiStatus=String(data.error?.status||'UNKNOWN').replace(/[^A-Z_]/g,'').slice(0,80);error.serviceDisabled=(data.error?.details||[]).some((d:any)=>d.reason==='SERVICE_DISABLED');const activation=(data.error?.details||[]).map((d:any)=>d.metadata?.activationUrl).find((v:any)=>{try{const u=new URL(v);return u.protocol==='https:'&&['console.developers.google.com','console.cloud.google.com'].includes(u.hostname)&&u.pathname.includes('siteverification.googleapis.com')}catch{return false}});error.activationUrl=activation||null;throw error}
   return data;
  }
  let properties:any[];
@@ -248,7 +248,7 @@ async function githubSetup(req:Request){
      await api('https://www.googleapis.com/webmasters/v3/sites/'+encodeURIComponent(existing.siteUrl)+'/sitemaps/'+encodeURIComponent(sitemap),'PUT');
      rows[i]={url,status:'submitted',sitemap};
     }
-   }catch(error){const e=error as any;rows[i]={url,status:'error',httpStatus:e.httpStatus||null,apiStatus:e.apiStatus||'REQUEST_FAILED',serviceDisabled:!!e.serviceDisabled}}
+   }catch(error){const e=error as any;rows[i]={url,status:'error',httpStatus:e.httpStatus||null,apiStatus:e.apiStatus||'REQUEST_FAILED',serviceDisabled:!!e.serviceDisabled,activationUrl:e.activationUrl||null}}
   }
  }));
  return reply({action,generatedAt:new Date().toISOString(),rows});
