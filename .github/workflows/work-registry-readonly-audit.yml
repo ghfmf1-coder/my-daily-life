@@ -1,0 +1,49 @@
+name: Read-only verify Work registry coverage
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/work-registry-readonly-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read Cloudflare D1 service inventory without updating records
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          EXPECTED: '["shipping-audit","invoice-reconcile","purchase-three-way","class-schedule-check","inventory-diff","certificate-batch","pdf-preflight","static-site-check","video-delivery-check","svg-laser-check","lease-registry-diff","webtoon-preflight","option-combinations","move-evidence","exam-variants","epub-preflight","silence-finder","photo-contact-sheet","survey-review","question-similarity","event-seating","photo-duplicates","audio-quality","detail-image-review","moving-boxes","tournament-maker","trip-supplies","shotlist-maker","show-cues","dst-embroidery"]'
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error
+          account=os.environ['CLOUDFLARE_ACCOUNT_ID'];token=os.environ['CLOUDFLARE_API_TOKEN']
+          base='https://api.cloudflare.com/client/v4/accounts/'+account
+          def call(path,payload=None):
+              body=json.dumps(payload).encode() if payload is not None else None
+              req=urllib.request.Request(base+path,data=body,headers={'Authorization':'Bearer '+token,'Content-Type':'application/json','User-Agent':'Toolbox-Readonly-Audit'},method='POST' if payload is not None else 'GET')
+              with urllib.request.urlopen(req,timeout=25) as resp:return json.loads(resp.read())
+          try:
+              inventory=call('/d1/database')
+          except urllib.error.HTTPError as ex:
+              raise SystemExit('REGISTRY_ACCESS_UNAVAILABLE: D1 list HTTP '+str(ex.code))
+          if not inventory.get('success'):raise SystemExit('REGISTRY_ACCESS_UNAVAILABLE: D1 listing rejected')
+          db=next((x for x in inventory.get('result',[]) if x.get('name')=='tb-admin-reporting'),None)
+          if not db:raise SystemExit('REGISTRY_ACCESS_UNAVAILABLE: Work reporting database not listed')
+          try:
+              query=call('/d1/database/'+db['uuid']+'/query',{'sql':'SELECT cf_project,status FROM services WHERE cf_project IS NOT NULL'})
+          except urllib.error.HTTPError as ex:
+              raise SystemExit('REGISTRY_ACCESS_UNAVAILABLE: query HTTP '+str(ex.code))
+          if not query.get('success'):raise SystemExit('REGISTRY_QUERY_FAILED')
+          rows=(query.get('result') or [{}])[0].get('results') or []
+          registered={r['cf_project'] for r in rows if r.get('status')!='verification_archived'}
+          wanted={'tb-'+x for x in json.loads(os.environ['EXPECTED'])}
+          missing=wanted-registered
+          print('EXPECTED_NEW_PUBLIC_SITES:',len(wanted))
+          print('REGISTERED_NEW_PUBLIC_SITES:',len(wanted-missing))
+          print('MISSING_PROJECT_NAMES:',','.join(sorted(missing)) or 'NONE')
+          if missing:raise SystemExit('REGISTRY_SYNC_NOT_COMPLETE')
+          print('WORK_ADMIN_REGISTRY_SYNC_VERIFIED')
+          PY
