@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-22T12:32:44+00:00",
-  "status": "fail",
+  "checkedAt": "2026-10-22T12:39:26+00:00",
+  "status": "pass",
   "summary": {
     "sites": 24,
-    "sitePassed": 17,
+    "sitePassed": 24,
     "siteWarnings": 0,
-    "siteFailed": 7,
+    "siteFailed": 0,
     "browserPassed": 11,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 46
+    "issues": 0
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 269ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 223ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 146ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 213ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -320,12 +320,12 @@
       "name": "중고 카메라 렌즈 검수",
       "url": "https://tb-camera-lens-check.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 156ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -334,8 +334,8 @@
         },
         {
           "check": "meta_description_ko",
-          "status": "fail",
-          "detail": "렌즈 외관과 AF, 조리개, 촬영 테스트 결과를 기록합니다"
+          "status": "pass",
+          "detail": "중고 카메라 렌즈의 외관, 자동초점 작동, 조리개 움직임과 테스트 촬영 결과를 항목별로 기록해 거래 전 확인표를 만듭니다."
         },
         {
           "check": "html_lang_ko",
@@ -349,23 +349,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://camera-lens-check.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://camera-lens-check.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
-          "detail": "https://camera-lens-check.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 220ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -389,18 +389,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "https://camera-lens-check.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://camera-lens-check.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "https://camera-lens-check.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -415,7 +415,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 81 bytes"
+          "detail": "HTTP 200, 83 bytes"
         },
         {
           "check": "robots_publicity",
@@ -425,25 +425,16 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 237 bytes"
+          "detail": "HTTP 200, 241 bytes"
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         }
       ],
       "warnings": [],
-      "failures": [
-        "meta_description_ko: 렌즈 외관과 AF, 조리개, 촬영 테스트 결과를 기록합니다",
-        "canonical_ko: https://camera-lens-check.abreda.com/",
-        "hreflang_ko_ko: https://camera-lens-check.abreda.com/",
-        "hreflang_ko_en: https://camera-lens-check.abreda.com/en/",
-        "canonical_en: https://camera-lens-check.abreda.com/en/",
-        "hreflang_en_ko: https://camera-lens-check.abreda.com/",
-        "hreflang_en_en: https://camera-lens-check.abreda.com/en/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "card-grading-lab",
@@ -455,7 +446,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 258ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -495,7 +486,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 156ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -571,12 +562,12 @@
       "name": "코믹북·만화책 상태 검수",
       "url": "https://tb-comic-condition-lab.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 202ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 217ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -585,8 +576,8 @@
         },
         {
           "check": "meta_description_ko",
-          "status": "fail",
-          "detail": "책등, 표지, 페이지 손상과 누락을 검수하고 보고서를 생성합니다"
+          "status": "pass",
+          "detail": "중고 코믹북과 만화책의 책등, 표지, 페이지 손상, 낙장 여부를 점검하고 거래 전 상태 확인 보고서를 생성합니다."
         },
         {
           "check": "html_lang_ko",
@@ -600,23 +591,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://comic-condition-lab.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://comic-condition-lab.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
-          "detail": "https://comic-condition-lab.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 156ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -640,18 +631,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "https://comic-condition-lab.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://comic-condition-lab.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "https://comic-condition-lab.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -666,7 +657,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 83 bytes"
+          "detail": "HTTP 200, 85 bytes"
         },
         {
           "check": "robots_publicity",
@@ -676,25 +667,16 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 241 bytes"
+          "detail": "HTTP 200, 245 bytes"
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         }
       ],
       "warnings": [],
-      "failures": [
-        "meta_description_ko: 책등, 표지, 페이지 손상과 누락을 검수하고 보고서를 생성합니다",
-        "canonical_ko: https://comic-condition-lab.abreda.com/",
-        "hreflang_ko_ko: https://comic-condition-lab.abreda.com/",
-        "hreflang_ko_en: https://comic-condition-lab.abreda.com/en/",
-        "canonical_en: https://comic-condition-lab.abreda.com/en/",
-        "hreflang_en_ko: https://comic-condition-lab.abreda.com/",
-        "hreflang_en_en: https://comic-condition-lab.abreda.com/en/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "csv-column-extractor",
@@ -706,7 +688,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 260ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -746,7 +728,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 142ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -827,7 +809,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -867,7 +849,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 142ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -948,7 +930,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 190ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 320ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -988,7 +970,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 191ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 183ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1099,7 +1081,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 191ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 247ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1165,12 +1147,12 @@
       "name": "보석·원석 외관 검수",
       "url": "https://tb-gem-photo-inspection.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 219ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1194,23 +1176,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://gem-photo-inspection.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://gem-photo-inspection.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
-          "detail": "https://gem-photo-inspection.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1234,18 +1216,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "https://gem-photo-inspection.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://gem-photo-inspection.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "https://gem-photo-inspection.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -1260,7 +1242,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 84 bytes"
+          "detail": "HTTP 200, 86 bytes"
         },
         {
           "check": "robots_publicity",
@@ -1270,24 +1252,16 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 243 bytes"
+          "detail": "HTTP 200, 247 bytes"
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_ko: https://gem-photo-inspection.abreda.com/",
-        "hreflang_ko_ko: https://gem-photo-inspection.abreda.com/",
-        "hreflang_ko_en: https://gem-photo-inspection.abreda.com/en/",
-        "canonical_en: https://gem-photo-inspection.abreda.com/en/",
-        "hreflang_en_ko: https://gem-photo-inspection.abreda.com/",
-        "hreflang_en_en: https://gem-photo-inspection.abreda.com/en/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "jsonl-validator",
@@ -1299,7 +1273,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 237ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1339,7 +1313,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 168ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1415,12 +1389,12 @@
       "name": "키보드 키 입력 진단실",
       "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 139ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1429,8 +1403,8 @@
         },
         {
           "check": "meta_description_ko",
-          "status": "fail",
-          "detail": "키 입력을 시각화하고 반복 입력 기록을 생성하는 브라우저 키보드 검사 도구"
+          "status": "pass",
+          "detail": "브라우저에서 키보드의 키 입력 반응과 반복 입력을 시각적으로 확인하고, 확인한 키의 테스트 기록을 정리하는 무료 진단 도구입니다."
         },
         {
           "check": "html_lang_ko",
@@ -1444,23 +1418,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://keyboard-switch-diagnostics.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://keyboard-switch-diagnostics.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
-          "detail": "https://keyboard-switch-diagnostics.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1484,18 +1458,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "https://keyboard-switch-diagnostics.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://keyboard-switch-diagnostics.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "https://keyboard-switch-diagnostics.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -1510,7 +1484,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 91 bytes"
+          "detail": "HTTP 200, 93 bytes"
         },
         {
           "check": "robots_publicity",
@@ -1520,25 +1494,16 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 257 bytes"
+          "detail": "HTTP 200, 261 bytes"
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         }
       ],
       "warnings": [],
-      "failures": [
-        "meta_description_ko: 키 입력을 시각화하고 반복 입력 기록을 생성하는 브라우저 키보드 검사 도구",
-        "canonical_ko: https://keyboard-switch-diagnostics.abreda.com/",
-        "hreflang_ko_ko: https://keyboard-switch-diagnostics.abreda.com/",
-        "hreflang_ko_en: https://keyboard-switch-diagnostics.abreda.com/en/",
-        "canonical_en: https://keyboard-switch-diagnostics.abreda.com/en/",
-        "hreflang_en_ko: https://keyboard-switch-diagnostics.abreda.com/",
-        "hreflang_en_en: https://keyboard-switch-diagnostics.abreda.com/en/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "manuscript-lens",
@@ -1550,7 +1515,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 203ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 229ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1590,7 +1555,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 289ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 162ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1691,7 +1656,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 151ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 319ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1731,7 +1696,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1827,12 +1792,12 @@
       "name": "스니커즈 중고 상태 검수",
       "url": "https://tb-sneaker-condition-lab.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 210ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1856,23 +1821,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://sneaker-condition-lab.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-sneaker-condition-lab.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://sneaker-condition-lab.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-sneaker-condition-lab.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
-          "detail": "https://sneaker-condition-lab.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-sneaker-condition-lab.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 136ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1896,18 +1861,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "https://sneaker-condition-lab.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-sneaker-condition-lab.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://sneaker-condition-lab.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-sneaker-condition-lab.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "https://sneaker-condition-lab.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-sneaker-condition-lab.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -1922,7 +1887,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 85 bytes"
+          "detail": "HTTP 200, 87 bytes"
         },
         {
           "check": "robots_publicity",
@@ -1932,24 +1897,16 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 245 bytes"
+          "detail": "HTTP 200, 249 bytes"
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_ko: https://sneaker-condition-lab.abreda.com/",
-        "hreflang_ko_ko: https://sneaker-condition-lab.abreda.com/",
-        "hreflang_ko_en: https://sneaker-condition-lab.abreda.com/en/",
-        "canonical_en: https://sneaker-condition-lab.abreda.com/en/",
-        "hreflang_en_ko: https://sneaker-condition-lab.abreda.com/",
-        "hreflang_en_en: https://sneaker-condition-lab.abreda.com/en/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "srt-sdh-cleaner",
@@ -1961,7 +1918,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 316ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2001,7 +1958,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 164ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2082,7 +2039,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 193ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 215ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2122,7 +2079,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2203,7 +2160,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 172ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2243,7 +2200,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 161ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 179ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2370,7 +2327,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 189ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2410,7 +2367,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 243ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2526,12 +2483,12 @@
       "name": "중고차 구매 전 검수실",
       "url": "https://tb-used-car-inspection.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 136ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2555,23 +2512,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "https://used-car-inspection.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-used-car-inspection.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "https://used-car-inspection.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-used-car-inspection.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
-          "detail": "https://used-car-inspection.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-used-car-inspection.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 374ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2595,18 +2552,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "https://used-car-inspection.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-used-car-inspection.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "https://used-car-inspection.abreda.com/"
+          "status": "pass",
+          "detail": "https://tb-used-car-inspection.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "https://used-car-inspection.abreda.com/en/"
+          "status": "pass",
+          "detail": "https://tb-used-car-inspection.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -2621,7 +2578,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 83 bytes"
+          "detail": "HTTP 200, 85 bytes"
         },
         {
           "check": "robots_publicity",
@@ -2631,36 +2588,28 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 241 bytes"
+          "detail": "HTTP 200, 245 bytes"
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_ko: https://used-car-inspection.abreda.com/",
-        "hreflang_ko_ko: https://used-car-inspection.abreda.com/",
-        "hreflang_ko_en: https://used-car-inspection.abreda.com/en/",
-        "canonical_en: https://used-car-inspection.abreda.com/en/",
-        "hreflang_en_ko: https://used-car-inspection.abreda.com/",
-        "hreflang_en_en: https://used-car-inspection.abreda.com/en/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "vinyl-condition-lab",
       "name": "LP 레코드 상태 검수",
       "url": "https://tb-vinyl-condition-lab.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 184ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2669,8 +2618,8 @@
         },
         {
           "check": "meta_description_ko",
-          "status": "fail",
-          "detail": "LP 레코드 표면과 재생 상태를 별도로 기록하고 거래용 검수 보고서를 만듭니다."
+          "status": "pass",
+          "detail": "LP 레코드의 표면 흠집과 재생 상태를 구분해 기록하고, 중고 거래 또는 개인 소장품 관리에 사용할 상태 확인 보고서를 만듭니다."
         },
         {
           "check": "html_lang_ko",
@@ -2700,7 +2649,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2769,9 +2718,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "meta_description_ko: LP 레코드 표면과 재생 상태를 별도로 기록하고 거래용 검수 보고서를 만듭니다."
-      ]
+      "failures": []
     },
     {
       "slug": "vtt-cleaner",
@@ -2783,7 +2730,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 193ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 216ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2823,7 +2770,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 204ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2904,7 +2851,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 202ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 246ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2944,7 +2891,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 136ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3023,7 +2970,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 361
+      "elapsedMs": 405
     },
     {
       "name": "English plot planner",
@@ -3031,7 +2978,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 361
+      "elapsedMs": 344
     },
     {
       "name": "Korean manuscript",
@@ -3039,7 +2986,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 292
+      "elapsedMs": 364
     },
     {
       "name": "English manuscript",
@@ -3047,7 +2994,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 329
+      "elapsedMs": 379
     },
     {
       "name": "Korean CSV merger",
@@ -3055,7 +3002,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 369
+      "elapsedMs": 404
     },
     {
       "name": "English CSV merger",
@@ -3063,7 +3010,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 409
+      "elapsedMs": 426
     },
     {
       "name": "Haru English landing",
@@ -3071,7 +3018,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 207
+      "elapsedMs": 251
     },
     {
       "name": "Haru English app",
@@ -3079,7 +3026,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 297
+      "elapsedMs": 257
     },
     {
       "name": "Admin authentication gate",
@@ -3087,7 +3034,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 747
+      "elapsedMs": 424
     },
     {
       "name": "Toolbox hub search",
@@ -3095,7 +3042,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 303
+      "elapsedMs": 269
     },
     {
       "name": "Technical deployment smoke",
@@ -3103,195 +3050,10 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 293
+      "elapsedMs": 201
     }
   ],
-  "issues": [
-    {
-      "scope": "camera-lens-check",
-      "details": "meta_description_ko: 렌즈 외관과 AF, 조리개, 촬영 테스트 결과를 기록합니다"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "canonical_ko: https://camera-lens-check.abreda.com/"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "hreflang_ko_ko: https://camera-lens-check.abreda.com/"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "hreflang_ko_en: https://camera-lens-check.abreda.com/en/"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "canonical_en: https://camera-lens-check.abreda.com/en/"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "hreflang_en_ko: https://camera-lens-check.abreda.com/"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "hreflang_en_en: https://camera-lens-check.abreda.com/en/"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "meta_description_ko: 책등, 표지, 페이지 손상과 누락을 검수하고 보고서를 생성합니다"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "canonical_ko: https://comic-condition-lab.abreda.com/"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "hreflang_ko_ko: https://comic-condition-lab.abreda.com/"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "hreflang_ko_en: https://comic-condition-lab.abreda.com/en/"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "canonical_en: https://comic-condition-lab.abreda.com/en/"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "hreflang_en_ko: https://comic-condition-lab.abreda.com/"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "hreflang_en_en: https://comic-condition-lab.abreda.com/en/"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "gem-photo-inspection",
-      "details": "canonical_ko: https://gem-photo-inspection.abreda.com/"
-    },
-    {
-      "scope": "gem-photo-inspection",
-      "details": "hreflang_ko_ko: https://gem-photo-inspection.abreda.com/"
-    },
-    {
-      "scope": "gem-photo-inspection",
-      "details": "hreflang_ko_en: https://gem-photo-inspection.abreda.com/en/"
-    },
-    {
-      "scope": "gem-photo-inspection",
-      "details": "canonical_en: https://gem-photo-inspection.abreda.com/en/"
-    },
-    {
-      "scope": "gem-photo-inspection",
-      "details": "hreflang_en_ko: https://gem-photo-inspection.abreda.com/"
-    },
-    {
-      "scope": "gem-photo-inspection",
-      "details": "hreflang_en_en: https://gem-photo-inspection.abreda.com/en/"
-    },
-    {
-      "scope": "gem-photo-inspection",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "meta_description_ko: 키 입력을 시각화하고 반복 입력 기록을 생성하는 브라우저 키보드 검사 도구"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "canonical_ko: https://keyboard-switch-diagnostics.abreda.com/"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "hreflang_ko_ko: https://keyboard-switch-diagnostics.abreda.com/"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "hreflang_ko_en: https://keyboard-switch-diagnostics.abreda.com/en/"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "canonical_en: https://keyboard-switch-diagnostics.abreda.com/en/"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "hreflang_en_ko: https://keyboard-switch-diagnostics.abreda.com/"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "hreflang_en_en: https://keyboard-switch-diagnostics.abreda.com/en/"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "sneaker-condition-lab",
-      "details": "canonical_ko: https://sneaker-condition-lab.abreda.com/"
-    },
-    {
-      "scope": "sneaker-condition-lab",
-      "details": "hreflang_ko_ko: https://sneaker-condition-lab.abreda.com/"
-    },
-    {
-      "scope": "sneaker-condition-lab",
-      "details": "hreflang_ko_en: https://sneaker-condition-lab.abreda.com/en/"
-    },
-    {
-      "scope": "sneaker-condition-lab",
-      "details": "canonical_en: https://sneaker-condition-lab.abreda.com/en/"
-    },
-    {
-      "scope": "sneaker-condition-lab",
-      "details": "hreflang_en_ko: https://sneaker-condition-lab.abreda.com/"
-    },
-    {
-      "scope": "sneaker-condition-lab",
-      "details": "hreflang_en_en: https://sneaker-condition-lab.abreda.com/en/"
-    },
-    {
-      "scope": "sneaker-condition-lab",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "used-car-inspection",
-      "details": "canonical_ko: https://used-car-inspection.abreda.com/"
-    },
-    {
-      "scope": "used-car-inspection",
-      "details": "hreflang_ko_ko: https://used-car-inspection.abreda.com/"
-    },
-    {
-      "scope": "used-car-inspection",
-      "details": "hreflang_ko_en: https://used-car-inspection.abreda.com/en/"
-    },
-    {
-      "scope": "used-car-inspection",
-      "details": "canonical_en: https://used-car-inspection.abreda.com/en/"
-    },
-    {
-      "scope": "used-car-inspection",
-      "details": "hreflang_en_ko: https://used-car-inspection.abreda.com/"
-    },
-    {
-      "scope": "used-car-inspection",
-      "details": "hreflang_en_en: https://used-car-inspection.abreda.com/en/"
-    },
-    {
-      "scope": "used-car-inspection",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "meta_description_ko: LP 레코드 표면과 재생 상태를 별도로 기록하고 거래용 검수 보고서를 만듭니다."
-    }
-  ],
+  "issues": [],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
