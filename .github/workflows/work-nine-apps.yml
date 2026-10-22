@@ -1,0 +1,102 @@
+name: Work toolbox nine site builds and test deployments
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'work-sites/invoice-reconcile/**'
+      - 'work-sites/purchase-three-way/**'
+      - 'work-sites/class-schedule-check/**'
+      - 'work-sites/inventory-diff/**'
+      - 'work-sites/certificate-batch/**'
+      - 'work-sites/pdf-preflight/**'
+      - 'work-sites/static-site-check/**'
+      - 'work-sites/video-delivery-check/**'
+      - 'work-sites/svg-laser-check/**'
+      - '.github/workflows/work-nine-apps.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate all nine apps - HTML and embedded JS syntax
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import subprocess, tempfile
+          slugs=["invoice-reconcile","purchase-three-way","class-schedule-check","inventory-diff","certificate-batch","pdf-preflight","static-site-check","video-delivery-check","svg-laser-check"]
+          for slug in slugs:
+              page=Path('work-sites')/slug/'public/index.html'
+              content=page.read_text()
+              assert '<html lang="ko">' in content and '<meta name="description"' in content
+              assert 'const form=document.getElementById' in content and 'async function analyze(files)' in content
+              assert '<script>' in content and '</script>' in content
+              js=content.split('<script>',1)[1].split('</script>',1)[0]
+              with tempfile.NamedTemporaryFile('w',suffix='.js') as f:
+                  f.write(js);f.flush()
+                  subprocess.run(['node','--check',f.name],check=True)
+              print('SYNTAX_PASS:',slug)
+          PY
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        slug: ["invoice-reconcile","purchase-three-way","class-schedule-check","inventory-diff","certificate-batch","pdf-preflight","static-site-check","video-delivery-check","svg-laser-check"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Require existing Cloudflare Pages secrets
+        env:
+          CF_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: test -n "$CF_ID" && test -n "$CF_TOKEN"
+      - name: Ensure separate Pages project exists and is not Git-integrated
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          SLUG: ${{ matrix.slug }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          NAME="tb-$SLUG"
+          BASE="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects"
+          CODE=$(curl -sS -o /tmp/tool-project.json -w '%{http_code}' -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$BASE/$NAME")
+          if [ "$CODE" = "404" ]; then
+            curl -fsS -X POST "$BASE" -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json" --data "{\"name\":\"$NAME\",\"production_branch\":\"main\"}" > /tmp/tool-created.json
+            python3 -c 'import json; assert json.load(open("/tmp/tool-created.json"))["success"]'
+          elif [ "$CODE" = "200" ]; then
+            python3 -c 'import json,os; d=json.load(open("/tmp/tool-project.json")); assert d["success"] and d["result"]["name"]=="tb-"+os.environ["SLUG"]; assert (d["result"].get("source") or {}).get("type")!="github"'
+          else
+            echo "Pages project inspection failed: HTTP $CODE"; exit 1
+          fi
+      - name: Deploy standalone test site
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          SLUG: ${{ matrix.slug }}
+        run: npx --yes wrangler@4 pages deploy "work-sites/$SLUG/public" --project-name "tb-$SLUG" --branch main --commit-hash "$GITHUB_SHA"
+      - name: Smoke test live deployed site
+        env:
+          SLUG: ${{ matrix.slug }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in {1..10}; do
+            if curl -fsSL --max-time 15 "https://tb-$SLUG.pages.dev/" -o /tmp/tool-live.html &&
+               grep -q 'async function analyze(files)' /tmp/tool-live.html; then
+              echo "LIVE_OK: tb-$SLUG.pages.dev"
+              exit 0
+            fi
+            sleep 10
+          done
+          exit 1
+      - name: Work registry synchronization note
+        run: echo "Existing Work admin Worker monitors successful tb-* Pages production deployments. Verify registry in adminivo.com/next/."
