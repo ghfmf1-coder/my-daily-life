@@ -45,3 +45,7 @@ Settings → Pages → Build and deployment → `GitHub Actions` 선택. 참고:
 Repository Settings → Pages → Source: GitHub Actions를 활성화하면, `main` push시 이 저장소 경로에 맞는 robots/sitemap/canonical을 생성해 배포합니다.
 배포 페이지 `https://ghfmf1-coder.github.io/my-daily-life/`가 실제 열리는지 확인 전에는 사이트 공개 상태가 아닙니다.
 사이트 소유권 확인 전 검색엔진에 등록되었다고 주장하지 않습니다.
+
+## 작은도구함 통합 관제센터 운영
+
+현재 운영 주소는 https://adminivo.com/next/ 입니다. 일반 ChatGPT에서 GitHub 연결로 점검할 때는 [운영 안내](docs/CHATGPT-OPERATIONS.md)를 먼저 읽으세요. [실제 운영 검증 기록](docs/OPS-VERIFICATION-2026-10-22.md)은 확인된 결과와 미확인 항목을 구분합니다.
