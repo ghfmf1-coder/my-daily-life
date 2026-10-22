@@ -17,9 +17,10 @@ permissions:
   id-token: write
 concurrency:
   group: toolbox-google-search-setup
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   reconcile:
+    if: ${{ false }} # Owner paused 2026-10-23; resume only on explicit request
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     steps:
