@@ -4,7 +4,9 @@
 >
 > 마지막 확정 결과: 인증 태그 대상 41곳 모두 운영 페이지 확인, 그중 18곳 소유권 등록·사이트맵 제출 성공. 나머지 23곳은 Google HTTP 429 RESOURCE_EXHAUSTED로 미완료였습니다. 느리게 재시도하도록 보완한 실행 39801465011은 중지 시점 최종 결과 미확인입니다. 재개 시 그 실행의 취소/완료 로그부터 읽고 실제 성공분을 갱신하세요. 서버는 v16입니다. 네이버는 미확인입니다.
 >
-> 재개 절차: 사용자 지시 확인 → 최신 로그 확인 → setup 워크플로 reconcile의 if:false 해제 및 cancel-in-progress:false 복구 → 필요한 경우 요청 파일 갱신. 이미 성공한 사이트를 삭제하거나 처음부터 다시 만들지 마세요.
+> 서버 v17에서도 request.json의 paused가 명시적으로 false인 경우만 setup 쓰기를 허용합니다. 현재 paused:true이며 추가 등록 요청을 차단합니다. 실제 파일은 site-factory/ops/search-setup-request.json입니다. 읽기 감사와 기존 관제센터는 유지합니다.
+>
+> 재개 절차: 사용자 지시 확인 → 최신 로그 확인 → search-setup-request.json의 paused:false 설정 → setup 워크플로 reconcile의 if:false 해제 및 cancel-in-progress:false 복구 → 필요한 경우 요청 파일 갱신. 이미 성공한 사이트를 삭제하거나 처음부터 다시 만들지 마세요.
 
 
 이 파일을 일반 ChatGPT Plus의 첫 진입점으로 사용합니다.
