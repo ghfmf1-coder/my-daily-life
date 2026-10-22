@@ -33,7 +33,7 @@
 | 최초 URL 검사 | 원장 URL 51개 중 10개 속성 접근 가능, PASS 7·NEUTRAL 3, 나머지 41개 속성 접근 불가 | 과거 검증 기록. 최신 응답으로 갱신 필요 |
 | Google 신규 소유권 자동 설정 | 미완료. Google Site Verification API 비활성: HTTP 403 / PERMISSION_DENIED / serviceDisabled=true | https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39799288557 |
 | 신규 사이트 인증 태그 배포 | 위 API 비활성으로 태그 발급 단계가 막혀 이번 실행에서 진행되지 않음 | setup TOKEN 오류 |
-| 기존 누락 사이트맵 | stl-print-check.abreda.com, watch-inspection-lab.abreda.com의 sitemap.xml 실제 제출 응답 확인 | setup SITEMAP status=submitted |
+| 기존 누락 사이트맵 | stl-print-check.abreda.com, watch-inspection-lab.abreda.com의 sitemap.xml 실제 제출 후 Google 재조회에서 isPending=false·errors=0·warnings=0 확인 | setup SITEMAP status=submitted |
 | 사이트맵 제출 후 색인 | 미보장·실제 Google URL Inspection으로 별도 확인 | 자동 제출과 색인 완료 구분 |
 | 네이버 | 기존 계정 현재 등록·인증·제출 상태 미확인 | 아직 외부 계정 인증 단계 필요 |
 
@@ -42,6 +42,12 @@
 Google OAuth 재동의는 완료됐습니다. 동일한 OAuth 재동의를 먼저 반복하지 마세요.
 현재 차단은 OAuth scope 부족이 아니라 기존 Google Cloud 프로젝트의 **Site Verification API 비활성**입니다.
 사용자가 기존 OAuth 앱이 속한 프로젝트에서 이 API를 사용 설정해야 합니다.
+
+Google API가 실제 반환한 활성화 주소:
+https://console.developers.google.com/apis/api/siteverification.googleapis.com/overview?project=376649321415
+
+기존 프로젝트 번호는 376649321415입니다. 새 프로젝트를 만들지 않습니다.
+활성화 요구 확인 실행: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39799853704
 setup TOKEN 오류의 검증된 activationUrl이 있으면 그 링크를 사용하고, 다른 프로젝트나 새 프로젝트를 만들지 않습니다.
 
 사용 설정 이후:
@@ -83,3 +89,14 @@ GitHub Secret 이름: CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_D1_READ_TOKEN, CLOUDFLAR
 여기에 실제 값을 쓰지 않습니다. 사용자에게 채팅으로 값을 보내라고 요구하지 않습니다.
 Google refresh token·client secret은 GitHub에 복사하지 않습니다.
 GitHub OIDC는 감사/설정 각각 별도 audience·정확한 워크플로 경로로 구분됩니다.
+
+## 후속 실제 재조회
+
+https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39799411215 의 실제 Google 조회 로그에서 다음을 확인했습니다.
+
+- Google OAuth와 두 관리 capability 정상 유지.
+- STL 사이트맵 제출 시각 2026-10-22T14:51:07.292Z, Google 다운로드 시각 2026-10-22T14:51:09.575Z.
+- 시계 사이트맵 제출 시각 2026-10-22T14:51:07.371Z, Google 다운로드 시각 2026-10-22T14:51:15.338Z.
+- 두 사이트맵 모두 isPending=false, errors=0, warnings=0.
+- 해당 홈페이지의 Google 색인 보고서는 여전히 NEUTRAL·발견됨-현재 색인 생성되지 않음. 제출 성공을 색인 완료로 바꾸지 않음.
+- 새 소유권 확인은 여전히 Site Verification API 활성화 대기.
