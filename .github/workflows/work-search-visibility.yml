@@ -1,0 +1,55 @@
+name: Verify public indexability - 30 Work tools
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/work-search-visibility.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  search-readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch actual live HTML, robots and sitemap for all 30
+        env:
+          SITE_NAMES: '["audio-quality","certificate-batch","class-schedule-check","detail-image-review","dst-embroidery","epub-preflight","event-seating","exam-variants","inventory-diff","invoice-reconcile","lease-registry-diff","move-evidence","moving-boxes","option-combinations","pdf-preflight","photo-contact-sheet","photo-duplicates","purchase-three-way","question-similarity","shotlist-maker","show-cues","shipping-audit","silence-finder","static-site-check","survey-review","svg-laser-check","tournament-maker","trip-supplies","video-delivery-check","webtoon-preflight"]'
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error,time,xml.etree.ElementTree as ET,re
+          slugs=json.loads(os.environ['SITE_NAMES'])
+          assert len(slugs)==30
+          failed=[]
+          def fetch(url):
+              last=None
+              for i in range(5):
+                  try:
+                      req=urllib.request.Request(url,headers={'User-Agent':'Toolbox-SEO-QA/1.0'})
+                      with urllib.request.urlopen(req,timeout=16) as r:
+                          if r.status!=200:raise RuntimeError('HTTP '+str(r.status))
+                          return r.read(600000).decode('utf-8','replace')
+                  except Exception as e:
+                      last=e;time.sleep(3)
+              raise last
+          for slug in slugs:
+              host=f'https://tb-{slug}.pages.dev/'
+              try:
+                  html=fetch(host)
+                  robots=fetch(host+'robots.txt')
+                  sitemap=fetch(host+'sitemap.xml')
+                  assert re.search(r'<meta\s+name=["\x27]robots["\x27]\s+content=["\x27]index,follow["\x27]',html,re.I), 'missing index follow'
+                  assert 'noindex' not in html.lower().split('</head>')[0], 'noindex in head'
+                  assert f'<link rel="canonical" href="{host}">' in html,'canonical missing or wrong'
+                  assert 'Allow: /' in robots and 'Disallow: /' not in robots, 'robots blocks crawl'
+                  assert host+'sitemap.xml' in robots,'sitemap pointer absent'
+                  root=ET.fromstring(sitemap)
+                  urls=[n.text for n in root.iter() if n.tag.endswith('loc')]
+                  assert host in urls,'canonical not in sitemap'
+                  print('PASS',slug)
+              except Exception as err:
+                  failed.append((slug,str(err)))
+                  print('FAIL',slug,str(err))
+          if failed:
+              raise SystemExit(str(len(failed))+' failed: '+repr(failed))
+          print('ALL_30_SITES_CRAWLABLE_AND_SITEMAPS_VALID')
+          PY
