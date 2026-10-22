@@ -72,6 +72,11 @@ def deploy(item):
     url,project,folder,content=item
     stage=None
     try:
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Toolbox-Verification'}),timeout=15) as response:
+                live=response.read(1500000).decode('utf-8','replace')
+            if 'content="'+content+'"' in live or "content='"+content+"'" in live:return {'url':url,'status':'verification_tag_live'}
+        except (urllib.error.URLError,TimeoutError):pass
         if folder==ROOT:
             stage=Path(tempfile.mkdtemp(prefix='toolbox-root-'))
             for name in git('ls-files').splitlines():
