@@ -152,6 +152,7 @@ jobs:
           data=read_json(urllib.request.Request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-google-ads-oauth/reporting-github-data',data=payload,headers={'Authorization':'Bearer '+identity_token,'Content-Type':'application/json'},method='POST'),timeout=140)
           if data.get('status')!='ok':raise SystemExit('GOOGLE_LIVE_CHECK_FAILED')
           print('GOOGLE_LIVE_OAUTH_AND_SITES_API: OK')
+          print('GOOGLE_GRANTED_CAPABILITIES:',json.dumps(data.get('capabilities',{}),sort_keys=True))
           print('GOOGLE_REPORT_GENERATED_AT:',data.get('generatedAt'))
           for site in data.get('sites',[]):print('GOOGLE_SITE_AUDIT:',json.dumps(site,ensure_ascii=True))
           gsc=data.get('gsc') or {}
