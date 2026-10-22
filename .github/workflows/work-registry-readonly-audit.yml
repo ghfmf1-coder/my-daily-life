@@ -15,6 +15,7 @@ concurrency:
   cancel-in-progress: false
 permissions:
   contents: read
+  id-token: write
 jobs:
   check:
     runs-on: ubuntu-24.04
@@ -86,6 +87,7 @@ jobs:
               url=row.get('canonical_url','')
               if safe_url(url):
                   print('PUBLIC_SERVICE:',json.dumps({k:row.get(k) for k in ('canonical_url','cf_project','status')},ensure_ascii=True))
+          with open('/tmp/toolbox-public-urls.json','w') as output:json.dump({'urls':[r['canonical_url'] for r in rows if safe_url(r.get('canonical_url',''))]},output)
           duplicate_urls=len(rows)-len({r['canonical_url'] for r in rows})
           print('DUPLICATE_CANONICAL_URLS:',duplicate_urls)
           print('ACTIVE_LEDGER_SERVICE_COUNT:',len(rows))
@@ -132,4 +134,35 @@ jobs:
           if duplicate_urls:raise SystemExit('DUPLICATE_CANONICAL_URLS_FOUND')
           if sync_failures:raise SystemExit('SYNC_SOURCE_STALE_OR_ERROR')
           print('WORK_ADMIN_REGISTRY_SYNC_VERIFIED')
+          PY
+      - name: Verify live Google connection ownership sitemaps and indexed URL reports
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error,urllib.parse
+          def read_json(request,timeout=25):
+              try:
+                  with urllib.request.urlopen(request,timeout=timeout) as response:return json.loads(response.read())
+              except urllib.error.HTTPError as error:raise SystemExit('GOOGLE_BRIDGE_HTTP_'+str(error.code))
+              except (TimeoutError,urllib.error.URLError):raise SystemExit('GOOGLE_BRIDGE_NETWORK_UNAVAILABLE')
+          request_url=os.environ['ACTIONS_ID_TOKEN_REQUEST_URL']+'&audience='+urllib.parse.quote('small-toolbox-google-readonly',safe='')
+          identity=read_json(urllib.request.Request(request_url,headers={'Authorization':'Bearer '+os.environ['ACTIONS_ID_TOKEN_REQUEST_TOKEN']}))
+          identity_token=identity.get('value')
+          if not identity_token:raise SystemExit('GITHUB_OIDC_UNAVAILABLE')
+          payload=open('/tmp/toolbox-public-urls.json','rb').read()
+          data=read_json(urllib.request.Request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-google-ads-oauth/reporting-github-data',data=payload,headers={'Authorization':'Bearer '+identity_token,'Content-Type':'application/json'},method='POST'),timeout=140)
+          if data.get('status')!='ok':raise SystemExit('GOOGLE_LIVE_CHECK_FAILED')
+          print('GOOGLE_LIVE_OAUTH_AND_SITES_API: OK')
+          print('GOOGLE_REPORT_GENERATED_AT:',data.get('generatedAt'))
+          for site in data.get('sites',[]):print('GOOGLE_SITE_AUDIT:',json.dumps(site,ensure_ascii=True))
+          gsc=data.get('gsc') or {}
+          print('GOOGLE_LIVE_SEARCH_REPORT_STATUS:',gsc.get('status','unknown'))
+          print('GOOGLE_LIVE_SEARCH_PERIOD:',data.get('start'),data.get('end'))
+          for row in gsc.get('rows',[]):print('GOOGLE_LIVE_PAGE_METRICS:',json.dumps({k:row.get(k) for k in ('date','url','clicks','impressions','property')},ensure_ascii=True))
+          missing=[s['url'] for s in data.get('sites',[]) if s.get('ownership')!='accessible']
+          print('GOOGLE_PROPERTY_ACCESS_MISSING:',json.dumps(missing))
+          print('GOOGLE_SITEMAP_SUBMISSION:',data.get('sitemapSubmission'))
+          print('NAVER_STATUS:',data.get('naver'))
+          print('INDEX_REPORT_LIMITATION:',data.get('inspectionMeaning'))
+          if gsc.get('status') not in ('ok','no_rows'):raise SystemExit('GOOGLE_SEARCH_REPORT_UNAVAILABLE')
+          print('GOOGLE_READONLY_AUDIT_COMPLETED')
           PY
