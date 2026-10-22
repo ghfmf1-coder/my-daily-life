@@ -28,9 +28,9 @@ jobs:
           for name in sites:
               path=Path('work-sites')/name/'public/index.html'
               source=path.read_text(encoding='utf-8')
-              assert '<html lang="ko">' in source and '<meta name="robots" content="noindex,nofollow">' in source
+              assert '<html lang="ko">' in source and '<meta name="robots" content="index,follow">' in source and '<link rel="canonical"' in source
               assert '<script>' in source and '</script>' in source
-              assert 'async function analyze(f)' in source
+              assert 'async function analyze(f)' in source and (path.parent/'robots.txt').read_text().find('Allow: /')>=0 and (path.parent/'sitemap.xml').is_file()
               script=source.split('<script>',1)[1].split('</script>',1)[0]
               with tempfile.NamedTemporaryFile('w',suffix='.js') as output:
                   output.write(script);output.flush()

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tb-moving-boxes.pages.dev/sitemap.xml

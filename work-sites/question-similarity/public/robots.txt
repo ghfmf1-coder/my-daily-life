@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tb-question-similarity.pages.dev/sitemap.xml
