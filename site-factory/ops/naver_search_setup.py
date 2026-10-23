@@ -94,12 +94,12 @@ def main():
     base='https://api.cloudflare.com/client/v4/accounts/'+os.environ['CLOUDFLARE_ACCOUNT_ID']+'/pages/projects'
     aliases={}
     for page in range(1,101):
-        inventory=http(base+'?per_page=100&page='+str(page),os.environ['CLOUDFLARE_PAGES_DEPLOY_TOKEN'])
+        inventory=http(base+'?per_page=10&page='+str(page),os.environ['CLOUDFLARE_PAGES_DEPLOY_TOKEN'])
         if not inventory.get('success'):raise SystemExit('PAGES_ALIAS_INVENTORY_FAILED')
         batch=inventory.get('result',[])
         for project in batch:
             for domain in project.get('domains',[]):aliases[domain]=project['name']
-        if len(batch)<100:break
+        if len(batch)<10:break
     for url in entries:
         host=urllib.parse.urlsplit(url).hostname
         if host in aliases and entries[url]!=aliases[host]:
