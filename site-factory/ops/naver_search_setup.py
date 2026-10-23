@@ -69,7 +69,15 @@ def notify(url,row):
         req=urllib.request.Request('https://searchadvisor.naver.com/indexnow',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json; charset=utf-8','User-Agent':AGENT},method='POST')
         try:
             with urllib.request.urlopen(req,timeout=30) as r:code=r.status
-        except urllib.error.HTTPError as e:code=e.code
+        except urllib.error.HTTPError as e:
+            code=e.code
+            raw=e.read(4000).decode('utf-8','replace')
+            try:
+                body=json.loads(raw)
+                # Allow only short public provider diagnostics, never request payloads.
+                msg=str(body.get('message') or body.get('error') or '')
+                result['providerMessage']=re.sub(r'https?://\S+|[a-f0-9]{24,}', '[redacted]',msg)[:180]
+            except (ValueError,AttributeError):result['providerMessage']='non_json_error'
         result['indexNow']={'status':'received' if code==200 else 'key_validation_pending' if code==202 else 'not_confirmed','http':code,'count':len(urls)}
         if code in (200,202):row['lastIndexNow']={'digest':digest,'http':code,'time':time.time(),'at':datetime.now(timezone.utc).isoformat()}
     except (OSError,ValueError,ET.ParseError) as e:
