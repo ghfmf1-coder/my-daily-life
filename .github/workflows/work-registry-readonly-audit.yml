@@ -91,7 +91,8 @@ jobs:
           duplicate_urls=len(rows)-len({r['canonical_url'] for r in rows})
           print('DUPLICATE_CANONICAL_URLS:',duplicate_urls)
           print('ACTIVE_LEDGER_SERVICE_COUNT:',len(rows))
-          print('DUPLICATE_SERVICE_IDS:',len(rows)-len({r['service_id'] for r in rows}))
+          duplicate_ids=len(rows)-len({r['service_id'] for r in rows})
+          print('DUPLICATE_SERVICE_IDS:',duplicate_ids)
           print('EXPECTED_NEW_PUBLIC_SITES:',len(new_wanted))
           print('ALL_EXPECTED_LINKED_PROJECTS:',len(wanted-missing))
           print('MISSING_PROJECT_NAMES:',','.join(sorted(missing)) or 'NONE')
@@ -132,6 +133,7 @@ jobs:
           print('NAVER_CONNECTION_STATUS: NOT_VERIFIED')
           if missing:raise SystemExit('REGISTRY_SYNC_NOT_COMPLETE')
           if duplicate_urls:raise SystemExit('DUPLICATE_CANONICAL_URLS_FOUND')
+          if duplicate_ids:raise SystemExit('DUPLICATE_SERVICE_IDS_FOUND')
           if sync_failures:raise SystemExit('SYNC_SOURCE_STALE_OR_ERROR')
           print('WORK_ADMIN_REGISTRY_SYNC_VERIFIED')
           PY
@@ -165,5 +167,8 @@ jobs:
           print('NAVER_STATUS:',data.get('naver'))
           print('INDEX_REPORT_LIMITATION:',data.get('inspectionMeaning'))
           if gsc.get('status') not in ('ok','no_rows'):raise SystemExit('GOOGLE_SEARCH_REPORT_UNAVAILABLE')
+          if missing:raise SystemExit('GOOGLE_PROPERTY_ACCESS_MISSING')
+          sitemap_failures=[s['url'] for s in data.get('sites',[]) if (s.get('sitemaps') or {}).get('status')=='query_failed']
+          if sitemap_failures:raise SystemExit('GOOGLE_SITEMAP_QUERY_FAILED')
           print('GOOGLE_READONLY_AUDIT_COMPLETED')
           PY
