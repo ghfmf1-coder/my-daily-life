@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-23T04:00:46.973179+00:00",
+  "checkedAt": "2026-10-23T06:34:29.557870+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
@@ -10,10 +10,9 @@
     {
       "consoleStatus": "verified",
       "indexNow": {
-        "at": "2026-10-23T01:21:29.960443+00:00",
         "count": 19,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -25,10 +24,9 @@
     {
       "consoleStatus": "verified",
       "indexNow": {
-        "at": "2026-10-23T01:21:31.122450+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -40,10 +38,9 @@
     {
       "consoleStatus": "verified",
       "indexNow": {
-        "at": "2026-10-23T01:21:32.310721+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -70,10 +67,9 @@
     {
       "consoleStatus": "verified",
       "indexNow": {
-        "at": "2026-10-23T01:21:34.357352+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -85,10 +81,9 @@
     {
       "consoleStatus": "verified",
       "indexNow": {
-        "at": "2026-10-23T01:21:35.616883+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -100,10 +95,9 @@
     {
       "consoleStatus": "verified",
       "indexNow": {
-        "at": "2026-10-23T01:21:36.643290+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -115,10 +109,9 @@
     {
       "consoleStatus": "verified",
       "indexNow": {
-        "at": "2026-10-23T03:51:16.773600+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -130,10 +123,9 @@
     {
       "consoleStatus": "verified",
       "indexNow": {
-        "at": "2026-10-23T01:21:38.552124+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -145,10 +137,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T01:21:39.739747+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -160,10 +151,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:18.000259+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -175,10 +165,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:19.002021+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -190,10 +179,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T01:21:42.425127+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -205,10 +193,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:20.043718+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -220,10 +207,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:20.953108+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -235,10 +221,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:21.833772+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -250,10 +235,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:22.698870+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -265,10 +249,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:23.427534+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -280,10 +263,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T01:21:47.635906+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -295,10 +277,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:24.468468+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -310,10 +291,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:25.418105+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -325,10 +305,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T01:21:50.205408+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -340,10 +319,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:26.251360+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -355,10 +333,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:27.158999+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -370,10 +347,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:28.046676+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -385,10 +361,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:51:59.309743+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -400,10 +375,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:00.078276+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -415,10 +389,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:00.794438+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -430,10 +403,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:01.527315+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -445,10 +417,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:02.287165+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -460,10 +431,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:02.867580+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -475,10 +445,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:03.545326+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -490,10 +459,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:04.272678+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -505,10 +473,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:04.811147+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -520,10 +487,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:05.561775+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -535,10 +501,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T01:22:02.158302+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -550,10 +515,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:06.585497+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -565,10 +529,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T01:22:03.751706+00:00",
         "count": 6,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -580,10 +543,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:07.317639+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -595,10 +557,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:08.036139+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -610,10 +571,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:08.561026+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -625,10 +585,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:09.158159+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -640,10 +599,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T01:22:07.927137+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -655,10 +613,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:09.860022+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -670,10 +627,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T01:22:09.469053+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -685,10 +641,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T03:52:10.676373+00:00",
         "count": 1,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -700,10 +655,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-10-23T01:22:11.255672+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -713,5 +667,5 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "1ecc7506fbc0769e43f20000765db243f058b28b"
+  "sourceCommit": "2d0e92237d428fd5f3d4f12c137e4a4ea41d10bc"
 }
