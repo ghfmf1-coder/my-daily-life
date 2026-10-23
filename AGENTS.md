@@ -30,3 +30,5 @@
 - 사용자 요청의 알림 언어는 ChatGPT에서 뜨는 작업 알림·질문을 의미합니다. GitHub 워크플로 이름이나 사이트 언어를 임의로 변경하지 않습니다. 직접 작성하는 ChatGPT 안내는 한국어를 사용하고, 앱 고정 UI 언어를 변경했다고 주장하지 않습니다.
 
 - 2026-10-23 사용자 결정: 네이버 사이트별 수동 소유확인·보안문자 및 계정 사이트맵 수동 제출은 기본 작업에서 제외. 대기 상태는 보존하되 필수 장애로 취급하거나 사용자에게 반복 요청하지 않습니다. Google 자동화·D1 동기화·네이버 공개 사이트맵과 IndexNow는 유지합니다. docs/CURRENT-STATE.md의 최신 결정 참고.
+
+- 통계 복구 작업은 docs/STATISTICS-REPAIR-2026-10-23.md 및 site-factory/ops/statistics-repair-result.json의 배포 상태를 확인합니다. 원천 대조/사이트 수집기 성공을 관제센터 Worker 배포·UI 검증 완료로 바꾸지 않습니다. Workers API 403으로 별도 CLOUDFLARE_WORKER_DEPLOY_TOKEN 승인이 필요하며 기존 Pages 토큰 확대 금지.

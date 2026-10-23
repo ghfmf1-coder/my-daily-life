@@ -200,3 +200,7 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 ## 통계 복구 배포 진행 — 2026-10-23
 
 잘못된 미연결과 신규 방문 누락을 수정. Supabase 함수는 배포됐고 Worker 배포는 기존 토큰 Workers API 403으로 차단됨. 공개 사이트와 원천 대조를 검증 중이며 전면 완료가 아님. 최신 근거·파일·차단 항목은 [STATISTICS-REPAIR-2026-10-23.md](STATISTICS-REPAIR-2026-10-23.md) 참고.
+
+### 최신 통계 복구 검증 상태
+
+51개 서비스 전체 운영 HTML·비콘·기존 영어 URL·무기록 진단 통과. D1/Google/Supabase 실제 원천 대조 성공 실행 39912767608. Google 51개 속성 접근 및 사이트맵 조회 정상, AdSense no_rows. 신규 30개 실제 배포 성공. 수정 코드·테스트·사이트별 결과는 저장소 보존. 관제센터 Worker 배포는 기존 Pages 토큰 Workers API 403 및 전용 배포 Secret 부재로 차단되어 UI/모바일 최종 검증 미완료. 이 차단이 해소되기 전 전체 완료라고 보고하지 않습니다.

@@ -31,3 +31,5 @@ toolbox-public-visit v2에서 신규 봇/자동화/사람 추정/판별 불가 �
 - toolbox-visit-collector 기존 수집기도 v7으로 갱신해 이후 이벤트의 봇·자동화를 분리하고 dryRun을 추가. 과거 분류는 변경하지 않음. Google 브리지 v19는 감사에 AdSense 상태도 반환. 기존 2026-10-19~22 일별 13행의 방문·PV 값을 재대조해 작업 전과 동일함. 당일 행은 실제 수집 중이므로 동결된 합계로 주장하지 않음.
 - 사이트별 원천 검증 결과: site-factory/ops/statistics-repair-result.json. 이는 실제 원천을 수정 모델로 대조한 결과이며, 아직 배포되지 않은 관제센터 UI 화면의 검증 완료를 뜻하지 않음.
 - 기존 Pages 토큰으로 Workers API를 다시 시도하지 않도록 배포 경로에서 제외. 별도 CLOUDFLARE_WORKER_DEPLOY_TOKEN만 사용. 이 권한을 확보하기 전 Worker/UI/모바일 검증은 미완료.
+
+- 후속 51개 서비스 전체(기존 수집기 4개 포함) 운영 HTML·추적 스크립트·기존 영어 URL·수집기 dryRun 진단도 통과. 진단 accepted:false로 저장 없음 확인. 상세는 statistics-repair-result.json의 collectorCoverage. 신규 30개 사이트의 별도 영어 페이지는 생성하지 않았으며 없는 페이지를 검증 완료로 표시하지 않음.

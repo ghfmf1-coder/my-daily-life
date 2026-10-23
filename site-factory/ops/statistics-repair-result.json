@@ -824,61 +824,7 @@
       "googleSitemapQuery": "ok"
     }
   ],
-  "publicCollectorCoverage": [
-    {
-      "url": "https://tb-aquarium-water-lab.pages.dev/",
-      "siteId": "tb-aquarium-water-lab",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-audio-quality.pages.dev/",
-      "siteId": "tb-audio-quality",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-camera-lens-check.pages.dev/",
-      "siteId": "tb-camera-lens-check",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-card-grading-lab.pages.dev/",
-      "siteId": "tb-card-grading-lab",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-certificate-batch.pages.dev/",
-      "siteId": "tb-certificate-batch",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-class-schedule-check.pages.dev/",
-      "siteId": "tb-class-schedule-check",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
+  "collectorCoverage": [
     {
       "url": "https://tb-comic-condition-lab.pages.dev/",
       "siteId": "tb-comic-condition-lab",
@@ -886,96 +832,6 @@
       "scriptAvailable": true,
       "collectorDiagnostic": true,
       "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://abreda.com/tools/csv-column-extractor/",
-      "siteId": "tb-csv-column-extractor",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://abreda.com/tools/csv-empty-row-remover/",
-      "siteId": "tb-csv-empty-row-remover",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-detail-image-review.pages.dev/",
-      "siteId": "tb-detail-image-review",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-dst-embroidery.pages.dev/",
-      "siteId": "tb-dst-embroidery",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-epub-preflight.pages.dev/",
-      "siteId": "tb-epub-preflight",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-event-seating.pages.dev/",
-      "siteId": "tb-event-seating",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-exam-variants.pages.dev/",
-      "siteId": "tb-exam-variants",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-gem-photo-inspection.pages.dev/",
-      "siteId": "tb-gem-photo-inspection",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-inventory-diff.pages.dev/",
-      "siteId": "tb-inventory-diff",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-invoice-reconcile.pages.dev/",
-      "siteId": "tb-invoice-reconcile",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
       "status": "ok"
     },
     {
@@ -988,161 +844,8 @@
       "status": "ok"
     },
     {
-      "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
-      "siteId": "tb-keyboard-switch-diagnostics",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-lease-registry-diff.pages.dev/",
-      "siteId": "tb-lease-registry-diff",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-move-evidence.pages.dev/",
-      "siteId": "tb-move-evidence",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-moving-boxes.pages.dev/",
-      "siteId": "tb-moving-boxes",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-option-combinations.pages.dev/",
-      "siteId": "tb-option-combinations",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-pdf-preflight.pages.dev/",
-      "siteId": "tb-pdf-preflight",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-photo-contact-sheet.pages.dev/",
-      "siteId": "tb-photo-contact-sheet",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-photo-duplicates.pages.dev/",
-      "siteId": "tb-photo-duplicates",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-purchase-three-way.pages.dev/",
-      "siteId": "tb-purchase-three-way",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-question-similarity.pages.dev/",
-      "siteId": "tb-question-similarity",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-shipping-audit.pages.dev/",
-      "siteId": "tb-shipping-audit",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-shotlist-maker.pages.dev/",
-      "siteId": "tb-shotlist-maker",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-show-cues.pages.dev/",
-      "siteId": "tb-show-cues",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-silence-finder.pages.dev/",
-      "siteId": "tb-silence-finder",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-sneaker-condition-lab.pages.dev/",
-      "siteId": "tb-sneaker-condition-lab",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://abreda.com/tools/srt-sdh-cleaner/",
-      "siteId": "tb-srt-sdh-cleaner",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-static-site-check.pages.dev/",
-      "siteId": "tb-static-site-check",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "not_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://stl-print-check.abreda.com/",
-      "siteId": "tb-stl-print-check",
+      "url": "https://tb-camera-lens-check.pages.dev/",
+      "siteId": "tb-camera-lens-check",
       "tracking": true,
       "scriptAvailable": true,
       "collectorDiagnostic": true,
@@ -1159,8 +862,125 @@
       "status": "ok"
     },
     {
-      "url": "https://tb-survey-review.pages.dev/",
-      "siteId": "tb-survey-review",
+      "url": "https://tb-vinyl-condition-lab.pages.dev/",
+      "siteId": "tb-vinyl-condition-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "siteId": "tb-keyboard-switch-diagnostics",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-card-grading-lab.pages.dev/",
+      "siteId": "tb-card-grading-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-aquarium-water-lab.pages.dev/",
+      "siteId": "tb-aquarium-water-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/csv-empty-row-remover/",
+      "siteId": "tb-csv-empty-row-remover",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/srt-sdh-cleaner/",
+      "siteId": "tb-srt-sdh-cleaner",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-used-car-inspection.pages.dev/",
+      "siteId": "tb-used-car-inspection",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://watch-inspection-lab.abreda.com/",
+      "siteId": "tb-watch-inspection-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-sneaker-condition-lab.pages.dev/",
+      "siteId": "tb-sneaker-condition-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/csv-column-extractor/",
+      "siteId": "tb-csv-column-extractor",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://stl-print-check.abreda.com/",
+      "siteId": "tb-stl-print-check",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/vtt-cleaner/",
+      "siteId": "tb-vtt-cleaner",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-gem-photo-inspection.pages.dev/",
+      "siteId": "tb-gem-photo-inspection",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-static-site-check.pages.dev/",
+      "siteId": "tb-static-site-check",
       "tracking": true,
       "scriptAvailable": true,
       "collectorDiagnostic": true,
@@ -1168,8 +988,26 @@
       "status": "ok"
     },
     {
-      "url": "https://tb-svg-laser-check.pages.dev/",
-      "siteId": "tb-svg-laser-check",
+      "url": "https://tb-certificate-batch.pages.dev/",
+      "siteId": "tb-certificate-batch",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-webtoon-preflight.pages.dev/",
+      "siteId": "tb-webtoon-preflight",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-lease-registry-diff.pages.dev/",
+      "siteId": "tb-lease-registry-diff",
       "tracking": true,
       "scriptAvailable": true,
       "collectorDiagnostic": true,
@@ -1195,12 +1033,75 @@
       "status": "ok"
     },
     {
-      "url": "https://tb-used-car-inspection.pages.dev/",
-      "siteId": "tb-used-car-inspection",
+      "url": "https://tb-purchase-three-way.pages.dev/",
+      "siteId": "tb-purchase-three-way",
       "tracking": true,
       "scriptAvailable": true,
       "collectorDiagnostic": true,
-      "english": "tracking_present",
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-shipping-audit.pages.dev/",
+      "siteId": "tb-shipping-audit",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-move-evidence.pages.dev/",
+      "siteId": "tb-move-evidence",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-dst-embroidery.pages.dev/",
+      "siteId": "tb-dst-embroidery",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-moving-boxes.pages.dev/",
+      "siteId": "tb-moving-boxes",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-epub-preflight.pages.dev/",
+      "siteId": "tb-epub-preflight",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-class-schedule-check.pages.dev/",
+      "siteId": "tb-class-schedule-check",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-photo-contact-sheet.pages.dev/",
+      "siteId": "tb-photo-contact-sheet",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
       "status": "ok"
     },
     {
@@ -1213,40 +1114,181 @@
       "status": "ok"
     },
     {
-      "url": "https://tb-vinyl-condition-lab.pages.dev/",
-      "siteId": "tb-vinyl-condition-lab",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://abreda.com/tools/vtt-cleaner/",
-      "siteId": "tb-vtt-cleaner",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://watch-inspection-lab.abreda.com/",
-      "siteId": "tb-watch-inspection-lab",
-      "tracking": true,
-      "scriptAvailable": true,
-      "collectorDiagnostic": true,
-      "english": "tracking_present",
-      "status": "ok"
-    },
-    {
-      "url": "https://tb-webtoon-preflight.pages.dev/",
-      "siteId": "tb-webtoon-preflight",
+      "url": "https://tb-option-combinations.pages.dev/",
+      "siteId": "tb-option-combinations",
       "tracking": true,
       "scriptAvailable": true,
       "collectorDiagnostic": true,
       "english": "not_present",
       "status": "ok"
+    },
+    {
+      "url": "https://tb-silence-finder.pages.dev/",
+      "siteId": "tb-silence-finder",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-invoice-reconcile.pages.dev/",
+      "siteId": "tb-invoice-reconcile",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-question-similarity.pages.dev/",
+      "siteId": "tb-question-similarity",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-photo-duplicates.pages.dev/",
+      "siteId": "tb-photo-duplicates",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-pdf-preflight.pages.dev/",
+      "siteId": "tb-pdf-preflight",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-survey-review.pages.dev/",
+      "siteId": "tb-survey-review",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-svg-laser-check.pages.dev/",
+      "siteId": "tb-svg-laser-check",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-exam-variants.pages.dev/",
+      "siteId": "tb-exam-variants",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-show-cues.pages.dev/",
+      "siteId": "tb-show-cues",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-inventory-diff.pages.dev/",
+      "siteId": "tb-inventory-diff",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-event-seating.pages.dev/",
+      "siteId": "tb-event-seating",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-audio-quality.pages.dev/",
+      "siteId": "tb-audio-quality",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-detail-image-review.pages.dev/",
+      "siteId": "tb-detail-image-review",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://tb-shotlist-maker.pages.dev/",
+      "siteId": "tb-shotlist-maker",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "not_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://my-daily-life.pages.dev/",
+      "siteId": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://csv.abreda.com/",
+      "siteId": "toolbox-csv-merge-studio",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://manuscript.abreda.com/",
+      "siteId": "toolbox-manuscript-lens",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://novel.abreda.com/",
+      "siteId": "toolbox-novel-planner",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
     }
-  ]
+  ],
+  "coverageCheckedAt": "2026-10-23T06:46:09.419534+00:00",
+  "collectorVersions": {
+    "public": 2,
+    "legacy": 7,
+    "googleReporting": 19
+  }
 }
