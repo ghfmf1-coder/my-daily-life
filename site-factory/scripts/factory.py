@@ -417,7 +417,6 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         'csv-merge-studio': 'toolbox-csv-merge-studio',
         'novel-planner': 'toolbox-novel-planner',
         'manuscript-lens': 'toolbox-manuscript-lens',
-        'subtitle-sync-studio': 'toolbox-subtitle-sync-studio',
         'toolbox-hub': 'catalog-toolbox-hub',
     }
     if slug in tracking_ids:
@@ -475,6 +474,20 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                     '<a href="https://abreda.com/" rel="noopener noreferrer">'+
                     caption+'</a></footer>')
             content=content.replace('</body>',footer+'</body>',1)
+        # All remaining public tools use a separate privacy-minimal collector.
+        # The original four-site traffic collector and metrics are unchanged.
+        public_tracking_slug = None
+        if slug in ('subtitle-sync-studio',) or (slug in __import__('seo_guides').GUIDES and slug not in tracking_ids):
+            if rel in ('index.html', 'en/index.html'):
+                public_tracking_slug = slug
+        if slug == 'toolbox-hub':
+            match = re.fullmatch(r'(?:en/)?tools/([a-z0-9-]+)/index[.]html', rel)
+            if match and match.group(1) in {'csv-column-extractor','csv-empty-row-remover','jsonl-validator','srt-sdh-cleaner','vtt-cleaner'}:
+                public_tracking_slug = match.group(1)
+        if public_tracking_slug and '</body>' in content and 'toolbox-public-traffic.js' not in content:
+            content = content.replace('</body>',
+                '<script defer src="https://abreda.com/toolbox-public-traffic.js" data-toolbox-site="tb-' +
+                public_tracking_slug + '"></script></body>', 1)
         if slug in tracking_ids and '</body>' in content:
             content = content.replace('</body>',
                 '<script defer src="/toolbox-traffic.js" data-toolbox-site="' +
