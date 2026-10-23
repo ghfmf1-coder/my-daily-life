@@ -8,7 +8,7 @@ on:
   schedule:
     - cron: '37 */6 * * *'
   workflow_run:
-    workflows: ['Toolbox Google ownership and sitemap setup', 'Toolbox approved-site auto-deploy', 'Work twenty standalone preview sites', 'Work toolbox nine site builds and test deployments', 'Work shipping audit - tests and independent Pages deployment']
+    workflows: ['Toolbox Google ownership and sitemap setup', 'Toolbox approved-site auto-deploy', 'Work twenty standalone preview sites', 'Work toolbox nine site builds and test deployments', 'Work shipping audit - tests and independent Pages deployment', 'Verify and deploy existing toolbox admin Worker']
     types: [completed]
 concurrency:
   group: work-registry-readonly-audit
@@ -86,7 +86,7 @@ jobs:
           for row in rows:
               url=row.get('canonical_url','')
               if safe_url(url):
-                  print('PUBLIC_SERVICE:',json.dumps({k:row.get(k) for k in ('canonical_url','cf_project','status')},ensure_ascii=True))
+                  print('PUBLIC_SERVICE:',json.dumps({k:row.get(k) for k in ('service_id','canonical_url','cf_project','status')},ensure_ascii=True))
           with open('/tmp/toolbox-public-urls.json','w') as output:json.dump({'urls':[r['canonical_url'] for r in rows if safe_url(r.get('canonical_url',''))]},output)
           duplicate_urls=len(rows)-len({r['canonical_url'] for r in rows})
           print('DUPLICATE_CANONICAL_URLS:',duplicate_urls)
@@ -171,4 +171,7 @@ jobs:
           sitemap_failures=[s['url'] for s in data.get('sites',[]) if (s.get('sitemaps') or {}).get('status')=='query_failed']
           if sitemap_failures:raise SystemExit('GOOGLE_SITEMAP_QUERY_FAILED')
           print('GOOGLE_READONLY_AUDIT_COMPLETED')
+          legacy=read_json(urllib.request.Request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-admin-legacy-read?date='+__import__('datetime').datetime.now(__import__('datetime').timezone(__import__('datetime').timedelta(hours=9))).date().isoformat(),headers={'Authorization':'Bearer '+identity_token}),timeout=60)
+          print('VISIT_SOURCE_READ_VERIFIED:', isinstance(legacy.get('publicTraffic'),list) and isinstance(legacy.get('classifiedTraffic'),list))
+          for row in legacy.get('publicTraffic',[]):print('VISIT_PUBLIC_DAILY:',json.dumps(row,ensure_ascii=True))
           PY

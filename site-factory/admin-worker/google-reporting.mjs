@@ -11,7 +11,7 @@ async function syncGoogleReporting(env,request){
  const end=new Date(Date.now()-3*86400000).toISOString().slice(0,10),start=new Date(Date.now()-27*86400000).toISOString().slice(0,10);
  let data;
  try{
-  const r=await fetch(GOOGLE_REPORTING_ROOT+'reporting-data?start='+start+'&end='+end,{headers,signal:AbortSignal.timeout(55000)});
+  const r=await fetch(GOOGLE_REPORTING_ROOT+'reporting-data?start='+start+'&end='+end,{headers,signal:AbortSignal.timeout(180000)});
   if(!r.ok)throw Error('Reporting bridge HTTP '+r.status);data=await r.json();
  }catch(e){for(const source of ['GSC','ADSENSE'])await writeSync(env.REPORT_DB,source,'error',String(e.message).slice(0,400));throw e;}
  const result={};
@@ -30,7 +30,7 @@ async function syncGoogleReporting(env,request){
    }
   }
   for(let i=0;i<statements.length;i+=60)await env.REPORT_DB.batch(statements.slice(i,i+60));
-  await writeSync(env.REPORT_DB,source,provider.status,String(provider.detail||'').slice(0,800));result[key]={status:provider.status,imported:statements.length,detail:provider.detail};
+  await writeSync(env.REPORT_DB,source,provider.status,JSON.stringify({detail:String(provider.detail||'').slice(0,350),properties:provider.properties||null,start,end,generatedAt:data.generatedAt||null}));result[key]={status:provider.status,imported:statements.length,detail:provider.detail};
  }
  return {start,end,...result};
 }

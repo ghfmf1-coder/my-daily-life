@@ -30,6 +30,7 @@ def live_ready(url,row):
     try:
         html=public_text(url);proof=row.get('verificationContent')
         if proof and not re.search(r'<meta\b[^>]*name=["\']naver-site-verification["\'][^>]*content=["\']'+re.escape(proof)+r'["\']',html,re.I):return False
+        if 'data-toolbox-site=' not in html:return False
         key=row['indexNowKey']
         return public_text(url+key+'.txt',200).strip()==key
     except (OSError,ValueError):return False
@@ -116,6 +117,12 @@ def main():
                 if proof not in html:
                     if not re.search(r'</head\s*>',html,re.I):raise ValueError('HTML_HEAD_MISSING')
                     path.write_text(re.sub(r'</head\s*>','<meta name="naver-site-verification" content="'+proof+'">\n</head>',html,count=1,flags=re.I));changed.append(path)
+            for page in [folder/'index.html',folder/'en/index.html']:
+                if page.is_file():
+                    text=page.read_text()
+                    if 'data-toolbox-site=' not in text:
+                        tag='<script defer src="https://abreda.com/toolbox-public-traffic.js" data-toolbox-site="'+project+'"></script>'
+                        page.write_text(text.replace('</body>',tag+'\n</body>',1));changed.append(page)
             row['contentDigest']=hashlib.sha256(path.read_bytes()).hexdigest()
             row['indexNowKey']=key_for(url);keypath=folder/(row['indexNowKey']+'.txt')
             if not keypath.exists() or keypath.read_text()!=row['indexNowKey']:keypath.write_text(row['indexNowKey']);changed.append(keypath)
@@ -124,6 +131,12 @@ def main():
             if line not in text:robots.write_text(text.rstrip()+'\n'+line+'\n');changed.append(robots)
             jobs.append((url,project,folder,row))
         except (OSError,ValueError,RuntimeError):results.append({'url':url,'publication':'source_preparation_failed','indexing':'unknown'})
+    manifest=ROOT/'site-factory/ops/visit-sites.json'
+    mapped={x['siteId']:x for x in json.loads(manifest.read_text())['sites']}
+    for url,project in entries.items():
+        if project.startswith('tb-') and project not in {'tb-toolbox-hub','tb-csv-merge-studio','tb-novel-planner','tb-manuscript-lens'}:
+            mapped[project]={'siteId':project,'url':url,'origins':['https://'+project+'.pages.dev']}
+    manifest.write_text(json.dumps({'sites':sorted(mapped.values(),key=lambda x:x['siteId'])},indent=2)+'\n');changed.append(manifest)
     STATE.write_text(json.dumps(state,indent=2,sort_keys=True)+'\n');changed.append(STATE);persist(changed)
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
         for outcome in pool.map(publish,jobs):

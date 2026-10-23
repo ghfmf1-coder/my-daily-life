@@ -1,3 +1,4 @@
+import {githubAuthenticated} from './google-oauth-edge/github-oidc.mjs';
 // Read-only bridge. Cloudflare Access JWT verification replaces Supabase Auth.
 // No CORS, caller-selected tables, SQL, secrets, notes or personal payloads returned.
 const ISSUER='https://little-tooth-dff1.cloudflareaccess.com';
@@ -20,19 +21,28 @@ export async function authenticated(token,fetcher=fetch){
 }
 export async function handler(req,env,fetcher=fetch){
  if(req.method!=='GET')return json({error:'GET only'},405);
- if(!await authenticated(req.headers.get('cf-access-jwt-assertion'),fetcher))return json({error:'Administrator authentication required'},401);
+ if(!await authenticated(req.headers.get('cf-access-jwt-assertion'),fetcher)&&!await githubAuthenticated(req.headers.get('Authorization'),fetcher))return json({error:'Administrator authentication required'},401);
  try{
   const key=env.get('SUPABASE_SERVICE_ROLE_KEY'),base=env.get('SUPABASE_URL');
   async function read(path){const r=await fetcher(base+'/rest/v1/'+path,{headers:{apikey:key,Authorization:'Bearer '+key},signal:AbortSignal.timeout(10000)});if(!r.ok)throw Error('Read failed');return r.json();}
-  const [ws,traffic]=await Promise.all([
+  const date=new URL(req.url).searchParams.get('date');
+  if(date&&(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Number.isFinite(Date.parse(date))||new Date(date).toISOString().slice(0,10)!==date))return json({error:'invalid_date'},400);
+  const filter=date?'&visit_day=eq.'+date:'';
+  async function pages(path){let rows=[];for(let offset=0;offset<100000;offset+=500){const batch=await read(path+'&limit=500&offset='+offset);if(!Array.isArray(batch))throw Error('Invalid source');rows.push(...batch);if(batch.length<500)return rows;}throw Error('Incomplete source');}
+  const [ws,traffic,publicSites,publicTraffic,events]=await Promise.all([
    read('toolbox_admin_workspaces?select=payload,version,updated_at&user_id=eq.'+OWNER),
-   read('toolbox_traffic_daily?select=site_id,visit_day,visits,pageviews,updated_at&order=visit_day.desc&limit=10000')
+   pages('toolbox_traffic_daily?select=site_id,visit_day,visits,pageviews,updated_at&order=visit_day.desc,site_id'+filter),
+   pages('toolbox_public_site_sources?select=site_id,url,title&order=site_id'),
+   pages('toolbox_public_visit_daily?select=site_id,visit_day,category,visits,pageviews,updated_at&order=visit_day.desc,site_id,category'+filter),
+   pages('toolbox_traffic_classified?select=event_id,site_id,visit_day,category,is_visit,received_at&order=received_at,event_id'+filter)
   ]);
-  if(!Array.isArray(ws)||!Array.isArray(traffic)||traffic.length>=10000)throw Error('Incomplete source');
+  const grouped=new Map(),seen=new Set();
+  for(const e of events){if(seen.has(e.event_id))continue;seen.add(e.event_id);const id=[e.site_id,e.visit_day,e.category].join('|');let row=grouped.get(id);if(!row){row={site_id:e.site_id,visit_day:e.visit_day,category:e.category,visits:0,pageviews:0,updated_at:e.received_at};grouped.set(id,row);}row.pageviews++;if(e.is_visit)row.visits++;if(e.received_at>row.updated_at)row.updated_at=e.received_at;}
+  const classifiedTraffic=[...grouped.values()];
   const workspace=ws[0];
   const sites=(workspace?.payload?.sites||[]).map(s=>({id:s.id,url:s.url,name:s.name}));
   const metrics=(workspace?.payload?.metrics||[]).map(m=>({id:m.id,siteId:m.siteId,date:m.date,visitors:m.visitors,pageviews:m.pageviews,impressions:m.impressions,clicks:m.clicks,revenue:m.revenue,source:m.source,botFilter:m.botFilter,updatedAt:m.updatedAt}));
-  return json({version:workspace?.version??null,updatedAt:workspace?.updated_at??null,fetchedAt:new Date().toISOString(),sites,metrics,traffic});
+  return json({version:workspace?.version??null,updatedAt:workspace?.updated_at??null,fetchedAt:new Date().toISOString(),sites,metrics,traffic,publicSites,publicTraffic,classifiedTraffic});
  }catch{return json({error:'Legacy data unavailable; original data unchanged'},503);}
 }
 if(typeof Deno!=='undefined')Deno.serve(req=>handler(req,Deno.env));

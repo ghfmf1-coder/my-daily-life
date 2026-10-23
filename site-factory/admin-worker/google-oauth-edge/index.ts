@@ -102,15 +102,15 @@ async function reportingData(start:string,end:string){
    const sites=await googleRead(token,'https://www.googleapis.com/webmasters/v3/sites');
    const available=(sites.siteEntry||[]).filter((s:any)=>s.permissionLevel!=='siteUnverifiedUser');
    const domain=available.some((s:any)=>s.siteUrl==='sc-domain:abreda.com');
-   const selected=available.filter((s:any)=>s.siteUrl==='sc-domain:abreda.com'||(!domain&&/^https:\/\/([a-z0-9-]+\.)?abreda\.com\/$/.test(s.siteUrl))||relevantPage(s.siteUrl));
+   const selected=available.filter((s:any)=>s.siteUrl==='sc-domain:abreda.com'||(!domain&&/^https:\/\/([a-z0-9-]+\.)?abreda\.com\/$/.test(s.siteUrl))||(!domain&&relevantPage(s.siteUrl))||(relevantPage(s.siteUrl)&&!new URL(s.siteUrl).hostname.endsWith('abreda.com')));
    if(!selected.length)return {status:'unconnected',detail:'조회 가능한 작은도구함 Search Console 속성 없음',rows:[],properties:[]};
-   const byKey=new Map();
-   for(const site of selected){for(let offset=0;offset<100000;offset+=25000){
+   const byKey=new Map();let nextProperty=0;
+   await Promise.all(Array.from({length:4},async()=>{while(nextProperty<selected.length){const site=selected[nextProperty++];for(let offset=0;offset<100000;offset+=25000){
     const data=await googleRead(token,'https://www.googleapis.com/webmasters/v3/sites/'+encodeURIComponent(site.siteUrl)+'/searchAnalytics/query',{startDate:start,endDate:end,dimensions:['date','page'],dataState:'final',rowLimit:25000,startRow:offset});
     const rows=data.rows||[];
     for(const r of rows)if(r.keys?.length===2&&relevantPage(r.keys[1])&&Number.isFinite(r.clicks)&&Number.isFinite(r.impressions)&&r.clicks>=0&&r.impressions>=0)byKey.set(r.keys[0]+'\n'+r.keys[1],{date:r.keys[0],url:r.keys[1],clicks:r.clicks,impressions:r.impressions,property:site.siteUrl});
     if(rows.length<25000)break;if(offset===75000)throw Error('Search Console report limit reached; refusing incomplete import');
-   }}
+   }}}));
    return {status:byKey.size?'ok':'no_rows',detail:'Search Console 연결 확인 · 최종 확정 자료 '+byKey.size+'건',rows:[...byKey.values()],properties:selected.map((s:any)=>s.siteUrl)};
   }catch(e){return {status:'error',detail:String((e as Error).message),rows:[]};}})(),
   (async()=>{try{
@@ -147,9 +147,10 @@ async function reportingRoute(req:Request,u:URL,route:string){
  }
  if(!admin&&!await reportingJob(req))return reply({error:'not_authorized'},401);
  if(req.method!=='GET')return reply({error:'GET_only'},405);
- const end=u.searchParams.get('end')||new Date(Date.now()-3*86400000).toISOString().slice(0,10),start=u.searchParams.get('start')||end;
+ const finalThrough=new Date(Date.now()-3*86400000).toISOString().slice(0,10);
+ const end=u.searchParams.get('end')||finalThrough,start=u.searchParams.get('start')||end;
  const validDate=(v:string)=>/^\d{4}-\d{2}-\d{2}$/.test(v)&&Number.isFinite(Date.parse(v))&&new Date(v).toISOString().slice(0,10)===v;
- if(!validDate(start)||!validDate(end)||start>end||Date.parse(end)-Date.parse(start)>32*86400000)return reply({error:'invalid_date_range'},400);
+ if(!validDate(start)||!validDate(end)||end>finalThrough||start>end||Date.parse(end)-Date.parse(start)>32*86400000)return reply({error:'invalid_date_range'},400);
  return reply(await reportingData(start,end));
 }
 
@@ -343,4 +344,3 @@ Deno.serve(async(req:Request)=>{
     return reply({error:safe},label==="not_authenticated"?401:label==="not_authorized"?403:503,cors);
   }
 });
-

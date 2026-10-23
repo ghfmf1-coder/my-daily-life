@@ -8,7 +8,7 @@ async function reportingJob(req:Request){
  const rows=await db('toolbox_reporting_job_keys?select=key_hash&key_name=eq.worker-reporting&key_hash=eq.'+hash);
  return Array.isArray(rows)&&rows.length===1;
 }
-async function reportingAccess(){return access(REPORTING_OWNER)}
+async function reportingAccess(onScopes?:(scopes:string[]|null)=>void){return access(REPORTING_OWNER,onScopes)}
 async function googleRead(token:string,url:string,body?:unknown){
  const r=await fetch(url,{method:body===undefined?'GET':'POST',headers:{Authorization:'Bearer '+token,...(body===undefined?{}:{'content-type':'application/json'})},...(body===undefined?{}:{body:JSON.stringify(body)}),signal:AbortSignal.timeout(18000)});
  const data=await r.json().catch(()=>({}));
@@ -23,15 +23,15 @@ async function reportingData(start:string,end:string){
    const sites=await googleRead(token,'https://www.googleapis.com/webmasters/v3/sites');
    const available=(sites.siteEntry||[]).filter((s:any)=>s.permissionLevel!=='siteUnverifiedUser');
    const domain=available.some((s:any)=>s.siteUrl==='sc-domain:abreda.com');
-   const selected=available.filter((s:any)=>s.siteUrl==='sc-domain:abreda.com'||(!domain&&/^https:\/\/([a-z0-9-]+\.)?abreda\.com\/$/.test(s.siteUrl))||s.siteUrl==='https://my-daily-life.pages.dev/');
+   const selected=available.filter((s:any)=>s.siteUrl==='sc-domain:abreda.com'||(!domain&&/^https:\/\/([a-z0-9-]+\.)?abreda\.com\/$/.test(s.siteUrl))||(!domain&&relevantPage(s.siteUrl))||(relevantPage(s.siteUrl)&&!new URL(s.siteUrl).hostname.endsWith('abreda.com')));
    if(!selected.length)return {status:'unconnected',detail:'조회 가능한 작은도구함 Search Console 속성 없음',rows:[],properties:[]};
-   const byKey=new Map();
-   for(const site of selected){for(let offset=0;offset<100000;offset+=25000){
+   const byKey=new Map();let nextProperty=0;
+   await Promise.all(Array.from({length:4},async()=>{while(nextProperty<selected.length){const site=selected[nextProperty++];for(let offset=0;offset<100000;offset+=25000){
     const data=await googleRead(token,'https://www.googleapis.com/webmasters/v3/sites/'+encodeURIComponent(site.siteUrl)+'/searchAnalytics/query',{startDate:start,endDate:end,dimensions:['date','page'],dataState:'final',rowLimit:25000,startRow:offset});
     const rows=data.rows||[];
     for(const r of rows)if(r.keys?.length===2&&relevantPage(r.keys[1])&&Number.isFinite(r.clicks)&&Number.isFinite(r.impressions)&&r.clicks>=0&&r.impressions>=0)byKey.set(r.keys[0]+'\n'+r.keys[1],{date:r.keys[0],url:r.keys[1],clicks:r.clicks,impressions:r.impressions,property:site.siteUrl});
     if(rows.length<25000)break;if(offset===75000)throw Error('Search Console report limit reached; refusing incomplete import');
-   }}
+   }}}));
    return {status:byKey.size?'ok':'no_rows',detail:'Search Console 연결 확인 · 최종 확정 자료 '+byKey.size+'건',rows:[...byKey.values()],properties:selected.map((s:any)=>s.siteUrl)};
   }catch(e){return {status:'error',detail:String((e as Error).message),rows:[]};}})(),
   (async()=>{try{
@@ -63,13 +63,14 @@ async function reportingRoute(req:Request,u:URL,route:string){
   const hash=b64(new Uint8Array(await crypto.subtle.digest('SHA-256',encoder.encode(verifier))));
   await db('toolbox_google_ads_oauth_flows','POST',{state_hash:await sha(state),owner_id:REPORTING_OWNER,code_verifier:verifier,expires_at:new Date(Date.now()+10*60000).toISOString()});
   const auth=new URL('https://accounts.google.com/o/oauth2/v2/auth');
-  Object.entries({client_id:clientId(),redirect_uri:CALLBACK,response_type:'code',scope:REPORTING_SCOPES.join(' '),access_type:'offline',prompt:'consent',include_granted_scopes:'true',state,code_challenge:hash,code_challenge_method:'S256'}).forEach(([k,v])=>auth.searchParams.set(k,v));
+  Object.entries({client_id:clientId(),redirect_uri:CALLBACK,response_type:'code',scope:[...REPORTING_SCOPES,'https://www.googleapis.com/auth/webmasters','https://www.googleapis.com/auth/siteverification.verify_only'].join(' '),access_type:'offline',prompt:'consent',include_granted_scopes:'true',state,code_challenge:hash,code_challenge_method:'S256'}).forEach(([k,v])=>auth.searchParams.set(k,v));
   return reply({authorizationUrl:auth.toString()});
  }
  if(!admin&&!await reportingJob(req))return reply({error:'not_authorized'},401);
  if(req.method!=='GET')return reply({error:'GET_only'},405);
- const end=u.searchParams.get('end')||new Date(Date.now()-3*86400000).toISOString().slice(0,10),start=u.searchParams.get('start')||end;
+ const finalThrough=new Date(Date.now()-3*86400000).toISOString().slice(0,10);
+ const end=u.searchParams.get('end')||finalThrough,start=u.searchParams.get('start')||end;
  const validDate=(v:string)=>/^\d{4}-\d{2}-\d{2}$/.test(v)&&Number.isFinite(Date.parse(v))&&new Date(v).toISOString().slice(0,10)===v;
- if(!validDate(start)||!validDate(end)||start>end||Date.parse(end)-Date.parse(start)>32*86400000)return reply({error:'invalid_date_range'},400);
+ if(!validDate(start)||!validDate(end)||end>finalThrough||start>end||Date.parse(end)-Date.parse(start)>32*86400000)return reply({error:'invalid_date_range'},400);
  return reply(await reportingData(start,end));
 }
