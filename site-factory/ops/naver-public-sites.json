@@ -4,6 +4,12 @@
       "consoleCheckedAt": "2026-10-23",
       "consoleStatus": "verified",
       "indexNowKey": "a48f126dc9e928f68fc32ad58b0d9f04",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:18.258234+00:00",
+        "digest": "90e89bcfd24ac2b8657e9ce1818f5b4800825aa9c13979ca81aecca2e5527172",
+        "http": 200,
+        "time": 1792718418.2582297
+      },
       "sitemapStatus": "submitted"
     },
     "https://csv.abreda.com/": {
@@ -81,6 +87,12 @@
     "https://tb-audio-quality.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "28a289562f57bed8a0d8d66d069f2969",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:21.580328+00:00",
+        "digest": "89d41a3818955ca8c63b185e923cec5421922439cb15e0366bbc689fd1aa91a7",
+        "http": 200,
+        "time": 1792718421.5803254
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "8019441869cb34960ff43f949b6bd909678fba57"
     },
@@ -111,12 +123,24 @@
     "https://tb-certificate-batch.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "ee6358f2c8726da577e8f75648a735b6",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:23.683677+00:00",
+        "digest": "553f549131d2ab040a6e1a4a9fc9992e599161a3b7fdd70b26cc79f051bbe119",
+        "http": 200,
+        "time": 1792718423.683675
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "e424c5f4f6f1565cc0799e8598bad329cde62c2d"
     },
     "https://tb-class-schedule-check.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "2495697a40bea39270789ca73b7f3d77",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:25.011008+00:00",
+        "digest": "4868112de24565479b378218949aaf6806822dd3e2f510ea719610dd60cdbb92",
+        "http": 200,
+        "time": 1792718425.0110059
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "eb44beee0007751477db85c694588f409e71c445"
     },
@@ -135,30 +159,60 @@
     "https://tb-detail-image-review.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "e5143ad4537850e17e775ec3ebdb9776",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:26.594456+00:00",
+        "digest": "4167316c806da4843439a8d63837823e628cec759aba4d0529c96a71eed6939a",
+        "http": 200,
+        "time": 1792718426.594454
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "48dbd245e6437931697bbfd3d83cc243bbc5ee1a"
     },
     "https://tb-dst-embroidery.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "17f180d857dd8d1adbc53d1328660d18",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:27.754399+00:00",
+        "digest": "6876c839f7c26a3d19723ee960cb5b919c2fa3fa986e6eea09f10641e02831a7",
+        "http": 200,
+        "time": 1792718427.7543964
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "6fd80f38c87e6efd299529bfd10f1f0933a1839d"
     },
     "https://tb-epub-preflight.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "30324c4d668551d11642550ef2106117",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:28.972801+00:00",
+        "digest": "b6b8eb3107399c05eb7bc6178b0775452c76400135aec7ea39b1c6e1e3c2a5d0",
+        "http": 200,
+        "time": 1792718428.972798
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "a0b1d2fa0162fb68f6b4a123483e3415e430efae"
     },
     "https://tb-event-seating.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "73a8c25bdaa35f60a866a74914e3ccbb",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:30.284398+00:00",
+        "digest": "913fa8e87ed74750929ecc1deee9ed7fd85792a83e357acd8d6edc23cf36dcd9",
+        "http": 200,
+        "time": 1792718430.2843962
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "b867e56878c7f35a4d2e659572318678df636e49"
     },
     "https://tb-exam-variants.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "3a82716eecc7052b14a96f276b3c182d",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:31.566277+00:00",
+        "digest": "daea7702e02234149b5b901f6a31890c58ce52ba8f4afb7502a0077ff4888366",
+        "http": 200,
+        "time": 1792718431.5662756
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "03084102b049c9c26761e6d0d62466f9f39ecf37"
     },
@@ -177,12 +231,24 @@
     "https://tb-inventory-diff.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "396122ac4f71b44381cecfd147c62737",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:33.109808+00:00",
+        "digest": "6098660178c3b9c904b8b74abaf6c34584c18f79ce5769016fdf81cf2d0ab42d",
+        "http": 200,
+        "time": 1792718433.1098056
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "0236a7d9ce6163af12bffc863a85a6658fa1136e"
     },
     "https://tb-invoice-reconcile.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "c034dc50abe310af6c3a5da01f98468f",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:34.300930+00:00",
+        "digest": "1c88bf20dd9670f0cfd2c52d5e1f30fddda9cf42c51d851515c3be255531fe2a",
+        "http": 200,
+        "time": 1792718434.3009286
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "e5b92172bbd1846329dc5fd89a63ef475982db8e"
     },
@@ -201,78 +267,156 @@
     "https://tb-lease-registry-diff.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "cb905137f7f9266e1036ae8e7b506ade",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:35.804375+00:00",
+        "digest": "eaa440657ae0b6a768f3f9f3d9934ff636eb5a494061139c48fd0bb7a659a4df",
+        "http": 200,
+        "time": 1792718435.8043735
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "c6e1999c1ba8f9728add310ff9b60c80044072a6"
     },
     "https://tb-move-evidence.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "05b679d0e04c76358b51376739c81fc9",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:37.363358+00:00",
+        "digest": "fbf9624ad1d733858a3e3906adf0ae6273fc09fe2e6a64917bbb26202fe7d435",
+        "http": 200,
+        "time": 1792718437.3633554
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "a738475dc97ed18c7fcfb02094c74355c107aebb"
     },
     "https://tb-moving-boxes.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "f2614c97a170a22664a660009170e2c3",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:38.570267+00:00",
+        "digest": "f822c4443da8e6d8a887a8e1698e2128154edabea0123b31cba1675d6e9168b4",
+        "http": 200,
+        "time": 1792718438.5702655
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "3baee8d0843250af5ffd82cf19ffde3585682b30"
     },
     "https://tb-option-combinations.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "a759a551e9eee8db8c142f7c08eb2187",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:39.791889+00:00",
+        "digest": "515b6526f23869c9f284cdae5f6bef7f0350952ce81a59da2870774eaa040340",
+        "http": 200,
+        "time": 1792718439.7918868
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "e68d933890ef461fcbfd7dca84366f5bd3396dec"
     },
     "https://tb-pdf-preflight.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "539ca3c4359e78c915fbf2e43b82bbde",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:41.297044+00:00",
+        "digest": "611245f324d3b7bccf55deb3fdfc64495a1832986b76de5f89be20bc2b46f437",
+        "http": 200,
+        "time": 1792718441.2970421
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "3e8352831a931ba6aa9dad5f4f5ef56ac1aa42c7"
     },
     "https://tb-photo-contact-sheet.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "978569b9f2b6be5e144cac03e8615cc5",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:42.488147+00:00",
+        "digest": "91aa3e925f7b80288e164e4cc3772ca1c9d30a7cdd091fabc706b5d0cdebd260",
+        "http": 200,
+        "time": 1792718442.488145
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "8c5ef617cb35c5af05bb7f08d40ef646b7ee87dc"
     },
     "https://tb-photo-duplicates.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "68eaadb061de01e806afcf5acbbe7e83",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:43.962906+00:00",
+        "digest": "31a44f668775a832368fb84bcfa66629c578cffd21c84d9ee7434133467959ac",
+        "http": 200,
+        "time": 1792718443.9629037
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "b9c2c730d08214f1e2d300ac8038fd7d03a0e410"
     },
     "https://tb-purchase-three-way.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "f9f580ab67197d0838332f15a24be8be",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:45.292444+00:00",
+        "digest": "fdfa1c43e0b009beb665ba3abd4666cb4712426cd5b23a5c5d8312cf8e82e0e4",
+        "http": 200,
+        "time": 1792718445.2924418
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "45aa00d9a90c4a30caddc7f22c19a2dc56f735c1"
     },
     "https://tb-question-similarity.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "dbd1b61604f1f4efa90130b2f2d0567a",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:46.360866+00:00",
+        "digest": "00206b5c8703c8cfaa859c91eae5b01c1b511e663f21b2a5892a7c29df13d681",
+        "http": 200,
+        "time": 1792718446.3608637
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "03f6c61e84b7ca35c6fabef17e6f4cb99a133c63"
     },
     "https://tb-shipping-audit.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "26b60f3f782a23a241618a8890dcd41f",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:47.421704+00:00",
+        "digest": "b4a24b94377d9d77eec5355060084c904be159eb8ea8f6d3c6bc05f31ac0167c",
+        "http": 200,
+        "time": 1792718447.421702
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "23d8059c21df6df3c0e9ec85c80cedf1297d8346"
     },
     "https://tb-shotlist-maker.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "fa15ff16e2b2473b21c5ec86aef1c705",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:48.509860+00:00",
+        "digest": "111d8bf2dc8a93fb3d579f6df7651105d466547de8d31dc34c0c83c095e01a8e",
+        "http": 200,
+        "time": 1792718448.5098188
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "19cde0180f60dfc9b4d0138ce8f1e00f51ed234e"
     },
     "https://tb-show-cues.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "bea3240b31e6bf14de3e685c5394482f",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:49.602976+00:00",
+        "digest": "947f08885c3ddef5921363aa966f27a924178c806f566dbfefbbf1750f26e863",
+        "http": 200,
+        "time": 1792718449.6029742
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "35f38aa8efc5e3c0964182c5d1bd3491584b65f5"
     },
     "https://tb-silence-finder.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "26b2f57abfe65451c2dcce3108724e57",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:50.664816+00:00",
+        "digest": "ab9a2e3ed9a52abab1027b8d89cfae94613b2ff7f37af74e837ecfab93376aa2",
+        "http": 200,
+        "time": 1792718450.6648142
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "9aff8bff8ebbf143b4163fb0354e0f5fa4161771"
     },
@@ -291,6 +435,12 @@
     "https://tb-static-site-check.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "1f5e940600c677f00c7ead6d87a6edd5",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:51.998259+00:00",
+        "digest": "91c2b1fb71adfa7a6dc2305a18a83a1f3c34a39f8cf52b66ad3063a3b5771c2c",
+        "http": 200,
+        "time": 1792718451.998257
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "1f9f9a77b07755110e2c537c239cb78530e56c32"
     },
@@ -309,24 +459,48 @@
     "https://tb-survey-review.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "ac8d90da42cd8f4349d06c456c79f599",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:53.462610+00:00",
+        "digest": "2e54e049de8c080f14aab625bff16dbb110c0dd638386776ea4f8cac121e0a1f",
+        "http": 200,
+        "time": 1792718453.4626076
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "c00e8cbe14c048f3092e291463a6b576687ddd7e"
     },
     "https://tb-svg-laser-check.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "4bde77da70e3dc07b758d12d66da01d3",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:54.657773+00:00",
+        "digest": "20b57ff94b3ab67160f33dcbbc24382be5661e757d4bee7668bb8d63acaa1e62",
+        "http": 200,
+        "time": 1792718454.6577718
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "dc6d5b727e26db65474df6cd23711087a2377f42"
     },
     "https://tb-tournament-maker.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "e6487d7640e4f00661f692a7e6f6535f",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:55.878708+00:00",
+        "digest": "be2d0289b6d71c617ea9b5cee4c3874d704288e15d1059d02d62553ac5b7bd3b",
+        "http": 200,
+        "time": 1792718455.8787065
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "e7fdf864da36e70db07271cd09323e1f4ad216d9"
     },
     "https://tb-trip-supplies.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "6064132ab5a34a29a239230a980a2b00",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:56.960434+00:00",
+        "digest": "7d739eac89fbcc89b8a3cd4defb9ca6c49fde92e7cf5afc274b4ccbcf1ce67d1",
+        "http": 200,
+        "time": 1792718456.9604332
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "8ba2b2b7d1f395bb054e4312a90d069bb1b15eed"
     },
@@ -345,6 +519,12 @@
     "https://tb-video-delivery-check.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "78fe79b48d156fc94343344027042c2d",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:20:58.752654+00:00",
+        "digest": "f6fcc1642a9f88387f000e696c36285c6b8441da8b7b580ba2908852970c60a4",
+        "http": 200,
+        "time": 1792718458.7526531
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "8abe3127fc3b84f730b5b8b2ef0f18a9f684c85a"
     },
@@ -363,6 +543,12 @@
     "https://tb-webtoon-preflight.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "7835112d3ab252358dd186fed3c0932b",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:21:00.050911+00:00",
+        "digest": "a4686fc40d845d6bc455b8ad78e887f5219353d73c4b7ace3b1d1f467543fce8",
+        "http": 200,
+        "time": 1792718460.0509083
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "aab14fad84c06f5dece4663fe576115338f2041a"
     },

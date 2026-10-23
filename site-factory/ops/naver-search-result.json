@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-23T01:18:23.297557+00:00",
+  "checkedAt": "2026-10-23T01:21:00.400034+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
@@ -8,7 +8,17 @@
   "roots": 47,
   "sites": [
     {
-      "publication": "live_proof_not_confirmed",
+      "consoleStatus": "verified",
+      "indexNow": {
+        "count": 19,
+        "http": 200,
+        "status": "received"
+      },
+      "indexing": "unknown",
+      "publication": "live",
+      "robotsSitemap": "present",
+      "sitemapFile": "valid",
+      "sitemapSubmission": "submitted",
       "url": "https://abreda.com/"
     },
     {
@@ -105,11 +115,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -150,11 +159,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -165,11 +173,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -195,11 +202,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -210,11 +216,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -225,11 +230,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -240,11 +244,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -255,11 +258,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -285,11 +287,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -300,11 +301,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -330,11 +330,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -345,11 +344,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -360,11 +358,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -375,11 +372,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -390,11 +386,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -405,11 +400,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -420,11 +414,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -435,11 +428,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -450,11 +442,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -465,11 +456,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -480,11 +470,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -495,11 +484,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -510,11 +498,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -540,11 +527,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -570,11 +556,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -585,11 +570,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -600,11 +584,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -615,11 +598,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -645,11 +627,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -675,11 +656,10 @@
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "count": 1,
-        "http": 422,
-        "status": "not_confirmed"
+        "http": 200,
+        "status": "received"
       },
       "indexing": "unknown",
-      "providerMessage": "non_json_error",
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
@@ -702,5 +682,5 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "f613c4e022472f0ec171551c50b3b038085df979"
+  "sourceCommit": "0215f989994db3db3d3f598355bcca0d2a3039ab"
 }
