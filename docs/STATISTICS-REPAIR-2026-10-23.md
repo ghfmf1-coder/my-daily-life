@@ -35,3 +35,5 @@ toolbox-public-visit v2에서 신규 봇/자동화/사람 추정/판별 불가 �
 - 후속 51개 서비스 전체(기존 수집기 4개 포함) 운영 HTML·추적 스크립트·기존 영어 URL·수집기 dryRun 진단도 통과. 진단 accepted:false로 저장 없음 확인. 상세는 statistics-repair-result.json의 collectorCoverage. 신규 30개 사이트의 별도 영어 페이지는 생성하지 않았으며 없는 페이지를 검증 완료로 표시하지 않음.
 
 배포는 Cloudflare 공식 Replace Worker Script Content API로 코드만 교체하고 설정/바인딩을 수정하지 않습니다. 공식 2026년 Workers 권한 안내에 따라 기존 Worker 하나에 한정한 Editor 역할이면 충분하며 D1·KV·라우트 권한을 추가하지 않습니다. 참고: https://developers.cloudflare.com/workers/authorization/workers/
+
+최종 CI 원천·수집기 검증 completed/success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39913429050 . 실제 운영 51개, VISIT_COVERAGE_COMPLETE=51, PERFORMANCE_SOURCE_RECONCILIATION_PASSED 및 AdSense no_rows 확인. Worker 배포/UI 최종 검증은 전용 Secret 부재로 여전히 미완료입니다.
