@@ -296,7 +296,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             seen = set()
             def render_real_work_card(match):
                 original = match.group(0)
-                m = re.search(r'href="https://tb-([a-z0-9-]+)\\.pages\\.dev/"', original)
+                m = re.search(r'href="https://tb-([a-z0-9-]+)[.]pages[.]dev/"', original)
                 if not m:
                     return original
                 site = m.group(1)
