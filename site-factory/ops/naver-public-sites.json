@@ -10,17 +10,35 @@
       "consoleCheckedAt": "2026-10-23",
       "consoleStatus": "verified",
       "indexNowKey": "c51ffdebcee7ffc5d113786a59772f87",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:13:49.979967+00:00",
+        "digest": "098d313e94cf5fd82c7402d14444fccb45ca1a347d5ef3d4dcfda74754c3f849",
+        "http": 200,
+        "time": 1792718029.9799623
+      },
       "sitemapStatus": "submitted"
     },
     "https://manuscript.abreda.com/": {
       "consoleCheckedAt": "2026-10-23",
       "consoleStatus": "verified",
       "indexNowKey": "5ae19f23d18bf960497cef7ec1dfe65d",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:13:51.497542+00:00",
+        "digest": "447e72f1fc6600a98908bfb56aee602a4ba40b201a1d27a44fd551836338f47a",
+        "http": 200,
+        "time": 1792718031.4975383
+      },
       "sitemapStatus": "submitted"
     },
     "https://my-daily-life.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "efec9072730bfe0db10e204081408be0",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:13:52.683255+00:00",
+        "digest": "a6cc3f7a2e26f6e17c0bc77acb6385f6b13b8ac1610a5d128dc36137f2960f34",
+        "http": 200,
+        "time": 1792718032.683253
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "46ffd9fac5e37f8e2e623e043fddd37f0ce0a4cc"
     },
@@ -28,17 +46,35 @@
       "consoleCheckedAt": "2026-10-23",
       "consoleStatus": "verified",
       "indexNowKey": "b83b8195ba5dd316eaa26078700db52d",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:13:53.953431+00:00",
+        "digest": "231539125fb56326e0f7845c321cf86170e757ddffe2e112448a2dc75b7a272b",
+        "http": 200,
+        "time": 1792718033.953425
+      },
       "sitemapStatus": "submitted"
     },
     "https://stl-print-check.abreda.com/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "557bb26f42ea5ad0d3575c660d87dc92",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:13:55.240290+00:00",
+        "digest": "05daade9a3245167751af48560699ace8fdda987f9b9cc2287b4866db6b6bd9c",
+        "http": 200,
+        "time": 1792718035.2402878
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "74cb45ed161ae1ddae4eb46a36e7881a5dbe018d"
     },
     "https://tb-aquarium-water-lab.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "24009e80aff10a1725df83e217e1bc3c",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:13:56.503490+00:00",
+        "digest": "18424deb654b4936c06cece99e0b13852740227d4d4804bb78b1d3d3bc5a402a",
+        "http": 200,
+        "time": 1792718036.5034878
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "de5a5f543b6fa6e12edddafb889e5ea246eebec6"
     },
@@ -51,12 +87,24 @@
     "https://tb-camera-lens-check.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "73427743f90984dcb6c6b3f0c2fa4ced",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:13:59.286970+00:00",
+        "digest": "d657f7296e15139d048c3cbcfdad95f32b682efd4abfc14bfb3034bd21684af6",
+        "http": 200,
+        "time": 1792718039.2869647
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "50a376cd8115c76e2cbc7be03b3dd426d10c1c50"
     },
     "https://tb-card-grading-lab.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "5cd42e72dd7180d00c118a8515b9c93a",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:14:00.537943+00:00",
+        "digest": "404022069ee7a1269b1a728439c8b0e995bbf91a87526dc96180f1b30d243392",
+        "http": 200,
+        "time": 1792718040.5379398
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "c567ceeecabd174e6b05384046c3000b5a1abf89"
     },
@@ -75,6 +123,12 @@
     "https://tb-comic-condition-lab.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "fec451b9deb0c7016c9d072910c36581",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:14:08.056611+00:00",
+        "digest": "d808a5d2c2d25c911ca7ba6143c77b390950939fb579d8818450151d23869e9a",
+        "http": 200,
+        "time": 1792718048.0566094
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "8511c3f3ad38c57de1ef9729cfd52f9e50d1807f"
     },
@@ -111,6 +165,12 @@
     "https://tb-gem-photo-inspection.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "726a40371bc4f3974b4e6c1c67828984",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:14:19.377483+00:00",
+        "digest": "2b44a989d17fca33d0e2fe26c3915d226e2786cfb34013c957e461ebf3f00292",
+        "http": 200,
+        "time": 1792718059.3774812
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "8ffcd8dc3028e7b1e3d5fca90263bf49416d815d"
     },
@@ -129,6 +189,12 @@
     "https://tb-keyboard-switch-diagnostics.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "ae9055fe240a116a806a75e4b6051d94",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:14:27.323424+00:00",
+        "digest": "e37f52e08c322d3f7207871c62c2eb2132ead24a5b046dc6e698832bd67c422c",
+        "http": 200,
+        "time": 1792718067.3234224
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "dc681eb540f6308dabef1d9817a202e3fd195562"
     },
@@ -213,6 +279,12 @@
     "https://tb-sneaker-condition-lab.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "f1e917c6afcca15af5a3831ae30a2310",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:14:56.725163+00:00",
+        "digest": "fbc4aad0cbdc09cad74a5854dc0632b2d696a8d4a8b217b7763880c622672aa3",
+        "http": 200,
+        "time": 1792718096.7251604
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "a5eb2d481d84725f6cb27159eb1630ae5e599892"
     },
@@ -225,6 +297,12 @@
     "https://tb-subtitle-sync-studio.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "7d265ffd057bcc0401c6b59a057e3d8a",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:15:00.200804+00:00",
+        "digest": "4232d5d0b58f3d8065fc6d2d9bb53b2a994b502931163b9c9b0ad0174cb4b4ef",
+        "http": 200,
+        "time": 1792718100.2008018
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "750b7e2429491dcd6efa7c905e4d704643117369"
     },
@@ -255,6 +333,12 @@
     "https://tb-used-car-inspection.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "11274abc80ec569aa470239e8b5cb7ef",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:15:18.684576+00:00",
+        "digest": "db816791dafc996c78815eac7d0823ffe043d6c7745a94dbb0e9a0116dd37a1c",
+        "http": 200,
+        "time": 1792718118.6845737
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "ce83decd5b1a592b1ec4339b000f6d4d882eebbc"
     },
@@ -267,6 +351,12 @@
     "https://tb-vinyl-condition-lab.pages.dev/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "321524f8782d3ca5b6ead32b79734d5b",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:15:33.484345+00:00",
+        "digest": "860b15461398a904d51dd619ab3fdb4442954303d4fa99d5d59ac7acdeb1ea22",
+        "http": 200,
+        "time": 1792718133.4843426
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "0519dbb0af955a2b22740146b0e40461defdc914"
     },
@@ -279,6 +369,12 @@
     "https://watch-inspection-lab.abreda.com/": {
       "consoleStatus": "ownership_pending",
       "indexNowKey": "adfb381e8ae89ca24623f21274b55ded",
+      "lastIndexNow": {
+        "at": "2026-10-23T01:15:35.459635+00:00",
+        "digest": "0b059a73906ac7f363d504b8b3c3ef7b12fa76c6d113affeb2ae546f5d866a6d",
+        "http": 200,
+        "time": 1792718135.4596324
+      },
       "sitemapStatus": "not_submitted",
       "verificationContent": "1eac07ec232ca24b19774da2df7ab3011f2bacac"
     }
