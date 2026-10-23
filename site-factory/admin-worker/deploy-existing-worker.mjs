@@ -1,6 +1,6 @@
 // Modify only the existing Worker. Preserve settings, bindings, secrets, routes and Cron.
 import fs from 'node:fs';
-const account=process.env.CLOUDFLARE_ACCOUNT_ID,token=process.env.CLOUDFLARE_WORKER_DEPLOY_TOKEN||process.env.CLOUDFLARE_API_TOKEN;
+const account=process.env.CLOUDFLARE_ACCOUNT_ID,token=process.env.CLOUDFLARE_WORKER_DEPLOY_TOKEN;
 if(!account||!token)throw Error('WORKER_DEPLOY_AUTH_REQUIRED');
 const base=`https://api.cloudflare.com/client/v4/accounts/${account}/workers/scripts/tb-toolbox-admin-rebuild`;
 async function api(url,options={}){const r=await fetch(url,{...options,headers:{Authorization:'Bearer '+token,...options.headers}});if(!r.ok)throw Error('WORKER_API_HTTP_'+r.status);const d=await r.json();if(!d.success)throw Error('WORKER_API_REJECTED');return d.result}

@@ -153,3 +153,7 @@ Google 소유권·사이트맵·색인, 네이버 계정 소유확인·사이트
 소유확인은 검색 노출의 필수 조건이 아닙니다. 검색과 무관하다는 뜻은 아니며, 등록/소유확인은 관리 보고서와 수집 관리에 쓰입니다. IndexNow 수신도 실제 색인·노출을 보장하지 않습니다. 공식 근거: 네이버 서치어드바이저 「사이트 등록 및 소유확인」 https://searchadvisor.naver.com/guide/faq-start-register (문서 발표 연도 미표기, 2026-10-23 확인).
 
 최신 실제 추가 검증: tb-audio-quality.pages.dev 및 tb-camera-lens-check.pages.dev 소유확인과 sitemap.xml 제출을 확인해 커밋 96227359ff5b89417c2081217f07c052a05d137c에 저장했습니다. 이전 절의 대기/실패 기록은 당시 이력이며 최신 사이트별 상태는 naver-public-sites.json을 따릅니다. 다음 tb-card-grading-lab.pages.dev 보안문자 단계에서 수동 등록 작업을 중단했습니다.
+
+## 관제센터 통계 복구 후속 운영
+
+통계 복구의 현재 배포/차단 상태는 docs/STATISTICS-REPAIR-2026-10-23.md와 site-factory/ops/statistics-repair-result.json을 먼저 확인합니다. 원천 대조 성공과 운영 UI 반영을 구분합니다. 관제센터 Worker만 재배포하는 워크플로는 .github/workflows/toolbox-admin-worker.yml이며 기존 Worker 바인딩/비밀/경로를 보존합니다. 별도 CLOUDFLARE_WORKER_DEPLOY_TOKEN이 필요하고 Pages 토큰을 확장하거나 D1 쓰기 권한을 추가하지 않습니다. 기존 Pages 배포 토큰은 실제 Workers API 403을 반환했습니다. 계정의 Workers Scripts Edit 전용 토큰을 GitHub Actions Secret에 저장한 뒤 최신 main 실행을 재실행합니다. 비밀값을 채팅/문서에 붙이지 않습니다. 배포 후 기존 Cloudflare Access 로그인으로 /next/와 날짜별 성과 API·모바일 표시를 검증해야 완료입니다.

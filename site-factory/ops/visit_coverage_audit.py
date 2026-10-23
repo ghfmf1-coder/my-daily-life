@@ -24,10 +24,11 @@ def check(site):
   scripts=re.findall(r'<script[^>]*src=["\']([^"\']+)["\'][^>]*data-toolbox-site=["\']'+re.escape(sid),html)
   if not scripts:raise ValueError('TRACKING_SCRIPT_NOT_RESOLVED')
   script=urllib.parse.urljoin(url,scripts[0]);_,code=request(script)
-  row['scriptAvailable']='toolbox-public-visit' in code
+  collector=site.get('collector','toolbox-public-visit')
+  row['scriptAvailable']=collector in code
   if not row['scriptAvailable']:raise ValueError('COLLECTOR_ENDPOINT_MISMATCH')
   origin=urllib.parse.urlunsplit((*urllib.parse.urlsplit(url)[:2],'','',''))
-  status,response=request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-public-visit','POST',{'siteId':sid,'eventId':str(uuid.uuid4()),'isVisit':False,'dryRun':True},{'Origin':origin,'Content-Type':'text/plain'})
+  status,response=request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/'+collector,'POST',{'siteId':sid,'eventId':str(uuid.uuid4()),'isVisit':False,'dryRun':True},{'Origin':origin,'Content-Type':'text/plain'})
   reply=json.loads(response);row['collectorDiagnostic']=status==202 and reply.get('diagnostic') is True and reply.get('accepted') is False
   if not row['collectorDiagnostic']:raise ValueError('NO_WRITE_DIAGNOSTIC_UNCONFIRMED')
   row['english']='not_present'
@@ -42,6 +43,14 @@ def check(site):
  return row
 def main():
  sites=json.loads(MANIFEST.read_text())['sites']
+ snapshot=Path('/tmp/toolbox-performance-source.json')
+ if snapshot.exists():
+  known={s['url'] for s in sites}
+  for entry in json.loads(snapshot.read_text())['entries']:
+   if entry['url'] in known:continue
+   _,html=request(entry['url']);found=re.search(r'data-toolbox-site=["\']([^"\']+)',html)
+   if not found:raise ValueError('LEDGER_TRACKING_MISSING: '+entry['url'])
+   sites.append({'siteId':found.group(1),'url':entry['url'],'collector':'toolbox-visit-collector'})
  with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:rows=list(pool.map(check,sites))
  for row in rows:print('VISIT_COVERAGE:',json.dumps(row))
  report={'source':'production HTML and no-write diagnostic requests','sites':rows,'failed':[r['url'] for r in rows if r['status']!='ok']}

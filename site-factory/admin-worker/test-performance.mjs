@@ -8,3 +8,5 @@ assert.equal(buildPerformance(entries,[],[],sync,'2026-10-23').entries[2].search
 const source={available:true,sites:[{id:'old',url:entries[2].url}],publicSites:[{site_id:'new',url:entries[2].url}],traffic:[{site_id:'old',visit_day:'2026-10-20',visits:99,pageviews:100}],classifiedTraffic:[{site_id:'old',visit_day:'2026-10-20',category:'likely_human',visits:99,pageviews:100}],publicTraffic:[{site_id:'new',visit_day:'2026-10-20',category:'likely_human',visits:2,pageviews:2,updated_at:checked}],metrics:[],fetchedAt:checked};
 assert.equal(integratePerformance(r,source).entries[2].visitors.value,2);assert.equal(integratePerformance(r,source).entries[2].visitors.value,2);assert.equal(r.entries[2].visitors.legacyTotal.sessions,99);assert.equal(r.entries.length,3);assert.equal(r.entries[2].visitors.classification.bot,undefined);
 console.log('PASS: localized page attribution, missing/error states, final date cutoff, source snapshots and no legacy double count');
+
+assert.equal(buildPerformance(entries,[],[],[{source:'GSC',status:'error'}],'2026-10-23').entries[2].search.status,'error');
