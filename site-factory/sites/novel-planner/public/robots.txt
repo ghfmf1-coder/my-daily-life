@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://novel.abreda.com/sitemap.xml

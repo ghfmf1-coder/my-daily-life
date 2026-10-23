@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tb-comic-condition-lab.pages.dev/sitemap.xml

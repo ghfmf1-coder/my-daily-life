@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://manuscript.abreda.com/sitemap.xml

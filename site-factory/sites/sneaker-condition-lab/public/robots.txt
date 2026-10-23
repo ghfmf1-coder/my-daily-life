@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tb-sneaker-condition-lab.pages.dev/sitemap.xml
