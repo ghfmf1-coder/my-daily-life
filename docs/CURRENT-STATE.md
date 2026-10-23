@@ -19,7 +19,7 @@
 | 사이트맵 처리 | 최종 조회에서 고유 47개, pending 41개·오류 0·경고 0. 제출과 처리 완료를 구분 |
 | Google URL 검사 | 원장 URL 51개 중 PASS 36·NEUTRAL 15. 해당 URL의 색인 버전이며 전체 사이트 색인 보장 아님 |
 | 검색 성과 | 조회 기간 2026-09-26~2026-10-20. API 반환 행: novel.abreda.com/en/, 2026-10-17, 노출 1·클릭 0. 다른 사이트의 자료 없음은 0 확정 아님 |
-| 네이버 | 로그인 요청 후 추가 보안 확인(영수증 문제) 표시. 계정 등록·소유확인·사이트맵·성과는 아직 미확인 |
+| 네이버 | 보안 확인 후 로그인 정상. 기존 4개 사이트 관리 접근·사이트맵 등록 확인. 노출/클릭·진단 정보 없음. 나머지 43개 루트는 계정 목록에 없음 |
 | 보존 | 감사는 D1 읽기만 수행. 기존 원장·통계·성과·OAuth 삭제/초기화 없음. 전체 과거 기록 전후 체크섬 검사는 미실시 |
 
 ## 실제 실행 증거
@@ -41,7 +41,7 @@ Google setup은 현재 활성입니다. search-setup-request.json은 paused:fals
 
 ## 남은 확인
 
-1. 네이버 보안 확인은 사용자가 공식 로그인 화면에서 완료해야 함. 비밀번호·보안 답·쿠키를 채팅이나 GitHub에 저장하지 않음. 현재 Google/GitHub 브리지는 네이버 계정을 조회하지 못하므로 네이버를 자동 연결 완료라고 보고하지 않음.
+1. 네이버 로그인 및 기존 4개 사이트 확인 완료. 나머지 43개 루트는 계정 목록에 없어 별도 등록·소유확인 필요. 현재 Google/GitHub 브리지는 네이버 계정을 실시간 조회하지 못함. GitHub의 네이버 결과는 아래 시점의 검증 기록이며 자동 갱신 결과가 아님. 비밀번호·보안 답·쿠키를 저장하지 않음.
 2. Google pending 사이트맵과 NEUTRAL URL은 후속 읽기 감사에서 확인. 색인을 강제로 완료 처리하지 않음.
 3. 새 임시 사이트 생성 실험은 미실시. 기존 30개 실제 배포와 D1 일치 및 성공 production 프로젝트 동적 대조·배포 후 감사 경로를 확인했음.
 
@@ -59,3 +59,64 @@ Google setup은 현재 활성입니다. search-setup-request.json은 paused:fals
 Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완료됐습니다. 실제 새로운 오류 근거 없이 반복 요청하지 않습니다. Cloudflare 원격 로그인 과거 실패를 계정 부재로 해석하지 않습니다.
 
 변경 이력: [OPERATIONS-CHANGELOG.md](OPERATIONS-CHANGELOG.md). 최초 과거 검증: [OPS-VERIFICATION-2026-10-22.md](OPS-VERIFICATION-2026-10-22.md). 최신 실제 로그가 과거 기록보다 우선합니다.
+
+## 네이버 공식 화면 후속 확인 — 2026-10-23
+
+사용자가 추가 보안 확인을 완료한 뒤 공식 서치어드바이저 계정 목록·사이트별 요약을 확인했습니다. 계정 이름·비밀번호·쿠키는 기록하지 않습니다.
+
+| 사이트 | 계정 등록 | 사이트맵 | 노출/클릭·진단 |
+|---|---|---|---|
+| https://abreda.com | 확인 | 등록됨 | 정보 없음 |
+| https://csv.abreda.com | 확인 | 등록됨. 제출 목록 sitemap.xml, 26.10.18 21:08:10 | 정보 없음 |
+| https://manuscript.abreda.com | 확인 | 등록됨 | 정보 없음 |
+| https://novel.abreda.com | 확인 | 등록됨 | 정보 없음 |
+
+각 요약에서 HTTPS 리다이렉션 정상, 보안 인증서는 '확인중 입니다.'로 표시됐습니다. 사이트맵 등록은 네이버 전체 색인 완료의 증거가 아닙니다. 제공되지 않은 노출·클릭을 0으로 표시하지 않습니다. 기존 4곳의 사이트맵은 중복 제출하지 않았습니다.
+
+목록 근거: https://searchadvisor.naver.com/console/board
+
+다음 43개 루트는 위 계정 목록에 없습니다. 원장 미등록이 아니라 네이버 계정 미등록이며 Google 등록 완료와 구분합니다. 별도 소유확인 없이 사이트맵 제출 권한이 있다고 가정하지 않습니다.
+
+- https://my-daily-life.pages.dev/
+- https://stl-print-check.abreda.com/
+- https://tb-aquarium-water-lab.pages.dev/
+- https://tb-audio-quality.pages.dev/
+- https://tb-camera-lens-check.pages.dev/
+- https://tb-card-grading-lab.pages.dev/
+- https://tb-certificate-batch.pages.dev/
+- https://tb-class-schedule-check.pages.dev/
+- https://tb-comic-condition-lab.pages.dev/
+- https://tb-detail-image-review.pages.dev/
+- https://tb-dst-embroidery.pages.dev/
+- https://tb-epub-preflight.pages.dev/
+- https://tb-event-seating.pages.dev/
+- https://tb-exam-variants.pages.dev/
+- https://tb-gem-photo-inspection.pages.dev/
+- https://tb-inventory-diff.pages.dev/
+- https://tb-invoice-reconcile.pages.dev/
+- https://tb-keyboard-switch-diagnostics.pages.dev/
+- https://tb-lease-registry-diff.pages.dev/
+- https://tb-move-evidence.pages.dev/
+- https://tb-moving-boxes.pages.dev/
+- https://tb-option-combinations.pages.dev/
+- https://tb-pdf-preflight.pages.dev/
+- https://tb-photo-contact-sheet.pages.dev/
+- https://tb-photo-duplicates.pages.dev/
+- https://tb-purchase-three-way.pages.dev/
+- https://tb-question-similarity.pages.dev/
+- https://tb-shipping-audit.pages.dev/
+- https://tb-shotlist-maker.pages.dev/
+- https://tb-show-cues.pages.dev/
+- https://tb-silence-finder.pages.dev/
+- https://tb-sneaker-condition-lab.pages.dev/
+- https://tb-static-site-check.pages.dev/
+- https://tb-subtitle-sync-studio.pages.dev/
+- https://tb-survey-review.pages.dev/
+- https://tb-svg-laser-check.pages.dev/
+- https://tb-tournament-maker.pages.dev/
+- https://tb-trip-supplies.pages.dev/
+- https://tb-used-car-inspection.pages.dev/
+- https://tb-video-delivery-check.pages.dev/
+- https://tb-vinyl-condition-lab.pages.dev/
+- https://tb-webtoon-preflight.pages.dev/
+- https://watch-inspection-lab.abreda.com/
