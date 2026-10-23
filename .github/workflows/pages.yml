@@ -1,4 +1,5 @@
-name: Publish to GitHub Pages
+name: 작은도구함 공개 사이트 배포
+run-name: '작은도구함 공개 사이트 배포 · ${{ github.run_number }}차'
 on:
   push:
     branches: [main]
@@ -19,14 +20,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      - name: Check JavaScript syntax before deployment
+      - name: 배포 전 자바스크립트 문법 검사
         run: |
           node --check app.js
           node --check config.js
           node --check en/app/translate.js
-      - name: Generate SEO URLs for GitHub Pages
+      - name: 검색용 URL 생성
         run: python3 prepare_seo.py "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
-      - name: Assemble public static site
+      - name: 공개 사이트 빌드
         run: |
           mkdir -p dist/app dist/en/app
           cp toolbox-traffic.js index.html landing.css styles.css app.js config.js icon.svg favicon.ico manifest.webmanifest privacy.html terms.html sitemap.xml robots.txt dist/
@@ -39,7 +40,7 @@ jobs:
           path: dist
       - id: deployment
         uses: actions/deploy-pages@v4
-      - name: Verify deployed pages and sitemap
+      - name: 배포 페이지와 사이트맵 검증
         id: website
         shell: bash
         run: |
@@ -59,7 +60,7 @@ jobs:
           done
           echo "ready=${ready}" >> "$GITHUB_OUTPUT"
           echo "Public site ready: ${ready}"
-      - name: Notify IndexNow search engines
+      - name: 검색엔진 수집 요청
         if: steps.website.outputs.ready == 'true'
         shell: bash
         run: |

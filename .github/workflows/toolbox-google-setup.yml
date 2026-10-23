@@ -1,10 +1,11 @@
-name: Toolbox Google ownership and sitemap setup
+name: 작은도구함 구글 등록·사이트맵 자동화
+run-name: '작은도구함 구글 등록·사이트맵 자동화 · ${{ github.run_number }}차'
 on:
   workflow_dispatch:
   schedule:
     - cron: '47 */6 * * *'
   workflow_run:
-    workflows: ['Toolbox approved-site auto-deploy', 'Work twenty standalone preview sites', 'Work toolbox nine site builds and test deployments', 'Work shipping audit - tests and independent Pages deployment']
+    workflows: ['작은도구함 승인 사이트 자동 배포', '작은도구함 독립 도구 20개 검사·배포', '작은도구함 전문 도구 9개 검사·배포', '작은도구함 배송 도구 검사·배포']
     types: [completed]
   push:
     branches: [main]
@@ -30,15 +31,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install existing Pages deployment tooling
+      - name: 기존 배포 도구 준비
         run: npm install --no-save --no-package-lock wrangler@4
-      - name: Reconcile Google ownership and submit validated sitemaps
+      - name: 구글 소유확인 및 사이트맵 제출
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_D1_READ_TOKEN: ${{ secrets.CLOUDFLARE_D1_READ_TOKEN }}
           CLOUDFLARE_PAGES_DEPLOY_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: python3 site-factory/ops/google_search_setup.py
-      - name: Preserve non-secret setup results
+      - name: 공개 검증 결과 보관
         if: always()
         uses: actions/upload-artifact@v4
         with:

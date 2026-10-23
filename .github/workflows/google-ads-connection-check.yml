@@ -1,4 +1,5 @@
-name: Verify Google Ads OAuth endpoint
+name: 작은도구함 구글 인증 연결 점검
+run-name: '작은도구함 구글 인증 연결 점검 · ${{ github.run_number }}차'
 on:
   workflow_dispatch:
   push:
@@ -11,7 +12,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Verify configured callback server (no credentials printed)
+      - name: 인증 콜백 서버 확인
         shell: bash
         run: |
           set -euo pipefail
@@ -26,7 +27,7 @@ jobs:
               raise SystemExit('Google Ads OAuth credentials not available to the backend')
           print('Server online and OAuth credentials configured (values never printed).')
           PY
-      - name: Check owner authentication is required
+      - name: 관리자 인증 필수 여부 확인
         shell: bash
         run: |
           set -euo pipefail

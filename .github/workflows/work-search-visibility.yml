@@ -1,4 +1,5 @@
-name: Verify public indexability - 30 Work tools
+name: 작은도구함 신규 도구 30개 검색 접근 점검
+run-name: '작은도구함 신규 도구 30개 검색 접근 점검 · ${{ github.run_number }}차'
 on:
   push:
     branches: [main]
@@ -11,7 +12,7 @@ jobs:
   search-readiness:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch actual live HTML, robots and sitemap for all 30
+      - name: 신규 도구 30개 운영 페이지·로봇 규칙·사이트맵 확인
         env:
           SITE_NAMES: '["audio-quality","certificate-batch","class-schedule-check","detail-image-review","dst-embroidery","epub-preflight","event-seating","exam-variants","inventory-diff","invoice-reconcile","lease-registry-diff","move-evidence","moving-boxes","option-combinations","pdf-preflight","photo-contact-sheet","photo-duplicates","purchase-three-way","question-similarity","shotlist-maker","show-cues","shipping-audit","silence-finder","static-site-check","survey-review","svg-laser-check","tournament-maker","trip-supplies","video-delivery-check","webtoon-preflight"]'
         run: |

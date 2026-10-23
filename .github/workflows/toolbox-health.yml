@@ -1,10 +1,11 @@
-name: Toolbox daily maintenance
+name: 작은도구함 자동 유지보수
+run-name: '작은도구함 자동 유지보수 · ${{ github.run_number }}차'
 on:
   schedule:
     - cron: '20 0 * * *' # UTC; 09:20 KST
   workflow_dispatch:
   workflow_run:
-    workflows: ['Toolbox approved-site auto-deploy']
+    workflows: ['작은도구함 승인 사이트 자동 배포']
     types: [completed]
   push:
     branches: [main]
@@ -30,7 +31,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Python and CSV regression suite
+      - name: 파이썬·CSV 회귀 검사
         shell: bash
         run: |
           set +e
@@ -41,25 +42,25 @@ jobs:
           cat /tmp/source.log
           if [[ "$A" -eq 0 && "$B" -eq 0 ]]; then echo SOURCE_OK=1 >> "$GITHUB_ENV"; else echo SOURCE_OK=0 >> "$GITHUB_ENV"; fi
           exit 0
-      - name: Inspect root Cloudflare deployment configuration
+      - name: 대표 도메인 배포 설정 확인
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: python3 site-factory/monitoring/cloudflare_root_info.py
-      - name: HTTPS metadata sitemap and asset health
+      - name: 접속·검색 태그·사이트맵·파일 점검
         shell: bash
         run: |
           set +e
           python3 site-factory/monitoring/check_sites.py --output /tmp/live.json
           echo "LIVE_RC=$?" >> "$GITHUB_ENV"
           exit 0
-      - name: Install Chromium and Wrangler
+      - name: 브라우저·배포 도구 준비
         id: tools
         continue-on-error: true
         run: |
           npm install --no-save --no-package-lock playwright@1.55.0 wrangler@4
           npx --no-install playwright install --with-deps chromium
-      - name: Run desktop and mobile functional smoke tests
+      - name: PC·모바일 주요 기능 검사
         shell: bash
         env:
           TOOLS_OUTCOME: ${{ steps.tools.outcome }}
@@ -74,7 +75,7 @@ jobs:
           fi
           echo "BROWSER_RC=$CODE" >> "$GITHUB_ENV"
           exit 0
-      - name: Merge results and mark incidents
+      - name: 점검 결과 통합 및 오류 분류
         shell: bash
         run: |
           set +e
@@ -85,13 +86,13 @@ jobs:
           d=json.load(open('/tmp/maintenance.json',encoding='utf8'))
           s=d['summary']
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf8') as f:
-            f.write('## Automated Small Toolbox maintenance\n')
-            f.write(f"- **{d['status']}**, sites={s['sites']}, site errors={s['siteFailed']}\n")
-            f.write(f"- Browser: {s['browserPassed']} passed, {s['browserFailed']} failed\n")
-            f.write(f"- Source regression passed: {s['sourceTestsPassed']}\n")
+            f.write('## 작은도구함 자동 유지보수\n')
+            f.write(f"- 상태: **{dict(pass_="정상", warning="주의", fail="오류").get(d['status'], d['status']) if d['status'] != 'pass' else '정상'}**, 사이트 {s['sites']}개, 사이트 오류 {s['siteFailed']}개\n")
+            f.write(f"- 주요 기능: 성공 {s['browserPassed']}개, 실패 {s['browserFailed']}개\n")
+            f.write(f"- 소스 회귀 검사: {'통과' if s['sourceTestsPassed'] else '실패'}\n")
           PY
           exit 0
-      - name: Archive maintenance details
+      - name: 점검 상세 결과 보관
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -103,7 +104,7 @@ jobs:
             /tmp/source.log
           retention-days: 30
           if-no-files-found: warn
-      - name: Store and deploy latest manager report
+      - name: 최신 관리 보고서 저장·배포
         id: publish
         continue-on-error: true
         shell: bash
@@ -130,7 +131,7 @@ jobs:
           test -n "$CLOUDFLARE_ACCOUNT_ID" && test -n "$CLOUDFLARE_API_TOKEN"
           npm install --no-save --no-package-lock wrangler@4
           python3 site-factory/scripts/deploy_site.py --site toolbox-admin
-      - name: Create or resolve one diagnostic GitHub issue
+      - name: 한글 오류 알림 등록·해결
         if: always()
         continue-on-error: true
         shell: bash
@@ -144,13 +145,16 @@ jobs:
           python3 - <<'PY'
           import json,os
           try:d=json.load(open('/tmp/maintenance.json',encoding='utf8'))
-          except Exception:d={'status':'fail','issues':[{'scope':'report','details':'No report produced'}]}
+          except Exception:d={'status':'fail','issues':[{'scope':'report','details':'점검 보고서가 생성되지 않았습니다.'}]}
           with open('/tmp/maintenance-issue.md','w',encoding='utf8') as f:
-            f.write('### Automatic maintenance regression\n\n')
-            f.write(f"Status: {d.get('status')}\n")
-            f.write(f"Run: {os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}\n\n")
-            for x in d.get('issues',[])[:15]:f.write(f"- {x.get('scope','unknown')}: {x.get('details','error')}\n")
-            f.write('\nPublic-site diagnostics only; no credentials or customer data.\n')
+            f.write('### 작은도구함 자동 점검 알림\n\n')
+            f.write(f"점검 상태: {'정상' if d.get('status')=='pass' else '주의' if d.get('status')=='warning' else '오류'}\n")
+            f.write(f"실행 결과: {os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}\n\n")
+            for x in d.get('issues',[])[:15]:
+                detail=str(x.get('details',''))
+                reason='대표 URL 태그 점검 실패' if 'canonical' in detail else '사이트맵 점검 실패' if 'sitemap' in detail else '공개 파일 점검 실패' if 'icon_' in detail else '접속 또는 주요 기능 점검 실패'
+                f.write(f"- 대상 {x.get('scope','미확인')}: {reason}\n")
+            f.write('\n공개 사이트만 점검했습니다. 상세 진단은 실행 결과에서 확인할 수 있으며 인증정보와 고객정보는 포함하지 않습니다.\n')
           PY
           if [[ "$REPORT_RC" != 0 || "$PUBLISH_OUTCOME" != success ]]; then
             if [[ -n "$ISSUE" ]]; then
@@ -159,11 +163,11 @@ jobs:
               gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --body-file /tmp/maintenance-issue.md
             fi
           elif [[ -n "$ISSUE" ]]; then
-            gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body 'Automated verification has recovered.'
+            gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body '자동 점검이 정상으로 복구되었습니다.'
             gh issue close "$ISSUE" --repo "$GITHUB_REPOSITORY" --reason completed
           fi
           exit 0
-      - name: Fail job on unhealthy sites or failed report publishing
+      - name: 운영 상태와 보고서 배포 결과 확인
         if: always()
         env:
           PUBLISH_OUTCOME: ${{ steps.publish.outcome }}

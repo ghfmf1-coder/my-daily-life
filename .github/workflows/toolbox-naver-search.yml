@@ -1,10 +1,11 @@
-name: Toolbox Naver public search discovery
+name: 작은도구함 네이버 수집 자동화
+run-name: '작은도구함 네이버 수집 자동화 · ${{ github.run_number }}차'
 on:
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
   workflow_run:
-    workflows: ['Toolbox Google ownership and sitemap setup']
+    workflows: ['작은도구함 구글 등록·사이트맵 자동화']
     types: [completed]
   push:
     branches: [main]
@@ -29,10 +30,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate public search automation
+      - name: 공개 검색 자동화 검사
         run: python3 -m unittest discover -s site-factory/ops -p 'test_naver_search.py' -v
       - run: npm install --no-save --no-package-lock wrangler@4
-      - name: Publish proofs and notify Naver without login cookies
+      - name: 공개 인증 파일 배포 및 네이버 수집 요청
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_D1_READ_TOKEN: ${{ secrets.CLOUDFLARE_D1_READ_TOKEN }}

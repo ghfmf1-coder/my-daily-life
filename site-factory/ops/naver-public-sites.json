@@ -40,7 +40,7 @@
       "sitemapStatus": "submitted"
     },
     "https://my-daily-life.pages.dev/": {
-      "consoleStatus": "ownership_pending",
+      "consoleStatus": "verified",
       "contentDigest": "1e7794a03b7f130b52ecebab5ba85f22321049a280f7842a1f49051dfe570754",
       "indexNowKey": "efec9072730bfe0db10e204081408be0",
       "lastIndexNow": {
@@ -49,8 +49,10 @@
         "http": 200,
         "time": 1792718493.2296944
       },
-      "sitemapStatus": "not_submitted",
-      "verificationContent": "46ffd9fac5e37f8e2e623e043fddd37f0ce0a4cc"
+      "sitemapStatus": "submitted",
+      "verificationContent": "46ffd9fac5e37f8e2e623e043fddd37f0ce0a4cc",
+      "consoleCheckedAt": "2026-10-23T01:34:24Z",
+      "consoleEvidence": "네이버 계정 목록 소유확인 및 제출된 sitemap.xml 직접 확인"
     },
     "https://novel.abreda.com/": {
       "consoleCheckedAt": "2026-10-23",
@@ -66,7 +68,7 @@
       "sitemapStatus": "submitted"
     },
     "https://stl-print-check.abreda.com/": {
-      "consoleStatus": "ownership_pending",
+      "consoleStatus": "verified",
       "contentDigest": "8a74de4adf2bb308b957beedb5820d038eaa871a4e952193496aae2a0a339565",
       "indexNowKey": "557bb26f42ea5ad0d3575c660d87dc92",
       "lastIndexNow": {
@@ -75,11 +77,13 @@
         "http": 200,
         "time": 1792718495.6168828
       },
-      "sitemapStatus": "not_submitted",
-      "verificationContent": "74cb45ed161ae1ddae4eb46a36e7881a5dbe018d"
+      "sitemapStatus": "submitted",
+      "verificationContent": "74cb45ed161ae1ddae4eb46a36e7881a5dbe018d",
+      "consoleCheckedAt": "2026-10-23T01:34:24Z",
+      "consoleEvidence": "네이버 계정 목록 소유확인 및 제출된 sitemap.xml 직접 확인"
     },
     "https://tb-aquarium-water-lab.pages.dev/": {
-      "consoleStatus": "ownership_pending",
+      "consoleStatus": "verified",
       "contentDigest": "8154d834a8ed5406a341b8531fa4c3d24b3e4cd7cfca27c7a0b88f9995db9126",
       "indexNowKey": "24009e80aff10a1725df83e217e1bc3c",
       "lastIndexNow": {
@@ -88,8 +92,10 @@
         "http": 200,
         "time": 1792718496.643289
       },
-      "sitemapStatus": "not_submitted",
-      "verificationContent": "de5a5f543b6fa6e12edddafb889e5ea246eebec6"
+      "sitemapStatus": "submitted",
+      "verificationContent": "de5a5f543b6fa6e12edddafb889e5ea246eebec6",
+      "consoleCheckedAt": "2026-10-23T01:34:24Z",
+      "consoleEvidence": "네이버 계정 목록 소유확인 및 제출된 sitemap.xml 직접 확인"
     },
     "https://tb-audio-quality.pages.dev/": {
       "consoleStatus": "ownership_pending",

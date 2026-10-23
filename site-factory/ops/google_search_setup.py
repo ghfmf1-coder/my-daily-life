@@ -168,7 +168,7 @@ def main():
     report={'sourceCommit':git('rev-parse','HEAD'),'roots':len(urls),'verificationResults':verified,'sitemapResults':submitted,'failures':failures,'indexing':'NOT_GUARANTEED_BY_VERIFICATION_OR_SITEMAP_SUBMISSION'}
     Path('/tmp/toolbox-google-setup-result.json').write_text(json.dumps(report,ensure_ascii=True,indent=2))
     with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as summary:
-        summary.write('## Google search setup\n\n'+f"Site roots: {len(urls)}; attention items: {len(failures)}.\n\nOwnership and sitemap submission do not guarantee indexing.\n")
+        summary.write('## 작은도구함 구글 검색 등록\n\n'+f"사이트 루트 {len(urls)}개 · 확인이 필요한 항목 {len(failures)}개\n\n소유확인과 사이트맵 제출이 실제 색인을 보장하지는 않습니다.\n")
     print('GOOGLE_SETUP_ATTENTION_COUNT:',len(failures))
     if failures:raise SystemExit('GOOGLE_SETUP_NEEDS_ATTENTION')
 if __name__=='__main__':main()
