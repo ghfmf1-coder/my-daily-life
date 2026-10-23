@@ -1,0 +1,239 @@
+{
+  "sites": {
+    "https://my-daily-life.pages.dev/": {
+      "verificationContent": "46ffd9fac5e37f8e2e623e043fddd37f0ce0a4cc",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://stl-print-check.abreda.com/": {
+      "verificationContent": "74cb45ed161ae1ddae4eb46a36e7881a5dbe018d",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-aquarium-water-lab.pages.dev/": {
+      "verificationContent": "de5a5f543b6fa6e12edddafb889e5ea246eebec6",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-audio-quality.pages.dev/": {
+      "verificationContent": "8019441869cb34960ff43f949b6bd909678fba57",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-camera-lens-check.pages.dev/": {
+      "verificationContent": "50a376cd8115c76e2cbc7be03b3dd426d10c1c50",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-card-grading-lab.pages.dev/": {
+      "verificationContent": "c567ceeecabd174e6b05384046c3000b5a1abf89",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-certificate-batch.pages.dev/": {
+      "verificationContent": "e424c5f4f6f1565cc0799e8598bad329cde62c2d",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-class-schedule-check.pages.dev/": {
+      "verificationContent": "eb44beee0007751477db85c694588f409e71c445",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-comic-condition-lab.pages.dev/": {
+      "verificationContent": "8511c3f3ad38c57de1ef9729cfd52f9e50d1807f",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-detail-image-review.pages.dev/": {
+      "verificationContent": "48dbd245e6437931697bbfd3d83cc243bbc5ee1a",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-dst-embroidery.pages.dev/": {
+      "verificationContent": "6fd80f38c87e6efd299529bfd10f1f0933a1839d",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-epub-preflight.pages.dev/": {
+      "verificationContent": "a0b1d2fa0162fb68f6b4a123483e3415e430efae",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-event-seating.pages.dev/": {
+      "verificationContent": "b867e56878c7f35a4d2e659572318678df636e49",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-exam-variants.pages.dev/": {
+      "verificationContent": "03084102b049c9c26761e6d0d62466f9f39ecf37",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-gem-photo-inspection.pages.dev/": {
+      "verificationContent": "8ffcd8dc3028e7b1e3d5fca90263bf49416d815d",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-inventory-diff.pages.dev/": {
+      "verificationContent": "0236a7d9ce6163af12bffc863a85a6658fa1136e",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-invoice-reconcile.pages.dev/": {
+      "verificationContent": "e5b92172bbd1846329dc5fd89a63ef475982db8e",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-keyboard-switch-diagnostics.pages.dev/": {
+      "verificationContent": "dc681eb540f6308dabef1d9817a202e3fd195562",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-lease-registry-diff.pages.dev/": {
+      "verificationContent": "c6e1999c1ba8f9728add310ff9b60c80044072a6",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-move-evidence.pages.dev/": {
+      "verificationContent": "a738475dc97ed18c7fcfb02094c74355c107aebb",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-moving-boxes.pages.dev/": {
+      "verificationContent": "3baee8d0843250af5ffd82cf19ffde3585682b30",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-option-combinations.pages.dev/": {
+      "verificationContent": "e68d933890ef461fcbfd7dca84366f5bd3396dec",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-pdf-preflight.pages.dev/": {
+      "verificationContent": "3e8352831a931ba6aa9dad5f4f5ef56ac1aa42c7",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-photo-contact-sheet.pages.dev/": {
+      "verificationContent": "8c5ef617cb35c5af05bb7f08d40ef646b7ee87dc",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-photo-duplicates.pages.dev/": {
+      "verificationContent": "b9c2c730d08214f1e2d300ac8038fd7d03a0e410",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-purchase-three-way.pages.dev/": {
+      "verificationContent": "45aa00d9a90c4a30caddc7f22c19a2dc56f735c1",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-question-similarity.pages.dev/": {
+      "verificationContent": "03f6c61e84b7ca35c6fabef17e6f4cb99a133c63",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-shipping-audit.pages.dev/": {
+      "verificationContent": "23d8059c21df6df3c0e9ec85c80cedf1297d8346",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-shotlist-maker.pages.dev/": {
+      "verificationContent": "19cde0180f60dfc9b4d0138ce8f1e00f51ed234e",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-show-cues.pages.dev/": {
+      "verificationContent": "35f38aa8efc5e3c0964182c5d1bd3491584b65f5",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-silence-finder.pages.dev/": {
+      "verificationContent": "9aff8bff8ebbf143b4163fb0354e0f5fa4161771",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-sneaker-condition-lab.pages.dev/": {
+      "verificationContent": "a5eb2d481d84725f6cb27159eb1630ae5e599892",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-static-site-check.pages.dev/": {
+      "verificationContent": "1f9f9a77b07755110e2c537c239cb78530e56c32",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-subtitle-sync-studio.pages.dev/": {
+      "verificationContent": "750b7e2429491dcd6efa7c905e4d704643117369",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-survey-review.pages.dev/": {
+      "verificationContent": "c00e8cbe14c048f3092e291463a6b576687ddd7e",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-svg-laser-check.pages.dev/": {
+      "verificationContent": "dc6d5b727e26db65474df6cd23711087a2377f42",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-tournament-maker.pages.dev/": {
+      "verificationContent": "e7fdf864da36e70db07271cd09323e1f4ad216d9",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-trip-supplies.pages.dev/": {
+      "verificationContent": "8ba2b2b7d1f395bb054e4312a90d069bb1b15eed",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-used-car-inspection.pages.dev/": {
+      "verificationContent": "ce83decd5b1a592b1ec4339b000f6d4d882eebbc",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-video-delivery-check.pages.dev/": {
+      "verificationContent": "8abe3127fc3b84f730b5b8b2ef0f18a9f684c85a",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-vinyl-condition-lab.pages.dev/": {
+      "verificationContent": "0519dbb0af955a2b22740146b0e40461defdc914",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://tb-webtoon-preflight.pages.dev/": {
+      "verificationContent": "aab14fad84c06f5dece4663fe576115338f2041a",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://watch-inspection-lab.abreda.com/": {
+      "verificationContent": "1eac07ec232ca24b19774da2df7ab3011f2bacac",
+      "consoleStatus": "ownership_pending",
+      "sitemapStatus": "not_submitted"
+    },
+    "https://abreda.com/": {
+      "consoleStatus": "verified",
+      "sitemapStatus": "submitted",
+      "consoleCheckedAt": "2026-10-23"
+    },
+    "https://csv.abreda.com/": {
+      "consoleStatus": "verified",
+      "sitemapStatus": "submitted",
+      "consoleCheckedAt": "2026-10-23"
+    },
+    "https://manuscript.abreda.com/": {
+      "consoleStatus": "verified",
+      "sitemapStatus": "submitted",
+      "consoleCheckedAt": "2026-10-23"
+    },
+    "https://novel.abreda.com/": {
+      "consoleStatus": "verified",
+      "sitemapStatus": "submitted",
+      "consoleCheckedAt": "2026-10-23"
+    }
+  }
+}

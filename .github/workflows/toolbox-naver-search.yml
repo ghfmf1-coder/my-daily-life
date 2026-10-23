@@ -1,0 +1,47 @@
+name: Toolbox Naver public search discovery
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_run:
+    workflows: ['Toolbox Google ownership and sitemap setup']
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/toolbox-naver-search.yml'
+      - 'site-factory/ops/naver_search_setup.py'
+      - 'site-factory/ops/naver-search-request.json'
+permissions:
+  contents: write
+concurrency:
+  group: toolbox-naver-public-search
+  cancel-in-progress: false
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate public search automation
+        run: python3 -m unittest discover -s site-factory/ops -p 'test_naver_search.py' -v
+      - run: npm install --no-save --no-package-lock wrangler@4
+      - name: Publish proofs and notify Naver without login cookies
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_D1_READ_TOKEN: ${{ secrets.CLOUDFLARE_D1_READ_TOKEN }}
+          CLOUDFLARE_PAGES_DEPLOY_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 site-factory/ops/naver_search_setup.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: toolbox-naver-search-result
+          path: /tmp/toolbox-naver-search-result.json
+          retention-days: 30
+          if-no-files-found: warn
