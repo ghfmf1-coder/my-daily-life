@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-23T01:39:27.531671+00:00",
+  "checkedAt": "2026-10-23T01:52:41.554934+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
@@ -113,7 +113,7 @@
       "url": "https://tb-aquarium-water-lab.pages.dev/"
     },
     {
-      "consoleStatus": "ownership_pending",
+      "consoleStatus": "verified",
       "indexNow": {
         "at": "2026-10-23T01:21:37.558079+00:00",
         "count": 1,
@@ -124,11 +124,11 @@
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
-      "sitemapSubmission": "not_submitted",
+      "sitemapSubmission": "submitted",
       "url": "https://tb-audio-quality.pages.dev/"
     },
     {
-      "consoleStatus": "ownership_pending",
+      "consoleStatus": "verified",
       "indexNow": {
         "at": "2026-10-23T01:21:38.552124+00:00",
         "count": 2,
@@ -139,7 +139,7 @@
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
-      "sitemapSubmission": "not_submitted",
+      "sitemapSubmission": "submitted",
       "url": "https://tb-camera-lens-check.pages.dev/"
     },
     {
@@ -713,5 +713,5 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "c91280d3a50df90bfbe3bc3d1da18c11ff44c02a"
+  "sourceCommit": "c75dd37604ccf3ac2a413cc76c44fbcb9c022a85"
 }
