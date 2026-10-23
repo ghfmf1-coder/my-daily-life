@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-23T01:07:04+00:00",
-  "status": "fail",
+  "checkedAt": "2026-10-23T01:21:17+00:00",
+  "status": "pass",
   "summary": {
     "sites": 24,
-    "sitePassed": 15,
+    "sitePassed": 24,
     "siteWarnings": 0,
-    "siteFailed": 9,
+    "siteFailed": 0,
     "browserPassed": 11,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 37
+    "issues": 0
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 260ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 151ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 107ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -199,12 +199,12 @@
       "name": "수족관 수질 분석실",
       "url": "https://tb-aquarium-water-lab.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 217ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -228,23 +228,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -268,33 +268,33 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-aquarium-water-lab.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP 200, 12322 bytes"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP 200, 12322 bytes"
+          "status": "pass",
+          "detail": "HTTP 200, 398 bytes"
         },
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 12322 bytes"
+          "detail": "HTTP 200, 84 bytes"
         },
         {
           "check": "robots_publicity",
@@ -312,30 +312,20 @@
           "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP 200, 12322 bytes"
-      ],
-      "failures": [
-        "canonical_ko: missing canonical",
-        "hreflang_ko_ko: missing",
-        "hreflang_ko_en: missing",
-        "canonical_en: missing canonical",
-        "hreflang_en_ko: missing",
-        "hreflang_en_en: missing",
-        "icon_favicon.ico: HTTP 200, 12322 bytes"
-      ]
+      "warnings": [],
+      "failures": []
     },
     {
       "slug": "camera-lens-check",
       "name": "중고 카메라 렌즈 검수",
       "url": "https://tb-camera-lens-check.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 187ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 171ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -375,7 +365,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -399,18 +389,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-camera-lens-check.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -425,7 +415,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 8817 bytes"
+          "detail": "HTTP 200, 83 bytes"
         },
         {
           "check": "robots_publicity",
@@ -434,29 +424,29 @@
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP 200, 8817 bytes"
+          "status": "pass",
+          "detail": "HTTP 200, 241 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_en: missing canonical",
-        "hreflang_en_ko: missing",
-        "hreflang_en_en: missing",
-        "sitemap_sitemap.xml: HTTP 200, 8817 bytes"
-      ]
+      "failures": []
     },
     {
       "slug": "card-grading-lab",
       "name": "트레이딩 카드 PSA 사전 감정 분석 | 포켓몬·원피스·스포츠 카드",
       "url": "https://tb-card-grading-lab.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 164ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -480,8 +470,8 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-card-grading-lab.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
@@ -496,7 +486,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -520,8 +510,8 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-card-grading-lab.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
@@ -535,8 +525,8 @@
         },
         {
           "check": "icon_favicon.ico",
-          "status": "fail",
-          "detail": "HTTP 200, 22786 bytes"
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
         },
         {
           "check": "svg_favicon.svg",
@@ -565,23 +555,19 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_ko: missing canonical",
-        "canonical_en: missing canonical",
-        "icon_favicon.ico: HTTP 200, 22786 bytes"
-      ]
+      "failures": []
     },
     {
       "slug": "comic-condition-lab",
       "name": "코믹북·만화책 상태 검수",
       "url": "https://tb-comic-condition-lab.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 200ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 146ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -621,7 +607,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 198ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -645,18 +631,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-comic-condition-lab.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -671,7 +657,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 83 bytes"
+          "detail": "HTTP 200, 85 bytes"
         },
         {
           "check": "robots_publicity",
@@ -681,21 +667,16 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 241 bytes"
+          "detail": "HTTP 200, 245 bytes"
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_en: missing canonical",
-        "hreflang_en_ko: missing",
-        "hreflang_en_en: missing",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "csv-column-extractor",
@@ -707,7 +688,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 241ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -747,7 +728,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 250ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -797,7 +778,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 92 bytes"
+          "detail": "HTTP 200, 63 bytes"
         },
         {
           "check": "robots_publicity",
@@ -828,7 +809,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 232ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 148ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -868,7 +849,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 267ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -949,7 +930,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 433ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 172ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -989,7 +970,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 279ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 201ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1100,7 +1081,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 211ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 183ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1166,12 +1147,12 @@
       "name": "보석·원석 외관 검수",
       "url": "https://tb-gem-photo-inspection.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 172ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1211,7 +1192,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1235,18 +1216,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-gem-photo-inspection.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -1255,13 +1236,13 @@
         },
         {
           "check": "svg_favicon.svg",
-          "status": "warning",
-          "detail": "HTTP 200, 11610 bytes"
+          "status": "pass",
+          "detail": "HTTP 200, 333 bytes"
         },
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 11610 bytes"
+          "detail": "HTTP 200, 86 bytes"
         },
         {
           "check": "robots_publicity",
@@ -1279,14 +1260,8 @@
           "detail": "entries: 2"
         }
       ],
-      "warnings": [
-        "svg_favicon.svg: HTTP 200, 11610 bytes"
-      ],
-      "failures": [
-        "canonical_en: missing canonical",
-        "hreflang_en_ko: missing",
-        "hreflang_en_en: missing"
-      ]
+      "warnings": [],
+      "failures": []
     },
     {
       "slug": "jsonl-validator",
@@ -1298,7 +1273,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 231ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1338,7 +1313,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1414,12 +1389,12 @@
       "name": "키보드 키 입력 진단실",
       "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 226ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1459,7 +1434,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 124ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1483,18 +1458,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-keyboard-switch-diagnostics.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -1518,17 +1493,17 @@
         },
         {
           "check": "sitemap_sitemap.xml",
-          "status": "fail",
-          "detail": "HTTP 200, 9819 bytes"
+          "status": "pass",
+          "detail": "HTTP 200, 261 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 2"
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_en: missing canonical",
-        "hreflang_en_ko: missing",
-        "hreflang_en_en: missing",
-        "sitemap_sitemap.xml: HTTP 200, 9819 bytes"
-      ]
+      "failures": []
     },
     {
       "slug": "manuscript-lens",
@@ -1540,7 +1515,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 332ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 169ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1580,7 +1555,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 276ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 150ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1681,7 +1656,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 232ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 157ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1721,7 +1696,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 307ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 146ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1817,12 +1792,12 @@
       "name": "스니커즈 중고 상태 검수",
       "url": "https://tb-sneaker-condition-lab.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 132ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1862,7 +1837,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1886,18 +1861,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-sneaker-condition-lab.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-sneaker-condition-lab.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-sneaker-condition-lab.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -1931,11 +1906,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_en: missing canonical",
-        "hreflang_en_ko: missing",
-        "hreflang_en_en: missing"
-      ]
+      "failures": []
     },
     {
       "slug": "srt-sdh-cleaner",
@@ -1947,7 +1918,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 261ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 142ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1987,7 +1958,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2068,7 +2039,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 413ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 167ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2108,7 +2079,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 213ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2184,12 +2155,12 @@
       "name": "자막 싱크 조정기 | SRT VTT 변환·자막 시간 오류 검사",
       "url": "https://tb-subtitle-sync-studio.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 156ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2213,23 +2184,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2253,18 +2224,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-subtitle-sync-studio.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -2307,6 +2278,11 @@
           "detail": "HTTP 200, 6501 bytes"
         },
         {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
+        },
+        {
           "check": "script_subtitle-core.js",
           "status": "pass",
           "detail": "HTTP 200, 3730 bytes"
@@ -2315,17 +2291,15 @@
           "check": "script_app.js",
           "status": "pass",
           "detail": "HTTP 200, 6501 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1166 bytes"
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_ko: missing canonical",
-        "hreflang_ko_ko: missing",
-        "hreflang_ko_en: missing",
-        "canonical_en: missing canonical",
-        "hreflang_en_ko: missing",
-        "hreflang_en_en: missing"
-      ]
+      "failures": []
     },
     {
       "slug": "toolbox-admin",
@@ -2353,7 +2327,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 304ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 193ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2393,7 +2367,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 346ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2514,7 +2488,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 233ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2554,7 +2528,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2630,12 +2604,12 @@
       "name": "LP 레코드 상태 검수",
       "url": "https://tb-vinyl-condition-lab.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 189ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2675,7 +2649,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 238ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2699,18 +2673,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
-          "detail": "missing canonical"
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
-          "detail": "missing"
+          "status": "pass",
+          "detail": "https://tb-vinyl-condition-lab.pages.dev/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -2744,11 +2718,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_en: missing canonical",
-        "hreflang_en_ko: missing",
-        "hreflang_en_en: missing"
-      ]
+      "failures": []
     },
     {
       "slug": "vtt-cleaner",
@@ -2760,7 +2730,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 186ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2800,7 +2770,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 168ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2881,7 +2851,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 328ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 206ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2921,7 +2891,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 262ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3000,7 +2970,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 453
+      "elapsedMs": 411
     },
     {
       "name": "English plot planner",
@@ -3008,7 +2978,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 610
+      "elapsedMs": 341
     },
     {
       "name": "Korean manuscript",
@@ -3016,7 +2986,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 429
+      "elapsedMs": 294
     },
     {
       "name": "English manuscript",
@@ -3024,7 +2994,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 426
+      "elapsedMs": 344
     },
     {
       "name": "Korean CSV merger",
@@ -3032,7 +3002,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 534
+      "elapsedMs": 467
     },
     {
       "name": "English CSV merger",
@@ -3040,7 +3010,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 426
+      "elapsedMs": 390
     },
     {
       "name": "Haru English landing",
@@ -3048,7 +3018,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 320
+      "elapsedMs": 191
     },
     {
       "name": "Haru English app",
@@ -3056,7 +3026,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 259
+      "elapsedMs": 289
     },
     {
       "name": "Admin authentication gate",
@@ -3064,7 +3034,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 407
+      "elapsedMs": 299
     },
     {
       "name": "Toolbox hub search",
@@ -3072,7 +3042,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 434
+      "elapsedMs": 253
     },
     {
       "name": "Technical deployment smoke",
@@ -3080,159 +3050,10 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 297
+      "elapsedMs": 247
     }
   ],
-  "issues": [
-    {
-      "scope": "aquarium-water-lab",
-      "details": "canonical_ko: missing canonical"
-    },
-    {
-      "scope": "aquarium-water-lab",
-      "details": "hreflang_ko_ko: missing"
-    },
-    {
-      "scope": "aquarium-water-lab",
-      "details": "hreflang_ko_en: missing"
-    },
-    {
-      "scope": "aquarium-water-lab",
-      "details": "canonical_en: missing canonical"
-    },
-    {
-      "scope": "aquarium-water-lab",
-      "details": "hreflang_en_ko: missing"
-    },
-    {
-      "scope": "aquarium-water-lab",
-      "details": "hreflang_en_en: missing"
-    },
-    {
-      "scope": "aquarium-water-lab",
-      "details": "icon_favicon.ico: HTTP 200, 12322 bytes"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "canonical_en: missing canonical"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "hreflang_en_ko: missing"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "hreflang_en_en: missing"
-    },
-    {
-      "scope": "camera-lens-check",
-      "details": "sitemap_sitemap.xml: HTTP 200, 8817 bytes"
-    },
-    {
-      "scope": "card-grading-lab",
-      "details": "canonical_ko: missing canonical"
-    },
-    {
-      "scope": "card-grading-lab",
-      "details": "canonical_en: missing canonical"
-    },
-    {
-      "scope": "card-grading-lab",
-      "details": "icon_favicon.ico: HTTP 200, 22786 bytes"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "canonical_en: missing canonical"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "hreflang_en_ko: missing"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "hreflang_en_en: missing"
-    },
-    {
-      "scope": "comic-condition-lab",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "gem-photo-inspection",
-      "details": "canonical_en: missing canonical"
-    },
-    {
-      "scope": "gem-photo-inspection",
-      "details": "hreflang_en_ko: missing"
-    },
-    {
-      "scope": "gem-photo-inspection",
-      "details": "hreflang_en_en: missing"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "canonical_en: missing canonical"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "hreflang_en_ko: missing"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "hreflang_en_en: missing"
-    },
-    {
-      "scope": "keyboard-switch-diagnostics",
-      "details": "sitemap_sitemap.xml: HTTP 200, 9819 bytes"
-    },
-    {
-      "scope": "sneaker-condition-lab",
-      "details": "canonical_en: missing canonical"
-    },
-    {
-      "scope": "sneaker-condition-lab",
-      "details": "hreflang_en_ko: missing"
-    },
-    {
-      "scope": "sneaker-condition-lab",
-      "details": "hreflang_en_en: missing"
-    },
-    {
-      "scope": "subtitle-sync-studio",
-      "details": "canonical_ko: missing canonical"
-    },
-    {
-      "scope": "subtitle-sync-studio",
-      "details": "hreflang_ko_ko: missing"
-    },
-    {
-      "scope": "subtitle-sync-studio",
-      "details": "hreflang_ko_en: missing"
-    },
-    {
-      "scope": "subtitle-sync-studio",
-      "details": "canonical_en: missing canonical"
-    },
-    {
-      "scope": "subtitle-sync-studio",
-      "details": "hreflang_en_ko: missing"
-    },
-    {
-      "scope": "subtitle-sync-studio",
-      "details": "hreflang_en_en: missing"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "canonical_en: missing canonical"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "hreflang_en_ko: missing"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "hreflang_en_en: missing"
-    }
-  ],
+  "issues": [],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
