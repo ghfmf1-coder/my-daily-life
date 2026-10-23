@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
       - name: Read Cloudflare D1 service inventory without updating records
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -136,6 +137,8 @@ jobs:
           if duplicate_ids:raise SystemExit('DUPLICATE_SERVICE_IDS_FOUND')
           if sync_failures:raise SystemExit('SYNC_SOURCE_STALE_OR_ERROR')
           print('WORK_ADMIN_REGISTRY_SYNC_VERIFIED')
+          snapshot={'entries':[{'serviceId':r['service_id'],'url':r['canonical_url'],'title':r.get('cf_project')} for r in rows if safe_url(r.get('canonical_url',''))],'sync':sync_rows,'gsc':[{'date':m['date'],'url':m['page_url'],'clicks':m['clicks'],'impressions':m['impressions']} for m in metric_rows],'ads':[]}
+          with open('/tmp/toolbox-performance-source.json','w') as f:json.dump(snapshot,f)
           PY
       - name: Verify live Google connection ownership sitemaps and indexed URL reports
         run: |
@@ -172,6 +175,19 @@ jobs:
           if sitemap_failures:raise SystemExit('GOOGLE_SITEMAP_QUERY_FAILED')
           print('GOOGLE_READONLY_AUDIT_COMPLETED')
           legacy=read_json(urllib.request.Request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-admin-legacy-read?date='+__import__('datetime').datetime.now(__import__('datetime').timezone(__import__('datetime').timedelta(hours=9))).date().isoformat(),headers={'Authorization':'Bearer '+identity_token}),timeout=60)
+          with open('/tmp/toolbox-visit-source.json','w') as f:json.dump(legacy,f)
+          print('GOOGLE_ADSENSE_SOURCE_STATUS:', (data.get('adsense') or {}).get('status','unverified'))
           print('VISIT_SOURCE_READ_VERIFIED:', isinstance(legacy.get('publicTraffic'),list) and isinstance(legacy.get('classifiedTraffic'),list))
           for row in legacy.get('publicTraffic',[]):print('VISIT_PUBLIC_DAILY:',json.dumps(row,ensure_ascii=True))
           PY
+      - name: Verify production visitor tracking without generating visits
+        run: python3 site-factory/ops/visit_coverage_audit.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: toolbox-visit-coverage
+          path: /tmp/toolbox-visit-coverage.json
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Reconcile actual visit sources using the deployed reporting model
+        run: node site-factory/admin-worker/verify-source-snapshot.mjs

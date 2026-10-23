@@ -196,3 +196,7 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 - 신규 문서 규범: docs/SEO-PUBLISHING-PRINCIPLES.md, 기록 커밋 1ecc7506fbc0769e43f20000765db243f058b28b.
 - 최종 Google 색인·상단 노출은 별도 검증 대상. 마지막 확인된 URL 검사 PASS 36·NEUTRAL 15 및 47개 속성/사이트맵 상태는 기존 감사 지표로 보존; 콘텐츠 변경과 배포 자체로 PASS 증가나 트래픽 증가를 주장하지 않음. 당일의 독립 Search Console GSC Wizard 앱은 구독 만료로 사용 불가이지만 기존 GitHub/Google 공식 읽기 감사 자동화는 별도로 운영 중.
 - 새 유료 서비스 사용 없음. D1 원장·OAuth·관제센터 URL·기존 통계 데이터는 변경하지 않음. 
+
+## 통계 복구 배포 진행 — 2026-10-23
+
+잘못된 미연결과 신규 방문 누락을 수정. Supabase 함수는 배포됐고 Worker 배포는 기존 토큰 Workers API 403으로 차단됨. 공개 사이트와 원천 대조를 검증 중이며 전면 완료가 아님. 최신 근거·파일·차단 항목은 [STATISTICS-REPAIR-2026-10-23.md](STATISTICS-REPAIR-2026-10-23.md) 참고.
