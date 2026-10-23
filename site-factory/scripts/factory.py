@@ -311,7 +311,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 import html as html_lib
                 title = html_lib.unescape(heading.group(1)).split(' | ')[0].strip()
                 desc = html_lib.unescape(description.group(1)).strip()
-                if not title or len(desc)<35 or ' - 브라우저' in desc:
+                if not title or len(desc)<18 or ' - 브라우저' in desc:
                     raise SiteError('Directory description is generic: ' + site)
                 seen.add(site)
                 return ('<article><h2>' + escape(title) + '</h2><p>' +
