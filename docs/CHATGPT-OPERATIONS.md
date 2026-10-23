@@ -118,3 +118,22 @@ D1 원장·성과 기록·방문 통계·기존 OAuth 연결을 삭제하거나 
 - Google 429는 공급자 응답의 apiService/apiReasons/quota 필드를 확인합니다. 순차 처리와 제한된 재시도 후에도 실패하면 보류를 오류로 기록하며, 완료된 등록을 삭제하지 않습니다.
 - 소유권 인증용 재배포도 기존 factory.prepare 빌드를 사용해 생성된 robots.txt·sitemap.xml을 보존합니다.
 - 네이버 로그인 쿠키·보안문제 답을 GitHub에 저장하지 않습니다. 현재 Google/GitHub 브리지는 네이버 계정 조회를 제공하지 않으므로 네이버 실시간 상태는 공식 인증 화면 확인이 별도로 필요합니다.
+
+## 네이버: 일반 Plus에서 조회·재실행
+
+- 최신 파일 site-factory/ops/naver-search-result.json을 GitHub 연결로 읽습니다. checkedAt과 각 사이트의 결과를 함께 보고합니다.
+- site-factory/ops/naver-search-request.json의 requestId를 새 값으로 main에 저장하면 재실행합니다. 요청 파일은 임의 URL·명령 입력으로 사용하지 않습니다.
+- .github/workflows/toolbox-naver-search.yml은 기존 Google setup 후와 UTC 매 6시간 17분에 실행합니다. 네이버 계정 로그인 없이 공식 IndexNow 호출을 수행합니다.
+- 새 D1 사이트를 발견하면 승인된 기존 소스를 찾아 공개 파일 증명을 배포하고 운영 사이트맵의 같은 호스트 공개 URL만 전송합니다. 비공개 admin/app/api URL, 외부 호스트, query/fragment·자격정보 URL은 제외합니다.
+- 공급자 200은 수신 성공, 202는 키 확인 대기, 422는 URL/키 정보 불일치이며 실제 응답 전 성공으로 표시하지 않습니다. 단일 URL은 공식 GET 경로, 여러 URL은 POST 경로를 사용합니다.
+- site-factory/ops/naver-public-sites.json은 공개 사이트 증명 자료 및 계정 상태의 마지막 검증 기록입니다. private token이나 로그인 세션이 아닙니다.
+- consoleStatus=ownership_pending 또는 not_registered를 IndexNow 성공 때문에 verified로 바꾸지 않습니다. 계정 사이트맵 제출 상태도 마찬가지입니다.
+- 계정의 신규 소유확인에서 실제 자동등록 방지 CAPTCHA가 표시됐습니다. 무인 계정 등록/제출까지 완료됐다고 주장하지 않으며 보안절차를 우회하지 않습니다.
+- 일반 Plus의 GitHub 연결로 자동 결과 조회와 요청 파일 저장이 가능하도록 구성했습니다. Work 세션·브라우저 쿠키를 자동 실행 필수 조건으로 사용하지 않습니다. 해당 채팅의 GitHub 쓰기 도구 제공 여부는 실제 권한을 확인합니다.
+
+```text
+ghfmf1-coder/my-daily-life의 AGENTS.md, docs/CURRENT-STATE.md를 읽어.
+site-factory/ops/naver-search-result.json과 최신 Google 감사 결과를 확인해.
+필요하면 naver-search-request.json의 requestId를 새 값으로 저장해 재실행해.
+Google 소유권·사이트맵·색인, 네이버 계정 소유확인·사이트맵 제출·IndexNow 수신을 구분해 보고해.
+```

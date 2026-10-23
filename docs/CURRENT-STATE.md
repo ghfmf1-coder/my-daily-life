@@ -1,6 +1,6 @@
 # 현재 운영 상태 — 작은도구함
 
-확인: 2026-10-23 00:57 UTC (09:57 KST). 일반 ChatGPT Plus는 이 문서와 [CHATGPT-OPERATIONS.md](CHATGPT-OPERATIONS.md), [AGENTS.md](../AGENTS.md)를 먼저 읽고 최신 실행으로 갱신합니다. 과거 대화가 자동 공유된다고 가정하지 않습니다.
+최신 자동화 검증: 2026-10-23 01:22 UTC (10:22 KST). Google 색인·처리 건수 표는 00:57 감사 시점이며, 이후 인증·동기화 재검증과 네이버 결과는 하단 실행 증거를 따릅니다. 일반 ChatGPT Plus는 이 문서와 [CHATGPT-OPERATIONS.md](CHATGPT-OPERATIONS.md), [AGENTS.md](../AGENTS.md)를 먼저 읽고 최신 실행으로 갱신합니다. 과거 대화가 자동 공유된다고 가정하지 않습니다.
 
 ## 실제 운영 검증
 
@@ -19,7 +19,7 @@
 | 사이트맵 처리 | 최종 조회에서 고유 47개, pending 41개·오류 0·경고 0. 제출과 처리 완료를 구분 |
 | Google URL 검사 | 원장 URL 51개 중 PASS 36·NEUTRAL 15. 해당 URL의 색인 버전이며 전체 사이트 색인 보장 아님 |
 | 검색 성과 | 조회 기간 2026-09-26~2026-10-20. API 반환 행: novel.abreda.com/en/, 2026-10-17, 노출 1·클릭 0. 다른 사이트의 자료 없음은 0 확정 아님 |
-| 네이버 | 보안 확인 후 로그인 정상. 기존 4개 사이트 관리 접근·사이트맵 등록 확인. 노출/클릭·진단 정보 없음. 나머지 43개 루트는 계정 목록에 없음 |
+| 네이버 | 계정 목록 47개·기존 4개 소유확인/사이트맵 제출 확인. 신규 43개는 계정 항목 추가·인증 태그 운영 배포 완료, 소유확인 CAPTCHA 및 계정 사이트맵 제출 대기. 47개 모두 공식 IndexNow HTTP 200 수신 확인 |
 | 보존 | 감사는 D1 읽기만 수행. 기존 원장·통계·성과·OAuth 삭제/초기화 없음. 전체 과거 기록 전후 체크섬 검사는 미실시 |
 
 ## 실제 실행 증거
@@ -41,7 +41,7 @@ Google setup은 현재 활성입니다. search-setup-request.json은 paused:fals
 
 ## 남은 확인
 
-1. 네이버 로그인 및 기존 4개 사이트 확인 완료. 나머지 43개 루트는 계정 목록에 없어 별도 등록·소유확인 필요. 현재 Google/GitHub 브리지는 네이버 계정을 실시간 조회하지 못함. GitHub의 네이버 결과는 아래 시점의 검증 기록이며 자동 갱신 결과가 아님. 비밀번호·보안 답·쿠키를 저장하지 않음.
+1. 네이버 계정 항목 47개 추가 확인. 신규 43개 소유확인 버튼에서 자동등록 방지 CAPTCHA가 표시되어 계정 소유확인·사이트맵 제출은 대기. 47개 사이트의 로그인 없는 공식 IndexNow 수집 요청은 성공. 아래 최신 절의 자동 결과와 계정 수동 검증 시점을 구분하며 쿠키·비밀번호를 저장하지 않음.
 2. Google pending 사이트맵과 NEUTRAL URL은 후속 읽기 감사에서 확인. 색인을 강제로 완료 처리하지 않음.
 3. 새 임시 사이트 생성 실험은 미실시. 기존 30개 실제 배포와 D1 일치 및 성공 production 프로젝트 동적 대조·배포 후 감사 경로를 확인했음.
 
@@ -75,7 +75,7 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 
 목록 근거: https://searchadvisor.naver.com/console/board
 
-다음 43개 루트는 위 계정 목록에 없습니다. 원장 미등록이 아니라 네이버 계정 미등록이며 Google 등록 완료와 구분합니다. 별도 소유확인 없이 사이트맵 제출 권한이 있다고 가정하지 않습니다.
+다음 43개 루트는 이 절의 최초 확인 시 계정 미등록이었으며, 이후 계정 항목 추가와 태그 배포를 완료했습니다. 현재는 소유확인 CAPTCHA 및 계정 사이트맵 제출 대기 목록입니다. Google 등록·IndexNow 수신과 구분합니다.
 
 - https://my-daily-life.pages.dev/
 - https://stl-print-check.abreda.com/
@@ -120,3 +120,30 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 - https://tb-vinyl-condition-lab.pages.dev/
 - https://tb-webtoon-preflight.pages.dev/
 - https://watch-inspection-lab.abreda.com/
+
+## 네이버 자동화 운영 검증 — 2026-10-23 01:22 UTC
+
+- 계정 목록 실제 DOM: 47개 항목, 43개 소유확인 진행 표시. 로그인 재요청 없이 기존 세션으로 등록 항목을 추가.
+- 공개 인증 태그 43개 운영 페이지 확인. 전체 47개 IndexNow 공개 파일·유효한 사이트맵·robots 사이트맵 안내 확인.
+- 직접 네이버 IndexNow HTTP 200: 47개(이번 응답 또는 앞선 실제 수신 기록). 계정 소유확인·사이트맵 제출·실제 색인과 별개.
+- 검증 실행 success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39883449374
+- 승인 사이트 기존 회귀 검사 및 배포 success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39882895140
+- 배포 후 Google setup success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39883412886
+- 후속 D1/Google 감사 success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39883239570 (원장 51·누락/중복 없음·동기화 정상·Google 접근 불가 없음).
+- 초기 Naver 실행 39882737690은 단일 URL POST 422 및 잘못된 원장 대표 프로젝트 선택으로 실패. 공식 단일 URL GET 사용과 실제 Pages domain→project 매핑으로 수정 후 위 성공 확인. abreda.com은 원장 첫 대표값 tb-pages-csv-column-extractor와 실제 serving project tb-toolbox-hub가 달랐음. 원장 ID/데이터를 변경하지 않고 배포 대상만 API로 판별.
+- 자동등록 방지 화면 실제 문구: '프로그램을 이용한 자동등록을 방지하기 위해 보안절차를 거치고 있습니다.' 현재 소유확인 CAPTCHA를 우회·해제하지 않았고, 소유확인 성공으로 보고하지 않음.
+
+### Plus가 읽고 실행할 파일
+
+- 최신 자동 결과: site-factory/ops/naver-search-result.json
+- 공개 인증 태그 및 소유확인/계정 사이트맵 마지막 확인 상태: site-factory/ops/naver-public-sites.json
+- Plus 재실행 요청: site-factory/ops/naver-search-request.json의 requestId를 새 값으로 저장.
+- 워크플로: .github/workflows/toolbox-naver-search.yml. UTC 매 6시간 17분, Google setup 완료 후, 요청 파일 갱신 시 실행.
+- 기존 Google setup은 UTC 매 6시간 47분 및 지정 배포 완료 후 D1의 새 사이트를 처리. 네이버 자동화도 실제 D1을 매번 읽어 새 사이트를 발견하고 공개 증명 파일/사이트맵 안내를 배포한 뒤 수집 요청.
+- 승인 사이트의 일반 배포도 공식 네이버 IndexNow에 직접 통지. 변경 없는 결과는 재사용하고 새 URL/공개 콘텐츠 변경을 통지하도록 보완.
+- 미래 사이트의 네이버 계정 소유확인 태그는 공식 화면에서 발급받기 전까지 생성했다고 가정하지 않음. 미등록/소유확인 대기는 명시적으로 보고. 현재 지원 경로에서 계정 CAPTCHA 단계를 GitHub-only 무인 처리했다고 주장하지 않음.
+- 계정 등록 결과는 consoleStatus, 계정 사이트맵 제출은 sitemapSubmission, 공개 사이트맵 유효성은 sitemapFile, IndexNow 수신은 indexNow.http로 분리. publication=live가 계정 소유확인을 뜻하지 않음.
+
+공식 근거: https://searchadvisor.naver.com/guide/indexnow-request , https://searchadvisor.naver.com/guide/indexnow-faq . IndexNow는 서치어드바이저 사이트맵 제출과 같지 않으며 수신 성공이 색인을 보장하지 않습니다.
+
+이번 자동화에 네이버 비밀번호·쿠키·OAuth를 저장하지 않았으며 추가 유료 서비스를 도입하지 않았습니다. Work/브라우저가 종료돼도 공개 수집 요청 자동화와 결과 조회는 GitHub에서 유지됩니다. 네이버 계정의 무인 소유확인까지 완료됐다는 뜻은 아닙니다.
