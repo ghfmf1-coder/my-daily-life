@@ -280,7 +280,10 @@ def enrich_public_guide(slug, rel, html):
        '<p><a href="'+escape(directory_url, quote=True)+'">'+escape(directory_label)+'</a></p></section>')
     if '</body>' not in html:
         raise ValueError('Public document has no closing body tag: '+slug+'/'+rel)
-    html = html.replace('</body>', section + '</body>', 1)
+    if '</main>' in html:
+        html = html.replace('</main>', section + '</main>', 1)
+    else:
+        html = html.replace('</body>', section + '</body>', 1)
     # Short or generic descriptions should tell readers which action is possible.
     match = re.search(r'<meta\s+name=["\x27]description["\x27]\s+content=["\x27]([^"\x27]*)["\x27]', html, re.I)
     if match and len(unescape(match.group(1))) < 85:
