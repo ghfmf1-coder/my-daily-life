@@ -17,15 +17,9 @@ permissions:
   id-token: write
 concurrency:
   group: toolbox-google-search-setup
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
-  pause_confirmation:
-    if: ${{ github.event_name == 'push' }}
-    runs-on: ubuntu-24.04
-    steps:
-      - run: echo 'OWNER_PAUSED - no search setup or deployment will run'
   reconcile:
-    if: ${{ false }} # Owner paused 2026-10-23; resume only on explicit request
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     steps:
