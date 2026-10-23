@@ -12,7 +12,7 @@ toolbox-public-visit v2에서 신규 봇/자동화/사람 추정/판별 불가 �
 
 - Supabase: toolbox-admin-legacy-read v2, toolbox-public-visit v2, toolbox-google-ads-oauth v18. 기존 암호화 OAuth 레코드는 변경하지 않음. 수집기 첫 배포는 import_map 경로 오류로 거부됐으나 명시적 deno.json으로 재배포 성공.
 - 코드 커밋 c09852dab71c08aacb87936b8b29fda859735f3c.
-- Worker 배포 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39912159130 는 테스트 통과 후 Workers API HTTP 403으로 실패. 기존 Pages 토큰 권한을 변경하지 않음. CLOUDFLARE_WORKER_DEPLOY_TOKEN에 기존 계정 Workers Scripts Edit 전용 권한이 필요함. 새 Worker나 D1 권한은 필요하지 않음. 코드만으로 배포 완료라 표시하지 않음.
+- Worker 배포 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39912159130 는 테스트 통과 후 Workers API HTTP 403으로 실패. 기존 Pages 토큰 권한을 변경하지 않음. CLOUDFLARE_WORKER_DEPLOY_TOKEN에 기존 tb-toolbox-admin-rebuild 하나로 범위를 제한한 Workers Editor 권한이 필요함. 새 Worker나 D1 권한은 필요하지 않음. 코드만으로 배포 완료라 표시하지 않음.
 - 공개 사이트 배포 및 전체 원천 대조는 후속 실행 로그로 검증한다. 관제센터 실화면은 기존 Cloudflare Access 로그인 필요. 로그인·권한 요청은 실제 배포 준비 이후 이 차단 단계에 한정한다.
 
 ## 보존 기준
@@ -33,3 +33,5 @@ toolbox-public-visit v2에서 신규 봇/자동화/사람 추정/판별 불가 �
 - 기존 Pages 토큰으로 Workers API를 다시 시도하지 않도록 배포 경로에서 제외. 별도 CLOUDFLARE_WORKER_DEPLOY_TOKEN만 사용. 이 권한을 확보하기 전 Worker/UI/모바일 검증은 미완료.
 
 - 후속 51개 서비스 전체(기존 수집기 4개 포함) 운영 HTML·추적 스크립트·기존 영어 URL·수집기 dryRun 진단도 통과. 진단 accepted:false로 저장 없음 확인. 상세는 statistics-repair-result.json의 collectorCoverage. 신규 30개 사이트의 별도 영어 페이지는 생성하지 않았으며 없는 페이지를 검증 완료로 표시하지 않음.
+
+배포는 Cloudflare 공식 Replace Worker Script Content API로 코드만 교체하고 설정/바인딩을 수정하지 않습니다. 공식 2026년 Workers 권한 안내에 따라 기존 Worker 하나에 한정한 Editor 역할이면 충분하며 D1·KV·라우트 권한을 추가하지 않습니다. 참고: https://developers.cloudflare.com/workers/authorization/workers/
