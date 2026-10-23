@@ -63,7 +63,7 @@ jobs:
           set -euo pipefail
           for i in {1..12}; do
             if curl --max-time 15 -fsSL https://tb-shipping-audit.pages.dev/ -o /tmp/work-app.html &&
-              grep -q '쇼핑몰 발송 사고 방지 검사기' /tmp/work-app.html &&
+              grep -q 'toolbox-real-guide' /tmp/work-app.html &&
               curl --max-time 15 -fsSL https://tb-shipping-audit.pages.dev/core.mjs -o /tmp/work-core.mjs &&
               grep -q 'export function compare' /tmp/work-core.mjs; then
                 echo 'TEST_DEPLOYMENT_LIVE_VERIFIED'
