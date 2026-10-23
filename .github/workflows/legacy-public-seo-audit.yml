@@ -1,5 +1,4 @@
-name: 작은도구함 기존 공개 사이트 검색 점검
-run-name: '작은도구함 기존 공개 사이트 검색 점검 · ${{ github.run_number }}차'
+name: Audit legacy public sites SEO and reachability
 on:
   push:
     branches: [main]
@@ -13,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: 기존 공개 페이지 검색 접근 점검
+      - name: Inspect legacy approved public pages without touching admin
         run: |
           python3 - <<'PY'
           import pathlib,json,re,urllib.request,time

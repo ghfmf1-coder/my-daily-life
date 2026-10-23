@@ -132,13 +132,11 @@ def main():
             if outcome['publication']=='live':outcome.update(notify(url,sites[url]))
             results.append(outcome);print('NAVER_SEARCH_RESULT:',json.dumps(outcome),flush=True)
     report={'checkedAt':datetime.now(timezone.utc).isoformat(),'sourceCommit':git('rev-parse','HEAD'),'roots':len(entries),'sites':results,'limitations':['IndexNow is not Search Advisor console registration or sitemap submission.','No indexing guarantee.','No private login session is stored.']}
-    report['notificationLocale']='ko-KR'
-    report['summaryKo']={'title':'작은도구함 네이버 자동 점검','message':'사이트별 공개 인증·사이트맵·수집 요청 결과입니다. 계정 소유확인과 실제 색인은 별도로 확인합니다.'}
     STATE.write_text(json.dumps(state,indent=2,sort_keys=True)+'\n');RESULT.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n')
     Path('/tmp/toolbox-naver-search-result.json').write_text(json.dumps(report,indent=2));persist([STATE,RESULT])
     failed=[r for r in results if r.get('publication')!='live' or r.get('error') or r.get('indexNow',{}).get('status') not in ('received','key_validation_pending','previous_receipt')]
     pending=[r['url'] for r in results if r.get('consoleStatus')!='verified' or r.get('sitemapSubmission')!='submitted']
     print('NAVER_TECHNICAL_FAILURE_COUNT:',len(failed));print('NAVER_CONSOLE_PENDING_URLS:',json.dumps(pending))
-    with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as summary:summary.write(f'## 작은도구함 네이버 자동 점검\n\n사이트 {len(entries)}개 · 기술 오류 {len(failed)}개 · 네이버 계정 소유확인/사이트맵 제출 대기 {len(pending)}개\n\n수집 요청 수신은 계정 소유확인·사이트맵 제출·색인 완료를 뜻하지 않습니다.\n')
+    with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as summary:summary.write(f'## Naver public discovery\n\nRoots: {len(entries)}; technical failures: {len(failed)}; console ownership/submission pending: {len(pending)}.\n\nReceipt does not guarantee indexing or console registration.\n')
     if failed:raise SystemExit('NAVER_DISCOVERY_NEEDS_ATTENTION')
 if __name__=='__main__':main()

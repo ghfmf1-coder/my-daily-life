@@ -1,5 +1,4 @@
-name: 작은도구함 원장·검색 연결 점검
-run-name: '작은도구함 원장·검색 연결 점검 · ${{ github.run_number }}차'
+name: Read-only verify Work registry coverage
 on:
   push:
     branches: [main]
@@ -9,7 +8,7 @@ on:
   schedule:
     - cron: '37 */6 * * *'
   workflow_run:
-    workflows: ['작은도구함 구글 등록·사이트맵 자동화', '작은도구함 승인 사이트 자동 배포', '작은도구함 독립 도구 20개 검사·배포', '작은도구함 전문 도구 9개 검사·배포', '작은도구함 배송 도구 검사·배포']
+    workflows: ['Toolbox Google ownership and sitemap setup', 'Toolbox approved-site auto-deploy', 'Work twenty standalone preview sites', 'Work toolbox nine site builds and test deployments', 'Work shipping audit - tests and independent Pages deployment']
     types: [completed]
 concurrency:
   group: work-registry-readonly-audit
@@ -22,7 +21,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
-      - name: 원장 서비스 목록 읽기 전용 확인
+      - name: Read Cloudflare D1 service inventory without updating records
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_D1_READ_TOKEN }}
@@ -136,7 +135,7 @@ jobs:
           if sync_failures:raise SystemExit('SYNC_SOURCE_STALE_OR_ERROR')
           print('WORK_ADMIN_REGISTRY_SYNC_VERIFIED')
           PY
-      - name: 구글 인증·사이트맵·URL 색인 보고서 조회
+      - name: Verify live Google connection ownership sitemaps and indexed URL reports
         run: |
           python3 - <<'PY'
           import os,json,urllib.request,urllib.error,urllib.parse

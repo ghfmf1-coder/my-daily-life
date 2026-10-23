@@ -19,7 +19,7 @@ Google 소유권·검색 성과·사이트맵·홈페이지 색인 보고서를 
 ## 조회 및 재실행
 
 - 워크플로: .github/workflows/work-registry-readonly-audit.yml
-- 이름: 작은도구함 원장·검색 연결 점검
+- 이름: Read-only verify Work registry coverage
 - Actions: https://github.com/ghfmf1-coder/my-daily-life/actions/workflows/work-registry-readonly-audit.yml
 - GitHub 연결의 fetch로 저장소 Actions runs를 조회하고, 최신 main 커밋의 해당 실행을 선택합니다.
 - fetch_workflow_run_jobs로 check 작업 ID를 구한 뒤 rerun_workflow_job으로 재실행합니다.
@@ -91,7 +91,7 @@ D1 원장·성과 기록·방문 통계·기존 OAuth 연결을 삭제하거나 
 ## Google 소유권·사이트맵 설정 실행
 
 - 워크플로: .github/workflows/toolbox-google-setup.yml
-- 이름: 작은도구함 구글 등록·사이트맵 자동화
+- 이름: Toolbox Google ownership and sitemap setup
 - 실행 화면: https://github.com/ghfmf1-coder/my-daily-life/actions/workflows/toolbox-google-setup.yml
 - 수동 실행, UTC 매 6시간 47분, 지정 배포 완료 후 실행합니다. GitHub 예약 실행은 지연될 수 있습니다.
 - Plus에서 재실행 도구가 없거나 현재 run이 이미 끝난 경우, search-setup-request.json의 requestId를 새로운 작업 식별자로 변경하여 main에 저장하면 실행됩니다. 이 파일의 본문은 임의 명령이나 URL 실행 입력으로 사용하지 않습니다.
@@ -140,6 +140,6 @@ Google 소유권·사이트맵·색인, 네이버 계정 소유확인·사이트
 
 ## 알림 언어
 
-사용자 알림과 실행 요약은 한국어를 사용합니다. GitHub Actions 제목·실행 제목·유지보수 오류 및 복구 알림도 한국어로 구성했습니다. 플랫폼이 생성하는 기본 UI와 기계용 진단 코드는 원래 표기를 유지합니다. 작업 결과를 설명할 때는 한국어로 풀어 씁니다.
+사용자가 요청한 언어 대상은 ChatGPT 자체의 알림창입니다. 직접 작성하는 대화·질문·작업 안내는 한국어를 사용합니다. 이 요청을 GitHub 알림이나 사이트 언어 변경으로 확대하지 않습니다. ChatGPT 앱의 고정 UI 문구를 이 저장소 설정으로 변경할 수 있다고 주장하지 않습니다. 잘못 변경한 GitHub 워크플로 표시는 원래대로 복구했습니다.
 
 네이버 계정 상태는 최신 CURRENT-STATE.md와 naver-public-sites.json의 consoleCheckedAt을 확인합니다. IndexNow 수신 성공 때문에 보안문자 대기를 자동 완료로 바꾸지 않습니다.

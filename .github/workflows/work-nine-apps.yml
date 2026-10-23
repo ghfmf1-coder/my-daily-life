@@ -1,5 +1,4 @@
-name: 작은도구함 전문 도구 9개 검사·배포
-run-name: '작은도구함 전문 도구 9개 검사·배포 · ${{ github.run_number }}차'
+name: Work toolbox nine site builds and test deployments
 on:
   push:
     branches: [main]
@@ -22,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: 전문 도구 9개 HTML·자바스크립트 검사
+      - name: Validate all nine apps - HTML and embedded JS syntax
         run: |
           python3 - <<'PY'
           from pathlib import Path
@@ -54,12 +53,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: 기존 배포 비밀 설정 확인
+      - name: Require existing Cloudflare Pages secrets
         env:
           CF_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: test -n "$CF_ID" && test -n "$CF_TOKEN"
-      - name: 독립 배포 프로젝트 확인
+      - name: Ensure separate Pages project exists and is not Git-integrated
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -78,13 +77,13 @@ jobs:
           else
             echo "Pages project inspection failed: HTTP $CODE"; exit 1
           fi
-      - name: 독립 사이트 배포
+      - name: Deploy standalone test site
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           SLUG: ${{ matrix.slug }}
         run: npx --yes wrangler@4 pages deploy "work-sites/$SLUG/public" --project-name "tb-$SLUG" --branch main --commit-hash "$GITHUB_SHA"
-      - name: 운영 사이트 주요 기능 확인
+      - name: Smoke test live deployed site
         env:
           SLUG: ${{ matrix.slug }}
         shell: bash
@@ -99,5 +98,5 @@ jobs:
             sleep 10
           done
           exit 1
-      - name: 관제센터 동기화 확인 안내
+      - name: Work registry synchronization note
         run: echo "Existing Work admin Worker monitors successful tb-* Pages production deployments. Verify registry in adminivo.com/next/."
