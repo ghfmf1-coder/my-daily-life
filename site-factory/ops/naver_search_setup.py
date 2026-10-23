@@ -4,7 +4,7 @@ import concurrent.futures,hashlib,json,os,re,shutil,subprocess,tempfile,time,url
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from datetime import datetime,timezone
-from google_search_setup import ROOT,ledger,source,git,persist
+from google_search_setup import ROOT,ledger,source,git,persist,http
 from factory import prepare
 STATE=ROOT/'site-factory/ops/naver-public-sites.json'
 RESULT=ROOT/'site-factory/ops/naver-search-result.json'
@@ -66,7 +66,11 @@ def notify(url,row):
         if previous.get('digest')==digest and previous.get('http') in (200,202) and time.time()-float(previous.get('time',0))<7*86400:
             result['indexNow']={'status':'previous_receipt','http':previous['http'],'at':previous.get('at'),'count':len(urls)};return result
         payload={'host':urllib.parse.urlsplit(url).hostname,'key':key,'keyLocation':url+key+'.txt','urlList':urls}
-        req=urllib.request.Request('https://searchadvisor.naver.com/indexnow',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json; charset=utf-8','User-Agent':AGENT},method='POST')
+        if len(urls)==1:
+            target='https://searchadvisor.naver.com/indexnow?'+urllib.parse.urlencode({'url':urls[0],'key':key})
+            req=urllib.request.Request(target,headers={'User-Agent':AGENT},method='GET')
+        else:
+            req=urllib.request.Request('https://searchadvisor.naver.com/indexnow',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json; charset=utf-8','User-Agent':AGENT},method='POST')
         try:
             with urllib.request.urlopen(req,timeout=30) as r:code=r.status
         except urllib.error.HTTPError as e:
@@ -85,7 +89,23 @@ def notify(url,row):
     return result
 def main():
     if json.loads((ROOT/'site-factory/ops/search-setup-request.json').read_text()).get('paused') is not False:raise SystemExit('OWNER_PAUSED')
-    entries=ledger();state=json.loads(STATE.read_text()) if STATE.exists() else {'sites':{}}
+    entries=ledger()
+    # Resolve aliases from actual Pages custom-domain assignments before selecting source.
+    base='https://api.cloudflare.com/client/v4/accounts/'+os.environ['CLOUDFLARE_ACCOUNT_ID']+'/pages/projects'
+    aliases={}
+    for page in range(1,101):
+        inventory=http(base+'?per_page=100&page='+str(page),os.environ['CLOUDFLARE_PAGES_DEPLOY_TOKEN'])
+        if not inventory.get('success'):raise SystemExit('PAGES_ALIAS_INVENTORY_FAILED')
+        batch=inventory.get('result',[])
+        for project in batch:
+            for domain in project.get('domains',[]):aliases[domain]=project['name']
+        if len(batch)<100:break
+    for url in entries:
+        host=urllib.parse.urlsplit(url).hostname
+        if host in aliases and entries[url]!=aliases[host]:
+            print('NAVER_PROJECT_ALIAS:',json.dumps({'url':url,'ledgerProject':entries[url],'servingProject':aliases[host]}))
+            entries[url]=aliases[host]
+    state=json.loads(STATE.read_text()) if STATE.exists() else {'sites':{}}
     sites=state['sites'];changed=[];jobs=[];results=[]
     for url,project in sorted(entries.items()):
         row=sites.setdefault(url,{'consoleStatus':'not_registered','sitemapStatus':'not_submitted'})
@@ -107,6 +127,7 @@ def main():
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
         for outcome in pool.map(publish,jobs):
             url=outcome['url']
+            outcome.update({'consoleStatus':sites[url].get('consoleStatus','not_registered'),'sitemapSubmission':sites[url].get('sitemapStatus','not_submitted'),'indexing':'unknown'})
             if outcome['publication']=='live':outcome.update(notify(url,sites[url]))
             results.append(outcome);print('NAVER_SEARCH_RESULT:',json.dumps(outcome),flush=True)
     report={'checkedAt':datetime.now(timezone.utc).isoformat(),'sourceCommit':git('rev-parse','HEAD'),'roots':len(entries),'sites':results,'limitations':['IndexNow is not Search Advisor console registration or sitemap submission.','No indexing guarantee.','No private login session is stored.']}
