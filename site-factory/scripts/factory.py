@@ -435,6 +435,9 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     for p in html_pages:
         content = p.read_text(encoding='utf-8')
         rel = p.relative_to(out).as_posix()
+        # Human-visible, genuinely tool-specific SEO guidance in both languages.
+        from seo_guides import enrich_public_guide
+        content = enrich_public_guide(slug, rel, content)
         if slug == 'toolbox-hub' and rel in ('index.html','en/index.html'):
             feed_ref='/feed.xml' if rel == 'index.html' else '/en/feed.xml'
             if 'application/rss+xml' not in content:
