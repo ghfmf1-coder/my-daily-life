@@ -1,10 +1,11 @@
 {
-  "checkedAt": "2026-10-23T01:24:59.565959+00:00",
+  "checkedAt": "2026-10-23T01:36:31.738763+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
     "No private login session is stored."
   ],
+  "notificationLocale": "ko-KR",
   "roots": 47,
   "sites": [
     {
@@ -53,7 +54,7 @@
       "url": "https://manuscript.abreda.com/"
     },
     {
-      "consoleStatus": "ownership_pending",
+      "consoleStatus": "verified",
       "indexNow": {
         "at": "2026-10-23T01:21:33.229696+00:00",
         "count": 4,
@@ -64,7 +65,7 @@
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
-      "sitemapSubmission": "not_submitted",
+      "sitemapSubmission": "submitted",
       "url": "https://my-daily-life.pages.dev/"
     },
     {
@@ -83,7 +84,7 @@
       "url": "https://novel.abreda.com/"
     },
     {
-      "consoleStatus": "ownership_pending",
+      "consoleStatus": "verified",
       "indexNow": {
         "at": "2026-10-23T01:21:35.616883+00:00",
         "count": 2,
@@ -94,11 +95,11 @@
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
-      "sitemapSubmission": "not_submitted",
+      "sitemapSubmission": "submitted",
       "url": "https://stl-print-check.abreda.com/"
     },
     {
-      "consoleStatus": "ownership_pending",
+      "consoleStatus": "verified",
       "indexNow": {
         "at": "2026-10-23T01:21:36.643290+00:00",
         "count": 2,
@@ -109,7 +110,7 @@
       "publication": "live",
       "robotsSitemap": "present",
       "sitemapFile": "valid",
-      "sitemapSubmission": "not_submitted",
+      "sitemapSubmission": "submitted",
       "url": "https://tb-aquarium-water-lab.pages.dev/"
     },
     {
@@ -713,5 +714,9 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "c67c98ad90f9bf5a0ab9c9f82f81fc4f071649e6"
+  "sourceCommit": "aa411062139472df47a2080752e67fd89808c79b",
+  "summaryKo": {
+    "message": "\uc0ac\uc774\ud2b8\ubcc4 \uacf5\uac1c \uc778\uc99d\u00b7\uc0ac\uc774\ud2b8\ub9f5\u00b7\uc218\uc9d1 \uc694\uccad \uacb0\uacfc\uc785\ub2c8\ub2e4. \uacc4\uc815 \uc18c\uc720\ud655\uc778\uacfc \uc2e4\uc81c \uc0c9\uc778\uc740 \ubcc4\ub3c4\ub85c \ud655\uc778\ud569\ub2c8\ub2e4.",
+    "title": "\uc791\uc740\ub3c4\uad6c\ud568 \ub124\uc774\ubc84 \uc790\ub3d9 \uc810\uac80"
+  }
 }
