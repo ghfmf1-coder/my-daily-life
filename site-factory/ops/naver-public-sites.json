@@ -41,7 +41,7 @@
     },
     "https://my-daily-life.pages.dev/": {
       "consoleCheckedAt": "2026-10-23T01:34:24Z",
-      "consoleEvidence": "네이버 계정 목록 소유확인 및 제출된 sitemap.xml 직접 확인",
+      "consoleEvidence": "\ub124\uc774\ubc84 \uacc4\uc815 \ubaa9\ub85d \uc18c\uc720\ud655\uc778 \ubc0f \uc81c\ucd9c\ub41c sitemap.xml \uc9c1\uc811 \ud655\uc778",
       "consoleStatus": "verified",
       "contentDigest": "1e7794a03b7f130b52ecebab5ba85f22321049a280f7842a1f49051dfe570754",
       "indexNowKey": "efec9072730bfe0db10e204081408be0",
@@ -69,7 +69,7 @@
     },
     "https://stl-print-check.abreda.com/": {
       "consoleCheckedAt": "2026-10-23T01:34:24Z",
-      "consoleEvidence": "네이버 계정 목록 소유확인 및 제출된 sitemap.xml 직접 확인",
+      "consoleEvidence": "\ub124\uc774\ubc84 \uacc4\uc815 \ubaa9\ub85d \uc18c\uc720\ud655\uc778 \ubc0f \uc81c\ucd9c\ub41c sitemap.xml \uc9c1\uc811 \ud655\uc778",
       "consoleStatus": "verified",
       "contentDigest": "8a74de4adf2bb308b957beedb5820d038eaa871a4e952193496aae2a0a339565",
       "indexNowKey": "557bb26f42ea5ad0d3575c660d87dc92",
@@ -84,7 +84,7 @@
     },
     "https://tb-aquarium-water-lab.pages.dev/": {
       "consoleCheckedAt": "2026-10-23T01:34:24Z",
-      "consoleEvidence": "네이버 계정 목록 소유확인 및 제출된 sitemap.xml 직접 확인",
+      "consoleEvidence": "\ub124\uc774\ubc84 \uacc4\uc815 \ubaa9\ub85d \uc18c\uc720\ud655\uc778 \ubc0f \uc81c\ucd9c\ub41c sitemap.xml \uc9c1\uc811 \ud655\uc778",
       "consoleStatus": "verified",
       "contentDigest": "8154d834a8ed5406a341b8531fa4c3d24b3e4cd7cfca27c7a0b88f9995db9126",
       "indexNowKey": "24009e80aff10a1725df83e217e1bc3c",
@@ -98,6 +98,8 @@
       "verificationContent": "de5a5f543b6fa6e12edddafb889e5ea246eebec6"
     },
     "https://tb-audio-quality.pages.dev/": {
+      "consoleCheckedAt": "2026-10-23T01:45:12.245Z",
+      "consoleEvidence": "\ub124\uc774\ubc84 \uacc4\uc815 \ubaa9\ub85d \uc18c\uc720\ud655\uc778 \ubc0f \uc81c\ucd9c\ub41c sitemap.xml \uc9c1\uc811 \ud655\uc778",
       "consoleStatus": "verified",
       "contentDigest": "7c4177d5eb4e8d1d373291d2a14e670db7f198a7f8576569031ffe12adb7f369",
       "indexNowKey": "28a289562f57bed8a0d8d66d069f2969",
@@ -108,11 +110,11 @@
         "time": 1792718497.558078
       },
       "sitemapStatus": "submitted",
-      "verificationContent": "8019441869cb34960ff43f949b6bd909678fba57",
-      "consoleCheckedAt": "2026-10-23T01:45:12.245Z",
-      "consoleEvidence": "네이버 계정 목록 소유확인 및 제출된 sitemap.xml 직접 확인"
+      "verificationContent": "8019441869cb34960ff43f949b6bd909678fba57"
     },
     "https://tb-camera-lens-check.pages.dev/": {
+      "consoleCheckedAt": "2026-10-23T01:45:12.247Z",
+      "consoleEvidence": "\ub124\uc774\ubc84 \uacc4\uc815 \ubaa9\ub85d \uc18c\uc720\ud655\uc778 \ubc0f \uc81c\ucd9c\ub41c sitemap.xml \uc9c1\uc811 \ud655\uc778",
       "consoleStatus": "verified",
       "contentDigest": "f856692e897a79e5d4d429c15d2611cec9524bb2c85779134fdd44e894bb3566",
       "indexNowKey": "73427743f90984dcb6c6b3f0c2fa4ced",
@@ -123,9 +125,7 @@
         "time": 1792718498.5521228
       },
       "sitemapStatus": "submitted",
-      "verificationContent": "50a376cd8115c76e2cbc7be03b3dd426d10c1c50",
-      "consoleCheckedAt": "2026-10-23T01:45:12.247Z",
-      "consoleEvidence": "네이버 계정 목록 소유확인 및 제출된 sitemap.xml 직접 확인"
+      "verificationContent": "50a376cd8115c76e2cbc7be03b3dd426d10c1c50"
     },
     "https://tb-card-grading-lab.pages.dev/": {
       "consoleStatus": "ownership_pending",
