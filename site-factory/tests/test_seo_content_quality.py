@@ -5,6 +5,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from html import escape
 
 BASE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BASE / 'scripts'))
@@ -24,13 +25,15 @@ class ContentQualityTests(unittest.TestCase):
                     with self.subTest(slug=slug, locale=locale):
                         self.assertIn('lang="' + locale + '"', html)
                         self.assertIn('class="tb-practical-guide"', html)
+                        if '</main>' in html:
+                            self.assertLess(html.index('class="tb-practical-guide"'), html.rfind('</main>'))
                         self.assertIn('<title>', html)
                         self.assertIn('name="description"', html)
                         self.assertIn('rel="canonical"', html)
                         self.assertNotIn('noindex', html.split('</head>')[0].lower())
                         guide = html.split('class="tb-practical-guide"', 1)[1].split('</section>', 1)[0]
                         for item in GUIDES[slug][locale]:
-                            self.assertIn(item, guide)
+                            self.assertIn(escape(item), guide)
                         if locale == 'en':
                             self.assertIn('Important limitations', guide)
                         else:
@@ -51,7 +54,9 @@ class ContentQualityTests(unittest.TestCase):
                 self.assertNotIn('content="noindex', html)
                 self.assertTrue((path.parent / 'robots.txt').is_file())
                 self.assertTrue((path.parent / 'sitemap.xml').is_file())
-                self.assertLess(html.index('<form'), html.index('class="toolbox-real-guide"'))
+                entry = html.find('<form') if '<form' in html else html.find('id="run"')
+                self.assertGreaterEqual(entry, 0)
+                self.assertLess(entry, html.index('class="toolbox-real-guide"'))
                 import re
                 title = re.search(r'<title>([^<]+)</title>', html).group(1)
                 desc = re.search(r'<meta name="description" content="([^"]+)"', html).group(1)

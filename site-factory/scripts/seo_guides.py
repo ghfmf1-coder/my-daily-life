@@ -283,7 +283,7 @@ def enrich_public_guide(slug, rel, html):
     if '</main>' in html:
         html = html.replace('</main>', section + '</main>', 1)
     else:
-        html = html.replace('</body>', section + '</body>', 1)
+        html = html.replace('</main>', section + '</main>', 1) if '</main>' in html else html.replace('</body>', section + '</body>', 1)
     # Short or generic descriptions should tell readers which action is possible.
     match = re.search(r'<meta\s+name=["\x27]description["\x27]\s+content=["\x27]([^"\x27]*)["\x27]', html, re.I)
     if match and len(unescape(match.group(1))) < 85:
