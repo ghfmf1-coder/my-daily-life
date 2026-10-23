@@ -62,8 +62,8 @@ def notify(url,row):
         result['robotsSitemap']='present' if url+'sitemap.xml' in robots else 'missing'
         key=row['indexNowKey']
         if public_text(url+key+'.txt',200).strip()!=key:raise ValueError('LIVE_KEY_MISMATCH')
-        digest=hashlib.sha256('\n'.join(sorted(urls)).encode()).hexdigest();previous=row.get('lastIndexNow',{})
-        if previous.get('digest')==digest and previous.get('http') in (200,202) and time.time()-float(previous.get('time',0))<7*86400:
+        digest=hashlib.sha256(('\n'.join(sorted(urls))+'\n'+row.get('contentDigest','')).encode()).hexdigest();previous=row.get('lastIndexNow',{})
+        if previous.get('digest')==digest and previous.get('http') in (200,202):
             result['indexNow']={'status':'previous_receipt','http':previous['http'],'at':previous.get('at'),'count':len(urls)};return result
         payload={'host':urllib.parse.urlsplit(url).hostname,'key':key,'keyLocation':url+key+'.txt','urlList':urls}
         if len(urls)==1:
@@ -116,6 +116,7 @@ def main():
                 if proof not in html:
                     if not re.search(r'</head\s*>',html,re.I):raise ValueError('HTML_HEAD_MISSING')
                     path.write_text(re.sub(r'</head\s*>','<meta name="naver-site-verification" content="'+proof+'">\n</head>',html,count=1,flags=re.I));changed.append(path)
+            row['contentDigest']=hashlib.sha256(path.read_bytes()).hexdigest()
             row['indexNowKey']=key_for(url);keypath=folder/(row['indexNowKey']+'.txt')
             if not keypath.exists() or keypath.read_text()!=row['indexNowKey']:keypath.write_text(row['indexNowKey']);changed.append(keypath)
             robots=folder/'robots.txt';text=robots.read_text() if robots.exists() else 'User-agent: *\nAllow: /\n'
