@@ -54,3 +54,15 @@
 
 - 활성화 진단 실행 39799853704에서 Google이 기존 프로젝트 376649321415의 Site Verification API 활성화 주소를 반환했습니다. 현재 상태 문서에 정확한 주소를 보존했습니다.
 - 후속 감사 39799411215의 Google 응답에서 STL·시계 사이트맵이 실제 다운로드됐고 isPending=false, errors=0, warnings=0인 것을 확인했습니다. 홈페이지 색인은 여전히 NEUTRAL로 보존했습니다.
+
+## 2026-10-23 재개 및 운영 검증
+
+- 사용자 명시 재개 요청으로 f8eb9d7: paused:false, 0e61fc4: reconcile·예약 자동화 복구.
+- 중단 실행 39801465011은 cancelled. 이미 성공한 소유권을 보존하고 잔여만 처리.
+- 2433974: 중고차 점검 sitemap.xml 원본 추가. 163e6ab: 소유권 재배포가 factory.prepare를 사용해 생성된 검색 파일 보존.
+- 배포 39880807833의 factory·CSV·자막 회귀 검사 및 Pages 배포 success.
+- Google setup 39880905498 success: 47개 루트 already_accessible·사이트맵 already_submitted, attention 0.
+- 감사 39880963207 success: 원장 51·신규 30·누락 없음·중복 0·동기화 정상·Google 접근 불가 없음. URL 검사 PASS 36/NEUTRAL 15. 사이트맵 47, pending 41, 오류/경고 0.
+- Google 보고 기간 2026-09-26~2026-10-20. 반환된 novel 영문 페이지 성과는 노출 1·클릭 0이며 자료 없는 사이트를 0으로 추정하지 않음.
+- 네이버 보안 로그인 제출 뒤 추가 보안 확인 표시. 등록·성과 확인은 사용자 보안 확인 대기. 개인정보·비밀번호·쿠키를 저장하지 않음.
+- OIDC 기존 검증 및 수정 Python 구문 검사 통과. 기존 D1 데이터·OAuth 삭제/초기화 없음. 추가 유료 서비스 없음.

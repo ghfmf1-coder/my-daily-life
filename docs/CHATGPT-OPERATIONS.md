@@ -40,7 +40,7 @@ Google 소유권·검색 성과·사이트맵·홈페이지 색인 보고서를 
 ## 인증
 
 - GitHub Secret CLOUDFLARE_D1_READ_TOKEN: 해당 Cloudflare 계정의 D1 Read 전용입니다.
-- 기존 CLOUDFLARE_API_TOKEN: Pages 목록 조회에만 사용합니다. 권한을 확대하지 않습니다.
+- 기존 CLOUDFLARE_API_TOKEN: 읽기 감사에서는 Pages 목록 조회, 승인된 배포·Google setup에서는 기존 Pages 배포에 사용합니다. D1 권한을 추가하거나 권한을 확대하지 않습니다.
 - CLOUDFLARE_ACCOUNT_ID: 기존 값을 유지합니다.
 - Google OAuth refresh token과 client secret은 기존 Supabase 내부에 유지합니다.
 - Google 조회는 GitHub OIDC로 인증합니다. issuer·audience·숫자 저장소 ID·소유자 ID·main ref·워크플로 경로·허용 이벤트·시간·RSA 서명을 검증합니다.
@@ -108,3 +108,13 @@ D1 원장·성과 기록·방문 통계·기존 OAuth 연결을 삭제하거나 
 - 실패 실행도 결과 JSON artifact를 보존합니다. 실패한 URL을 성공으로 표시하지 않습니다.
 - source mapping 누락이나 배포 오류는 소스/운영 상태 확인 후 재실행합니다. 원장 삭제나 새 관제센터 생성으로 해결하지 않습니다.
 - setup 완료 뒤 읽기 감사가 실행되므로 Google 속성·사이트맵·색인 보고서를 다시 확인합니다.
+
+## 일시정지와 재개
+
+- 서버 setup 경로는 search-setup-request.json의 paused가 정확히 false일 때만 쓰기를 허용합니다. true 또는 조회 실패는 차단합니다.
+- 평상시 paused:false와 활성 reconcile job을 유지합니다. requestId만 갱신하면 Plus의 GitHub 파일 쓰기로 재실행할 수 있습니다.
+- 사용자가 중지를 요청하면 paused:true를 먼저 저장합니다. 이미 진행 중인 개별 요청은 취소 전 완료될 수 있으므로 실제 로그를 확인합니다.
+- 2026-10-23 사용자의 재개 지시로 paused:false, reconcile 활성, cancel-in-progress:false를 복구했습니다.
+- Google 429는 공급자 응답의 apiService/apiReasons/quota 필드를 확인합니다. 순차 처리와 제한된 재시도 후에도 실패하면 보류를 오류로 기록하며, 완료된 등록을 삭제하지 않습니다.
+- 소유권 인증용 재배포도 기존 factory.prepare 빌드를 사용해 생성된 robots.txt·sitemap.xml을 보존합니다.
+- 네이버 로그인 쿠키·보안문제 답을 GitHub에 저장하지 않습니다. 현재 Google/GitHub 브리지는 네이버 계정 조회를 제공하지 않으므로 네이버 실시간 상태는 공식 인증 화면 확인이 별도로 필요합니다.

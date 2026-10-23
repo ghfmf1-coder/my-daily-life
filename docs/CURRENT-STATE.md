@@ -1,111 +1,61 @@
 # 현재 운영 상태 — 작은도구함
 
-> **사용자 요청으로 작업 중지 — 2026-10-23.** 지금까지의 코드·인증·배포·등록 결과를 보존합니다. 사용자가 명시적으로 재개할 때까지 Google setup 작업을 실행하지 마세요. setup 워크플로의 reconcile job은 if:false로 일시정지했고, 같은 concurrency group의 진행 실행 취소를 요청했습니다.
->
-> 마지막 확정 결과: 인증 태그 대상 41곳 모두 운영 페이지 확인, 그중 18곳 소유권 등록·사이트맵 제출 성공. 나머지 23곳은 Google HTTP 429 RESOURCE_EXHAUSTED로 미완료였습니다. 느리게 재시도하도록 보완한 실행 39801465011은 중지 시점 최종 결과 미확인입니다. 재개 시 그 실행의 취소/완료 로그부터 읽고 실제 성공분을 갱신하세요. 서버는 v16입니다. 네이버는 미확인입니다.
->
-> 서버 v17에서도 request.json의 paused가 명시적으로 false인 경우만 setup 쓰기를 허용합니다. 현재 paused:true이며 추가 등록 요청을 차단합니다. 실제 파일은 site-factory/ops/search-setup-request.json입니다. 읽기 감사와 기존 관제센터는 유지합니다.
->
-> 재개 절차: 사용자 지시 확인 → 최신 로그 확인 → search-setup-request.json의 paused:false 설정 → setup 워크플로 reconcile의 if:false 해제 및 cancel-in-progress:false 복구 → 필요한 경우 요청 파일 갱신. 이미 성공한 사이트를 삭제하거나 처음부터 다시 만들지 마세요.
+확인: 2026-10-23 00:57 UTC (09:57 KST). 일반 ChatGPT Plus는 이 문서와 [CHATGPT-OPERATIONS.md](CHATGPT-OPERATIONS.md), [AGENTS.md](../AGENTS.md)를 먼저 읽고 최신 실행으로 갱신합니다. 과거 대화가 자동 공유된다고 가정하지 않습니다.
 
+## 실제 운영 검증
 
-이 파일을 일반 ChatGPT Plus의 첫 진입점으로 사용합니다.
-이전 대화가 자동 공유된다고 가정하지 않습니다. 아래 파일과 실제 최신 실행 로그를 읽고 시작합니다.
+| 항목 | 결과 |
+|---|---|
+| 운영 주소 | https://adminivo.com/next/ 유지 |
+| 저장소 | ghfmf1-coder/my-daily-life 유지 |
+| Cloudflare 인증 | 별도 D1 Read 토큰 활성·실제 SELECT 정상. 기존 Pages 토큰 권한 확대 없음 |
+| 원장 | 운영 서비스 51개, 기존 21개 및 신규 30개 존재 |
+| 누락·중복 | 신규 누락 없음, production 프로젝트 누락 없음, canonical URL·service ID 중복 각각 0 |
+| 신규 30개 상태 | deployed_not_listed는 원장 등록됨·공개 디렉터리 미등재를 의미 |
+| 자동 동기화 | CATALOG ok (00:54:55 UTC), GSC ok (00:00:58 UTC), 지연·오류 없음. ADSENSE no_rows는 자료 없음 |
+| Google OAuth | 기존 연결 refresh·실제 sites API 정상. 관리·신규 소유권 capability 모두 true |
+| Google 소유권 | 원장 URL 51개 모두 accessible. 서로 다른 사이트 루트 47개 모두 인증·속성 접근 확인 |
+| Google 사이트맵 | 47개 모두 제출됨. 재실행 already_submitted 47·attention 0 |
+| 사이트맵 처리 | 최종 조회에서 고유 47개, pending 41개·오류 0·경고 0. 제출과 처리 완료를 구분 |
+| Google URL 검사 | 원장 URL 51개 중 PASS 36·NEUTRAL 15. 해당 URL의 색인 버전이며 전체 사이트 색인 보장 아님 |
+| 검색 성과 | 조회 기간 2026-09-26~2026-10-20. API 반환 행: novel.abreda.com/en/, 2026-10-17, 노출 1·클릭 0. 다른 사이트의 자료 없음은 0 확정 아님 |
+| 네이버 | 로그인 요청 후 추가 보안 확인(영수증 문제) 표시. 계정 등록·소유확인·사이트맵·성과는 아직 미확인 |
+| 보존 | 감사는 D1 읽기만 수행. 기존 원장·통계·성과·OAuth 삭제/초기화 없음. 전체 과거 기록 전후 체크섬 검사는 미실시 |
 
-## 고정 기준
+## 실제 실행 증거
 
-- 저장소: ghfmf1-coder/my-daily-life
-- 관제센터: https://adminivo.com/next/
-- 기본 운영: 일반 Plus의 GitHub 연결 → GitHub Actions → 기존 Cloudflare/Supabase
-- Work 브라우저·로컬 임시 파일·대화 세션을 필수 의존성으로 사용하지 않습니다.
-- 구형 관제센터 복귀, 새 관제센터, 추가 유료 서비스 도입 금지.
-- 운영 규칙: [AGENTS.md](../AGENTS.md)
-- 실행 설명: [CHATGPT-OPERATIONS.md](CHATGPT-OPERATIONS.md)
-- 변경 이력: [OPERATIONS-CHANGELOG.md](OPERATIONS-CHANGELOG.md)
-- 최초 읽기 검증 기록: [OPS-VERIFICATION-2026-10-22.md](OPS-VERIFICATION-2026-10-22.md). 이 문서는 이후 재승인 이전의 역사적 기록입니다.
+- Google 전체 설정 재검증 **success**: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39880905498
+- 최종 D1·Google 읽기 감사 **success**: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39880963207
+- 누락 사이트맵 수정 배포·기존 회귀 검사 **success**: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39880807833
+- 재개 첫 실행 39880623650은 소유권 잔여 3개 성공·사이트맵 1개 누락으로 failure였고, 위 후속 실행에서 해결됨.
+- 실제 중고차 사이트맵 파일을 추가하고 배포. 인증용 재배포도 factory.prepare를 사용하도록 고쳐 생성된 검색 파일을 보존.
+- OIDC 보안 검사 통과: 정상 서명 허용, 잘못된 repo/owner/ref/workflow/event/audience/issuer/시간/알고리즘/변조 거부, audit/setup 신원 교차 사용 거부.
 
-## 마지막으로 실제 확인한 상태
+## Work 없이 운영
 
-확인 기준일: 2026-10-22. 아래 수치는 실행 시점의 자료이며 매 요청에서 최신 로그를 확인합니다.
+기존 Worker의 분당 원장 동기화와 Google 수집 Cron 유지. GitHub 읽기 감사와 Google setup은 각각 UTC 매 6시간 37분·47분 및 지정 배포 완료 후 실행합니다. GitHub 예약 실행은 지연될 수 있습니다.
 
-| 항목 | 실제 상태 | 증거 |
-|---|---|---|
-| D1 Read | 정상 | 감사 실행의 D1_READ_TOKEN_ACTIVE |
-| 원장 | 운영 서비스 51개·신규 30개 모두 등록·누락 없음·중복 없음 | 감사 로그 |
-| 기존 서비스 | 기존 21개 URL 존재. 과거 방문·성과 전체 전후 체크섬 검사는 미실시 | D1 읽기 감사 |
-| 신규 사이트 상태 | deployed_not_listed: 원장 등록됨, 공개 도구 디렉터리 미등재 | PUBLIC_SERVICE |
-| 원장 동기화 | 기존 Worker의 분당 동기화 유지·최근 CATALOG ok | SYNC_SOURCE_STATUS |
-| Google OAuth | 기존 연결 재사용·refresh 정상 | 실시간 sites API 성공 |
-| Google 추가 권한 | Search Console 관리 승인됨·신규 사이트 소유권 확인 승인됨 | GOOGLE_GRANTED_CAPABILITIES 모두 true |
-| Google 재승인 저장 시각 | 2026-10-22T14:40:08.995Z | 비밀값 제외 connected_at/updated_at 조회 |
-| Google 읽기 감사 | 실제 완료, 워크플로 success 확인 | https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39798149557 |
-| 최초 URL 검사 | 원장 URL 51개 중 10개 속성 접근 가능, PASS 7·NEUTRAL 3, 나머지 41개 속성 접근 불가 | 과거 검증 기록. 최신 응답으로 갱신 필요 |
-| Google 신규 소유권 자동 설정 | 사용자 API 활성화 후 태그 발급 성공, 기존 사이트 배포·인증 작업 진행 중. 최종 완료 미확정 | https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39800548377 |
-| 신규 사이트 인증 태그 배포 | 공개 인증 태그 원본 커밋 완료, 기존 Pages 배포·운영 태그 확인 진행 중 | ed8a6f1f0760d1d678fda284cf554c1575e16155 |
-| 기존 누락 사이트맵 | stl-print-check.abreda.com, watch-inspection-lab.abreda.com의 sitemap.xml 실제 제출 후 Google 재조회에서 isPending=false·errors=0·warnings=0 확인 | setup SITEMAP status=submitted |
-| 사이트맵 제출 후 색인 | 미보장·실제 Google URL Inspection으로 별도 확인 | 자동 제출과 색인 완료 구분 |
-| 네이버 | 기존 계정 현재 등록·인증·제출 상태 미확인 | 아직 외부 계정 인증 단계 필요 |
+Google setup은 현재 활성입니다. search-setup-request.json은 paused:false이며 워크플로 reconcile 활성·cancel-in-progress:false입니다. Plus의 GitHub 파일 쓰기로 requestId만 새 값으로 바꾸면 재실행됩니다. 실행 도구가 있는 채팅은 최신 main 작업 재실행도 가능합니다. 없는 경우 Actions UI를 사용하며 Work가 필수 조건은 아닙니다.
 
-## 현재 차단 원인과 다음 행동
+서버 v17은 paused가 정확히 false인 경우만 setup 쓰기를 허용하고, 제어 파일 조회 실패는 차단합니다. 중단 요청 시 paused:true로 바꿉니다. 이미 처리된 항목은 재사용하고 소유권·서비스를 삭제하지 않습니다.
 
-Google OAuth 재동의는 완료됐습니다. 동일한 OAuth 재동의를 먼저 반복하지 마세요.
-이전 차단은 OAuth scope 부족이 아니라 기존 Google Cloud 프로젝트의 **Site Verification API 비활성**이었습니다.
-사용자가 API를 사용 설정한 뒤 태그 발급과 원본 커밋에 성공했습니다. 이제 API 활성화를 다시 요구하지 말고 실행 39800548377의 최종 결과를 확인합니다.
+## 남은 확인
 
-Google API가 실제 반환한 활성화 주소:
-https://console.developers.google.com/apis/api/siteverification.googleapis.com/overview?project=376649321415
+1. 네이버 보안 확인은 사용자가 공식 로그인 화면에서 완료해야 함. 비밀번호·보안 답·쿠키를 채팅이나 GitHub에 저장하지 않음. 현재 Google/GitHub 브리지는 네이버 계정을 조회하지 못하므로 네이버를 자동 연결 완료라고 보고하지 않음.
+2. Google pending 사이트맵과 NEUTRAL URL은 후속 읽기 감사에서 확인. 색인을 강제로 완료 처리하지 않음.
+3. 새 임시 사이트 생성 실험은 미실시. 기존 30개 실제 배포와 D1 일치 및 성공 production 프로젝트 동적 대조·배포 후 감사 경로를 확인했음.
 
-기존 프로젝트 번호는 376649321415입니다. 새 프로젝트를 만들지 않습니다.
-활성화 요구 확인 실행: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39799853704
-setup TOKEN 오류의 검증된 activationUrl이 있으면 그 링크를 사용하고, 다른 프로젝트나 새 프로젝트를 만들지 않습니다.
+## 유지할 소스와 인증
 
-현재 진행 중인 실행을 확인할 순서:
-1. Google setup 워크플로를 재실행합니다.
-2. TOKEN → SOURCE/DEPLOY → VERIFY → SITEMAP 순서의 실제 응답을 확인합니다.
-3. 완료된 setup 후 읽기 감사가 자동 실행됩니다.
-4. 등록·소유권·제출·색인 결과를 각각 보고하고 이 파일을 갱신합니다.
+- Cloudflare Worker: site-factory/admin-worker/worker.mjs. Google edge 소스로 덮어쓰지 않음.
+- Google: 기존 Supabase 프로젝트 ytifxhpizractdeytrok, 함수 toolbox-google-ads-oauth v17. 소스 site-factory/admin-worker/google-oauth-edge/.
+- 읽기 감사: .github/workflows/work-registry-readonly-audit.yml
+- 등록/제출: .github/workflows/toolbox-google-setup.yml
+- 드라이버: site-factory/ops/google_search_setup.py
+- 제어: site-factory/ops/search-setup-request.json
+- GitHub Secret 이름만: CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_D1_READ_TOKEN, CLOUDFLARE_API_TOKEN. 실제 값은 기록하지 않음.
+- Google refresh token·client secret은 기존 Supabase 비밀/암호화 저장에 유지. GitHub는 별도 audit/setup OIDC 사용.
 
-네이버는 Google 작업과 별개입니다. 현재 미확인을 유지하고 기존 서치어드바이저 계정 인증 후 공식 화면에서 확인합니다.
+Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완료됐습니다. 실제 새로운 오류 근거 없이 반복 요청하지 않습니다. Cloudflare 원격 로그인 과거 실패를 계정 부재로 해석하지 않습니다.
 
-## 일반 Plus에서 실행할 요청
-
-```text
-ghfmf1-coder/my-daily-life의 AGENTS.md와 docs/CURRENT-STATE.md,
-docs/CHATGPT-OPERATIONS.md를 먼저 읽어.
-기존 관제센터 https://adminivo.com/next/를 유지해.
-최신 Google setup과 읽기 감사의 실제 로그를 확인하고,
-필요한 작업을 GitHub 연결로 실행해.
-최신 Google setup 실행 상태와 남은 차단 원인을 먼저 확인하고,
-이미 완료된 OAuth 재동의를 반복하거나 미확인을 완료로 표시하지 마.
-완료한 변경과 남은 문제를 CURRENT-STATE.md에 갱신해.
-```
-
-## 소스와 배포 위치
-
-- Cloudflare 원장/관제센터: site-factory/admin-worker/worker.mjs. 이번 Google 변경을 이 Worker에 임의로 덮어쓰지 않음.
-- Google 서버 코드: site-factory/admin-worker/google-oauth-edge/
-- 기존 Supabase 프로젝트: ytifxhpizractdeytrok, 기존 함수 toolbox-google-ads-oauth
-- 마지막 서버 배포: v15. 서버 코드의 비밀값은 Supabase 내부 환경/기존 암호화 저장에 유지.
-- 원장/Google 읽기 감사: .github/workflows/work-registry-readonly-audit.yml
-- Google 등록/사이트맵 자동화: .github/workflows/toolbox-google-setup.yml
-- 실행 드라이버: site-factory/ops/google_search_setup.py
-- Plus가 재실행 요청을 저장할 파일: site-factory/ops/search-setup-request.json
-- 테스트: site-factory/admin-worker/google-oauth-edge/test-github-oidc.mjs
-
-## 인증 보관
-
-GitHub Secret 이름: CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_D1_READ_TOKEN, CLOUDFLARE_API_TOKEN.
-여기에 실제 값을 쓰지 않습니다. 사용자에게 채팅으로 값을 보내라고 요구하지 않습니다.
-Google refresh token·client secret은 GitHub에 복사하지 않습니다.
-GitHub OIDC는 감사/설정 각각 별도 audience·정확한 워크플로 경로로 구분됩니다.
-
-## 후속 실제 재조회
-
-https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39799411215 의 실제 Google 조회 로그에서 다음을 확인했습니다.
-
-- Google OAuth와 두 관리 capability 정상 유지.
-- STL 사이트맵 제출 시각 2026-10-22T14:51:07.292Z, Google 다운로드 시각 2026-10-22T14:51:09.575Z.
-- 시계 사이트맵 제출 시각 2026-10-22T14:51:07.371Z, Google 다운로드 시각 2026-10-22T14:51:15.338Z.
-- 두 사이트맵 모두 isPending=false, errors=0, warnings=0.
-- 해당 홈페이지의 Google 색인 보고서는 여전히 NEUTRAL·발견됨-현재 색인 생성되지 않음. 제출 성공을 색인 완료로 바꾸지 않음.
-- 이 절의 과거 재조회 당시에는 Site Verification API 활성화 대기였습니다. 이후 현재 상태 표와 최신 실행이 우선합니다.
+변경 이력: [OPERATIONS-CHANGELOG.md](OPERATIONS-CHANGELOG.md). 최초 과거 검증: [OPS-VERIFICATION-2026-10-22.md](OPS-VERIFICATION-2026-10-22.md). 최신 실제 로그가 과거 기록보다 우선합니다.
