@@ -35,6 +35,7 @@ export function integratePerformance(report,legacy){
  }
  for(const e of report.entries){const h=e.visitors?.classification?.likely_human;if(h){e.visitors.value=h.sessions;e.visitors.pageviews=h.pageviews;e.visitors.observedAt=h.observedAt}}
  for(const r of legacy.traffic||[]){if(r.visit_day!==report.date)continue;const e=entries.get(urlFor(r,false));if(!e)continue;e.visitors.legacyTotal={sessions:r.visits,pageviews:r.pageviews,observedAt:r.updated_at};if(!Object.keys(e.visitors.classification||{}).length)e.visitors.status='legacy_unclassified'}
+ report.legacyDaily=(legacy.traffic||[]).filter(r=>r.visit_day===report.date).map(r=>({...r,url:urlFor(r,false),title:sites.get(r.site_id)?.name||r.site_id}));
  report.history=(legacy.metrics||[]).filter(m=>m.date===report.date).map(m=>({...m,url:visitUrl(sites.get(m.siteId)?.url),title:sites.get(m.siteId)?.name||m.siteId}));
  report.visitPolicy='Public classified snapshot per canonical/day takes precedence over legacy classification. Raw legacy totals and manual history are separate, never added. Missing category is unknown, not zero. Historical automated includes bots.';
  return report;

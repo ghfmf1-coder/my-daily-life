@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/work-registry-readonly-audit.yml'
+      - 'site-factory/ops/visit_coverage_audit.py'
+      - 'site-factory/admin-worker/verify-source-snapshot.mjs'
   workflow_dispatch:
   schedule:
     - cron: '37 */6 * * *'

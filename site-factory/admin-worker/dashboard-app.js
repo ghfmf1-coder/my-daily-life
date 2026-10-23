@@ -26,7 +26,11 @@ async function api(path,options={}){const r=await fetch(path,{credentials:'same-
 async function loadServices(){try{const data=await api('/api/reporting/services');if(!Array.isArray(data.entries)||!data.entries.length)throw Error('동기화된 목록 없음');services=data.entries;source='live';$('source-tag').textContent='서버 연결';$('source-tag').className='state-tag ok';showMessage('');}catch(e){source='snapshot';services=seed;$('source-tag').textContent='기준 목록 · 미연결';$('source-tag').className='state-tag warn';showMessage('서비스 API 조회에 실패해 2026-10-21 기준 목록을 표시합니다. 현재 배포 여부나 최신 데이터로 간주하지 마세요.')}rowServices();overview();}
 async function loadStatus(){try{const s=await api('/api/reporting/status');statusRows=s.sync||[];statusFailed=false;}catch{statusFailed=true;}sourceRows()}
 async function loadReport(){const day=$('report-date').value;try{const r=await api('/api/reporting/performance?date='+encodeURIComponent(day));if(!Array.isArray(r.entries))throw Error('성과 구조 확인 불가');report=r;reportFailed=false;}catch{report=null;reportFailed=true;}rowPerformance();renderHistory()}
-function renderHistory(){const rows=report?.history||[];$('legacy-history').innerHTML=rows.length?'<h3>기존 성과 원본 이력 · 일별 집계와 중복 합산하지 않음</h3><div class="table-scroller"><table><thead><tr><th>서비스 / 날짜</th><th>세션</th><th>페이지뷰</th><th>원천 / 갱신</th></tr></thead><tbody>'+rows.map(m=>`<tr><td>${esc(m.title)}<br>${esc(m.date)}</td><td>${number(m.visitors)}</td><td>${number(m.pageviews)}</td><td>${esc(m.source)}<br>${esc(m.updatedAt)}</td></tr>`).join('')+'</tbody></table></div>':'<p class="panel-desc">선택일 기존 이력 '+(report?.legacy?.available?'없음':'조회 불가')+'</p>';}
+function renderHistory(){
+ const history=report?.history||[],daily=report?.legacyDaily||[];
+ const table=(rows)=>'<div class="table-scroller"><table><thead><tr><th>서비스 / 날짜</th><th>세션</th><th>페이지뷰</th><th>원천 / 갱신</th></tr></thead><tbody>'+rows.map(m=>`<tr><td>${esc(m.title)}<br>${esc(m.date||m.visit_day)}</td><td>${number(m.visitors??m.visits)}</td><td>${number(m.pageviews)}</td><td>${esc(m.source||'기존 일별 전체 합계 · 분류 혼합')}<br>${esc(m.updatedAt||m.updated_at)}</td></tr>`).join('')+'</tbody></table></div>';
+ $('legacy-history').innerHTML='<h3>기존 일별 원본 · 분류별 세션/요약에 합산하지 않음</h3>'+(daily.length?table(daily):'<p>선택일 기존 일별 기록 없음 또는 조회 불가</p>')+'<h3>기존 수동 성과 이력 · 중복 합산하지 않음</h3>'+(history.length?table(history):'<p>선택일 수동 이력 없음 또는 조회 불가</p>');
+}
 async function checkRevision(){
  try{
   const result=await api('/api/v2/registry/version');
