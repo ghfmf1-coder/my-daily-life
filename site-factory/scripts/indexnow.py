@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Bing/IndexNow change notification for newly deployed PUBLIC tools only.
 
-Do not ping Google (it does not support IndexNow); Google/Naver use
-verified property ownership, sitemap discovery and normal crawling.
+Do not ping Google (it does not support IndexNow). Naver supports its official
+IndexNow endpoint; receipt does not mean console registration or indexing.
 """
 from __future__ import annotations
 import json
@@ -52,7 +52,7 @@ def indexable_urls(build_dir: Path, canonical: str, info: dict) -> list[str]:
             urls.append(raw)
     return urls[:20]
 
-def ping_indexnow(build_dir: Path, canonical: str, info: dict, key: str | None, *, request=None, attempts=3) -> dict:
+def ping_indexnow(build_dir: Path, canonical: str, info: dict, key: str | None, *, request=None, attempts=3, provider='indexnow') -> dict:
     urls=indexable_urls(build_dir,canonical,info)
     if not key or not urls:
         return {"status":"skipped","reason":"No indexable public URL", "count":0}
@@ -60,7 +60,9 @@ def ping_indexnow(build_dir: Path, canonical: str, info: dict, key: str | None, 
     if not host:
         return {"status":"skipped","reason":"Missing HTTPS host","count":0}
     key_location=canonical+"/"+key+".txt"
-    request_url="https://api.indexnow.org/indexnow"
+    endpoints={"indexnow":"https://api.indexnow.org/indexnow","naver":"https://searchadvisor.naver.com/indexnow"}
+    if provider not in endpoints:raise ValueError("Unsupported IndexNow provider")
+    request_url=endpoints[provider]
     payload=json.dumps({"host":host,"key":key,"keyLocation":key_location,"urlList":urls},separators=(",",":")).encode("utf-8")
     sender=request or urllib.request.urlopen
     req=urllib.request.Request(request_url,data=payload,headers={
@@ -71,7 +73,7 @@ def ping_indexnow(build_dir: Path, canonical: str, info: dict, key: str | None, 
             with sender(req,timeout=12) as resp:
                 code=resp.status
                 if code in (200,202):
-                    return {"status":"received","http":code,"count":len(urls),"host":host}
+                    return {"status":"received","http":code,"count":len(urls),"host":host,"provider":provider,"keyValidation":"pending" if code==202 else "accepted","indexing":"unknown"}
                 err=f"IndexNow HTTP {code}"
         except (urllib.error.URLError,TimeoutError,OSError) as exc:
             err=type(exc).__name__ + ": " + str(exc)[:130]

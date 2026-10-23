@@ -47,6 +47,18 @@ class IndexNowTests(unittest.TestCase):
             self.assertEqual(result['count'],2)
             self.assertEqual(calls[0].full_url,'https://api.indexnow.org/indexnow')
             self.assertEqual(__import__('json').loads(calls[0].data)['urlList'],[base+"/",base+"/en/"])
+    def test_naver_uses_official_endpoint_and_rejects_other_providers(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d);base="https://tb-sample.pages.dev";info={'slug':'sample','approved':True}
+            p.joinpath("sitemap.xml").write_text(sitemap([base+"/"]))
+            key=m.generate_verification(p,info);calls=[]
+            def sender(req,timeout):
+                calls.append(req.full_url);return FakeResponse()
+            result=m.ping_indexnow(p,base,info,key,request=sender,provider='naver')
+            self.assertEqual(calls,['https://searchadvisor.naver.com/indexnow'])
+            self.assertEqual(result['keyValidation'],'pending')
+            self.assertEqual(result['indexing'],'unknown')
+            with self.assertRaises(ValueError):m.ping_indexnow(p,base,info,key,request=sender,provider='untrusted')
     def test_skip_without_verified_key(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d);p.joinpath("sitemap.xml").write_text(sitemap(["https://tb-sample.pages.dev/"]))

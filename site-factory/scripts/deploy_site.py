@@ -86,11 +86,12 @@ def main():
     # Search engine discovery only: never claim Google submission or guaranteed indexing.
     # Do not interrupt a successful deployment when the remote search endpoint is unavailable.
     if indexnow_key:
-        try:
-            notice=ping_indexnow(out,canonical,data,indexnow_key)
-            print("INDEXNOW: "+json.dumps(notice,ensure_ascii=False))
-        except (OSError,ValueError,urllib.error.URLError) as ex:
-            print(f"INDEXNOW_NOT_CONFIRMED: {type(ex).__name__}: {ex}")
+        for provider in ("indexnow","naver"):
+            try:
+                notice=ping_indexnow(out,canonical,data,indexnow_key,provider=provider)
+                print("INDEXNOW: "+json.dumps(notice,ensure_ascii=False))
+            except (OSError,ValueError,urllib.error.URLError) as ex:
+                print(f"INDEXNOW_NOT_CONFIRMED: {provider}: {type(ex).__name__}")
     # Attach verified user-owned abreda.com subdomains as part of ordinary deployments.
     # DNS and certificate activation are independently verified by Cloudflare.
     should_attach = args.attach_domain or ((data.get('domain') or '').endswith('.abreda.com'))
