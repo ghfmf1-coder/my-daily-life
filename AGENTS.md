@@ -19,6 +19,7 @@
 - 실행 도구가 없는 Plus 대화에서는 GitHub Actions 화면의 실행 버튼을 안내합니다. 바로 Work로 넘기지 않습니다.
 - 승인된 작업은 계속 수행하되, 실제 계정 로그인/외부 권한 승인만 사용자에게 요청합니다.
 - 변경 후 `docs/CURRENT-STATE.md`에 확인 시각·증거 링크·남은 항목을 갱신하고 관련 코드와 함께 커밋합니다.
+- 검색 노출용 글쓰기·페이지 배치·한영 분리는 `docs/SEO-PUBLISHING-PRINCIPLES.md`에 정의한 공식 Google Search Central 기준을 따릅니다. 키워드 반복·저가치 다량 페이지 생성·허위 SEO 성과 보고는 금지합니다.
 - 과거 검증 보고서는 역사적 기록으로 보존합니다. 뒤늦은 결과로 과거 검증 시점의 사실을 덮어쓰지 않습니다.
 
 - 네이버 자동 결과는 site-factory/ops/naver-search-result.json을 읽고, 재실행은 naver-search-request.json의 requestId 갱신을 사용합니다. Work 브라우저가 필요 없는 공식 IndexNow 경로입니다.
