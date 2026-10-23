@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Read production HTML and dry-run collectors; never create test visitor events."""
 import concurrent.futures,json,urllib.request,urllib.parse,urllib.error,re,uuid
+from html.parser import HTMLParser
+class LanguageLinks(HTMLParser):
+ def __init__(self):super().__init__();self.english=None
+ def handle_starttag(self,tag,attrs):
+  a=dict(attrs)
+  if tag=='link' and a.get('hreflang')=='en' and a.get('rel')=='alternate':self.english=a.get('href')
 from pathlib import Path
 MANIFEST=Path('site-factory/ops/visit-sites.json')
 AGENT='Toolbox-Operational-Audit curl'
@@ -25,8 +31,11 @@ def check(site):
   reply=json.loads(response);row['collectorDiagnostic']=status==202 and reply.get('diagnostic') is True and reply.get('accepted') is False
   if not row['collectorDiagnostic']:raise ValueError('NO_WRITE_DIAGNOSTIC_UNCONFIRMED')
   row['english']='not_present'
-  if re.search(r'hreflang=["\']en["\']',html):
-   _,english=request(urllib.parse.urljoin(url,'en/'));row['english']='tracking_present' if 'data-toolbox-site="'+sid+'"' in english else 'tracking_missing'
+  links=LanguageLinks();links.feed(html)
+  if links.english:
+   english_url=urllib.parse.urljoin(url,links.english)
+   if urllib.parse.urlsplit(english_url).netloc!=urllib.parse.urlsplit(url).netloc:raise ValueError('UNAPPROVED_ENGLISH_HOST')
+   _,english=request(english_url);row['english']='tracking_present' if 'data-toolbox-site="'+sid+'"' in english else 'tracking_missing'
    if row['english']=='tracking_missing':raise ValueError('ENGLISH_TRACKING_MISSING')
   row['status']='ok'
  except Exception as e:row['status']='error';row['reason']=str(e)[:120]
