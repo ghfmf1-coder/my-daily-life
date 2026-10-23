@@ -1,11 +1,10 @@
 {
-  "checkedAt": "2026-10-23T01:36:31.738763+00:00",
+  "checkedAt": "2026-10-23T01:39:27.531671+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
     "No private login session is stored."
   ],
-  "notificationLocale": "ko-KR",
   "roots": 47,
   "sites": [
     {
@@ -714,9 +713,5 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "aa411062139472df47a2080752e67fd89808c79b",
-  "summaryKo": {
-    "message": "\uc0ac\uc774\ud2b8\ubcc4 \uacf5\uac1c \uc778\uc99d\u00b7\uc0ac\uc774\ud2b8\ub9f5\u00b7\uc218\uc9d1 \uc694\uccad \uacb0\uacfc\uc785\ub2c8\ub2e4. \uacc4\uc815 \uc18c\uc720\ud655\uc778\uacfc \uc2e4\uc81c \uc0c9\uc778\uc740 \ubcc4\ub3c4\ub85c \ud655\uc778\ud569\ub2c8\ub2e4.",
-    "title": "\uc791\uc740\ub3c4\uad6c\ud568 \ub124\uc774\ubc84 \uc790\ub3d9 \uc810\uac80"
-  }
+  "sourceCommit": "c91280d3a50df90bfbe3bc3d1da18c11ff44c02a"
 }
