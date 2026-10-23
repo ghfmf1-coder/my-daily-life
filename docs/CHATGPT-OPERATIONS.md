@@ -156,4 +156,6 @@ Google 소유권·사이트맵·색인, 네이버 계정 소유확인·사이트
 
 ## 관제센터 통계 복구 후속 운영
 
-통계 복구의 현재 배포/차단 상태는 docs/STATISTICS-REPAIR-2026-10-23.md와 site-factory/ops/statistics-repair-result.json을 먼저 확인합니다. 원천 대조 성공과 운영 UI 반영을 구분합니다. 관제센터 Worker만 재배포하는 워크플로는 .github/workflows/toolbox-admin-worker.yml이며 기존 Worker 바인딩/비밀/경로를 보존합니다. 별도 CLOUDFLARE_WORKER_DEPLOY_TOKEN이 필요하고 Pages 토큰을 확장하거나 D1 쓰기 권한을 추가하지 않습니다. 기존 Pages 배포 토큰은 실제 Workers API 403을 반환했습니다. 계정의 Workers Scripts Edit 전용 토큰을 GitHub Actions Secret에 저장한 뒤 최신 main 실행을 재실행합니다. 비밀값을 채팅/문서에 붙이지 않습니다. 배포 후 기존 Cloudflare Access 로그인으로 /next/와 날짜별 성과 API·모바일 표시를 검증해야 완료입니다.
+통계 복구의 현재 배포/차단 상태는 docs/STATISTICS-REPAIR-2026-10-23.md와 site-factory/ops/statistics-repair-result.json을 먼저 확인합니다. 원천 대조 성공과 운영 UI 반영을 구분합니다. 관제센터 Worker만 재배포하는 워크플로는 .github/workflows/toolbox-admin-worker.yml이며 기존 Worker 바인딩/비밀/경로를 보존합니다. 별도 CLOUDFLARE_WORKER_DEPLOY_TOKEN이 필요하고 Pages 토큰을 확장하거나 D1 쓰기 권한을 추가하지 않습니다. 기존 Pages 배포 토큰은 실제 Workers API 403을 반환했습니다. 기존 tb-toolbox-admin-rebuild 하나로 범위를 제한한 Workers Editor 전용 토큰을 GitHub Actions Secret에 저장한 뒤 최신 main 실행을 재실행합니다. 비밀값을 채팅/문서에 붙이지 않습니다. 배포 후 기존 Cloudflare Access 로그인으로 /next/와 날짜별 성과 API·모바일 표시를 검증해야 완료입니다.
+
+배포는 Cloudflare 공식 Replace Worker Script Content API로 코드만 교체하고 설정/바인딩을 수정하지 않습니다. 공식 2026년 Workers 권한 안내에 따라 기존 Worker 하나에 한정한 Editor 역할이면 충분하며 D1·KV·라우트 권한을 추가하지 않습니다. 참고: https://developers.cloudflare.com/workers/authorization/workers/
