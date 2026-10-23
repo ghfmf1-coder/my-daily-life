@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-23T03:46:54+00:00",
-  "status": "pass",
+  "checkedAt": "2026-10-23T03:51:45+00:00",
+  "status": "fail",
   "summary": {
     "sites": 24,
     "sitePassed": 24,
@@ -9,8 +9,8 @@
     "siteFailed": 0,
     "browserPassed": 11,
     "browserFailed": 0,
-    "sourceTestsPassed": true,
-    "issues": 0
+    "sourceTestsPassed": false,
+    "issues": 1
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 335ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 138ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -214,7 +214,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "pH, 수온, 암모니아, 아질산염, 질산염 수치를 기록하고 주의가 필요한 항목을 확인합니다."
+          "detail": "어항의 수질 측정값을 환수 전후로 비교할 때. 실측 pH·온도·암모니아 값을 입력하고 주의 표시를 확인하세요."
         },
         {
           "check": "html_lang_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 162ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -325,7 +325,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 134ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -335,7 +335,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "중고 카메라 렌즈의 외관, 자동초점 작동, 조리개 움직임과 테스트 촬영 결과를 항목별로 기록해 거래 전 확인표를 만듭니다."
+          "detail": "중고 렌즈 거래 전 스크래치·자동초점·조리개를 확인할 때. 실제 관찰한 사항과 사진을 기록하고 판매자와 확인하세요."
         },
         {
           "check": "html_lang_ko",
@@ -365,7 +365,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 172ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -375,7 +375,7 @@
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "Record lens condition, autofocus, aperture and test-shot findings."
+          "detail": "Document scratches, haze, autofocus behavior and aperture movement before buying a used lens. Record your obse"
         },
         {
           "check": "html_lang_en",
@@ -446,7 +446,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -456,7 +456,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "사진을 브라우저에서만 처리하며 포켓몬, 원피스, 스포츠 카드의 센터링을 직접 측정하고 감정 전 결함을 기록하세요."
+          "detail": "트레이딩 카드를 전문 등급 심사에 보내기 전 상태를 기록할 때. 카드 앞뒷면의 센터링과 표면·모서리 상태를 확인하세요."
         },
         {
           "check": "html_lang_ko",
@@ -486,7 +486,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 176ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -567,7 +567,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -577,7 +577,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "중고 코믹북과 만화책의 책등, 표지, 페이지 손상, 낙장 여부를 점검하고 거래 전 상태 확인 보고서를 생성합니다."
+          "detail": "중고 만화책의 표지·책등·페이지 상태를 기록할 때. 낙장과 손상을 직접 확인해 상태 보고서를 작성하세요."
         },
         {
           "check": "html_lang_ko",
@@ -607,7 +607,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 233ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -617,7 +617,7 @@
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "Record spine, cover, page damage and missing pages for comics."
+          "detail": "Keep a consistent record of spine, cover and page condition for used comics. Record observed wear or missing p"
         },
         {
           "check": "html_lang_en",
@@ -688,7 +688,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 394ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -728,17 +728,17 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 192ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
           "status": "pass",
-          "detail": "Extract CSV Columns | 작은도구함"
+          "detail": "Extract CSV Columns | Small Toolbox"
         },
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "Choose columns from a CSV file and download the result"
+          "detail": "Select only the necessary columns from a large exported CSV file. Paste or upload CSV data, choose fields and "
         },
         {
           "check": "html_lang_en",
@@ -809,7 +809,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 182ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -849,12 +849,12 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 178ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
           "status": "pass",
-          "detail": "Remove Empty CSV Rows | 작은도구함"
+          "detail": "Remove Empty CSV Rows | Small Toolbox"
         },
         {
           "check": "meta_description_en",
@@ -930,7 +930,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 167ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 191ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -970,7 +970,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 306ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 275ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1081,7 +1081,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1152,7 +1152,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1162,7 +1162,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "원석 사진과 크기, 관찰된 손상 및 촬영 조건을 기록하는 비공식 검수 도구입니다."
+          "detail": "보석 사진의 치수·외관을 정리해 기록할 때. 실측 값과 촬영 조건 및 특징을 보고서로 남기세요."
         },
         {
           "check": "html_lang_ko",
@@ -1192,7 +1192,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1273,7 +1273,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 187ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 233ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1313,12 +1313,12 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 204ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
           "status": "pass",
-          "detail": "JSONL Error Line Checker | 작은도구함"
+          "detail": "JSONL Error Line Checker | Small Toolbox"
         },
         {
           "check": "meta_description_en",
@@ -1394,7 +1394,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 159ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1404,7 +1404,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "브라우저에서 키보드의 키 입력 반응과 반복 입력을 시각적으로 확인하고, 확인한 키의 테스트 기록을 정리하는 무료 진단 도구입니다."
+          "detail": "키가 씹히거나 반복 입력되는 현상을 확인할 때. 키보드 테스트 영역을 선택하고 실제 키 입력을 확인하세요."
         },
         {
           "check": "html_lang_ko",
@@ -1434,7 +1434,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 179ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1444,7 +1444,7 @@
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "Visualize keyboard events and log repeated presses locally in your browser."
+          "detail": "Inspect browser key events when a keyboard key repeats or fails. Focus the test area and press keys while obse"
         },
         {
           "check": "html_lang_en",
@@ -1515,7 +1515,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 177ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 262ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1525,7 +1525,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "웹소설 원고를 붙여넣으면 반복 단어·긴 문장·대사 비율·문단 길이를 분석하고 문제 위치를 표시하는 무료 퇴고 도구."
+          "detail": "소설 원고의 반복 표현과 긴 문장을 점검할 때. 원고를 입력하고 반복·장문 결과를 원본에 반영하세요."
         },
         {
           "check": "html_lang_ko",
@@ -1555,7 +1555,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 228ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1656,7 +1656,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 250ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1666,7 +1666,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "웹소설 회차별 사건과 복선의 심기·회수, 인물 등장 회차를 한 화면에서 관리하고 JSON으로 백업하는 무료 연재 설계 도구."
+          "detail": "웹소설 회차와 복선·등장인물 관계를 정리할 때. 회차 개요와 복선 정보를 입력하고 백업 파일을 내려받으세요."
         },
         {
           "check": "html_lang_ko",
@@ -1696,7 +1696,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 272ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1797,7 +1797,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 179ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1807,7 +1807,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "한정판 스니커즈의 외관, 밑창, 주름, 오염을 기록하고 중고 거래용 상태 보고서를 만듭니다."
+          "detail": "중고 운동화의 밑창 마모·주름·오염을 기록할 때. 실제 외관 상태를 확인해 사진과 함께 보고서를 작성하세요."
         },
         {
           "check": "html_lang_ko",
@@ -1837,7 +1837,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 182ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1847,7 +1847,7 @@
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "Record sneaker outsole wear, creases, stains and condition for resale documentation."
+          "detail": "Record visible outsole wear, creases and stains before a sneaker resale. Write observation notes and attach lo"
         },
         {
           "check": "html_lang_en",
@@ -1918,7 +1918,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 201ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1958,17 +1958,17 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 181ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
           "status": "pass",
-          "detail": "SRT SDH Cleaner | 작은도구함"
+          "detail": "SRT SDH Cleaner | Small Toolbox"
         },
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "Remove sound cues and speaker labels from SRT subtitles"
+          "detail": "Clean hearing-impaired sound cues and speaker labels from SRT captions. Load SRT, inspect the cleaned output a"
         },
         {
           "check": "html_lang_en",
@@ -2039,7 +2039,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 185ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 245ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2049,7 +2049,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "STL 파일의 삼각형 수, 바운딩박스, 메쉬 폐합 여부를 점검하고 출력 준비 보고서를 생성합니다."
+          "detail": "3D 프린팅 전에 STL 삼각형 수와 크기를 확인할 때. STL 파일을 선택해 기초 지오메트리 결과를 검토하세요."
         },
         {
           "check": "html_lang_ko",
@@ -2079,7 +2079,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 209ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2160,7 +2160,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 157ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2200,7 +2200,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 208ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2327,7 +2327,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 253ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 173ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2337,7 +2337,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "CSV 파일 병합과 중복 제거, 웹소설 회차·복선 관리, 원고 반복 표현 검사, 하루 루틴 관리까지. 설치 없이 바로 사용하는 무료 웹 도구 모음."
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
         },
         {
           "check": "html_lang_ko",
@@ -2367,7 +2367,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 107ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 239ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2488,7 +2488,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 222ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2498,7 +2498,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "차량 외관, 정비 기록, 도막 두께 측정값을 정리하고 구매 전 확인 질문을 생성합니다."
+          "detail": "중고차 현장 점검에서 도장 두께와 외관을 기록할 때. 부위별 실측값과 확인이 필요한 사항을 메모하세요."
         },
         {
           "check": "html_lang_ko",
@@ -2528,7 +2528,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 180ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2609,7 +2609,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 236ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2619,7 +2619,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "LP 레코드의 표면 흠집과 재생 상태를 구분해 기록하고, 중고 거래 또는 개인 소장품 관리에 사용할 상태 확인 보고서를 만듭니다."
+          "detail": "LP 레코드의 표면 손상과 실제 재생 상태를 기록할 때. 스크래치와 청음 결과를 구분해 보고서에 작성하세요."
         },
         {
           "check": "html_lang_ko",
@@ -2649,7 +2649,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 168ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2659,7 +2659,7 @@
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "Document vinyl surface and playback condition separately for collection and resale."
+          "detail": "Describe vinyl surface condition separately from playback observations. Record visible scratches and listening"
         },
         {
           "check": "html_lang_en",
@@ -2730,7 +2730,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 178ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 146ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2740,7 +2740,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "VTT 자막의 시간 표시와 화자 태그를 제거해 읽기 편한 텍스트로 정리하세요. 브라우저에서 처리한 결과를 복사하거나 파일로 내려받을 수 있습니다."
+          "detail": "VTT 자막에서 시간표시·화자 태그를 정리할 때. WebVTT 파일을 입력하고 정리한 텍스트를 확인하세요."
         },
         {
           "check": "html_lang_ko",
@@ -2770,17 +2770,17 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 49ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
           "status": "pass",
-          "detail": "VTT Timestamp Remover | 작은도구함"
+          "detail": "VTT Timestamp Remover | Small Toolbox"
         },
         {
           "check": "meta_description_en",
           "status": "pass",
-          "detail": "Remove timestamps and speaker tags from VTT subtitles"
+          "detail": "Remove timestamps or speaker markers when converting VTT captions to plain text. Paste or load a WebVTT file a"
         },
         {
           "check": "html_lang_en",
@@ -2851,7 +2851,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 191ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2861,7 +2861,7 @@
         {
           "check": "meta_description_ko",
           "status": "pass",
-          "detail": "시계 케이스, 유리, 다이얼, 크라운, 버클과 작동 상태를 기록하는 중고 시계 검수 도구"
+          "detail": "중고 시계의 케이스·유리·다이얼·버클 상태를 기록할 때. 실제 외관과 작동을 확인하고 점검 사항을 입력하세요."
         },
         {
           "check": "html_lang_ko",
@@ -2891,7 +2891,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 116ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 118ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2970,7 +2970,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 369
+      "elapsedMs": 446
     },
     {
       "name": "English plot planner",
@@ -2978,7 +2978,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 307
+      "elapsedMs": 360
     },
     {
       "name": "Korean manuscript",
@@ -2986,7 +2986,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 263
+      "elapsedMs": 411
     },
     {
       "name": "English manuscript",
@@ -2994,7 +2994,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 310
+      "elapsedMs": 361
     },
     {
       "name": "Korean CSV merger",
@@ -3002,7 +3002,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 353
+      "elapsedMs": 384
     },
     {
       "name": "English CSV merger",
@@ -3010,7 +3010,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 292
+      "elapsedMs": 426
     },
     {
       "name": "Haru English landing",
@@ -3018,7 +3018,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 206
+      "elapsedMs": 374
     },
     {
       "name": "Haru English app",
@@ -3026,7 +3026,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 247
+      "elapsedMs": 295
     },
     {
       "name": "Admin authentication gate",
@@ -3034,7 +3034,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 227
+      "elapsedMs": 283
     },
     {
       "name": "Toolbox hub search",
@@ -3042,7 +3042,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 359
+      "elapsedMs": 279
     },
     {
       "name": "Technical deployment smoke",
@@ -3050,10 +3050,15 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 304
+      "elapsedMs": 315
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "scope": "source",
+      "details": "Repository unit/regression checks failed."
+    }
+  ],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
