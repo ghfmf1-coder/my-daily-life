@@ -185,3 +185,14 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 - 네이버 재검증 completed/success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39886419519 . 결과 checkedAt=2026-10-23T01:52:41.554934+00:00, 47개 live·HTTP 200 수신 기록, 기술 오류 없음. 계정 확인/제출 9개·미완료 38개는 제외 범위로 보존. 기존 HTTP 수신 기록 재사용과 새 요청을 구분함.
 - GitHub OIDC 원본 보안 테스트를 다시 실행해 정상 서명 허용, 잘못된 issuer/audience/repo/owner/ref/workflow/event/time/algorithm·변조·키 누락 거부 및 setup/audit 교차 신원 거부 통과.
 - 한계: D1 전체 과거 기록 체크섬 대조·새 임시 사이트 추가 실험은 하지 않음. Google/네이버 실제 전체 색인 완료 보장 없음. Cloudflare 토큰 만료 시각은 verify 응답에서 not_provided이므로 만료일을 확정하지 않음. 일반 Plus 자체의 도구 권한은 그 채팅에서 확인해야 함.
+
+## 검색 콘텐츠 전량 개선·배포 — 2026-10-23
+
+- 사용자 요청에 따라 구글 공식 Search Central의 Search Essentials·people-first·spam·다국어 URL 기준을 `docs/SEO-PUBLISHING-PRINCIPLES.md`에 고정하고 AGENTS.md에 필수 검수 규칙을 연결함.
+- 신규 독립 도구 30개 `work-sites/*/public/index.html`에서 반복된 시험판·무관한 파일 설명을 도구별 실제 사용 방법·지원 한계로 교체하고 meta description을 고유 작업 목적에 맞춰 변경. CSV 저장 함수 누락이 있던 초기 독립 도구를 보완하고 결과 영역 접근성 정보를 추가함. 코드 커밋 1f0f5a449dafbab2932852985a48a855ca3fb791, 816ea0b981aebc83ac4b0a4e4f72b4f1912c2a31, 880890c5dac8052b8222690fb0c6cbec3b0d2515.
+- 신규 배포/정적 구문 검사 **completed/success**: 20개 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39897242922 , 9개 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39897242966 , 배송 대조 1개 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39897194819 . CI 성공이 모든 사용자 입력·출력 정답 보장은 아님.
+- 기존 한·영 공개 가이드 21개는 `site-factory/scripts/seo_guides.py`의 공통 렌더러에서 본문 `<main>` 안에 설명을 넣도록 변경. 유효하지 않은 회귀 테스트의 HTML 이스케이프 비교·배송 UI form 가정도 수정. 코드 커밋 64c652dfec532757239625feb250ad9ebee35757.
+- 기존 승인 사이트 재검사·개별 Pages 배포 **completed/success**: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39897545260 . 작업 24개(검사 1·배포 23)는 모두 성공. 내부 관리용 프로젝트도 행렬에 포함됨. 21개 사용자 공개 가이드와 23개 배포 작업 수를 동일 개념으로 오인하지 않음.
+- 신규 문서 규범: docs/SEO-PUBLISHING-PRINCIPLES.md, 기록 커밋 1ecc7506fbc0769e43f20000765db243f058b28b.
+- 최종 Google 색인·상단 노출은 별도 검증 대상. 마지막 확인된 URL 검사 PASS 36·NEUTRAL 15 및 47개 속성/사이트맵 상태는 기존 감사 지표로 보존; 콘텐츠 변경과 배포 자체로 PASS 증가나 트래픽 증가를 주장하지 않음. 당일의 독립 Search Console GSC Wizard 앱은 구독 만료로 사용 불가이지만 기존 GitHub/Google 공식 읽기 감사 자동화는 별도로 운영 중.
+- 새 유료 서비스 사용 없음. D1 원장·OAuth·관제센터 URL·기존 통계 데이터는 변경하지 않음. 
