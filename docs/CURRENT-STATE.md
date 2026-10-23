@@ -2,7 +2,7 @@
 
 **최신 사용자 결정: 네이버 사이트별 수동 소유확인·보안문자 및 계정 사이트맵 수동 제출은 운영 범위에서 제외. 하단 최신 결정이 과거 대기 목록보다 우선합니다.**
 
-최신 자동화 검증: 2026-10-23 01:22 UTC (10:22 KST). Google 색인·처리 건수 표는 00:57 감사 시점이며, 이후 인증·동기화 재검증과 네이버 결과는 하단 실행 증거를 따릅니다. 일반 ChatGPT Plus는 이 문서와 [CHATGPT-OPERATIONS.md](CHATGPT-OPERATIONS.md), [AGENTS.md](../AGENTS.md)를 먼저 읽고 최신 실행으로 갱신합니다. 과거 대화가 자동 공유된다고 가정하지 않습니다.
+최신 재검증: 2026-10-23, 실행 39886417033 및 39886419519 모두 completed/success. Google 색인·처리 건수 표는 00:57 감사 시점이며, 이후 인증·동기화 재검증과 네이버 결과는 하단 실행 증거를 따릅니다. 일반 ChatGPT Plus는 이 문서와 [CHATGPT-OPERATIONS.md](CHATGPT-OPERATIONS.md), [AGENTS.md](../AGENTS.md)를 먼저 읽고 최신 실행으로 갱신합니다. 과거 대화가 자동 공유된다고 가정하지 않습니다.
 
 ## 실제 운영 검증
 
@@ -21,7 +21,7 @@
 | 사이트맵 처리 | 최종 조회에서 고유 47개, pending 41개·오류 0·경고 0. 제출과 처리 완료를 구분 |
 | Google URL 검사 | 원장 URL 51개 중 PASS 36·NEUTRAL 15. 해당 URL의 색인 버전이며 전체 사이트 색인 보장 아님 |
 | 검색 성과 | 조회 기간 2026-09-26~2026-10-20. API 반환 행: novel.abreda.com/en/, 2026-10-17, 노출 1·클릭 0. 다른 사이트의 자료 없음은 0 확정 아님 |
-| 네이버 | 계정 목록 47개·7개 소유확인/사이트맵 제출 확인. 나머지 40개는 인증 태그 배포 완료·소유확인 보안문자 및 계정 사이트맵 제출 대기. 47개 모두 공식 IndexNow HTTP 200 수신 확인 |
+| 네이버 | 공개 47개 정상·IndexNow HTTP 200 수신 기록. 소유확인/계정 사이트맵 제출 9개, 미완료 38개는 사용자 결정으로 수동 처리 범위에서 제외 |
 | 보존 | 감사는 D1 읽기만 수행. 기존 원장·통계·성과·OAuth 삭제/초기화 없음. 전체 과거 기록 전후 체크섬 검사는 미실시 |
 
 ## 실제 실행 증거
@@ -43,7 +43,7 @@ Google setup은 현재 활성입니다. search-setup-request.json은 paused:fals
 
 ## 남은 확인
 
-1. 네이버 계정 항목 47개 추가 확인. 소유확인·사이트맵 제출 7개 완료. 나머지 40개는 보안문자 검증 대기. 47개 사이트의 로그인 없는 공식 IndexNow 수집 요청은 성공. 아래 최신 절의 자동 결과와 계정 수동 검증 시점을 구분하며 쿠키·비밀번호를 저장하지 않음.
+1. 네이버 수동 소유확인·계정 사이트맵 제출은 사용자 결정으로 제외. 과거 대기 목록을 필수 미완료 작업으로 재개하지 않음. 자동 공개 수집 알림은 유지.
 2. Google pending 사이트맵과 NEUTRAL URL은 후속 읽기 감사에서 확인. 색인을 강제로 완료 처리하지 않음.
 3. 새 임시 사이트 생성 실험은 미실시. 기존 30개 실제 배포와 D1 일치 및 성공 production 프로젝트 동적 대조·배포 후 감사 경로를 확인했음.
 
@@ -177,3 +177,11 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 소유확인은 검색 노출의 필수 조건이 아닙니다. 검색과 무관하다는 뜻은 아니며, 등록/소유확인은 관리 보고서와 수집 관리에 쓰입니다. IndexNow 수신도 실제 색인·노출을 보장하지 않습니다. 공식 근거: 네이버 서치어드바이저 「사이트 등록 및 소유확인」 https://searchadvisor.naver.com/guide/faq-start-register (문서 발표 연도 미표기, 2026-10-23 확인).
 
 최신 실제 추가 검증: tb-audio-quality.pages.dev 및 tb-camera-lens-check.pages.dev 소유확인과 sitemap.xml 제출을 확인해 커밋 96227359ff5b89417c2081217f07c052a05d137c에 저장했습니다. 이전 절의 대기/실패 기록은 당시 이력이며 최신 사이트별 상태는 naver-public-sites.json을 따릅니다. 다음 tb-card-grading-lab.pages.dev 보안문자 단계에서 수동 등록 작업을 중단했습니다.
+
+## 최종 재점검 — 2026-10-23
+
+- 감사의 누락된 실패 판정을 수정: service ID 중복, Google 속성 접근 누락, Google 사이트맵 query_failed이면 실행 실패. 이전 성공 로그도 다시 확인했으며 당시 실제 누락/중복은 없었음.
+- 수정 후 운영 감사 completed/success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39886417033 . 실제 D1 51개, 누락 없음, canonical/service ID 중복 0, 동기화 지연/오류 없음. Google 51 URL accessible, 사이트맵 조회 모두 ok, URL 검사 PASS 36·NEUTRAL 15.
+- 네이버 재검증 completed/success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/39886419519 . 결과 checkedAt=2026-10-23T01:52:41.554934+00:00, 47개 live·HTTP 200 수신 기록, 기술 오류 없음. 계정 확인/제출 9개·미완료 38개는 제외 범위로 보존. 기존 HTTP 수신 기록 재사용과 새 요청을 구분함.
+- GitHub OIDC 원본 보안 테스트를 다시 실행해 정상 서명 허용, 잘못된 issuer/audience/repo/owner/ref/workflow/event/time/algorithm·변조·키 누락 거부 및 setup/audit 교차 신원 거부 통과.
+- 한계: D1 전체 과거 기록 체크섬 대조·새 임시 사이트 추가 실험은 하지 않음. Google/네이버 실제 전체 색인 완료 보장 없음. Cloudflare 토큰 만료 시각은 verify 응답에서 not_provided이므로 만료일을 확정하지 않음. 일반 Plus 자체의 도구 권한은 그 채팅에서 확인해야 함.
