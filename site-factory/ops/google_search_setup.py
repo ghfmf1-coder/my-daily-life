@@ -5,6 +5,8 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 ROOT=Path.cwd()
+sys.path.insert(0,str(ROOT/'site-factory/scripts'))
+from factory import prepare
 BRIDGE='https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-google-ads-oauth/reporting-github-setup'
 def http(url,token,body=None,timeout=30):
     req=urllib.request.Request(url,data=None if body is None else json.dumps(body).encode(),headers={'Authorization':'Bearer '+token,'Content-Type':'application/json','User-Agent':'Toolbox-Google-Setup'},method='GET' if body is None else 'POST')
@@ -83,6 +85,11 @@ def deploy(item):
                 origin=ROOT/name
                 if not origin.is_file() or origin.is_symlink():continue
                 target=stage/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(origin,target)
+            folder=stage
+        elif folder.parent.parent==ROOT/'site-factory/sites':
+            # Match the normal deployment build so ownership redeploys preserve generated SEO files.
+            stage=Path(tempfile.mkdtemp(prefix='toolbox-approved-'))
+            prepare(folder.parent.name,stage)
             folder=stage
         env={**os.environ,'CLOUDFLARE_API_TOKEN':os.environ['CLOUDFLARE_PAGES_DEPLOY_TOKEN']}
         result=subprocess.run(['npx','--no-install','wrangler','pages','deploy',str(folder),'--project-name',project,'--branch','main','--commit-hash',git('rev-parse','HEAD'),'--commit-dirty=true'],env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=300)
