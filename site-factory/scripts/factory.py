@@ -286,6 +286,41 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             if '<!-- AUTO_CATALOG_CARDS -->' not in source:
                 raise SiteError('toolbox-hub: missing catalog placeholder in '+relative)
             path.write_text(source.replace('<!-- AUTO_CATALOG_CARDS -->',cards(language)),encoding='utf-8')
+    # NEW_WORK_DIRECTORY: replace generic directory cards with each actual tool's
+    # distinct input and capability description. One useful navigation page,
+    # never a large collection of keyword/doorway pages.
+    if slug == 'toolbox-hub':
+        directory = out / 'new-tools' / 'index.html'
+        if directory.is_file():
+            source = directory.read_text(encoding='utf-8')
+            seen = set()
+            def render_real_work_card(match):
+                original = match.group(0)
+                m = re.search(r'href="https://tb-([a-z0-9-]+)\\.pages\\.dev/"', original)
+                if not m:
+                    return original
+                site = m.group(1)
+                site_source = ROOT.parent / 'work-sites' / site / 'public' / 'index.html'
+                if not site_source.is_file():
+                    raise SiteError('Directory link has no source: ' + site)
+                html = site_source.read_text(encoding='utf-8')
+                heading = re.search(r'<title>([^<]+)</title>', html, flags=re.I)
+                description = re.search(r'<meta name="description" content="([^"]+)"', html, flags=re.I)
+                if not heading or not description:
+                    raise SiteError('Directory metadata missing: ' + site)
+                import html as html_lib
+                title = html_lib.unescape(heading.group(1)).split(' | ')[0].strip()
+                desc = html_lib.unescape(description.group(1)).strip()
+                if not title or len(desc)<35 or ' - 브라우저' in desc:
+                    raise SiteError('Directory description is generic: ' + site)
+                seen.add(site)
+                return ('<article><h2>' + escape(title) + '</h2><p>' +
+                        escape(desc) + '</p><a href="https://tb-' + site +
+                        '.pages.dev/" rel="noopener noreferrer">도구 사용하기 ↗</a></article>')
+            improved = re.sub(r'<article>.*?</article>', render_real_work_card, source, flags=re.S)
+            if len(seen) != 30:
+                raise SiteError('Expected exactly thirty distinct source-backed cards, got ' + str(len(seen)))
+            directory.write_text(improved, encoding='utf-8')
     # UNIFIED_DOMAIN_PHASE_1: serve proven bilingual browser-only utilities on
     # abreda.com/tools/<slug>/ and abreda.com/en/tools/<slug>/.
     # Legacy Pages domains remain live until redirects are separately verified.
