@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-04T19:15:15.405063+00:00",
+  "checkedAt": "2026-11-04T19:43:44.437709+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
@@ -713,5 +713,5 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "63cdc67552af94cf0540a59f03696b6786d97928"
+  "sourceCommit": "b3999104337cf1a5dd2997cf62e6530a91ba96fa"
 }
