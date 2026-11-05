@@ -9,9 +9,10 @@ node --check en/app/translate.js
 # Regenerate deployment-specific search metadata without dropping localized pages.
 python3 prepare_seo.py "https://my-daily-life.pages.dev"
 
-mkdir -p dist/app dist/en/app
+mkdir -p dist/app dist/en/app dist/quest
 cp toolbox-traffic.js index.html landing.css styles.css app.js config.js icon.svg favicon.ico manifest.webmanifest privacy.html terms.html sitemap.xml robots.txt dist/
 cp app/index.html dist/app/index.html
+cp quest/* dist/quest/
 cp en/index.html dist/en/index.html
 cp en/app/index.html en/app/translate.js dist/en/app/
 cp 009bd80b09e04b4e82564b5ae044a4e7.txt dist/
