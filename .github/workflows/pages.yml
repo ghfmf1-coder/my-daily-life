@@ -60,6 +60,12 @@ jobs:
           done
           echo "ready=${ready}" >> "$GITHUB_OUTPUT"
           echo "Public site ready: ${ready}"
+          # Verify the personal Quest app was included in the published artifact.
+          quest_page="$(curl -fsSL --max-time 20 "${base}/quest/")"
+          grep -Fq 'id="cloud-panel"' <<< "${quest_page}"
+          quest_js="$(curl -fsSL --max-time 20 "${base}/quest/app.js")"
+          grep -Fq 'function connectCloud' <<< "${quest_js}"
+          echo "Quest route and cloud sync client published."
       - name: Notify IndexNow search engines
         if: steps.website.outputs.ready == 'true'
         shell: bash
