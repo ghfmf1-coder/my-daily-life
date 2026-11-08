@@ -176,7 +176,7 @@ jobs:
           sitemap_failures=[s['url'] for s in data.get('sites',[]) if (s.get('sitemaps') or {}).get('status')=='query_failed']
           if sitemap_failures:raise SystemExit('GOOGLE_SITEMAP_QUERY_FAILED')
           print('GOOGLE_READONLY_AUDIT_COMPLETED')
-          legacy=read_json(urllib.request.Request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-admin-legacy-read?date='+__import__('datetime').datetime.now(__import__('datetime').timezone(__import__('datetime').timedelta(hours=9))).date().isoformat(),headers={'Authorization':'Bearer '+identity_token}),timeout=60)
+          legacy=read_json(urllib.request.Request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-admin-legacy-read?date='+__import__('datetime').datetime.now(__import__('datetime').timezone(__import__('datetime').timedelta(hours=9))).date().isoformat()+'&days=30',headers={'Authorization':'Bearer '+identity_token}),timeout=60)
           with open('/tmp/toolbox-visit-source.json','w') as f:json.dump(legacy,f)
           print('GOOGLE_ADSENSE_SOURCE_STATUS:', (data.get('adsense') or {}).get('status','unverified'))
           print('VISIT_SOURCE_READ_VERIFIED:', isinstance(legacy.get('publicTraffic'),list) and isinstance(legacy.get('classifiedTraffic'),list))

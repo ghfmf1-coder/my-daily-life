@@ -2,7 +2,7 @@
 (()=>{'use strict';
  const siteId=document.currentScript?.dataset.toolboxSite||'';
  if(!/^tb-[a-z0-9-]+$/.test(siteId)||window.top!==window.self||!globalThis.crypto?.randomUUID||
- navigator.webdriver||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true)return;
+ navigator.webdriver||new URLSearchParams(location.search).has('tb_test')||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true)return;
  let key,visit=false;
  try{
    const date=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());

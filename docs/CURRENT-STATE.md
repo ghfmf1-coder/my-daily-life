@@ -225,3 +225,15 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 - 기존 Google 로그인에서 작은도구함 웹 스트림 https://abreda.com (16295579102), 실제 측정 ID G-YHSK49NC2E를 확인. 계정/스트림을 새로 만들지 않음.
 - 대표 허브 설정에 측정 ID 적용. Google 태그는 명시적 방문 통계 허용 후에만 로드. 거부/미선택/알려진 자동화/QA 요청은 Google 수집 없음. 쿼리·해시·입력값을 보내지 않으며 광고 신호를 비활성화.
 - 개인정보 안내 한국어/영어에 선택적 GA4·쿠키·국외 처리·동의 변경을 반영. 실제 수신은 배포 후 별도 검증.
+
+### SEO·관제센터 후속 수정 — 2026-11-08
+
+- 앞선 SEO·언어 전환 수정 커밋 8de27bad5657afaa8bfb0ffebadb38fdee62952a의 기존 Pages 배포 작업들은 success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42442051330 .
+- 대표 GA4 동의 로더 준비 커밋 2d8d3ba54fefb005a1ca05c9e97c503f75aaa447. 이후 속성의 향상된 측정 변경이 자동 승인 검토에서 거부됨. 속성 전체 수집 설정 변경에 대한 별도 승인이 필요하다는 사유. 계정 설정은 변경하지 않음.
+- ga4_collection_enabled=false로 실제 Google 수집을 비활성화. 실제 측정 ID와 동의·정보 제한 코드만 보존하며, 수집 승인·수신 검증 전에 전체 사이트로 활성 확장하지 않음. 코드 준비·태그 설치·실제 수신은 별개 상태.
+- 기존 다섯 abreda.com 내부 도구와 pages.dev/ko/ 별칭은 한국어/영어 각각의 abreda.com 대표 canonical로 통일. 기존 주소·기능은 유지하고 legacy robots는 대표 사이트맵을 안내. 중복 한국어 별칭은 사이트맵에서 대표 URL로 중복 제거.
+- 기존 네 곳의 공개 비콘 태그가 등록되지 않은 public collector ID로 추가돼 CSV 감사가 실패한 것을 확인. 원래 등록된 legacy collector·역사적 ID는 유지하고 잘못 추가된 public 태그만 빌드에서 제외. 내부 도구 페이지에는 해당 도구의 public 수집기만 사용해 허브 이중 집계 방지.
+- 관제센터 소스에 기준일/7일/30일 분류 세션·페이지뷰·봇/자동화 제외 수·마지막 기록 시각 추가. likely_human은 사람 추정이며 고유 방문자로 표시하지 않음. 실제 기록 없는 일자·종류는 null. 새 공개 원천을 같은 날짜의 기존 분류보다 우선, 중복 snapshot은 최신만 반영. 과거 전체/수동 기록은 별도 보존.
+- 도구 완료 및 GA4 비교 값은 실제 원천 행이 없으므로 수집 전/수신 대기로 표시. 서버에 Windsor 비밀키나 Google 토큰을 복제하지 않음. 원천 숫자를 만들어 넣지 않음.
+- 기존 Supabase toolbox-admin-legacy-read v3 ACTIVE 배포. date+days=1/7/30 읽기만 확장하고 기존 Access/OIDC 인증 유지, DB DDL/DML 없음.
+- 관제센터 Worker 배포는 기존 전용 Secret의 실제 유무를 Actions에서 확인. 없다면 그 단계만 중단하며 Pages 토큰 권한을 확장하지 않음.

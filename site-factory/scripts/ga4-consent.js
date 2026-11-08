@@ -4,7 +4,7 @@
  if(!/^G-[A-Z0-9]{6,20}$/.test(id||'')||window.__toolboxAnalytics)return;
  window.__toolboxAnalytics=true;
  // QA and known automation never load Google's collection script.
- if(navigator.webdriver||new URLSearchParams(location.search).has('tb_test'))return;
+ if(navigator.webdriver||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true||new URLSearchParams(location.search).has('tb_test'))return;
  const key='toolbox-ga4-consent-v1';let loaded=false,choice=null;
  try{choice=localStorage.getItem(key)}catch{}
  const english=document.documentElement.lang==='en';
@@ -13,7 +13,7 @@
  let referrer='';try{referrer=new URL(document.referrer).origin}catch{}
  function start(){
   window['ga-disable-'+id]=false;
-  if(loaded)return;loaded=true;
+  if(loaded){window.gtag('consent','update',{analytics_storage:'granted'});return;}loaded=true;
   window.dataLayer=window.dataLayer||[];
   window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
   window.gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});

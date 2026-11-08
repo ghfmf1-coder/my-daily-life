@@ -10,5 +10,6 @@
     "ko",
     "en"
   ],
-  "ga4_measurement_id": "G-YHSK49NC2E"
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": false
 }

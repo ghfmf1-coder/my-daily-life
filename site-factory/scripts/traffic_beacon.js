@@ -1,7 +1,7 @@
 /* Small Toolbox privacy-minimal pageview measurement. No cookies, IP or fingerprints in payload. */
 (()=>{'use strict';
  const node=document.currentScript,siteId=node?.dataset.toolboxSite;
- if(!siteId||window.top!==window.self||!globalThis.crypto?.randomUUID||navigator.webdriver||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true)return;
+ if(!siteId||window.top!==window.self||!globalThis.crypto?.randomUUID||navigator.webdriver||new URLSearchParams(location.search).has('tb_test')||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true)return;
  let key,wasVisit=false;
  try{
    const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());

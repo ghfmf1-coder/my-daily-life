@@ -26,7 +26,7 @@ class AnalyticsBuildTests(unittest.TestCase):
         def configured(slug, require_approval=False):
             data, directory = read(slug, require_approval)
             if slug == 'toolbox-hub':
-                data = dict(data, ga4_measurement_id='G-TESTONLY01')
+                data = dict(data, ga4_measurement_id='G-TESTONLY01', ga4_collection_enabled=True)
             return data, directory
         with tempfile.TemporaryDirectory() as tmp, patch.object(factory, 'read_site', configured):
             out = Path(tmp) / 'build'
@@ -41,7 +41,7 @@ class AnalyticsBuildTests(unittest.TestCase):
         read = factory.read_site
         def configured(slug, require_approval=False):
             data, directory = read(slug, require_approval)
-            return dict(data, ga4_measurement_id='G-TESTONLY01'), directory
+            return dict(data, ga4_measurement_id='G-TESTONLY01', ga4_collection_enabled=True), directory
         with tempfile.TemporaryDirectory() as tmp, patch.object(factory, 'read_site', configured):
             out = Path(tmp) / 'build'
             factory.prepare('toolbox-admin', out)

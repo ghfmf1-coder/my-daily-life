@@ -27,7 +27,11 @@ export async function handler(req,env,fetcher=fetch){
   async function read(path){const r=await fetcher(base+'/rest/v1/'+path,{headers:{apikey:key,Authorization:'Bearer '+key},signal:AbortSignal.timeout(10000)});if(!r.ok)throw Error('Read failed');return r.json();}
   const date=new URL(req.url).searchParams.get('date');
   if(date&&(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Number.isFinite(Date.parse(date))||new Date(date).toISOString().slice(0,10)!==date))return json({error:'invalid_date'},400);
-  const filter=date?'&visit_day=eq.'+date:'';
+  const days=new URL(req.url).searchParams.get('days')||'1';
+  if(!['1','7','30'].includes(days))return json({error:'invalid_days'},400);
+  if(days!=='1'&&!date)return json({error:'date_required'},400);
+  const from=date?new Date(Date.parse(date)-(Number(days)-1)*86400000).toISOString().slice(0,10):null;
+  const filter=date?'&visit_day=gte.'+from+'&visit_day=lte.'+date:'';
   async function pages(path){let rows=[];for(let offset=0;offset<100000;offset+=500){const batch=await read(path+'&limit=500&offset='+offset);if(!Array.isArray(batch))throw Error('Invalid source');rows.push(...batch);if(batch.length<500)return rows;}throw Error('Incomplete source');}
   const [ws,traffic,publicSites,publicTraffic,events]=await Promise.all([
    read('toolbox_admin_workspaces?select=payload,version,updated_at&user_id=eq.'+OWNER),
@@ -42,7 +46,7 @@ export async function handler(req,env,fetcher=fetch){
   const workspace=ws[0];
   const sites=(workspace?.payload?.sites||[]).map(s=>({id:s.id,url:s.url,name:s.name}));
   const metrics=(workspace?.payload?.metrics||[]).map(m=>({id:m.id,siteId:m.siteId,date:m.date,visitors:m.visitors,pageviews:m.pageviews,impressions:m.impressions,clicks:m.clicks,revenue:m.revenue,source:m.source,botFilter:m.botFilter,updatedAt:m.updatedAt}));
-  return json({version:workspace?.version??null,updatedAt:workspace?.updated_at??null,fetchedAt:new Date().toISOString(),sites,metrics,traffic,publicSites,publicTraffic,classifiedTraffic});
+  return json({range:{start:from,end:date,days:Number(days)},version:workspace?.version??null,updatedAt:workspace?.updated_at??null,fetchedAt:new Date().toISOString(),sites,metrics,traffic,publicSites,publicTraffic,classifiedTraffic});
  }catch{return json({error:'Legacy data unavailable; original data unchanged'},503);}
 }
 if(typeof Deno!=='undefined')Deno.serve(req=>handler(req,Deno.env));

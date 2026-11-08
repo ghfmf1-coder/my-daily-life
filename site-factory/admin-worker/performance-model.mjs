@@ -50,3 +50,25 @@ export function buildPerformance(entries,gsc,ads,sync,date){
  return {...s,visitors:{value:null,status:'unverified'},search:{clicks:m?.clicks??null,impressions:m?.impressions??null,status:m?(['error','stale'].includes(g?.status)?'stale_error':'confirmed'):g?.status==='error'?'error':g?.status==='stale'?'stale':date>end?'pending':g?.connected===true&&!covered?'property_unavailable':fallback(g,'no_final_row'),source:'Google Search Console',fetchedAt:m?.fetchedAt||g?.checkedAt||null,connectionStatus:g?.status||'unverified',finalThrough:end},earnings:{value:v?.earnings??null,currency:'KRW',status:v?(['error','stale'].includes(a?.status)?'stale_error':'estimated_from_source'):fallback(a,'no_report_row'),source:'AdSense API',fetchedAt:v?.fetchedAt||a?.checkedAt||null,connectionStatus:a?.status||'unverified'}};
  })};
 }
+
+// Windows sum only observed category rows; missing days and categories stay unknown.
+export function integrateVisitWindows(report,legacy){
+ const roots=new Map((legacy.sites||[]).map(s=>[s.id,visitUrl(s.url)]));
+ const modern=new Map((legacy.publicSites||[]).map(s=>[s.site_id,visitUrl(s.url)]));
+ const owner=(r,pub)=>{const raw=(pub?modern:roots).get(r.site_id);return report.entries.some(e=>e.url===raw)?raw:metricOwner(raw,report.entries)};
+ const publicDays=new Set((legacy.publicTraffic||[]).map(r=>owner(r,true)+'|'+r.visit_day));
+ const rows=[...(legacy.classifiedTraffic||[]).filter(r=>!publicDays.has(owner(r,false)+'|'+r.visit_day)).map(r=>({...r,url:owner(r,false)})),...(legacy.publicTraffic||[]).map(r=>({...r,url:owner(r,true)}))];
+ const unique=new Map();for(const r of rows){if(!r.url||!['likely_human','bot','automated','unknown'].includes(r.category)||!Number.isSafeInteger(r.visits)||r.visits<0||!Number.isSafeInteger(r.pageviews)||r.pageviews<0)continue;const key=[r.url,r.visit_day,r.category].join('|');if(!unique.has(key)||String(unique.get(key).updated_at)<String(r.updated_at))unique.set(key,r)}
+ for(const e of report.entries){
+  e.visitWindows={source:'Supabase classified daily',status:legacy.available?'no_report_row':'error',range:legacy.range||null,ga4:{status:'no_report_row',source:'Windsor.ai GA4',sessions:null,pageviews:null,toolCompletions:null,checkedAt:null}};
+  for(const days of [1,7,30]){const start=new Date(Date.parse(report.date)-(days-1)*86400000).toISOString().slice(0,10);const found=[...unique.values()].filter(r=>r.url===e.url&&r.visit_day>=start&&r.visit_day<=report.date);
+   const human=found.filter(r=>r.category==='likely_human'),excluded=found.filter(r=>r.category==='bot'||r.category==='automated');
+   const sum=(items,key)=>items.length?items.reduce((n,r)=>n+r[key],0):null;
+   e.visitWindows['d'+days]={start,end:report.date,sessions:sum(human,'visits'),pageviews:sum(human,'pageviews'),excludedSessions:sum(excluded,'visits'),excludedPageviews:sum(excluded,'pageviews'),observedDays:new Set(found.map(r=>r.visit_day)).size,lastCollectedAt:found.map(r=>r.updated_at).filter(Boolean).sort().at(-1)||null,toolCompletions:null};
+  }
+  const latest=e.visitWindows.d30.lastCollectedAt;
+  if(latest)e.visitWindows.status=Date.now()-Date.parse(latest)>86400000?'stale':'observed';
+ }
+ report.visitWindowPolicy='Observed likely_human sessions only; not verified people or unique users. Missing days/categories remain unknown. Bot/automated counts are excluded and separate. GA4 and Supabase are not summed.';
+ return report;
+}

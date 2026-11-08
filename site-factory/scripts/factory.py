@@ -435,7 +435,10 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     disallow_all = robots_source.is_file() and bool(re.search(
         r'(?im)^\s*Disallow:\s*/\s*$', robots_source.read_text(encoding='utf-8')))
     localized = data.get('locales') == ['ko', 'en']
-    alternatives = {'ko': canonical + '/', 'en': canonical + '/en/'} if localized else {}
+    migrated_tools = {'csv-column-extractor','csv-empty-row-remover','jsonl-validator','srt-sdh-cleaner','vtt-cleaner'}
+    ko_canonical = ('https://abreda.com/tools/' + slug + '/') if slug in migrated_tools else canonical + '/'
+    en_canonical = ('https://abreda.com/en/tools/' + slug + '/') if slug in migrated_tools else canonical + '/en/'
+    alternatives = {'ko': ko_canonical, 'en': en_canonical} if localized else {}
     indexed_pages = []
     for p in html_pages:
         content = p.read_text(encoding='utf-8')
@@ -452,10 +455,14 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 '<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">\n</head>', 1)
         page_url = canonical + ('/' if rel == 'index.html' else
                                 '/en/' if rel == 'en/index.html' else '/' + rel)
+        if localized and rel in ('index.html', 'en/index.html', 'ko/index.html'):
+            page_url = en_canonical if rel == 'en/index.html' else ko_canonical
+            content = re.sub(r'<link\s+rel=[\"\']canonical[\"\'][^>]*>', '', content, flags=re.I)
+            content = re.sub(r'<link\s+rel=[\"\']alternate[\"\'][^>]*hreflang=[^>]*>', '', content, flags=re.I)
         if 'rel="canonical"' not in content and "rel='canonical'" not in content:
             content = content.replace('</head>',
                 '<link rel="canonical" href="' + escape(page_url, quote=True) + '">\n</head>', 1)
-        if localized and rel in ('index.html', 'en/index.html') and 'hreflang=' not in content:
+        if localized and rel in ('index.html', 'en/index.html', 'ko/index.html') and 'hreflang=' not in content:
             tags = ''.join('<link rel="alternate" hreflang="' + lang + '" href="' +
                            escape(url, quote=True) + '">' for lang, url in alternatives.items())
             tags += '<link rel="alternate" hreflang="x-default" href="' + \
@@ -494,7 +501,12 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             content = content.replace('</body>',
                 '<script defer src="https://abreda.com/toolbox-public-traffic.js" data-toolbox-site="tb-' +
                 public_tracking_slug + '"></script></body>', 1)
-        if slug in tracking_ids and '</body>' in content:
+        legacy_page = slug in tracking_ids and not (slug == 'toolbox-hub' and re.fullmatch(r'(?:en/)?tools/[^/]+/index[.]html', rel))
+        if legacy_page:
+            # Original sites are registered only with the legacy collector. Remove
+            # the later unregistered public tag, keeping their historical IDs.
+            content = re.sub(r'<script\b[^>]*src=["\']https://abreda[.]com/toolbox-public-traffic[.]js["\'][^>]*>\s*</script>', '', content, flags=re.I)
+        if legacy_page and '</body>' in content and ('data-toolbox-site="' + tracking_ids[slug] + '"') not in content:
             content = content.replace('</body>',
                 '<script defer src="/toolbox-traffic.js" data-toolbox-site="' +
                 tracking_ids[slug] + '"></script></body>', 1)
@@ -503,7 +515,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                          if 'name="robots"' in tag.lower() or "name='robots'" in tag.lower())
         public_page = not disallow_all and not is_noindex and not any(x in {'admin', 'private'} for x in p.relative_to(out).parts)
         measurement_id = data.get('ga4_measurement_id')
-        if measurement_id and public_page and '</head>' in content:
+        if measurement_id and data.get('ga4_collection_enabled', False) and public_page and '</head>' in content:
             # Property IDs (numeric) are not measurement IDs. Never invent a tag.
             if 'googletagmanager.com/gtag/js' in content or re.search(r'gtag\s*\(', content):
                 raise SiteError(f'{slug}: existing Google tag must be reconciled before GA4 installation: {rel}')
@@ -524,11 +536,18 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         (out / 'favicon.ico').write_bytes(render_ico(data['title'], slug))
     if not (out / 'sitemap.xml').exists():
         xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        xml += ''.join('  <url><loc>' + escape(url) + '</loc></url>\n' for url in indexed_pages)
+        xml += ''.join('  <url><loc>' + escape(url) + '</loc></url>\n' for url in dict.fromkeys(indexed_pages))
         (out / 'sitemap.xml').write_text(xml + '</urlset>\n', encoding='utf-8')
     if not (out / 'robots.txt').exists():
         (out / 'robots.txt').write_text(
             'User-agent: *\nAllow: /\nSitemap: ' + canonical + '/sitemap.xml\n',encoding='utf-8')
+    if slug in migrated_tools:
+        robots = out / 'robots.txt'
+        text = robots.read_text(encoding='utf-8')
+        text = re.sub(r'(?im)^Sitemap:.*$', 'Sitemap: https://abreda.com/sitemap.xml', text)
+        if 'Sitemap:' not in text:
+            text += '\nSitemap: https://abreda.com/sitemap.xml\n'
+        robots.write_text(text, encoding='utf-8')
     # AUTO_ADMIN_CATALOG: build a current, non-sensitive catalog for the manager.
     # New approved public sites appear automatically after the manager redeploys.
     if slug == 'toolbox-admin':

@@ -33,3 +33,17 @@ class UnifiedRoutesTests(unittest.TestCase):
             for slug in migrated:
                 self.assertIn(f'https://abreda.com/tools/{slug}/',ko)
                 self.assertIn(f'https://abreda.com/en/tools/{slug}/',en)
+
+    def test_legacy_aliases_share_hub_canonical(self):
+        import xml.etree.ElementTree as ET
+        for slug in ('csv-column-extractor','csv-empty-row-remover','jsonl-validator','srt-sdh-cleaner','vtt-cleaner'):
+            with tempfile.TemporaryDirectory() as tmp:
+                out=Path(tmp)/'build'
+                factory.prepare(slug,out)
+                for rel,prefix in [('index.html','tools'),('ko/index.html','tools'),('en/index.html','en/tools')]:
+                    text=(out/rel).read_text()
+                    self.assertIn(f'<link rel="canonical" href="https://abreda.com/{prefix}/{slug}/">',text)
+                    self.assertNotIn('.pages.dev/', text.split('</head>')[0])
+                urls=[x.text for x in ET.parse(out/'sitemap.xml').findall('.//{*}loc')]
+                self.assertEqual(len(urls),len(set(urls)))
+                self.assertIn('Sitemap: https://abreda.com/sitemap.xml',(out/'robots.txt').read_text())

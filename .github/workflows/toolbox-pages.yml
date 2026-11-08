@@ -43,6 +43,8 @@ jobs:
         run: node site-factory/tests/test_csv_core.js
       - name: Run subtitle timing and format regression tests
         run: node site-factory/tests/test_subtitle_core.js
+      - name: Verify optional analytics consent and QA exclusion
+        run: node site-factory/tests/test_ga4_consent.js
       - name: Find changed approved sites
         id: targets
         env:
