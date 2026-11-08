@@ -62,13 +62,14 @@ export function integrateVisitWindows(report,legacy){
  for(const e of report.entries){
   e.visitWindows={source:'Supabase classified daily',status:legacy.available?'no_report_row':'error',range:legacy.range||null,ga4:{status:'no_report_row',source:'Windsor.ai GA4',sessions:null,pageviews:null,toolCompletions:null,checkedAt:null}};
   for(const days of [1,7,30]){const start=new Date(Date.parse(report.date)-(days-1)*86400000).toISOString().slice(0,10);const found=[...unique.values()].filter(r=>r.url===e.url&&r.visit_day>=start&&r.visit_day<=report.date);
+   const unknown=found.filter(r=>r.category==='unknown');
    const human=found.filter(r=>r.category==='likely_human'),excluded=found.filter(r=>r.category==='bot'||r.category==='automated');
    const sum=(items,key)=>items.length?items.reduce((n,r)=>n+r[key],0):null;
-   e.visitWindows['d'+days]={start,end:report.date,sessions:sum(human,'visits'),pageviews:sum(human,'pageviews'),excludedSessions:sum(excluded,'visits'),excludedPageviews:sum(excluded,'pageviews'),observedDays:new Set(found.map(r=>r.visit_day)).size,lastCollectedAt:found.map(r=>r.updated_at).filter(Boolean).sort().at(-1)||null,toolCompletions:null};
+   e.visitWindows['d'+days]={start,end:report.date,sessions:sum(human,'visits'),pageviews:sum(human,'pageviews'),unknownSessions:sum(unknown,'visits'),unknownPageviews:sum(unknown,'pageviews'),humanVerification:'unverified',excludedSessions:sum(excluded,'visits'),excludedPageviews:sum(excluded,'pageviews'),observedDays:new Set(found.map(r=>r.visit_day)).size,lastCollectedAt:found.map(r=>r.updated_at).filter(Boolean).sort().at(-1)||null,toolCompletions:null};
   }
   const latest=e.visitWindows.d30.lastCollectedAt;
   if(latest)e.visitWindows.status=Date.now()-Date.parse(latest)>86400000?'stale':'observed';
  }
- report.visitWindowPolicy='Observed likely_human sessions only; not verified people or unique users. Missing days/categories remain unknown. Bot/automated counts are excluded and separate. GA4 and Supabase are not summed.';
+ report.visitWindowPolicy='Historical likely_human and current unknown are unverified observations, displayed separately; neither proves people or unique users. Missing days/categories remain unknown. Bot/automated counts are excluded and separate. GA4 and Supabase are not summed.';
  return report;
 }

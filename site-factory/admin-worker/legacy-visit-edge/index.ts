@@ -28,9 +28,8 @@ Deno.serve(async (req:Request) => {
   const ua=(req.headers.get('user-agent')||'').slice(0,300);
   const knownBot=/bot|spider|crawler/i.test(ua);
   const automation=/headless|lighthouse|curl|wget|python|httpclient|postman|monitor|uptime|preview|selenium|playwright|puppeteer/i.test(ua);
-  const browserUA=/Mozilla\/5\.0.*(Chrome|Firefox|Safari|Edg|OPR)/i.test(ua);
-  const fetchMode=req.headers.get('sec-fetch-mode')||'';
-  const category=knownBot?'bot':automation?'automated':browserUA && fetchMode==='cors'?'likely_human':'unknown';
+  // Headers and client isVisit flags do not prove a human or a unique session.
+  const category=knownBot?'bot':automation?'automated':'unknown';
   if(Number(req.headers.get('content-length')||0)>1200) return reply(413,{error:'too_large'});
   let body:Record<string,unknown>;
   try { body=JSON.parse((await req.text()).slice(0,1201)); } catch {return reply(400,{error:'invalid_json'});}

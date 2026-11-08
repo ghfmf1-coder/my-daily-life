@@ -29,8 +29,8 @@ Deno.serve(async(req)=>{
  const agent=(req.headers.get('user-agent')||'').slice(0,300);
  const knownBot=/bot|spider|crawler/i.test(agent);
  const automation=/headless|lighthouse|curl|wget|python|postman|monitor|playwright|puppeteer|selenium/i.test(agent);
- const browserUA=agent.includes('Mozilla/5.0')&&/(Chrome|Firefox|Safari|Edg|OPR)/i.test(agent);
- const category=knownBot?'bot':automation?'automated':browserUA&&req.headers.get('sec-fetch-mode')==='cors'?'likely_human':'unknown';
+ // Headers and client isVisit flags do not prove a human or a unique session.
+  const category=knownBot?'bot':automation?'automated':'unknown';
  if(input.dryRun===true)return reply(202,{accepted:false,diagnostic:true,category},headers);
  const base=Deno.env.get('SUPABASE_URL'),key=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
  if(!base||!key)return reply(503,{error:'storage_not_configured'},headers);
@@ -44,6 +44,8 @@ Deno.serve(async(req)=>{
   }
   const res=await fetch(base+'/rest/v1/rpc/record_toolbox_public_visit',{method:'POST',headers:{apikey:key,Authorization:'Bearer '+key,'Content-Type':'application/json'},body:JSON.stringify({p_event_id:eventId,p_site_id:siteId,p_category:category,p_is_visit:isVisit})});
   if(!res.ok){console.error('Traffic database response:',res.status);return reply(503,{error:'storage_error'},headers)}
-  return reply(202,{accepted:true},headers)
+  const inserted=await res.json();
+  if(typeof inserted!=='boolean')return reply(503,{error:'invalid_storage_response'},headers);
+  return reply(202,{accepted:inserted,duplicate:!inserted},headers)
  }catch(e){console.error('Collector unavailable');return reply(503,{error:'storage_unavailable'},headers)}
 });

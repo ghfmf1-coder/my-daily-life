@@ -25,3 +25,13 @@ assert.equal(windows.entries[2].visitWindows.ga4.sessions,null);
 assert.equal(windows.entries[2].visitWindows.d1.toolCompletions,null);
 assert.equal(integrateVisitWindows({date:'2026-10-20',entries:[entries[0]]},{available:false}).entries[0].visitWindows.status,'error');
 console.log('PASS: observed 1/7/30-day windows, newest snapshot deduplication, public precedence, bot exclusion, missing categories and GA4 remain null');
+
+// Keep historical source categories intact and expose current unknown separately.
+const unknownSource=structuredClone(windowSource);
+unknownSource.publicTraffic.push({site_id:'new',visit_day:'2026-10-20',category:'unknown',visits:6,pageviews:8,updated_at:checked});
+const frozen=JSON.stringify(unknownSource);
+const unverified=integrateVisitWindows({date:'2026-10-20',entries:entries.map(e=>({...e}))},unknownSource).entries[2].visitWindows;
+assert.equal(unverified.d1.sessions,2);assert.equal(unverified.d1.unknownSessions,6);
+assert.equal(unverified.d1.unknownPageviews,8);assert.equal(unverified.d1.humanVerification,'unverified');
+assert.equal(unverified.d1.excludedSessions,8);assert.equal(JSON.stringify(unknownSource),frozen);
+console.log('PASS: unknown kept separate, no human verification claimed, historical rows unchanged');
