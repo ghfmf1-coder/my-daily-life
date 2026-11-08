@@ -12,7 +12,9 @@ assert.equal(x.ctx.dataLayer.filter(v=>v[0]==='event'&&v[1]==='page_view').lengt
 x.elements[0].children.find(b=>b.textContent==='거부').onclick();assert.equal(x.ctx['ga-disable-G-TESTONLY01'],true);
 x.elements[0].children.find(b=>b.textContent==='허용').onclick();assert.equal(x.scripts.length,1);assert.equal(x.ctx.dataLayer.filter(v=>v[1]==='page_view').length,1);
 const normal=setup({choice:'granted',search:'?utm_source=x&token=SECRET&q=PRIVATE',hash:'#PRIVATE'});assert.equal(normal.scripts.length,1);assert(!JSON.stringify(normal.ctx.dataLayer).includes('SECRET'));assert(!JSON.stringify(normal.ctx.dataLayer).includes('PRIVATE'));assert.equal(normal.ctx.dataLayer.filter(v=>v[0]==='event'&&v[1]==='page_view').length,1);normal.listeners['toolbox:complete']();assert.equal(normal.ctx.dataLayer.filter(v=>v[1]==='tool_complete').length,1);assert.equal(normal.listeners['toolbox:complete:capture'],true);assert.equal(setup({choice:'denied'}).scripts.length,0);assert.equal(setup({choice:'granted',webdriver:true}).scripts.length,0);assert.equal(setup({choice:'granted',search:'?tb_test=1'}).scripts.length,0);assert.equal(setup({choice:'granted',dnt:'1'}).scripts.length,0);
-const debug=setup({choice:'granted',webdriver:true,search:'?tb_debug=1'});assert.equal(debug.scripts.length,1);assert(debug.ctx.dataLayer.some(v=>v[0]==='set'&&v[1]==='debug_mode'&&v[2]===true));
+const debug=setup({choice:'granted',webdriver:true,search:'?tb_debug=1'});assert.equal(debug.scripts.length,1);assert(debug.ctx.dataLayer.some(v=>v[0]==='set'&&v[1]?.debug_mode===true));
 console.log('PASS: consent before collection, no query/referrer secrets, one pageview, opt-out/reactivation, QA/automation/DNT excluded');
 
 const blocked=setup({choice:'denied'});blocked.listeners['toolbox:complete']();assert.equal(blocked.ctx.dataLayer,undefined);
+
+assert.equal(debug.ctx.dataLayer[0][0],'set');assert.equal(debug.ctx.dataLayer[0][1].send_page_view,false);assert.equal(debug.ctx.dataLayer[0][1].search_term,'[redacted]');
