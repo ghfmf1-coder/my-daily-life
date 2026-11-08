@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-08T04:18:53+00:00",
-  "status": "fail",
+  "checkedAt": "2026-11-08T05:32:20+00:00",
+  "status": "pass",
   "summary": {
     "sites": 24,
-    "sitePassed": 19,
+    "sitePassed": 24,
     "siteWarnings": 0,
-    "siteFailed": 5,
+    "siteFailed": 0,
     "browserPassed": 11,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 35
+    "issues": 0
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -335,7 +335,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -375,7 +375,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -466,7 +466,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -506,7 +506,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -637,7 +637,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 49ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -723,12 +723,12 @@
       "name": "csv column extractor | Small Toolbox",
       "url": "https://tb-pages-csv-column-extractor.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 161ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -752,23 +752,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/csv-column-extractor/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/csv-column-extractor/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/csv-column-extractor/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 141ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 138ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -792,17 +792,17 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/csv-column-extractor/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/csv-column-extractor/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/csv-column-extractor/"
         },
         {
@@ -832,7 +832,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         },
         {
@@ -847,27 +847,19 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_ko: https://abreda.com/tools/csv-column-extractor/",
-        "hreflang_ko_ko: https://abreda.com/tools/csv-column-extractor/",
-        "hreflang_ko_en: https://abreda.com/en/tools/csv-column-extractor/",
-        "canonical_en: https://abreda.com/en/tools/csv-column-extractor/",
-        "hreflang_en_ko: https://abreda.com/tools/csv-column-extractor/",
-        "hreflang_en_en: https://abreda.com/en/tools/csv-column-extractor/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "csv-empty-row-remover",
       "name": "csv empty row remover | Small Toolbox",
       "url": "https://tb-pages-csv-empty-row-remover.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -891,23 +883,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/csv-empty-row-remover/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/csv-empty-row-remover/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/csv-empty-row-remover/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 153ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -931,17 +923,17 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/csv-empty-row-remover/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/csv-empty-row-remover/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/csv-empty-row-remover/"
         },
         {
@@ -971,7 +963,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         },
         {
@@ -986,15 +978,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_ko: https://abreda.com/tools/csv-empty-row-remover/",
-        "hreflang_ko_ko: https://abreda.com/tools/csv-empty-row-remover/",
-        "hreflang_ko_en: https://abreda.com/en/tools/csv-empty-row-remover/",
-        "canonical_en: https://abreda.com/en/tools/csv-empty-row-remover/",
-        "hreflang_en_ko: https://abreda.com/tools/csv-empty-row-remover/",
-        "hreflang_en_en: https://abreda.com/en/tools/csv-empty-row-remover/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "csv-merge-studio",
@@ -1006,7 +990,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1046,7 +1030,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 170ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1167,7 +1151,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1238,7 +1222,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1278,7 +1262,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1364,12 +1348,12 @@
       "name": "jsonl validator | Small Toolbox",
       "url": "https://tb-pages-jsonl-validator.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 244ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1393,23 +1377,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/jsonl-validator/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/jsonl-validator/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/jsonl-validator/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 174ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1433,17 +1417,17 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/jsonl-validator/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/jsonl-validator/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/jsonl-validator/"
         },
         {
@@ -1473,7 +1457,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         },
         {
@@ -1488,15 +1472,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_ko: https://abreda.com/tools/jsonl-validator/",
-        "hreflang_ko_ko: https://abreda.com/tools/jsonl-validator/",
-        "hreflang_ko_en: https://abreda.com/en/tools/jsonl-validator/",
-        "canonical_en: https://abreda.com/en/tools/jsonl-validator/",
-        "hreflang_en_ko: https://abreda.com/tools/jsonl-validator/",
-        "hreflang_en_en: https://abreda.com/en/tools/jsonl-validator/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "keyboard-switch-diagnostics",
@@ -1508,7 +1484,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1548,7 +1524,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 46ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1639,7 +1615,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1679,7 +1655,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1790,7 +1766,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 162ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1830,7 +1806,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 164ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1941,7 +1917,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1981,7 +1957,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2067,12 +2043,12 @@
       "name": "srt sdh cleaner | Small Toolbox",
       "url": "https://tb-pages-srt-sdh-cleaner.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 330ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2096,23 +2072,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/srt-sdh-cleaner/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/srt-sdh-cleaner/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/srt-sdh-cleaner/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 140ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2136,17 +2112,17 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/srt-sdh-cleaner/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/srt-sdh-cleaner/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/srt-sdh-cleaner/"
         },
         {
@@ -2176,7 +2152,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         },
         {
@@ -2191,15 +2167,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_ko: https://abreda.com/tools/srt-sdh-cleaner/",
-        "hreflang_ko_ko: https://abreda.com/tools/srt-sdh-cleaner/",
-        "hreflang_ko_en: https://abreda.com/en/tools/srt-sdh-cleaner/",
-        "canonical_en: https://abreda.com/en/tools/srt-sdh-cleaner/",
-        "hreflang_en_ko: https://abreda.com/tools/srt-sdh-cleaner/",
-        "hreflang_en_en: https://abreda.com/en/tools/srt-sdh-cleaner/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "stl-print-check",
@@ -2211,7 +2179,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 184ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2251,7 +2219,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2342,7 +2310,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2382,7 +2350,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 163ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 212ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2509,7 +2477,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 208ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2549,7 +2517,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2680,7 +2648,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 186ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2720,7 +2688,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 246ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2811,7 +2779,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 177ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2851,7 +2819,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 139ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2937,12 +2905,12 @@
       "name": "vtt cleaner | Small Toolbox",
       "url": "https://tb-pages-vtt-cleaner.pages.dev/",
       "type": "public",
-      "status": "fail",
+      "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2966,23 +2934,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/vtt-cleaner/"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/vtt-cleaner/"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/vtt-cleaner/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 50ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3006,17 +2974,17 @@
         },
         {
           "check": "canonical_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/vtt-cleaner/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/tools/vtt-cleaner/"
         },
         {
           "check": "hreflang_en_en",
-          "status": "fail",
+          "status": "pass",
           "detail": "https://abreda.com/en/tools/vtt-cleaner/"
         },
         {
@@ -3046,7 +3014,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "fail",
+          "status": "pass",
           "detail": "entries: 2"
         },
         {
@@ -3061,15 +3029,7 @@
         }
       ],
       "warnings": [],
-      "failures": [
-        "canonical_ko: https://abreda.com/tools/vtt-cleaner/",
-        "hreflang_ko_ko: https://abreda.com/tools/vtt-cleaner/",
-        "hreflang_ko_en: https://abreda.com/en/tools/vtt-cleaner/",
-        "canonical_en: https://abreda.com/en/tools/vtt-cleaner/",
-        "hreflang_en_ko: https://abreda.com/tools/vtt-cleaner/",
-        "hreflang_en_en: https://abreda.com/en/tools/vtt-cleaner/",
-        "sitemap_content: entries: 2"
-      ]
+      "failures": []
     },
     {
       "slug": "watch-inspection-lab",
@@ -3081,7 +3041,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3121,7 +3081,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 152ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3210,7 +3170,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 336
+      "elapsedMs": 433
     },
     {
       "name": "English plot planner",
@@ -3218,7 +3178,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 274
+      "elapsedMs": 293
     },
     {
       "name": "Korean manuscript",
@@ -3226,7 +3186,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 245
+      "elapsedMs": 379
     },
     {
       "name": "English manuscript",
@@ -3234,7 +3194,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 278
+      "elapsedMs": 295
     },
     {
       "name": "Korean CSV merger",
@@ -3242,7 +3202,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 320
+      "elapsedMs": 285
     },
     {
       "name": "English CSV merger",
@@ -3250,7 +3210,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 327
+      "elapsedMs": 259
     },
     {
       "name": "Haru English landing",
@@ -3258,7 +3218,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 201
+      "elapsedMs": 177
     },
     {
       "name": "Haru English app",
@@ -3266,7 +3226,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 166
+      "elapsedMs": 171
     },
     {
       "name": "Admin authentication gate",
@@ -3274,7 +3234,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 206
+      "elapsedMs": 186
     },
     {
       "name": "Toolbox hub search",
@@ -3282,7 +3242,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 279
+      "elapsedMs": 205
     },
     {
       "name": "Technical deployment smoke",
@@ -3290,151 +3250,10 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 213
+      "elapsedMs": 224
     }
   ],
-  "issues": [
-    {
-      "scope": "csv-column-extractor",
-      "details": "canonical_ko: https://abreda.com/tools/csv-column-extractor/"
-    },
-    {
-      "scope": "csv-column-extractor",
-      "details": "hreflang_ko_ko: https://abreda.com/tools/csv-column-extractor/"
-    },
-    {
-      "scope": "csv-column-extractor",
-      "details": "hreflang_ko_en: https://abreda.com/en/tools/csv-column-extractor/"
-    },
-    {
-      "scope": "csv-column-extractor",
-      "details": "canonical_en: https://abreda.com/en/tools/csv-column-extractor/"
-    },
-    {
-      "scope": "csv-column-extractor",
-      "details": "hreflang_en_ko: https://abreda.com/tools/csv-column-extractor/"
-    },
-    {
-      "scope": "csv-column-extractor",
-      "details": "hreflang_en_en: https://abreda.com/en/tools/csv-column-extractor/"
-    },
-    {
-      "scope": "csv-column-extractor",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "canonical_ko: https://abreda.com/tools/csv-empty-row-remover/"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "hreflang_ko_ko: https://abreda.com/tools/csv-empty-row-remover/"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "hreflang_ko_en: https://abreda.com/en/tools/csv-empty-row-remover/"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "canonical_en: https://abreda.com/en/tools/csv-empty-row-remover/"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "hreflang_en_ko: https://abreda.com/tools/csv-empty-row-remover/"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "hreflang_en_en: https://abreda.com/en/tools/csv-empty-row-remover/"
-    },
-    {
-      "scope": "csv-empty-row-remover",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "canonical_ko: https://abreda.com/tools/jsonl-validator/"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "hreflang_ko_ko: https://abreda.com/tools/jsonl-validator/"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "hreflang_ko_en: https://abreda.com/en/tools/jsonl-validator/"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "canonical_en: https://abreda.com/en/tools/jsonl-validator/"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "hreflang_en_ko: https://abreda.com/tools/jsonl-validator/"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "hreflang_en_en: https://abreda.com/en/tools/jsonl-validator/"
-    },
-    {
-      "scope": "jsonl-validator",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "canonical_ko: https://abreda.com/tools/srt-sdh-cleaner/"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "hreflang_ko_ko: https://abreda.com/tools/srt-sdh-cleaner/"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "hreflang_ko_en: https://abreda.com/en/tools/srt-sdh-cleaner/"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "canonical_en: https://abreda.com/en/tools/srt-sdh-cleaner/"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "hreflang_en_ko: https://abreda.com/tools/srt-sdh-cleaner/"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "hreflang_en_en: https://abreda.com/en/tools/srt-sdh-cleaner/"
-    },
-    {
-      "scope": "srt-sdh-cleaner",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "canonical_ko: https://abreda.com/tools/vtt-cleaner/"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "hreflang_ko_ko: https://abreda.com/tools/vtt-cleaner/"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "hreflang_ko_en: https://abreda.com/en/tools/vtt-cleaner/"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "canonical_en: https://abreda.com/en/tools/vtt-cleaner/"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "hreflang_en_ko: https://abreda.com/tools/vtt-cleaner/"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "hreflang_en_en: https://abreda.com/en/tools/vtt-cleaner/"
-    },
-    {
-      "scope": "vtt-cleaner",
-      "details": "sitemap_content: entries: 2"
-    }
-  ],
+  "issues": [],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
