@@ -3,8 +3,12 @@
  const own=document.currentScript,id=own?.dataset.measurementId,title=own?.dataset.pageTitle||'Small Toolbox';
  if(!/^G-[A-Z0-9]{6,20}$/.test(id||'')||window.__toolboxAnalytics)return;
  window.__toolboxAnalytics=true;
- // QA and known automation never load Google's collection script.
- if(navigator.webdriver||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true||new URLSearchParams(location.search).has('tb_test'))return;
+ // Debug-only QA is excluded by the active GA4 developer traffic filter.
+ const debug=location.search==='?tb_debug=1'&&!location.hash;
+ // Known automation never enters ordinary collection.
+ if((navigator.webdriver&&!debug)||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true||new URLSearchParams(location.search).has('tb_test'))return;
+ // Do not load automatic measurement on URLs containing unreviewed input.
+ if((location.search||location.hash)&&!debug)return;
  const key='toolbox-ga4-consent-v1';let loaded=false,choice=null;
  try{choice=localStorage.getItem(key)}catch{}
  const english=document.documentElement.lang==='en';
@@ -17,9 +21,10 @@
   window.dataLayer=window.dataLayer||[];
   window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
   window.gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+  if(debug)window.gtag('set','debug_mode',true);
   window.gtag('js',new Date());
-  window.gtag('config',id,{send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,page_location:safeLocation,page_referrer:referrer,page_title:title});
-  window.gtag('event','page_view',{send_to:id,page_location:safeLocation,page_referrer:referrer,page_title:title});
+  window.gtag('config',id,{send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,page_location:safeLocation,page_referrer:referrer,page_title:title,...(debug?{debug_mode:true}:{})});
+  window.gtag('event','page_view',{send_to:id,page_location:safeLocation,page_referrer:referrer,page_title:title,...(debug?{debug_mode:true}:{})});
   const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+id;document.head.append(script);
  }
  function save(value){choice=value;try{localStorage.setItem(key,value)}catch{};panel.hidden=true;

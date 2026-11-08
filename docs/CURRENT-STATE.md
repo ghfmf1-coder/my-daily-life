@@ -237,3 +237,12 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 - 도구 완료 및 GA4 비교 값은 실제 원천 행이 없으므로 수집 전/수신 대기로 표시. 서버에 Windsor 비밀키나 Google 토큰을 복제하지 않음. 원천 숫자를 만들어 넣지 않음.
 - 기존 Supabase toolbox-admin-legacy-read v3 ACTIVE 배포. date+days=1/7/30 읽기만 확장하고 기존 Access/OIDC 인증 유지, DB DDL/DML 없음.
 - 관제센터 Worker 배포는 기존 전용 Secret의 실제 유무를 Actions에서 확인. 없다면 그 단계만 중단하며 Pages 토큰 권한을 확장하지 않음.
+
+### 사용자 정정 및 GA4 활성화 — 2026-11-08
+
+- 사용자가 향상된 측정을 끄지 말라고 명시. 기존 스크롤·클릭·폼 자동 측정 설정은 변경하지 않고 유지한다. 앞선 전체 비활성화 방침은 철회.
+- 기존 GA4 속성에 Toolbox developer tests 개발자 트래픽 제외 필터를 생성해 활성 상태 확인. debug_mode/debug_event가 있는 QA 이벤트만 일반 처리에서 제외하며 과거 데이터는 변경하지 않음. 기존 Internal Traffic 테스트 필터는 그대로 유지.
+- 허브 ga4_collection_enabled=true. 일반 방문은 명시적 통계 허용 후 수집하며 쿼리/해시가 있는 일반 URL에서는 자동 이벤트가 입력 정보를 읽지 않도록 로드하지 않음. tb_debug=1은 오직 debug_mode 이벤트 검증 경로이며 Supabase 비콘은 기록하지 않음.
+- 대표 내부 다섯 도구의 실제 처리 성공 분기에만 데이터 없는 toolbox:complete 이벤트 연결. 폼 제출 자체를 도구 성공으로 세지 않음.
+- SEO·수집기 수정 배포 success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42443027846 . 후속 원장/Google/방문 원천 감사 success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42443357877 .
+- 관제센터 최신 배포는 인증 테스트 통과 후 WORKER_API_HTTP_401로 실패: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42443027815 . 전용 Worker 배포 Secret이 존재하더라도 API 인증이 유효하지 않아 현 운영 UI 반영은 미완료. Pages 배포 및 Supabase 읽기에는 영향 없음.
