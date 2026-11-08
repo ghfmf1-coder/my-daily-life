@@ -67,6 +67,9 @@ def read_site(slug: str, require_approval: bool = False) -> tuple[dict, Path]:
     for key in ('title','description'):
         if not isinstance(data.get(key),str) or len(data[key].strip()) < 3:
             raise SiteError(f'{slug}: {key} 필수')
+    measurement_id = data.get('ga4_measurement_id')
+    if measurement_id is not None and (not isinstance(measurement_id, str) or not re.fullmatch(r'G-[A-Z0-9]{6,20}', measurement_id)):
+        raise SiteError(f'{slug}: ga4_measurement_id must be a real G- measurement ID')
     domain = data.get('domain')
     if domain is not None:
         if not isinstance(domain, str) or not re.fullmatch(r'(?=.{4,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}', domain):
@@ -346,6 +349,9 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                       '<link rel="alternate" hreflang="en" href="'+en_url+'">'
                       '<link rel="alternate" hreflang="x-default" href="'+ko_url+'">')
                 html=html.replace('</head>',tags+'</head>',1)
+                # Copied standalone navigation must stay on this tool in both locales.
+                html=html.replace('href="/ko/"', 'href="'+ko_url+'"')
+                html=html.replace('href="/en/"', 'href="'+en_url+'"')
                 (dest/'index.html').write_text(html,encoding='utf-8')
                 # Copy only safe, referenced local assets from the same locale.
                 origin_dir=original.parent
@@ -492,11 +498,21 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             content = content.replace('</body>',
                 '<script defer src="/toolbox-traffic.js" data-toolbox-site="' +
                 tracking_ids[slug] + '"></script></body>', 1)
-        p.write_text(content, encoding='utf-8')
         is_noindex = any('noindex' in tag.lower() for tag in
                          re.findall(r'<meta[^>]+>', content, flags=re.I)
                          if 'name="robots"' in tag.lower() or "name='robots'" in tag.lower())
-        if not disallow_all and not is_noindex and not any(x in {'admin', 'private'} for x in p.parts):
+        public_page = not disallow_all and not is_noindex and not any(x in {'admin', 'private'} for x in p.relative_to(out).parts)
+        measurement_id = data.get('ga4_measurement_id')
+        if measurement_id and public_page and '</head>' in content:
+            # Property IDs (numeric) are not measurement IDs. Never invent a tag.
+            if 'googletagmanager.com/gtag/js' in content or re.search(r'gtag\s*\(', content):
+                raise SiteError(f'{slug}: existing Google tag must be reconciled before GA4 installation: {rel}')
+            tag = ('<script async src="https://www.googletagmanager.com/gtag/js?id=' + measurement_id + '"></script>'
+                   '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}'
+                   "gtag('js',new Date());gtag('config','" + measurement_id + "',{send_page_view:true});</script>\n")
+            content = content.replace('</head>', tag + '</head>', 1)
+        p.write_text(content, encoding='utf-8')
+        if public_page:
             indexed_pages.append(page_url)
     if not (out / 'favicon.svg').is_file():
         (out / 'favicon.svg').write_text(render_icon(data['title'], slug), encoding='utf-8')

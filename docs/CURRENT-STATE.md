@@ -204,3 +204,18 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 ### 최신 통계 복구 검증 상태
 
 51개 서비스 전체 운영 HTML·비콘·기존 영어 URL·무기록 진단 통과. D1/Google/Supabase 실제 원천 대조 성공 실행 39912767608. Google 51개 속성 접근 및 사이트맵 조회 정상, AdSense no_rows. 신규 30개 실제 배포 성공. 수정 코드·테스트·사이트별 결과는 저장소 보존. 관제센터 Worker 배포는 기존 Pages 토큰 Workers API 403 및 전용 배포 Secret 부재로 차단되어 UI/모바일 최종 검증 미완료. 이 차단이 해소되기 전 전체 완료라고 보고하지 않습니다.
+
+
+## SEO·GA4 설치 경로 점검 — 2026-11-08
+
+- Cloudflare 대시보드 로그인 재시도 중단. 기존 GitHub Actions Pages 배포와 기존 Secret을 사용하며 새 플러그인·유료 서비스·인증 토큰을 만들지 않음.
+- 허브 한국어/영어 첫 제목을 실제 도구 기능으로 구체화하고 WebSite JSON-LD 및 Open Graph 제목·설명·언어·URL을 추가. 허위 평점·검색 실적·사이트 검색 URL을 만들지 않음.
+- abreda.com으로 옮긴 다섯 도구의 언어 전환 링크가 /ko/ 또는 /en/ 홈페이지로 향하던 빌드 오류 수정. 각 도구의 한국어/영어 URL로 연결하며 canonical·hreflang·sitemap은 보존.
+- factory는 site.json의 ga4_measurement_id에 실제 G- 측정 ID가 있을 때 공개 페이지에만 Google 태그를 삽입. 숫자형 속성 ID 거부, 기존 태그 중복 설치 거부, 관리자·noindex 페이지 제외. 기존 Supabase 비콘 보존.
+- Windsor.ai에서 작은도구함 속성 563183346 연결 확인. 최근 7일·30일 hostname/sessions/screen_page_views 보고서는 빈 data를 반환. 이를 방문자 0이나 설치 성공으로 해석하지 않음.
+- 원천 측정 ID는 현재 확보되지 않았으며 어느 사이트에도 테스트 측정 ID를 저장하지 않음. GA4 실제 설치·수집 검증은 미완료. 실제 ID를 확보하면 해당 사이트 설정만 변경해 기존 Actions로 설치할 수 있음.
+- Supabase에는 기존 Google OAuth 연결 테이블이 있으나 측정 ID 설정 컬럼은 확인되지 않음. 암호화 OAuth/비밀값은 읽거나 출력하지 않았고 DB 변경 없음.
+- 기존 감사 실행 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42435810149 에서 D1 원장·Google 조회는 통과, csv.abreda.com의 기존 비콘 COLLECTOR_ENDPOINT_MISMATCH로 방문 원천 감사는 실패. 원천 대조/UI 전체 정상으로 보고하지 않음.
+- 로컬 공장 회귀·GA4 제외/검증 테스트 56개 및 CSV·자막 JS 회귀 통과. 이 기록은 수정 코드 검증이며 운영 배포/수집 검증 완료와 구분함.
+- 실행 환경의 공개 abreda.com HTTP 조회는 403을 반환. 운영 검증은 Actions 실행 결과를 사용하며 로그인 차단 원인으로 단정하지 않음.
+- 관제센터 Worker 재배포는 별도 CLOUDFLARE_WORKER_DEPLOY_TOKEN 부재로 과거 차단됐음. 이 작업에서 Worker 코드·권한을 변경하지 않음.

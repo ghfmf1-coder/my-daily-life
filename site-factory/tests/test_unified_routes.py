@@ -26,6 +26,8 @@ class UnifiedRoutesTests(unittest.TestCase):
                     self.assertIn(f'https://abreda.com/tools/{slug}/',html)
                     self.assertIn(f'https://abreda.com/en/tools/{slug}/',html)
                     self.assertNotIn('AUTO_CATALOG_CARDS',html)
+                    self.assertNotIn('href="/ko/"',html)
+                    self.assertNotIn('href="/en/"',html)
             ko=(root/'index.html').read_text(encoding='utf-8')
             en=(root/'en/index.html').read_text(encoding='utf-8')
             for slug in migrated:
