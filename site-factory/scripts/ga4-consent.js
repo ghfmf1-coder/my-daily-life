@@ -18,9 +18,9 @@
   if(loaded){window.gtag('consent','update',{analytics_storage:'granted'});return;}loaded=true;
   window.dataLayer=window.dataLayer||[];
   window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
+  // Apply privacy and debug defaults before consent can start automatic collection.
+  window.gtag('set',{send_page_view:false,page_location:safeLocation,page_referrer:referrer,search_term:'[redacted]',...(debug?{debug_mode:true}:{})});
   window.gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
-  window.gtag('set',{page_location:safeLocation,page_referrer:referrer});
-  if(debug)window.gtag('set','debug_mode',true);
   window.gtag('js',new Date());
   window.gtag('config',id,{send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,page_location:safeLocation,page_referrer:referrer,page_title:title,...(debug?{debug_mode:true}:{})});
   window.gtag('event','page_view',{send_to:id,page_location:safeLocation,page_referrer:referrer,page_title:title,...(debug?{debug_mode:true}:{})});
