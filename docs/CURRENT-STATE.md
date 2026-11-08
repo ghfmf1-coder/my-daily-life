@@ -294,3 +294,51 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 - Worker https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42451104534 는 테스트 통과 후 settings_read HTTP 401, CF 10000으로 실패. user/account token verify 모두 HTTP 401 / CF 1000 / status unknown. 인증 거부는 확인됐으나 만료·폐기·IP 조건 중 어떤 원인인지 현 인증으로 구분 불가. 업로드/권한 확대/새 토큰 생성/바인딩 변경 안 함.
 - 사용자 조치: 기존 Worker 전용 토큰의 활성 상태·IP 제한을 확인하고 GitHub Secret CLOUDFLARE_WORKER_DEPLOY_TOKEN을 유효한 원문 값으로 갱신. 토큰을 채팅에 붙이지 말 것. 이후 기존 Worker 워크플로 재실행 필요.
 - Worker 미배포이므로 adminivo.com/next/의 새 오늘/7일/30일 UI 및 최신 UI와 원천 DB 일치 검증은 미완료. 소스 DB 점검 성공을 운영 화면 성공으로 대체하지 않음.
+
+
+## 남은 장애 원천 재검증 — 2026-11-08 (한국 시간)
+
+### 이번 변경과 배포
+
+- GitHub 코드: https://github.com/ghfmf1-coder/my-daily-life/commit/04b95a8120f1e595af372262467240ed872215ad .
+- public-visit-edge 및 legacy-visit-edge의 브라우저 UA/sec-fetch-mode만으로 likely_human을 부여하던 분류를 unknown으로 변경. 알려진 bot/automated는 그대로 분리. 실제 사람을 증명할 새 근거·쿠키·지문·IP 저장은 추가하지 않음. 정상 브라우저도 인간 여부가 미확인이므로 unknown 기록이 됨.
+- public-visit-edge는 기존 record_toolbox_public_visit RPC의 false(이미 존재하는 event_id)를 accepted:false/duplicate:true로 정확히 응답. DB 함수·키·테이블·과거 이벤트·집계값 변경 없음.
+- 운영 Supabase toolbox-public-visit v3, toolbox-visit-collector v8 ACTIVE 배포. 각 운영 URL에 dryRun:true를 사용한 HTTP 202 응답으로 Mozilla 브라우저 unknown, Playwright automated, Googlebot bot 확인. 모두 accepted:false/diagnostic:true. 테스트 ID 00000000-0000-4000-8000-000000000009의 public 이벤트 DB 행 0 확인.
+- 기존 관제센터 모델에 unknownSessions/unknownPageviews를 추가하고 기존 likely_human과 별도 표시. historical likely_human의 원래 분류·수치를 재작성하지 않고 '기존 브라우저 추정·미확인'으로 안내. 둘 다 실제 사람이나 순방문자라고 단정하지 않음. worker.mjs에 같은 모델/JS 반영. Worker 배포 전이므로 이 UI는 운영 미검증.
+- 관련 테스트: test-public-visit.cjs(정확한 origin/site ID, 무기록 분류, 중복 RPC 결과), test-performance.mjs(1/7/30일·중복 스냅샷·과거 보존·unknown 별도), 기존 test_visit_session.js(같은 탭/일의 첫 방문만 세션 표시·QA 제외), Worker 문법·임베드된 dashboard JS 일치·git diff --check 통과.
+- 커밋의 [skip ci]는 갱신 근거 없는 동일 Worker 401 재시도와 무관한 전체 배포를 피하기 위한 것. 정상 SEO/사이트 배포/유지보수 검사는 반복하지 않음. Edge 배포는 위 기존 Supabase 함수에 직접 적용.
+
+### 이상 방문 원천 (조회만 수행)
+
+- public.toolbox_public_visit_events: tb-camera-lens-check, visit_day=2026-11-08, likely_human 396행 / is_visit=true 396행 / 서로 다른 event_id 396개. public.toolbox_public_visit_daily의 visits=396/pageviews=396과 일치.
+- 한국 시간 15시 원천 358행, 08시 2행, 16시 36행. 15시 구간 일부 인접 요청은 같은 received_at으로 기록됐으나 동일 브라우저 또는 봇이라는 증거는 아님.
+- event_id PK + INSERT ON CONFLICT DO NOTHING으로 동일 ID 재전송 중복은 방지됨. 매 요청 새 ID/isVisit:true를 보내는 동일 브라우저·테스트를 소급 연결할 정보는 없음. UA·IP·세션 ID·referrer는 테이블에 저장되지 않음.
+- 검증된 결함은 헤더 휴리스틱으로 사람 추정을 부여하고 클라이언트 isVisit을 신뢰하는 구조. 396건의 실제 발생 주체가 사람/자동화/자체 테스트 중 무엇인지는 원천 데이터 부재로 검증 불가. 과거 이벤트를 삭제·재분류하거나 실제 방문자 수를 산출하지 않음.
+- 수집기 교체 후에도 기존 카메라 likely_human 396행과 일별 396/396 유지 확인. 관제센터 최신 1/7/30일 화면과 DB 대조는 Worker 차단으로 미완료.
+
+### Worker 인증 차단 (이전 실패 재시도 안 함)
+
+- 워크플로 .github/workflows/toolbox-admin-worker.yml은 CLOUDFLARE_ACCOUNT_ID와 CLOUDFLARE_WORKER_DEPLOY_TOKEN을 그대로 참조. 배포기 Authorization: Bearer 원문 토큰 사용·형식 검사 후 설정 읽기 단계에서 실패. Secret 원문/변경 시각을 현재 연결로 조회할 권한은 없으며, 갱신됐다는 사용자 확인도 없어 동일 실패를 재실행하지 않음.
+- 증거 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42451104534 , job 128640315477:
+  - GET /client/v4/accounts/{account_id}/workers/scripts/tb-toolbox-admin-rebuild/settings => HTTP 401, cf_codes=10000, stage=settings_read.
+  - GET /client/v4/user/tokens/verify 및 /client/v4/accounts/{account_id}/tokens/verify => 모두 HTTP 401, cf_codes=1000, status=unknown.
+- 확인: API 인증 거부. 미확인: 토큰 만료/폐기/잘못된 값/IP 조건/정책 범위 중 정확한 하위 원인. 잘못된 계정 범위·권한 부족으로 단정할 근거 없음. 토큰 검증 자체가 실패하여 자동 복구/성공 배포 불가.
+- 필요한 배포 권한: 대상 계정의 Account > Workers Scripts > Edit (API 이름 Workers Scripts Write). 현재 코드만 교체하는 PUT .../content용. Pages 토큰/D1/DNS/Routes 권한을 확대하지 않음.
+- 사용자 경로:
+  1. https://dash.cloudflare.com/profile/api-tokens → 기존 Worker 전용 토큰 → Edit/상세 → 활성 여부·시작/종료일·Client IP Address Filtering·Account Resources의 대상 계정·Workers Scripts Edit 확인. 계정 소유 토큰이면 계정 선택 → Manage Account → Account API Tokens에서 확인. 에이전트의 Cloudflare 브라우저 로그인은 재시도하지 않음.
+  2. https://github.com/ghfmf1-coder/my-daily-life/settings/secrets/actions → Repository secrets → CLOUDFLARE_WORKER_DEPLOY_TOKEN 연필 → 유효한 기존 전용 토큰 원문만 입력 → Update secret. CLOUDFLARE_ACCOUNT_ID가 해당 계정인지 확인. 비밀값은 채팅/로그에 쓰지 않음.
+  3. https://github.com/ghfmf1-coder/my-daily-life/actions/workflows/toolbox-admin-worker.yml → Run workflow → main → Run workflow.
+- 재개 조건: 유효한 토큰/대상 계정의 검증과 settings 읽기 성공. 이후 Worker 업로드·bindings 보존·adminivo.com/next/ 운영 오늘/7일/30일 화면 및 원천 DB 대조 필요.
+
+### GA4 보고서 실제 조회
+
+- Windsor 계정 563183346 연결 정상. 2026-11-01~11-08 조회 status=done, 2026-11-08 abreda.com의 page_view event_count=3, tool_complete=3 반환. 기존 HTTP 204 코드 전송 검증에 더해 이제 보고서 행을 실제로 확인.
+- 11-08 세부 조회: /tools/jsonl-validator/ tool_complete=3/page_view=2, / page_view=1. session_source_medium=(direct)/(none), test_data_filter_name=(not set). 커넥터 data_fetched_at=2026-11-08T10:34:48 UTC. 이 값을 실제 사람/전환율로 해석하지 않음.
+- 현재 커넥터 결과는 비어 있지 않음. 과거 빈 응답이 수집 전/처리 지연/커넥터 동기화 중 어느 원인이었는지 당시 원천 처리 로그가 없어 판별 불가. 기존 테스트와 정상 이용을 구분할 debug 원천 항목이 이번 커넥터 행에 없어 과거 이벤트의 완전한 테스트 분리는 원천 데이터 부재로 검증 불가.
+- 기존 동의·GA4 코드·개발자 제외 설정은 변경하지 않음. 테스트를 운영 보고서에 넣기 위한 정상 방문 생성도 하지 않음. Supabase와 GA4는 절대 합산하지 않음. GA4 보고서 수신은 확인, 과거 트래픽의 실제 이용자 구분은 부분 완료.
+
+### 기존 자동 운영
+
+- 최신 읽기 감사 42460023887, Google setup 42460001537, 네이버 공개 알림 42460023811 모두 completed/success 확인. 이전 네이버 실패는 후속 성공과 구분.
+- site-factory/ops/naver-search-result.json checkedAt=2026-11-08T07:45:07.572392+00:00, 현재 항목의 IndexNow는 이전 접수(previous_receipt)를 보존하며 indexing=unknown. 접수 이력/워크플로 성공을 실제 검색 색인으로 바꾸지 않음.
+- 기존 SEO/유지보수 성공 42452607807과 사이트 배포 42452345037 유지. 이번에 불필요한 재실행 없음.
