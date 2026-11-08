@@ -507,9 +507,12 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             # Property IDs (numeric) are not measurement IDs. Never invent a tag.
             if 'googletagmanager.com/gtag/js' in content or re.search(r'gtag\s*\(', content):
                 raise SiteError(f'{slug}: existing Google tag must be reconciled before GA4 installation: {rel}')
-            tag = ('<script async src="https://www.googletagmanager.com/gtag/js?id=' + measurement_id + '"></script>'
-                   '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}'
-                   "gtag('js',new Date());gtag('config','" + measurement_id + "',{send_page_view:true});</script>\n")
+            shutil.copy2(Path(__file__).with_name('ga4-consent.js'), out / 'toolbox-ga4.js')
+            title_match = re.search(r'<title>(.*?)</title>', content, flags=re.I | re.S)
+            import html as html_lib
+            page_title = html_lib.unescape(title_match.group(1)) if title_match else data['title']
+            tag = ('<script defer src="/toolbox-ga4.js" data-measurement-id="' + measurement_id +
+                   '" data-page-title="' + escape(page_title, quote=True) + '"></script>\n')
             content = content.replace('</head>', tag + '</head>', 1)
         p.write_text(content, encoding='utf-8')
         if public_page:

@@ -10,11 +10,16 @@ import factory
 
 class AnalyticsBuildTests(unittest.TestCase):
     def test_no_measurement_id_means_no_tag(self):
-        with tempfile.TemporaryDirectory() as tmp:
+        read = factory.read_site
+        def unconfigured(slug, require_approval=False):
+            data, directory = read(slug, require_approval)
+            data = dict(data); data.pop('ga4_measurement_id', None)
+            return data, directory
+        with tempfile.TemporaryDirectory() as tmp, patch.object(factory, 'read_site', unconfigured):
             out = Path(tmp) / 'build'
             factory.prepare('toolbox-hub', out)
             for page in out.rglob('*.html'):
-                self.assertNotIn('googletagmanager.com/gtag/js', page.read_text())
+                self.assertNotIn('src="/toolbox-ga4.js"', page.read_text())
 
     def test_verified_config_tags_each_public_page_once(self):
         read = factory.read_site
@@ -28,8 +33,8 @@ class AnalyticsBuildTests(unittest.TestCase):
             factory.prepare('toolbox-hub', out)
             for page in out.rglob('*.html'):
                 text = page.read_text()
-                self.assertEqual(1, text.count('googletagmanager.com/gtag/js?id=G-TESTONLY01'), str(page))
-                self.assertEqual(1, text.count("gtag('config'"), str(page))
+                self.assertEqual(1, text.count('data-measurement-id="G-TESTONLY01"'), str(page))
+                self.assertEqual(1, text.count('src="/toolbox-ga4.js"'), str(page))
                 self.assertIn('toolbox-public-traffic.js', text) if '/tools/' in page.as_posix() else None
 
     def test_private_admin_does_not_receive_tag(self):
