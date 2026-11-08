@@ -281,3 +281,16 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 - 작업 브라우저의 정적 분석 스크립트 직접 열기는 ERR_BLOCKED_BY_CLIENT여서 그 브라우저 결과만으로 전송 성공을 판정하지 않음.
 - 기존 유지보수 Chromium 검사에 디버그 전용 실제 수집 응답 검사를 추가. 한 도구의 성공 처리만 실행하고 Google collect의 이벤트명·정제 URL·debug 여부·응답 코드만 검사. client ID·쿠키·전체 요청·입력값은 출력하지 않음. 기존 Supabase 비콘은 QA/자동화 제외 유지.
 - 이 검사는 일정 실행에서는 생략하고 이번 변경/배포/수동 실행에서만 수행. 실패하면 기존 유지보수 최종 판정도 실패하며 오류를 덮지 않음.
+
+
+### 최종 운영 검증 결과 — 2026-11-08 05:56 UTC
+
+- 코드: 270de3137bcde78939f06f93e8fb1b9b3c293b9a(별칭/대표 URL 모니터·GA4 정상 쿼리·Worker 안전 진단), ab935d68f21e3359f57decbab4e32fea16c7567e(실제 수집 검사), bb18ee16ac44b986652b05467be339660537984b(자동 초기화 이전 전역 기본값), 3a54a0cc0ec78ff7348e8cee827702987899a699(미사용 검색 매개변수 정규화). 회귀 보완 e02b155e26dd2a5e4cb2ef74e3a140ef30e20356 / e3e73955c76b9447d87e24a325c2999ef9f64fab.
+- 최종 기존 공장 배포 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42452345037 의 checks와 모든 deploy 작업 success 확인. GitHub Pages 42452344983 성공. Pages 관리자 배포 성공은 별도 Worker 배포 성공을 의미하지 않음.
+- 최종 유지보수 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42452607807 success. 실제 HTTPS/SEO 24 passed, 0 warnings, 0 failed. 데스크톱/모바일/실수집 검사 12 passed, 0 failed.
+- 운영 JSONL 도구의 동의 후 정상 기능 성공을 실행. Google collect 응답에서 page_view와 tool_complete 각 하나, 각 HTTP 204, debug=true, sensitiveLeak=false. page_location은 https://abreda.com/tools/jsonl-validator/ 이고 쿼리/해시/참조자 쿼리 없음. 중복 태그/페이지뷰 검사 통과. DebugView 보고서 표시는 별도이며 수집 서버 204만으로 보고서 처리 완료를 단정하지 않음.
+- 초기 실수집 재현에서 향상된 측정의 자동 page_view 중복 및 view_search_results의 합성 QA_SEARCH/debug 누락 발견. 전역 send_page_view=false를 consent보다 먼저 설정하여 중복 해결. 현재 정적 도구에서 사용하지 않는 q/s/search/query/keyword만 동의 후 SDK 로드 전에 history.replaceState로 제거. 경로·앵커·다른 매개변수·기존 history.state 유지. 스크롤/클릭/폼 포함 GA4 향상된 측정 설정은 끄지 않음.
+- 이전 재현 시각 05:41:55 / 05:44:58 / 05:49:08 UTC의 일부 자동 이벤트는 debug=false였음. 합성 QA 검색어만 사용했으며 운영 통계에서 전부 제외됐다고 보장하지 않음. 과거 원천은 삭제하지 않음. 최종 05:56:10 UTC 검사는 두 이벤트 모두 debug=true이며 기존 활성 개발자 제외 필터 대상. GA4와 Supabase는 합산하지 않음.
+- Worker https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42451104534 는 테스트 통과 후 settings_read HTTP 401, CF 10000으로 실패. user/account token verify 모두 HTTP 401 / CF 1000 / status unknown. 인증 거부는 확인됐으나 만료·폐기·IP 조건 중 어떤 원인인지 현 인증으로 구분 불가. 업로드/권한 확대/새 토큰 생성/바인딩 변경 안 함.
+- 사용자 조치: 기존 Worker 전용 토큰의 활성 상태·IP 제한을 확인하고 GitHub Secret CLOUDFLARE_WORKER_DEPLOY_TOKEN을 유효한 원문 값으로 갱신. 토큰을 채팅에 붙이지 말 것. 이후 기존 Worker 워크플로 재실행 필요.
+- Worker 미배포이므로 adminivo.com/next/의 새 오늘/7일/30일 UI 및 최신 UI와 원천 DB 일치 검증은 미완료. 소스 DB 점검 성공을 운영 화면 성공으로 대체하지 않음.
