@@ -3,7 +3,7 @@ const code=fs.readFileSync('site-factory/scripts/ga4-consent.js','utf8');
 function setup({choice=null,webdriver=false,search='',hash='',dnt='0'}={}){
  const scripts=[],elements=[],listeners={},stored=new Map(choice?[['toolbox-ga4-consent-v1',choice]]:[]);
  const element=()=>({style:{},dataset:{},children:[],append(...xs){this.children.push(...xs)},setAttribute(){},hidden:false});
- const ctx={URL,URLSearchParams,Date,location:{origin:'https://abreda.com',pathname:'/tools/jsonl-validator/',search,hash},navigator:{webdriver,doNotTrack:dnt},localStorage:{getItem:k=>stored.get(k)||null,setItem:(k,v)=>stored.set(k,v)},document:{currentScript:{dataset:{measurementId:'G-TESTONLY01',pageTitle:'Static tool'}},documentElement:{lang:'ko',setAttribute:(k,v)=>stored.set(k,v)},readyState:'complete',referrer:'https://example.org/?password=SECRET',createElement:()=>element(),head:{append:s=>scripts.push(s)},body:{append:(...xs)=>elements.push(...xs)},addEventListener:(k,f)=>listeners[k]=f}};ctx.addEventListener=(k,f,o)=>{listeners[k]=f;listeners[k+':capture']=o?.capture};ctx.window=ctx;vm.createContext(ctx);vm.runInContext(code,ctx);return {ctx,scripts,elements,listeners};
+ const ctx={URL,URLSearchParams,Date,location:{origin:'https://abreda.com',pathname:'/tools/jsonl-validator/',search,hash},navigator:{webdriver,doNotTrack:dnt},localStorage:{getItem:k=>stored.get(k)||null,setItem:(k,v)=>stored.set(k,v)},document:{currentScript:{dataset:{measurementId:'G-TESTONLY01',pageTitle:'Static tool'}},documentElement:{lang:'ko',setAttribute:(k,v)=>stored.set(k,v)},readyState:'complete',referrer:'https://example.org/?password=SECRET',createElement:()=>element(),head:{append:s=>scripts.push(s)},body:{append:(...xs)=>elements.push(...xs)},addEventListener:(k,f)=>listeners[k]=f}};ctx.addEventListener=(k,f,o)=>{listeners[k]=f;listeners[k+':capture']=o?.capture};ctx.history={state:{preserve:true},replaceState:(state,title,url)=>{stored.set('normalizedURL',url)}};ctx.window=ctx;vm.createContext(ctx);vm.runInContext(code,ctx);return {ctx,scripts,elements,listeners};
 }
 let x=setup();assert.equal(x.scripts.length,0);assert.equal(x.ctx.dataLayer,undefined);
 x.elements[0].children.find(b=>b.textContent==='허용').onclick();assert.equal(x.scripts.length,1);
@@ -18,3 +18,5 @@ console.log('PASS: consent before collection, no query/referrer secrets, one pag
 const blocked=setup({choice:'denied'});blocked.listeners['toolbox:complete']();assert.equal(blocked.ctx.dataLayer,undefined);
 
 assert.equal(debug.ctx.dataLayer[0][0],'set');assert.equal(debug.ctx.dataLayer[0][1].send_page_view,false);assert.equal(debug.ctx.dataLayer[0][1].search_term,'[redacted]');
+
+assert.equal(normal.ctx.history.state.preserve,true);assert(!normal.ctx.localStorage.getItem('normalizedURL').includes('q='));assert(normal.ctx.localStorage.getItem('normalizedURL').includes('#PRIVATE'));assert(normal.ctx.localStorage.getItem('normalizedURL').includes('utm_source=x'));
