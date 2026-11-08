@@ -14,6 +14,11 @@
  const safeLocation=location.origin+location.pathname;
  let referrer='';try{referrer=new URL(document.referrer).origin}catch{}
  function start(){
+  // These static tools do not consume search-result parameters. Prevent the
+  // automatic search collector from reading arbitrary pasted URL input.
+  const params=new URLSearchParams(location.search);let changed=false;
+  for(const name of ['q','s','search','query','keyword'])if(params.has(name)){params.delete(name);changed=true;}
+  if(changed){try{history.replaceState(history.state,'',location.pathname+(params.size?'?'+params.toString():'')+location.hash)}catch{return;}}
   window['ga-disable-'+id]=false;
   if(loaded){window.gtag('consent','update',{analytics_storage:'granted'});return;}loaded=true;
   window.dataLayer=window.dataLayer||[];
