@@ -21,6 +21,7 @@ jobs:
       - name: Verify reporting and authentication
         run: |
           node --check site-factory/admin-worker/worker.mjs
+          node site-factory/admin-worker/test-worker-deploy.mjs
           node site-factory/admin-worker/test.mjs
           node site-factory/admin-worker/test-performance.mjs
           node site-factory/admin-worker/test-public-visit.cjs

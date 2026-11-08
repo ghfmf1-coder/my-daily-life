@@ -4,11 +4,9 @@
  if(!/^G-[A-Z0-9]{6,20}$/.test(id||'')||window.__toolboxAnalytics)return;
  window.__toolboxAnalytics=true;
  // Debug-only QA is excluded by the active GA4 developer traffic filter.
- const debug=location.search==='?tb_debug=1'&&!location.hash;
+ const debug=new URLSearchParams(location.search).get('tb_debug')==='1';
  // Known automation never enters ordinary collection.
  if((navigator.webdriver&&!debug)||navigator.doNotTrack==='1'||navigator.globalPrivacyControl===true||new URLSearchParams(location.search).has('tb_test'))return;
- // Do not load automatic measurement on URLs containing unreviewed input.
- if((location.search||location.hash)&&!debug)return;
  const key='toolbox-ga4-consent-v1';let loaded=false,choice=null;
  try{choice=localStorage.getItem(key)}catch{}
  const english=document.documentElement.lang==='en';
@@ -21,6 +19,7 @@
   window.dataLayer=window.dataLayer||[];
   window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
   window.gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+  window.gtag('set',{page_location:safeLocation,page_referrer:referrer});
   if(debug)window.gtag('set','debug_mode',true);
   window.gtag('js',new Date());
   window.gtag('config',id,{send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,page_location:safeLocation,page_referrer:referrer,page_title:title,...(debug?{debug_mode:true}:{})});
@@ -35,8 +34,14 @@
  const privacy=document.createElement('a');privacy.href='https://abreda.com/'+(english?'en/':'')+'privacy';privacy.textContent=english?'Privacy policy':'개인정보처리방침';privacy.style.marginRight='12px';panel.append(privacy);
  for(const [value,label] of [['granted',text.yes],['denied',text.no]]){const b=document.createElement('button');b.type='button';b.textContent=label;b.style.cssText='padding:7px 12px;margin:4px;border:1px solid #bcc9db;border-radius:6px;background:#f4f7fc;color:#17243b;font:inherit';b.onclick=()=>save(value);panel.append(b)}
  const settings=document.createElement('button');settings.type='button';settings.textContent=text.settings;settings.style.cssText='position:fixed;bottom:8px;right:12px;z-index:9999;padding:5px 9px;background:#fff;color:#334155;border:1px solid #cbd5e1;border-radius:7px;font:12px system-ui';settings.onclick=()=>{panel.hidden=!panel.hidden};
- function mount(){document.body.append(panel,settings);panel.hidden=choice==='granted'||choice==='denied';if(choice==='granted')start()}
+ function complete(){
+  if(debug)document.documentElement.setAttribute('data-toolbox-complete',choice==='granted'&&loaded?'queued':'blocked');
+  if(choice!=='granted'||!loaded)return;
+  window.gtag('event','tool_complete',{send_to:id,page_location:safeLocation,page_referrer:referrer,page_title:title,...(debug?{debug_mode:true}:{}),
+   event_callback:()=>{if(debug)document.documentElement.setAttribute('data-toolbox-complete','dispatched')},event_timeout:2000});
+ }
+ // Capture the app's non-bubbling document event before unrelated handlers.
+ window.addEventListener('toolbox:complete',complete,{capture:true});
+ function mount(){document.body.append(panel,settings);panel.hidden=choice==='granted'||choice==='denied';if(choice==='granted')start();if(debug)document.documentElement.setAttribute('data-toolbox-analytics','ready')}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
- // Only a tool's successful processing branch may dispatch this fixed, data-free event.
- document.addEventListener('toolbox:complete',()=>{if(choice==='granted'&&loaded)window.gtag('event','tool_complete',{send_to:id,page_location:safeLocation,page_title:title,...(debug?{debug_mode:true}:{})})});
 })();

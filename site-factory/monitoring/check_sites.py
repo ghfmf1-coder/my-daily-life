@@ -58,6 +58,16 @@ class SiteHTML(html.parser.HTMLParser):
     def canonical(self):
         return next((a.get("href", "") for a in self.links if a.get("rel") == "canonical"), "")
 
+MIGRATED_TO_HUB = frozenset({'csv-column-extractor', 'csv-empty-row-remover',
+    'jsonl-validator', 'srt-sdh-cleaner', 'vtt-cleaner'})
+
+def representative_urls(site):
+    """The fetch origin is an alias; metadata still names the public canonical."""
+    if site['slug'] in MIGRATED_TO_HUB:
+        return {'ko': 'https://abreda.com/tools/' + site['slug'] + '/',
+                'en': 'https://abreda.com/en/tools/' + site['slug'] + '/'}
+    return {'ko': site['origin'] + '/', 'en': site['origin'] + '/en/'}
+
 def roster():
     sites = [{"slug": "my-daily-life", "name": "하루한칸", "origin": "https://my-daily-life.pages.dev",
               "locales": ["ko", "en"], "internal": False, "independent": True}]
@@ -130,10 +140,10 @@ def safe_page(site, result, path, *, lang="ko", indexable=True):
                "noindex" not in robots if indexable else "noindex" in robots,
                robots or "(meta robots unspecified)")
         if indexable:
-            record(result, "canonical_" + lang, parser.canonical().rstrip("/") == address.rstrip("/"),
+            record(result, "canonical_" + lang, parser.canonical().rstrip("/") == representative_urls(site).get(lang, address).rstrip("/"),
                    parser.canonical() or "missing canonical")
             if "en" in site["locales"]:
-                for code, link in (("ko", origin + "/"), ("en", origin + "/en/")):
+                for code, link in representative_urls(site).items():
                     record(result, "hreflang_" + lang + "_" + code, parser.alternate(code) == link,
                            parser.alternate(code) or "missing")
         return parser
@@ -206,7 +216,7 @@ def check_site(site):
         try:
             doc=ET.fromstring(sitemap["body"])
             urls=[tag.text or "" for tag in doc.findall(".//s:loc",SITEMAP_NS)]
-            targets=[] if is_internal else [origin+"/"]+([origin+"/en/"] if "en" in locales else [])
+            targets=[] if is_internal else [representative_urls(site)[code] for code in locales]
             record(result,"sitemap_content",all(x in urls for x in targets) and
                    (not is_internal or not urls), "entries: "+str(len(urls)))
         except ET.ParseError as ex:

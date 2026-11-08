@@ -2,6 +2,8 @@
 import importlib.util
 import sys
 import unittest
+import tempfile
+from unittest.mock import patch
 from pathlib import Path
 S = Path(__file__).resolve().parents[1] / "monitoring" / "check_sites.py"
 spec=importlib.util.spec_from_file_location("toolbox_monitor",S)
@@ -31,6 +33,29 @@ class HealthMonitoringTests(unittest.TestCase):
         self.assertTrue(mod.is_access_challenge(response))
         self.assertFalse(mod.is_access_challenge({**response,"body":b"<title>Normal app</title>"}))
         self.assertFalse(mod.is_access_challenge({**response,"status":403}))
+    def test_migrated_builds_use_representatives_without_disabling_checks(self):
+        import factory
+        for slug in sorted(mod.MIGRATED_TO_HUB):
+            site=next(x for x in mod.roster() if x['slug']==slug)
+            self.assertIn('.pages.dev',site['origin'])
+            with tempfile.TemporaryDirectory() as tmp:
+                root=Path(tmp)/'build';factory.prepare(slug,root)
+                def response(url,max_bytes=mod.MAX_BYTES):
+                    path=__import__('urllib.parse',fromlist=['urlparse']).urlparse(url).path
+                    file=root/(path.strip('/')+'/index.html' if path.endswith('/') else path.lstrip('/'))
+                    if path=='/':file=root/'index.html'
+                    return {'status':200,'url':url,'content_type':'text/html' if file.suffix=='.html' else 'application/octet-stream','body':file.read_bytes(),'elapsed_ms':1}
+                with patch.object(mod,'fetch',response):
+                    result=mod.check_site(site)
+                    self.assertEqual(result['status'],'pass',result['failures'])
+                # An obsolete self-canonical is still an actual failure.
+                text=(root/'index.html').read_text().replace('rel="canonical" href="https://abreda.com/tools/'+slug+'/', 'rel="canonical" href="'+site['origin']+'/')
+                with patch.object(mod,'fetch',return_value={'status':200,'content_type':'text/html','body':text.encode(),'elapsed_ms':1}):
+                    result=mod.create_site_record(site);mod.safe_page(site,result,'/')
+                    self.assertTrue(any(x.startswith('canonical_ko:') for x in result['failures']))
+    def test_non_migrated_site_retains_own_canonical(self):
+        site=next(x for x in mod.roster() if x['slug']=='novel-planner')
+        self.assertEqual(mod.representative_urls(site)['ko'],site['origin']+'/')
     def test_result_does_not_expose_user_records(self):
         s=mod.roster()[0]
         record=mod.create_site_record(s)

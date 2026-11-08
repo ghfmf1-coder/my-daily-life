@@ -265,3 +265,13 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 - 관제센터 오늘/7일/30일 코드는 af5fa5793ef6e88997d6edb0c3a3f37c23baefa4에 저장됐고 인증/회귀 검사를 통과했으나 Worker API HTTP 401로 배포 차단. 유효한 전용 CLOUDFLARE_WORKER_DEPLOY_TOKEN 교체 전 운영 UI·모바일 검증은 미완료. Pages 토큰 권한을 확장하지 않았음.
 - 네이버 자동 공개 알림의 일부 최신 요청은 IndexNow HTTP 403/non_json_error. 공개 sitemap/robots는 정상이고 기존 계정 인증 이력은 보존. 신규 수신/색인 성공으로 바꾸지 않으며 수동 CAPTCHA 작업은 제외 범위를 유지.
 - GA4 서버 자동 조회·관제센터 비교 연결은 미완료. 기존 Supabase 분류 통계와 GA4 값을 합산하지 않음. DB 기록 삭제/초기화, 유료 서비스, 신규 사이트/서버 생성 없음.
+
+
+## 최종 네 결함 재현·수정 — 2026-11-08
+
+- 범위: Worker 인증 401, 유지보수 canonical/sitemap/hreflang 기대값, GA4 쿼리/앵커 누락, 실제 이벤트 수신·원천 대조만 재검수.
+- check_sites.py는 조회할 기존 별칭 origin과 대표 URL을 분리. 이전된 다섯 도구의 ko/en 대표 주소만 abreda.com으로 비교하며 다른 사이트는 기존 자기 주소 유지. 실제 빌드 결과로 전체 검사를 재현했고 잘못된 옛 canonical은 여전히 실패함.
+- GA4는 쿼리/해시 존재로 초기화를 중단하지 않음. Google 전역 설정과 명시적 page_view/tool_complete의 page_location/page_referrer는 쿼리·해시 없는 URL만 사용. 동의·거부·DNT/GPC·봇/QA 제외와 단일 초기화 유지.
+- 완료 이벤트는 window capture에서 앱의 non-bubbling document 이벤트를 수신하도록 수정. debug URL에서만 준비/대기/SDK callback 상태를 DOM 속성으로 확인할 수 있고 사용자 입력이나 파일 값은 넣지 않음. 실제 Google 수신은 배포 후 별도 판정.
+- Worker 배포는 자격증명 형식 및 실패 단계를 구분하고, 401/403일 때 사용자/계정 토큰 검증 API를 제한적으로 조회. 상태 및 숫자 오류 코드만 출력하고 token/ID/공급자 원문 메시지를 출력하지 않음. 인증이 실패하면 업로드하지 않음. 기존 권한·키·바인딩·라우트 변경 없음.
+- 관련 모니터 재현 검사·GA4 동의/정상 쿼리/앵커 검사·Worker 인증/비밀값 미출력 검사를 통과. 실제 CI·배포·수신 결과는 후속 로그로 기록.
