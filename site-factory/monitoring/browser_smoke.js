@@ -111,5 +111,33 @@ function finalize(extraFailure){
   assert((await page.locator('#output').innerText()).trim().length>0,'JS transform did not run');
   return 'Deployment-check JavaScript functional';
  });
+ if(process.env.GA4_SMOKE==='1')await check('GA4 sanitized query and successful tool completion',
+  'https://abreda.com/tools/jsonl-validator/?tb_debug=1&utm_source=qa&token=QA_PRIVATE&q=QA_SEARCH#qa-anchor','desktop',async page=>{
+  const hits=[];
+  page.on('response',async response=>{
+   const req=response.request(),url=new URL(req.url());
+   if(!/(^|\.)(google-analytics\.com|analytics\.google\.com)$/.test(url.hostname)||!url.pathname.endsWith('/collect'))return;
+   for(const line of (req.postData()||'').split('\n')){
+    const params=new URLSearchParams(url.search);for(const [k,v]of new URLSearchParams(line))params.set(k,v);
+    if(params.get('tid')!=='G-YHSK49NC2E'||!params.get('en'))continue;
+    const serialized=JSON.stringify([...params]);
+    hits.push({event:params.get('en'),location:params.get('dl'),referrer:params.get('dr')||'',debug:['1','true'].includes(params.get('_dbg'))||params.get('ep.debug_mode')==='true'||params.get('epn.debug_mode')==='1',status:response.status(),sensitiveLeak:/QA_PRIVATE|QA_SEARCH|qa-anchor/.test(serialized)});
+   }
+  });
+  await page.locator('html[data-toolbox-analytics="ready"]').waitFor({state:'attached'});
+  const consent=page.getByRole('button',{name:'허용',exact:true});if(await consent.isVisible())await consent.click();
+  await page.locator('script[src*="googletagmanager.com/gtag/js"]').waitFor({state:'attached'});
+  await page.locator('#source').fill('{"qa":true}');await page.locator('#run').click();
+  assert((await page.locator('#output').inputValue()).includes('valid'),'Tool success missing');
+  const deadline=Date.now()+35000;
+  while(Date.now()<deadline&&!['page_view','tool_complete'].every(event=>hits.some(h=>h.event===event&&h.status>=200&&h.status<300)))await page.waitForTimeout(500);
+  assert(['page_view','tool_complete'].every(event=>hits.some(h=>h.event===event&&h.status>=200&&h.status<300)),'GA4 event responses missing: '+hits.map(h=>h.event+':'+h.status).join(','));
+  assert(hits.every(h=>h.debug&&!h.sensitiveLeak),'Debug isolation or URL redaction failed');
+  assert(hits.every(h=>h.location==='https://abreda.com/tools/jsonl-validator/'&&!/[?#]/.test(h.referrer)),'Unredacted URL sent');
+  assert(hits.filter(h=>h.event==='page_view').length===1,'Duplicate page_view');
+  assert(await page.locator('script[data-measurement-id="G-YHSK49NC2E"]').count()===1,'Duplicate loader');
+  fs.writeFileSync('/tmp/ga4-live-events.json',JSON.stringify({source:'Chromium debug requests; excluded from production by active GA4 developer filter',hits},null,2));
+  return 'page_view and tool_complete accepted; debug only; query/hash absent; one pageview';
+ });
  await browser.close();finalize();
 })().catch(async e=>{console.error(e);try{await browser?.close()}catch{}finalize(e.message||String(e))});
