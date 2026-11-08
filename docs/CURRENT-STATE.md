@@ -246,3 +246,12 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 - 대표 내부 다섯 도구의 실제 처리 성공 분기에만 데이터 없는 toolbox:complete 이벤트 연결. 폼 제출 자체를 도구 성공으로 세지 않음.
 - SEO·수집기 수정 배포 success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42443027846 . 후속 원장/Google/방문 원천 감사 success: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42443357877 .
 - 관제센터 최신 배포는 인증 테스트 통과 후 WORKER_API_HTTP_401로 실패: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42443027815 . 전용 Worker 배포 Secret이 존재하더라도 API 인증이 유효하지 않아 현 운영 UI 반영은 미완료. Pages 배포 및 Supabase 읽기에는 영향 없음.
+
+### 대표 실제 수신 및 공개 도구 확장
+
+- GA4 DebugView에서 abreda.com 홈과 JSONL 도구의 page_view 실제 수신 확인. 디버그 전용 요청으로 Supabase 비콘에는 쓰지 않았으며 활성 개발자 필터가 일반 GA4 처리에서 제외. 실제 사람 방문 실적으로 보고하지 않음.
+- 대표 JSONL 처리 UI 정상 결과와 단일 GA4 로더/단일 Google 스크립트, 새 대표 canonical 확인. 기존 pages.dev 주소도 실제 처리 정상이며 canonical/hreflang이 abreda.com을 가리킴.
+- 나머지 승인된 공개 공장 도구·기존 30개 독립 도구·하루한칸 공개 소개 페이지에 동일 동의 태그 확장. 관리자와 로그인 후 기록 화면에는 삽입하지 않음. 개인 정보는 공통 안내로 연결.
+- 독립 도구의 확인 가능한 성공 분기에만 데이터 없는 완료 이벤트 추가. 원고/파일/입력값을 이벤트에 넣지 않음.
+- GA4의 enhanced measurement는 사용자 지시대로 유지. 일반 URL에 쿼리/해시가 있으면 자동 측정 로더를 실행하지 않는 제한이 있어 캠페인/검색/앵커 링크 방문이 GA4에서 누락될 수 있음. 기존 Supabase 집계와 합산하지 않음.
+- 관제센터 API의 GA4 자동 비교는 서버 측 Analytics 조회 연결이 없으므로 아직 제공하지 않음. Windsor.ai 연결은 읽기 확인에 재사용했으며 임의 토큰 복제나 과거 자료 생성 없음.

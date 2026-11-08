@@ -38,5 +38,5 @@
  function mount(){document.body.append(panel,settings);panel.hidden=choice==='granted'||choice==='denied';if(choice==='granted')start()}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
  // Only a tool's successful processing branch may dispatch this fixed, data-free event.
- document.addEventListener('toolbox:complete',()=>{if(choice==='granted'&&loaded)window.gtag('event','tool_complete',{send_to:id,page_location:safeLocation,page_title:title})});
+ document.addEventListener('toolbox:complete',()=>{if(choice==='granted'&&loaded)window.gtag('event','tool_complete',{send_to:id,page_location:safeLocation,page_title:title,...(debug?{debug_mode:true}:{})})});
 })();

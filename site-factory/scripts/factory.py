@@ -230,7 +230,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 if site['slug'] in unified_slugs:
                     target='https://abreda.com/'+('en/' if language=='en' else '')+'tools/'+site['slug']+'/'
                 else:
-                    target=site['url'] if language=='ko' else site['url'].rstrip('/')+'/en/'
+                    target=site['url'].rstrip('/')+'/' if language=='ko' else site['url'].rstrip('/')+'/en/'
                 label='바로 사용하기 ↗' if language=='ko' else 'Open tool ↗'
                 # Each card has its own meaningful, lightweight SVG illustration.
                 # The descriptions remain in data-search and on the destination page,

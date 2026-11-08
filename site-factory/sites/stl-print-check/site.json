@@ -9,5 +9,7 @@
     "en"
   ],
   "domain": "stl-print-check.abreda.com",
-  "canonical_url": "https://stl-print-check.abreda.com/"
+  "canonical_url": "https://stl-print-check.abreda.com/",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
 }
