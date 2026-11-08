@@ -255,3 +255,13 @@ Google 재동의와 기존 프로젝트 Site Verification API 활성화는 완�
 - 독립 도구의 확인 가능한 성공 분기에만 데이터 없는 완료 이벤트 추가. 원고/파일/입력값을 이벤트에 넣지 않음.
 - GA4의 enhanced measurement는 사용자 지시대로 유지. 일반 URL에 쿼리/해시가 있으면 자동 측정 로더를 실행하지 않는 제한이 있어 캠페인/검색/앵커 링크 방문이 GA4에서 누락될 수 있음. 기존 Supabase 집계와 합산하지 않음.
 - 관제센터 API의 GA4 자동 비교는 서버 측 Analytics 조회 연결이 없으므로 아직 제공하지 않음. Windsor.ai 연결은 읽기 확인에 재사용했으며 임의 토큰 복제나 과거 자료 생성 없음.
+
+### 최종 배포 확인 — 2026-11-08
+
+- 공개 도구 GA4 확장 커밋: 7cf0486327d40d7cb4044916a88072fab813b151. 기존 공장 배포 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42445934869 , 20개 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42445934876 , 9개 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42445934893 , 배송 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42445934881 , GitHub Pages https://github.com/ghfmf1-coder/my-daily-life/actions/runs/42445934862 모두 최종 success 확인.
+- 대표 실제 운영 페이지에서 동의 UI·태그 중복 없음·JSONL 정상 처리·대표 canonical 및 언어 링크 확인. Google DebugView에 page_view 실제 도착 확인. 테스트는 debug_mode 및 활성 개발자 제외 필터를 사용하며 Supabase 수집기에서 제외.
+- tool_complete 성공 분기 코드는 배포됐으나 이번 DebugView에서 실제 수신은 확인되지 않음. 완료 이벤트 수·전환율을 성공/0으로 보고하지 않음.
+- Windsor Search Console sc-domain:abreda.com의 최근 30일 페이지별 원천 행 조회 정상. 검색 증가나 전체 색인 완료를 주장하지 않음.
+- 관제센터 오늘/7일/30일 코드는 af5fa5793ef6e88997d6edb0c3a3f37c23baefa4에 저장됐고 인증/회귀 검사를 통과했으나 Worker API HTTP 401로 배포 차단. 유효한 전용 CLOUDFLARE_WORKER_DEPLOY_TOKEN 교체 전 운영 UI·모바일 검증은 미완료. Pages 토큰 권한을 확장하지 않았음.
+- 네이버 자동 공개 알림의 일부 최신 요청은 IndexNow HTTP 403/non_json_error. 공개 sitemap/robots는 정상이고 기존 계정 인증 이력은 보존. 신규 수신/색인 성공으로 바꾸지 않으며 수동 CAPTCHA 작업은 제외 범위를 유지.
+- GA4 서버 자동 조회·관제센터 비교 연결은 미완료. 기존 Supabase 분류 통계와 GA4 값을 합산하지 않음. DB 기록 삭제/초기화, 유료 서비스, 신규 사이트/서버 생성 없음.
