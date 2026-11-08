@@ -132,6 +132,7 @@ function finalize(extraFailure){
   const deadline=Date.now()+35000;
   while(Date.now()<deadline&&!['page_view','tool_complete'].every(event=>hits.some(h=>h.event===event&&h.status>=200&&h.status<300)))await page.waitForTimeout(500);
   assert(['page_view','tool_complete'].every(event=>hits.some(h=>h.event===event&&h.status>=200&&h.status<300)),'GA4 event responses missing: '+hits.map(h=>h.event+':'+h.status).join(','));
+  console.log('GA4_SAFE_RECEIPTS '+JSON.stringify(hits));
   assert(hits.every(h=>h.debug&&!h.sensitiveLeak),'Debug isolation or URL redaction failed');
   assert(hits.every(h=>h.location==='https://abreda.com/tools/jsonl-validator/'&&!/[?#]/.test(h.referrer)),'Unredacted URL sent');
   assert(hits.filter(h=>h.event==='page_view').length===1,'Duplicate page_view');
