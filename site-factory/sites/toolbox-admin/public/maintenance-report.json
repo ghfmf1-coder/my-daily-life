@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-09T11:29:58+00:00",
+  "checkedAt": "2026-11-09T11:45:52+00:00",
   "status": "pass",
   "summary": {
     "sites": 24,
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 162ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -335,7 +335,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 146ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -375,7 +375,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -459,14 +459,14 @@
     {
       "slug": "card-grading-lab",
       "name": "트레이딩 카드 PSA 사전 감정 분석 | 포켓몬·원피스·스포츠 카드",
-      "url": "https://tb-card-grading-lab.pages.dev/",
+      "url": "https://card-grading-lab.abreda.com/",
       "type": "public",
       "status": "pass",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 243ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -491,22 +491,22 @@
         {
           "check": "canonical_ko",
           "status": "pass",
-          "detail": "https://tb-card-grading-lab.pages.dev/"
+          "detail": "https://card-grading-lab.abreda.com/"
         },
         {
           "check": "hreflang_ko_ko",
           "status": "pass",
-          "detail": "https://tb-card-grading-lab.pages.dev/"
+          "detail": "https://card-grading-lab.abreda.com/"
         },
         {
           "check": "hreflang_ko_en",
           "status": "pass",
-          "detail": "https://tb-card-grading-lab.pages.dev/en/"
+          "detail": "https://card-grading-lab.abreda.com/en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -531,17 +531,17 @@
         {
           "check": "canonical_en",
           "status": "pass",
-          "detail": "https://tb-card-grading-lab.pages.dev/en/"
+          "detail": "https://card-grading-lab.abreda.com/en/"
         },
         {
           "check": "hreflang_en_ko",
           "status": "pass",
-          "detail": "https://tb-card-grading-lab.pages.dev/"
+          "detail": "https://card-grading-lab.abreda.com/"
         },
         {
           "check": "hreflang_en_en",
           "status": "pass",
-          "detail": "https://tb-card-grading-lab.pages.dev/en/"
+          "detail": "https://card-grading-lab.abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -556,7 +556,7 @@
         {
           "check": "text_robots.txt",
           "status": "pass",
-          "detail": "HTTP 200, 82 bytes"
+          "detail": "HTTP 200, 80 bytes"
         },
         {
           "check": "robots_publicity",
@@ -566,7 +566,7 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 239 bytes"
+          "detail": "HTTP 200, 235 bytes"
         },
         {
           "check": "sitemap_content",
@@ -597,7 +597,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 159ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -637,7 +637,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -728,7 +728,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 163ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -768,7 +768,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 156ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -859,7 +859,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 183ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -899,7 +899,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -990,7 +990,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 183ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 136ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1030,7 +1030,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 123ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 118ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1151,7 +1151,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 194ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1222,7 +1222,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1262,7 +1262,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1353,7 +1353,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 132ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1393,7 +1393,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1484,7 +1484,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 196ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 153ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1524,7 +1524,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1615,7 +1615,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 188ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1655,7 +1655,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1806,7 +1806,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1917,7 +1917,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 170ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1957,7 +1957,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2048,7 +2048,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 150ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2088,7 +2088,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2179,7 +2179,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 200ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 204ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2219,7 +2219,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 134ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2310,7 +2310,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2350,7 +2350,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2477,7 +2477,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 200ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2517,7 +2517,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 194ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2617,7 +2617,7 @@
         {
           "check": "text_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 8953 bytes"
+          "detail": "HTTP 200, 8950 bytes"
         },
         {
           "check": "rss_feed.xml",
@@ -2627,7 +2627,7 @@
         {
           "check": "text_en_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 8307 bytes"
+          "detail": "HTTP 200, 8305 bytes"
         },
         {
           "check": "rss_en_feed.xml",
@@ -2648,7 +2648,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 150ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2688,7 +2688,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2779,7 +2779,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2819,7 +2819,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 102ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2910,7 +2910,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 208ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2950,7 +2950,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3041,7 +3041,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 188ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3081,7 +3081,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3170,7 +3170,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 529
+      "elapsedMs": 415
     },
     {
       "name": "English plot planner",
@@ -3178,7 +3178,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 326
+      "elapsedMs": 262
     },
     {
       "name": "Korean manuscript",
@@ -3186,7 +3186,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 312
+      "elapsedMs": 230
     },
     {
       "name": "English manuscript",
@@ -3194,7 +3194,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 346
+      "elapsedMs": 280
     },
     {
       "name": "Korean CSV merger",
@@ -3202,7 +3202,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 353
+      "elapsedMs": 302
     },
     {
       "name": "English CSV merger",
@@ -3210,7 +3210,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 359
+      "elapsedMs": 245
     },
     {
       "name": "Haru English landing",
@@ -3218,7 +3218,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 285
+      "elapsedMs": 203
     },
     {
       "name": "Haru English app",
@@ -3226,7 +3226,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 254
+      "elapsedMs": 208
     },
     {
       "name": "Admin authentication gate",
@@ -3234,7 +3234,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 493
+      "elapsedMs": 235
     },
     {
       "name": "Toolbox hub search",
@@ -3242,7 +3242,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 552
+      "elapsedMs": 210
     },
     {
       "name": "Technical deployment smoke",
@@ -3250,7 +3250,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 246
+      "elapsedMs": 193
     },
     {
       "name": "GA4 sanitized query and successful tool completion",
@@ -3258,7 +3258,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "page_view and tool_complete accepted; debug only; query/hash absent; one pageview",
-      "elapsedMs": 5854
+      "elapsedMs": 5770
     }
   ],
   "issues": [],
