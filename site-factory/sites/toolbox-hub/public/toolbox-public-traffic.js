@@ -10,10 +10,12 @@
    visit=sessionStorage.getItem(key)!=='1';
    if(visit)sessionStorage.setItem(key,'1');
  }catch{visit=false;}
+ const htmlLang=String(document.documentElement?.lang||'').toLowerCase();
+ const pageLang=/^ko(?:-|$)/.test(htmlLang)?'ko':/^en(?:-|$)/.test(htmlLang)?'en':'unknown';
  fetch('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-public-visit',{
    method:'POST',mode:'cors',credentials:'omit',keepalive:true,
    headers:{'Content-Type':'text/plain;charset=UTF-8'},
-   body:JSON.stringify({siteId,eventId:crypto.randomUUID(),isVisit:visit})
+   body:JSON.stringify({siteId,eventId:crypto.randomUUID(),isVisit:visit,pageLang})
  }).then(r=>{if(!r.ok&&visit&&key)try{sessionStorage.removeItem(key)}catch{}})
  .catch(()=>{if(visit&&key)try{sessionStorage.removeItem(key)}catch{}});
 })();
