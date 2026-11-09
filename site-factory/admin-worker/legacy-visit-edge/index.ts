@@ -35,8 +35,9 @@ Deno.serve(async (req:Request) => {
   try { body=JSON.parse((await req.text()).slice(0,1201)); } catch {return reply(400,{error:'invalid_json'});}
   const siteId=typeof body.siteId==='string'?body.siteId:'';
   const eventId=typeof body.eventId==='string'?body.eventId:'';
+  const pageLang=body.pageLang===undefined?'unknown':body.pageLang;
   if(!sites.some(([id])=>id===siteId) || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(eventId)
-     || typeof body.isVisit!=='boolean') return reply(400,{error:'invalid_event'});
+     || typeof body.isVisit!=='boolean'||!['ko','en','unknown'].includes(pageLang)) return reply(400,{error:'invalid_event'});
   if(body.dryRun===true)return reply(202,{accepted:false,diagnostic:true,category});
   const url=Deno.env.get('SUPABASE_URL'),key=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
   if(!url||!key) return reply(503,{error:'collector_not_configured'});
@@ -49,7 +50,7 @@ Deno.serve(async (req:Request) => {
     if(!upstream.ok){console.error('Tracking database RPC status',upstream.status);return reply(503,{error:'storage_error'});}
     const classified=await fetch(url+'/rest/v1/rpc/record_toolbox_traffic_classified',{
       method:'POST',headers:{'Authorization':'Bearer '+key,'apikey':key,'Content-Type':'application/json'},
-      body:JSON.stringify({p_event_id:eventId,p_site_id:siteId,p_category:category,p_is_visit:body.isVisit})
+      body:JSON.stringify({p_event_id:eventId,p_site_id:siteId,p_category:category,p_is_visit:body.isVisit,p_page_lang:pageLang})
     });
     if(!classified.ok){console.error('Classification RPC status',classified.status);return reply(503,{error:'classification_storage_error'});}
     return reply(202,{accepted:true});
