@@ -34,9 +34,9 @@ jobs:
             const dnsJson=await dnsResponse.json().catch(()=>({}));
             console.log('DNS_CHECK',JSON.stringify({http:dnsResponse.status,apiSuccess:dnsJson.success===true,records:(dnsJson.result||[]).map(d=>({type:d.type,name:d.name,proxiable:d.proxiable,proxied:d.proxied,targetExpected:d.content===project+'.pages.dev'}))}));
           }
-          const pagesUrl='https://api.cloudflare.com/client/v4/accounts/'+account+'/pages/projects?per_page=100&page=1';
+          const pagesUrl='https://api.cloudflare.com/client/v4/accounts/'+account+'/pages/projects?per_page=25&page=1';
           const pagesResponse=await fetch(pagesUrl,{headers:{Authorization:'Bearer '+token}});
           const pagesJson=await pagesResponse.json().catch(()=>({}));
-          console.log('PAGES_INVENTORY',JSON.stringify({http:pagesResponse.status,success:pagesJson.success===true,total:pagesJson.result_info?.total_count||null,projects:(pagesJson.result||[]).map(x=>({name:x.name,domains:(x.domains||[]).filter(d=>d==='abreda.com'||d.endsWith('.abreda.com'))})).filter(x=>x.name.startsWith('tb-'))}));
+          console.log('PAGES_INVENTORY',JSON.stringify({http:pagesResponse.status,success:pagesJson.success===true,total:pagesJson.result_info?.total_count||null,errors:(pagesJson.errors||[]).map(x=>({code:x.code,message:x.message})),projects:(pagesJson.result||[]).map(x=>({name:x.name,domains:(x.domains||[]).filter(d=>d==='abreda.com'||d.endsWith('.abreda.com'))})).filter(x=>x.name.startsWith('tb-'))}));
           if(!r.ok||!json.success)process.exitCode=1;
           NODE
