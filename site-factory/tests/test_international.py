@@ -76,4 +76,46 @@ class InternationalizationTests(unittest.TestCase):
         self.assertIn('href="/en/app/"',en)
         self.assertIn('src="./translate.js"',(REPO/'en/app/index.html').read_text())
         self.assertTrue((REPO/'en/app/translate.js').is_file())
+    def test_card_grading_domain_migration(self):
+        """An active custom domain must be canonical in both locales and old host must 301."""
+        import subprocess
+        import shutil
+        with tempfile.TemporaryDirectory() as d:
+            conf, origin = factory.prepare('card-grading-lab', Path(d) / 'build')
+            self.assertEqual(origin, 'https://card-grading-lab.abreda.com')
+            out = Path(d) / 'build'
+            ko = (out / 'index.html').read_text(encoding='utf-8')
+            en = (out / 'en/index.html').read_text(encoding='utf-8')
+            sitemap = (out / 'sitemap.xml').read_text(encoding='utf-8')
+            robots = (out / 'robots.txt').read_text(encoding='utf-8')
+            self.assertIn('rel="canonical" href="https://card-grading-lab.abreda.com/"', ko)
+            self.assertIn('rel="canonical" href="https://card-grading-lab.abreda.com/en/"', en)
+            for html in (ko, en):
+                self.assertIn('hreflang="ko" href="https://card-grading-lab.abreda.com/"', html)
+                self.assertIn('hreflang="en" href="https://card-grading-lab.abreda.com/en/"', html)
+            self.assertIn('<loc>https://card-grading-lab.abreda.com/</loc>', sitemap)
+            self.assertIn('<loc>https://card-grading-lab.abreda.com/en/</loc>', sitemap)
+            self.assertIn('Sitemap: https://card-grading-lab.abreda.com/sitemap.xml', robots)
+            worker_file = out / '_worker.js'
+            self.assertTrue(worker_file.exists())
+            if shutil.which('node'):
+                js = """
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const source=readFileSync(process.argv[1],'utf8');
+const {default:handler}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+let assetReads=0;
+const env={ASSETS:{fetch:async ()=>{assetReads++;return new Response('asset ok',{status:200})}}};
+const old=await handler.fetch(new Request('https://tb-card-grading-lab.pages.dev/en/?q=abc'),env);
+assert.equal(old.status,301);
+assert.equal(old.headers.get('location'),'https://card-grading-lab.abreda.com/en/?q=abc');
+assert.equal(assetReads,0);
+const fresh=await handler.fetch(new Request('https://card-grading-lab.abreda.com/en/'),env);
+assert.equal(fresh.status,200);
+assert.equal(await fresh.text(),'asset ok');
+assert.equal(assetReads,1);
+"""
+                subprocess.run(['node', '--input-type=module','-e',js,str(worker_file)],
+                               check=True,capture_output=True,text=True)
+
 if __name__=='__main__': unittest.main()
