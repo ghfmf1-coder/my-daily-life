@@ -1,5 +1,5 @@
 // Staged, non-destructive migration of manifest-approved public Pages sites.
-// Modes: self-test, plan, attach, status, dns. Existing pages.dev stays live.
+// Modes: self-test, plan, attach, status, dns, retry. Existing pages.dev stays live.
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 const manifest=JSON.parse(fs.readFileSync(new URL('./visit-sites.json',import.meta.url),'utf8'));
@@ -28,7 +28,7 @@ if(mode==='self-test'){
   console.log('DOMAIN_MIGRATION_SELFTEST_PASS',JSON.stringify({mode,inventory:targets.length}));
   process.exit(0);
 }
-if(!['plan','attach','status','dns'].includes(mode))throw Error('Unsupported mode');
+if(!['plan','attach','status','dns','retry'].includes(mode))throw Error('Unsupported mode');
 if(mode==='plan'){
   console.log('DOMAIN_MIGRATION_PLAN',JSON.stringify({targets,excludedAlreadyCanonical:(manifest.sites||[]).filter(s=>!new URL(s.url).hostname.endsWith('.pages.dev')).map(s=>s.siteId)}));
   process.exit(0);
@@ -83,6 +83,20 @@ for(const target of targets){
   }
   if(mode==='status'){
     output.push({id:target.id,domain:target.domain,result:check.ok?(check.data?.status||'unknown'):'not_attached',http:check.http,codes:check.codes});
+    continue;
+  }
+  if(mode==='retry'){
+    if(!check.ok){
+      output.push({id:target.id,domain:target.domain,result:'not_attached',http:check.http,codes:check.codes});
+      continue;
+    }
+    if(!['deactivated','error'].includes(check.data?.status)){
+      output.push({id:target.id,domain:target.domain,result:'no_retry_needed',status:check.data?.status||null});
+      continue;
+    }
+    // Existing domain only: never create projects, edit DNS, or touch active domains.
+    const retried=await cf('PATCH',domainPath,pagesToken);
+    output.push({id:target.id,domain:target.domain,result:retried.ok?'validation_retry_requested':'validation_retry_failed',http:retried.http,codes:retried.codes,status:retried.data?.status||null});
     continue;
   }
   if(!check.ok||check.data?.status==='blocked'){
