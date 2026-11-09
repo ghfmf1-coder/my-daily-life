@@ -9,11 +9,13 @@
    wasVisit=sessionStorage.getItem(key)==='1';
    if(!wasVisit)sessionStorage.setItem(key,'1');
  }catch{wasVisit=true;}
+ const htmlLang=String(document.documentElement?.lang||'').toLowerCase();
+ const pageLang=/^ko(?:-|$)/.test(htmlLang)?'ko':/^en(?:-|$)/.test(htmlLang)?'en':'unknown';
  const eventId=crypto.randomUUID(), isVisit=!wasVisit;
  fetch('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-visit-collector',{
    method:'POST',mode:'cors',credentials:'omit',keepalive:true,
    headers:{'Content-Type':'text/plain;charset=UTF-8'},
-   body:JSON.stringify({siteId,eventId,isVisit})
+   body:JSON.stringify({siteId,eventId,isVisit,pageLang})
  }).then(response=>{if(!response.ok&&isVisit&&key)try{sessionStorage.removeItem(key)}catch{}})
  .catch(()=>{if(isVisit&&key)try{sessionStorage.removeItem(key)}catch{}});
 })();
