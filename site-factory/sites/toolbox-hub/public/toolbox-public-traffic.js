@@ -1,4 +1,4 @@
-/* Small Toolbox privacy-minimal new-site telemetry: no cookies, IP fields or fingerprint. */
+/* Small Toolbox privacy-minimal new-site telemetry: HTML page language only; no cookies, IP fields or fingerprint. */
 (()=>{'use strict';
  const siteId=document.currentScript?.dataset.toolboxSite||'';
  if(!/^tb-[a-z0-9-]+$/.test(siteId)||window.top!==window.self||!globalThis.crypto?.randomUUID||
