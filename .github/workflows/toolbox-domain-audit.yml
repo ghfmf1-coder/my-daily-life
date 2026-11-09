@@ -24,7 +24,7 @@ jobs:
           const r=await fetch(api,{headers:{Authorization:'Bearer '+token}});
           const json=await r.json().catch(()=>({}));
           const data=json?.result||{};
-          console.log('CUSTOM_DOMAIN_CHECK',JSON.stringify({project,domain,http:r.status,apiSuccess:json.success===true,status:data.status||'unknown',verificationErrors:(json.errors||[]).map(e=>e.code).filter(Number.isInteger)}));
+          console.log('CUSTOM_DOMAIN_CHECK',JSON.stringify({project,domain,http:r.status,apiSuccess:json.success===true,status:data.status||'unknown',verificationErrors:(json.errors||[]).map(e=>e.code).filter(Number.isInteger),fields:Object.keys(data).sort(),validationStatus:data.validation_data?.status||null,validationMethod:data.validation_data?.method||null,verificationType:data.verification_data?.type||null}));
           const zoneResponse=await fetch('https://api.cloudflare.com/client/v4/zones?name=abreda.com',{headers:{Authorization:'Bearer '+token}});
           const zoneJson=await zoneResponse.json().catch(()=>({}));
           const zone=zoneJson?.result?.find(z=>z.name==='abreda.com');
