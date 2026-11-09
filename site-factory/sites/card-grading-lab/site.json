@@ -9,5 +9,7 @@
     "en"
   ],
   "ga4_measurement_id": "G-YHSK49NC2E",
-  "ga4_collection_enabled": true
+  "ga4_collection_enabled": true,
+  "domain": "card-grading-lab.abreda.com",
+  "canonical_url": "https://tb-card-grading-lab.pages.dev/"
 }
