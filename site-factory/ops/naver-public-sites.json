@@ -17,6 +17,12 @@
       "consoleStatus": "not_registered",
       "contentDigest": "ac78589509407a874e4b09e6c3a8613dfa06d61ac469d9cbbd11587690d8667b",
       "indexNowKey": "d7e01a3d1fdbd0f8bdfbc4e021cd6bed",
+      "lastIndexNow": {
+        "at": "2026-11-09T13:30:19.513732+00:00",
+        "digest": "e7ff5beb17eebbc261af683adf7ef0ef7351ee86737e4f19c22de55b6c3ec6d6",
+        "http": 200,
+        "time": 1794231019.5137277
+      },
       "sitemapStatus": "not_submitted"
     },
     "https://csv.abreda.com/": {

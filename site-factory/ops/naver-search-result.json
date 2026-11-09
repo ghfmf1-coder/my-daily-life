@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-09T11:45:50.159432+00:00",
+  "checkedAt": "2026-11-09T13:30:34.979227+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
     "No private login session is stored."
   ],
-  "roots": 47,
+  "roots": 48,
   "sites": [
     {
       "consoleStatus": "verified",
@@ -21,6 +21,20 @@
       "sitemapFile": "valid",
       "sitemapSubmission": "submitted",
       "url": "https://abreda.com/"
+    },
+    {
+      "consoleStatus": "not_registered",
+      "indexNow": {
+        "count": 2,
+        "http": 200,
+        "status": "received"
+      },
+      "indexing": "unknown",
+      "publication": "live",
+      "robotsSitemap": "present",
+      "sitemapFile": "valid",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://card-grading-lab.abreda.com/"
     },
     {
       "consoleStatus": "verified",
@@ -709,5 +723,5 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "07c5a9e489d0040c987efc75e58ffce4e04e9c24"
+  "sourceCommit": "d3c0e87debe6f74aa9202c370233b46ab2cda178"
 }
