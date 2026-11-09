@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://card-grading-lab.abreda.com/sitemap.xml
+Sitemap: https://tb-card-grading-lab.pages.dev/sitemap.xml
