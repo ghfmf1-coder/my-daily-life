@@ -35,3 +35,18 @@ assert.equal(unverified.d1.sessions,2);assert.equal(unverified.d1.unknownSession
 assert.equal(unverified.d1.unknownPageviews,8);assert.equal(unverified.d1.humanVerification,'unverified');
 assert.equal(unverified.d1.excludedSessions,8);assert.equal(JSON.stringify(unknownSource),frozen);
 console.log('PASS: unknown kept separate, no human verification claimed, historical rows unchanged');
+
+// Reported HTML page language is a property of an event, not a visitor's nationality.
+const languageSource={...windowSource,publicLanguageTraffic:[
+ {site_id:'new',visit_day:'2026-10-20',category:'unknown',page_lang:'ko',visits:2,pageviews:3,updated_at:checked},
+ {site_id:'new',visit_day:'2026-10-20',category:'unknown',page_lang:'en',visits:1,pageviews:2,updated_at:checked},
+ {site_id:'new',visit_day:'2026-10-14',category:'unknown',page_lang:'en',visits:1,pageviews:1,updated_at:checked},
+ {site_id:'new',visit_day:'2026-10-20',category:'bot',page_lang:'ko',visits:4,pageviews:4,updated_at:checked}
+ ],classLanguageTraffic:[{site_id:'old',visit_day:'2026-10-20',category:'unknown',page_lang:'ko',visits:88,pageviews:88,updated_at:checked}]};
+const l=integrateVisitWindows({date:'2026-10-20',entries:entries.map(e=>({...e}))},languageSource).entries[2].visitWindows;
+assert.equal(l.d1.language.ko.pageviews,3);assert.equal(l.d1.language.ko.sessions,2);
+assert.equal(l.d1.language.en.pageviews,2);assert.equal(l.d7.language.en.pageviews,3);
+assert.equal(l.d1.language.unknown.pageviews,null);assert.equal(l.d1.language.ko.pageviews<88,true);
+const missing=integrateVisitWindows({date:'2026-10-20',entries:entries.map(e=>({...e}))},windowSource).entries[2].visitWindows;
+assert.equal(missing.d1.language.ko.pageviews,null);assert.equal(missing.d1.language.unknown.pageviews,null);
+console.log('PASS: reported Korean/English page language, unknown history, bot exclusion and no legacy double count');

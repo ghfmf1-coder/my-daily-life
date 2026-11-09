@@ -58,6 +58,11 @@ export function integrateVisitWindows(report,legacy){
  const owner=(r,pub)=>{const raw=(pub?modern:roots).get(r.site_id);return report.entries.some(e=>e.url===raw)?raw:metricOwner(raw,report.entries)};
  const publicDays=new Set((legacy.publicTraffic||[]).map(r=>owner(r,true)+'|'+r.visit_day));
  const rows=[...(legacy.classifiedTraffic||[]).filter(r=>!publicDays.has(owner(r,false)+'|'+r.visit_day)).map(r=>({...r,url:owner(r,false)})),...(legacy.publicTraffic||[]).map(r=>({...r,url:owner(r,true)}))];
+
+ const languageRows=[
+  ...(legacy.classLanguageTraffic||[]).filter(r=>!publicDays.has(owner(r,false)+'|'+r.visit_day)).map(r=>({...r,url:owner(r,false)})),
+  ...(legacy.publicLanguageTraffic||[]).map(r=>({...r,url:owner(r,true)}))
+ ].filter(r=>r.url&&['ko','en','unknown'].includes(r.page_lang)&&['likely_human','unknown','bot','automated'].includes(r.category)&&Number.isSafeInteger(r.visits)&&Number.isSafeInteger(r.pageviews)&&r.visits>=0&&r.pageviews>=0);
  const unique=new Map();for(const r of rows){if(!r.url||!['likely_human','bot','automated','unknown'].includes(r.category)||!Number.isSafeInteger(r.visits)||r.visits<0||!Number.isSafeInteger(r.pageviews)||r.pageviews<0)continue;const key=[r.url,r.visit_day,r.category].join('|');if(!unique.has(key)||String(unique.get(key).updated_at)<String(r.updated_at))unique.set(key,r)}
  for(const e of report.entries){
   e.visitWindows={source:'Supabase classified daily',status:legacy.available?'no_report_row':'error',range:legacy.range||null,ga4:{status:'no_report_row',source:'Windsor.ai GA4',sessions:null,pageviews:null,toolCompletions:null,checkedAt:null}};
@@ -65,11 +70,13 @@ export function integrateVisitWindows(report,legacy){
    const unknown=found.filter(r=>r.category==='unknown');
    const human=found.filter(r=>r.category==='likely_human'),excluded=found.filter(r=>r.category==='bot'||r.category==='automated');
    const sum=(items,key)=>items.length?items.reduce((n,r)=>n+r[key],0):null;
-   e.visitWindows['d'+days]={start,end:report.date,sessions:sum(human,'visits'),pageviews:sum(human,'pageviews'),unknownSessions:sum(unknown,'visits'),unknownPageviews:sum(unknown,'pageviews'),humanVerification:'unverified',excludedSessions:sum(excluded,'visits'),excludedPageviews:sum(excluded,'pageviews'),observedDays:new Set(found.map(r=>r.visit_day)).size,lastCollectedAt:found.map(r=>r.updated_at).filter(Boolean).sort().at(-1)||null,toolCompletions:null};
+   const langFound=languageRows.filter(r=>r.url===e.url&&r.visit_day>=start&&r.visit_day<=report.date&&['unknown','likely_human'].includes(r.category));
+   const languages=Object.fromEntries(['ko','en','unknown'].map(pageLang=>{const items=langFound.filter(r=>r.page_lang===pageLang);return [pageLang,{sessions:sum(items,'visits'),pageviews:sum(items,'pageviews')}]}));
+   e.visitWindows['d'+days]={start,end:report.date,sessions:sum(human,'visits'),pageviews:sum(human,'pageviews'),unknownSessions:sum(unknown,'visits'),unknownPageviews:sum(unknown,'pageviews'),language:languages,humanVerification:'unverified',excludedSessions:sum(excluded,'visits'),excludedPageviews:sum(excluded,'pageviews'),observedDays:new Set(found.map(r=>r.visit_day)).size,lastCollectedAt:found.map(r=>r.updated_at).filter(Boolean).sort().at(-1)||null,toolCompletions:null};
   }
   const latest=e.visitWindows.d30.lastCollectedAt;
   if(latest)e.visitWindows.status=Date.now()-Date.parse(latest)>86400000?'stale':'observed';
  }
- report.visitWindowPolicy='Historical likely_human and current unknown are unverified observations, displayed separately; neither proves people or unique users. Missing days/categories remain unknown. Bot/automated counts are excluded and separate. GA4 and Supabase are not summed.';
+ report.visitWindowPolicy='Historical likely_human and current unknown are unverified observations, displayed separately; neither proves people or unique users. Historical page language stays unknown; ko/en reflect reported HTML page language, not visitor nationality. Bot/automated counts are excluded and separate. GA4 and Supabase are not summed.';
  return report;
 }
