@@ -36,8 +36,8 @@ if(mode==='plan'){
 const account=process.env.CLOUDFLARE_ACCOUNT_ID||'';
 const pagesToken=process.env.CLOUDFLARE_API_TOKEN||'';
 const dnsToken=process.env.CLOUDFLARE_DNS_TOKEN||'';
-if(!/^[a-f0-9]{32}$/i.test(account)||!pagesToken||/\\s/.test(pagesToken))throw Error('Missing/malformed Pages credentials');
-if(mode==='dns'&&(!dnsToken||/\\s/.test(dnsToken)))throw Error('CLOUDFLARE_DNS_TOKEN missing or malformed; no DNS changes attempted');
+if(!/^[a-f0-9]{32}$/i.test(account)||!pagesToken||/\s/.test(pagesToken))throw Error('Missing/malformed Pages credentials');
+if(mode==='dns'&&(!dnsToken||/\s/.test(dnsToken)))throw Error('CLOUDFLARE_DNS_TOKEN missing or malformed; no DNS changes attempted');
 const api='https://api.cloudflare.com/client/v4';
 async function cf(method,path,token,body){
   const response=await fetch(api+path,{method,headers:{Authorization:'Bearer '+token,Accept:'application/json',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});
@@ -70,25 +70,22 @@ for(const target of targets){
     output.push({id:target.id,domain:target.domain,result:'already_has_other_custom_domain'});
     continue;
   }
+  const domainPath=root+encodeURIComponent(target.project)+'/domains/'+encodeURIComponent(target.domain);
+  const check=await cf('GET',domainPath,pagesToken);
   if(mode==='attach'){
-    if(attached){
-      output.push({id:target.id,domain:target.domain,result:'already_attached'});
+    if(attached||check.ok){
+      output.push({id:target.id,domain:target.domain,result:check.ok&&check.data?.status==='deactivated'?'deactivated_waiting_dns':'already_registered',status:check.data?.status||null});
       continue;
     }
     const created=await cf('POST',root+encodeURIComponent(target.project)+'/domains',pagesToken,{name:target.domain});
     output.push({id:target.id,domain:target.domain,result:created.ok?'attached_pending_dns':'attach_failed',http:created.http,codes:created.codes});
     continue;
   }
-  if(!attached){
-    output.push({id:target.id,domain:target.domain,result:'not_attached'});
-    continue;
-  }
-  const check=await cf('GET',root+encodeURIComponent(target.project)+'/domains/'+encodeURIComponent(target.domain),pagesToken);
   if(mode==='status'){
-    output.push({id:target.id,domain:target.domain,result:check.ok?(check.data?.status||'unknown'):'status_failed',http:check.http,codes:check.codes});
+    output.push({id:target.id,domain:target.domain,result:check.ok?(check.data?.status||'unknown'):'not_attached',http:check.http,codes:check.codes});
     continue;
   }
-  if(!check.ok||check.data?.status==='blocked'||check.data?.status==='error'){
+  if(!check.ok||check.data?.status==='blocked'){
     output.push({id:target.id,domain:target.domain,result:'pages_domain_not_ready',http:check.http});
     continue;
   }
@@ -100,13 +97,19 @@ for(const target of targets){
   }
   const records=lookup.data||[];
   const expected=target.project+'.pages.dev';
+  let dnsResult;
   if(records.length){
-    const exact=records.length===1&&records[0].type==='CNAME'&&records[0].content.replace(/\\.$/,'').toLowerCase()===expected;
-    output.push({id:target.id,domain:target.domain,result:exact?'dns_already_correct':'dns_conflict_not_modified'});
-    continue;
+    const exact=records.length===1&&records[0].type==='CNAME'&&records[0].content.replace(/\.$/,'').toLowerCase()===expected;
+    dnsResult=exact?'dns_already_correct':'dns_conflict_not_modified';
+  }else{
+    const added=await cf('POST',dnsPath,dnsToken,{type:'CNAME',name:target.domain,content:expected,ttl:1,proxied:false});
+    dnsResult=added.ok?'dns_created':'dns_write_failed';
   }
-  const added=await cf('POST',dnsPath,dnsToken,{type:'CNAME',name:target.domain,content:expected,ttl:1,proxied:false});
-  output.push({id:target.id,domain:target.domain,result:added.ok?'dns_created':'dns_write_failed',http:added.http,codes:added.codes});
+  if((dnsResult==='dns_created'||dnsResult==='dns_already_correct')&&['deactivated','error'].includes(check.data?.status)){
+    const retry=await cf('PATCH',domainPath,pagesToken);
+    dnsResult+=retry.ok?'_validation_retried':'_validation_retry_failed';
+  }
+  output.push({id:target.id,domain:target.domain,result:dnsResult});
 }
 console.log('DOMAIN_MIGRATION_RESULT',JSON.stringify({mode,output}));
 if(output.some(x=>/failed|unavailable|mismatch|conflict/.test(x.result)))process.exitCode=1;
