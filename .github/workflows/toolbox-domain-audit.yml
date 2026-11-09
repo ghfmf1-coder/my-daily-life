@@ -34,9 +34,20 @@ jobs:
             const dnsJson=await dnsResponse.json().catch(()=>({}));
             console.log('DNS_CHECK',JSON.stringify({http:dnsResponse.status,apiSuccess:dnsJson.success===true,records:(dnsJson.result||[]).map(d=>({type:d.type,name:d.name,proxiable:d.proxiable,proxied:d.proxied,targetExpected:d.content===project+'.pages.dev'}))}));
           }
-          const pagesUrl='https://api.cloudflare.com/client/v4/accounts/'+account+'/pages/projects';
-          const pagesResponse=await fetch(pagesUrl,{headers:{Authorization:'Bearer '+token}});
-          const pagesJson=await pagesResponse.json().catch(()=>({}));
-          console.log('PAGES_INVENTORY',JSON.stringify({http:pagesResponse.status,success:pagesJson.success===true,total:pagesJson.result_info?.total_count||null,errors:(pagesJson.errors||[]).map(x=>({code:x.code,message:x.message})),projects:(pagesJson.result||[]).map(x=>({name:x.name,domains:(x.domains||[]).filter(d=>d==='abreda.com'||d.endsWith('.abreda.com'))})).filter(x=>x.name.startsWith('tb-'))}));
+          const allProjects=[];
+          const pageChecks=[];
+          let count=null;
+          for(let page=1;page<=12;page++){
+            const suffix=page===1?'':'?page='+page;
+            const pr=await fetch('https://api.cloudflare.com/client/v4/accounts/'+account+'/pages/projects'+suffix,{headers:{Authorization:'Bearer '+token}});
+            const pj=await pr.json().catch(()=>({}));
+            const arr=Array.isArray(pj.result)?pj.result:[];
+            pageChecks.push({page,http:pr.status,success:pj.success===true,returned:arr.length,errors:(pj.errors||[]).map(x=>x.code)});
+            if(!pr.ok||!pj.success)break;
+            allProjects.push(...arr);
+            count=pj.result_info?.total_count??null;
+            if(!arr.length||(count!==null&&allProjects.length>=count))break;
+          }
+          console.log('PAGES_INVENTORY',JSON.stringify({total:count,pages:pageChecks,projects:allProjects.map(x=>({name:x.name,domains:(x.domains||[]).filter(d=>d==='abreda.com'||d.endsWith('.abreda.com'))})).filter(x=>x.name.startsWith('tb-'))}));
           if(!r.ok||!json.success)process.exitCode=1;
           NODE
