@@ -13,6 +13,12 @@
       },
       "sitemapStatus": "submitted"
     },
+    "https://card-grading-lab.abreda.com/": {
+      "consoleStatus": "not_registered",
+      "contentDigest": "ac78589509407a874e4b09e6c3a8613dfa06d61ac469d9cbbd11587690d8667b",
+      "indexNowKey": "d7e01a3d1fdbd0f8bdfbc4e021cd6bed",
+      "sitemapStatus": "not_submitted"
+    },
     "https://csv.abreda.com/": {
       "consoleCheckedAt": "2026-10-23",
       "consoleStatus": "verified",
