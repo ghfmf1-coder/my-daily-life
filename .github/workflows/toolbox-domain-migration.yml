@@ -8,10 +8,10 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'attach: associate domains, status: read status, dns: add verified CNAMEs'
+        description: 'attach: associate, status: read, dns: add CNAMEs, retry: revalidate deactivated domains'
         required: true
         type: choice
-        options: [attach, status, dns, plan]
+        options: [attach, status, dns, plan, retry]
         default: status
 permissions:
   contents: read
@@ -32,5 +32,5 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_DNS_TOKEN: ${{ secrets.CLOUDFLARE_DNS_TOKEN }}
-          MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'status' }}
+          MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'retry' }}
         run: node site-factory/ops/migrate-domains.mjs "$MODE"
