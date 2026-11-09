@@ -24,7 +24,8 @@ Deno.serve(async(req)=>{
  let input;
  try{input=JSON.parse((await req.text()).slice(0,1201))}catch{return reply(400,{error:'invalid_json'},headers)}
  const {siteId,eventId,isVisit}=input||{};
- if(typeof siteId!=='string'||!allowed.some(([id])=>id===siteId)||!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(String(eventId))||typeof isVisit!=='boolean')
+ const pageLang=input?.pageLang===undefined?'unknown':input.pageLang;
+ if(typeof siteId!=='string'||!allowed.some(([id])=>id===siteId)||!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(String(eventId))||typeof isVisit!=='boolean'||!['ko','en','unknown'].includes(pageLang))
  return reply(400,{error:'invalid_event'},headers);
  const agent=(req.headers.get('user-agent')||'').slice(0,300);
  const knownBot=/bot|spider|crawler/i.test(agent);
@@ -42,7 +43,7 @@ Deno.serve(async(req)=>{
    const site=(await m.json()).sites?.find(s=>s.siteId===siteId&&new URL(s.url).origin===origin);if(!site)return reply(400,{error:'source_not_registered'},headers);
    const added=await fetch(base+'/rest/v1/toolbox_public_site_sources?on_conflict=site_id',{method:'POST',headers:{apikey:key,Authorization:'Bearer '+key,'Content-Type':'application/json',Prefer:'resolution=ignore-duplicates'},body:JSON.stringify({site_id:siteId,url:site.url,title:siteId})});if(!added.ok)throw Error('source_registration');
   }
-  const res=await fetch(base+'/rest/v1/rpc/record_toolbox_public_visit',{method:'POST',headers:{apikey:key,Authorization:'Bearer '+key,'Content-Type':'application/json'},body:JSON.stringify({p_event_id:eventId,p_site_id:siteId,p_category:category,p_is_visit:isVisit})});
+  const res=await fetch(base+'/rest/v1/rpc/record_toolbox_public_visit',{method:'POST',headers:{apikey:key,Authorization:'Bearer '+key,'Content-Type':'application/json'},body:JSON.stringify({p_event_id:eventId,p_site_id:siteId,p_category:category,p_is_visit:isVisit,p_page_lang:pageLang})});
   if(!res.ok){console.error('Traffic database response:',res.status);return reply(503,{error:'storage_error'},headers)}
   const inserted=await res.json();
   if(typeof inserted!=='boolean')return reply(503,{error:'invalid_storage_response'},headers);
