@@ -25,5 +25,14 @@ jobs:
           const json=await r.json().catch(()=>({}));
           const data=json?.result||{};
           console.log('CUSTOM_DOMAIN_CHECK',JSON.stringify({project,domain,http:r.status,apiSuccess:json.success===true,status:data.status||'unknown',verificationErrors:(json.errors||[]).map(e=>e.code).filter(Number.isInteger)}));
+          const zoneResponse=await fetch('https://api.cloudflare.com/client/v4/zones?name=abreda.com',{headers:{Authorization:'Bearer '+token}});
+          const zoneJson=await zoneResponse.json().catch(()=>({}));
+          const zone=zoneJson?.result?.find(z=>z.name==='abreda.com');
+          console.log('ZONE_CHECK',JSON.stringify({http:zoneResponse.status,apiSuccess:zoneJson.success===true,zoneFound:!!zone,codes:(zoneJson.errors||[]).map(e=>e.code).filter(Number.isInteger)}));
+          if(zone?.id){
+            const dnsResponse=await fetch('https://api.cloudflare.com/client/v4/zones/'+zone.id+'/dns_records?name='+encodeURIComponent(domain),{headers:{Authorization:'Bearer '+token}});
+            const dnsJson=await dnsResponse.json().catch(()=>({}));
+            console.log('DNS_CHECK',JSON.stringify({http:dnsResponse.status,apiSuccess:dnsJson.success===true,records:(dnsJson.result||[]).map(d=>({type:d.type,name:d.name,proxiable:d.proxiable,proxied:d.proxied,targetExpected:d.content===project+'.pages.dev'}))}));
+          }
           if(!r.ok||!json.success)process.exitCode=1;
           NODE
