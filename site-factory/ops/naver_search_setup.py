@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from datetime import datetime,timezone
 from google_search_setup import ROOT,ledger,source,git,persist,http
-from factory import prepare
+from factory import prepare,read_site,site_list
 STATE=ROOT/'site-factory/ops/naver-public-sites.json'
 RESULT=ROOT/'site-factory/ops/naver-search-result.json'
 AGENT='SmallToolbox-Naver-Discovery/1.0'
@@ -26,6 +26,23 @@ def urls_from_xml(xml,root):
         if raw not in urls:urls.append(raw)
     if not urls:raise ValueError('NO_PUBLIC_SITEMAP_URLS')
     return urls[:10000]
+def canonical_entries(entries):
+    """Avoid submitting a historical Pages alias as another independent site.
+
+    Only collapse the exact project alias when its configured representative
+    already exists in the real ledger and both resolve to the same project.
+    No registry, event, or historical receipt is removed.
+    """
+    aliases={}
+    for slug in site_list():
+        info,_=read_site(slug)
+        if not info.get('approved'):continue
+        project=info['project'];root=(info.get('canonical_url') or '').rstrip('/')+'/'
+        alias='https://'+project+'.pages.dev/'
+        if root!=alias and root in entries and alias in entries and entries[root]==entries[alias]==project:
+            aliases[alias]=root
+    return {u:p for u,p in entries.items() if u not in aliases},aliases
+
 def live_ready(url,row):
     try:
         html=public_text(url);proof=row.get('verificationContent')
@@ -106,8 +123,9 @@ def main():
         if host in aliases and entries[url]!=aliases[host]:
             print('NAVER_PROJECT_ALIAS:',json.dumps({'url':url,'ledgerProject':entries[url],'servingProject':aliases[host]}))
             entries[url]=aliases[host]
+    entries,canonical_aliases=canonical_entries(entries)
     state=json.loads(STATE.read_text()) if STATE.exists() else {'sites':{}}
-    sites=state['sites'];changed=[];jobs=[];results=[]
+    sites=state['sites'];changed=[];jobs=[];results=[{'url':url,'publication':'canonical_alias','canonicalTarget':target,'indexNow':{'status':'canonical_alias'},'indexing':'unknown','consoleStatus':sites.get(url,{}).get('consoleStatus','not_registered'),'sitemapSubmission':sites.get(url,{}).get('sitemapStatus','not_submitted')} for url,target in canonical_aliases.items()]
     for url,project in sorted(entries.items()):
         row=sites.setdefault(url,{'consoleStatus':'not_registered','sitemapStatus':'not_submitted'})
         try:
@@ -147,7 +165,7 @@ def main():
     report={'checkedAt':datetime.now(timezone.utc).isoformat(),'sourceCommit':git('rev-parse','HEAD'),'roots':len(entries),'sites':results,'limitations':['IndexNow is not Search Advisor console registration or sitemap submission.','No indexing guarantee.','No private login session is stored.']}
     STATE.write_text(json.dumps(state,indent=2,sort_keys=True)+'\n');RESULT.write_text(json.dumps(report,indent=2,sort_keys=True)+'\n')
     Path('/tmp/toolbox-naver-search-result.json').write_text(json.dumps(report,indent=2));persist([STATE,RESULT])
-    failed=[r for r in results if r.get('publication')!='live' or r.get('error') or r.get('indexNow',{}).get('status') not in ('received','key_validation_pending','previous_receipt')]
+    failed=[r for r in results if r.get('publication') not in ('live','canonical_alias') or r.get('error') or r.get('indexNow',{}).get('status') not in ('received','key_validation_pending','previous_receipt','canonical_alias')]
     pending=[r['url'] for r in results if r.get('consoleStatus')!='verified' or r.get('sitemapSubmission')!='submitted']
     print('NAVER_TECHNICAL_FAILURE_COUNT:',len(failed));print('NAVER_CONSOLE_PENDING_URLS:',json.dumps(pending))
     with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as summary:summary.write(f'## Naver public discovery\n\nRoots: {len(entries)}; technical failures: {len(failed)}; console ownership/submission pending: {len(pending)}.\n\nReceipt does not guarantee indexing or console registration.\n')
