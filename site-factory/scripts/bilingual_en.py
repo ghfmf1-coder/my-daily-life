@@ -428,14 +428,42 @@ def label_for(text:str,tag:str,entry:list,idx:int)->str:
     raw=' '.join(text.split())
     if not raw:return text
     if raw in UI:return text.replace(raw,UI[raw])
+    if raw.startswith('SMALL TOOLBOX') and re.search('[가-힣]',raw):
+        return 'SMALL TOOLBOX · '+entry[0]
+    if ('파일' in raw or '자료' in raw) and ('서버' in raw or '방문 통계' in raw or '방문 집계' in raw):
+        return 'Your file contents are processed in this browser, not uploaded for processing or included in visitor statistics.'
+    if '회원가입 없이' in raw and '업로드' in raw:
+        return 'No account is required. File contents are processed locally in your browser.'
+    if '개인정보 서버 미전송' in raw:
+        return 'Small Toolbox · File contents are processed locally'
+    if '지원 파일: UTF-8 CSV' in raw:
+        return 'Supported files: UTF-8 CSV, TSV and unencrypted XLSX (first worksheet), up to 16 MB and 50,000 rows per file. Scanned images and legacy XLS files are not supported.'
+    if '주문 관리 화면에서 다운로드한' in raw:
+        return 'Select the order CSV, TSV or XLSX exported from your store. Use a unique line-item or product-order number when possible.'
+    if '택배사 또는 배송 관리 프로그램에서 받은' in raw:
+        return 'Select the carrier or shipping-platform export. The order identifiers must correspond between the two files.'
+    if '송장 미매칭이 실제 미발송을 증명하지' in raw:
+        return 'An unmatched tracking number does not prove non-shipment. Packing multiple orders together or shipping one order in separate parcels can be legitimate.'
+    if '이 도구는 배송사 추적' in raw:
+        return 'This tool does not track parcels, refund transactions, verify identities or prove delivery. Review the original order and shipment records.'
+    if '파일을 선택하거나 예제 데이터' in raw:
+        return 'Choose the order and shipment files, or load the example dataset.'
+    if '확인이 필요한 주문과 해당 내용' in raw:
+        return 'Orders needing review and related details appear here.'
     if tag=='h1':return entry[0]
     if tag=='h2':
         for term,label in [('주의','Important limitations'),('한계','Known limits'),('결과','Results'),('출력','Output'),('안내','How it works'),('방법','How to use'),('입력','Input files'),('설정','Settings'),('제작','Create your result'),('검사','Inspection')]:
             if term in raw:return label
         return ['How it works','Input and processing','Review your output','Important details'][idx%4]
     if tag=='h3':return 'Details and next steps'
-    if tag in ('p','div','footer') and len(raw)>43:
-        return [entry[1],entry[2],entry[4],entry[3]][idx%4]
+    if tag in ('p','div','small','footer') and len(raw)>43:
+        # Classify the paragraph's actual purpose instead of cycling unrelated
+        # SEO snippets into the UI (which produced misleading instructions).
+        if any(k in raw for k in ('지원하지','확인할 수 없','검증하지','보장하지','오류','면책','정확히 반영하지','초과근무','제한','보존하지','주의','실패','불가','않습니다')):
+            return entry[4]
+        if any(k in raw for k in ('선택하세요','입력하세요','등록하세요','불러와','파일을 선택','설정하세요','검사하세요','확인하세요','만드세요')):
+            return entry[2]
+        return entry[1]
     # Retain button semantics, rather than generic text for every action.
     if tag in ('button','a','summary'):
         if '다운로드' in raw or '내려받' in raw:return 'Download '+('CSV' if 'CSV' in raw else 'PDF' if 'PDF' in raw else 'PNG' if 'PNG' in raw else 'ZIP' if 'ZIP' in raw else 'file')
@@ -465,7 +493,10 @@ def label_for(text:str,tag:str,entry:list,idx:int)->str:
         replaced=replaced.replace(korean,eng)
     if re.search('[가-힣]',replaced):
         # Keep source-specific instructions visible, not a fake full translation.
-        if tag in ('p','div','small','footer'):return entry[2] if idx%2 else entry[4]
+        if tag in ('p','div','small','footer'):
+            if any(k in raw for k in ('주의','지원하지','불가','보장','오류','않습니다')):return entry[4]
+            if any(k in raw for k in ('입력','선택','실행','진행','검사')):return entry[2]
+            return entry[1]
         if tag in ('label','option','th','td'):return 'Input '+str(idx+1) if tag=='label' else 'Choice '+str(idx+1)
         if tag in ('button','summary','a'):return 'Open or run'
         return entry[0]
@@ -499,6 +530,10 @@ class VisibleTranslator(HTMLParser):
         tag=self.tags[-1] if self.tags else ''
         if tag=='title':
             self.parts.append(escape(self.entry[0]+' | Small Toolbox'));return
+        if tag=='h1' and self.count.get('h1',0)>0:
+            # Some sources nest a subtitle inside the heading. Never print
+            # the complete title twice.
+            self.parts.append('');return
         if tag not in TEXT_TAGS:
             self.parts.append(data);return
         self.count[tag]=self.count.get(tag,0)+1
@@ -529,6 +564,8 @@ def localize_html(source,slug,ko_url,en_url,app_path=None):
                   lambda m:m.group(1)+' value="'+escape(m.group(3).strip(),quote=True)+'"'+m.group(2)+m.group(3)+m.group(4),source,flags=re.I)
     parser=VisibleTranslator(entry);parser.feed(source);parser.close()
     html=''.join(parser.parts)
+    # English navigation must not lead back to a Korean-only directory.
+    html=html.replace('href="https://abreda.com/new-tools/"','href="https://abreda.com/en/new-tools/"')
     # Site-specific, human-written field and action labels; preserve element IDs.
     for field,label in {**FIELD_LABELS.get(slug,{}),**WORK_FIELD_LABELS.get(slug,{})}.items():
         ident=re.escape(field)
@@ -638,11 +675,78 @@ def generate_work(slug,write=True):
     return result
 # Translation runs only on known UI strings; no rewriting of user-supplied files.
 RUNTIME=r"""(()=>{'use strict';if(document.documentElement.lang!=='en')return;
-const pairs=[['입력 후 실행하세요.','Enter the details and run the tool.'],['검사 전','Ready to inspect'],['검사 결과가 이곳에 표시됩니다.','Inspection results will appear here.'],['검사 완료','Inspection complete'],['완료','Complete'],['오류','Error'],['실패','Failed'],['누락','Missing'],['중복','Duplicate'],['통과','Pass'],['파일이 아직 없습니다.','No file selected.'],['파일을 먼저 선택하세요.','Choose a file first.'],['결과','Results'],['수량','Quantity'],['금액','Amount'],['행','rows'],['열','column'],['개','items'],['초','seconds'],['파일','file']];
-const dict=new Map(pairs);let active=false;
-function update(root){if(active)return;active=true;try{const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];while(walk.nextNode()){const n=walk.currentNode;const tag=n.parentElement?.tagName?.toLowerCase();if(['script','style','textarea','option','input'].includes(tag)||!/[가-힣]/.test(n.textContent)||n.textContent.length>200||n.parentElement?.closest('.tb-lang-switch'))continue;nodes.push(n)}for(const n of nodes){const raw=n.textContent,trim=raw.trim();if(dict.has(trim))n.textContent=raw.replace(trim,dict.get(trim));else {let v=raw;for(const [ko,en]of pairs)if(ko.length>=2)v=v.split(ko).join(en);if(v!==raw)n.textContent=v}}}finally{active=false}}
-const obs=new MutationObserver(items=>{if(active)return;for(const it of items)if(it.type==='childList'){for(const node of it.addedNodes){if(node.nodeType===1||node.nodeType===3)update(node.nodeType===3?node.parentNode:node)}}else if(it.type==='characterData')update(it.target.parentNode)});
-document.addEventListener('DOMContentLoaded',()=>{update(document.body);obs.observe(document.body,{subtree:true,childList:true,characterData:true})},{once:true});
+const phrases=[
+['입력 후 실행하세요.','Enter the details and run the tool.'],
+['입력한 뒤 실행하세요.','Enter the details and run the tool.'],
+['검사 결과가 이곳에 표시됩니다.','Inspection results appear here.'],
+['검사 전','Not yet inspected'],['검사하는 중...','Inspecting...'],
+['검사 완료','Inspection complete'],['측정 완료','Measurement complete'],
+['저장 완료','Saved'],['완료','Complete'],['오류','Error'],['실패','Failed'],
+['누락','Missing'],['중복','Duplicate'],['통과','Pass'],
+['미확인','Not checked'],['용량 초과','Too large'],
+['결과','Results'],['검사 결과','Inspection results'],
+['종류','Type'],['항목','Item'],['설명','Details'],['수량','Quantity'],
+['금액','Amount'],['파일명','Filename'],['원본 이름','Original filename'],
+['새 이름','New filename'],['원본 KB','Original KB'],['출력 KB','Output KB'],
+['상태','Status'],['페이지','Page'],['단계','Stage'],
+['원판','Source board'],['조각','Pieces'],['품목','Item'],
+['단가','Unit price'],['총금액','Total amount'],['총 합계','Grand total'],
+['순이익','Net profit'],['손익분기 판매가','Break-even selling price'],
+['공급가액','Subtotal before VAT'],['부가세','VAT'],
+['날짜','Date'],['이름','Name'],['개수','Count'],['합계','Total'],
+['주문','Order'],['메뉴','Menu'],['옵션','Options'],
+['검사 중','Checking'],['이름 없음','Untitled'],
+['준비','Preparation'],['작업','Work'],['검수','Review'],
+['명도 대비','Contrast ratio'],['AA 일반 문자','AA normal text'],
+['AA 큰 문자','AA large text'],['AAA 일반 문자','AAA normal text'],
+['AAA 큰 문자','AAA large text'],
+['미입금 후보','Unpaid invoice candidate'],['금액 불일치','Amount mismatch'],
+['복수 입금','Multiple payments'],['청구자료 검토','Review invoice data'],
+['입금자료 검토','Review payment data'],
+['품목코드','Item code'],['상품코드','Product code'],
+['중복 옵션','Duplicate option'],['중복 배정','Assignment overlap'],
+['수량 불일치','Quantity mismatch'],['자료 확인','Review source data'],
+['코드 또는 수량 없음','Missing code or quantity'],
+['한쪽 목록에만 존재','Only found in one file'],
+['검사 오류','Inspection error'],['준비 완료','Ready'],
+['파일이 아직 없습니다.','No file selected.'],
+['파일을 먼저 선택하세요.','Choose a file first.'],
+['파일이 필요합니다.','File required.'],
+['파일당 최대 16MB','Maximum 16MB per file.'],
+['CSV 제목/자료 형식을 확인하세요 (최대 50,000행).','Check the CSV header and rows (maximum 50,000 rows).']
+];
+const exact=new Map(phrases);
+const prefixes=[
+[/^명도 대비(?=\s)/,'Contrast ratio'],
+[/^순이익률(?=\s)/,'Profit margin'],
+[/^대체색(?=\s)/,'Suggested color'],
+[/^총금액(?=\s)/,'Total amount'],
+[/^반품(?=\s)/,'Return deadline'],
+[/^보증(?=\s)/,'Warranty'],
+[/^검사 오류:/,'Inspection error:'],
+[/^오류:/,'Error:'],
+[/^결과:/,'Results:'],
+[/^총 합계(?=\s)/,'Grand total'],
+[/^원판(?=\s)/,'Source board'],
+[/^조각(?=\s)/,'Pieces']
+];
+let modifying=false;
+function translate(node){
+ if(!node||node.nodeType!==3||!/[가-힣]/.test(node.textContent))return;
+ const el=node.parentElement;
+ if(!el||el.closest('script,style,textarea,option,pre,code,.tb-lang-switch,[contenteditable=true]'))return;
+ const raw=node.textContent,txt=raw.trim();
+ if(exact.has(txt)){node.textContent=raw.replace(txt,exact.get(txt));return}
+ // Avoid rewriting user-provided filenames, invoice IDs, and cell values.
+ if(el.closest('td,li'))return;
+ if(!el.closest('#status,#result,#out,#preview')&& !['th','h2','h3','span','small','p','label'].includes(el.tagName.toLowerCase()))return;
+ let next=raw;
+ for(const [re,label] of prefixes)next=next.replace(re,label);
+ if(next!==raw)node.textContent=next;
+}
+function scan(root){if(modifying)return;modifying=true;try{const tree=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[];while(tree.nextNode())if(tree.currentNode.textContent.length<300)nodes.push(tree.currentNode);nodes.forEach(translate)}finally{modifying=false}}
+const observer=new MutationObserver(changes=>{if(modifying)return;for(const c of changes){if(c.type==='characterData')scan(c.target.parentNode);else for(const n of c.addedNodes)if(n.nodeType===1||n.nodeType===3)scan(n.nodeType===3?n.parentNode:n)}});
+document.addEventListener('DOMContentLoaded',()=>{scan(document.body);observer.observe(document.body,{childList:true,characterData:true,subtree:true})},{once:true});
 })();""";
 
 def generate_work_catalog(directory):

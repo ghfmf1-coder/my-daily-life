@@ -7,6 +7,12 @@ on:
       - 'site-factory/ops/*editorial-content.json'
       - 'site-factory/tests/bilingual-fleet-browser.mjs'
       - '.github/workflows/bilingual-fleet-browser.yml'
+  pull_request:
+    paths:
+      - 'site-factory/scripts/bilingual_en.py'
+      - 'site-factory/ops/*editorial-content.json'
+      - 'site-factory/tests/bilingual-fleet-browser.mjs'
+      - '.github/workflows/bilingual-fleet-browser.yml'
 permissions:
   contents: read
 jobs:
