@@ -1,12 +1,23 @@
 {
-  "checkedAt": "2026-11-10T09:53:24.578138+00:00",
+  "checkedAt": "2026-11-10T09:58:27.473176+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
     "No private login session is stored."
   ],
-  "roots": 48,
+  "roots": 47,
   "sites": [
+    {
+      "canonicalTarget": "https://card-grading-lab.abreda.com/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-card-grading-lab.pages.dev/"
+    },
     {
       "consoleStatus": "verified",
       "indexNow": {
@@ -156,17 +167,6 @@
       "sitemapFile": "valid",
       "sitemapSubmission": "submitted",
       "url": "https://tb-camera-lens-check.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-card-grading-lab.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
@@ -724,5 +724,5 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "bf6820b220672318dbd665356ee162033e87cd9c"
+  "sourceCommit": "e68b8765c6b588b76bf3152d29331a7747a7fb44"
 }
