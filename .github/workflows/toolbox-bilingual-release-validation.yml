@@ -1,0 +1,26 @@
+name: Verify bilingual 70-tool release before publishing
+on:
+  push:
+    branches: [feat/bilingual-seo-fleet-20261110]
+  pull_request:
+    paths:
+      - 'site-factory/scripts/bilingual_en.py'
+      - 'site-factory/scripts/factory.py'
+      - 'site-factory/ops/bilingual-editorial-content.json'
+      - 'site-factory/sites/**/site.json'
+      - 'site-factory/tests/test_bilingual_fleet.py'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Existing and bilingual regression tests
+        run: python3 -m unittest discover -s site-factory/tests -v
+      - name: Existing CSV core
+        run: node site-factory/tests/test_csv_core.js

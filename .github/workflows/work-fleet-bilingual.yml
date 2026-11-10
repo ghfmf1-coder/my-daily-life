@@ -1,0 +1,85 @@
+name: Publish thirty real English Work tool pages
+on:
+  push:
+    branches: [main, feat/bilingual-seo-fleet-20261110]
+    paths:
+      - 'site-factory/scripts/bilingual_en.py'
+      - 'site-factory/ops/bilingual-editorial-content.json'
+      - '.github/workflows/work-fleet-bilingual.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: work-fleet-bilingual-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate all fifty translations and existing source behavior
+        run: |
+          python3 -m unittest discover -s site-factory/tests -v
+          python3 site-factory/scripts/bilingual_en.py --work all --check
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        site: ["audio-quality","certificate-batch","class-schedule-check","detail-image-review","dst-embroidery","epub-preflight","event-seating","exam-variants","inventory-diff","invoice-reconcile","lease-registry-diff","move-evidence","moving-boxes","option-combinations","pdf-preflight","photo-contact-sheet","photo-duplicates","purchase-three-way","question-similarity","shipping-audit","shotlist-maker","show-cues","silence-finder","static-site-check","survey-review","svg-laser-check","tournament-maker","trip-supplies","video-delivery-check","webtoon-preflight"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate English UI, bilingual canonical, language selector and sitemap
+        env:
+          SITE: ${{ matrix.site }}
+        run: python3 site-factory/scripts/bilingual_en.py --work "$SITE"
+      - name: Install Pages deploy client
+        run: npm install --no-save --no-package-lock wrangler@4
+      - name: Verify the existing Pages project, never create a new one
+        env:
+          CF_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          SITE: ${{ matrix.site }}
+        run: |
+          set -euo pipefail
+          test -n "$CF_ID" && test -n "$CF_TOKEN"
+          curl -fsS --retry 2 "https://api.cloudflare.com/client/v4/accounts/$CF_ID/pages/projects/tb-$SITE" -H "Authorization: Bearer $CF_TOKEN" -o /tmp/project.json
+          python3 -c "import json,os; x=json.load(open('/tmp/project.json')); assert x['success'] and x['result']['name']=='tb-'+os.environ['SITE'], 'Pages project not present'"
+      - name: Publish both real language pages to existing project
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          SITE: ${{ matrix.site }}
+        run: npx --no-install wrangler pages deploy "work-sites/$SITE/public" --project-name "tb-$SITE" --branch main --commit-hash "$GITHUB_SHA"
+      - name: Verify actual live English page (no homepage fallback)
+        env:
+          SITE: ${{ matrix.site }}
+        run: |
+          python3 - <<'PY'
+          import os,time,urllib.request
+          site=os.environ['SITE']
+          url='https://tb-'+site+'.pages.dev/en/'
+          for n in range(8):
+              try:
+                  request=urllib.request.Request(url,headers={'User-Agent':'SmallToolbox-i18n-QA/1.0'})
+                  with urllib.request.urlopen(request,timeout=15) as response:
+                      html=response.read().decode('utf-8','replace')
+                      assert response.status==200
+                      assert '<html lang="en"' in html
+                      assert 'rel="canonical" href="'+url+'"' in html
+                      assert 'class="tb-editorial"' in html
+                      print('ENGLISH_LIVE_PASS',site,url)
+                      break
+              except Exception:
+                  if n==7:raise
+                  time.sleep(5)
+          PY

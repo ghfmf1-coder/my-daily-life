@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 1,
+  "source": "Curated implementation-specific descriptions; not independent claims of standards compliance",
+  "sites": {
+    "privacy-redactor": [
+      "Privacy Redaction Tool",
+      "Cover personal details in a photo with solid black rectangles, then export a newly rendered PNG.",
+      "Choose a JPG, PNG or WebP image; drag a rectangle over every name, address or other sensitive detail; inspect the preview before saving.",
+      "A PNG containing opaque black patches over selected pixels.",
+      "There is no automatic text detection. Unselected details remain visible, and output images are limited to 4,096 pixels on the longest edge."
+    ],
+    "submission-auditor": [
+      "Submission File Checklist",
+      "Compare a list of required filenames with local attachments to find missing, duplicated and oversized files.",
+      "Enter one exact required filename per line, set the size ceiling in MB, select the actual files and run the comparison.",
+      "An on-screen report and downloadable CSV of each file and its checking status.",
+      "Only filenames and file sizes are checked; this is not a content, signature or formatting inspection."
+    ],
+    "shift-calendar": [
+      "Rotating Shift Calendar",
+      "Create a yearly rotating shift roster from an anchor date and repeating day, night or off-duty pattern.",
+      "Set the date for the first pattern entry, enter comma-separated shift names and choose the year; review the result and export ICS.",
+      "A dated shift table and an all-day calendar ICS import file.",
+      "Exact start/end work times, public holidays and shift swaps must be verified separately."
+    ],
+    "worktime-analyzer": [
+      "Task Time Recorder",
+      "Time each stage of a manual process and export completed measurements.",
+      "Enter the job and one stage per line; start the timer and mark a stage complete whenever the next stage begins.",
+      "A stage-by-stage time summary and CSV of completed measurements.",
+      "Closing the tab loses unsaved measurements. A single observation is not a production time standard."
+    ],
+    "label-sheet-maker": [
+      "A4 Label Sheet Maker",
+      "Arrange numbered, custom-size product labels on a printable A4 page.",
+      "Enter label text, dimensions in millimetres, quantity and optional starting serial number; check the sheet preview.",
+      "Printable A4 label pages that can be saved to PDF through the browser print dialog.",
+      "Real printed dimensions depend on print scaling and the printer's non-printable margins."
+    ],
+    "cut-plan-optimizer": [
+      "Board Cutting Layout",
+      "Lay out rectangular cuts on source boards while accounting for a specified saw kerf.",
+      "Enter source-board width and height, kerf, and each cut as width, height, quantity; enable rotation if allowed.",
+      "A board-by-board two-dimensional cut layout.",
+      "The shelf-packing heuristic is not an optimum solution and does not account for cut order, grain or machine clearance."
+    ],
+    "recurring-payment-finder": [
+      "Recurring Charge Finder",
+      "Look for the same merchant and amount appearing in multiple months of a local transaction CSV.",
+      "Choose a CSV with a header row, specify its date, merchant and amount column numbers and review repeated charges.",
+      "A downloadable CSV of recurring-charge candidates with their months and amounts.",
+      "Repeated purchases can be false positives; variable-price subscriptions and differing merchant names may be missed."
+    ],
+    "meal-timeline": [
+      "Meal Preparation Timeline",
+      "Work backward from a target mealtime to plan preparation and cooking for several dishes.",
+      "Enter the planned serving date/time and dishes as name, preparation minutes, cooking minutes; generate the schedule.",
+      "A chronological list of preparation, cooking and serving steps.",
+      "The plan does not resolve conflicts over burners, cookware or attention, so simultaneous tasks require review."
+    ],
+    "handover-checklist": [
+      "Item Handover Checklist",
+      "Record item condition, included accessories and photos before a handover or second-hand sale.",
+      "Describe the item, list accessories, tick those confirmed, add notes and optional images; generate the handover report.",
+      "A printable item checklist and photo record.",
+      "This is not an authenticated digital signature, proof of ownership or independent condition certification."
+    ],
+    "group-order-summary": [
+      "Group Order Organizer",
+      "Collect individual food or drink orders, combine item quantities and prepare a payment breakdown.",
+      "Add each person's name, menu choice, options, quantity and price; review menu totals and individual amounts.",
+      "A consolidated order table, CSV export and per-person packing labels.",
+      "Orders are not sent to a restaurant and prices reflect only the user-entered values."
+    ],
+    "image-compress-lab": [
+      "Batch Image Compressor",
+      "Resize and compress several JPG, PNG or WebP photos, then download the output as a ZIP archive.",
+      "Choose up to 40 images, output format, maximum dimensions and quality; optionally set a target size and run compression.",
+      "A ZIP with individually compressed images and a before/after size table.",
+      "Lossless PNG ignores the quality setting, and the target size is not guaranteed. EXIF metadata is not retained."
+    ],
+    "pdf-page-workshop": [
+      "PDF Page Organizer",
+      "Merge PDFs, rearrange, delete or rotate pages, and export a new document.",
+      "Upload up to eight non-encrypted PDF files, use the up/down or drag controls to rearrange pages, then download.",
+      "A newly assembled PDF with the selected page order and rotations.",
+      "Encrypted or damaged PDFs may fail; this tool does not edit OCR text or preserve every signature."
+    ],
+    "bulk-file-renamer": [
+      "Bulk File Renamer",
+      "Apply consistent prefixes, suffixes, substitutions and serial numbers to many files.",
+      "Select files, specify naming rules, preview each change and check for collisions before exporting.",
+      "A ZIP archive containing files with their new filenames.",
+      "Original files are not renamed in place. Operating-system filename constraints may vary."
+    ],
+    "room-layout-planner": [
+      "Room and Furniture Planner",
+      "Place furniture to scale on a room floor plan and identify overlaps before purchasing.",
+      "Enter room and furniture measurements in centimetres; drag, rotate or delete items to arrange the plan.",
+      "A floor plan saved as PNG and structured JSON.",
+      "Window, door placement and electrical connections are not surveyed automatically. Door clearance is illustrative."
+    ],
+    "quote-document-maker": [
+      "Quotation Document Maker",
+      "Create a printable itemized quotation or transaction statement from user-entered prices.",
+      "Enter company/customer names, product lines, quantities, unit prices and optional VAT; generate and print the document.",
+      "A formatted quotation or statement for browser printing or PDF saving.",
+      "This is not a government e-invoice or verification of tax registration; tax settings must be reviewed."
+    ],
+    "warranty-deadline-tracker": [
+      "Warranty and Returns Tracker",
+      "Keep purchase dates, return deadlines, warranty expiry dates and receipts together in the browser.",
+      "Enter a product and the merchant's actual deadlines; attach a receipt if needed; save the record and export a calendar file.",
+      "A local product list, JSON backup and ICS calendar events.",
+      "Data is stored in this browser only; clearing local data removes it unless backed up. Reminder alerts depend on importing the ICS."
+    ],
+    "share-qr-card": [
+      "QR Sharing Card Creator",
+      "Make printable QR sharing cards for web links, Wi-Fi details or contact information.",
+      "Select the information type, enter the relevant address or credentials, choose a caption and generate a QR image.",
+      "A PNG QR code and printable sharing card.",
+      "Wi-Fi passwords and contact details are readable inside the QR. Scan with a second device before public use."
+    ],
+    "seller-profit-math": [
+      "Online Seller Profit Calculator",
+      "Calculate per-item profit, profit margin and break-even sale price after costs and fees.",
+      "Enter sale price, cost, platform fees, packing, delivery and advertising costs; provide only independently verified tax rates.",
+      "An itemized profit summary and downloadable CSV.",
+      "Returns, discounts, local tax filing and specific marketplace fee rules are not determined automatically."
+    ],
+    "color-contrast-audit": [
+      "Text Color Contrast Checker",
+      "Check text against background colors using WCAG 2.2 contrast ratios.",
+      "Enter two six-digit HEX colors, run the contrast test and request a passing alternative when needed.",
+      "A contrast-ratio report and a copyable black-or-white candidate color.",
+      "Solid-color contrast alone does not establish compliance for fonts, transparency or image backgrounds."
+    ],
+    "document-scan-studio": [
+      "Document Perspective Corrector",
+      "Straighten photographed paper by positioning four corners and export a cleaned PNG.",
+      "Upload a photo, drag the four corners to the paper edges, pick color or grayscale output and apply correction.",
+      "A new rectified PNG image of the selected document region.",
+      "Blurry images, folded pages and unreadable details cannot be reconstructed. Thresholding can erase faint text."
+    ],
+    "audio-quality": [
+      "Audio Peak and Channel Inspector",
+      "Inspect sample rate, channel count, peak level and possible clipped samples in an audio file.",
+      "Select an audio file, run the local inspection, compare peak and channel values, then export a report.",
+      "Channel-level peak and possible-clipping measurements.",
+      "The tool does not establish LUFS, true peak or delivery compliance; decoded browser audio may differ from studio software."
+    ],
+    "certificate-batch": [
+      "Batch Certificate Maker",
+      "Turn a participant list into printable certificates for events or classes.",
+      "Choose a structured participant CSV, verify required name fields and generate the printable result.",
+      "Certificates ready for browser printing.",
+      "Confirm names, spelling and authorization before issuing; these are not officially authenticated awards."
+    ],
+    "class-schedule-check": [
+      "Class Schedule Conflict Checker",
+      "Find overlapping teaching or room assignments in an exported class timetable.",
+      "Provide a CSV with day, start, end, teacher and room columns; inspect flagged overlaps.",
+      "A conflict table and CSV report for manual scheduling changes.",
+      "Missing or inconsistent timetable identifiers may make conflicts invisible."
+    ],
+    "detail-image-review": [
+      "Product Detail Image Checker",
+      "Check image dimensions, ratio and file size before publishing a product detail page.",
+      "Choose product listing images and review per-image width, height and file size information.",
+      "A table identifying images requiring manual review.",
+      "This tool does not certify individual marketplace policy compliance or image rights."
+    ],
+    "dst-embroidery": [
+      "DST Embroidery File Inspector",
+      "Review stitch and jump commands before handing a DST design to an embroidery machine.",
+      "Choose a DST embroidery file, inspect command counts and review the machine setup separately.",
+      "A basic command and stitch summary.",
+      "A file-structure check cannot guarantee safe thread tension, stitch density or successful embroidery."
+    ],
+    "epub-preflight": [
+      "EPUB Structure Inspector",
+      "Check whether an EPUB has basic required ZIP components and ebook metadata.",
+      "Select an EPUB file and inspect its package structure and required entries.",
+      "A structural preflight checklist.",
+      "Not a full EPUBCheck conformance test or reader-device compatibility guarantee."
+    ],
+    "event-seating": [
+      "Event Seating Organizer",
+      "Distribute attendees into table groups and review the result before an event.",
+      "Import an attendee list, define grouping requirements and generate a table layout.",
+      "Printable or exportable seating assignments.",
+      "Accessibility needs, relationships and venue safety restrictions need human review."
+    ],
+    "exam-variants": [
+      "Exam Form Variants Maker",
+      "Create alternate question orders for different exam versions and corresponding answer keys.",
+      "Import questions, choose the required variants and compare generated orders with the original answer key.",
+      "Multiple exam forms and a matching answer key.",
+      "Content correctness, leakage and scoring policy are not verified by the tool."
+    ],
+    "inventory-diff": [
+      "Inventory Count Comparator",
+      "Compare stock ledger quantities to physical count quantities.",
+      "Choose stock and count CSV files keyed by product identifier, then inspect missing and mismatched items.",
+      "A list of quantity differences for follow-up.",
+      "Unit conversion, location transfers and cut-off dates must be reconciled separately."
+    ],
+    "invoice-reconcile": [
+      "Invoice Payment Reconciliation",
+      "Compare invoice amounts against bank receipt records to find unmatched or differing amounts.",
+      "Upload invoice and bank CSVs keyed by invoice number; examine missing payments and amount differences.",
+      "A discrepancy report and CSV export.",
+      "Partial payments and payer-name changes may require manual investigation."
+    ],
+    "lease-registry-diff": [
+      "Lease Registry Text Comparator",
+      "Compare text descriptions from two property registry snapshots.",
+      "Upload two text versions, inspect added and removed clauses and verify against the originals.",
+      "A before/after text difference report.",
+      "This is not legal advice, registry authenticity verification or title insurance."
+    ],
+    "move-evidence": [
+      "Move-In Photo Evidence Organizer",
+      "Organize property condition photos and notes for a move-in or move-out inspection.",
+      "Group photos by room and observed issue, check dates and save a printable record.",
+      "A property-condition photo report.",
+      "Photo records do not establish liability or replace the official tenancy agreement."
+    ],
+    "moving-boxes": [
+      "Moving Box Inventory",
+      "Track which belongings are packed in each numbered moving box.",
+      "Enter box numbers and contents and review the packed-item list before moving.",
+      "An organized box-to-item list for unpacking.",
+      "The list is based on user entries and does not physically confirm the contents."
+    ],
+    "option-combinations": [
+      "Product Option Duplicate Checker",
+      "Detect repeated color, size or other product option combinations in an exported CSV.",
+      "Import a product options CSV and inspect duplicate or conflicting combinations.",
+      "A duplicate-option report.",
+      "The tool does not validate stock availability or platform-specific listing rules."
+    ],
+    "pdf-preflight": [
+      "Print PDF Preflight",
+      "Inspect PDF page boxes and dimensions before commercial printing.",
+      "Select a PDF and review page dimensions, trim and bleed box information.",
+      "A PDF layout and page-box report.",
+      "Actual printer tolerances, color profiles and fonts require separate professional proofing."
+    ],
+    "photo-contact-sheet": [
+      "Photo Contact Sheet",
+      "Arrange selected pictures into a printable thumbnail index.",
+      "Choose image files and layout settings, then inspect the sheet in the browser.",
+      "A printable contact sheet.",
+      "The layout does not validate image rights or guarantee printer color accuracy."
+    ],
+    "photo-duplicates": [
+      "Duplicate Photo Finder",
+      "Compare files to find exact binary duplicates using file hashes.",
+      "Select image files and inspect groups with matching hashes.",
+      "A list of identical files for manual cleanup.",
+      "Resized or recompressed copies with different file contents will not match."
+    ],
+    "purchase-three-way": [
+      "Purchase Order Three-Way Match",
+      "Compare purchase orders, delivery records and invoices to find mismatched quantities and prices.",
+      "Upload the three CSV sources keyed by SKU and inspect differences before payment.",
+      "A discrepancy report for procurement review.",
+      "This does not authorize purchasing or prove goods were received in good condition."
+    ],
+    "question-similarity": [
+      "Question Bank Duplicate Finder",
+      "Identify similar or repeated questions in an exported question CSV.",
+      "Import the question list, inspect similar entries and decide which to consolidate.",
+      "A candidate list of repeated questions.",
+      "A text similarity score does not establish equal meaning or correct answers."
+    ],
+    "shipping-audit": [
+      "Shipping Label Audit",
+      "Compare store orders with tracking-label exports before dispatch.",
+      "Choose order and shipment files, map order identifiers and review missing, duplicate or unexpected tracking assignments.",
+      "A shipment exception list with CSV export.",
+      "A mismatch is not proof of non-delivery; combined parcels and split shipments need manual interpretation."
+    ],
+    "shotlist-maker": [
+      "Film Shoot Shot List Maker",
+      "Organize planned shots, scenes and filming locations for a production day.",
+      "Enter or import scene and shot details, review sequence and export the list.",
+      "A production shot list.",
+      "This does not determine real filming permits, crew safety or shoot feasibility."
+    ],
+    "show-cues": [
+      "Performance Cue Sheet Checker",
+      "Check time ordering and possible overlaps in event or stage cue sheets.",
+      "Import cue times and descriptions, inspect ordering conflicts and save a corrected planning list.",
+      "A cue timing exception report.",
+      "Live show operations depend on venue and human stage management."
+    ],
+    "silence-finder": [
+      "Audio Silence Locator",
+      "Locate quiet or silent intervals in an audio recording.",
+      "Choose an audio file, inspect detected low-level segments and review them against playback.",
+      "A list of potential silent intervals and timestamps.",
+      "Noise floors and intentionally quiet passages can affect detection; review by listening."
+    ],
+    "static-site-check": [
+      "Static Website Asset Checker",
+      "Find broken local links and missing referenced assets in a static site package.",
+      "Provide site files, inspect resource references and check any reported missing paths.",
+      "A list of potentially broken internal resources.",
+      "Dynamic network requests and server routes are not fully validated."
+    ],
+    "survey-review": [
+      "Survey Data Review",
+      "Inspect survey CSV data for missing entries and inconsistent response fields.",
+      "Import an exported survey table, run checks and review the flagged responses.",
+      "An audit report for survey-data cleaning.",
+      "This does not determine whether the survey sample is unbiased or statistically representative."
+    ],
+    "svg-laser-check": [
+      "SVG Laser Cutting Preflight",
+      "Inspect an SVG's dimensions and basic elements before sending it to a laser cutter.",
+      "Choose a vector SVG and review dimensions, strokes and warning indicators.",
+      "A basic SVG preflight report.",
+      "Material parameters, cut power and physical machine safety are not verified."
+    ],
+    "tournament-maker": [
+      "Tournament Bracket Maker",
+      "Generate a tournament fixture bracket from a participant list.",
+      "Enter the participants and tournament format, then inspect the bracket layout.",
+      "A printable tournament bracket.",
+      "This is a scheduling aid, not an official organizer or result-verification service."
+    ],
+    "trip-supplies": [
+      "Travel Packing Checklist",
+      "Prepare a practical packing checklist for a planned trip.",
+      "Enter trip details and customize the generated item list before departure.",
+      "A personal packing checklist.",
+      "Weather, local restrictions and personal medical supplies must be checked independently."
+    ],
+    "video-delivery-check": [
+      "Video Delivery Spec Inspector",
+      "Inspect basic codec, size and format information before submitting a video.",
+      "Select a media file and compare reported properties with the recipient's specification.",
+      "A technical media preflight summary.",
+      "Playback quality, loudness and platform transcoding are not guaranteed."
+    ],
+    "webtoon-preflight": [
+      "Webtoon Upload Preflight",
+      "Inspect webtoon image sequence dimensions and file properties before upload.",
+      "Select page images, review order, width and size flags, then export the inspection result.",
+      "A file-by-file webtoon preflight report.",
+      "Individual publishing-platform restrictions and image rights need separate confirmation."
+    ]
+  }
+}

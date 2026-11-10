@@ -6,5 +6,10 @@
   "approved": true,
   "canonical_url": "https://tb-worktime-analyzer.pages.dev",
   "ga4_measurement_id": "G-YHSK49NC2E",
-  "ga4_collection_enabled": true
+  "ga4_collection_enabled": true,
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": true
 }
