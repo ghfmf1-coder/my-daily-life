@@ -389,9 +389,9 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             dest=out/'tools'/tool_slug
             dest.mkdir(parents=True,exist_ok=True)
             html=original.read_text(encoding='utf-8')
-            canonical='https://abreda.com/tools/'+tool_slug+'/'
+            tool_canonical='https://abreda.com/tools/'+tool_slug+'/'
             html=re.sub(r'<link\s+rel=["\']canonical["\'][^>]*>','',html,flags=re.I)
-            html=html.replace('</head>','<link rel="canonical" href="'+canonical+'"></head>',1)
+            html=html.replace('</head>','<link rel="canonical" href="'+tool_canonical+'"></head>',1)
             (dest/'index.html').write_text(html,encoding='utf-8')
             for asset in source.iterdir():
                 if asset.is_file() and asset.suffix.lower() in ALLOWED_EXT and asset.name!='index.html':

@@ -10,6 +10,7 @@ class SecondTen(unittest.TestCase):
             with self.subTest(slug=slug):
                 cfg=validate_site(slug,require_approval=True)
                 self.assertEqual(cfg['project'],'tb-'+slug)
+                self.assertEqual(cfg['deploy_mode'],'hub_only')
                 src=ROOT/'site-factory'/'sites'/slug/'public'
                 subprocess.run(['node','--check',str(src/'app.js')],check=True,capture_output=True)
                 html=(src/'index.html').read_text()
@@ -23,6 +24,9 @@ class SecondTen(unittest.TestCase):
             hub=Path(directory)/'hub'
             prepare('toolbox-hub',hub)
             index=(hub/'index.html').read_text()
+            self.assertIn('rel="canonical" href="https://abreda.com/"',index)
+            self.assertNotIn('group-order-summary//',index)
+            self.assertIn('rel="canonical" href="https://abreda.com/en/"',(hub/'en/index.html').read_text())
             xml=(hub/'sitemap.xml').read_text()
             for slug in NEW:
                 with self.subTest(slug=slug):
@@ -38,6 +42,14 @@ class SecondTen(unittest.TestCase):
                 matches=[s for s in catalog if s['slug']==slug]
                 self.assertEqual(len(matches),1)
                 self.assertEqual(matches[0]['url'],'https://abreda.com/tools/'+slug+'/')
+    def test_new_tools_cannot_create_standalone_projects(self):
+        output=subprocess.check_output([sys.executable,str(ROOT/'site-factory/scripts/targets.py'),'--site','image-compress-lab'],text=True)
+        matrix=json.loads(next(line[7:] for line in output.splitlines() if line.startswith('MATRIX=')))
+        self.assertEqual(matrix,['toolbox-hub','toolbox-admin'])
+        run=subprocess.run([sys.executable,str(ROOT/'site-factory/scripts/deploy_site.py'),'--site','image-compress-lab','--dry-run'],capture_output=True,text=True)
+        self.assertNotEqual(run.returncode,0)
+        self.assertIn('HUB_ONLY',run.stderr)
+
     def test_visit_manifest(self):
         m=json.loads((ROOT/'site-factory'/'ops'/'visit-sites.json').read_text())['sites']
         for slug in NEW:

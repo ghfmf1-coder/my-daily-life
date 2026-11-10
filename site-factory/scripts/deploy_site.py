@@ -64,6 +64,9 @@ def main():
     p.add_argument('--attach-domain',action='store_true')
     p.add_argument('--dry-run',action='store_true')
     args=p.parse_args()
+    configured,_=__import__('factory').read_site(args.site)
+    if configured.get('deploy_mode')=='hub_only':
+        raise SystemExit('HUB_ONLY: deploy toolbox-hub; no standalone Pages project may be created')
     out=ROOT/'.build'/args.site
     data,canonical=prepare(args.site,out)
     print(f'VALIDATED: {args.site}; canonical={canonical}; project={data["project"]}')

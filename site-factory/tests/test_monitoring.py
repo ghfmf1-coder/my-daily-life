@@ -56,6 +56,22 @@ class HealthMonitoringTests(unittest.TestCase):
     def test_non_migrated_site_retains_own_canonical(self):
         site=next(x for x in mod.roster() if x['slug']=='novel-planner')
         self.assertEqual(mod.representative_urls(site)['ko'],site['origin']+'/')
+    def test_native_tools_use_hub_page_and_shared_files(self):
+        import factory
+        site=next(x for x in mod.roster() if x['slug']=='image-compress-lab')
+        self.assertEqual(site['origin'],'https://abreda.com')
+        self.assertEqual(site['page_path'],'/tools/image-compress-lab/')
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);factory.prepare('toolbox-hub',root)
+            def response(url,max_bytes=mod.MAX_BYTES):
+                path=__import__('urllib.parse',fromlist=['urlparse']).urlparse(url).path
+                file=root/(path.strip('/')+'/index.html' if path.endswith('/') else path.lstrip('/'))
+                return {'status':200,'url':url,'content_type':'text/html' if file.suffix=='.html' else 'application/octet-stream','body':file.read_bytes(),'elapsed_ms':1}
+            with patch.object(mod,'fetch',response):
+                result=mod.check_site(site)
+                self.assertEqual(result['status'],'pass',result['failures'])
+        self.assertEqual(mod.create_site_record(site)['url'],'https://abreda.com/tools/image-compress-lab/')
+
     def test_result_does_not_expose_user_records(self):
         s=mod.roster()[0]
         record=mod.create_site_record(s)

@@ -1,9 +1,5 @@
 name: Priority publish second ten tools on existing abreda.com and admin
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/toolbox-second-ten-priority.yml'
   workflow_dispatch:
 permissions:
   contents: read

@@ -21,7 +21,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "site-factory" / "scripts"))
-from factory import read_site, site_list  # noqa: E402
+from factory import read_site, site_list, NATIVE_ROOT_TOOLS  # noqa: E402
 
 USER_AGENT = "SmallToolbox-Maintenance/1.0 (+https://github.com/ghfmf1-coder/my-daily-life)"
 MAX_BYTES = 1_800_000
@@ -63,7 +63,7 @@ MIGRATED_TO_HUB = frozenset({'csv-column-extractor', 'csv-empty-row-remover',
 
 def representative_urls(site):
     """The fetch origin is an alias; metadata still names the public canonical."""
-    if site['slug'] in MIGRATED_TO_HUB:
+    if site['slug'] in MIGRATED_TO_HUB or site['slug'] in NATIVE_ROOT_TOOLS:
         return {'ko': 'https://abreda.com/tools/' + site['slug'] + '/',
                 'en': 'https://abreda.com/en/tools/' + site['slug'] + '/'}
     return {'ko': site['origin'] + '/', 'en': site['origin'] + '/en/'}
@@ -78,7 +78,9 @@ def roster():
         host = urllib.parse.urlparse(url).hostname
         if host not in ALLOWED_HOSTS and host != f"{info['project']}.pages.dev" and host != info.get("domain"):
             raise ValueError("Unapproved monitored host: " + str(host))
-        sites.append({"slug": slug, "name": info["title"], "origin": url,
+        if slug in NATIVE_ROOT_TOOLS:
+            url="https://abreda.com"
+        sites.append({"page_path": "/tools/"+slug+"/" if slug in NATIVE_ROOT_TOOLS else "/", "slug": slug, "name": info["title"], "origin": url,
                       "locales": info.get("locales", ["ko"]),
                       "internal": slug in ("toolbox-admin", "deployment-check"), "independent": False})
     return sites
@@ -106,7 +108,7 @@ def fetch(url, max_bytes=MAX_BYTES):
     raise RuntimeError("HTTP fetch failed after 3 attempts: " + str(last))
 
 def create_site_record(site):
-    return {"slug": site["slug"], "name": site["name"], "url": site["origin"] + "/",
+    return {"slug": site["slug"], "name": site["name"], "url": site["origin"] + site.get("page_path","/"),
             "type": "internal" if site["internal"] else "public",
             "status": "pass", "checks": [], "warnings": [], "failures": []}
 
@@ -199,7 +201,7 @@ def check_site(site):
             pass
     is_internal = site["internal"]
     locales = site["locales"]
-    root = safe_page(site,result,"/",lang="ko",indexable=not is_internal)
+    root = safe_page(site,result,site.get("page_path","/"),lang="ko",indexable=not is_internal)
     english = None
     if "en" in locales and not is_internal:
         english = safe_page(site,result,"/en/",lang="en",indexable=True)
@@ -223,7 +225,7 @@ def check_site(site):
             record(result,"sitemap_xml",False,str(ex))
     if root:
         for item in root.scripts[:12]:
-            target=urllib.parse.urljoin(origin+"/",item)
+            target=urllib.parse.urljoin(origin+site.get("page_path","/"),item)
             if urllib.parse.urlparse(target).hostname == urllib.parse.urlparse(origin).hostname:
                 check_file(site,result,urllib.parse.urlparse(target).path,kind="script")
     if english:

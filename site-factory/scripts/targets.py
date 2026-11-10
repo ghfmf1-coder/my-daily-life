@@ -36,6 +36,9 @@ approved=[]
 for slug in selected:
     try:
         d,_ = read_site(slug)
+        if d.get('deploy_mode')=='hub_only':
+            print('SERVED_BY_HUB='+slug)
+            continue
         if d['approved']:
             approved.append(slug)
         else:
@@ -44,4 +47,5 @@ for slug in selected:
         # Newly deleted sites don't require a deploy; invalid existing sites must fail safely.
         if slug not in all_sites: continue
         raise SystemExit(str(ex))
+approved.sort(key=lambda slug: (0 if slug=='toolbox-hub' else 1 if slug=='toolbox-admin' else 2,slug))
 print('MATRIX='+json.dumps(approved,separators=(',',':')))
