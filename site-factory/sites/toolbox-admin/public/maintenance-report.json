@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-10T09:54:50+00:00",
-  "status": "pass",
+  "checkedAt": "2026-11-10T11:32:46+00:00",
+  "status": "fail",
   "summary": {
     "sites": 44,
-    "sitePassed": 44,
+    "sitePassed": 34,
     "siteWarnings": 0,
-    "siteFailed": 0,
+    "siteFailed": 10,
     "browserPassed": 12,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 0
+    "issues": 78
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 139ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 132ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -330,12 +330,12 @@
       "name": "파일명 일괄 정리왕",
       "url": "https://abreda.com/tools/bulk-file-renamer/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 280ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 157ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -361,6 +361,56 @@
           "check": "canonical_ko",
           "status": "pass",
           "detail": "https://abreda.com/tools/bulk-file-renamer/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -389,7 +439,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 39"
         },
         {
@@ -411,10 +461,34 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_bulk-file-renamer_app.js",
+          "status": "fail",
+          "detail": "HTTP 200, 54302 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1451 bytes"
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "hreflang_ko_ko: missing",
+        "hreflang_ko_en: missing",
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://abreda.com/",
+        "hreflang_en_ko: https://abreda.com/",
+        "hreflang_en_en: https://abreda.com/en/",
+        "sitemap_content: entries: 39",
+        "script_en_tools_bulk-file-renamer_app.js: HTTP 200, 54302 bytes"
+      ]
     },
     {
       "slug": "camera-lens-check",
@@ -426,7 +500,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -466,7 +540,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -557,7 +631,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 276ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 353ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -597,7 +671,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 235ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 249ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -683,12 +757,12 @@
       "name": "색상 대비 검수관",
       "url": "https://abreda.com/tools/color-contrast-audit/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 231ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -714,6 +788,56 @@
           "check": "canonical_ko",
           "status": "pass",
           "detail": "https://abreda.com/tools/color-contrast-audit/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -742,7 +866,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 39"
         },
         {
@@ -759,10 +883,34 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_color-contrast-audit_app.js",
+          "status": "fail",
+          "detail": "HTTP 200, 54302 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1451 bytes"
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "hreflang_ko_ko: missing",
+        "hreflang_ko_en: missing",
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://abreda.com/",
+        "hreflang_en_ko: https://abreda.com/",
+        "hreflang_en_en: https://abreda.com/en/",
+        "sitemap_content: entries: 39",
+        "script_en_tools_color-contrast-audit_app.js: HTTP 200, 54302 bytes"
+      ]
     },
     {
       "slug": "comic-condition-lab",
@@ -774,7 +922,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -814,7 +962,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -905,7 +1053,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 102ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -945,7 +1093,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1036,7 +1184,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1076,7 +1224,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1167,7 +1315,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 241ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 181ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1207,7 +1355,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 209ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1323,12 +1471,12 @@
       "name": "자재 재단 설계실",
       "url": "https://abreda.com/tools/cut-plan-optimizer/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 202ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1354,6 +1502,56 @@
           "check": "canonical_ko",
           "status": "pass",
           "detail": "https://abreda.com/tools/cut-plan-optimizer/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -1382,7 +1580,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 39"
         },
         {
@@ -1399,10 +1597,34 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_cut-plan-optimizer_app.js",
+          "status": "fail",
+          "detail": "HTTP 200, 54302 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1451 bytes"
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "hreflang_ko_ko: missing",
+        "hreflang_ko_en: missing",
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://abreda.com/",
+        "hreflang_en_ko: https://abreda.com/",
+        "hreflang_en_en: https://abreda.com/en/",
+        "sitemap_content: entries: 39",
+        "script_en_tools_cut-plan-optimizer_app.js: HTTP 200, 54302 bytes"
+      ]
     },
     {
       "slug": "deployment-check",
@@ -1414,7 +1636,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 244ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1480,12 +1702,12 @@
       "name": "문서 스캔 보정소",
       "url": "https://abreda.com/tools/document-scan-studio/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 198ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 116ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1511,6 +1733,56 @@
           "check": "canonical_ko",
           "status": "pass",
           "detail": "https://abreda.com/tools/document-scan-studio/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -1539,7 +1811,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 39"
         },
         {
@@ -1556,10 +1828,34 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_document-scan-studio_app.js",
+          "status": "fail",
+          "detail": "HTTP 200, 54302 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1451 bytes"
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "hreflang_ko_ko: missing",
+        "hreflang_ko_en: missing",
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://abreda.com/",
+        "hreflang_en_ko: https://abreda.com/",
+        "hreflang_en_en: https://abreda.com/en/",
+        "sitemap_content: entries: 39",
+        "script_en_tools_document-scan-studio_app.js: HTTP 200, 54302 bytes"
+      ]
     },
     {
       "slug": "gem-photo-inspection",
@@ -1571,7 +1867,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 132ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1611,7 +1907,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1697,12 +1993,12 @@
       "name": "단체주문 정리왕",
       "url": "https://abreda.com/tools/group-order-summary/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 240ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1730,6 +2026,56 @@
           "detail": "https://abreda.com/tools/group-order-summary/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://abreda.com/en/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -1756,7 +2102,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 39"
         },
         {
@@ -1773,22 +2119,46 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_group-order-summary_app.js",
+          "status": "fail",
+          "detail": "HTTP 200, 54302 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1451 bytes"
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "hreflang_ko_ko: missing",
+        "hreflang_ko_en: missing",
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://abreda.com/",
+        "hreflang_en_ko: https://abreda.com/",
+        "hreflang_en_en: https://abreda.com/en/",
+        "sitemap_content: entries: 39",
+        "script_en_tools_group-order-summary_app.js: HTTP 200, 54302 bytes"
+      ]
     },
     {
       "slug": "handover-checklist",
       "name": "구성품 확인증 제작소",
       "url": "https://abreda.com/tools/handover-checklist/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 198ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 102ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1816,6 +2186,56 @@
           "detail": "https://abreda.com/tools/handover-checklist/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://abreda.com/en/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -1842,7 +2262,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 39"
         },
         {
@@ -1859,22 +2279,46 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_handover-checklist_app.js",
+          "status": "fail",
+          "detail": "HTTP 200, 54302 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1451 bytes"
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "hreflang_ko_ko: missing",
+        "hreflang_ko_en: missing",
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://abreda.com/",
+        "hreflang_en_ko: https://abreda.com/",
+        "hreflang_en_en: https://abreda.com/en/",
+        "sitemap_content: entries: 39",
+        "script_en_tools_handover-checklist_app.js: HTTP 200, 54302 bytes"
+      ]
     },
     {
       "slug": "image-compress-lab",
       "name": "사진 용량 다이어트",
       "url": "https://abreda.com/tools/image-compress-lab/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 273ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1902,6 +2346,56 @@
           "detail": "https://abreda.com/tools/image-compress-lab/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://abreda.com/en/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -1928,7 +2422,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 39"
         },
         {
@@ -1950,10 +2444,34 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_image-compress-lab_app.js",
+          "status": "fail",
+          "detail": "HTTP 200, 54302 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1451 bytes"
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "hreflang_ko_ko: missing",
+        "hreflang_ko_en: missing",
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://abreda.com/",
+        "hreflang_en_ko: https://abreda.com/",
+        "hreflang_en_en: https://abreda.com/en/",
+        "sitemap_content: entries: 39",
+        "script_en_tools_image-compress-lab_app.js: HTTP 200, 54302 bytes"
+      ]
     },
     {
       "slug": "jsonl-validator",
@@ -1965,7 +2483,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 142ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2005,7 +2523,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 112ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2096,7 +2614,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2136,7 +2654,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2222,12 +2740,12 @@
       "name": "실측 라벨 제작소",
       "url": "https://abreda.com/tools/label-sheet-maker/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 199ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2253,6 +2771,56 @@
           "check": "canonical_ko",
           "status": "pass",
           "detail": "https://abreda.com/tools/label-sheet-maker/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 43ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -2281,7 +2849,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 39"
         },
         {
@@ -2298,10 +2866,34 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_label-sheet-maker_app.js",
+          "status": "fail",
+          "detail": "HTTP 200, 54302 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1451 bytes"
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "hreflang_ko_ko: missing",
+        "hreflang_ko_en: missing",
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://abreda.com/",
+        "hreflang_en_ko: https://abreda.com/",
+        "hreflang_en_en: https://abreda.com/en/",
+        "sitemap_content: entries: 39",
+        "script_en_tools_label-sheet-maker_app.js: HTTP 200, 54302 bytes"
+      ]
     },
     {
       "slug": "manuscript-lens",
@@ -2313,7 +2905,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 264ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2353,7 +2945,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 207ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2459,12 +3051,12 @@
       "name": "동시요리 타임라인",
       "url": "https://abreda.com/tools/meal-timeline/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 168ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2490,6 +3082,56 @@
           "check": "canonical_ko",
           "status": "pass",
           "detail": "https://abreda.com/tools/meal-timeline/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://abreda.com/en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -2518,7 +3160,7 @@
         },
         {
           "check": "sitemap_content",
-          "status": "pass",
+          "status": "fail",
           "detail": "entries: 39"
         },
         {
@@ -2535,10 +3177,34 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_meal-timeline_app.js",
+          "status": "fail",
+          "detail": "HTTP 200, 54302 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1451 bytes"
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "hreflang_ko_ko: missing",
+        "hreflang_ko_en: missing",
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://abreda.com/",
+        "hreflang_en_ko: https://abreda.com/",
+        "hreflang_en_en: https://abreda.com/en/",
+        "sitemap_content: entries: 39",
+        "script_en_tools_meal-timeline_app.js: HTTP 200, 54302 bytes"
+      ]
     },
     {
       "slug": "novel-planner",
@@ -2550,7 +3216,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 223ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2590,7 +3256,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 180ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2696,12 +3362,12 @@
       "name": "PDF 페이지 수리점",
       "url": "https://abreda.com/tools/pdf-page-workshop/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 186ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2729,6 +3395,56 @@
           "detail": "https://abreda.com/tools/pdf-page-workshop/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "fail",
+          "detail": "missing"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 46ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "작은 도구함 | CSV 파일 합치기·웹소설 집필·루틴 관리 무료 도구"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "CSV 정리·원고 퇴고·루틴 관리 도구를 찾을 때. 문제나 작업 유형으로 탐색한 뒤 해당 도구를 열어 사용하세요."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "fail",
+          "detail": "expected en; got ko"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow,max-image-preview:large"
+        },
+        {
+          "check": "canonical_en",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "fail",
+          "detail": "https://abreda.com/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "fail",
+          "detail": "https://abreda.com/en/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -2751,12 +3467,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2772,10 +3488,32 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_pdf-page-workshop_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3139 bytes"
+        },
+        {
+          "check": "script_toolbox-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1451 bytes"
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "hreflang_ko_ko: missing",
+        "hreflang_ko_en: missing",
+        "html_lang_en: expected en; got ko",
+        "canonical_en: https://abreda.com/",
+        "hreflang_en_ko: https://abreda.com/",
+        "hreflang_en_en: https://abreda.com/en/"
+      ]
     },
     {
       "slug": "privacy-redactor",
@@ -2787,7 +3525,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 214ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2815,6 +3553,56 @@
           "detail": "https://abreda.com/tools/privacy-redactor/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/privacy-redactor/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/privacy-redactor/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Privacy Redaction Tool | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Cover personal details in a photo with solid black rectangles, then export a newly rendered PNG."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/privacy-redactor/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/privacy-redactor/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/privacy-redactor/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -2837,12 +3625,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2858,6 +3646,26 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_privacy-redactor_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2427 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_en_tools_privacy-redactor_runtime-translate.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1886 bytes"
         }
       ],
       "warnings": [],
@@ -2873,7 +3681,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2901,6 +3709,56 @@
           "detail": "https://abreda.com/tools/quote-document-maker/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/quote-document-maker/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/quote-document-maker/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Quotation Document Maker | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Create a printable itemized quotation or transaction statement from user-entered prices."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/quote-document-maker/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/quote-document-maker/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/quote-document-maker/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -2923,12 +3781,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2944,6 +3802,26 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_quote-document-maker_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2377 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_en_tools_quote-document-maker_runtime-translate.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1886 bytes"
         }
       ],
       "warnings": [],
@@ -2959,7 +3837,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 176ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2987,6 +3865,56 @@
           "detail": "https://abreda.com/tools/recurring-payment-finder/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/recurring-payment-finder/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/recurring-payment-finder/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Recurring Charge Finder | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Look for the same merchant and amount appearing in multiple months of a local transaction CSV."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/recurring-payment-finder/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/recurring-payment-finder/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/recurring-payment-finder/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -3009,12 +3937,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3030,6 +3958,26 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_recurring-payment-finder_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3314 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_en_tools_recurring-payment-finder_runtime-translate.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1886 bytes"
         }
       ],
       "warnings": [],
@@ -3045,7 +3993,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3073,6 +4021,56 @@
           "detail": "https://abreda.com/tools/room-layout-planner/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/room-layout-planner/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/room-layout-planner/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Room and Furniture Planner | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Place furniture to scale on a room floor plan and identify overlaps before purchasing."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/room-layout-planner/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/room-layout-planner/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/room-layout-planner/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -3095,12 +4093,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3116,6 +4114,26 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_room-layout-planner_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3663 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_en_tools_room-layout-planner_runtime-translate.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1886 bytes"
         }
       ],
       "warnings": [],
@@ -3131,7 +4149,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 209ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3159,6 +4177,56 @@
           "detail": "https://abreda.com/tools/seller-profit-math/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/seller-profit-math/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/seller-profit-math/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 123ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Online Seller Profit Calculator | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Calculate per-item profit, profit margin and break-even sale price after costs and fees."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/seller-profit-math/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/seller-profit-math/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/seller-profit-math/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -3181,12 +4249,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3202,6 +4270,26 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_seller-profit-math_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2188 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_en_tools_seller-profit-math_runtime-translate.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1886 bytes"
         }
       ],
       "warnings": [],
@@ -3217,7 +4305,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 214ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3245,6 +4333,56 @@
           "detail": "https://abreda.com/tools/share-qr-card/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/share-qr-card/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/share-qr-card/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 97ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "QR Sharing Card Creator | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Make printable QR sharing cards for web links, Wi-Fi details or contact information."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/share-qr-card/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/share-qr-card/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/share-qr-card/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -3267,12 +4405,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3288,6 +4426,26 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_share-qr-card_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2629 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_en_tools_share-qr-card_runtime-translate.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1886 bytes"
         }
       ],
       "warnings": [],
@@ -3303,7 +4461,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3331,6 +4489,56 @@
           "detail": "https://abreda.com/tools/shift-calendar/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/shift-calendar/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/shift-calendar/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 112ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Rotating Shift Calendar | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Create a yearly rotating shift roster from an anchor date and repeating day, night or off-duty pattern."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/shift-calendar/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/shift-calendar/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/shift-calendar/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -3353,12 +4561,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3374,6 +4582,26 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_shift-calendar_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2485 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_en_tools_shift-calendar_runtime-translate.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1886 bytes"
         }
       ],
       "warnings": [],
@@ -3389,7 +4617,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3429,7 +4657,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3520,7 +4748,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 225ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 164ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3560,7 +4788,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3651,7 +4879,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 206ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 212ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3691,7 +4919,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 160ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3782,7 +5010,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 225ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3810,6 +5038,56 @@
           "detail": "https://abreda.com/tools/submission-auditor/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/submission-auditor/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/submission-auditor/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Submission File Checklist | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Compare a list of required filenames with local attachments to find missing, duplicated and oversized files."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/submission-auditor/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/submission-auditor/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/submission-auditor/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -3832,12 +5110,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3853,6 +5131,26 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_submission-auditor_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1869 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_en_tools_submission-auditor_runtime-translate.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1886 bytes"
         }
       ],
       "warnings": [],
@@ -3868,7 +5166,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3908,7 +5206,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4035,7 +5333,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 231ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 47ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4075,7 +5373,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 184ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4135,12 +5433,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4185,12 +5483,12 @@
         {
           "check": "text_en_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 8305 bytes"
+          "detail": "HTTP 200, 15675 bytes"
         },
         {
           "check": "rss_en_feed.xml",
           "status": "pass",
-          "detail": "21 valid RSS entries"
+          "detail": "41 valid RSS entries"
         }
       ],
       "warnings": [],
@@ -4206,7 +5504,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 148ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4246,7 +5544,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4337,7 +5635,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 102ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4377,7 +5675,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4468,7 +5766,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4508,7 +5806,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4599,7 +5897,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 303ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4627,6 +5925,56 @@
           "detail": "https://abreda.com/tools/warranty-deadline-tracker/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/warranty-deadline-tracker/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/warranty-deadline-tracker/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Warranty and Returns Tracker | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Keep purchase dates, return deadlines, warranty expiry dates and receipts together in the browser."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/warranty-deadline-tracker/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/warranty-deadline-tracker/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/warranty-deadline-tracker/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -4649,12 +5997,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4670,6 +6018,26 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_warranty-deadline-tracker_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 4425 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_en_tools_warranty-deadline-tracker_runtime-translate.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1886 bytes"
         }
       ],
       "warnings": [],
@@ -4685,7 +6053,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 267ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4725,7 +6093,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 208ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 132ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4816,7 +6184,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 210ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4844,6 +6212,56 @@
           "detail": "https://abreda.com/tools/worktime-analyzer/"
         },
         {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/worktime-analyzer/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/worktime-analyzer/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Task Time Recorder | Small Toolbox"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Time each stage of a manual process and export completed measurements."
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/worktime-analyzer/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/worktime-analyzer/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/worktime-analyzer/"
+        },
+        {
           "check": "icon_favicon.ico",
           "status": "pass",
           "detail": "HTTP 200, 16958 bytes"
@@ -4866,12 +6284,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 2636 bytes"
+          "detail": "HTTP 200, 4134 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 39"
+          "detail": "entries: 60"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4887,6 +6305,26 @@
           "check": "script_toolbox-public-traffic.js",
           "status": "pass",
           "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_en_tools_worktime-analyzer_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2245 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_en_tools_worktime-analyzer_runtime-translate.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1886 bytes"
         }
       ],
       "warnings": [],
@@ -4900,7 +6338,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 649
+      "elapsedMs": 314
     },
     {
       "name": "English plot planner",
@@ -4908,7 +6346,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 443
+      "elapsedMs": 245
     },
     {
       "name": "Korean manuscript",
@@ -4916,7 +6354,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 413
+      "elapsedMs": 244
     },
     {
       "name": "English manuscript",
@@ -4924,7 +6362,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 394
+      "elapsedMs": 262
     },
     {
       "name": "Korean CSV merger",
@@ -4932,7 +6370,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 468
+      "elapsedMs": 268
     },
     {
       "name": "English CSV merger",
@@ -4940,7 +6378,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 476
+      "elapsedMs": 259
     },
     {
       "name": "Haru English landing",
@@ -4948,7 +6386,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 270
+      "elapsedMs": 248
     },
     {
       "name": "Haru English app",
@@ -4956,7 +6394,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 162
+      "elapsedMs": 210
     },
     {
       "name": "Admin authentication gate",
@@ -4964,7 +6402,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 804
+      "elapsedMs": 279
     },
     {
       "name": "Toolbox hub search",
@@ -4972,7 +6410,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 361
+      "elapsedMs": 198
     },
     {
       "name": "Technical deployment smoke",
@@ -4980,7 +6418,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 215
+      "elapsedMs": 248
     },
     {
       "name": "GA4 sanitized query and successful tool completion",
@@ -4988,10 +6426,323 @@
       "device": "desktop",
       "status": "pass",
       "detail": "page_view and tool_complete accepted; debug only; query/hash absent; one pageview",
-      "elapsedMs": 5943
+      "elapsedMs": 5822
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "scope": "bulk-file-renamer",
+      "details": "hreflang_ko_ko: missing"
+    },
+    {
+      "scope": "bulk-file-renamer",
+      "details": "hreflang_ko_en: missing"
+    },
+    {
+      "scope": "bulk-file-renamer",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "bulk-file-renamer",
+      "details": "canonical_en: https://abreda.com/"
+    },
+    {
+      "scope": "bulk-file-renamer",
+      "details": "hreflang_en_ko: https://abreda.com/"
+    },
+    {
+      "scope": "bulk-file-renamer",
+      "details": "hreflang_en_en: https://abreda.com/en/"
+    },
+    {
+      "scope": "bulk-file-renamer",
+      "details": "sitemap_content: entries: 39"
+    },
+    {
+      "scope": "bulk-file-renamer",
+      "details": "script_en_tools_bulk-file-renamer_app.js: HTTP 200, 54302 bytes"
+    },
+    {
+      "scope": "color-contrast-audit",
+      "details": "hreflang_ko_ko: missing"
+    },
+    {
+      "scope": "color-contrast-audit",
+      "details": "hreflang_ko_en: missing"
+    },
+    {
+      "scope": "color-contrast-audit",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "color-contrast-audit",
+      "details": "canonical_en: https://abreda.com/"
+    },
+    {
+      "scope": "color-contrast-audit",
+      "details": "hreflang_en_ko: https://abreda.com/"
+    },
+    {
+      "scope": "color-contrast-audit",
+      "details": "hreflang_en_en: https://abreda.com/en/"
+    },
+    {
+      "scope": "color-contrast-audit",
+      "details": "sitemap_content: entries: 39"
+    },
+    {
+      "scope": "color-contrast-audit",
+      "details": "script_en_tools_color-contrast-audit_app.js: HTTP 200, 54302 bytes"
+    },
+    {
+      "scope": "cut-plan-optimizer",
+      "details": "hreflang_ko_ko: missing"
+    },
+    {
+      "scope": "cut-plan-optimizer",
+      "details": "hreflang_ko_en: missing"
+    },
+    {
+      "scope": "cut-plan-optimizer",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "cut-plan-optimizer",
+      "details": "canonical_en: https://abreda.com/"
+    },
+    {
+      "scope": "cut-plan-optimizer",
+      "details": "hreflang_en_ko: https://abreda.com/"
+    },
+    {
+      "scope": "cut-plan-optimizer",
+      "details": "hreflang_en_en: https://abreda.com/en/"
+    },
+    {
+      "scope": "cut-plan-optimizer",
+      "details": "sitemap_content: entries: 39"
+    },
+    {
+      "scope": "cut-plan-optimizer",
+      "details": "script_en_tools_cut-plan-optimizer_app.js: HTTP 200, 54302 bytes"
+    },
+    {
+      "scope": "document-scan-studio",
+      "details": "hreflang_ko_ko: missing"
+    },
+    {
+      "scope": "document-scan-studio",
+      "details": "hreflang_ko_en: missing"
+    },
+    {
+      "scope": "document-scan-studio",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "document-scan-studio",
+      "details": "canonical_en: https://abreda.com/"
+    },
+    {
+      "scope": "document-scan-studio",
+      "details": "hreflang_en_ko: https://abreda.com/"
+    },
+    {
+      "scope": "document-scan-studio",
+      "details": "hreflang_en_en: https://abreda.com/en/"
+    },
+    {
+      "scope": "document-scan-studio",
+      "details": "sitemap_content: entries: 39"
+    },
+    {
+      "scope": "document-scan-studio",
+      "details": "script_en_tools_document-scan-studio_app.js: HTTP 200, 54302 bytes"
+    },
+    {
+      "scope": "group-order-summary",
+      "details": "hreflang_ko_ko: missing"
+    },
+    {
+      "scope": "group-order-summary",
+      "details": "hreflang_ko_en: missing"
+    },
+    {
+      "scope": "group-order-summary",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "group-order-summary",
+      "details": "canonical_en: https://abreda.com/"
+    },
+    {
+      "scope": "group-order-summary",
+      "details": "hreflang_en_ko: https://abreda.com/"
+    },
+    {
+      "scope": "group-order-summary",
+      "details": "hreflang_en_en: https://abreda.com/en/"
+    },
+    {
+      "scope": "group-order-summary",
+      "details": "sitemap_content: entries: 39"
+    },
+    {
+      "scope": "group-order-summary",
+      "details": "script_en_tools_group-order-summary_app.js: HTTP 200, 54302 bytes"
+    },
+    {
+      "scope": "handover-checklist",
+      "details": "hreflang_ko_ko: missing"
+    },
+    {
+      "scope": "handover-checklist",
+      "details": "hreflang_ko_en: missing"
+    },
+    {
+      "scope": "handover-checklist",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "handover-checklist",
+      "details": "canonical_en: https://abreda.com/"
+    },
+    {
+      "scope": "handover-checklist",
+      "details": "hreflang_en_ko: https://abreda.com/"
+    },
+    {
+      "scope": "handover-checklist",
+      "details": "hreflang_en_en: https://abreda.com/en/"
+    },
+    {
+      "scope": "handover-checklist",
+      "details": "sitemap_content: entries: 39"
+    },
+    {
+      "scope": "handover-checklist",
+      "details": "script_en_tools_handover-checklist_app.js: HTTP 200, 54302 bytes"
+    },
+    {
+      "scope": "image-compress-lab",
+      "details": "hreflang_ko_ko: missing"
+    },
+    {
+      "scope": "image-compress-lab",
+      "details": "hreflang_ko_en: missing"
+    },
+    {
+      "scope": "image-compress-lab",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "image-compress-lab",
+      "details": "canonical_en: https://abreda.com/"
+    },
+    {
+      "scope": "image-compress-lab",
+      "details": "hreflang_en_ko: https://abreda.com/"
+    },
+    {
+      "scope": "image-compress-lab",
+      "details": "hreflang_en_en: https://abreda.com/en/"
+    },
+    {
+      "scope": "image-compress-lab",
+      "details": "sitemap_content: entries: 39"
+    },
+    {
+      "scope": "image-compress-lab",
+      "details": "script_en_tools_image-compress-lab_app.js: HTTP 200, 54302 bytes"
+    },
+    {
+      "scope": "label-sheet-maker",
+      "details": "hreflang_ko_ko: missing"
+    },
+    {
+      "scope": "label-sheet-maker",
+      "details": "hreflang_ko_en: missing"
+    },
+    {
+      "scope": "label-sheet-maker",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "label-sheet-maker",
+      "details": "canonical_en: https://abreda.com/"
+    },
+    {
+      "scope": "label-sheet-maker",
+      "details": "hreflang_en_ko: https://abreda.com/"
+    },
+    {
+      "scope": "label-sheet-maker",
+      "details": "hreflang_en_en: https://abreda.com/en/"
+    },
+    {
+      "scope": "label-sheet-maker",
+      "details": "sitemap_content: entries: 39"
+    },
+    {
+      "scope": "label-sheet-maker",
+      "details": "script_en_tools_label-sheet-maker_app.js: HTTP 200, 54302 bytes"
+    },
+    {
+      "scope": "meal-timeline",
+      "details": "hreflang_ko_ko: missing"
+    },
+    {
+      "scope": "meal-timeline",
+      "details": "hreflang_ko_en: missing"
+    },
+    {
+      "scope": "meal-timeline",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "meal-timeline",
+      "details": "canonical_en: https://abreda.com/"
+    },
+    {
+      "scope": "meal-timeline",
+      "details": "hreflang_en_ko: https://abreda.com/"
+    },
+    {
+      "scope": "meal-timeline",
+      "details": "hreflang_en_en: https://abreda.com/en/"
+    },
+    {
+      "scope": "meal-timeline",
+      "details": "sitemap_content: entries: 39"
+    },
+    {
+      "scope": "meal-timeline",
+      "details": "script_en_tools_meal-timeline_app.js: HTTP 200, 54302 bytes"
+    },
+    {
+      "scope": "pdf-page-workshop",
+      "details": "hreflang_ko_ko: missing"
+    },
+    {
+      "scope": "pdf-page-workshop",
+      "details": "hreflang_ko_en: missing"
+    },
+    {
+      "scope": "pdf-page-workshop",
+      "details": "html_lang_en: expected en; got ko"
+    },
+    {
+      "scope": "pdf-page-workshop",
+      "details": "canonical_en: https://abreda.com/"
+    },
+    {
+      "scope": "pdf-page-workshop",
+      "details": "hreflang_en_ko: https://abreda.com/"
+    },
+    {
+      "scope": "pdf-page-workshop",
+      "details": "hreflang_en_en: https://abreda.com/en/"
+    }
+  ],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
