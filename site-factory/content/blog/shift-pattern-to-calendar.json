@@ -1,0 +1,62 @@
+{
+  "slug": "shift-pattern-to-calendar",
+  "tool": "shift-calendar",
+  "published": "2026-11-10",
+  "status": "reviewed",
+  "ko": {
+    "title": "교대근무 근무표 만드는 법: 반복 패턴을 달력에 넣기",
+    "description": "주간·야간·휴무 근무가 반복될 때 시작일을 확인하고 연간 달력과 ICS 파일을 만드는 방법입니다.",
+    "problem": "교대근무를 달력에 직접 적다 보면 월말에 하루씩 밀리는 일이 생길 수 있습니다. 가장 중요한 것은 회사 공식 근무표와 반복 패턴의 첫날을 정확히 일치시키는 것입니다.",
+    "steps": [
+      [
+        "회사 공식 근무표에서 패턴 시작일 찾기",
+        "반복되는 주간·야간·휴무 순서가 시작되는 날짜를 확인하세요. 임의로 시작일을 지정하면 이후 일정이 모두 어긋날 수 있습니다."
+      ],
+      [
+        "주간·야간·휴무 순서를 빠짐없이 입력하기",
+        "하루 단위로 근무 유형을 순서대로 적고 연도와 기준일을 지정하세요. 같은 근무가 연속되면 그만큼 반복 입력해야 합니다."
+      ],
+      [
+        "월말 날짜를 확인하고 ICS 가져오기",
+        "완성된 표의 첫날, 월말, 다음 달 초를 공식 근무표와 대조하세요. ICS로 내려받아 휴대폰 달력으로 가져온 뒤에도 일정이 일치하는지 확인하세요."
+      ]
+    ],
+    "alternative": "회사에서 근무표가 자주 바뀌는 직무라면 달력에 개별 일정을 직접 등록하고 수정하는 방법이 더 정확할 수 있습니다.",
+    "toolIntro": "아브레다 교대근무 달력 제작소는 시작일·반복 패턴·연도를 입력해 근무표를 만들고 ICS 파일로 내려받도록 지원합니다.",
+    "limits": "캘린더로 가져온 ICS는 회사 시스템에 연결된 실시간 일정이 아닙니다. 연차·특근·교대 변경 사항은 직접 수정해야 합니다.",
+    "faq": [
+      [
+        "ICS를 가져온 뒤 근무가 변경되면 자동 반영되나요?",
+        "자동으로 바뀌지 않습니다. 기존 캘린더 이벤트를 확인하고 달라진 근무일은 사용자가 별도로 수정해야 합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Create a Rotating Shift Calendar and Import It with ICS",
+    "description": "Build a roster from a repeating day, night and off-duty pattern and import the result into your phone calendar.",
+    "problem": "Hand-entering a shift schedule month after month can cause dates to drift. Begin with the employer's official roster and the exact first day of the rotation.",
+    "steps": [
+      [
+        "Confirm the official pattern start date",
+        "Find the first day of the actual cycle in your employer's roster. Guessing the start date can offset every later entry."
+      ],
+      [
+        "Enter every shift and off-duty day",
+        "Write each step in the repeating sequence and choose the matching year. Include consecutive shifts individually so that the pattern length stays correct."
+      ],
+      [
+        "Compare boundary dates before importing",
+        "Check the first date, a month-end date and the start of the next month. Import the generated ICS into your calendar, then verify the same dates again."
+      ]
+    ],
+    "alternative": "If assignments change frequently or do not repeat, creating and updating individual events in a calendar may be more reliable.",
+    "toolIntro": "ABREDA Rotating Shift Calendar accepts a start date, repeating shift pattern and year, then generates a roster and downloadable ICS.",
+    "limits": "An imported ICS is not a live feed from your employer. Overtime, leave and rotation changes have to be corrected separately.",
+    "faq": [
+      [
+        "Will the ICS automatically update when my shifts change?",
+        "No. Calendar import creates events based on the exported schedule. Check and update existing events whenever your employer changes the roster."
+      ]
+    ]
+  }
+}

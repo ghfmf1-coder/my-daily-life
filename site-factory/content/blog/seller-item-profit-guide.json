@@ -1,0 +1,62 @@
+{
+  "slug": "seller-item-profit-guide",
+  "tool": "seller-profit-math",
+  "published": "2026-11-10",
+  "status": "reviewed",
+  "ko": {
+    "title": "온라인 판매 순이익 계산하는 법: 수수료·배송비 빼먹지 않기",
+    "description": "상품 판매가에서 원가·수수료·배송·포장·광고 비용을 구분해 순이익과 손익분기 판매가를 검토하는 방법입니다.",
+    "problem": "온라인에서 상품이 팔려도 판매가가 곧 수익은 아닙니다. 매입 원가와 플랫폼 수수료, 판매자가 부담하는 배송비와 광고비를 구분해 기록해야 실제 남는 금액을 확인할 수 있습니다.",
+    "steps": [
+      [
+        "상품별 매입 원가와 판매가 따로 적기",
+        "판매가와 실제 매입 원가를 구분하고 환불이나 할인 쿠폰처럼 금액을 바꿀 수 있는 항목이 있는지도 확인하세요. 세금 기준은 임의로 정하지 마세요."
+      ],
+      [
+        "수수료와 배송·포장·광고 비용 추가하기",
+        "플랫폼 정산 안내에 있는 실제 수수료율과 고정 수수료를 확인하세요. 판매자가 부담하는 배송비, 포장재, 건별 광고비도 별도 항목으로 기록합니다."
+      ],
+      [
+        "손익분기점과 실제 정산 내역 비교하기",
+        "입력한 비용을 바탕으로 순이익과 손익분기 판매가를 살펴보고 실제 판매 플랫폼의 정산 내역과 맞는지 비교하세요. 반품·쿠폰 부담이나 세금 처리는 필요에 따라 별도로 계산하세요."
+      ]
+    ],
+    "alternative": "품목이 적다면 엑셀이나 스프레드시트에서 원가·판매가·기타 비용 열을 나누어 직접 계산할 수 있습니다. 판매 건별 정산서와 대조하는 과정은 반드시 남겨두세요.",
+    "toolIntro": "아브레다 온라인 판매 순이익 분석기는 플랫폼 수수료·배송비·포장비·광고비를 입력해 상품별 순이익·이익률·손익분기 판매가를 보여줍니다.",
+    "limits": "플랫폼마다 수수료 규정이 다르며 반품·교환·쿠폰 분담과 세금 신고액이 자동으로 계산되는 것은 아닙니다. 실제 정산 자료를 기준으로 확인하세요.",
+    "faq": [
+      [
+        "판매가에서 매입 원가만 빼면 순이익인가요?",
+        "아니요. 판매 과정에서 부담하는 플랫폼 수수료·배송비·포장비·광고비가 있다면 이를 함께 반영해야 실제 남는 금액을 판단할 수 있습니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Calculate Online Selling Profit After Fees and Shipping",
+    "description": "Separate product costs, marketplace fees, packing, delivery and advertising before reviewing net profit and break-even price.",
+    "problem": "A sale price is not the amount you keep. Buying inventory, paying marketplace commissions, shipping goods and promoting a listing can all reduce the actual result.",
+    "steps": [
+      [
+        "Record sale price and product cost separately",
+        "Use the real selling price and purchase cost. Identify any discounts or refunds that could change the amount received."
+      ],
+      [
+        "Include actual platform fees and fulfillment costs",
+        "Read the marketplace's current settlement rules. Enter seller-paid delivery, packaging and per-sale advertising costs as separate fields."
+      ],
+      [
+        "Compare calculated profit with the real settlement",
+        "Review the break-even price and net result against your platform statement. Handle returns, tax filing and coupon allocation separately where needed."
+      ]
+    ],
+    "alternative": "For a small catalog, a spreadsheet with clearly separated cost fields may be enough. Always reconcile calculations against actual platform settlements.",
+    "toolIntro": "ABREDA Online Seller Profit Calculator takes commission, shipping, packaging and advertising inputs and displays net profit, margin and break-even sale price.",
+    "limits": "Marketplace rates differ and the tool does not automatically interpret refunds, tax rules or coupon arrangements. Verify all amounts from your source documents.",
+    "faq": [
+      [
+        "Is the sale price minus purchase cost the final profit?",
+        "No. Marketplace fees and seller-paid expenses also reduce the result. Include those costs and compare against the actual transaction settlement."
+      ]
+    ]
+  }
+}
