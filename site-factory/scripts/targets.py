@@ -46,7 +46,7 @@ else:
 if 'toolbox-hub' in all_sites and any(s not in {'toolbox-hub','toolbox-admin','deployment-check'} for s in selected):
     selected=sorted(set(selected+['toolbox-hub']))
 # auto-deploy toolbox-admin catalog after any public site source change
-if 'toolbox-admin' in all_sites and selected and 'toolbox-admin' not in selected and not locals().get('blog_release',False) and not locals().get('new_blog',False):
+if 'toolbox-admin' in all_sites and selected and 'toolbox-admin' not in selected and not (locals().get('blog_release',False) or (locals().get('new_blog',False) and selected==['toolbox-hub'])):
     selected=sorted(set(selected+['toolbox-admin']))
 approved=[]
 for slug in selected:
