@@ -492,6 +492,13 @@ def generate_work(slug,write=True):
         dest=root/'en';dest.mkdir(exist_ok=True)
         (dest/'index.html').write_text(result,encoding='utf-8')
         (root/'runtime-translate.js').write_text(RUNTIME,encoding='utf-8')
+        sitemap=root/'sitemap.xml'
+        if sitemap.is_file():
+            text=sitemap.read_text(encoding='utf-8')
+            if en not in text:
+                if '</urlset>' not in text:raise ValueError('Invalid sitemap for '+slug)
+                text=text.replace('</urlset>','<url><loc>'+escape(en)+'</loc></url>\n</urlset>')
+                sitemap.write_text(text,encoding='utf-8')
     return result
 # Translation runs only on known UI strings; no rewriting of user-supplied files.
 RUNTIME=r"""(()=>{'use strict';if(document.documentElement.lang!=='en')return;
