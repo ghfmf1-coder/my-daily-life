@@ -46,11 +46,17 @@ def main():
  snapshot=Path('/tmp/toolbox-performance-source.json')
  if snapshot.exists():
   known={s['url'] for s in sites}
+  known_ids={s['siteId'] for s in sites}
   for entry in json.loads(snapshot.read_text())['entries']:
    if entry['url'] in known:continue
    _,html=request(entry['url']);found=re.search(r'data-toolbox-site=["\']([^"\']+)',html)
    if not found:raise ValueError('LEDGER_TRACKING_MISSING: '+entry['url'])
-   sites.append({'siteId':found.group(1),'url':entry['url'],'collector':'toolbox-visit-collector'})
+   site_id=found.group(1)
+   # The D1 registry can retain a former pages.dev alias for a canonical site.
+   # Verify the logical site only once to avoid a legacy-collector false alarm.
+   if site_id in known_ids:continue
+   known_ids.add(site_id)
+   sites.append({'siteId':site_id,'url':entry['url'],'collector':'toolbox-visit-collector'})
  with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:rows=list(pool.map(check,sites))
  for row in rows:print('VISIT_COVERAGE:',json.dumps(row))
  report={'source':'production HTML and no-write diagnostic requests','sites':rows,'failed':[r['url'] for r in rows if r['status']!='ok']}
