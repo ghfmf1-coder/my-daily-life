@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-10T09:46:17+00:00",
+  "checkedAt": "2026-11-10T09:54:50+00:00",
   "status": "pass",
   "summary": {
     "sites": 44,
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 145ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 132ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -335,7 +335,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 209ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 280ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -426,7 +426,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -466,7 +466,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -557,7 +557,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 252ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 276ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -597,7 +597,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 235ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -688,7 +688,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 141ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 231ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -774,7 +774,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -814,7 +814,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -905,7 +905,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 102ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -945,7 +945,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1036,7 +1036,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1076,7 +1076,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1167,7 +1167,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 198ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 241ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1207,7 +1207,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 138ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 209ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1328,7 +1328,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 156ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 202ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1414,7 +1414,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 112ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1485,7 +1485,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 153ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 198ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1571,7 +1571,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 116ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1611,7 +1611,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 191ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1702,7 +1702,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 240ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1788,7 +1788,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 244ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 198ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1874,7 +1874,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 152ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 273ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1965,7 +1965,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2005,7 +2005,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 112ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2096,7 +2096,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2136,7 +2136,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2227,7 +2227,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 199ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2313,7 +2313,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 178ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 264ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2353,7 +2353,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 207ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2464,7 +2464,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 168ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2550,7 +2550,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 146ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 223ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2590,7 +2590,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 118ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 180ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2701,7 +2701,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 186ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2787,7 +2787,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 214ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2873,7 +2873,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2959,7 +2959,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 176ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3045,7 +3045,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3131,7 +3131,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 209ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3217,7 +3217,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 204ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 214ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3303,7 +3303,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3389,7 +3389,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 118ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3429,7 +3429,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3520,7 +3520,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 118ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 225ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3560,7 +3560,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3651,7 +3651,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 206ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3691,7 +3691,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 160ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3782,7 +3782,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 225ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3868,7 +3868,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3908,7 +3908,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4035,7 +4035,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 231ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4075,7 +4075,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 184ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4206,7 +4206,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 148ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4246,7 +4246,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4337,7 +4337,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 128ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4377,7 +4377,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4468,7 +4468,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 121ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4508,7 +4508,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4599,7 +4599,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 303ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4685,7 +4685,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 147ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 267ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4725,7 +4725,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 98ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 208ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4816,7 +4816,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 210ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4900,7 +4900,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 554
+      "elapsedMs": 649
     },
     {
       "name": "English plot planner",
@@ -4908,7 +4908,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 342
+      "elapsedMs": 443
     },
     {
       "name": "Korean manuscript",
@@ -4916,7 +4916,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 280
+      "elapsedMs": 413
     },
     {
       "name": "English manuscript",
@@ -4924,7 +4924,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 362
+      "elapsedMs": 394
     },
     {
       "name": "Korean CSV merger",
@@ -4932,7 +4932,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 318
+      "elapsedMs": 468
     },
     {
       "name": "English CSV merger",
@@ -4940,7 +4940,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 327
+      "elapsedMs": 476
     },
     {
       "name": "Haru English landing",
@@ -4948,7 +4948,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 247
+      "elapsedMs": 270
     },
     {
       "name": "Haru English app",
@@ -4956,7 +4956,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 204
+      "elapsedMs": 162
     },
     {
       "name": "Admin authentication gate",
@@ -4964,7 +4964,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 311
+      "elapsedMs": 804
     },
     {
       "name": "Toolbox hub search",
@@ -4972,7 +4972,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 210
+      "elapsedMs": 361
     },
     {
       "name": "Technical deployment smoke",
@@ -4980,7 +4980,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 211
+      "elapsedMs": 215
     },
     {
       "name": "GA4 sanitized query and successful tool completion",
@@ -4988,7 +4988,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "page_view and tool_complete accepted; debug only; query/hash absent; one pageview",
-      "elapsedMs": 5774
+      "elapsedMs": 5943
     }
   ],
   "issues": [],
