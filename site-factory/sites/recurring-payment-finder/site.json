@@ -1,0 +1,10 @@
+{
+  "slug": "recurring-payment-finder",
+  "project": "tb-recurring-payment-finder",
+  "title": "숨은 정기결제 탐지기",
+  "description": "은행·카드 CSV 내역에서 동일 가맹점과 금액이 다른 달에도 반복된 거래를 찾아냅니다.",
+  "approved": true,
+  "canonical_url": "https://tb-recurring-payment-finder.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}
