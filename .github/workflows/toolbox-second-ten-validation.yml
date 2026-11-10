@@ -1,0 +1,22 @@
+name: Second ten practical browser tools validation
+on:
+  push:
+    branches: [feat/second-ten-tools-20261110]
+  pull_request:
+    paths:
+      - 'site-factory/sites/**'
+      - 'site-factory/scripts/factory.py'
+      - 'site-factory/ops/visit-sites.json'
+      - 'site-factory/tests/test_second_ten_tools.py'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run all factory regression tests, new browser code checks, and catalog output tests
+        run: python3 -m unittest discover -s site-factory/tests -v
