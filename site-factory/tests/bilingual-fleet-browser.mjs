@@ -13,7 +13,7 @@ async function check(slug,type){
     const title=await page.title(),heading=(await page.locator('h1').first().textContent()).trim();
     assert.ok(!/[가-힣]/.test(title),'Korean title: '+title);
     assert.ok(!/[가-힣]/.test(heading),'Korean heading: '+heading);
-    assert.match(await page.locator('head link[rel=canonical]').getAttribute('href'),//en/$/);
+    assert.ok((await page.locator('head link[rel=canonical]').getAttribute('href')).includes('/en/'),'English canonical missing');
     assert.ok(await page.locator('head link[hreflang=ko]').count());
     assert.ok(await page.locator('head link[hreflang=en]').count());
     assert.ok(await page.locator('.tb-editorial').count());
