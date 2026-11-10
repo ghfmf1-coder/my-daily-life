@@ -1,0 +1,62 @@
+{
+  "slug": "hide-private-info-in-photos",
+  "tool": "privacy-redactor",
+  "published": "2026-11-10",
+  "status": "reviewed",
+  "ko": {
+    "title": "사진에서 개인정보 가리는 법: 이름·주소를 안전하게 지우기",
+    "description": "사진을 공유하기 전에 이름·계좌번호·주소를 가리는 방법, 흐림 처리와 불투명 가림의 차이를 설명합니다.",
+    "problem": "택배 영수증이나 계약서 사진을 다른 사람에게 보여줄 때 개인정보가 그대로 노출되기 쉽습니다. 가려야 할 항목을 찾는 것뿐 아니라 저장된 결과에 실제로 가림이 반영되었는지도 확인해야 합니다.",
+    "steps": [
+      [
+        "사진에 표시된 개인정보를 전체 확인하기",
+        "이름·전화번호·주소·계좌번호·차량번호처럼 공개하면 안 되는 정보를 사진의 모든 부분에서 찾아보세요. 배경에 붙은 안내문이나 화면 반사에 표시된 정보도 점검하세요."
+      ],
+      [
+        "불투명한 영역으로 충분히 가리기",
+        "단순히 작은 글자를 흐리게 표시하는 대신 완전히 불투명한 검은 사각형으로 필요한 부분을 덮으세요. 숫자의 일부만 가려 주변 정보로 식별되는 일이 없도록 주의하세요."
+      ],
+      [
+        "새 이미지로 저장한 뒤 확대해서 재검수하기",
+        "원본 사진 위에 가림 표시만 보이는 편집 화면과 최종 저장 파일은 다를 수 있습니다. 새 파일을 다시 열고 모든 가림 영역과 남아 있는 글자를 확인하세요."
+      ]
+    ],
+    "alternative": "휴대폰 사진 편집기의 불투명 그리기 도구도 사용할 수 있습니다. 이 경우 저장 후 편집 레이어가 아닌 실제 픽셀에 가림이 적용됐는지 확인해야 합니다.",
+    "toolIntro": "아브레다 개인정보 지우개는 이미지 위에 불투명한 검은 가림 사각형을 직접 그린 뒤 새 PNG로 다운로드하도록 돕습니다.",
+    "limits": "자동으로 이름이나 번호를 찾아주지는 않습니다. 지정하지 않은 부분은 원본 이미지에 남으므로 신뢰할 수 있는 검수자가 다시 살펴보아야 합니다.",
+    "faq": [
+      [
+        "글자를 흐릿하게 만드는 것만으로 충분한가요?",
+        "흐림 처리 방법마다 원본 정보의 일부가 보일 수 있습니다. 민감한 정보라면 불투명하게 완전히 가리고 저장한 이미지 자체를 검사하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Redact Personal Information in a Photo Before Sharing",
+    "description": "Find private details in photographs, cover them with opaque blocks and inspect the exported image for remaining data.",
+    "problem": "A receipt, form or photographed screen may reveal names, phone numbers, addresses and account details. Redaction is only complete when the exported image no longer displays those sensitive parts.",
+    "steps": [
+      [
+        "Inspect the entire image for sensitive information",
+        "Look for names, addresses, phone numbers, account numbers and other identifiers, including small details in the background."
+      ],
+      [
+        "Use solid opaque coverage over each area",
+        "Cover the complete field with a fully opaque block rather than relying on an uncertain blur. Make sure nearby digits cannot reveal the hidden details."
+      ],
+      [
+        "Export a new file and inspect it again",
+        "Save the result and reopen it at a larger zoom. Confirm that all blocks were actually rendered and no private details remain visible."
+      ]
+    ],
+    "alternative": "You may also use a mobile image editor that paints opaque areas. Verify that the final exported pixels contain the redaction rather than a temporary editing overlay.",
+    "toolIntro": "ABREDA Privacy Redaction Tool lets you paint solid black rectangles over photo regions and download a newly rendered PNG.",
+    "limits": "The tool does not automatically detect names or numbers. Any areas you did not select may still disclose personal information.",
+    "faq": [
+      [
+        "Is applying a blur enough for private information?",
+        "Blur techniques differ and may leave recognizable details. Use opaque coverage for sensitive fields and inspect the final exported image."
+      ]
+    ]
+  }
+}

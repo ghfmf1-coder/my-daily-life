@@ -23,14 +23,30 @@ else:
         changed=subprocess.check_output(['git','diff','--name-only',a.before,a.after],text=True).splitlines()
     # A shared factory change intentionally redeploys every approved site, repairing any missed per-site pushes.
     # Reconciliation run after traffic dashboard integration: republish approved builds once.
-    shared=any(n.startswith('site-factory/scripts/') or n=='.github/workflows/toolbox-pages.yml' for n in changed)
-    selected=all_sites if shared else sorted(set(p.split('/')[2] for p in changed if p.startswith('site-factory/sites/') and len(p.split('/'))>=4))
+    # A reviewed blog rollout only needs the public hub. Do not redeploy every
+    # existing Pages project because the shared factory gains a blog renderer.
+    blog_release_paths={'site-factory/scripts/factory.py','site-factory/scripts/targets.py',
+                        'site-factory/scripts/blog_articles.py','site-factory/scripts/new_site.py',
+                        '.github/workflows/toolbox-pages.yml','.github/workflows/abreda-blog-validation.yml',
+                        '.github/workflows/abreda-blog-browser.yml'}
+    blog_release=(
+        'site-factory/scripts/blog_articles.py' in changed and
+        all(n in blog_release_paths or n.startswith('site-factory/content/blog/') or
+            n.startswith('site-factory/sites/toolbox-hub/public/') or
+            n.startswith('site-factory/tests/test_blog_articles.py') or
+            n.startswith('site-factory/tests/blog-browser.mjs') for n in changed)
+    )
+    shared=not blog_release and any(n.startswith('site-factory/scripts/') or n=='.github/workflows/toolbox-pages.yml' for n in changed)
+    new_blog=any(n.startswith('site-factory/content/blog/') or n.startswith('work-sites/') and n.endswith('/blog.json') for n in changed)
+    selected=['toolbox-hub'] if blog_release else all_sites if shared else sorted(set(p.split('/')[2] for p in changed if p.startswith('site-factory/sites/') and len(p.split('/'))>=4))
+    if new_blog and 'toolbox-hub' in all_sites:
+        selected=sorted(set(selected+['toolbox-hub']))
 # Redeploy the live directory whenever another approved public tool changes.
 # Do not cause a loop for automated admin maintenance-report refreshes.
 if 'toolbox-hub' in all_sites and any(s not in {'toolbox-hub','toolbox-admin','deployment-check'} for s in selected):
     selected=sorted(set(selected+['toolbox-hub']))
 # auto-deploy toolbox-admin catalog after any public site source change
-if 'toolbox-admin' in all_sites and selected and 'toolbox-admin' not in selected:
+if 'toolbox-admin' in all_sites and selected and 'toolbox-admin' not in selected and not (locals().get('blog_release',False) or (locals().get('new_blog',False) and selected==['toolbox-hub'])):
     selected=sorted(set(selected+['toolbox-admin']))
 approved=[]
 for slug in selected:

@@ -125,6 +125,18 @@ def validate_locale_pages(data: dict, public: Path) -> list[str]:
 
 def validate_site(slug: str, require_approval: bool = False) -> dict:
     data, site = read_site(slug, require_approval)
+    if data.get('blog_required') and data.get('approved'):
+        blog_file=site/'blog.json'
+        if not blog_file.is_file() or blog_file.is_symlink():
+            raise SiteError(f'{slug}: blog.json is required before publishing a new tool')
+        blog=json.loads(blog_file.read_text(encoding='utf-8'))
+        if blog.get('status')!='reviewed' or blog.get('tool')!=slug:
+            raise SiteError(f'{slug}: publication requires a reviewed, tool-specific blog.json')
+        from blog_articles import check_language, URL
+        if not isinstance(blog.get('slug'),str) or not URL.fullmatch(blog['slug']) or not blog.get('published'):
+            raise SiteError(f'{slug}: article slug and publication date are required')
+        for language in ('ko','en'):
+            check_language(language,blog.get(language))
     public = site / 'public'
     if not public.is_dir() or public.is_symlink():
         raise SiteError(f'{slug}: public 폴더가 필요합니다.')
@@ -432,6 +444,17 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 raise SiteError('Invalid hub sitemap: missing urlset close tag')
             xml=xml.replace('</urlset>',additions+'</urlset>')
             sitemap.write_text(xml,encoding='utf-8')
+    # Reviewed, problem-first guides. Automatically include articles from new approved
+    # webapps when they ship a substantive, bilingual blog.json.
+    if slug == 'toolbox-hub':
+        from blog_articles import generate_blog
+        blog_urls=generate_blog(out)
+        sitemap=out/'sitemap.xml'
+        xml=sitemap.read_text(encoding='utf-8')
+        if '</urlset>' not in xml:raise SiteError('Invalid hub sitemap')
+        addition=''.join('  <url><loc>'+escape(url)+'</loc></url>\n'
+                         for url in blog_urls if '<loc>'+escape(url)+'</loc>' not in xml)
+        sitemap.write_text(xml.replace('</urlset>',addition+'</urlset>'),encoding='utf-8')
     # AUTO_RELEASE_RSS: one stable, human-useful announcement feed for each language.
     # The owner can connect these opt-in feeds to Metricool RSS Autolists.
     # Creating a feed does not authorize or perform social posting.

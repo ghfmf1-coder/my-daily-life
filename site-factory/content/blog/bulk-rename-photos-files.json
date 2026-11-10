@@ -1,0 +1,62 @@
+{
+  "slug": "bulk-rename-photos-files",
+  "tool": "bulk-file-renamer",
+  "published": "2026-11-10",
+  "status": "reviewed",
+  "ko": {
+    "title": "사진·문서 파일명 한 번에 바꾸는 법: 일련번호 중복 피하기",
+    "description": "여러 파일에 규칙적으로 이름을 붙이고 중복 이름을 확인하는 방법과 원본을 보존하는 ZIP 저장 방식을 안내합니다.",
+    "problem": "촬영 사진이나 업무 파일 수십 개를 하나씩 이름 변경하면 번호를 건너뛰거나 똑같은 이름이 생기기 쉽습니다. 적용 전 미리보기에서 원래 이름과 바꾼 이름을 함께 비교해야 합니다.",
+    "steps": [
+      [
+        "프로젝트·날짜·일련번호 규칙부터 결정하기",
+        "먼저 어떤 정보를 이름에 담을지 정하세요. 확장자는 파일 형식과 관련되므로 파일명을 바꿀 때 무조건 JPG나 PDF로 바꾸지 마세요."
+      ],
+      [
+        "원본 파일을 복사하고 대상 범위를 확인하기",
+        "되돌릴 수 있도록 원본을 보관하고 변경하려는 파일만 따로 선택하세요. 중요한 문서가 다른 묶음에 섞이지 않았는지 확인하세요."
+      ],
+      [
+        "미리보기에서 중복 이름 검사 후 저장하기",
+        "접두어·접미어·문자 치환·시작 번호를 적용한 결과를 확인하고 중복 이름이 없으면 새 파일을 받으세요. ZIP을 풀어 일부 파일이 정상적으로 열리는지 확인하세요."
+      ]
+    ],
+    "alternative": "Windows 파일 탐색기에서 여러 파일을 선택하고 F2를 누르면 기본 이름을 일괄 변경할 수 있습니다. 문자 치환 규칙이 복잡하면 전용 도구를 사용할 수 있습니다.",
+    "toolIntro": "아브레다 파일명 일괄 정리왕은 새 이름을 미리 보여주고 중복을 차단한 뒤 원본이 아닌 이름 변경 사본을 ZIP으로 제공합니다.",
+    "limits": "파일명 변경은 내부 파일 형식을 변환하지 않습니다. 운영체제별 사용 불가 문자, 파일명 길이와 ZIP 압축 해제 방식을 확인하세요.",
+    "faq": [
+      [
+        "확장자를 바꾸면 파일 형식도 자동 변환되나요?",
+        "아니요. 파일 이름만 JPG로 바꾼다고 이미지가 되지는 않습니다. 실제 파일 형식 변경은 별도 변환 도구를 이용해야 합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Batch Rename Files and Add Sequential Numbers Safely",
+    "description": "Choose a consistent naming convention, preview filename collisions and export renamed copies while preserving originals.",
+    "problem": "Renaming many photos or documents by hand can cause skipped serial numbers or duplicate names. Compare the complete before-and-after mapping before exporting any batch.",
+    "steps": [
+      [
+        "Choose a practical filename convention",
+        "Decide whether to use a project name, date, description or serial number. Leave file extensions intact unless you are truly converting the underlying format."
+      ],
+      [
+        "Keep a separate untouched backup",
+        "Select only the documents you intend to rename and retain the original group so that you can recover from naming mistakes."
+      ],
+      [
+        "Preview collisions and inspect the resulting ZIP",
+        "Apply prefix, suffix, text replacement or serial numbering rules. Review the entire preview and then open a sample of the renamed files after downloading."
+      ]
+    ],
+    "alternative": "Windows File Explorer supports basic multi-file renaming with the F2 key. A specialized tool offers more control over replacements and serial numbers.",
+    "toolIntro": "ABREDA Bulk File Renamer previews proposed filenames, detects collisions and exports renamed copies in a ZIP without changing the source files.",
+    "limits": "Changing the extension does not convert file data. Reserved filename characters and maximum lengths differ across operating systems.",
+    "faq": [
+      [
+        "Does changing a filename to JPG convert the document?",
+        "No. A filename change cannot turn an arbitrary file into an image. Use a real file converter to change its format."
+      ]
+    ]
+  }
+}

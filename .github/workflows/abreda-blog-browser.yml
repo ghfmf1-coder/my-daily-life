@@ -1,0 +1,38 @@
+name: ABREDA blog browser QA
+on:
+  push:
+    branches: [feat/abreda-problem-solving-blog-20261110]
+  pull_request:
+    paths:
+      - 'site-factory/content/blog/**'
+      - 'site-factory/scripts/blog_articles.py'
+      - 'site-factory/scripts/factory.py'
+      - 'site-factory/sites/toolbox-hub/public/**'
+      - 'site-factory/tests/blog-browser.mjs'
+      - '.github/workflows/abreda-blog-browser.yml'
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Build production-equivalent hub preview
+        run: |
+          PYTHONPATH=site-factory/scripts python3 - <<'PY'
+          from pathlib import Path
+          from factory import prepare
+          prepare('toolbox-hub',Path('/tmp/abreda-articles-qa'))
+          PY
+          python3 -m http.server 8088 --bind 127.0.0.1 --directory /tmp/abreda-articles-qa >/tmp/abreda-articles-qa.log 2>&1 &
+          sleep 2
+      - name: Verify blog articles and compact mobile cards in real browser
+        run: node site-factory/tests/blog-browser.mjs

@@ -1,0 +1,31 @@
+name: ABREDA blog and compact-card regression
+on:
+  push:
+    branches: [feat/abreda-problem-solving-blog-20261110]
+  pull_request:
+    paths:
+      - 'site-factory/scripts/blog_articles.py'
+      - 'site-factory/content/blog/**'
+      - 'site-factory/scripts/factory.py'
+      - 'site-factory/scripts/new_site.py'
+      - 'site-factory/sites/toolbox-hub/public/**'
+      - 'site-factory/tests/test_blog_articles.py'
+      - '.github/workflows/abreda-blog-validation.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run existing tests plus bilingual article integration
+        run: python3 -m unittest discover -s site-factory/tests -v
+      - name: Check existing JS functions
+        run: |
+          node site-factory/tests/test_csv_core.js
+          node site-factory/tests/test_subtitle_core.js
+      - name: Confirm reviewed published article URL count and sitemap uniqueness
+        run: python3 site-factory/scripts/blog_articles.py

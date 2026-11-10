@@ -1,0 +1,62 @@
+{
+  "slug": "guest-wifi-qr-card",
+  "tool": "share-qr-card",
+  "published": "2026-11-10",
+  "status": "reviewed",
+  "ko": {
+    "title": "와이파이 QR코드 만드는 법: 손님용 접속 카드 만들기",
+    "description": "와이파이 이름과 비밀번호를 QR에 담아 공유하는 방법, 스캔 시험과 네트워크 보안 주의사항을 설명합니다.",
+    "problem": "손님에게 와이파이 비밀번호를 일일이 안내하는 대신 QR코드를 제공할 수 있습니다. 다만 QR은 접속 정보를 숨기는 수단이 아니므로 누구에게 공개해도 되는 네트워크인지 먼저 판단해야 합니다.",
+    "steps": [
+      [
+        "손님에게 공개할 네트워크를 먼저 구분하기",
+        "직원용이나 개인용 네트워크와 방문객용 네트워크가 따로 있다면 공개 가능한 방문객용 정보를 사용하세요. 와이파이 이름과 보안 방식을 실제 기기에서 확인하세요."
+      ],
+      [
+        "와이파이 이름과 암호를 정확히 입력하기",
+        "SSID와 비밀번호의 대문자·소문자, 특수문자를 정확히 입력하세요. 암호가 없는 공개망인지 WPA 보안망인지도 알맞게 선택해야 합니다."
+      ],
+      [
+        "다른 휴대폰에서 스캔해 보고 게시하기",
+        "QR코드를 만든 뒤 다른 휴대폰으로 스캔해 연결할 네트워크가 정확히 표시되는지 확인하세요. 누구든 볼 수 있는 카드에는 민감한 사내 암호를 넣지 마세요."
+      ]
+    ],
+    "alternative": "기기에서 제공하는 와이파이 공유 기능을 이용해 직접 접속 정보를 전달하는 방법도 있습니다. 지원 방식은 운영체제와 기기에 따라 다릅니다.",
+    "toolIntro": "아브레다 QR 공유카드 제작소에서는 와이파이·웹주소·연락처를 QR로 만들고 이미지나 인쇄 가능한 카드로 저장할 수 있습니다.",
+    "limits": "QR 안의 와이파이 암호는 읽을 수 있는 데이터로 포함됩니다. QR 이미지 파일을 외부에 공개하면 접속 정보도 공유된다고 생각해야 합니다.",
+    "faq": [
+      [
+        "와이파이 QR코드에서 비밀번호를 읽을 수 있나요?",
+        "네. QR을 읽는 도구로 해당 네트워크의 접속 정보를 확인할 수 있습니다. 비공개 네트워크의 자격정보는 공개 QR에 넣지 마세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Create a Guest Wi-Fi QR Code and Print a Sharing Card",
+    "description": "Make a QR code for guest Wi-Fi access, test it with another phone and understand the password-sharing risks.",
+    "problem": "A Wi-Fi QR card saves guests from typing a password. It does not protect the credentials: anyone who decodes the QR can read the stored network information.",
+    "steps": [
+      [
+        "Choose a network that is safe to share",
+        "If you have a separate guest network, use that instead of private office credentials. Check the exact network name and security type on your device."
+      ],
+      [
+        "Enter the network name and credentials carefully",
+        "SSID capitalization, special characters and passwords must match the network settings. Select the correct security type or the no-password option."
+      ],
+      [
+        "Test with a second phone before publishing",
+        "Scan the generated code on another device to confirm the correct network is offered. Only display the card where visitors should receive access."
+      ]
+    ],
+    "alternative": "Many devices offer their own Wi-Fi sharing features. You can use those for one-off visitors when printing a public QR card is unnecessary.",
+    "toolIntro": "ABREDA QR Sharing Card Creator generates PNG QR codes and printable cards for website links, Wi-Fi access and contact details.",
+    "limits": "A QR code does not encrypt or hide the credentials it carries. Do not publicly post credentials intended for a restricted network.",
+    "faq": [
+      [
+        "Can someone retrieve the password from a Wi-Fi QR image?",
+        "Yes. A QR decoder can read the included connection details, so treat public posting as sharing those credentials with viewers."
+      ]
+    ]
+  }
+}

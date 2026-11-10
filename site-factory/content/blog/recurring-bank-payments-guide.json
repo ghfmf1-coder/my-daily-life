@@ -1,0 +1,62 @@
+{
+  "slug": "recurring-bank-payments-guide",
+  "tool": "recurring-payment-finder",
+  "published": "2026-11-10",
+  "status": "reviewed",
+  "ko": {
+    "title": "통장 거래내역에서 자동결제·구독료 찾아보는 방법",
+    "description": "은행이나 카드 거래내역 CSV에서 반복 청구 후보를 찾고 실제 구독인지 확인해 공식 경로로 해지하는 절차를 소개합니다.",
+    "problem": "매달 같은 가맹점에서 일정한 금액이 빠져나온다면 구독료를 의심할 수 있습니다. 그러나 동일한 물품을 여러 번 구매했을 가능성도 있으므로 결제 패턴만 보고 구독이라고 단정하지 마세요.",
+    "steps": [
+      [
+        "은행·카드사 공식 화면에서 거래 내역 확인하기",
+        "공식 금융기관 앱에서 거래 날짜, 가맹점, 금액을 확인하고 가능한 경우 CSV로 내보내세요. 파일에는 민감한 금융정보가 들어 있을 수 있으니 공유하지 마세요."
+      ],
+      [
+        "가맹점 이름과 결제 금액을 비교하기",
+        "CSV의 날짜·업체명·금액 열을 확인하세요. 여러 달에 반복된 항목을 찾아보되 가맹점 표기가 다르거나 결제 금액이 변하는 경우 자동 탐지에서 누락될 수 있습니다."
+      ],
+      [
+        "구독 여부 검증 후 공식 해지 절차 찾기",
+        "반복되는 후보를 발견했다면 해당 서비스의 영수증과 계정 설정에서 실제 결제 상태를 확인하세요. 해지는 해당 서비스의 공식 페이지에서 진행하세요."
+      ]
+    ],
+    "alternative": "금융거래 내역이 짧다면 은행 앱의 검색 기능으로 가맹점명별 결제를 직접 비교하는 방식이 더 간단하고 확인하기 쉬울 수 있습니다.",
+    "toolIntro": "아브레다 반복 결제 탐지기는 사용자가 받은 CSV에서 날짜·가맹점·금액 열을 선택해 반복 청구 후보를 표시하고 CSV 보고서를 저장합니다.",
+    "limits": "은행 계정에 접속하거나 구독을 직접 해지하는 기능은 없습니다. 반복 구매를 구독으로 잘못 표시할 수 있으므로 결과는 반드시 확인하세요.",
+    "faq": [
+      [
+        "같은 금액이 반복 결제되면 반드시 구독 서비스인가요?",
+        "아니요. 같은 금액으로 반복 구매한 항목일 수 있습니다. 실제 구독인지 확인하려면 해당 업체의 영수증이나 공식 계정 내역을 검토해야 합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Find Recurring Charges in Bank Transaction Records",
+    "description": "Review a bank CSV for repeated charges, verify whether a subscription actually exists and use official cancellation channels.",
+    "problem": "A repeated merchant name and amount may suggest a recurring charge, but it can also reflect ordinary repeat purchases. Treat the pattern as a lead, not proof.",
+    "steps": [
+      [
+        "Export transactions from your official bank portal",
+        "Use the bank or card issuer's own app to view transaction dates, merchants and amounts. If you export a CSV, protect it because the file can contain sensitive information."
+      ],
+      [
+        "Compare the merchant and amount columns",
+        "Identify the correct date, merchant and amount fields before analyzing repeated entries. Changed prices or inconsistent merchant names can hide subscriptions from a pattern matcher."
+      ],
+      [
+        "Confirm with receipts before cancellation",
+        "Review the provider's subscription settings and invoices to verify the charge. If you want to cancel, follow the official provider or payment processor instructions."
+      ]
+    ],
+    "alternative": "For a short transaction history, a merchant-name search in the official bank app may be faster and easier to verify than a separate CSV analysis.",
+    "toolIntro": "ABREDA Recurring Charge Finder examines the CSV columns you choose, lists possible repeated charges and exports the findings in a new CSV.",
+    "limits": "The tool does not access bank accounts, prove that a subscription exists or cancel charges. Normal repeated purchases can appear as false positives.",
+    "faq": [
+      [
+        "Does a repeating charge always mean an active subscription?",
+        "No. It may be a repeated purchase rather than a subscription contract. Check the actual provider account and receipts before taking action."
+      ]
+    ]
+  }
+}
