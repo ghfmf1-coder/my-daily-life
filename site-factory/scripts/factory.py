@@ -217,14 +217,16 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                     'srt-sdh-cleaner':{'ko':'SRT 자막 효과음·화자 표시 제거기','en':'SRT SDH Cleaner'},
                     'vtt-cleaner':{'ko':'VTT 자막 정리기','en':'VTT Subtitle Cleaner'},
                 }
-                name=localized_titles.get(site['slug'],{}).get(language) or info.get('title') or site['title']
+                from bilingual_en import EDITORIAL
+                local_entry=EDITORIAL.get(site['slug']) if site['slug'] in NATIVE_ROOT_TOOLS else None
+                name=(local_entry[0] if language=='en' and local_entry else None) or localized_titles.get(site['slug'],{}).get(language) or info.get('title') or site['title']
                 # No raw slug or generic English title may leak into the Korean catalogue.
                 if language=='ko' and not re.search(r'[가-힣]',name):
                     continue
                 if language=='en' and re.search(r'[가-힣]',name):
                     continue
-                intro=info.get('copy') or (site['description'] if language=='ko' else '')
-                if language=='en' and not info.get('title') and site['slug'] not in localized_titles:
+                intro=(local_entry[1] if language=='en' and local_entry else None) or info.get('copy') or (site['description'] if language=='ko' else '')
+                if language=='en' and not info.get('title') and site['slug'] not in localized_titles and not local_entry:
                     continue  # Only allow explicitly translated English titles
                 category=category_map.get(site['slug'],'other')
                 slug=site['slug'].lower()
@@ -359,6 +361,8 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             if len(seen) != 30:
                 raise SiteError('Expected exactly thirty distinct source-backed cards, got ' + str(len(seen)))
             directory.write_text(improved, encoding='utf-8')
+        from bilingual_en import generate_work_catalog
+        generate_work_catalog(out/'en'/'new-tools')
     # UNIFIED_DOMAIN_PHASE_1: serve proven bilingual browser-only utilities on
     # abreda.com/tools/<slug>/ and abreda.com/en/tools/<slug>/.
     # Legacy Pages domains remain live until redirects are separately verified.
@@ -420,6 +424,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             urls=['https://abreda.com/'+prefix+'/'+name+'/'
                   for name in migrated for prefix in ('tools','en/tools')]
             urls += ['https://abreda.com/'+prefix+'/'+name+'/' for name in native for prefix in ('tools','en/tools')]
+            urls += ['https://abreda.com/en/new-tools/']
             additions=''.join('  <url><loc>'+url+'</loc></url>\n' for url in urls)
             if '</urlset>' not in xml:
                 raise SiteError('Invalid hub sitemap: missing urlset close tag')

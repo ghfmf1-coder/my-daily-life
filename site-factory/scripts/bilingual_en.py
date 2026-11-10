@@ -249,6 +249,39 @@ function update(root){if(active)return;active=true;try{const walk=document.creat
 const obs=new MutationObserver(items=>{if(active)return;for(const it of items)if(it.type==='childList'){for(const node of it.addedNodes){if(node.nodeType===1||node.nodeType===3)update(node.nodeType===3?node.parentNode:node)}}else if(it.type==='characterData')update(it.target.parentNode)});
 document.addEventListener('DOMContentLoaded',()=>{update(document.body);obs.observe(document.body,{subtree:true,childList:true,characterData:true})},{once:true});
 })();""";
+
+def generate_work_catalog(directory):
+    """One English directory for thirty real, distinct Work tools, not doorway pages."""
+    directory=Path(directory)
+    directory.mkdir(parents=True,exist_ok=True)
+    items=sorted(((slug,data) for slug,data in EDITORIAL.items() if slug not in NATIVE))
+    cards=[]
+    for slug,(title,summary,how,output,limits) in items:
+        url='https://tb-'+slug+'.pages.dev/en/'
+        cards.append('<article class="entry"><h2>'+escape(title)+'</h2><p>'+escape(summary)+'</p><p class="detail">'+escape(output)+'</p>'
+                     '<a href="'+escape(url,quote=True)+'" rel="noopener">Open '+escape(title)+'</a></article>')
+    html=('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+          '<meta name="robots" content="index,follow"><title>Specialized File and Workflow Tools | Small Toolbox</title>'
+          '<meta name="description" content="Browse practical browser tools for inventory, invoices, certificates, media file checks, subtitle processing, schedules and more. English instructions and local file processing.">'
+          '<link rel="canonical" href="https://abreda.com/en/new-tools/">'
+          '<link rel="alternate" hreflang="en" href="https://abreda.com/en/new-tools/">'
+          '<link rel="alternate" hreflang="ko" href="https://abreda.com/new-tools/">'
+          '<link rel="alternate" hreflang="x-default" href="https://abreda.com/new-tools/">'
+          '<style>body{font:16px/1.65 system-ui,sans-serif;max-width:1100px;margin:auto;padding:22px;background:#f6f8fc;color:#22324b}'
+          'a{color:#2258c5}header{display:flex;justify-content:space-between;gap:20px}h1{font-size:clamp(28px,5vw,42px)}'
+          '.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:17px}.entry{background:white;border:1px solid #dfe7f2;padding:20px;border-radius:14px}'
+          '.entry h2{margin:0;font-size:20px}.entry p{margin:8px 0}.entry .detail{font-size:13px;color:#586d86}</style></head><body>'
+          '<header><a href="https://abreda.com/en/">Small Toolbox</a><a href="https://abreda.com/new-tools/" hreflang="ko">한국어</a></header>'
+          '<main><h1>Specialized file and workflow tools</h1>'
+          '<p>Use these independent browser tools to organize files, validate document exports and review operational data. '
+          'Choose the tool for your particular task. Each page explains accepted inputs, practical steps, available results and limitations.</p>'
+          '<div class="grid">'+''.join(cards)+'</div>'
+          '<section><h2>Before using a tool</h2><p>Keep the original files and inspect the output, especially before work involving contracts, payments or equipment. '
+          'The listed tools do not replace official verification or professional advice. Read each tool page for its exact supported file formats.</p></section></main>'
+          '<footer><a href="https://abreda.com/en/privacy">Privacy policy</a> · <a href="https://abreda.com/en/contact">Contact</a></footer></body></html>')
+    (directory/'index.html').write_text(html,encoding='utf-8')
+    return len(items)
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--work',help='Work slug or all');p.add_argument('--native');p.add_argument('--output');p.add_argument('--check',action='store_true')
     a=p.parse_args()
