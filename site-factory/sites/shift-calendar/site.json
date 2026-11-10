@@ -1,0 +1,10 @@
+{
+  "slug": "shift-calendar",
+  "project": "tb-shift-calendar",
+  "title": "교대근무 달력 제작소",
+  "description": "주간·야간·휴무 순환 패턴으로 연간 근무표를 만들고 캘린더 파일(ICS)을 내려받습니다.",
+  "approved": true,
+  "canonical_url": "https://tb-shift-calendar.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}
