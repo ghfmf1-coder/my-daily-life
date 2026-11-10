@@ -18,8 +18,15 @@ if site.exists():
 if len(a.title.strip()) < 3 or len(a.description.strip()) < 3:
     raise SystemExit('Title and description are required')
 (site / 'public').mkdir(parents=True)
-info = dict(slug=a.slug, project='tb-'+a.slug, title=a.title, description=a.description, approved=False, domain=None, canonical_url=None, locales=['ko','en'])
+info = dict(slug=a.slug, project='tb-'+a.slug, title=a.title, description=a.description, approved=False, domain=None, canonical_url=None, locales=['ko','en'], blog_required=True)
 (site / 'site.json').write_text(json.dumps(info,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+# Future publication contract: replace the draft with real, tool-specific,
+# Korean and English step-by-step guidance. On approval, the hub publishes it
+# automatically. Never fabricate a finished article from the site title.
+blog={'slug':a.slug+'-guide','tool':a.slug,'status':'draft','published':None,
+      'editorial_notice':'Complete and verify both language copies; status=reviewed only after testing the tool.',
+      'ko':{},'en':{}}
+(site/'blog.json').write_text(json.dumps(blog,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (site / 'public' / 'index.html').write_text(f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{escape(a.description,quote=True)}"><title>{escape(a.title)}</title>

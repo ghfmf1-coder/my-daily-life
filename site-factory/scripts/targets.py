@@ -23,8 +23,11 @@ else:
         changed=subprocess.check_output(['git','diff','--name-only',a.before,a.after],text=True).splitlines()
     # A shared factory change intentionally redeploys every approved site, repairing any missed per-site pushes.
     # Reconciliation run after traffic dashboard integration: republish approved builds once.
-    shared=any(n.startswith('site-factory/scripts/') or n.startswith('site-factory/content/blog/') or n.startswith('work-sites/') and n.endswith('/blog.json') or n=='.github/workflows/toolbox-pages.yml' for n in changed)
+    shared=any(n.startswith('site-factory/scripts/') or n=='.github/workflows/toolbox-pages.yml' for n in changed)
+    new_blog=any(n.startswith('site-factory/content/blog/') or n.startswith('work-sites/') and n.endswith('/blog.json') for n in changed)
     selected=all_sites if shared else sorted(set(p.split('/')[2] for p in changed if p.startswith('site-factory/sites/') and len(p.split('/'))>=4))
+    if new_blog and 'toolbox-hub' in all_sites:
+        selected=sorted(set(selected+['toolbox-hub']))
 # Redeploy the live directory whenever another approved public tool changes.
 # Do not cause a loop for automated admin maintenance-report refreshes.
 if 'toolbox-hub' in all_sites and any(s not in {'toolbox-hub','toolbox-admin','deployment-check'} for s in selected):

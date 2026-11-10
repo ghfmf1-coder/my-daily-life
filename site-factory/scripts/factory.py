@@ -125,6 +125,18 @@ def validate_locale_pages(data: dict, public: Path) -> list[str]:
 
 def validate_site(slug: str, require_approval: bool = False) -> dict:
     data, site = read_site(slug, require_approval)
+    if data.get('blog_required') and data.get('approved'):
+        blog_file=site/'blog.json'
+        if not blog_file.is_file() or blog_file.is_symlink():
+            raise SiteError(f'{slug}: blog.json is required before publishing a new tool')
+        blog=json.loads(blog_file.read_text(encoding='utf-8'))
+        if blog.get('status')!='reviewed' or blog.get('tool')!=slug:
+            raise SiteError(f'{slug}: publication requires a reviewed, tool-specific blog.json')
+        from blog_articles import check_language, URL
+        if not isinstance(blog.get('slug'),str) or not URL.fullmatch(blog['slug']) or not blog.get('published'):
+            raise SiteError(f'{slug}: article slug and publication date are required')
+        for language in ('ko','en'):
+            check_language(language,blog.get(language))
     public = site / 'public'
     if not public.is_dir() or public.is_symlink():
         raise SiteError(f'{slug}: public 폴더가 필요합니다.')
