@@ -289,6 +289,119 @@ BUTTON_LABELS={
     "download": "Download corrected PNG"
   }
 }
+WORK_FIELD_LABELS={
+  "audio-quality": {
+    "file0": "Audio file to inspect"
+  },
+  "certificate-batch": {
+    "file0": "Participant roster CSV"
+  },
+  "class-schedule-check": {
+    "file0": "Class timetable CSV"
+  },
+  "detail-image-review": {
+    "file0": "Product detail images"
+  },
+  "dst-embroidery": {
+    "file0": "DST embroidery file"
+  },
+  "epub-preflight": {
+    "file0": "EPUB file"
+  },
+  "event-seating": {
+    "file0": "Attendee list",
+    "number": "People per group or number of tables"
+  },
+  "exam-variants": {
+    "file0": "Exam question list"
+  },
+  "inventory-diff": {
+    "file0": "Stock ledger CSV",
+    "file1": "Physical stock count CSV"
+  },
+  "invoice-reconcile": {
+    "file0": "Invoice records CSV",
+    "file1": "Bank receipts CSV"
+  },
+  "lease-registry-diff": {
+    "file0": "Earlier property registry text",
+    "file1": "Current property registry text"
+  },
+  "move-evidence": {
+    "file0": "Property condition photos"
+  },
+  "moving-boxes": {
+    "file0": "Moving box inventory"
+  },
+  "option-combinations": {
+    "file0": "Product options CSV"
+  },
+  "pdf-preflight": {
+    "file0": "PDF to inspect"
+  },
+  "photo-contact-sheet": {
+    "file0": "Photographs"
+  },
+  "photo-duplicates": {
+    "file0": "Photos to compare"
+  },
+  "purchase-three-way": {
+    "file0": "Purchase order CSV",
+    "file1": "Delivery records CSV",
+    "file2": "Invoice CSV"
+  },
+  "question-similarity": {
+    "file0": "Question bank CSV"
+  },
+  "shipping-audit": {
+    "orderFile": "Store order spreadsheet",
+    "orderId": "Order ID column (required)",
+    "orderStatus": "Order status column",
+    "orderTracking": "Existing tracking number column",
+    "shipFile": "Shipping labels spreadsheet",
+    "shipId": "Shipping order ID column (required)",
+    "shipTracking": "Tracking number column (required)"
+  },
+  "shotlist-maker": {
+    "file0": "Shot list CSV"
+  },
+  "show-cues": {
+    "file0": "Show cue list CSV"
+  },
+  "silence-finder": {
+    "file0": "Audio recording"
+  },
+  "static-site-check": {
+    "file0": "HTML, CSS and JavaScript site files"
+  },
+  "survey-review": {
+    "file0": "Survey response CSV"
+  },
+  "svg-laser-check": {
+    "file0": "SVG cutting plan"
+  },
+  "tournament-maker": {
+    "file0": "Tournament participants"
+  },
+  "trip-supplies": {
+    "file0": "Trip items CSV",
+    "number": "People per group or number of groups"
+  },
+  "video-delivery-check": {
+    "file0": "Planned video delivery CSV",
+    "file1": "Actual video files"
+  },
+  "webtoon-preflight": {
+    "file0": "Webtoon page images"
+  }
+}
+WORK_BUTTON_LABELS={
+  "shipping-audit": {
+    "run": "Check shipment mismatches",
+    "demo": "Try example data",
+    "download": "Download complete CSV report"
+  }
+}
 OPTION_LABELS={
   "침대": "Bed",
   "책상": "Desk",
@@ -416,13 +529,15 @@ def localize_html(source,slug,ko_url,en_url,app_path=None):
     parser=VisibleTranslator(entry);parser.feed(source);parser.close()
     html=''.join(parser.parts)
     # Site-specific, human-written field and action labels; preserve element IDs.
-    for field,label in FIELD_LABELS.get(slug,{}).items():
+    for field,label in {**FIELD_LABELS.get(slug,{}),**WORK_FIELD_LABELS.get(slug,{})}.items():
         ident=re.escape(field)
         pattern=r'(<label\b[^>]*>)([^<]*)(?=<(?:input|select|textarea)\b[^>]*\bid=["\x27]'+ident+r'["\x27])'
         html=re.sub(pattern,lambda m:m.group(1)+escape(label),html,flags=re.I)
         after=r'(<label\b[^>]*>\s*<input\b[^>]*\bid=["\x27]'+ident+r'["\x27][^>]*>)[^<]*(?=</label>)'
         html=re.sub(after,lambda m:m.group(1)+' '+escape(label),html,flags=re.I)
-    for button,label in BUTTON_LABELS.get(slug,{}).items():
+        for_attr=r'(<label\b[^>]*\bfor=["\x27]'+ident+r'["\x27][^>]*>)[^<]*(?=</label>)'
+        html=re.sub(for_attr,lambda m:m.group(1)+escape(label),html,flags=re.I)
+    for button,label in {**BUTTON_LABELS.get(slug,{}),**WORK_BUTTON_LABELS.get(slug,{})}.items():
         ident=re.escape(button)
         pattern=r'(<button\b[^>]*\bid=["\x27]'+ident+r'["\x27][^>]*>)[^<]*(</button>)'
         html=re.sub(pattern,lambda m:m.group(1)+escape(label)+m.group(2),html,flags=re.I)
