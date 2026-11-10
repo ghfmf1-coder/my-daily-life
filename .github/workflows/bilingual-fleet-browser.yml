@@ -1,0 +1,37 @@
+name: Bilingual fifty-tool mobile browser smoke
+on:
+  push:
+    branches: [feat/bilingual-seo-fleet-20261110]
+    paths:
+      - 'site-factory/scripts/bilingual_en.py'
+      - 'site-factory/ops/*editorial-content.json'
+      - 'site-factory/tests/bilingual-fleet-browser.mjs'
+      - '.github/workflows/bilingual-fleet-browser.yml'
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Generate both language sites without touching production
+        run: |
+          python3 site-factory/scripts/bilingual_en.py --work all
+          PYTHONPATH=site-factory/scripts python3 - <<'PY'
+          from factory import prepare
+          from pathlib import Path
+          prepare('toolbox-hub',Path('/tmp/toolbox-i18n-qa'))
+          PY
+          python3 -m http.server 8088 --bind 127.0.0.1 --directory /tmp/toolbox-i18n-qa >/tmp/toolbox-en-hub.log 2>&1 &
+          python3 -m http.server 8089 --bind 127.0.0.1 --directory work-sites >/tmp/toolbox-en-work.log 2>&1 &
+          sleep 2
+      - name: Test fifty English mobile interfaces and key interactions
+        run: node site-factory/tests/bilingual-fleet-browser.mjs
