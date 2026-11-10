@@ -47,7 +47,7 @@ def check_language(lang,data):
         if key not in data:raise ValueError('Missing article key '+lang+'.'+key)
     for k in ('title','description','problem','alternative','toolIntro','limits'):
         val=data[k]
-        if not isinstance(val,str) or len(val.strip())<30:
+        if not isinstance(val,str) or len(val.strip())<(12 if k=='title' else 30):
             raise ValueError('Thin or empty '+lang+' '+k)
         if '<' in val or '>' in val:raise ValueError('HTML markup not allowed in editorial fields')
     if not isinstance(data['steps'],list) or len(data['steps'])<3:
