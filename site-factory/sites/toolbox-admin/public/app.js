@@ -1,4 +1,4 @@
-/* 작은 도구함 운영 콘솔 v1.2 — Cloudflare RUM 읽기 전용 API 연결 */
+/* 아브레다 운영 콘솔 v1.2 — Cloudflare RUM 읽기 전용 API 연결 */
 (() => {
   'use strict';
   const STORAGE_KEY = 'small-toolbox-admin-v1'; // keep browser data from earlier releases
@@ -127,7 +127,7 @@
   let toastTimer;
   function toast(msg){const x=document.getElementById('toast');x.textContent=msg;x.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>x.classList.remove('show'),4200);}
   const button = (label,action,style='primary',attrs='') => `<button type="button" class="btn ${style}" data-action="${esc(action)}" ${attrs}>${esc(label)}</button>`;
-  function header(title,description,buttons=''){return `<div class="page-intro"><div><p class="eyebrow">SMALL TOOLBOX / OPERATIONS</p><h1>${esc(title)}</h1><p class="desc">${esc(description)}</p></div><div class="actions">${buttons}</div></div>`;}
+  function header(title,description,buttons=''){return `<div class="page-intro"><div><p class="eyebrow">ABREDA / OPERATIONS</p><h1>${esc(title)}</h1><p class="desc">${esc(description)}</p></div><div class="actions">${buttons}</div></div>`;}
   function panel(title,caption,inside,action=''){return `<section class="panel"><div class="panel-header"><div><h2>${esc(title)}</h2>${caption?`<p>${esc(caption)}</p>`:''}</div>${action}</div>${inside}</section>`;}
   function empty(label,desc='등록 버튼으로 첫 기록을 추가하세요.'){return `<div class="empty-state"><div class="empty-icon">▤</div><strong>${esc(label)}</strong><p>${esc(desc)}</p></div>`;}
   function stats(title,num,sub,icon,color='') {return `<article class="stat-card"><div class="stat-top"><span>${esc(title)}</span><span class="stat-icon ${color}">${icon}</span></div><div class="stat-num">${esc(num)}</div><div class="stat-sub">${esc(sub)}</div></article>`;}
@@ -670,7 +670,7 @@
       ['csv-merge-studio','CSV 맞춤 병합기','파일 · 데이터 도구','https://csv.abreda.com','CSV 열 이름 자동 매칭, 파일별 수동 연결, 중복 제거·다운로드. 배포 검증 대기.'],
       ['novel-planner','웹소설 연재 설계실','웹소설 · 창작 도구','https://novel.abreda.com','회차·등장인물·복선 추적 도구. GitHub에 구현 완료, 실제 공개 주소 검증 대기.'],
       ['manuscript-lens','웹소설 원고돋보기','웹소설 · 원고 검사','https://manuscript.abreda.com','반복 어절·긴 문장·대사 비율·표현 찾기. GitHub에 구현 완료, 실접속 검증 대기.'],
-      ['toolbox-admin','작은 도구함 통합 관리자','운영 · 내부 관리','https://adminivo.com/','운영 콘솔 v1.2. 사이트 접근 제한 미설정 시 공개 주소임. 브라우저별 개별 저장, 실시간 동기화 미구현.']
+      ['toolbox-admin','아브레다 통합 관리자','운영 · 내부 관리','https://adminivo.com/','운영 콘솔 v1.2. 사이트 접근 제한 미설정 시 공개 주소임. 브라우저별 개별 저장, 실시간 동기화 미구현.']
     ];
     let changes=0;
     for(const [slug,name,category,url,notes] of records){

@@ -292,5 +292,5 @@ def enrich_public_guide(slug, rel, html):
             summary = when
         html = html[:match.start(1)] + escape(summary, quote=True) + html[match.end(1):]
     if lang == 'en':
-        html = html.replace(' | 작은도구함</title>', ' | Small Toolbox</title>', 1)
+        html = html.replace(' | 아브레다</title>', ' | ABREDA</title>', 1).replace(' | 작은도구함</title>', ' | ABREDA</title>', 1)
     return html

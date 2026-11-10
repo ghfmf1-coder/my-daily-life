@@ -21,7 +21,7 @@ NATIVE=set(('privacy-redactor','submission-auditor','shift-calendar','worktime-a
 
 # Only translate known UI labels. Never translate CSV column names or JS object keys.
 UI={
-'작은 도구함':'Small Toolbox','작은도구함':'Small Toolbox',
+'작은 도구함':'ABREDA','작은도구함':'ABREDA',
 '설치 없이 쓰는 무료 브라우저 도구':'Free browser tools, no installation',
 '설치·회원가입 없이 사용하는 브라우저 도구':'Free browser tools, no sign-up',
 '설치 없이 쓰는 무료 브라우저 도구':'Free browser tools, no installation',
@@ -429,13 +429,13 @@ def label_for(text:str,tag:str,entry:list,idx:int)->str:
     if not raw:return text
     if raw in UI:return text.replace(raw,UI[raw])
     if raw.startswith('SMALL TOOLBOX') and re.search('[가-힣]',raw):
-        return 'SMALL TOOLBOX · '+entry[0]
+        return 'ABREDA · '+entry[0]
     if ('파일' in raw or '자료' in raw) and ('서버' in raw or '방문 통계' in raw or '방문 집계' in raw):
         return 'Your file contents are processed in this browser, not uploaded for processing or included in visitor statistics.'
     if '회원가입 없이' in raw and '업로드' in raw:
         return 'No account is required. File contents are processed locally in your browser.'
     if '개인정보 서버 미전송' in raw:
-        return 'Small Toolbox · File contents are processed locally'
+        return 'ABREDA · File contents are processed locally'
     if '지원 파일: UTF-8 CSV' in raw:
         return 'Supported files: UTF-8 CSV, TSV and unencrypted XLSX (first worksheet), up to 16 MB and 50,000 rows per file. Scanned images and legacy XLS files are not supported.'
     if '주문 관리 화면에서 다운로드한' in raw:
@@ -529,7 +529,7 @@ class VisibleTranslator(HTMLParser):
             self.parts.append(data);return
         tag=self.tags[-1] if self.tags else ''
         if tag=='title':
-            self.parts.append(escape(self.entry[0]+' | Small Toolbox'));return
+            self.parts.append(escape(self.entry[0]+' | ABREDA'));return
         if tag=='h1' and self.count.get('h1',0)>0:
             # Some sources nest a subtitle inside the heading. Never print
             # the complete title twice.
@@ -613,7 +613,7 @@ def korean_editorial(slug):
       '<p>도구는 브라우저에서 처리한 새 결과를 다운로드하도록 구성되어 있습니다. 원본 자료를 보관하고 결과 파일을 직접 대조하세요.</p>'
       '<h3>결과가 실제 거래·제출에 유효한가요?</h3>'
       '<p>입력값과 파일 상태에 따라 결과가 달라지므로 중요한 결정을 내리기 전에 관련 기관의 공식 지침이나 원본 정보를 확인하세요.</p>'
-      '<p><a href="https://abreda.com/">작은도구함 다른 도구</a> · <a href="https://abreda.com/privacy">개인정보처리방침</a></p></section>')
+      '<p><a href="https://abreda.com/">아브레다 다른 도구</a> · <a href="https://abreda.com/privacy">개인정보처리방침</a></p></section>')
 
 def patch_korean(html,ko_url,en_url):
     if 'tb-lang-switch' not in html:
@@ -760,7 +760,7 @@ def generate_work_catalog(directory):
         cards.append('<article class="entry"><h2>'+escape(title)+'</h2><p>'+escape(summary)+'</p><p class="detail">'+escape(output)+'</p>'
                      '<a href="'+escape(url,quote=True)+'" rel="noopener">Open '+escape(title)+'</a></article>')
     html=('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-          '<meta name="robots" content="index,follow"><title>Specialized File and Workflow Tools | Small Toolbox</title>'
+          '<meta name="robots" content="index,follow"><title>Specialized File and Workflow Tools | ABREDA</title>'
           '<meta name="description" content="Browse practical browser tools for inventory, invoices, certificates, media file checks, subtitle processing, schedules and more. English instructions and local file processing.">'
           '<link rel="canonical" href="https://abreda.com/en/new-tools/">'
           '<link rel="alternate" hreflang="en" href="https://abreda.com/en/new-tools/">'
@@ -770,7 +770,7 @@ def generate_work_catalog(directory):
           'a{color:#2258c5}header{display:flex;justify-content:space-between;gap:20px}h1{font-size:clamp(28px,5vw,42px)}'
           '.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:17px}.entry{background:white;border:1px solid #dfe7f2;padding:20px;border-radius:14px}'
           '.entry h2{margin:0;font-size:20px}.entry p{margin:8px 0}.entry .detail{font-size:13px;color:#586d86}</style></head><body>'
-          '<header><a href="https://abreda.com/en/">Small Toolbox</a><a href="https://abreda.com/new-tools/" hreflang="ko">한국어</a></header>'
+          '<header><a href="https://abreda.com/en/">ABREDA</a><a href="https://abreda.com/new-tools/" hreflang="ko">한국어</a></header>'
           '<main><h1>Specialized file and workflow tools</h1>'
           '<p>Use these independent browser tools to organize files, validate document exports and review operational data. '
           'Choose the tool for your particular task. Each page explains accepted inputs, practical steps, available results and limitations.</p>'
