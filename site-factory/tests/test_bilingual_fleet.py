@@ -59,7 +59,7 @@ class BilingualFleetTests(unittest.TestCase):
                 localized=generate_work(slug,write=False)
                 self.assertIn('lang="en"',localized)
                 self.assertIn(EDITORIAL[slug][0],localized)
-                self.assertIn(EDITORIAL[slug][2],localized)
+                self.assertIn(__import__('html').escape(EDITORIAL[slug][2]),localized)
                 self.assertIn('hreflang="ko"',localized)
                 self.assertIn('hreflang="en"',localized)
                 self.assertIn('rel="canonical" href="https://tb-'+slug+'.pages.dev/en/"',localized)
