@@ -1,0 +1,22 @@
+name: Verify ten new Small Toolbox browser tools
+on:
+  push:
+    branches: [feat/ten-useful-tools-20261110]
+  pull_request:
+    paths:
+      - 'site-factory/sites/**'
+      - 'site-factory/scripts/**'
+      - 'site-factory/ops/visit-sites.json'
+      - 'site-factory/tests/test_ten_tools.py'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate factory, tool JavaScript, hub routes and admin catalog
+        run: python3 -m unittest discover -s site-factory/tests -v
