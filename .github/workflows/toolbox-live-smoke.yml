@@ -6,6 +6,12 @@ on:
       - 'site-factory/tests/toolbox-ten-live-smoke.mjs'
       - '.github/workflows/toolbox-live-smoke.yml'
   workflow_dispatch:
+    inputs:
+      suite:
+        description: Focused suite
+        type: choice
+        options: [first-ten, work-tools]
+        default: first-ten
 permissions:
   contents: read
 jobs:
@@ -22,4 +28,9 @@ jobs:
       - name: Install headless Chromium
         run: npx playwright install --with-deps chromium
       - name: Validate 10 live tools without contaminating analytics
-        run: node site-factory/tests/toolbox-ten-live-smoke.mjs
+        run: |
+          if [ '${{ inputs.suite }}' = 'work-tools' ]; then
+            node site-factory/tests/work-tools-browser.mjs
+          else
+            node site-factory/tests/toolbox-ten-live-smoke.mjs
+          fi
