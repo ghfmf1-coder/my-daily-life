@@ -1,0 +1,37 @@
+name: Second ten tool real-browser end-to-end QA
+on:
+  push:
+    branches: [feat/second-ten-tools-20261110]
+    paths:
+      - 'site-factory/sites/**'
+      - 'site-factory/scripts/factory.py'
+      - 'site-factory/tests/second-ten-browser.mjs'
+      - '.github/workflows/toolbox-second-ten-browser.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: npm install --no-save --no-package-lock playwright@1.56.1
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Prepare local hub and launch localhost server
+        run: |
+          PYTHONPATH=site-factory/scripts python3 - <<'PY'
+          from factory import prepare
+          from pathlib import Path
+          prepare('toolbox-hub',Path('/tmp/toolbox-second-ten-hub'))
+          PY
+          python3 -m http.server 8088 --bind 127.0.0.1 --directory /tmp/toolbox-second-ten-hub >/tmp/toolbox-second-ten-http.log 2>&1 &
+          echo $! >/tmp/toolbox-second-ten-http.pid
+          sleep 2
+      - name: Execute ten interactive test cases
+        run: node site-factory/tests/second-ten-browser.mjs
