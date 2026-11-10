@@ -25,6 +25,8 @@ jobs:
           node --check work-sites/shipping-audit/public/core.mjs
           node --check work-sites/shipping-audit/public/xlsx.mjs
           node --check work-sites/shipping-audit/public/app.mjs
+      - name: Generate Korean guide and working English page on every deploy
+        run: python3 site-factory/scripts/bilingual_en.py --work shipping-audit
       - name: Confirm Cloudflare Pages credentials exist
         env:
           CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

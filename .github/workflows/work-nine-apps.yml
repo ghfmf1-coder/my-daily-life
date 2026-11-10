@@ -53,6 +53,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Generate Korean guide and working English page on every deploy
+        env:
+          SITE: ${{ matrix.slug }}
+        run: python3 site-factory/scripts/bilingual_en.py --work "$SITE"
       - name: Require existing Cloudflare Pages secrets
         env:
           CF_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
