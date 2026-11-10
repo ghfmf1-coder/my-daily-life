@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'site-factory/tests/toolbox-ten-live-smoke.mjs'
+      - 'site-factory/tests/work-tools-browser.mjs'
       - '.github/workflows/toolbox-live-smoke.yml'
   workflow_dispatch:
     inputs:
@@ -20,6 +21,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -29,7 +32,7 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Validate 10 live tools without contaminating analytics
         run: |
-          if [ '${{ inputs.suite }}' = 'work-tools' ]; then
+          if [ '${{ inputs.suite }}' = 'work-tools' ] || ! git diff --quiet HEAD^ HEAD -- site-factory/tests/work-tools-browser.mjs; then
             node site-factory/tests/work-tools-browser.mjs
           else
             node site-factory/tests/toolbox-ten-live-smoke.mjs

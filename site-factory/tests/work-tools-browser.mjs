@@ -1,5 +1,6 @@
 import {chromium} from 'playwright';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import {execFileSync} from 'node:child_process';
-const png=null;const csv=(text,name='qa.csv')=>({name,mimeType:'text/csv',buffer:Buffer.from(text)}),text=(data,name='qa.txt',mimeType='text/plain')=>({name,mimeType,buffer:Buffer.from(data)});
+// Known input/output fixtures; requests use tb_test=1 and never write visit events.
+const csv=(text,name='qa.csv')=>({name,mimeType:'text/csv',buffer:Buffer.from(text)}),text=(data,name='qa.txt',mimeType='text/plain')=>({name,mimeType,buffer:Buffer.from(data)});
 const cases={
 'invoice-reconcile':[[csv('invoice,amount\nA,100'),csv('reference,amount\nA,90')],/금액 불일치/],
 'purchase-three-way':[[csv('sku,qty,price\nA,1,10'),csv('sku,qty,price\nA,2,10'),csv('sku,qty,price\nA,3,10')],/수량 차이/],
