@@ -7,5 +7,10 @@
   "canonical_url": "https://tb-quote-document-maker.pages.dev",
   "ga4_measurement_id": "G-YHSK49NC2E",
   "ga4_collection_enabled": true,
-  "deploy_mode": "hub_only"
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": true
 }
