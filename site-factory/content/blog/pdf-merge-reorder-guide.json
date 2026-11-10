@@ -1,0 +1,62 @@
+{
+  "slug": "pdf-merge-reorder-guide",
+  "tool": "pdf-page-workshop",
+  "published": "2026-11-10",
+  "status": "reviewed",
+  "ko": {
+    "title": "PDF 파일 합치기와 페이지 순서 바꾸는 법",
+    "description": "여러 PDF를 하나로 합치고 잘못된 페이지 순서를 수정하는 방법, 회전·삭제 작업과 제출 전 확인해야 할 내용을 설명합니다.",
+    "problem": "여러 증빙서류를 하나의 PDF로 제출할 때는 파일을 단순히 연결하는 것만으로 충분하지 않습니다. 문서 순서와 중복 페이지, 뒤집힌 스캔 이미지까지 점검해야 합니다.",
+    "steps": [
+      [
+        "제출 기관이 지정한 페이지 순서 확인하기",
+        "신청서와 첨부자료가 어떤 순서로 들어가야 하는지 공식 안내문을 먼저 확인하세요. 원본 PDF는 그대로 보관하고 작업할 파일 이름을 정리하세요."
+      ],
+      [
+        "각 PDF의 페이지를 확인하고 정리하기",
+        "서로 다른 PDF를 불러오고 중복된 쪽이 없는지 살펴보세요. 옆으로 눕거나 거꾸로 스캔된 부분은 회전해야 합니다. 암호화된 PDF는 열리지 않을 수 있습니다."
+      ],
+      [
+        "병합된 PDF를 다시 열어 누락을 점검하기",
+        "페이지를 재배치한 뒤 새 파일로 저장하세요. 파일 첫 장과 끝 장, 중간 첨부자료를 확인하고 실제 제출 조건에 맞게 정리됐는지 검수하세요."
+      ]
+    ],
+    "alternative": "macOS 미리보기는 PDF 축소판을 드래그하여 페이지를 정렬하는 기능을 제공합니다. 이미 설치한 PDF 편집 프로그램을 이용하는 방법도 있습니다.",
+    "toolIntro": "아브레다 PDF 페이지 수리점에서 PDF 파일 여러 개를 불러오고 페이지를 이동·삭제·회전한 뒤 새 PDF로 저장할 수 있습니다.",
+    "limits": "전자서명이 포함된 PDF를 수정하면 서명 검증 상태가 바뀔 수 있습니다. 암호화 파일이나 PDF 본문 텍스트 편집은 별도 방법이 필요합니다.",
+    "faq": [
+      [
+        "이미 서명된 PDF 파일도 마음대로 편집해도 되나요?",
+        "디지털 서명이 있는 문서는 페이지를 바꾸면 기존 서명의 유효성에 영향을 줄 수 있습니다. 발급처에서 정한 공식 처리 절차를 우선 확인하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Merge PDF Files and Rearrange Pages Before Submission",
+    "description": "Combine PDFs, rotate scanned pages, remove duplicate sheets and verify the final document before sending it.",
+    "problem": "When a recipient requests one PDF, merging filenames is only part of the task. The order of forms, supporting documents and scanned pages must also be checked.",
+    "steps": [
+      [
+        "Plan the document sequence first",
+        "Read the recipient's official instructions and list the required forms in order. Keep an untouched copy of every original PDF."
+      ],
+      [
+        "Inspect pages before merging",
+        "Check the source PDFs for duplicate pages and upside-down scans. Rotate or remove pages as needed, noting that some encrypted files may not open."
+      ],
+      [
+        "Export and verify the final file",
+        "Save a new PDF, then reopen it to inspect the beginning, middle and end. Verify that no attachment disappeared during reordering."
+      ]
+    ],
+    "alternative": "On macOS, Preview supports arranging PDF page thumbnails. You can also use an installed PDF editor that handles these tasks.",
+    "toolIntro": "ABREDA PDF Page Organizer lets you open several PDFs, move, rotate and remove pages, then download a newly assembled file.",
+    "limits": "Changing a digitally signed document can invalidate its signature. Encrypted PDFs and editing text inside an existing page may require other software.",
+    "faq": [
+      [
+        "Can I edit a PDF without affecting an existing digital signature?",
+        "Changing a signed document's content or structure may invalidate signature verification. Follow the issuing organization's recommended procedure instead."
+      ]
+    ]
+  }
+}
