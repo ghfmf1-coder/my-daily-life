@@ -3,7 +3,7 @@
     "https://abreda.com/": {
       "consoleCheckedAt": "2026-10-23",
       "consoleStatus": "verified",
-      "contentDigest": "fce7de7317fe7938a752ae7a0fddd17852b22d798f92c37efaa1c3dcdd6bbec5",
+      "contentDigest": "ab606081ebac5938ee0b0a63b930500af3d02ee1684614fa5b34a55483a161eb",
       "indexNowKey": "a48f126dc9e928f68fc32ad58b0d9f04",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:32.175110+00:00",
@@ -15,7 +15,7 @@
     },
     "https://card-grading-lab.abreda.com/": {
       "consoleStatus": "not_registered",
-      "contentDigest": "ac78589509407a874e4b09e6c3a8613dfa06d61ac469d9cbbd11587690d8667b",
+      "contentDigest": "c8a1f7bba166f164fac9efce0994b5a6491be3d95b124e130d7454f1c909e12e",
       "indexNowKey": "d7e01a3d1fdbd0f8bdfbc4e021cd6bed",
       "lastIndexNow": {
         "at": "2026-11-09T13:30:19.513732+00:00",
@@ -28,7 +28,7 @@
     "https://csv.abreda.com/": {
       "consoleCheckedAt": "2026-10-23",
       "consoleStatus": "verified",
-      "contentDigest": "b6d328fd2b8bfe5b5bab189af47cec138747485e029c00fa5b5bd70d586ec285",
+      "contentDigest": "bc467480c6b640c6a881687a2b59ed7e97adf3d0a7ca27a68408d7ffda3838e3",
       "indexNowKey": "c51ffdebcee7ffc5d113786a59772f87",
       "lastIndexNow": {
         "at": "2026-10-23T06:33:19.947954+00:00",
@@ -41,7 +41,7 @@
     "https://manuscript.abreda.com/": {
       "consoleCheckedAt": "2026-10-23",
       "consoleStatus": "verified",
-      "contentDigest": "146265dc0f288070ae7cd12ef98264d74aa40958d87975efc757b37bd01671d1",
+      "contentDigest": "ae80a4a5089064010bd497b7e6528c4830eb9dc2332288c36653e3b11be641a4",
       "indexNowKey": "5ae19f23d18bf960497cef7ec1dfe65d",
       "lastIndexNow": {
         "at": "2026-10-23T06:33:21.854938+00:00",
@@ -69,7 +69,7 @@
     "https://novel.abreda.com/": {
       "consoleCheckedAt": "2026-10-23",
       "consoleStatus": "verified",
-      "contentDigest": "eae50425556591b44a24c5fc42431ae6c8f52bd1d95faaebcabc651cdad1cf4e",
+      "contentDigest": "e7e6e6b93f9c06daae74651f4fc7a875eebd30767da8e94c9f9fea2d7a76b82a",
       "indexNowKey": "b83b8195ba5dd316eaa26078700db52d",
       "lastIndexNow": {
         "at": "2026-10-23T06:33:23.931343+00:00",
@@ -83,7 +83,7 @@
       "consoleCheckedAt": "2026-10-23T01:34:24Z",
       "consoleEvidence": "\ub124\uc774\ubc84 \uacc4\uc815 \ubaa9\ub85d \uc18c\uc720\ud655\uc778 \ubc0f \uc81c\ucd9c\ub41c sitemap.xml \uc9c1\uc811 \ud655\uc778",
       "consoleStatus": "verified",
-      "contentDigest": "08cca1196995691bdaec095a9572c63b862a4a3fa2243df37b778c07349ef4f8",
+      "contentDigest": "d09ec492238e879c32efabb9cd0fe491decc619792e828c4b60844c4b9236e22",
       "indexNowKey": "557bb26f42ea5ad0d3575c660d87dc92",
       "lastIndexNow": {
         "at": "2026-10-23T06:33:25.619463+00:00",
@@ -98,7 +98,7 @@
       "consoleCheckedAt": "2026-10-23T01:34:24Z",
       "consoleEvidence": "\ub124\uc774\ubc84 \uacc4\uc815 \ubaa9\ub85d \uc18c\uc720\ud655\uc778 \ubc0f \uc81c\ucd9c\ub41c sitemap.xml \uc9c1\uc811 \ud655\uc778",
       "consoleStatus": "verified",
-      "contentDigest": "7f1b38b36da8bf8b6e9c218294a305b41b1a37c851a521b2eff89ba708852b75",
+      "contentDigest": "70c7f7cd8a367a07dbda5dd6edc909a045faf07bb9d330bac0e4d51d459d50c8",
       "indexNowKey": "24009e80aff10a1725df83e217e1bc3c",
       "lastIndexNow": {
         "at": "2026-10-23T06:33:26.582795+00:00",
@@ -113,7 +113,7 @@
       "consoleCheckedAt": "2026-10-23T01:45:12.245Z",
       "consoleEvidence": "\ub124\uc774\ubc84 \uacc4\uc815 \ubaa9\ub85d \uc18c\uc720\ud655\uc778 \ubc0f \uc81c\ucd9c\ub41c sitemap.xml \uc9c1\uc811 \ud655\uc778",
       "consoleStatus": "verified",
-      "contentDigest": "25a1e082df8ab251267d722ddf74afa17dacaaeb65317f7e50fba76014a5d159",
+      "contentDigest": "c5c2b3f8c546c50072ad275938469220574a553ef19f0d72290f5107349ef961",
       "indexNowKey": "28a289562f57bed8a0d8d66d069f2969",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:36.126325+00:00",
@@ -128,7 +128,7 @@
       "consoleCheckedAt": "2026-10-23T01:45:12.247Z",
       "consoleEvidence": "\ub124\uc774\ubc84 \uacc4\uc815 \ubaa9\ub85d \uc18c\uc720\ud655\uc778 \ubc0f \uc81c\ucd9c\ub41c sitemap.xml \uc9c1\uc811 \ud655\uc778",
       "consoleStatus": "verified",
-      "contentDigest": "23647bd4ba856b0c76eb1df81e6853e7faf9eaa9df90ee54a3b19f8c0e30f08b",
+      "contentDigest": "ec9773b9400a0aaa36190ebf0937962d05c3f4d0e7977c45e4bacc43419709ed",
       "indexNowKey": "73427743f90984dcb6c6b3f0c2fa4ced",
       "lastIndexNow": {
         "at": "2026-10-23T06:33:28.140795+00:00",
@@ -154,7 +154,7 @@
     },
     "https://tb-certificate-batch.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "58b29ffc7e6e734c8dcb96c4da471257c29136bcab93db7bbdd3fb3745cd9d94",
+      "contentDigest": "919d2472a783636225a00377f8153ab50de88f5f90b05552e46b71e2149818c2",
       "indexNowKey": "ee6358f2c8726da577e8f75648a735b6",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:37.284314+00:00",
@@ -167,7 +167,7 @@
     },
     "https://tb-class-schedule-check.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "d6fbfffe6a7d0abfc399d571d414bb25115aca97163b7d8897e67d9ce164828e",
+      "contentDigest": "f6c4c1e5a9c6e5f62fd6f4028efc7af8a6e37f7b2ad40e3dcc1974015ed4f881",
       "indexNowKey": "2495697a40bea39270789ca73b7f3d77",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:38.059229+00:00",
@@ -180,7 +180,7 @@
     },
     "https://tb-comic-condition-lab.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "0e88d9ff1fb53da4172abdb048716e2c755c17706109d9d5ba676df4b2ba5bee",
+      "contentDigest": "754d0e2703a25e79b152acbee0abaa94854064209f4ddd69ead3a0128d337f71",
       "indexNowKey": "fec451b9deb0c7016c9d072910c36581",
       "lastIndexNow": {
         "at": "2026-10-23T06:33:31.161917+00:00",
@@ -193,7 +193,7 @@
     },
     "https://tb-detail-image-review.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "67c638ee623e0ffe33838bff2f474c29c516308f2e4c6fe1536619c0f1e380a8",
+      "contentDigest": "64cc47bd758ee7259f3c82d65951df30fb48c1b2cd12d3ba423af07fdddf3d38",
       "indexNowKey": "e5143ad4537850e17e775ec3ebdb9776",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:39.041681+00:00",
@@ -206,7 +206,7 @@
     },
     "https://tb-dst-embroidery.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "210d1bb5457874bd964866eda79d380313d5bd25865650350629efbf0811d68b",
+      "contentDigest": "30966c75f2ed6d1d94bc536260415a2191ad50944340ea91bf4c2861baf80ce1",
       "indexNowKey": "17f180d857dd8d1adbc53d1328660d18",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:39.928541+00:00",
@@ -219,7 +219,7 @@
     },
     "https://tb-epub-preflight.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "8058da0d7be1c18ffd6eca98eacf7e456772046017add6f64afbd6c13bd33a13",
+      "contentDigest": "39b903f92d2f9678905ec95db4e3c20ecc33f36c0961d0ffe51b1b2065bc0149",
       "indexNowKey": "30324c4d668551d11642550ef2106117",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:40.704258+00:00",
@@ -232,7 +232,7 @@
     },
     "https://tb-event-seating.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "094769248f3ff63a168e6aceeaaf479a837b5a18d7d4111f23dab378906a3961",
+      "contentDigest": "f8df156b91207247206d92d4be6bec15d2a687e4d78a8ea0b76a0349f91fc5c4",
       "indexNowKey": "73a8c25bdaa35f60a866a74914e3ccbb",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:41.354461+00:00",
@@ -245,7 +245,7 @@
     },
     "https://tb-exam-variants.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "c3864965fa5e628a9964f239d0ba565291abfdd50467ba21a8cf45b813034abc",
+      "contentDigest": "f53f9443cf1463a3777c7997da13d8661c3d03b5f34afe94358e0364ae4d1a55",
       "indexNowKey": "3a82716eecc7052b14a96f276b3c182d",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:42.222594+00:00",
@@ -258,7 +258,7 @@
     },
     "https://tb-gem-photo-inspection.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "5db09c47dc5ad9094640e83816eba6d51603271bcc8953c64bb921aecba5748f",
+      "contentDigest": "1305e356bc1c717b5b0cc39b2c5118493a78c24105f72ad8cd40ed91e954221e",
       "indexNowKey": "726a40371bc4f3974b4e6c1c67828984",
       "lastIndexNow": {
         "at": "2026-10-23T06:33:45.555637+00:00",
@@ -271,7 +271,7 @@
     },
     "https://tb-inventory-diff.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "671a77be50f1df2424306a48d763d20f78db4e7c5acc55ae8c7fb3c7c101984d",
+      "contentDigest": "47f315615e0e65406da643783494147a7d25b0bcc27bdc9d2cd4915183546742",
       "indexNowKey": "396122ac4f71b44381cecfd147c62737",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:43.179302+00:00",
@@ -284,7 +284,7 @@
     },
     "https://tb-invoice-reconcile.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "8e23210eda881df3191baeb12c79d41166913be4bc6299929ef0a837ce7dc8e7",
+      "contentDigest": "d99e5c19cedbfbc74acee012c693fe1c2d06b99beea60b4a1738f303743eae59",
       "indexNowKey": "c034dc50abe310af6c3a5da01f98468f",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:43.972362+00:00",
@@ -297,7 +297,7 @@
     },
     "https://tb-keyboard-switch-diagnostics.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "a8101912fa5b346b08b8246b0b31299e8056a78d425836f68eed592aaf0546ce",
+      "contentDigest": "7a3aec12845fa366e62eceeb0e839580b3e12f571b39f7954cf51fc5d300bacf",
       "indexNowKey": "ae9055fe240a116a806a75e4b6051d94",
       "lastIndexNow": {
         "at": "2026-10-23T06:33:47.780931+00:00",
@@ -310,7 +310,7 @@
     },
     "https://tb-lease-registry-diff.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "7f49694e82018ef8d9fe9913493dbeb15f9105a2d9ff32739eef58d694867e84",
+      "contentDigest": "348c466586803167f9ce1ece493e398ec2f49ece268b0c14d23161ed99d133ad",
       "indexNowKey": "cb905137f7f9266e1036ae8e7b506ade",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:44.968453+00:00",
@@ -323,7 +323,7 @@
     },
     "https://tb-move-evidence.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "6b56bdb9c718b30854762ff2f827acc1d74c03a6d65f771ebce4f053ef8676c2",
+      "contentDigest": "cfcf89f9bd320e15f142b431da1cfe465d92016fc3cb03f774c19dcec37efac2",
       "indexNowKey": "05b679d0e04c76358b51376739c81fc9",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:45.599561+00:00",
@@ -336,7 +336,7 @@
     },
     "https://tb-moving-boxes.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "a2febb57f0bd8b131b644e545d6e87b594f176bd237922827936f92826377e09",
+      "contentDigest": "6cafe1cf003fb44098de9c343a91af0f1ccdcf388bfa1828d09b43f21d841495",
       "indexNowKey": "f2614c97a170a22664a660009170e2c3",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:46.344873+00:00",
@@ -349,7 +349,7 @@
     },
     "https://tb-option-combinations.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "a0f592815b7dfef4507e6ba345379a218b280d9ecb0285d8f36244f45c413b67",
+      "contentDigest": "17d65f597a8c2461022ac10b800492887d477c0d8d09275a9af2be0b28f43536",
       "indexNowKey": "a759a551e9eee8db8c142f7c08eb2187",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:47.022470+00:00",
@@ -362,7 +362,7 @@
     },
     "https://tb-pdf-preflight.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "1cb9fb2c45c5edecf010d3dc0e0009feaf1985b103848cab4d91be9c1b024d5a",
+      "contentDigest": "401480482fc098795b3a6aa6c048c9ec2c732fd1562ddd061ea018ef8dd7bb53",
       "indexNowKey": "539ca3c4359e78c915fbf2e43b82bbde",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:47.876398+00:00",
@@ -375,7 +375,7 @@
     },
     "https://tb-photo-contact-sheet.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "94f7be796fa9b56d650f3bf16bfeae674106187008aa2be56fdb9332dce71ae2",
+      "contentDigest": "b07d1a4edc7c40cc0dfe91604fa4aba02d0edf1cf374519b6e83aa10ac0bb0bc",
       "indexNowKey": "978569b9f2b6be5e144cac03e8615cc5",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:48.534944+00:00",
@@ -388,7 +388,7 @@
     },
     "https://tb-photo-duplicates.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "f6e05186d89446ff0ceaf92c4f2e2f355bb9ae1e1eade956ad7e64c1d38b3b1f",
+      "contentDigest": "15c79b8c43db777c97953cd173f7edb7c4eb58b0c9dabf9595c7c25707c9a42a",
       "indexNowKey": "68eaadb061de01e806afcf5acbbe7e83",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:49.205234+00:00",
@@ -401,7 +401,7 @@
     },
     "https://tb-purchase-three-way.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "7a6dae79e3e51de9a6dc45fade11367133a4c1f8ecffe9bd2ea27518ff99da6e",
+      "contentDigest": "6e3f95806d5dc4b576dda4e4096811ed617e524a5108024b90e0dc2377ca2092",
       "indexNowKey": "f9f580ab67197d0838332f15a24be8be",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:49.881509+00:00",
@@ -414,7 +414,7 @@
     },
     "https://tb-question-similarity.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "e7940e41b64cc95a918acfc36223cda3ec6a80069c591ef7f2051f2e0e9f242c",
+      "contentDigest": "f6e058e08bf04473f31eeb33fee494acbd9baa278902e296f7366daa0b1c8bf7",
       "indexNowKey": "dbd1b61604f1f4efa90130b2f2d0567a",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:50.761407+00:00",
@@ -427,7 +427,7 @@
     },
     "https://tb-shipping-audit.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "7dcfd1d614d0026ab9cbb9d527c88d3daa4b1d3513d8002f9489a93d4eb64c5f",
+      "contentDigest": "25f0efdc5721eea9d7656c78e07264be254bf9482bcc9e939f5f2d570008b60e",
       "indexNowKey": "26b60f3f782a23a241618a8890dcd41f",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:51.555567+00:00",
@@ -440,7 +440,7 @@
     },
     "https://tb-shotlist-maker.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "7ea1ec7c5d8d134c2b21a76af3cf83cb81b7dff80ea8836a973c45428c1768f2",
+      "contentDigest": "c7eced579ee9d2d1456e6e8add723b2140f885634e483bc26636e0de0722ce71",
       "indexNowKey": "fa15ff16e2b2473b21c5ec86aef1c705",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:52.221777+00:00",
@@ -453,7 +453,7 @@
     },
     "https://tb-show-cues.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "eef80a3115a5a1f1f0b944c905dbcd0e8ff8c5234715553568126b1f921b6548",
+      "contentDigest": "e00538916a901de34c4da984d3ed4b89fe3201f8396dfe4f0dea1cf871c1d075",
       "indexNowKey": "bea3240b31e6bf14de3e685c5394482f",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:52.893062+00:00",
@@ -466,7 +466,7 @@
     },
     "https://tb-silence-finder.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "cbd74208dbd36f265493dd3d1323cd964df7765e0a0756f767ba105c4e62f470",
+      "contentDigest": "55eb109b0b753cabc4633a4edac0ad3d8ae17768039f347d70304ee8fed18044",
       "indexNowKey": "26b2f57abfe65451c2dcce3108724e57",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:53.576523+00:00",
@@ -479,7 +479,7 @@
     },
     "https://tb-sneaker-condition-lab.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "8e19bd85fff7e5392f4c7665d093cf733abfe302b9b9c9dc70e41d681aa4800c",
+      "contentDigest": "9f1897ff927f7f9ea5caaf893cf72c41ee93744a5a64ccb5760ade435c614a66",
       "indexNowKey": "f1e917c6afcca15af5a3831ae30a2310",
       "lastIndexNow": {
         "at": "2026-10-23T06:34:10.574541+00:00",
@@ -492,7 +492,7 @@
     },
     "https://tb-static-site-check.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "a30363b9d9208c5100876a9a0f41920d799bc07c1c18aa0e478c16cd6139234e",
+      "contentDigest": "868d1f8d19c880eb4d69c8f1ef1fd8469d80071b98c6f53b0b97ed9267a97a4d",
       "indexNowKey": "1f5e940600c677f00c7ead6d87a6edd5",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:54.415263+00:00",
@@ -505,7 +505,7 @@
     },
     "https://tb-subtitle-sync-studio.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "717f76e8804e7d5fd8039c37887a4f4fe4c4f7581617cf70c1470522dfbb3242",
+      "contentDigest": "59f697fdc4df169ce813b92d048283a03868b3924b13fe4a22fdfc98af80aace",
       "indexNowKey": "7d265ffd057bcc0401c6b59a057e3d8a",
       "lastIndexNow": {
         "at": "2026-10-23T06:34:15.421472+00:00",
@@ -518,7 +518,7 @@
     },
     "https://tb-survey-review.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "0274815ecedae8170336b3fe0e3e43a918930090248f258469fa77f46fbe96a4",
+      "contentDigest": "166d299964b83d413766eab42a5002827deb8c42d6faa4f8cede15436a8afc08",
       "indexNowKey": "ac8d90da42cd8f4349d06c456c79f599",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:55.398538+00:00",
@@ -531,7 +531,7 @@
     },
     "https://tb-svg-laser-check.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "0c0207580cd932451013d4b389332f7db36b5d5a988c25dded161bf33cc4cd68",
+      "contentDigest": "d25791db9f4c0e66073edf2cdd905c3f590e9e28ad725eecdd4e4071e8d5a8fa",
       "indexNowKey": "4bde77da70e3dc07b758d12d66da01d3",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:56.209913+00:00",
@@ -544,7 +544,7 @@
     },
     "https://tb-tournament-maker.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "3fe77f852ca966be5de30c7b44033d907a17f1b85b6f9a64fd776d0d4043474a",
+      "contentDigest": "46c13cf5cdeb2e61812b913dee5c5e96725bddc63596388d14cce4473d3e2292",
       "indexNowKey": "e6487d7640e4f00661f692a7e6f6535f",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:57.012198+00:00",
@@ -557,7 +557,7 @@
     },
     "https://tb-trip-supplies.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "44d462f529ee9234401eda85748763b2f41dfe7cbc5a4ebcf94545cfc1d3913b",
+      "contentDigest": "08e48fbd70fe6ed9c23093d12c120cf7358c81a4edb0f071577ce996b51887c3",
       "indexNowKey": "6064132ab5a34a29a239230a980a2b00",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:57.694459+00:00",
@@ -570,7 +570,7 @@
     },
     "https://tb-used-car-inspection.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "3ab9233d639732543731641ba24ad95f625525cc5d1b6dfbe9621360c49238de",
+      "contentDigest": "4bdd441e7061b4a95d9db1097397f267134b8eaf281f0664f422f635c8b3f829",
       "indexNowKey": "11274abc80ec569aa470239e8b5cb7ef",
       "lastIndexNow": {
         "at": "2026-10-23T06:34:24.191167+00:00",
@@ -583,7 +583,7 @@
     },
     "https://tb-video-delivery-check.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "deaabd6cca53fdd46eba5d213430f52abef07944e8747751c2b506a49fef26ef",
+      "contentDigest": "c920ac58d94af8ad5bf3368bdb7b5bf5f5743b325facabdf0429f2408f47b4e1",
       "indexNowKey": "78fe79b48d156fc94343344027042c2d",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:58.641323+00:00",
@@ -596,7 +596,7 @@
     },
     "https://tb-vinyl-condition-lab.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "be3a811528630c257f1c9e576d52ffde0e5db02db3c020edaf1240cc94e2919b",
+      "contentDigest": "88797f3bf71bc94680522ac04c61bb748136c23125b93f9621c3fd4435eb5a50",
       "indexNowKey": "321524f8782d3ca5b6ead32b79734d5b",
       "lastIndexNow": {
         "at": "2026-10-23T06:34:27.132287+00:00",
@@ -609,7 +609,7 @@
     },
     "https://tb-webtoon-preflight.pages.dev/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "81ed351cd381c13364d83f95413b7db74d5134d4f87ff3605e9d454531988022",
+      "contentDigest": "c5ce2150e0af2cecda3e82f26fb38c8fd14ae8191b5dde7b9195127b83975b88",
       "indexNowKey": "7835112d3ab252358dd186fed3c0932b",
       "lastIndexNow": {
         "at": "2026-11-10T11:38:59.471411+00:00",
@@ -622,7 +622,7 @@
     },
     "https://watch-inspection-lab.abreda.com/": {
       "consoleStatus": "ownership_pending",
-      "contentDigest": "79b34fae10c28105efdae1e165e6b18144b881f6221d454a55ff0d9db019ea1c",
+      "contentDigest": "b944f431e0887fca06cc9d40b2a1ea6d7c0e125d26131698ecfefa681d9430f9",
       "indexNowKey": "adfb381e8ae89ca24623f21274b55ded",
       "lastIndexNow": {
         "at": "2026-10-23T06:34:29.557484+00:00",
