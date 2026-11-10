@@ -15,6 +15,13 @@
       ]
     },
     {
+      "siteId": "tb-bulk-file-renamer",
+      "url": "https://abreda.com/tools/bulk-file-renamer/",
+      "origins": [
+        "https://tb-bulk-file-renamer.pages.dev"
+      ]
+    },
+    {
       "siteId": "tb-camera-lens-check",
       "url": "https://tb-camera-lens-check.pages.dev/",
       "origins": [
@@ -40,6 +47,13 @@
       "url": "https://tb-class-schedule-check.pages.dev/",
       "origins": [
         "https://tb-class-schedule-check.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-color-contrast-audit",
+      "url": "https://abreda.com/tools/color-contrast-audit/",
+      "origins": [
+        "https://tb-color-contrast-audit.pages.dev"
       ]
     },
     {
@@ -75,6 +89,13 @@
       "url": "https://tb-detail-image-review.pages.dev/",
       "origins": [
         "https://tb-detail-image-review.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-document-scan-studio",
+      "url": "https://abreda.com/tools/document-scan-studio/",
+      "origins": [
+        "https://tb-document-scan-studio.pages.dev"
       ]
     },
     {
@@ -124,6 +145,13 @@
       "url": "https://abreda.com/tools/handover-checklist/",
       "origins": [
         "https://tb-handover-checklist.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-image-compress-lab",
+      "url": "https://abreda.com/tools/image-compress-lab/",
+      "origins": [
+        "https://tb-image-compress-lab.pages.dev"
       ]
     },
     {
@@ -197,6 +225,13 @@
       ]
     },
     {
+      "siteId": "tb-pdf-page-workshop",
+      "url": "https://abreda.com/tools/pdf-page-workshop/",
+      "origins": [
+        "https://tb-pdf-page-workshop.pages.dev"
+      ]
+    },
+    {
       "siteId": "tb-pdf-preflight",
       "url": "https://tb-pdf-preflight.pages.dev/",
       "origins": [
@@ -239,10 +274,38 @@
       ]
     },
     {
+      "siteId": "tb-quote-document-maker",
+      "url": "https://abreda.com/tools/quote-document-maker/",
+      "origins": [
+        "https://tb-quote-document-maker.pages.dev"
+      ]
+    },
+    {
       "siteId": "tb-recurring-payment-finder",
       "url": "https://abreda.com/tools/recurring-payment-finder/",
       "origins": [
         "https://tb-recurring-payment-finder.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-room-layout-planner",
+      "url": "https://abreda.com/tools/room-layout-planner/",
+      "origins": [
+        "https://tb-room-layout-planner.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-seller-profit-math",
+      "url": "https://abreda.com/tools/seller-profit-math/",
+      "origins": [
+        "https://tb-seller-profit-math.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-share-qr-card",
+      "url": "https://abreda.com/tools/share-qr-card/",
+      "origins": [
+        "https://tb-share-qr-card.pages.dev"
       ]
     },
     {
@@ -376,6 +439,13 @@
       "url": "https://abreda.com/tools/vtt-cleaner/",
       "origins": [
         "https://tb-pages-vtt-cleaner.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-warranty-deadline-tracker",
+      "url": "https://abreda.com/tools/warranty-deadline-tracker/",
+      "origins": [
+        "https://tb-warranty-deadline-tracker.pages.dev"
       ]
     },
     {

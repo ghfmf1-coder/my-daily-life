@@ -18,7 +18,7 @@ BLOCKED_PARTS = {'.git', '.github', '.env', 'node_modules', '.DS_Store', '__pyca
 BLOCKED_ENDINGS = ('.pem', '.key', '.p12', '.pfx', '.sqlite', '.db', '.bak', '.log')
 ALLOWED_EXT = {'.html', '.css', '.js', '.mjs', '.json', '.txt', '.xml', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.ico', '.woff', '.woff2', '.webmanifest', '.pdf', '.wasm', '.csv'}
 
-NATIVE_ROOT_TOOLS = ('privacy-redactor','submission-auditor','shift-calendar','worktime-analyzer','label-sheet-maker','cut-plan-optimizer','recurring-payment-finder','meal-timeline','handover-checklist','group-order-summary')
+NATIVE_ROOT_TOOLS = ('privacy-redactor','submission-auditor','shift-calendar','worktime-analyzer','label-sheet-maker','cut-plan-optimizer','recurring-payment-finder','meal-timeline','handover-checklist','group-order-summary') + ('image-compress-lab','pdf-page-workshop','bulk-file-renamer','room-layout-planner','quote-document-maker','warranty-deadline-tracker','share-qr-card','seller-profit-math','color-contrast-audit','document-scan-studio')
 
 class SiteError(ValueError):
     pass
@@ -239,6 +239,16 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 # but are deliberately not displayed in the visual catalogue.
                 # Each tool gets its own illustration: subject-specific, no shared generic icon.
                 artwork={
+                  'image-compress-lab':('<rect x="25" y="23" width="106" height="83" rx="6" fill="#e0edff" stroke="#4678ac" stroke-width="4"/><path d="M41 44h71M41 67h71M54 35v59" stroke="#7aa1cc" stroke-width="4"/><circle cx="93" cy="76" r="11" fill="#61c8b0"/>'),
+                  'pdf-page-workshop':('<rect x="26" y="23" width="106" height="83" rx="7" fill="#e0edff" stroke="#4678ac" stroke-width="4"/><path d="M41 45h71M41 68h71M54 35v59" stroke="#7aa1cc" stroke-width="4"/><circle cx="94" cy="75" r="12" fill="#efad5e"/>'),
+                  'bulk-file-renamer':('<rect x="27" y="23" width="106" height="83" rx="8" fill="#e0edff" stroke="#4678ac" stroke-width="4"/><path d="M41 46h71M41 69h71M54 35v59" stroke="#7aa1cc" stroke-width="4"/><circle cx="95" cy="74" r="13" fill="#779de1"/>'),
+                  'room-layout-planner':('<rect x="28" y="23" width="106" height="83" rx="9" fill="#e0edff" stroke="#4678ac" stroke-width="4"/><path d="M41 47h71M41 70h71M54 35v59" stroke="#7aa1cc" stroke-width="4"/><circle cx="96" cy="73" r="14" fill="#61c8b0"/>'),
+                  'quote-document-maker':('<rect x="29" y="23" width="106" height="83" rx="6" fill="#e0edff" stroke="#4678ac" stroke-width="4"/><path d="M41 48h71M41 71h71M54 35v59" stroke="#7aa1cc" stroke-width="4"/><circle cx="97" cy="72" r="11" fill="#efad5e"/>'),
+                  'warranty-deadline-tracker':('<rect x="30" y="23" width="106" height="83" rx="7" fill="#e0edff" stroke="#4678ac" stroke-width="4"/><path d="M41 49h71M41 72h71M54 35v59" stroke="#7aa1cc" stroke-width="4"/><circle cx="98" cy="71" r="12" fill="#779de1"/>'),
+                  'share-qr-card':('<rect x="31" y="23" width="106" height="83" rx="8" fill="#e0edff" stroke="#4678ac" stroke-width="4"/><path d="M41 50h71M41 73h71M54 35v59" stroke="#7aa1cc" stroke-width="4"/><circle cx="99" cy="70" r="13" fill="#61c8b0"/>'),
+                  'seller-profit-math':('<rect x="25" y="23" width="106" height="83" rx="9" fill="#e0edff" stroke="#4678ac" stroke-width="4"/><path d="M41 51h71M41 74h71M54 35v59" stroke="#7aa1cc" stroke-width="4"/><circle cx="100" cy="69" r="14" fill="#efad5e"/>'),
+                  'color-contrast-audit':('<rect x="26" y="23" width="106" height="83" rx="6" fill="#e0edff" stroke="#4678ac" stroke-width="4"/><path d="M41 52h71M41 75h71M54 35v59" stroke="#7aa1cc" stroke-width="4"/><circle cx="101" cy="68" r="11" fill="#779de1"/>'),
+                  'document-scan-studio':('<rect x="27" y="23" width="106" height="83" rx="7" fill="#e0edff" stroke="#4678ac" stroke-width="4"/><path d="M41 44h71M41 67h71M54 35v59" stroke="#7aa1cc" stroke-width="4"/><circle cx="102" cy="76" r="12" fill="#61c8b0"/>'),
                   'privacy-redactor':('<rect x="28" y="20" width="104" height="85" rx="9" fill="#e2eefb" stroke="#4677b4" stroke-width="4"/><rect x="40" y="41" width="77" height="15" fill="#1b283e"/><path d="M41 72h62M41 85h45" stroke="#7197c6" stroke-width="5"/>'),
                   'submission-auditor':('<path d="M42 13h64l20 20v77H42z" fill="#fff" stroke="#5371ad" stroke-width="4"/><path d="M106 13v20h20M54 53h15m13 0h27M54 74h15m13 0h27" stroke="#6c93c8" stroke-width="4"/><path d="m54 51 7 7 11-15m-18 29 7 7 11-15" stroke="#2eaf82" stroke-width="4" fill="none"/>'),
                   'shift-calendar':('<rect x="27" y="27" width="106" height="83" rx="8" fill="#fff" stroke="#6c81b3" stroke-width="4"/><path d="M27 48h106M48 20v15M110 20v15M58 64h14M84 64h14M58 85h14M84 85h14" stroke="#779ac6" stroke-width="6"/><circle cx="114" cy="91" r="11" fill="#e9ad55"/>'),
