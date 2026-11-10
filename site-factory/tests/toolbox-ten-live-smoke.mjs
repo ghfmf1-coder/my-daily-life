@@ -46,7 +46,7 @@ await check('cut-plan-optimizer',async p=>{
 });
 await check('recurring-payment-finder',async p=>{
  await p.locator('#file').setInputFiles({name:'qa.csv',mimeType:'text/csv',buffer:Buffer.from('date,merchant,amount\n2026-01-15,TEST,9900\n2026-02-15,TEST,9900\n')});
- await p.locator('#find').click();assert.match(await p.locator('#result').textContent(),/test/);
+ await p.locator('#find').click();console.log('RECURRING_DEBUG',JSON.stringify({status:await p.locator('#status').textContent(),result:await p.locator('#result').textContent()}));assert.match(await p.locator('#result').textContent(),/test/);
 });
 await check('meal-timeline',async p=>{
  await p.locator('#dishes').fill('밥,10,30');await p.locator('#make').click();
