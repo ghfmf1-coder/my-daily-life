@@ -204,7 +204,8 @@ def check_site(site):
     root = safe_page(site,result,site.get("page_path","/"),lang="ko",indexable=not is_internal)
     english = None
     if "en" in locales and not is_internal:
-        english = safe_page(site,result,"/en/",lang="en",indexable=True)
+        en_path="/en/tools/"+site["slug"]+"/" if site["slug"] in NATIVE_ROOT_TOOLS else "/en/"
+        english = safe_page(site,result,en_path,lang="en",indexable=True)
     ico = check_file(site,result,"/favicon.ico",kind="icon")
     svg = check_file(site,result,"/icon.svg" if site["slug"] == "my-daily-life" else "/favicon.svg",kind="svg",necessary=False)
     robots = check_file(site,result,"/robots.txt",kind="text")
@@ -230,7 +231,7 @@ def check_site(site):
                 check_file(site,result,urllib.parse.urlparse(target).path,kind="script")
     if english:
         for item in english.scripts[:12]:
-            target=urllib.parse.urljoin(origin+"/en/",item)
+            target=urllib.parse.urljoin(origin+en_path,item)
             if urllib.parse.urlparse(target).hostname == urllib.parse.urlparse(origin).hostname:
                 check_file(site,result,urllib.parse.urlparse(target).path,kind="script")
     if site["slug"] == "toolbox-hub":

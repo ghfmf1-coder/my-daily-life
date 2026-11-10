@@ -39,7 +39,7 @@ class BilingualFleetTests(unittest.TestCase):
                     doc=en.read_text(encoding='utf8')
                     self.assertIn('<html lang="en"',doc)
                     self.assertIn(EDITORIAL[slug][0],doc)
-                    self.assertIn(EDITORIAL[slug][4],doc)
+                    self.assertIn(__import__("html").escape(EDITORIAL[slug][4]),doc)
                     self.assertIn('href="https://abreda.com/en/tools/'+slug+'/"',doc)
                     self.assertIn('hreflang="ko"',doc)
                     self.assertIn('hreflang="en"',doc)
