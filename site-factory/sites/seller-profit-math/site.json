@@ -1,0 +1,10 @@
+{
+  "slug": "seller-profit-math",
+  "project": "tb-seller-profit-math",
+  "title": "온라인 판매 순이익 분석기",
+  "description": "판매가·매입가·수수료·배송·광고 비용을 합산해 상품별 순이익과 손익분기 판매가를 계산합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-seller-profit-math.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "slug": "share-qr-card",
+  "project": "tb-share-qr-card",
+  "title": "QR 공유카드 제작소",
+  "description": "와이파이, 웹사이트, 연락처를 QR코드로 만들어 모바일 이미지와 인쇄용 카드로 저장합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-share-qr-card.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

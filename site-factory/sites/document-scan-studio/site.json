@@ -1,0 +1,10 @@
+{
+  "slug": "document-scan-studio",
+  "project": "tb-document-scan-studio",
+  "title": "문서 스캔 보정소",
+  "description": "휴대폰으로 촬영한 문서의 네 모서리를 지정해 원근을 보정하고 흑백 또는 컬러 이미지로 저장합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-document-scan-studio.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

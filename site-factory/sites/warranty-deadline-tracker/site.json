@@ -1,0 +1,10 @@
+{
+  "slug": "warranty-deadline-tracker",
+  "project": "tb-warranty-deadline-tracker",
+  "title": "보증기간·반품기한 관리소",
+  "description": "구매 내역, 반품 마감일, 보증 종료일을 로컬에 저장하고 알림 캘린더 파일을 생성합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-warranty-deadline-tracker.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

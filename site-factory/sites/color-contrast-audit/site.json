@@ -1,0 +1,10 @@
+{
+  "slug": "color-contrast-audit",
+  "project": "tb-color-contrast-audit",
+  "title": "색상 대비 검수관",
+  "description": "글자색과 배경색의 WCAG 명도 대비를 계산하고 기준을 통과하는 대체 색상을 찾아줍니다.",
+  "approved": true,
+  "canonical_url": "https://tb-color-contrast-audit.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}
