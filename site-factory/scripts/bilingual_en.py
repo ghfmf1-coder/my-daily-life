@@ -69,6 +69,246 @@ KEYWORD=[
 ('기록','Record'),('재설정','Reset'),('로그인','Sign in'),
 ('사용','Use'),('파일','File'),
 ]
+FIELD_LABELS={
+  "privacy-redactor": {
+    "image": "Choose an image"
+  },
+  "submission-auditor": {
+    "needed": "Required filenames (one per line)",
+    "max": "Maximum file size in MB (0 means no limit)",
+    "files": "Files to check"
+  },
+  "shift-calendar": {
+    "start": "First date of the shift pattern",
+    "pattern": "Repeating shifts (comma-separated)",
+    "year": "Calendar year"
+  },
+  "worktime-analyzer": {
+    "job": "Task name",
+    "steps": "Processing stages (one per line)"
+  },
+  "label-sheet-maker": {
+    "text": "Label text",
+    "width": "Label width (mm)",
+    "height": "Label height (mm)",
+    "amount": "Number of labels",
+    "serial": "Starting number (0 means none)"
+  },
+  "cut-plan-optimizer": {
+    "bw": "Source board width (mm)",
+    "bh": "Source board height (mm)",
+    "kerf": "Saw kerf (mm)",
+    "pieces": "Pieces (width,height,quantity per line)",
+    "rotate": "Allow 90-degree rotation"
+  },
+  "recurring-payment-finder": {
+    "file": "Bank or card transactions CSV",
+    "datecol": "Date column number (starts at 1)",
+    "merchantcol": "Merchant column number",
+    "amountcol": "Amount column number"
+  },
+  "meal-timeline": {
+    "target": "Target serving date and time",
+    "dishes": "Dishes (name,prep minutes,cook minutes per line)"
+  },
+  "handover-checklist": {
+    "product": "Product name",
+    "items": "Included items (one per line)",
+    "date": "Inspection date",
+    "notes": "Condition and handover notes",
+    "photos": "Photos (up to 5)"
+  },
+  "group-order-summary": {
+    "name": "Person's name",
+    "menu": "Menu item",
+    "option": "Options",
+    "qty": "Quantity",
+    "price": "Price per item (KRW)"
+  },
+  "image-compress-lab": {
+    "photos": "Choose up to 40 images",
+    "format": "Output format",
+    "dimension": "Maximum width or height (px)",
+    "quality": "JPEG/WebP quality (0.1 to 1.0)",
+    "target": "Target file size KB (0 means quality-based)"
+  },
+  "pdf-page-workshop": {
+    "pdfs": "Select up to eight PDF files"
+  },
+  "bulk-file-renamer": {
+    "files": "Choose up to 120 files",
+    "prefix": "Prefix",
+    "suffix": "Suffix before extension",
+    "search": "Find text",
+    "replace": "Replace with",
+    "serial": "Serial number start (0 means none)"
+  },
+  "room-layout-planner": {
+    "rw": "Room width (cm)",
+    "rh": "Room depth (cm)",
+    "furn": "Furniture type",
+    "fw": "Furniture width (cm)",
+    "fh": "Furniture depth (cm)"
+  },
+  "quote-document-maker": {
+    "company": "Issuing company",
+    "client": "Customer name",
+    "kind": "Document type",
+    "logo": "Optional company logo",
+    "item": "Item name",
+    "qty": "Quantity",
+    "price": "Unit price (KRW)",
+    "tax": "Show 10% VAT separately"
+  },
+  "warranty-deadline-tracker": {
+    "product": "Product name",
+    "buy": "Purchase date",
+    "return": "Return deadline",
+    "warranty": "Warranty expiration",
+    "store": "Merchant and notes",
+    "receipt": "Receipt image (up to 3 MB)"
+  },
+  "share-qr-card": {
+    "type": "QR information type",
+    "primary": "Website URL / Wi-Fi name / contact name",
+    "secondary": "Wi-Fi password / phone number",
+    "security": "Wi-Fi security",
+    "caption": "Sharing card heading"
+  },
+  "seller-profit-math": {
+    "sell": "Sale price (KRW)",
+    "cost": "Purchase cost (KRW)",
+    "fee": "Platform fee rate (%)",
+    "fixed": "Fixed platform fee (KRW)",
+    "ship": "Seller-paid delivery cost (KRW)",
+    "pack": "Packaging cost (KRW)",
+    "ad": "Advertising cost per sale (KRW)",
+    "tax": "Other applied cost rate (%)"
+  },
+  "color-contrast-audit": {
+    "fg": "Text color (#RRGGBB)",
+    "bg": "Background color (#RRGGBB)"
+  },
+  "document-scan-studio": {
+    "file": "Photographed document",
+    "mode": "Output color mode",
+    "threshold": "Black/white threshold (0–255)"
+  }
+}
+BUTTON_LABELS={
+  "privacy-redactor": {
+    "undo": "Undo last redaction",
+    "download": "Download redacted PNG"
+  },
+  "submission-auditor": {
+    "check": "Check submitted files",
+    "download": "Download CSV report"
+  },
+  "shift-calendar": {
+    "make": "Generate shift roster",
+    "ics": "Download calendar ICS"
+  },
+  "worktime-analyzer": {
+    "start": "Start timer",
+    "mark": "Finish this stage",
+    "reset": "Reset timer",
+    "download": "Download CSV"
+  },
+  "label-sheet-maker": {
+    "make": "Generate A4 label sheet",
+    "print": "Print / save PDF"
+  },
+  "cut-plan-optimizer": {
+    "calc": "Generate cut layout",
+    "print": "Print layout"
+  },
+  "recurring-payment-finder": {
+    "find": "Find recurring charges",
+    "download": "Download CSV results"
+  },
+  "meal-timeline": {
+    "make": "Generate cooking timeline",
+    "print": "Print timeline"
+  },
+  "handover-checklist": {
+    "create": "Create accessory checklist",
+    "report": "Preview handover report",
+    "print": "Print / save PDF"
+  },
+  "group-order-summary": {
+    "add": "Add order",
+    "summary": "Summarize orders",
+    "download": "Download CSV",
+    "print": "Print packing labels"
+  },
+  "image-compress-lab": {
+    "convert": "Compress images",
+    "download": "Download ZIP"
+  },
+  "pdf-page-workshop": {
+    "load": "Load PDF pages",
+    "export": "Download edited PDF"
+  },
+  "bulk-file-renamer": {
+    "preview": "Preview filenames",
+    "download": "Download renamed ZIP"
+  },
+  "room-layout-planner": {
+    "add": "Add furniture",
+    "rotate": "Rotate selected item",
+    "remove": "Delete selected item",
+    "image": "Save floor plan PNG",
+    "json": "Save layout JSON"
+  },
+  "quote-document-maker": {
+    "add": "Add line item",
+    "generate": "Generate quotation",
+    "print": "Print / save PDF"
+  },
+  "warranty-deadline-tracker": {
+    "add": "Add product",
+    "ics": "Download calendar ICS",
+    "backup": "Download JSON backup"
+  },
+  "share-qr-card": {
+    "make": "Generate QR code",
+    "png": "Download QR PNG",
+    "print": "Print / save PDF"
+  },
+  "seller-profit-math": {
+    "calc": "Calculate profit",
+    "csv": "Download CSV"
+  },
+  "color-contrast-audit": {
+    "check": "Check contrast",
+    "suggest": "Find passing color",
+    "copy": "Copy suggested color"
+  },
+  "document-scan-studio": {
+    "scan": "Correct perspective",
+    "download": "Download corrected PNG"
+  }
+}
+OPTION_LABELS={
+  "침대": "Bed",
+  "책상": "Desk",
+  "옷장": "Wardrobe",
+  "소파": "Sofa",
+  "서랍장": "Drawers",
+  "기타": "Other",
+  "견적서": "Quotation",
+  "거래명세서": "Transaction statement",
+  "웹사이트 링크": "Website link",
+  "Wi-Fi 접속": "Wi-Fi access",
+  "연락처": "Contact",
+  "비밀번호 없음": "No password",
+  "컬러": "Color",
+  "흑백(그레이스케일)": "Grayscale",
+  "흰 종이 / 검은 글자": "Black text on white",
+  "JPG": "JPG",
+  "WebP": "WebP",
+  "PNG (무손실)": "PNG (lossless)"
+}
 TEXT_TAGS={'p','div','span','small','strong','b','em','label','button','option','summary','legend','th','td','li','a','h1','h2','h3','h4','footer','header'}
 def label_for(text:str,tag:str,entry:list,idx:int)->str:
     raw=' '.join(text.split())
@@ -96,6 +336,7 @@ def label_for(text:str,tag:str,entry:list,idx:int)->str:
         if '시작' in raw:return 'Start'
         if '완료' in raw:return 'Mark complete'
     if tag=='option':
+        if raw in OPTION_LABELS:return OPTION_LABELS[raw]
         if '주간' in raw:return 'Day shift'
         if '야간' in raw:return 'Night shift'
         if '휴무' in raw:return 'Off duty'
@@ -174,6 +415,17 @@ def localize_html(source,slug,ko_url,en_url,app_path=None):
                   lambda m:m.group(1)+' value="'+escape(m.group(3).strip(),quote=True)+'"'+m.group(2)+m.group(3)+m.group(4),source,flags=re.I)
     parser=VisibleTranslator(entry);parser.feed(source);parser.close()
     html=''.join(parser.parts)
+    # Site-specific, human-written field and action labels; preserve element IDs.
+    for field,label in FIELD_LABELS.get(slug,{}).items():
+        ident=re.escape(field)
+        pattern=r'(<label\b[^>]*>)([^<]*)(?=<(?:input|select|textarea)\b[^>]*\bid=["\x27]'+ident+r'["\x27])'
+        html=re.sub(pattern,lambda m:m.group(1)+escape(label),html,flags=re.I)
+        after=r'(<label\b[^>]*>\s*<input\b[^>]*\bid=["\x27]'+ident+r'["\x27][^>]*>)[^<]*(?=</label>)'
+        html=re.sub(after,lambda m:m.group(1)+' '+escape(label),html,flags=re.I)
+    for button,label in BUTTON_LABELS.get(slug,{}).items():
+        ident=re.escape(button)
+        pattern=r'(<button\b[^>]*\bid=["\x27]'+ident+r'["\x27][^>]*>)[^<]*(</button>)'
+        html=re.sub(pattern,lambda m:m.group(1)+escape(label)+m.group(2),html,flags=re.I)
     ko='https://'+ko_url.split('://',1)[1] if '://' in ko_url else ko_url
     # remove canonical/hreflang inherited from the Korean source
     html=re.sub(r'<link\s+rel=["\']canonical["\'][^>]*>','',html,flags=re.I)
