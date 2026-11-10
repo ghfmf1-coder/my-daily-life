@@ -1,0 +1,25 @@
+name: Ten deployed tools real-browser functionality smoke
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site-factory/tests/toolbox-ten-live-smoke.mjs'
+      - '.github/workflows/toolbox-live-smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned Playwright
+        run: npm install --no-save --no-package-lock playwright@1.56.1
+      - name: Install headless Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Validate 10 live tools without contaminating analytics
+        run: node site-factory/tests/toolbox-ten-live-smoke.mjs
