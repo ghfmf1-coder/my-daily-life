@@ -1,0 +1,62 @@
+{
+  "slug": "fix-csv-empty-rows",
+  "tool": "csv-empty-row-remover",
+  "published": "2026-11-10",
+  "status": "reviewed",
+  "ko": {
+    "title": "CSV 빈 행 제거하는 법: 엑셀 파일 정리 전 확인할 것",
+    "description": "CSV 데이터에 빈 줄이 반복될 때 빈 행 기준을 정하고 원본 데이터를 보존하면서 정리하는 방법을 소개합니다.",
+    "problem": "CSV 파일에 빈 행이 섞이면 다른 프로그램으로 데이터를 옮길 때 불필요한 항목이 생길 수 있습니다. 하지만 일부 열만 비어 있는 정상 행도 있으니 무엇을 빈 행으로 볼지 먼저 정해야 합니다.",
+    "steps": [
+      [
+        "원본 CSV에서 빈 행의 의미부터 확인하기",
+        "엑셀이나 텍스트 편집기로 CSV를 열고 값이 모두 없는 행과 일부 필드만 비어 있는 행을 구분하세요. 일부 값이 비어 있는 행을 무조건 삭제하면 중요한 기록이 사라질 수 있습니다."
+      ],
+      [
+        "데이터를 새 파일로 복사해 작업하기",
+        "원본 파일을 별도로 보관하고 사본에서 정리하세요. CSV를 엑셀로 열었다가 다시 저장하면 날짜와 긴 숫자의 형식이 바뀔 수 있으니 주의해야 합니다."
+      ],
+      [
+        "정리 후 행과 열 구성을 비교하기",
+        "빈 행을 제거했다면 첫 행의 열 제목과 각 열의 순서가 그대로인지 확인하세요. 중요한 항목이 빠지지 않았는지 원본과 비교하고 실제 사용할 시스템에서 테스트하세요."
+      ]
+    ],
+    "alternative": "엑셀에서 필요한 범위를 선택해 불필요한 빈 행을 직접 삭제할 수도 있습니다. 다만 필터와 선택 범위가 다른 실제 데이터를 포함하지 않는지 확인하세요.",
+    "toolIntro": "아브레다 CSV 빈 행 제거기는 파일의 빈 행을 정리해 새 CSV로 저장하도록 돕습니다. 원본 파일과 정리된 결과를 비교해 사용하세요.",
+    "limits": "파일 안의 숫자나 날짜가 텍스트로 저장된 경우 프로그램에서 해석 방식이 달라질 수 있습니다. 열 일부가 비어 있는 정상 기록을 잘못 삭제하지 않도록 확인하세요.",
+    "faq": [
+      [
+        "값이 한 칸이라도 비어 있으면 행을 삭제해야 하나요?",
+        "아니요. 특정 열에 빈 값이 있더라도 다른 열에 중요한 데이터가 들어 있을 수 있습니다. 삭제하기 전 실제로 모든 필드가 비어 있는지 확인하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Remove Empty Rows from CSV Files Without Losing Records",
+    "description": "Distinguish truly empty CSV rows from incomplete records, preserve a copy and check the cleaned output.",
+    "problem": "Blank lines in a CSV can be inconvenient for importing data. However, a row with one empty field may still contain important information and should not automatically be treated as an empty record.",
+    "steps": [
+      [
+        "Check what an empty row means in your dataset",
+        "Inspect the source CSV with a spreadsheet or text editor. Distinguish entirely empty records from rows with missing but meaningful fields."
+      ],
+      [
+        "Edit a copy, not the original file",
+        "Keep a backup before cleaning. Opening a CSV in spreadsheet software can also change how dates and large numbers are displayed or saved."
+      ],
+      [
+        "Verify the header and rows after cleanup",
+        "Compare column names, order and critical values against the original. Test the exported file in the system where it will actually be used."
+      ]
+    ],
+    "alternative": "You can filter and remove truly blank rows in a spreadsheet editor. Check the selected range carefully to avoid deleting legitimate records.",
+    "toolIntro": "ABREDA CSV Empty Row Remover helps remove empty records and save a cleaned CSV copy. Inspect the result against the original data.",
+    "limits": "CSV programs may interpret text, dates and numbers differently. Incomplete but valid records must not be removed without checking your data rules.",
+    "faq": [
+      [
+        "Should I remove a row if one field is empty?",
+        "Not automatically. Other fields in the same row may contain required information. Verify that the whole record is empty before deleting it."
+      ]
+    ]
+  }
+}

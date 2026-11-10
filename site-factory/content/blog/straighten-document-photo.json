@@ -1,0 +1,62 @@
+{
+  "slug": "straighten-document-photo",
+  "tool": "document-scan-studio",
+  "published": "2026-11-10",
+  "status": "reviewed",
+  "ko": {
+    "title": "기울어진 서류 사진 반듯하게 보정하는 법",
+    "description": "휴대폰으로 비스듬히 촬영한 종이 서류의 네 모서리를 맞추고 원근을 보정해 새 PNG로 저장하는 방법입니다.",
+    "problem": "서류를 사진으로 찍으면 종이가 사다리꼴처럼 보이거나 글자가 한쪽으로 기울 수 있습니다. 원근 보정은 종이의 네 꼭짓점을 정확히 지정하는 것부터 시작합니다.",
+    "steps": [
+      [
+        "가능하면 그림자와 흔들림을 줄여 다시 촬영하기",
+        "밝은 곳에서 종이를 평평하게 놓고 카메라를 문서 위에서 정면으로 향하게 하세요. 이미 흐리게 찍힌 글씨는 나중에 원근만 펴도 선명해지지 않습니다."
+      ],
+      [
+        "사진의 종이 네 모서리를 지정하기",
+        "문서 보정 화면에서 종이의 왼쪽 위·오른쪽 위·오른쪽 아래·왼쪽 아래 모서리를 순서대로 맞추세요. 배경을 포함하면 결과가 휘어 보일 수 있습니다."
+      ],
+      [
+        "컬러와 흑백 결과를 비교한 뒤 저장하기",
+        "문서 안에 도장이나 색상이 중요하면 컬러 결과를 사용하세요. 흑백 경계값을 높이면 연한 글씨가 사라질 수 있으니 저장한 이미지에서 중요한 글자를 다시 확인하세요."
+      ]
+    ],
+    "alternative": "휴대폰의 문서 스캔 기능이나 스캐너 앱이 있다면 그 기능을 이용해도 됩니다. 원본 화질이 낮거나 접힌 종이는 다시 촬영하는 편이 낫습니다.",
+    "toolIntro": "아브레다 문서 스캔 보정소는 사진의 네 모서리를 직접 지정하고 원근·색상 모드를 조정해 보정한 문서를 PNG로 다운로드합니다.",
+    "limits": "흐린 글자나 반사광에 가려진 부분을 복구하지는 못합니다. 공식 제출용 문서는 기관이 요구하는 파일 형식과 해상도를 별도로 확인하세요.",
+    "faq": [
+      [
+        "흑백으로 바꾸니 글자가 일부 사라지는데 어떻게 하나요?",
+        "색상이 연하거나 촬영 품질이 낮으면 임계값 처리에서 글자가 지워질 수 있습니다. 컬러 또는 회색조로 다시 저장하고 원본을 비교하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Straighten a Skewed Document Photo",
+    "description": "Use document corners to correct perspective, compare color and grayscale exports and preserve readable text.",
+    "problem": "A photographed sheet may look trapezoidal or slanted. Perspective correction works by selecting its four corners accurately, but it cannot reconstruct text that was blurred during capture.",
+    "steps": [
+      [
+        "Retake the picture if it is blurry or shadowed",
+        "Place the paper flat in good light and point the camera toward it. A sharp, evenly lit source will usually be easier to correct than a blurred photo."
+      ],
+      [
+        "Set the four paper corners carefully",
+        "Identify the top-left, top-right, bottom-right and bottom-left points. Drag the selectors to the actual page edges rather than including the surrounding table."
+      ],
+      [
+        "Compare color and black-and-white results",
+        "Use color if stamps or highlighting matter. Threshold-based black-and-white output can erase faint text, so inspect the final saved file before submitting it."
+      ]
+    ],
+    "alternative": "You can also use a built-in phone document scanner or a scanner app. Retaking a photo is better when important source details were never captured clearly.",
+    "toolIntro": "ABREDA Document Perspective Corrector lets you mark the photo corners, apply a perspective transform and download a corrected PNG.",
+    "limits": "The tool cannot restore blurred text or remove all glare. Official submissions may have file-format and resolution rules that you still need to check.",
+    "faq": [
+      [
+        "Why does black-and-white conversion remove some letters?",
+        "Faint text can fall below the selected brightness threshold. Try the color or grayscale mode and compare the output with your original photo."
+      ]
+    ]
+  }
+}
