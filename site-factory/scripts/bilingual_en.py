@@ -16,6 +16,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
 EDITORIAL=json.loads((ROOT/'site-factory/ops/bilingual-editorial-content.json').read_text(encoding='utf-8'))['sites']
+KOREAN=json.loads((ROOT/'site-factory/ops/korean-editorial-content.json').read_text(encoding='utf-8'))['sites']
 NATIVE=set(('privacy-redactor','submission-auditor','shift-calendar','worktime-analyzer','label-sheet-maker','cut-plan-optimizer','recurring-payment-finder','meal-timeline','handover-checklist','group-order-summary','image-compress-lab','pdf-page-workshop','bulk-file-renamer','room-layout-planner','quote-document-maker','warranty-deadline-tracker','share-qr-card','seller-profit-math','color-contrast-audit','document-scan-studio'))
 
 # Only translate known UI labels. Never translate CSV column names or JS object keys.
@@ -560,6 +561,23 @@ def localize_html(source,slug,ko_url,en_url,app_path=None):
     if '</main>' in html:html=html.replace('</main>',section+'</main>',1)
     else:html=html.replace('</body>',section+'</body>',1)
     return html
+
+def korean_editorial(slug):
+    """Specific Korean guidance checked against the actual tool input and output."""
+    if slug not in KOREAN:raise KeyError('Missing Korean tool instructions: '+slug)
+    use,steps,output,limits=KOREAN[slug]
+    return ('<section class="tb-seo-guide-ko" aria-label="상세 이용 안내" '
+      'style="max-width:1100px;margin:24px auto;padding:25px;border:1px solid #d9e5f2;border-radius:14px;background:white;color:#213951;line-height:1.75">'
+      '<h2>이 도구는 언제 필요한가요?</h2><p>'+escape(use)+'</p>'
+      '<h2>실제 사용 단계</h2><p>'+escape(steps)+'</p>'
+      '<h2>확인할 결과물</h2><p>'+escape(output)+'</p>'
+      '<h2>지원하지 않는 경우와 주의사항</h2><p>'+escape(limits)+'</p>'
+      '<h2>자주 묻는 질문</h2><h3>원본 파일은 수정되나요?</h3>'
+      '<p>도구는 브라우저에서 처리한 새 결과를 다운로드하도록 구성되어 있습니다. 원본 자료를 보관하고 결과 파일을 직접 대조하세요.</p>'
+      '<h3>결과가 실제 거래·제출에 유효한가요?</h3>'
+      '<p>입력값과 파일 상태에 따라 결과가 달라지므로 중요한 결정을 내리기 전에 관련 기관의 공식 지침이나 원본 정보를 확인하세요.</p>'
+      '<p><a href="https://abreda.com/">작은도구함 다른 도구</a> · <a href="https://abreda.com/privacy">개인정보처리방침</a></p></section>')
+
 def patch_korean(html,ko_url,en_url):
     if 'tb-lang-switch' not in html:
         nav=('<nav class="tb-lang-switch" aria-label="언어" style="display:flex;gap:12px;max-width:1100px;margin:12px auto;padding:12px;background:#eaf1ff;border-radius:10px;font:14px system-ui">'
@@ -603,7 +621,10 @@ def generate_work(slug,write=True):
     # The original scripts are the unchanged calculation engine.
     result=result.replace('</body>','<script defer src="../runtime-translate.js"></script></body>',1)
     if write:
-        (root/'index.html').write_text(patch_korean(source,ko,en),encoding='utf-8')
+        korean=patch_korean(source,ko,en)
+        if '</main>' in korean:korean=korean.replace('</main>',korean_editorial(slug)+'</main>',1)
+        else:korean=korean.replace('</body>',korean_editorial(slug)+'</body>',1)
+        (root/'index.html').write_text(korean,encoding='utf-8')
         dest=root/'en';dest.mkdir(exist_ok=True)
         (dest/'index.html').write_text(result,encoding='utf-8')
         (root/'runtime-translate.js').write_text(RUNTIME,encoding='utf-8')

@@ -401,7 +401,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         # Native tools are served as two real language pages on the same domain.
         # Their English HTML and functional JS are built from curated project-specific
         # editorial copy, not from auto-translating a Korean doorway.
-        from bilingual_en import render_native, patch_korean
+        from bilingual_en import render_native, patch_korean, korean_editorial
         for tool_slug in native:
             source=SITES/tool_slug/'public'
             original=source/'index.html'
@@ -411,6 +411,8 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             tool_canonical='https://abreda.com/tools/'+tool_slug+'/'
             en_url='https://abreda.com/en/tools/'+tool_slug+'/'
             html=patch_korean(html,tool_canonical,en_url)
+            if '</main>' in html:html=html.replace('</main>',korean_editorial(tool_slug)+'</main>',1)
+            else:html=html.replace('</body>',korean_editorial(tool_slug)+'</body>',1)
             (dest/'index.html').write_text(html,encoding='utf-8')
             for asset in source.iterdir():
                 if asset.is_file() and asset.suffix.lower() in ALLOWED_EXT and asset.name!='index.html':
