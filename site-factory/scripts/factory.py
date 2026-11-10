@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Small Toolbox site factory: safe site validation and packaging, stdlib only."""
+"""ABREDA site factory: safe site validation and packaging, stdlib only."""
 from __future__ import annotations
 import json
 import os
@@ -511,7 +511,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         if slug == 'toolbox-hub' and rel in ('index.html','en/index.html'):
             feed_ref='/feed.xml' if rel == 'index.html' else '/en/feed.xml'
             if 'application/rss+xml' not in content:
-                content=content.replace('</head>','<link rel="alternate" type="application/rss+xml" title="Small Toolbox releases" href="'+feed_ref+'">\n</head>',1)
+                content=content.replace('</head>','<link rel="alternate" type="application/rss+xml" title="ABREDA releases" href="'+feed_ref+'">\n</head>',1)
         if 'rel="icon"' not in content and "rel='icon'" not in content:
             content = content.replace('</head>',
                 '<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">\n</head>', 1)
@@ -544,7 +544,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 and rel in {'index.html','en/index.html'} \
                 and 'https://abreda.com/' not in content:
             caption=('Browse other useful web tools' if rel=='en/index.html' else
-                     '작은 도구함의 다른 무료 웹 도구 보기')
+                     '아브레다의 다른 무료 웹 도구 보기')
             footer=('<footer style="padding:18px 12px;text-align:center;font-size:.9rem">'+
                     '<a href="https://abreda.com/" rel="noopener noreferrer">'+
                     caption+'</a></footer>')

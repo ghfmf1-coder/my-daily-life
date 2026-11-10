@@ -5,7 +5,7 @@
 <meta name="description" content="서로 다른 열 이름을 자동으로 매칭하고 직접 수정해 여러 CSV 파일을 하나로 병합하세요. 중복행 제거, UTF-8·CP949 한글 CSV, 엑셀 다운로드용 CSV 지원. 파일은 서버로 전송하지 않습니다.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="naver-site-verification" content="e661219f6eaddfed0444d8fd79f77ce52cac8ceb" />
-<meta property="og:type" content="website"><meta property="og:site_name" content="작은 도구함"><meta property="og:title" content="CSV 맞춤 병합기 — 열 이름 통일·중복 제거"><meta property="og:description" content="CSV 파일을 올리고 열 이름을 매칭하면 하나의 CSV로 다운로드. 로컬 처리, 회원가입 불필요.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="아브레다"><meta property="og:title" content="CSV 맞춤 병합기 — 열 이름 통일·중복 제거"><meta property="og:description" content="CSV 파일을 올리고 열 이름을 매칭하면 하나의 CSV로 다운로드. 로컬 처리, 회원가입 불필요.">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml" sizes="any">
 <style>
 :root{color-scheme:light;--primary:#047b59;--ink:#1b3036;--muted:#617276;--line:#d9e5e0;--pale:#edf7f3}
@@ -29,7 +29,7 @@ details{padding:13px 0;border-bottom:1px solid #edf2ee}summary{font-weight:750;c
 a{color:var(--primary)}@media(max-width:600px){section{padding:18px 14px}header{padding-top:24px}.mapping-row{grid-template-columns:minmax(80px,1fr) 14px minmax(110px,1fr);gap:6px}.mapping-row select{font-size:.86rem}}
 </style>
 <style id="tb-design-2026">:root{--tb-bg:#f5f7fc;--tb-ink:#17243b;--tb-line:#e4eaf3;--tb-blue:#2563eb}body{background:var(--tb-bg)!important;color:var(--tb-ink)!important;font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif!important}h1,h2,h3{letter-spacing:-.035em}h1{line-height:1.22}button,input,select,textarea{font-family:inherit!important}button{border-radius:11px!important}input,select,textarea{border-radius:10px!important}a,button{transition:background-color .15s,border-color .15s,box-shadow .15s}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #93c5fd!important;outline-offset:2px}.panel,.tool,article,.card{border-radius:18px!important;box-shadow:0 8px 30px rgba(22,41,76,.035)!important}footer{line-height:1.8}@media(max-width:600px){body{overflow-wrap:anywhere}main{padding-left:16px!important;padding-right:16px!important}}</style></head><body><aside class="tb-guide" style="max-width:1000px;margin:16px auto;padding:14px 20px;background:#eaf2ff;border:1px solid #d5e6ff;border-radius:14px;color:#26496e;font-size:14px"><strong>간단 사용법</strong><p style="margin:4px 0 0">파일 선택 → 열 이름 확인 → 병합·중복 제거 → CSV 다운로드</p></aside><main><nav aria-label="언어 선택" style="padding-top:16px"><strong>한국어</strong> / <a href="/en/">English</a></nav>
-<header><small>SMALL TOOLBOX / DATA TOOLS</small><h1>CSV 맞춤 병합기</h1><p class="intro">열 이름이 다른 CSV도 한 번에 합치세요. <strong>열 이름 자동 통일 → 열 연결 직접 확인 → 중복 제거 → 다운로드</strong>까지 한 화면에서 처리합니다.</p><span class="pill">파일 서버 전송 없음 · 회원가입 없음</span></header>
+<header><small>ABREDA / DATA TOOLS</small><h1>CSV 맞춤 병합기</h1><p class="intro">열 이름이 다른 CSV도 한 번에 합치세요. <strong>열 이름 자동 통일 → 열 연결 직접 확인 → 중복 제거 → 다운로드</strong>까지 한 화면에서 처리합니다.</p><span class="pill">파일 서버 전송 없음 · 회원가입 없음</span></header>
 <section aria-labelledby="uploadHead"><h2 id="uploadHead">1. CSV 파일 불러오기</h2>
 <p class="meta">최대 10개 파일, 파일당 8MB, 전체 20MB. 첫 행은 열 이름으로 인식합니다. CSV·TSV·세미콜론 구분 파일을 지원합니다.</p>
 <label for="csvFiles">병합할 파일 선택</label><input id="csvFiles" type="file" accept=".csv,.tsv,text/csv,text/tab-separated-values" multiple>
@@ -47,7 +47,7 @@ a{color:var(--primary)}@media(max-width:600px){section{padding:18px 14px}header{
 <div><label for="formulaSafe"><input id="formulaSafe" type="checkbox" checked> 엑셀 수식 실행 위험 문자 보호 (=, +, @, 일부 - 값)</label></div>
 <button id="downloadBtn" type="button">합친 CSV 다운로드</button><p class="meta">다운로드는 UTF-8(BOM 포함) CSV로 저장됩니다. 결과 미리보기는 처음 20행만 표시합니다.</p></section>
 <section><h2>사용 방법과 주의사항</h2><details open><summary>열 구조가 다른 CSV 파일을 어떻게 병합하나요?</summary><p>여러 CSV를 선택하면 제목행을 읽고 ‘이름/성명/고객명’, ‘휴대폰/연락처’ 같은 흔한 열 이름을 자동 매칭합니다. 결과 열 연결을 확인한 다음 병합을 실행하세요.</p></details><details><summary>기존 엑셀 파일(.xlsx)도 올릴 수 있나요?</summary><p>현재는 CSV·TSV 형식만 지원합니다. 엑셀의 ‘다른 이름으로 저장 → CSV UTF-8’ 기능으로 내보낸 뒤 사용할 수 있습니다.</p></details><details><summary>개인정보가 서버로 전송되나요?</summary><p>아니요. 파일 파싱과 병합 및 다운로드는 브라우저 안에서만 처리합니다. 다만 공유 컴퓨터에서 작업할 때는 다운로드한 CSV 파일의 보관에 주의하세요.</p></details><details><summary>병합 결과를 그대로 믿어도 되나요?</summary><p>병합 기준과 중복 제거 결과를 검토하세요. 연락처 형식, 날짜, 숫자의 의미를 자동 판단하거나 검증하지 않습니다.</p></details><p class="meta">안내: 이 도구의 분석·변환 결과는 참고용이며 최종 확인과 이용 판단은 사용자가 해야 합니다. 관련 법령상 배제할 수 없는 운영자의 책임까지 면제하지 않습니다.</p></section>
-<footer>작은 도구함 · 귀찮은 파일 정리를 한 번에</footer></main>
+<footer>아브레다 · 귀찮은 파일 정리를 한 번에</footer></main>
 <script src="./csv-core.js" defer></script><script src="./app.js" defer></script>
 <script defer src="https://abreda.com/toolbox-public-traffic.js" data-toolbox-site="tb-csv-merge-studio"></script>
 </body></html>
