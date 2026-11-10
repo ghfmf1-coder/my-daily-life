@@ -7,11 +7,16 @@ on:
       - 'site-factory/scripts/factory.py'
       - 'site-factory/tests/second-ten-browser.mjs'
       - '.github/workflows/toolbox-second-ten-browser.yml'
+  workflow_run:
+    workflows: [Toolbox approved-site auto-deploy]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   browser:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-24.04
     timeout-minutes: 16
     steps:
@@ -24,6 +29,7 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
       - name: Prepare local hub and launch localhost server
+        if: github.event_name != 'workflow_run'
         run: |
           PYTHONPATH=site-factory/scripts python3 - <<'PY'
           from factory import prepare
@@ -34,4 +40,6 @@ jobs:
           echo $! >/tmp/toolbox-second-ten-http.pid
           sleep 2
       - name: Execute ten interactive test cases
+        env:
+          TOOLBOX_BASE: ${{ github.event_name == 'workflow_run' && 'https://abreda.com/tools/' || 'http://127.0.0.1:8088/tools/' }}
         run: node site-factory/tests/second-ten-browser.mjs
