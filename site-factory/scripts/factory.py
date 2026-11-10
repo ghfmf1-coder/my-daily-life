@@ -98,9 +98,19 @@ def validate_locale_pages(data: dict, public: Path) -> list[str]:
         raise SiteError('현재 다국어 공개 도구는 locales=["ko","en"]을 사용해야 합니다.')
     for language, rel in (('ko', 'index.html'), ('en', 'en/index.html')):
         path = public / rel
-        if not path.is_file():
-            raise SiteError(f'{data["slug"]}: {language} 실제 번역 페이지가 필요합니다: {rel}')
-        text = path.read_text(encoding='utf-8')
+        if language == 'en' and data.get('generated_en') is True:
+            if data['slug'] not in NATIVE_ROOT_TOOLS:
+                raise SiteError('English auto-rendering is restricted to curated hub-native tools')
+            from bilingual_en import EDITORIAL, localize_html
+            slug=data['slug']
+            if slug not in EDITORIAL:raise SiteError('Missing reviewed English copy for '+slug)
+            text=localize_html((public/'index.html').read_text(encoding='utf-8'),slug,
+                               'https://abreda.com/tools/'+slug+'/',
+                               'https://abreda.com/en/tools/'+slug+'/')
+        else:
+            if not path.is_file():
+                raise SiteError(f'{data["slug"]}: {language} 실제 번역 페이지가 필요합니다: {rel}')
+            text = path.read_text(encoding='utf-8')
         if 'FACTORY_STARTER_DO_NOT_PUBLISH' in text:
             if data['approved']:
                 raise SiteError(f'{data["slug"]}: {language} 미완성 번역 페이지 공개 금지')
@@ -171,6 +181,9 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     if out.exists():
         shutil.rmtree(out)
     shutil.copytree(src, out)
+    if slug in NATIVE_ROOT_TOOLS and data.get('generated_en') is True:
+        from bilingual_en import render_native
+        render_native(slug,out/'en')
     if slug == 'toolbox-admin':
         # Publish only non-secret API inventory metadata inside authenticated admin app.
         registry = ROOT / 'api-registry' / 'providers.json'
@@ -381,8 +394,10 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 for asset in origin_dir.iterdir():
                     if asset.is_file() and asset.suffix.lower() in ALLOWED_EXT and asset.name!='index.html':
                         shutil.copy2(asset,dest/asset.name)
-        # Serve newly approved Korean-first tools directly under abreda.com/tools/.
-        # Preserve standalone pages.dev previews; existing DNS and Pages projects are unchanged.
+        # Native tools are served as two real language pages on the same domain.
+        # Their English HTML and functional JS are built from curated project-specific
+        # editorial copy, not from auto-translating a Korean doorway.
+        from bilingual_en import render_native, patch_korean
         for tool_slug in native:
             source=SITES/tool_slug/'public'
             original=source/'index.html'
@@ -390,12 +405,13 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             dest.mkdir(parents=True,exist_ok=True)
             html=original.read_text(encoding='utf-8')
             tool_canonical='https://abreda.com/tools/'+tool_slug+'/'
-            html=re.sub(r'<link\s+rel=["\']canonical["\'][^>]*>','',html,flags=re.I)
-            html=html.replace('</head>','<link rel="canonical" href="'+tool_canonical+'"></head>',1)
+            en_url='https://abreda.com/en/tools/'+tool_slug+'/'
+            html=patch_korean(html,tool_canonical,en_url)
             (dest/'index.html').write_text(html,encoding='utf-8')
             for asset in source.iterdir():
                 if asset.is_file() and asset.suffix.lower() in ALLOWED_EXT and asset.name!='index.html':
                     shutil.copy2(asset,dest/asset.name)
+            render_native(tool_slug,out/'en'/'tools'/tool_slug)
         # The hub sitemap is a stable, single submitted index for both locales.
         # Include all already-listed hub URLs and the migrated tool URLs.
         sitemap=out/'sitemap.xml'
@@ -403,7 +419,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             xml=sitemap.read_text(encoding='utf-8')
             urls=['https://abreda.com/'+prefix+'/'+name+'/'
                   for name in migrated for prefix in ('tools','en/tools')]
-            urls += ['https://abreda.com/tools/'+name+'/' for name in native]
+            urls += ['https://abreda.com/'+prefix+'/'+name+'/' for name in native for prefix in ('tools','en/tools')]
             additions=''.join('  <url><loc>'+url+'</loc></url>\n' for url in urls)
             if '</urlset>' not in xml:
                 raise SiteError('Invalid hub sitemap: missing urlset close tag')

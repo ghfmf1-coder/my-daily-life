@@ -122,7 +122,8 @@ class VisibleTranslator(HTMLParser):
         self.unsupported=[]
     def handle_starttag(self,tag,attrs):
         src=self.get_starttag_text()
-        self.tags.append(tag)
+        if tag not in ('meta','link','input','br','img','hr','source','embed','area','base','col','wbr'):
+            self.tags.append(tag)
         if tag in ('script','style'):self.scriptdepth+=1
         if tag=='html':src=re.sub(r'lang=["\']ko["\']','lang="en"',src,count=1)
         if tag=='meta' and any(k=='name' and v=='description' for k,v in attrs):
@@ -135,7 +136,8 @@ class VisibleTranslator(HTMLParser):
     def handle_endtag(self,tag):
         self.parts.append('</'+tag+'>')
         if tag in ('script','style'):self.scriptdepth=max(0,self.scriptdepth-1)
-        if self.tags:self.tags.pop()
+        if tag in self.tags:
+            self.tags=self.tags[:len(self.tags)-1-self.tags[::-1].index(tag)]
     def handle_data(self,data):
         if self.scriptdepth or not re.search('[가-힣]',data):
             self.parts.append(data);return
@@ -166,6 +168,10 @@ def editorial(slug,entry,lang='en'):
     return ''
 def localize_html(source,slug,ko_url,en_url,app_path=None):
     entry=EDITORIAL[slug]
+    # Preserve original option values when text is translated: many apps compare
+    # select.value against Korean source constants in their unchanged JS engines.
+    source=re.sub(r'(<option(?![^>]*\bvalue\s*=)[^>]*)(>)([^<]*[가-힣][^<]*)(</option>)',
+                  lambda m:m.group(1)+' value="'+escape(m.group(3).strip(),quote=True)+'"'+m.group(2)+m.group(3)+m.group(4),source,flags=re.I)
     parser=VisibleTranslator(entry);parser.feed(source);parser.close()
     html=''.join(parser.parts)
     ko='https://'+ko_url.split('://',1)[1] if '://' in ko_url else ko_url
@@ -207,7 +213,7 @@ def render_native(slug,output):
     output=Path(output)
     output.mkdir(parents=True,exist_ok=True)
     source=(src/'index.html').read_text(encoding='utf-8')
-    (output/'index.html').write_text(localize_html(source,slug,ko_url,en_url,app_path='native'),encoding='utf-8')
+    (output/'index.html').write_text(localize_html(source,slug,ko_url,en_url),encoding='utf-8')
     # Keep original JS behavior identical. UI results are translated by a
     # small scoped view-layer adapter; CSV parsing keys remain untouched.
     for p in src.iterdir():
