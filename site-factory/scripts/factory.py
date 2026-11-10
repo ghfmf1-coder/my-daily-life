@@ -18,6 +18,8 @@ BLOCKED_PARTS = {'.git', '.github', '.env', 'node_modules', '.DS_Store', '__pyca
 BLOCKED_ENDINGS = ('.pem', '.key', '.p12', '.pfx', '.sqlite', '.db', '.bak', '.log')
 ALLOWED_EXT = {'.html', '.css', '.js', '.mjs', '.json', '.txt', '.xml', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.ico', '.woff', '.woff2', '.webmanifest', '.pdf', '.wasm', '.csv'}
 
+NATIVE_ROOT_TOOLS = ('privacy-redactor','submission-auditor','shift-calendar','worktime-analyzer','label-sheet-maker','cut-plan-optimizer','recurring-payment-finder','meal-timeline','handover-checklist','group-order-summary')
+
 class SiteError(ValueError):
     pass
 
@@ -226,7 +228,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                     'en':{'routine':'Daily life','data':'Data & files','writing':'Writing','other':'Other tools'},
                 }[language][category]
                 # Only migrated tools use the unified domain; other tools keep their verified URLs.
-                unified_slugs={'csv-column-extractor','csv-empty-row-remover','jsonl-validator','srt-sdh-cleaner','vtt-cleaner'}
+                unified_slugs={'csv-column-extractor','csv-empty-row-remover','jsonl-validator','srt-sdh-cleaner','vtt-cleaner'} | set(NATIVE_ROOT_TOOLS)
                 if site['slug'] in unified_slugs:
                     target='https://abreda.com/'+('en/' if language=='en' else '')+'tools/'+site['slug']+'/'
                 else:
@@ -237,6 +239,16 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 # but are deliberately not displayed in the visual catalogue.
                 # Each tool gets its own illustration: subject-specific, no shared generic icon.
                 artwork={
+                  'privacy-redactor':('<rect x="28" y="20" width="104" height="85" rx="9" fill="#e2eefb" stroke="#4677b4" stroke-width="4"/><rect x="40" y="41" width="77" height="15" fill="#1b283e"/><path d="M41 72h62M41 85h45" stroke="#7197c6" stroke-width="5"/>'),
+                  'submission-auditor':('<path d="M42 13h64l20 20v77H42z" fill="#fff" stroke="#5371ad" stroke-width="4"/><path d="M106 13v20h20M54 53h15m13 0h27M54 74h15m13 0h27" stroke="#6c93c8" stroke-width="4"/><path d="m54 51 7 7 11-15m-18 29 7 7 11-15" stroke="#2eaf82" stroke-width="4" fill="none"/>'),
+                  'shift-calendar':('<rect x="27" y="27" width="106" height="83" rx="8" fill="#fff" stroke="#6c81b3" stroke-width="4"/><path d="M27 48h106M48 20v15M110 20v15M58 64h14M84 64h14M58 85h14M84 85h14" stroke="#779ac6" stroke-width="6"/><circle cx="114" cy="91" r="11" fill="#e9ad55"/>'),
+                  'worktime-analyzer':('<circle cx="80" cy="68" r="42" fill="#fff" stroke="#517baf" stroke-width="6"/><path d="M80 43v26l20 12" stroke="#284e82" stroke-width="6" fill="none"/><path d="M61 15h38M80 15v10" stroke="#d9954b" stroke-width="7"/><circle cx="80" cy="68" r="5" fill="#d9954b"/>'),
+                  'label-sheet-maker':('<rect x="30" y="16" width="100" height="96" rx="4" fill="#fff" stroke="#5f85ba" stroke-width="4"/><rect x="41" y="29" width="36" height="24" fill="#d9eefc" stroke="#619ac1"/><rect x="84" y="29" width="36" height="24" fill="#f3e0ba" stroke="#bb955e"/><rect x="41" y="60" width="36" height="24" fill="#f3e0ba" stroke="#bb955e"/><rect x="84" y="60" width="36" height="24" fill="#d9eefc" stroke="#619ac1"/>'),
+                  'cut-plan-optimizer':('<rect x="25" y="23" width="112" height="86" fill="#e7d8bd" stroke="#936b40" stroke-width="4"/><path d="M25 62h112M82 23v86M25 90h57" stroke="#fff" stroke-width="5"/><path d="m99 40 10 11 18-25" fill="none" stroke="#4788b6" stroke-width="5"/>'),
+                  'recurring-payment-finder':('<rect x="37" y="24" width="86" height="75" rx="8" fill="#fff" stroke="#6284ba" stroke-width="4"/><path d="M51 42h59M51 58h46M51 74h36" stroke="#91adce" stroke-width="5"/><path d="m110 94 13 4-4-14M49 101l-12-4 4-13" fill="none" stroke="#31ab91" stroke-width="5"/>'),
+                  'meal-timeline':('<path d="M36 48h90v48q-45 22-90 0z" fill="#e5edf8" stroke="#5678ad" stroke-width="4"/><path d="M27 49h107M58 32q-12-10 0-19M81 32q-12-10 0-19M104 32q-12-10 0-19" stroke="#ea9659" stroke-width="5" fill="none"/><circle cx="119" cy="95" r="15" fill="#fff" stroke="#4792b5" stroke-width="4"/>'),
+                  'handover-checklist':('<rect x="35" y="24" width="90" height="86" rx="6" fill="#fff" stroke="#6e80ac" stroke-width="4"/><rect x="58" y="17" width="44" height="16" rx="4" fill="#c7dcf5"/><path d="m47 56 7 7 13-16m-20 33 7 7 13-16M74 58h38M74 82h38" stroke="#35ac90" stroke-width="5" fill="none"/>'),
+                  'group-order-summary':('<rect x="21" y="31" width="72" height="71" rx="7" fill="#fff" stroke="#6789b5" stroke-width="4"/><rect x="67" y="17" width="72" height="71" rx="7" fill="#f6fbff" stroke="#6789b5" stroke-width="4"/><path d="M78 37h48M78 52h38M78 66h43M32 79h26" stroke="#87a5ca" stroke-width="5"/>'),
                   'manuscript-lens':('<path d="M37 18h65l21 22v66H37z" fill="#fff" stroke="#536ea5" stroke-width="3"/><path d="M102 18v22h21M49 54h60M49 67h42M49 80h34" fill="none" stroke="#9bb0d3" stroke-width="3"/><path d="m91 87 9 10 19-23" fill="none" stroke="#d38b3d" stroke-width="6"/>'),
                   'camera-lens-check':('<circle cx="80" cy="62" r="43" fill="#25374d" stroke="#6384a6" stroke-width="5"/><circle cx="80" cy="62" r="29" fill="#466f91" stroke="#d0e2ef" stroke-width="4"/><path d="M64 37 95 85M53 68l54-15M66 86l26-49" stroke="#94c8dd" stroke-width="5"/><circle cx="80" cy="62" r="11" fill="#172e47"/><path d="m114 94 16 16" stroke="#dba35a" stroke-width="8" stroke-linecap="round"/>'),
                   'card-grading-lab':('<rect x="39" y="13" width="82" height="102" rx="8" fill="#fff" stroke="#8b72bb" stroke-width="4"/><rect x="48" y="23" width="64" height="18" rx="3" fill="#dc5a63"/><text x="60" y="36" font-size="13" font-weight="bold" fill="#fff">PSA</text><path d="m80 47 23 14-9 30H66l-9-30z" fill="#d8b8f0" stroke="#8b72bb" stroke-width="3"/><path d="m80 52 6 14 14 1-11 9 3 13-12-7-12 7 3-13-11-9 14-1z" fill="#f0b949"/>'),
@@ -328,6 +340,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     # abreda.com/tools/<slug>/ and abreda.com/en/tools/<slug>/.
     # Legacy Pages domains remain live until redirects are separately verified.
     if slug == 'toolbox-hub':
+        native=NATIVE_ROOT_TOOLS
         migrated=('csv-column-extractor','csv-empty-row-remover',
                   'jsonl-validator','srt-sdh-cleaner','vtt-cleaner')
         for tool_slug in migrated:
@@ -358,6 +371,21 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 for asset in origin_dir.iterdir():
                     if asset.is_file() and asset.suffix.lower() in ALLOWED_EXT and asset.name!='index.html':
                         shutil.copy2(asset,dest/asset.name)
+        # Serve newly approved Korean-first tools directly under abreda.com/tools/.
+        # Preserve standalone pages.dev previews; existing DNS and Pages projects are unchanged.
+        for tool_slug in native:
+            source=SITES/tool_slug/'public'
+            original=source/'index.html'
+            dest=out/'tools'/tool_slug
+            dest.mkdir(parents=True,exist_ok=True)
+            html=original.read_text(encoding='utf-8')
+            canonical='https://abreda.com/tools/'+tool_slug+'/'
+            html=re.sub(r'<link\s+rel=["\']canonical["\'][^>]*>','',html,flags=re.I)
+            html=html.replace('</head>','<link rel="canonical" href="'+canonical+'"></head>',1)
+            (dest/'index.html').write_text(html,encoding='utf-8')
+            for asset in source.iterdir():
+                if asset.is_file() and asset.suffix.lower() in ALLOWED_EXT and asset.name!='index.html':
+                    shutil.copy2(asset,dest/asset.name)
         # The hub sitemap is a stable, single submitted index for both locales.
         # Include all already-listed hub URLs and the migrated tool URLs.
         sitemap=out/'sitemap.xml'
@@ -365,6 +393,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             xml=sitemap.read_text(encoding='utf-8')
             urls=['https://abreda.com/'+prefix+'/'+name+'/'
                   for name in migrated for prefix in ('tools','en/tools')]
+            urls += ['https://abreda.com/tools/'+name+'/' for name in native]
             additions=''.join('  <url><loc>'+url+'</loc></url>\n' for url in urls)
             if '</urlset>' not in xml:
                 raise SiteError('Invalid hub sitemap: missing urlset close tag')
@@ -435,7 +464,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     disallow_all = robots_source.is_file() and bool(re.search(
         r'(?im)^\s*Disallow:\s*/\s*$', robots_source.read_text(encoding='utf-8')))
     localized = data.get('locales') == ['ko', 'en']
-    migrated_tools = {'csv-column-extractor','csv-empty-row-remover','jsonl-validator','srt-sdh-cleaner','vtt-cleaner'}
+    migrated_tools = {'csv-column-extractor','csv-empty-row-remover','jsonl-validator','srt-sdh-cleaner','vtt-cleaner'} | set(NATIVE_ROOT_TOOLS)
     ko_canonical = ('https://abreda.com/tools/' + slug + '/') if slug in migrated_tools else canonical + '/'
     en_canonical = ('https://abreda.com/en/tools/' + slug + '/') if slug in migrated_tools else canonical + '/en/'
     alternatives = {'ko': ko_canonical, 'en': en_canonical} if localized else {}
@@ -562,7 +591,7 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 'slug': other,
                 'title': site_config['title'],
                 'description': site_config['description'],
-                'url': (site_config.get('canonical_url') or f"https://{site_config['project']}.pages.dev") + '/',
+                'url': ('https://abreda.com/tools/'+other+'/' if other in NATIVE_ROOT_TOOLS else (site_config.get('canonical_url') or f"https://{site_config['project']}.pages.dev") + '/'),
                 'repo': 'https://github.com/ghfmf1-coder/my-daily-life',
                 'category': '공개 도구',
                 'locales': site_config.get('locales', ['ko'])

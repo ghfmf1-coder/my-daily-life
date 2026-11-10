@@ -1,0 +1,10 @@
+{
+  "slug": "privacy-redactor",
+  "project": "tb-privacy-redactor",
+  "title": "개인정보 지우개",
+  "description": "사진에서 이름, 계좌번호, 주소 등 민감한 부분을 직접 가린 뒤 새 PNG 파일로 저장합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-privacy-redactor.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "slug": "cut-plan-optimizer",
+  "project": "tb-cut-plan-optimizer",
+  "title": "자재 재단 설계실",
+  "description": "판재 크기와 필요한 조각을 입력해 절단 간격이 반영된 2D 배치도와 자재 수량을 확인합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-cut-plan-optimizer.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

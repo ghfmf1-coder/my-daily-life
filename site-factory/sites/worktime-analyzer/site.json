@@ -1,0 +1,10 @@
+{
+  "slug": "worktime-analyzer",
+  "project": "tb-worktime-analyzer",
+  "title": "작업시간 분석실",
+  "description": "현장 반복 작업의 각 공정에 걸린 시간을 측정하고 기록을 CSV로 내보냅니다.",
+  "approved": true,
+  "canonical_url": "https://tb-worktime-analyzer.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

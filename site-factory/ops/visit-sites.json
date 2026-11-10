@@ -64,6 +64,13 @@
       ]
     },
     {
+      "siteId": "tb-cut-plan-optimizer",
+      "url": "https://abreda.com/tools/cut-plan-optimizer/",
+      "origins": [
+        "https://tb-cut-plan-optimizer.pages.dev"
+      ]
+    },
+    {
       "siteId": "tb-detail-image-review",
       "url": "https://tb-detail-image-review.pages.dev/",
       "origins": [
@@ -106,6 +113,20 @@
       ]
     },
     {
+      "siteId": "tb-group-order-summary",
+      "url": "https://abreda.com/tools/group-order-summary/",
+      "origins": [
+        "https://tb-group-order-summary.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-handover-checklist",
+      "url": "https://abreda.com/tools/handover-checklist/",
+      "origins": [
+        "https://tb-handover-checklist.pages.dev"
+      ]
+    },
+    {
       "siteId": "tb-inventory-diff",
       "url": "https://tb-inventory-diff.pages.dev/",
       "origins": [
@@ -134,10 +155,24 @@
       ]
     },
     {
+      "siteId": "tb-label-sheet-maker",
+      "url": "https://abreda.com/tools/label-sheet-maker/",
+      "origins": [
+        "https://tb-label-sheet-maker.pages.dev"
+      ]
+    },
+    {
       "siteId": "tb-lease-registry-diff",
       "url": "https://tb-lease-registry-diff.pages.dev/",
       "origins": [
         "https://tb-lease-registry-diff.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-meal-timeline",
+      "url": "https://abreda.com/tools/meal-timeline/",
+      "origins": [
+        "https://tb-meal-timeline.pages.dev"
       ]
     },
     {
@@ -183,6 +218,13 @@
       ]
     },
     {
+      "siteId": "tb-privacy-redactor",
+      "url": "https://abreda.com/tools/privacy-redactor/",
+      "origins": [
+        "https://tb-privacy-redactor.pages.dev"
+      ]
+    },
+    {
       "siteId": "tb-purchase-three-way",
       "url": "https://tb-purchase-three-way.pages.dev/",
       "origins": [
@@ -194,6 +236,20 @@
       "url": "https://tb-question-similarity.pages.dev/",
       "origins": [
         "https://tb-question-similarity.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-recurring-payment-finder",
+      "url": "https://abreda.com/tools/recurring-payment-finder/",
+      "origins": [
+        "https://tb-recurring-payment-finder.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-shift-calendar",
+      "url": "https://abreda.com/tools/shift-calendar/",
+      "origins": [
+        "https://tb-shift-calendar.pages.dev"
       ]
     },
     {
@@ -250,6 +306,13 @@
       "url": "https://stl-print-check.abreda.com/",
       "origins": [
         "https://tb-stl-print-check.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-submission-auditor",
+      "url": "https://abreda.com/tools/submission-auditor/",
+      "origins": [
+        "https://tb-submission-auditor.pages.dev"
       ]
     },
     {
@@ -327,6 +390,13 @@
       "url": "https://tb-webtoon-preflight.pages.dev/",
       "origins": [
         "https://tb-webtoon-preflight.pages.dev"
+      ]
+    },
+    {
+      "siteId": "tb-worktime-analyzer",
+      "url": "https://abreda.com/tools/worktime-analyzer/",
+      "origins": [
+        "https://tb-worktime-analyzer.pages.dev"
       ]
     }
   ]

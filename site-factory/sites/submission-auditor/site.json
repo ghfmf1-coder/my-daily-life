@@ -1,0 +1,10 @@
+{
+  "slug": "submission-auditor",
+  "project": "tb-submission-auditor",
+  "title": "제출파일 검수관",
+  "description": "필수 제출 파일 이름과 실제 선택한 파일을 비교해 누락, 중복, 용량 초과를 검수합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-submission-auditor.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

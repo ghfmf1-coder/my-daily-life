@@ -1,0 +1,10 @@
+{
+  "slug": "label-sheet-maker",
+  "project": "tb-label-sheet-maker",
+  "title": "실측 라벨 제작소",
+  "description": "A4 용지에 원하는 크기의 제품·정리 라벨을 배치하고 인쇄 또는 PDF로 저장합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-label-sheet-maker.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

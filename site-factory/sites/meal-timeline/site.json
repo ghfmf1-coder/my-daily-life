@@ -1,0 +1,10 @@
+{
+  "slug": "meal-timeline",
+  "project": "tb-meal-timeline",
+  "title": "동시요리 타임라인",
+  "description": "완성 목표 시간을 기준으로 여러 음식의 준비·조리 시작시간을 역산해 작업표를 만듭니다.",
+  "approved": true,
+  "canonical_url": "https://tb-meal-timeline.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

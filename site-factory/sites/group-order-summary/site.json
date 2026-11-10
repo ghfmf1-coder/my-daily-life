@@ -1,0 +1,10 @@
+{
+  "slug": "group-order-summary",
+  "project": "tb-group-order-summary",
+  "title": "단체주문 정리왕",
+  "description": "사람별 메뉴·옵션·수량·가격을 취합해 총 주문표, 개인별 금액, 포장 이름표를 만듭니다.",
+  "approved": true,
+  "canonical_url": "https://tb-group-order-summary.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}
