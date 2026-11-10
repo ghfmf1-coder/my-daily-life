@@ -29,7 +29,7 @@ async function check(slug,type){
        await page.locator('#calc').click();assert.ok((await page.locator('#result').textContent()).length>30);
     }
     if(type==='hub'&&slug==='color-contrast-audit'){
-       await page.locator('#check').click();assert.match(await page.locator('#result').textContent(),/21.00|contrast/i);
+       await page.locator('#fg').fill('#000000');await page.locator('#check').click();assert.match(await page.locator('#result').textContent(),/21.00|contrast/i);
     }
     console.log('BILINGUAL_QA_PASS',slug,type);
   }catch(e){failures.push({slug,type,error:String(e.message||e).slice(0,400)});console.log('BILINGUAL_QA_FAIL',slug,String(e.message||e).slice(0,300))}
