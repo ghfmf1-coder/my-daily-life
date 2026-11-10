@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-10T01:28:21+00:00",
-  "status": "pass",
+  "checkedAt": "2026-11-10T07:50:16+00:00",
+  "status": "fail",
   "summary": {
-    "sites": 24,
-    "sitePassed": 24,
+    "sites": 34,
+    "sitePassed": 31,
     "siteWarnings": 0,
-    "siteFailed": 0,
-    "browserPassed": 11,
+    "siteFailed": 3,
+    "browserPassed": 12,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 0
+    "issues": 8
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 167ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -143,7 +143,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 116ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -168,7 +168,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -204,7 +204,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 123ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -244,7 +244,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -335,7 +335,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -375,7 +375,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 118ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -466,7 +466,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 370ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 174ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -506,7 +506,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 275ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 160ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -597,7 +597,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 121ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -637,7 +637,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -728,7 +728,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 162ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -768,7 +768,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -859,7 +859,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 119ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -899,7 +899,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -990,7 +990,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 178ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1030,7 +1030,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1142,6 +1142,87 @@
       "failures": []
     },
     {
+      "slug": "cut-plan-optimizer",
+      "name": "자재 재단 설계실",
+      "url": "https://tb-cut-plan-optimizer.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "자재 재단 설계실 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "판재 크기와 필요한 조각을 입력해 절단 간격이 반영된 2D 배치도와 자재 수량을 확인합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-cut-plan-optimizer.pages.dev/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 521 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 63 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 175 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 1"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3028 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
       "slug": "deployment-check",
       "name": "작은도구함 배포 검증",
       "url": "https://tb-deployment-check.pages.dev/",
@@ -1151,7 +1232,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 117ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1222,7 +1303,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1262,7 +1343,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1344,6 +1425,170 @@
       "failures": []
     },
     {
+      "slug": "group-order-summary",
+      "name": "단체주문 정리왕",
+      "url": "https://tb-group-order-summary.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "단체주문 정리왕 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "사람별 메뉴·옵션·수량·가격을 취합해 총 주문표, 개인별 금액, 포장 이름표를 만듭니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-group-order-summary.pages.dev/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 520 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 63 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 176 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 1"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3087 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "handover-checklist",
+      "name": "구성품 확인증 제작소",
+      "url": "https://tb-handover-checklist.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "구성품 확인증 제작소 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "fail",
+          "detail": "중고거래와 물품 인수인계 전 구성품·상태·사진을 정리한 확인증을 만듭니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-handover-checklist.pages.dev/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 527 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 63 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 175 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 1"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2501 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": [
+        "meta_description_ko: 중고거래와 물품 인수인계 전 구성품·상태·사진을 정리한 확인증을 만듭니다."
+      ]
+    },
+    {
       "slug": "jsonl-validator",
       "name": "jsonl validator | Small Toolbox",
       "url": "https://tb-pages-jsonl-validator.pages.dev/",
@@ -1353,7 +1598,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 155ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1393,7 +1638,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 121ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1484,7 +1729,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 120ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1524,7 +1769,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 364ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1606,6 +1851,87 @@
       "failures": []
     },
     {
+      "slug": "label-sheet-maker",
+      "name": "실측 라벨 제작소",
+      "url": "https://tb-label-sheet-maker.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "실측 라벨 제작소 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "A4 용지에 원하는 크기의 제품·정리 라벨을 배치하고 인쇄 또는 PDF로 저장합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-label-sheet-maker.pages.dev/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 434 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 63 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 174 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 1"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2531 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
       "slug": "manuscript-lens",
       "name": "웹소설 원고돋보기 | 반복 표현·대사·문장 분석",
       "url": "https://manuscript.abreda.com/",
@@ -1615,7 +1941,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 213ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 141ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1655,7 +1981,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 219ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 231ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1757,6 +2083,87 @@
       "failures": []
     },
     {
+      "slug": "meal-timeline",
+      "name": "동시요리 타임라인",
+      "url": "https://tb-meal-timeline.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "동시요리 타임라인 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "완성 목표 시간을 기준으로 여러 음식의 준비·조리 시작시간을 역산해 작업표를 만듭니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-meal-timeline.pages.dev/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 523 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 63 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 170 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 1"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2185 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
       "slug": "novel-planner",
       "name": "웹소설 연재 설계실 | 회차·복선·인물 관리",
       "url": "https://novel.abreda.com/",
@@ -1766,7 +2173,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 236ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 141ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1806,7 +2213,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 315ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1908,6 +2315,249 @@
       "failures": []
     },
     {
+      "slug": "privacy-redactor",
+      "name": "개인정보 지우개",
+      "url": "https://tb-privacy-redactor.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "개인정보 지우개 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "사진에서 이름, 계좌번호, 주소 등 민감한 부분을 직접 가린 뒤 새 PNG 파일로 저장합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-privacy-redactor.pages.dev/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 520 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 63 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 173 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 1"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2427 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "recurring-payment-finder",
+      "name": "숨은 정기결제 탐지기",
+      "url": "https://tb-recurring-payment-finder.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "숨은 정기결제 탐지기 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "은행·카드 CSV 내역에서 동일 가맹점과 금액이 다른 달에도 반복된 거래를 찾아냅니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-recurring-payment-finder.pages.dev/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 527 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 63 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 181 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 1"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 3314 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "shift-calendar",
+      "name": "교대근무 달력 제작소",
+      "url": "https://tb-shift-calendar.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "교대근무 달력 제작소 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "주간·야간·휴무 순환 패턴으로 연간 근무표를 만들고 캘린더 파일(ICS)을 내려받습니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-shift-calendar.pages.dev/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 524 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 63 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 171 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 1"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2485 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
       "slug": "sneaker-condition-lab",
       "name": "스니커즈 중고 상태 검수",
       "url": "https://tb-sneaker-condition-lab.pages.dev/",
@@ -1917,7 +2567,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1957,7 +2607,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2048,7 +2698,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2088,7 +2738,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 144ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2179,7 +2829,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 238ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 195ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2219,7 +2869,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 138ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2301,6 +2951,87 @@
       "failures": []
     },
     {
+      "slug": "submission-auditor",
+      "name": "제출파일 검수관",
+      "url": "https://tb-submission-auditor.pages.dev/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 142ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "제출파일 검수관 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "필수 제출 파일 이름과 실제 선택한 파일을 비교해 누락, 중복, 용량 초과를 검수합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-submission-auditor.pages.dev/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 433 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 63 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 175 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 1"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1869 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
       "slug": "subtitle-sync-studio",
       "name": "자막 싱크 조정기 | SRT VTT 변환·자막 시간 오류 검사",
       "url": "https://tb-subtitle-sync-studio.pages.dev/",
@@ -2310,7 +3041,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 110ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2350,7 +3081,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 95ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2472,12 +3203,12 @@
       "name": "작은 도구함 | 무료 업무·창작·일상 웹 도구 모음",
       "url": "https://abreda.com/",
       "type": "public",
-      "status": "pass",
+      "status": "fail",
       "checks": [
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 181ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2501,23 +3232,23 @@
         },
         {
           "check": "canonical_ko",
-          "status": "pass",
-          "detail": "https://abreda.com/"
+          "status": "fail",
+          "detail": "https://abreda.com/tools/group-order-summary//"
         },
         {
           "check": "hreflang_ko_ko",
-          "status": "pass",
-          "detail": "https://abreda.com/"
+          "status": "fail",
+          "detail": "https://abreda.com/tools/group-order-summary//"
         },
         {
           "check": "hreflang_ko_en",
-          "status": "pass",
-          "detail": "https://abreda.com/en/"
+          "status": "fail",
+          "detail": "https://abreda.com/tools/group-order-summary//en/"
         },
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2541,18 +3272,18 @@
         },
         {
           "check": "canonical_en",
-          "status": "pass",
-          "detail": "https://abreda.com/en/"
+          "status": "fail",
+          "detail": "https://abreda.com/tools/group-order-summary//en/"
         },
         {
           "check": "hreflang_en_ko",
-          "status": "pass",
-          "detail": "https://abreda.com/"
+          "status": "fail",
+          "detail": "https://abreda.com/tools/group-order-summary//"
         },
         {
           "check": "hreflang_en_en",
-          "status": "pass",
-          "detail": "https://abreda.com/en/"
+          "status": "fail",
+          "detail": "https://abreda.com/tools/group-order-summary//en/"
         },
         {
           "check": "icon_favicon.ico",
@@ -2577,12 +3308,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 1255 bytes"
+          "detail": "HTTP 200, 1939 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 19"
+          "detail": "entries: 29"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2617,12 +3348,12 @@
         {
           "check": "text_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 8950 bytes"
+          "detail": "HTTP 200, 12509 bytes"
         },
         {
           "check": "rss_feed.xml",
           "status": "pass",
-          "detail": "21 valid RSS entries"
+          "detail": "31 valid RSS entries"
         },
         {
           "check": "text_en_feed.xml",
@@ -2636,7 +3367,14 @@
         }
       ],
       "warnings": [],
-      "failures": []
+      "failures": [
+        "canonical_ko: https://abreda.com/tools/group-order-summary//",
+        "hreflang_ko_ko: https://abreda.com/tools/group-order-summary//",
+        "hreflang_ko_en: https://abreda.com/tools/group-order-summary//en/",
+        "canonical_en: https://abreda.com/tools/group-order-summary//en/",
+        "hreflang_en_ko: https://abreda.com/tools/group-order-summary//",
+        "hreflang_en_en: https://abreda.com/tools/group-order-summary//en/"
+      ]
     },
     {
       "slug": "used-car-inspection",
@@ -2648,7 +3386,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 94ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2688,7 +3426,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 150ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2779,7 +3517,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2819,7 +3557,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 100ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2910,7 +3648,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 245ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2950,7 +3688,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3041,7 +3779,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 250ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3081,7 +3819,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 149ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 244ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3161,6 +3899,89 @@
       ],
       "warnings": [],
       "failures": []
+    },
+    {
+      "slug": "worktime-analyzer",
+      "name": "작업시간 분석실",
+      "url": "https://tb-worktime-analyzer.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "작업시간 분석실 | 작은도구함"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "fail",
+          "detail": "현장 반복 작업의 각 공정에 걸린 시간을 측정하고 기록을 CSV로 내보냅니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "index,follow"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://tb-worktime-analyzer.pages.dev/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 520 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 63 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 174 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 1"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2245 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": [
+        "meta_description_ko: 현장 반복 작업의 각 공정에 걸린 시간을 측정하고 기록을 CSV로 내보냅니다."
+      ]
     }
   ],
   "browserChecks": [
@@ -3170,7 +3991,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 488
+      "elapsedMs": 424
     },
     {
       "name": "English plot planner",
@@ -3178,7 +3999,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 478
+      "elapsedMs": 276
     },
     {
       "name": "Korean manuscript",
@@ -3186,7 +4007,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 410
+      "elapsedMs": 277
     },
     {
       "name": "English manuscript",
@@ -3194,7 +4015,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 496
+      "elapsedMs": 311
     },
     {
       "name": "Korean CSV merger",
@@ -3202,7 +4023,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 420
+      "elapsedMs": 318
     },
     {
       "name": "English CSV merger",
@@ -3210,7 +4031,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 426
+      "elapsedMs": 307
     },
     {
       "name": "Haru English landing",
@@ -3218,7 +4039,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English landing search content and mobile layout",
-      "elapsedMs": 308
+      "elapsedMs": 188
     },
     {
       "name": "Haru English app",
@@ -3226,7 +4047,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Unauthenticated English login displayed",
-      "elapsedMs": 311
+      "elapsedMs": 243
     },
     {
       "name": "Admin authentication gate",
@@ -3234,7 +4055,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 884
+      "elapsedMs": 242
     },
     {
       "name": "Toolbox hub search",
@@ -3242,7 +4063,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 279
+      "elapsedMs": 244
     },
     {
       "name": "Technical deployment smoke",
@@ -3250,10 +4071,51 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 281
+      "elapsedMs": 257
+    },
+    {
+      "name": "GA4 sanitized query and successful tool completion",
+      "url": "https://abreda.com/tools/jsonl-validator/?tb_debug=1&utm_source=qa&token=QA_PRIVATE&q=QA_SEARCH#qa-anchor",
+      "device": "desktop",
+      "status": "pass",
+      "detail": "page_view and tool_complete accepted; debug only; query/hash absent; one pageview",
+      "elapsedMs": 5837
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "scope": "handover-checklist",
+      "details": "meta_description_ko: 중고거래와 물품 인수인계 전 구성품·상태·사진을 정리한 확인증을 만듭니다."
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "canonical_ko: https://abreda.com/tools/group-order-summary//"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "hreflang_ko_ko: https://abreda.com/tools/group-order-summary//"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "hreflang_ko_en: https://abreda.com/tools/group-order-summary//en/"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "canonical_en: https://abreda.com/tools/group-order-summary//en/"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "hreflang_en_ko: https://abreda.com/tools/group-order-summary//"
+    },
+    {
+      "scope": "toolbox-hub",
+      "details": "hreflang_en_en: https://abreda.com/tools/group-order-summary//en/"
+    },
+    {
+      "scope": "worktime-analyzer",
+      "details": "meta_description_ko: 현장 반복 작업의 각 공정에 걸린 시간을 측정하고 기록을 CSV로 내보냅니다."
+    }
+  ],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
