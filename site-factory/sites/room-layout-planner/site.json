@@ -1,0 +1,10 @@
+{
+  "slug": "room-layout-planner",
+  "project": "tb-room-layout-planner",
+  "title": "우리집 가구 배치 연구소",
+  "description": "방 크기와 가구의 실제 치수를 입력하고 드래그해 공간 배치를 이미지·JSON으로 보관합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-room-layout-planner.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

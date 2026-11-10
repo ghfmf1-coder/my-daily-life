@@ -1,0 +1,10 @@
+{
+  "slug": "quote-document-maker",
+  "project": "tb-quote-document-maker",
+  "title": "무료 견적서 제작소",
+  "description": "품목·수량·단가·부가세를 입력해 인쇄와 PDF 저장이 가능한 견적서·거래명세서를 만듭니다.",
+  "approved": true,
+  "canonical_url": "https://tb-quote-document-maker.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

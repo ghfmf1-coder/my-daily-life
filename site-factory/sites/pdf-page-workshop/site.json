@@ -1,0 +1,10 @@
+{
+  "slug": "pdf-page-workshop",
+  "project": "tb-pdf-page-workshop",
+  "title": "PDF 페이지 수리점",
+  "description": "PDF 파일을 병합하고 페이지 순서를 바꾸거나 특정 페이지를 삭제·회전해 새 PDF로 저장합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-pdf-page-workshop.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

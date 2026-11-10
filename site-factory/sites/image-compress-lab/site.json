@@ -1,0 +1,10 @@
+{
+  "slug": "image-compress-lab",
+  "project": "tb-image-compress-lab",
+  "title": "사진 용량 다이어트",
+  "description": "사진 여러 장을 압축하고 가로폭·형식을 변경해 결과 파일을 ZIP으로 저장합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-image-compress-lab.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "slug": "bulk-file-renamer",
+  "project": "tb-bulk-file-renamer",
+  "title": "파일명 일괄 정리왕",
+  "description": "파일 이름을 규칙적으로 일괄 변경하고 변경 전후를 확인한 뒤 ZIP 파일로 저장합니다.",
+  "approved": true,
+  "canonical_url": "https://tb-bulk-file-renamer.pages.dev",
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}
