@@ -1,5 +1,7 @@
 # 작은도구함: 일반 ChatGPT 운영 안내
 
+**2026-11-10 전체 검수 인수인계:** [FLEET-AUDIT-2026-11-10.md](FLEET-AUDIT-2026-11-10.md)에 웹앱별 실제 URL·검사 범위·원천·수정 커밋·Actions·미완료가 있습니다. [기계 판독 결과](../site-factory/ops/fleet-audit-20261110.json)도 함께 읽습니다. Work 로컬 파일·브라우저 세션·대화 기억을 요구하지 않습니다. 기존 성공 검사는 재사용하고 토큰 갱신 근거 없는 Worker 401은 반복하지 않습니다.
+
 **먼저 [CURRENT-STATE.md](CURRENT-STATE.md)를 읽습니다. 이 파일은 실행 설명이며 현재 권한·차단 상태는 CURRENT-STATE.md가 우선합니다.**
 
 운영 주소는 https://adminivo.com/next/ 입니다. 저장소는 ghfmf1-coder/my-daily-life 입니다.

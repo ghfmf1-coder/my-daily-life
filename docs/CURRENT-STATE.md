@@ -1,8 +1,23 @@
 # 현재 운영 상태 — 작은도구함
 
+## 최신 전체 검수 — 2026-11-10 (한국 시간)
+
+- 일반 ChatGPT Plus 인수인계 원문: [웹앱별 검수표와 장애 근거](FLEET-AUDIT-2026-11-10.md), 기계 판독 원천: [fleet-audit-20261110.json](../site-factory/ops/fleet-audit-20261110.json).
+- 공개 웹앱 71개(도구 70 + 하루한칸), 허브 별도. 공개 72페이지 HTTP·필수 JS/CSS·canonical·사이트맵 정상. D1 원장 72행은 앱 71개와 기존 카드 별칭 1행이며 실제 앱 수와 혼동하지 않는다.
+- 최신 feat/second-ten-tools-20261110의 검증된 변경은 main에 포함. 신규 10개 운영 배포·정상/오류 입력·다운로드 내용·모바일·저장 재표시 검증 성공. 기존 성공 검사 재사용, 근거가 없던 Work 29개는 운영 기능/CSV 검사 성공.
+- 문제 유형 10건 중 8건 수정·운영 검증, 2건 남음: 마지막 인증이 401인 Worker 최신 UI, 카드 원장의 보존된 별칭 두 행 표시. 오래된 source 기록·통계·서비스 ID는 삭제하지 않았다.
+- 수정/배포 d35bdf8f2253070bc13c25dea44505be24de629e; 운영 배포 Actions 42792279034 success; 유지보수 42793246913 success(44/44 및 브라우저 12/12); 신규 QA 42793246943 success; Work QA 42794267343 success.
+- Supabase 신규 수집 대상 10행 등록, 카드 원천 URL 설정 1행만 대표 도메인으로 변경. raw event/daily 수치·분류·테이블 변경 없음. 신규 10개 및 카드 collector dryRun 202, QA 원천 이벤트 0.
+- 실제 D1 카탈로그 자동 동기화 후 신규 10개 listed 확인(별도 cf_project=null). 원장/원천 감사 42793247308 및 42793306217 success. GA4·GSC 연결 정상이나 자료 없는 기간을 0으로 만들지 않는다.
+- 네이버 실패는 카드 과거 별칭의 sitemap 대표 호스트 불일치(ValueError). e68b8765c6b588b76bf3152d29331a7747a7fb44로 확인된 같은 프로젝트의 대표 도메인만 제출. 42795084232 completed/success; 이전 별칭/접수는 canonical_alias로 별도 보존, 검색 색인은 unknown.
+- 신규 10개는 deploy_mode=hub_only. 이후 직접 Pages 생성/새 DNS 추가 금지. abreda.com의 기존 toolbox-hub를 통해 배포한다.
+- 이번 조사에서 Worker Secret 갱신 근거는 없었다. 마지막 settings_read 401/CF10000 및 token verify 401/CF1000을 동일 조건으로 재시도하지 않았으며, 관리자 Access 경계 확인을 최신 UI·통계 화면 성공으로 바꾸지 않았다.
+- 이전 날짜의 검증 이력은 아래에 보존하며 현재 상태는 이 절과 위 검수표/최신 실제 Actions를 우선한다.
+
+
 **최신 사용자 결정: 네이버 사이트별 수동 소유확인·보안문자 및 계정 사이트맵 수동 제출은 운영 범위에서 제외. 하단 최신 결정이 과거 대기 목록보다 우선합니다.**
 
-최신 재검증: 2026-10-23, 실행 39886417033 및 39886419519 모두 completed/success. Google 색인·처리 건수 표는 00:57 감사 시점이며, 이후 인증·동기화 재검증과 네이버 결과는 하단 실행 증거를 따릅니다. 일반 ChatGPT Plus는 이 문서와 [CHATGPT-OPERATIONS.md](CHATGPT-OPERATIONS.md), [AGENTS.md](../AGENTS.md)를 먼저 읽고 최신 실행으로 갱신합니다. 과거 대화가 자동 공유된다고 가정하지 않습니다.
+과거 재검증: 2026-10-23, 실행 39886417033 및 39886419519 모두 completed/success. Google 색인·처리 건수 표는 00:57 감사 시점이며, 이후 인증·동기화 재검증과 네이버 결과는 하단 실행 증거를 따릅니다. 일반 ChatGPT Plus는 이 문서와 [CHATGPT-OPERATIONS.md](CHATGPT-OPERATIONS.md), [AGENTS.md](../AGENTS.md)를 먼저 읽고 최신 실행으로 갱신합니다. 과거 대화가 자동 공유된다고 가정하지 않습니다.
 
 ## 실제 운영 검증
 

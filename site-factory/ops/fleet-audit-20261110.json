@@ -1,0 +1,1726 @@
+{
+  "checkedAt": "2026-11-10",
+  "scope": "71 public apps plus hub; admin separately",
+  "summary": {
+    "public_webapps": 71,
+    "public_tools": 70,
+    "hub_pages": 1,
+    "http200_apps": 71,
+    "http200_public_pages": 72,
+    "metadata_asset_errors": 0,
+    "registered_ledger_rows": 72,
+    "logical_alias_rows": 1,
+    "issues": 10,
+    "fixed_issue_groups": 8,
+    "unresolved_issue_groups": 2,
+    "new_live_browser_pass": 10,
+    "work_live_browser_pass": 29,
+    "first_ten_live_reused": 10
+  },
+  "issues": [
+    {
+      "id": "F01",
+      "priority": "P2",
+      "issue": "허브 canonical 덮어쓰기",
+      "status": "수정 완료",
+      "evidence": "factory.py의 내부 도구 루프가 허브 canonical 변수를 덮어씀. 변수 범위 분리. 운영 canonical·유지보수 통과."
+    },
+    {
+      "id": "F02",
+      "priority": "P2",
+      "issue": "인수인계 도구 설명 검사 실패",
+      "status": "수정 완료",
+      "evidence": "실제 구성품·사진·누락 확인 기능에 맞게 description 보완."
+    },
+    {
+      "id": "F03",
+      "priority": "P2",
+      "issue": "작업시간 도구 설명 검사 실패",
+      "status": "수정 완료",
+      "evidence": "실제 공정 측정·기록 비교·CSV 기능에 맞게 description 보완."
+    },
+    {
+      "id": "F04",
+      "priority": "P2",
+      "issue": "도메인 통합 도구 검사 경로 오류",
+      "status": "수정 완료",
+      "evidence": "native 도구는 abreda.com/tools 경로, robots/sitemap은 허브 공유 경로로 검사. SEO 검사를 끄지 않음."
+    },
+    {
+      "id": "F05",
+      "priority": "P1",
+      "issue": "최신 10개 브랜치 미병합·미배포",
+      "status": "수정 완료",
+      "evidence": "검증된 브랜치를 main에 포함. 기존 허브에 실제 배포. deploy_mode=hub_only 및 직접 배포 가드로 신규 Pages 생성 방지."
+    },
+    {
+      "id": "F06",
+      "priority": "P1",
+      "issue": "최신 10개 Supabase 수집 대상 미등록",
+      "status": "수정 완료",
+      "evidence": "운영 HTTP 확인 후 toolbox_public_site_sources에 누락된 설정 행만 INSERT ON CONFLICT DO NOTHING. 통계 행 생성 안 함."
+    },
+    {
+      "id": "F07",
+      "priority": "P1",
+      "issue": "카드 도구 통계 원천 URL 이전 미반영",
+      "status": "수정 완료",
+      "evidence": "동일 site_id의 설정 URL을 검증된 card-grading-lab.abreda.com으로 조건부 변경. 이벤트·일별 통계·분류 변경 없음. 운영 dryRun HTTP 202."
+    },
+    {
+      "id": "F08",
+      "priority": "P2",
+      "issue": "네이버 예전 별칭 사이트맵 검사 실패",
+      "status": "수정 완료",
+      "evidence": "같은 cf_project와 원장에 존재하는 설정 대표 도메인만 병합 제출. 별칭·과거 접수는 별도 canonical_alias로 보존. 관련 테스트와 운영 Actions 성공."
+    },
+    {
+      "id": "F09",
+      "priority": "P1",
+      "issue": "관제센터 Worker 최신 버전 미배포",
+      "status": "미해결",
+      "evidence": "마지막 배포 settings_read HTTP 401/CF10000, user/account verify 401/CF1000. 토큰 갱신 근거 없어 동일 실패 재시도 안 함. 최신 UI·오늘/7일/30일 화면 검증 불가."
+    },
+    {
+      "id": "F10",
+      "priority": "P2",
+      "issue": "카드 도구 원장에 예전 별칭과 대표 도메인 두 행",
+      "status": "미해결",
+      "evidence": "동일 cf_project의 기존 두 service_id를 보존. 논리적 별칭 1행을 실제 별도 앱으로 세지 않음. 최신 Worker의 별칭 표시/정리는 인증 복구 전 운영 검증 불가. 삭제·수치 재작성 안 함."
+    }
+  ],
+  "sites": [
+    {
+      "slug": "aquarium-water-lab",
+      "name": "수족관 수질 분석실",
+      "url": "https://tb-aquarium-water-lab.pages.dev/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://tb-aquarium-water-lab.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "bulk-file-renamer",
+      "name": "파일명 일괄 정리왕",
+      "url": "https://abreda.com/tools/bulk-file-renamer/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/bulk-file-renamer/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "camera-lens-check",
+      "name": "중고 카메라 렌즈 검수",
+      "url": "https://tb-camera-lens-check.pages.dev/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://tb-camera-lens-check.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "card-grading-lab",
+      "name": "트레이딩 카드 PSA 사전 감정 분석 | 포켓몬·원피스·스포츠 카드",
+      "url": "https://card-grading-lab.abreda.com/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://card-grading-lab.abreda.com/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "color-contrast-audit",
+      "name": "색상 대비 검수관",
+      "url": "https://abreda.com/tools/color-contrast-audit/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/color-contrast-audit/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "comic-condition-lab",
+      "name": "코믹북·만화책 상태 검수",
+      "url": "https://tb-comic-condition-lab.pages.dev/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://tb-comic-condition-lab.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "csv-column-extractor",
+      "name": "csv column extractor | Small Toolbox",
+      "url": "https://abreda.com/tools/csv-column-extractor/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/csv-column-extractor/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "csv-empty-row-remover",
+      "name": "csv empty row remover | Small Toolbox",
+      "url": "https://abreda.com/tools/csv-empty-row-remover/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/csv-empty-row-remover/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "csv-merge-studio",
+      "name": "CSV 맞춤 병합기 | 열 이름 통일·중복 제거·파일 합치기",
+      "url": "https://csv.abreda.com/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://csv.abreda.com/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "cut-plan-optimizer",
+      "name": "자재 재단 설계실",
+      "url": "https://abreda.com/tools/cut-plan-optimizer/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/cut-plan-optimizer/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "document-scan-studio",
+      "name": "문서 스캔 보정소",
+      "url": "https://abreda.com/tools/document-scan-studio/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/document-scan-studio/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "gem-photo-inspection",
+      "name": "보석·원석 외관 검수",
+      "url": "https://tb-gem-photo-inspection.pages.dev/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://tb-gem-photo-inspection.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "group-order-summary",
+      "name": "단체주문 정리왕",
+      "url": "https://abreda.com/tools/group-order-summary/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/group-order-summary/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "handover-checklist",
+      "name": "구성품 확인증 제작소",
+      "url": "https://abreda.com/tools/handover-checklist/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/handover-checklist/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "image-compress-lab",
+      "name": "사진 용량 다이어트",
+      "url": "https://abreda.com/tools/image-compress-lab/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/image-compress-lab/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "jsonl-validator",
+      "name": "jsonl validator | Small Toolbox",
+      "url": "https://abreda.com/tools/jsonl-validator/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/jsonl-validator/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "keyboard-switch-diagnostics",
+      "name": "키보드 키 입력 진단실",
+      "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "label-sheet-maker",
+      "name": "실측 라벨 제작소",
+      "url": "https://abreda.com/tools/label-sheet-maker/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/label-sheet-maker/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "manuscript-lens",
+      "name": "웹소설 원고돋보기 | 반복 표현·대사·문장 분석",
+      "url": "https://manuscript.abreda.com/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://manuscript.abreda.com/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "meal-timeline",
+      "name": "동시요리 타임라인",
+      "url": "https://abreda.com/tools/meal-timeline/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/meal-timeline/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "novel-planner",
+      "name": "웹소설 연재 설계실 | 회차·복선·인물 관리",
+      "url": "https://novel.abreda.com/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://novel.abreda.com/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "pdf-page-workshop",
+      "name": "PDF 페이지 수리점",
+      "url": "https://abreda.com/tools/pdf-page-workshop/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/pdf-page-workshop/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "privacy-redactor",
+      "name": "개인정보 지우개",
+      "url": "https://abreda.com/tools/privacy-redactor/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/privacy-redactor/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "quote-document-maker",
+      "name": "무료 견적서 제작소",
+      "url": "https://abreda.com/tools/quote-document-maker/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/quote-document-maker/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "recurring-payment-finder",
+      "name": "숨은 정기결제 탐지기",
+      "url": "https://abreda.com/tools/recurring-payment-finder/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/recurring-payment-finder/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "room-layout-planner",
+      "name": "우리집 가구 배치 연구소",
+      "url": "https://abreda.com/tools/room-layout-planner/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/room-layout-planner/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "seller-profit-math",
+      "name": "온라인 판매 순이익 분석기",
+      "url": "https://abreda.com/tools/seller-profit-math/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/seller-profit-math/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "share-qr-card",
+      "name": "QR 공유카드 제작소",
+      "url": "https://abreda.com/tools/share-qr-card/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/share-qr-card/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "shift-calendar",
+      "name": "교대근무 달력 제작소",
+      "url": "https://abreda.com/tools/shift-calendar/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/shift-calendar/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "sneaker-condition-lab",
+      "name": "스니커즈 중고 상태 검수",
+      "url": "https://tb-sneaker-condition-lab.pages.dev/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://tb-sneaker-condition-lab.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "srt-sdh-cleaner",
+      "name": "srt sdh cleaner | Small Toolbox",
+      "url": "https://abreda.com/tools/srt-sdh-cleaner/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/srt-sdh-cleaner/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "stl-print-check",
+      "name": "3D 프린팅 출력 사전 점검",
+      "url": "https://stl-print-check.abreda.com/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://stl-print-check.abreda.com/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "submission-auditor",
+      "name": "제출파일 검수관",
+      "url": "https://abreda.com/tools/submission-auditor/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/submission-auditor/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "subtitle-sync-studio",
+      "name": "자막 싱크 조정기 | SRT VTT 변환·자막 시간 오류 검사",
+      "url": "https://tb-subtitle-sync-studio.pages.dev/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://tb-subtitle-sync-studio.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "toolbox-hub",
+      "name": "작은 도구함 | 무료 업무·창작·일상 웹 도구 모음",
+      "url": "https://abreda.com/",
+      "kind": "hub",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "used-car-inspection",
+      "name": "중고차 구매 전 검수실",
+      "url": "https://tb-used-car-inspection.pages.dev/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://tb-used-car-inspection.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "vinyl-condition-lab",
+      "name": "LP 레코드 상태 검수",
+      "url": "https://tb-vinyl-condition-lab.pages.dev/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://tb-vinyl-condition-lab.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "vtt-cleaner",
+      "name": "vtt cleaner | Small Toolbox",
+      "url": "https://abreda.com/tools/vtt-cleaner/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/vtt-cleaner/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "warranty-deadline-tracker",
+      "name": "보증기간·반품기한 관리소",
+      "url": "https://abreda.com/tools/warranty-deadline-tracker/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/warranty-deadline-tracker/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "watch-inspection-lab",
+      "name": "명품시계 외관 검수",
+      "url": "https://watch-inspection-lab.abreda.com/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://watch-inspection-lab.abreda.com/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "worktime-analyzer",
+      "name": "작업시간 분석실",
+      "url": "https://abreda.com/tools/worktime-analyzer/",
+      "kind": "tool",
+      "source": "factory",
+      "http": 200,
+      "canonical": "https://abreda.com/tools/worktime-analyzer/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    },
+    {
+      "slug": "audio-quality",
+      "name": "오디오 클리핑 의심·피크 분석 | 채널별 검사 | 작은 도구함",
+      "url": "https://tb-audio-quality.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-audio-quality.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "certificate-batch",
+      "name": "수료증 일괄 제작 | 명단 CSV에서 PDF 인쇄 | 작은 도구함",
+      "url": "https://tb-certificate-batch.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-certificate-batch.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "class-schedule-check",
+      "name": "학원 시간표 겹침 검사 | 강사·교실·학생 중복 | 작은 도구함",
+      "url": "https://tb-class-schedule-check.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-class-schedule-check.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "detail-image-review",
+      "name": "상품 상세이미지 규격 검사 | 크기·용량·비율 | 작은 도구함",
+      "url": "https://tb-detail-image-review.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-detail-image-review.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "dst-embroidery",
+      "name": "DST 자수 파일 기초 분석 | 스티치·점프 명령 | 작은 도구함",
+      "url": "https://tb-dst-embroidery.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-dst-embroidery.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "epub-preflight",
+      "name": "EPUB 기본 구조 검사 | 전자책 ZIP 필수 항목 | 작은 도구함",
+      "url": "https://tb-epub-preflight.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-epub-preflight.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "event-seating",
+      "name": "행사 테이블 배치 | 참가자 그룹별 자동 분배 | 작은 도구함",
+      "url": "https://tb-event-seating.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-event-seating.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "exam-variants",
+      "name": "시험지 A·B·C형 생성 | 문항 순서와 정답표 | 작은 도구함",
+      "url": "https://tb-exam-variants.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-exam-variants.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "inventory-diff",
+      "name": "재고 실사 차이 분석 | 장부·실사 수량 대조 | 작은 도구함",
+      "url": "https://tb-inventory-diff.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-inventory-diff.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "invoice-reconcile",
+      "name": "입금 내역·청구서 대조 | 미입금·금액 차이 검사 | 작은 도구함",
+      "url": "https://tb-invoice-reconcile.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-invoice-reconcile.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "lease-registry-diff",
+      "name": "등기 기재 변경 문구 비교 | 계약 전후 TXT 파일 | 작은 도구함",
+      "url": "https://tb-lease-registry-diff.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-lease-registry-diff.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "move-evidence",
+      "name": "입주·퇴거 사진 정리 | 하자 기록용 PDF 출력 | 작은 도구함",
+      "url": "https://tb-move-evidence.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-move-evidence.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "moving-boxes",
+      "name": "이사 박스 내용물 목록 | 박스번호별 물품 정리 | 작은 도구함",
+      "url": "https://tb-moving-boxes.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-moving-boxes.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "option-combinations",
+      "name": "상품 옵션 중복 검사 | 쇼핑몰 색상·사이즈 CSV | 작은 도구함",
+      "url": "https://tb-option-combinations.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-option-combinations.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "pdf-preflight",
+      "name": "인쇄 PDF 크기·도련 검사 | MediaBox·TrimBox 확인 | 작은 도구함",
+      "url": "https://tb-pdf-preflight.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-pdf-preflight.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "photo-contact-sheet",
+      "name": "사진 연락시트 만들기 | 여러 사진 미리보기·인쇄 | 작은 도구함",
+      "url": "https://tb-photo-contact-sheet.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-photo-contact-sheet.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "photo-duplicates",
+      "name": "동일 사진 파일 중복 찾기 | SHA-256 비교 | 작은 도구함",
+      "url": "https://tb-photo-duplicates.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-photo-duplicates.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "purchase-three-way",
+      "name": "발주서·납품서·청구서 3중 대조 | 품목코드 검사 | 작은 도구함",
+      "url": "https://tb-purchase-three-way.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-purchase-three-way.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "question-similarity",
+      "name": "문제은행 중복 문항 찾기 | 객관식 CSV 비교 | 작은 도구함",
+      "url": "https://tb-question-similarity.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-question-similarity.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "shipping-audit",
+      "name": "송장 누락·중복 검사 | 쇼핑몰 주문 발송 대조 | 작은 도구함",
+      "url": "https://tb-shipping-audit.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-shipping-audit.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "shotlist-maker",
+      "name": "촬영 샷리스트 정리 | 장면·장소·출연자 목록 | 작은 도구함",
+      "url": "https://tb-shotlist-maker.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-shotlist-maker.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "show-cues",
+      "name": "공연 큐시트 오류 확인 | 시간 중복·순서 역전 | 작은 도구함",
+      "url": "https://tb-show-cues.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-show-cues.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "silence-finder",
+      "name": "오디오 무음 구간 탐지 | 침묵 위치 시간 표시 | 작은 도구함",
+      "url": "https://tb-silence-finder.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-silence-finder.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "static-site-check",
+      "name": "HTML·CSS·JS 파일 참조 누락 검사 | 정적 사이트 | 작은 도구함",
+      "url": "https://tb-static-site-check.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-static-site-check.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "survey-review",
+      "name": "설문 문항 중복·척도 누락 검사 | CSV 점검 | 작은 도구함",
+      "url": "https://tb-survey-review.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-survey-review.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "svg-laser-check",
+      "name": "SVG 레이저 도면 구조 검사 | 열린 경로·중복 도형 | 작은 도구함",
+      "url": "https://tb-svg-laser-check.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-svg-laser-check.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "tournament-maker",
+      "name": "토너먼트 대진표 만들기 | 첫 라운드 부전승 | 작은 도구함",
+      "url": "https://tb-tournament-maker.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-tournament-maker.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "trip-supplies",
+      "name": "체험학습 준비물 조별 분배 | 수량 균등 나누기 | 작은 도구함",
+      "url": "https://tb-trip-supplies.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-trip-supplies.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "video-delivery-check",
+      "name": "영상 납품 누락 확인 | 예정 파일명·실제 파일 대조 | 작은 도구함",
+      "url": "https://tb-video-delivery-check.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-video-delivery-check.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "webtoon-preflight",
+      "name": "웹툰 회차 이미지 규격 검사 | 픽셀·파일 용량 | 작은 도구함",
+      "url": "https://tb-webtoon-preflight.pages.dev/",
+      "kind": "tool",
+      "source": "work",
+      "http": 200,
+      "canonical": "https://tb-webtoon-preflight.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": "https://abreda.com/new-tools/",
+      "errors": []
+    },
+    {
+      "slug": "my-daily-life",
+      "name": "하루한칸",
+      "url": "https://my-daily-life.pages.dev/",
+      "kind": "app",
+      "source": "root",
+      "http": 200,
+      "canonical": "https://my-daily-life.pages.dev/",
+      "tracking": true,
+      "ga4": true,
+      "inSitemap": true,
+      "homepageLink": true,
+      "homepageRoute": null,
+      "errors": []
+    }
+  ],
+  "workFunctional": [
+    {
+      "slug": "invoice-reconcile",
+      "status": "pass"
+    },
+    {
+      "slug": "purchase-three-way",
+      "status": "pass"
+    },
+    {
+      "slug": "inventory-diff",
+      "status": "pass"
+    },
+    {
+      "slug": "class-schedule-check",
+      "status": "pass"
+    },
+    {
+      "slug": "certificate-batch",
+      "status": "pass"
+    },
+    {
+      "slug": "lease-registry-diff",
+      "status": "pass"
+    },
+    {
+      "slug": "event-seating",
+      "status": "pass"
+    },
+    {
+      "slug": "exam-variants",
+      "status": "pass"
+    },
+    {
+      "slug": "moving-boxes",
+      "status": "pass"
+    },
+    {
+      "slug": "option-combinations",
+      "status": "pass"
+    },
+    {
+      "slug": "question-similarity",
+      "status": "pass"
+    },
+    {
+      "slug": "shotlist-maker",
+      "status": "pass"
+    },
+    {
+      "slug": "show-cues",
+      "status": "pass"
+    },
+    {
+      "slug": "static-site-check",
+      "status": "pass"
+    },
+    {
+      "slug": "survey-review",
+      "status": "pass"
+    },
+    {
+      "slug": "svg-laser-check",
+      "status": "pass"
+    },
+    {
+      "slug": "tournament-maker",
+      "status": "pass"
+    },
+    {
+      "slug": "trip-supplies",
+      "status": "pass"
+    },
+    {
+      "slug": "video-delivery-check",
+      "status": "pass"
+    },
+    {
+      "slug": "dst-embroidery",
+      "status": "pass"
+    },
+    {
+      "slug": "epub-preflight",
+      "status": "pass"
+    },
+    {
+      "slug": "pdf-preflight",
+      "status": "pass"
+    },
+    {
+      "slug": "audio-quality",
+      "status": "pass"
+    },
+    {
+      "slug": "silence-finder",
+      "status": "pass"
+    },
+    {
+      "slug": "webtoon-preflight",
+      "status": "pass"
+    },
+    {
+      "slug": "detail-image-review",
+      "status": "pass"
+    },
+    {
+      "slug": "photo-contact-sheet",
+      "status": "pass"
+    },
+    {
+      "slug": "move-evidence",
+      "status": "pass"
+    },
+    {
+      "slug": "photo-duplicates",
+      "status": "pass"
+    }
+  ],
+  "registry": [
+    {
+      "service_id": "https://my-daily-life.pages.dev/",
+      "canonical_url": "https://my-daily-life.pages.dev/",
+      "cf_project": "my-daily-life",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-aquarium-water-lab.pages.dev/",
+      "canonical_url": "https://tb-aquarium-water-lab.pages.dev/",
+      "cf_project": "tb-aquarium-water-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-camera-lens-check.pages.dev/",
+      "canonical_url": "https://tb-camera-lens-check.pages.dev/",
+      "cf_project": "tb-camera-lens-check",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-card-grading-lab.pages.dev/",
+      "canonical_url": "https://tb-card-grading-lab.pages.dev/",
+      "cf_project": "tb-card-grading-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-comic-condition-lab.pages.dev/",
+      "canonical_url": "https://tb-comic-condition-lab.pages.dev/",
+      "cf_project": "tb-comic-condition-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/csv-column-extractor/",
+      "canonical_url": "https://abreda.com/tools/csv-column-extractor/",
+      "cf_project": "tb-pages-csv-column-extractor",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/csv-empty-row-remover/",
+      "canonical_url": "https://abreda.com/tools/csv-empty-row-remover/",
+      "cf_project": "tb-pages-csv-empty-row-remover",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://csv.abreda.com/",
+      "canonical_url": "https://csv.abreda.com/",
+      "cf_project": "tb-csv-merge-studio",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-gem-photo-inspection.pages.dev/",
+      "canonical_url": "https://tb-gem-photo-inspection.pages.dev/",
+      "cf_project": "tb-gem-photo-inspection",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/jsonl-validator/",
+      "canonical_url": "https://abreda.com/tools/jsonl-validator/",
+      "cf_project": "tb-pages-jsonl-validator",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "canonical_url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "cf_project": "tb-keyboard-switch-diagnostics",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://manuscript.abreda.com/",
+      "canonical_url": "https://manuscript.abreda.com/",
+      "cf_project": "tb-manuscript-lens",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://novel.abreda.com/",
+      "canonical_url": "https://novel.abreda.com/",
+      "cf_project": "tb-novel-planner",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-sneaker-condition-lab.pages.dev/",
+      "canonical_url": "https://tb-sneaker-condition-lab.pages.dev/",
+      "cf_project": "tb-sneaker-condition-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/srt-sdh-cleaner/",
+      "canonical_url": "https://abreda.com/tools/srt-sdh-cleaner/",
+      "cf_project": "tb-pages-srt-sdh-cleaner",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://stl-print-check.abreda.com/",
+      "canonical_url": "https://stl-print-check.abreda.com/",
+      "cf_project": "tb-stl-print-check",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-subtitle-sync-studio.pages.dev/",
+      "canonical_url": "https://tb-subtitle-sync-studio.pages.dev/",
+      "cf_project": "tb-subtitle-sync-studio",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-used-car-inspection.pages.dev/",
+      "canonical_url": "https://tb-used-car-inspection.pages.dev/",
+      "cf_project": "tb-used-car-inspection",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-vinyl-condition-lab.pages.dev/",
+      "canonical_url": "https://tb-vinyl-condition-lab.pages.dev/",
+      "cf_project": "tb-vinyl-condition-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/vtt-cleaner/",
+      "canonical_url": "https://abreda.com/tools/vtt-cleaner/",
+      "cf_project": "tb-pages-vtt-cleaner",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://watch-inspection-lab.abreda.com/",
+      "canonical_url": "https://watch-inspection-lab.abreda.com/",
+      "cf_project": "tb-watch-inspection-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-shipping-audit.pages.dev/",
+      "canonical_url": "https://tb-shipping-audit.pages.dev/",
+      "cf_project": "tb-shipping-audit",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-pdf-preflight.pages.dev/",
+      "canonical_url": "https://tb-pdf-preflight.pages.dev/",
+      "cf_project": "tb-pdf-preflight",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-certificate-batch.pages.dev/",
+      "canonical_url": "https://tb-certificate-batch.pages.dev/",
+      "cf_project": "tb-certificate-batch",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-inventory-diff.pages.dev/",
+      "canonical_url": "https://tb-inventory-diff.pages.dev/",
+      "cf_project": "tb-inventory-diff",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-class-schedule-check.pages.dev/",
+      "canonical_url": "https://tb-class-schedule-check.pages.dev/",
+      "cf_project": "tb-class-schedule-check",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-invoice-reconcile.pages.dev/",
+      "canonical_url": "https://tb-invoice-reconcile.pages.dev/",
+      "cf_project": "tb-invoice-reconcile",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-purchase-three-way.pages.dev/",
+      "canonical_url": "https://tb-purchase-three-way.pages.dev/",
+      "cf_project": "tb-purchase-three-way",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-svg-laser-check.pages.dev/",
+      "canonical_url": "https://tb-svg-laser-check.pages.dev/",
+      "cf_project": "tb-svg-laser-check",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-video-delivery-check.pages.dev/",
+      "canonical_url": "https://tb-video-delivery-check.pages.dev/",
+      "cf_project": "tb-video-delivery-check",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-static-site-check.pages.dev/",
+      "canonical_url": "https://tb-static-site-check.pages.dev/",
+      "cf_project": "tb-static-site-check",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-exam-variants.pages.dev/",
+      "canonical_url": "https://tb-exam-variants.pages.dev/",
+      "cf_project": "tb-exam-variants",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-epub-preflight.pages.dev/",
+      "canonical_url": "https://tb-epub-preflight.pages.dev/",
+      "cf_project": "tb-epub-preflight",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-move-evidence.pages.dev/",
+      "canonical_url": "https://tb-move-evidence.pages.dev/",
+      "cf_project": "tb-move-evidence",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-webtoon-preflight.pages.dev/",
+      "canonical_url": "https://tb-webtoon-preflight.pages.dev/",
+      "cf_project": "tb-webtoon-preflight",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-option-combinations.pages.dev/",
+      "canonical_url": "https://tb-option-combinations.pages.dev/",
+      "cf_project": "tb-option-combinations",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-lease-registry-diff.pages.dev/",
+      "canonical_url": "https://tb-lease-registry-diff.pages.dev/",
+      "cf_project": "tb-lease-registry-diff",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-event-seating.pages.dev/",
+      "canonical_url": "https://tb-event-seating.pages.dev/",
+      "cf_project": "tb-event-seating",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-photo-duplicates.pages.dev/",
+      "canonical_url": "https://tb-photo-duplicates.pages.dev/",
+      "cf_project": "tb-photo-duplicates",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-question-similarity.pages.dev/",
+      "canonical_url": "https://tb-question-similarity.pages.dev/",
+      "cf_project": "tb-question-similarity",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-silence-finder.pages.dev/",
+      "canonical_url": "https://tb-silence-finder.pages.dev/",
+      "cf_project": "tb-silence-finder",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-survey-review.pages.dev/",
+      "canonical_url": "https://tb-survey-review.pages.dev/",
+      "cf_project": "tb-survey-review",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-photo-contact-sheet.pages.dev/",
+      "canonical_url": "https://tb-photo-contact-sheet.pages.dev/",
+      "cf_project": "tb-photo-contact-sheet",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-tournament-maker.pages.dev/",
+      "canonical_url": "https://tb-tournament-maker.pages.dev/",
+      "cf_project": "tb-tournament-maker",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-trip-supplies.pages.dev/",
+      "canonical_url": "https://tb-trip-supplies.pages.dev/",
+      "cf_project": "tb-trip-supplies",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-moving-boxes.pages.dev/",
+      "canonical_url": "https://tb-moving-boxes.pages.dev/",
+      "cf_project": "tb-moving-boxes",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-audio-quality.pages.dev/",
+      "canonical_url": "https://tb-audio-quality.pages.dev/",
+      "cf_project": "tb-audio-quality",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-detail-image-review.pages.dev/",
+      "canonical_url": "https://tb-detail-image-review.pages.dev/",
+      "cf_project": "tb-detail-image-review",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-dst-embroidery.pages.dev/",
+      "canonical_url": "https://tb-dst-embroidery.pages.dev/",
+      "cf_project": "tb-dst-embroidery",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-show-cues.pages.dev/",
+      "canonical_url": "https://tb-show-cues.pages.dev/",
+      "cf_project": "tb-show-cues",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-shotlist-maker.pages.dev/",
+      "canonical_url": "https://tb-shotlist-maker.pages.dev/",
+      "cf_project": "tb-shotlist-maker",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://card-grading-lab.abreda.com/",
+      "canonical_url": "https://card-grading-lab.abreda.com/",
+      "cf_project": "tb-card-grading-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/cut-plan-optimizer/",
+      "canonical_url": "https://abreda.com/tools/cut-plan-optimizer/",
+      "cf_project": "tb-cut-plan-optimizer",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/group-order-summary/",
+      "canonical_url": "https://abreda.com/tools/group-order-summary/",
+      "cf_project": "tb-group-order-summary",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/handover-checklist/",
+      "canonical_url": "https://abreda.com/tools/handover-checklist/",
+      "cf_project": "tb-handover-checklist",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/label-sheet-maker/",
+      "canonical_url": "https://abreda.com/tools/label-sheet-maker/",
+      "cf_project": "tb-label-sheet-maker",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/meal-timeline/",
+      "canonical_url": "https://abreda.com/tools/meal-timeline/",
+      "cf_project": "tb-meal-timeline",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/privacy-redactor/",
+      "canonical_url": "https://abreda.com/tools/privacy-redactor/",
+      "cf_project": "tb-privacy-redactor",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/recurring-payment-finder/",
+      "canonical_url": "https://abreda.com/tools/recurring-payment-finder/",
+      "cf_project": "tb-recurring-payment-finder",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/shift-calendar/",
+      "canonical_url": "https://abreda.com/tools/shift-calendar/",
+      "cf_project": "tb-shift-calendar",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/submission-auditor/",
+      "canonical_url": "https://abreda.com/tools/submission-auditor/",
+      "cf_project": "tb-submission-auditor",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/worktime-analyzer/",
+      "canonical_url": "https://abreda.com/tools/worktime-analyzer/",
+      "cf_project": "tb-worktime-analyzer",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/bulk-file-renamer/",
+      "canonical_url": "https://abreda.com/tools/bulk-file-renamer/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/color-contrast-audit/",
+      "canonical_url": "https://abreda.com/tools/color-contrast-audit/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/document-scan-studio/",
+      "canonical_url": "https://abreda.com/tools/document-scan-studio/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/image-compress-lab/",
+      "canonical_url": "https://abreda.com/tools/image-compress-lab/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/pdf-page-workshop/",
+      "canonical_url": "https://abreda.com/tools/pdf-page-workshop/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/quote-document-maker/",
+      "canonical_url": "https://abreda.com/tools/quote-document-maker/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/room-layout-planner/",
+      "canonical_url": "https://abreda.com/tools/room-layout-planner/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/seller-profit-math/",
+      "canonical_url": "https://abreda.com/tools/seller-profit-math/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/share-qr-card/",
+      "canonical_url": "https://abreda.com/tools/share-qr-card/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/warranty-deadline-tracker/",
+      "canonical_url": "https://abreda.com/tools/warranty-deadline-tracker/",
+      "cf_project": null,
+      "status": "listed"
+    }
+  ]
+}
