@@ -432,6 +432,17 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
                 raise SiteError('Invalid hub sitemap: missing urlset close tag')
             xml=xml.replace('</urlset>',additions+'</urlset>')
             sitemap.write_text(xml,encoding='utf-8')
+    # Reviewed, problem-first guides. Automatically include articles from new approved
+    # webapps when they ship a substantive, bilingual blog.json.
+    if slug == 'toolbox-hub':
+        from blog_articles import generate_blog
+        blog_urls=generate_blog(out)
+        sitemap=out/'sitemap.xml'
+        xml=sitemap.read_text(encoding='utf-8')
+        if '</urlset>' not in xml:raise SiteError('Invalid hub sitemap')
+        addition=''.join('  <url><loc>'+escape(url)+'</loc></url>\n'
+                         for url in blog_urls if '<loc>'+escape(url)+'</loc>' not in xml)
+        sitemap.write_text(xml.replace('</urlset>',addition+'</urlset>'),encoding='utf-8')
     # AUTO_RELEASE_RSS: one stable, human-useful announcement feed for each language.
     # The owner can connect these opt-in feeds to Metricool RSS Autolists.
     # Creating a feed does not authorize or perform social posting.
