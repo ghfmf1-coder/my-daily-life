@@ -1,0 +1,80 @@
+{
+  "slug": "file-backup-321-strategy",
+  "type": "information",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "sources": [
+    {
+      "name": "UK National Cyber Security Centre — Always back up your most important data",
+      "url": "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data"
+    },
+    {
+      "name": "CISA / US-CERT — Data Backup Options (official PDF)",
+      "url": "https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf"
+    }
+  ],
+  "ko": {
+    "title": "사진·문서 파일 백업하는 방법: 3-2-1 원칙과 복원 확인",
+    "description": "핸드폰 사진이나 업무 문서를 안전하게 보관하기 위해 백업 위치를 나누고 실제 복원까지 확인하는 방법을 소개합니다.",
+    "problem": "중요한 파일을 같은 컴퓨터의 다른 폴더에 한 번 더 복사해 두는 것만으로는 기기 고장이나 랜섬웨어 피해에 충분하지 않을 수 있습니다. 별도 저장 위치를 두고 복구 가능한지를 검증해야 합니다.",
+    "steps": [
+      [
+        "잃어버리면 곤란한 파일부터 구분하세요",
+        "가족 사진, 계약서, 세금 서류, 창작 원고처럼 복구하기 어려운 자료를 먼저 분류하세요. 다른 곳에서 다시 내려받을 수 있는 파일과 구분하면 관리가 쉬워집니다."
+      ],
+      [
+        "저장 매체와 보관 장소를 분리하세요",
+        "CISA의 3-2-1 백업 원칙은 원본을 포함한 3개 복사본을 2개 종류의 매체에 보관하고, 1개를 다른 장소에 두도록 설명합니다. 클라우드와 외장 저장장치 등 서로 독립적인 위치를 선택하세요."
+      ],
+      [
+        "백업 주기와 암호 보호를 정하세요",
+        "새로운 사진이나 문서를 어느 주기로 복사할지 일정을 정하세요. 개인정보가 담긴 저장장치는 암호화와 계정 보호 기능을 확인하고, 평소 연결하지 않는 외장장치는 사용 후 분리하세요."
+      ],
+      [
+        "백업한 파일을 직접 복원해 보세요",
+        "백업 목록에 이름이 있다는 이유만으로 복구를 믿지 마세요. 임의의 중요 파일을 복원해 열어보고 현재 파일과 내용이 일치하는지 확인하세요."
+      ]
+    ],
+    "alternative": "클라우드 동기화가 익숙하지 않다면 외장 저장장치에 정기적으로 백업하는 방법부터 시작할 수 있습니다. 다만 외장장치 하나에만 저장하면 그 장치가 손상될 때 대안이 없을 수 있습니다.",
+    "toolIntro": "아브레다 파일 관리 도구를 사용하더라도 백업 저장과 실제 복원은 본인의 기기 또는 신뢰할 수 있는 백업 서비스에서 진행해야 합니다. 아브레다는 백업 저장소가 아닙니다.",
+    "limits": "클라우드 동기화가 곧 버전별 백업을 보장하는 것은 아닙니다. 삭제 동기화·계정 잠금·외장장치 손상 같은 실패 조건을 구분하고 실제 복원 시험을 하세요.",
+    "faq": [
+      [
+        "외장하드 하나에만 복사해 두어도 백업이 충분한가요?",
+        "원본과 외장하드가 같은 장소에 있으면 화재·도난·장비 손상에 함께 영향을 받을 수 있습니다. 별도 장소의 추가 복사본과 정기 복원 검사를 고려하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Back Up Photos and Documents Using the 3-2-1 Rule",
+    "description": "Plan independent copies of important files, choose separate storage locations and test that a backup can actually be restored.",
+    "problem": "Saving a second copy in another folder on the same computer may not protect against device failure or ransomware. Resilience requires independent storage and a tested way to restore data.",
+    "steps": [
+      [
+        "Identify irreplaceable files first",
+        "Prioritize family photos, contracts, creative drafts and other material that cannot easily be downloaded again. Separate these from temporary files."
+      ],
+      [
+        "Use independent media and locations",
+        "CISA describes the 3-2-1 approach: three copies including the original, two different storage media, and one copy held off-site. A cloud service and disconnected external drive can provide distinct failure paths."
+      ],
+      [
+        "Plan a schedule and secure the copies",
+        "Decide how often new files are copied. Protect backup accounts, encrypt sensitive storage where possible, and disconnect removable media when it is not being used."
+      ],
+      [
+        "Practice restoring an actual file",
+        "Do not rely only on the presence of a filename. Restore a sample document, open it, and compare the contents with the original."
+      ]
+    ],
+    "alternative": "If cloud storage is not suitable, scheduled copies to removable storage are another option. A single local drive is still a single point of failure.",
+    "toolIntro": "ABREDA file management tools do not store backups or guarantee recovery. Keep and restore your backups using operating-system or trusted storage services.",
+    "limits": "Cloud synchronization is not necessarily versioned backup: deletions may sync too. Account lockout and damaged removable media also require separate recovery planning.",
+    "faq": [
+      [
+        "Is one external drive enough for reliable backups?",
+        "One drive can fail or be lost alongside the source computer. Consider an independent off-site copy and periodically test restoring your files."
+      ]
+    ]
+  }
+}
