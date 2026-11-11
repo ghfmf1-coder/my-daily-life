@@ -5,6 +5,7 @@ on:
     paths:
       - 'site-factory/sites/**'
       - 'site-factory/content/blog/**'
+      - 'site-factory/content/blog-media.json'
       - 'work-sites/**/blog.json'
       - 'site-factory/scripts/**'
       - 'site-factory/tests/**'

@@ -26,12 +26,12 @@ else:
     # A reviewed blog rollout only needs the public hub. Do not redeploy every
     # existing Pages project because the shared factory gains a blog renderer.
     blog_release_paths={'site-factory/scripts/factory.py','site-factory/scripts/targets.py',
-                        'site-factory/scripts/blog_articles.py','site-factory/scripts/new_site.py',
+                        'site-factory/scripts/blog_articles.py','site-factory/scripts/blog_magazine.py','site-factory/scripts/new_site.py',
                         '.github/workflows/toolbox-pages.yml','.github/workflows/abreda-blog-validation.yml',
                         '.github/workflows/abreda-blog-browser.yml'}
     blog_release=(
-        'site-factory/scripts/blog_articles.py' in changed and
-        all(n in blog_release_paths or n.startswith('site-factory/content/blog/') or
+        ('site-factory/scripts/blog_articles.py' in changed or 'site-factory/scripts/blog_magazine.py' in changed) and
+        all(n in blog_release_paths or n.startswith('site-factory/content/blog/') or n=='site-factory/content/blog-media.json' or
             n.startswith('site-factory/sites/toolbox-hub/public/') or
             n.startswith('site-factory/tests/test_blog_articles.py') or
             n.startswith('site-factory/tests/blog-browser.mjs') for n in changed)
