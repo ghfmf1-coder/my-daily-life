@@ -61,19 +61,19 @@
     ]
   },
   "media": {
+    "category": "document",
     "image": {
-      "url": "https://images.unsplash.com/photo-1775163035702-06e47ba88857?auto=format&fit=crop&w=1400&q=78",
-      "source": "https://unsplash.com/photos/CHisgnotgwk",
-      "credit": "Unsplash",
+      "url": "https://images.unsplash.com/photo-1781899710894-f9ecfea088f3?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/brown-shipping-boxes-next-to-a-small-label-printer-cpwP43LnGRk",
+      "credit": "Karori Production / Unsplash",
       "alt": {
-        "ko": "문서를 스캔하는 복합기와 사무실 장비",
-        "en": "A document scanner being used to capture paperwork"
+        "ko": "상자 옆에 놓인 소형 라벨 프린터와 택배 작업 공간",
+        "en": "A small label printer beside cardboard shipping boxes"
       },
       "caption": {
-        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+        "ko": "라벨 출력 작업을 보여 주는 자료 사진입니다. 실제 A4 라벨 결과물이나 아브레다 화면은 아닙니다.",
+        "en": "Illustrative label printing workspace; not an A4 proof or an ABREDA screenshot."
       }
-    },
-    "category": "document"
+    }
   }
 }
