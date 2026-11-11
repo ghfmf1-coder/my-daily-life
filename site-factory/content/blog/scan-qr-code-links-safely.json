@@ -1,0 +1,84 @@
+{
+  "slug": "scan-qr-code-links-safely",
+  "type": "information",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "sources": [
+    {
+      "name": "US Federal Trade Commission — Scammers hide harmful links in QR codes",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information"
+    }
+  ],
+  "ko": {
+    "title": "QR코드 스캔 전 확인할 것: 가짜 결제·로그인 링크 피하기",
+    "description": "QR코드가 연결하는 주소를 먼저 살피고 예상치 못한 로그인·결제 요구를 검증하는 실용적인 절차.",
+    "problem": "QR코드는 주소를 짧고 편하게 전달하지만 그 안의 주소가 안전하다는 보증은 아닙니다. 공공장소의 스티커나 갑자기 도착한 메시지 속 QR코드가 정상 서비스처럼 보이는 가짜 사이트로 연결될 수 있습니다.",
+    "steps": [
+      [
+        "열기 전 표시되는 주소를 끝까지 확인하세요",
+        "미국 FTC는 QR코드로 접속하기 전 주소를 확인하고 오탈자나 비슷한 철자를 조심하라고 안내합니다. 예상하지 못한 링크를 바로 열지 말고 실제 서비스의 공식 주소인지 확인하세요."
+      ],
+      [
+        "메시지가 결제나 로그인을 재촉하면 다른 경로로 확인하세요",
+        "문자나 이메일의 QR코드가 연체료, 택배 보관료 또는 계정 정지를 핑계로 즉시 입력을 요구한다면 해당 회사의 공식 앱이나 알고 있는 주소로 직접 접속하세요."
+      ],
+      [
+        "수상한 화면에는 계정·카드 정보를 입력하지 마세요",
+        "이미 열었더라도 주소가 다르거나 로그인 절차가 낯설면 닫고 공식 서비스에서 상태를 확인하세요. 앱 설치를 요구하는 화면도 곧바로 승인하지 않는 편이 안전합니다."
+      ]
+    ],
+    "alternative": "QR코드 대신 종이에 적힌 공식 홈페이지를 직접 입력하거나 회사의 검증된 앱에서 같은 정보를 찾을 수 있습니다.",
+    "toolIntro": "QR코드를 만드는 도구와 QR코드의 안전성을 검증하는 것은 별도 문제입니다. 어떤 생성기든 목적지 링크가 안전하다고 보증하지 않습니다.",
+    "limits": "정상 도메인이라도 탈취된 페이지일 수 있고, 익숙한 이름을 붙인 짧은 주소는 실제 목적지를 숨길 수 있습니다. 주소 한 번 확인하는 것만으로 모든 위험을 막을 수는 없습니다.",
+    "faq": [
+      [
+        "QR코드가 정상적으로 스캔되면 안전한 링크인가요?",
+        "아니요. 스캔 성공은 코드가 읽혔다는 뜻일 뿐입니다. 열릴 웹사이트의 주소와 요구하는 행동을 별도로 확인해야 합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Check QR Code Destinations Before Logging In or Paying",
+    "description": "Inspect the destination URL and verify unexpected payment or account requests through official channels.",
+    "problem": "A QR code makes a web address easy to share, but that does not prove the destination is trustworthy. A sticker or unexpected message may lead to a convincing lookalike payment or login page.",
+    "steps": [
+      [
+        "Inspect the URL before opening the destination",
+        "The US FTC warns that deceptive QR codes can hide spoofed links. Review the displayed hostname and look for spelling changes before proceeding."
+      ],
+      [
+        "Verify urgent requests outside the QR message",
+        "If a text or email claims an account is blocked or demands an immediate fee, independently open the company's known website or app instead of trusting the code."
+      ],
+      [
+        "Do not enter credentials on suspicious pages",
+        "Close unfamiliar sign-in or payment pages and confirm account status through the provider's official route. Treat unsolicited app-install prompts as another warning sign."
+      ]
+    ],
+    "alternative": "Type the official company address yourself or navigate inside its authenticated app instead of scanning an untrusted code.",
+    "toolIntro": "Generating a QR code and verifying its destination are two separate tasks. No QR generator can automatically guarantee that every destination is safe.",
+    "limits": "A legitimate-looking URL can still lead to compromised content, and shortened links can obscure where users are sent. One visual inspection cannot eliminate every threat.",
+    "faq": [
+      [
+        "If a QR code scans successfully, does that make the link safe?",
+        "No. A successful scan only means the code was decoded. Verify the actual destination and the actions it asks you to take."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1745847768408-b7b83796cae6?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/43ak6tfF4Ss",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "안테나와 표시등이 있는 무선 인터넷 공유기",
+        "en": "A Wi-Fi router with antennas and indicator lights"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "daily"
+  }
+}

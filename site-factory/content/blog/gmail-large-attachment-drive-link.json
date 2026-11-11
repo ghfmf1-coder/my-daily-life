@@ -1,0 +1,84 @@
+{
+  "slug": "gmail-large-attachment-drive-link",
+  "type": "information",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "sources": [
+    {
+      "name": "Google Gmail Help — Send attachments with your Gmail message",
+      "url": "https://support.google.com/mail/answer/6584?hl=en"
+    }
+  ],
+  "ko": {
+    "title": "지메일 대용량 첨부파일 보내는 법: 드라이브 링크와 권한 점검",
+    "description": "지메일 첨부 용량 제한에 걸렸을 때 드라이브 링크로 보내고 받는 사람의 열람 권한을 확인하는 방법.",
+    "problem": "파일이 크다고 해서 이메일 첨부 자체를 무한정 늘릴 수 있는 것은 아닙니다. Google 공식 안내에 따르면 개인 Gmail의 일반 첨부 용량 제한이 있으므로 큰 파일은 Google Drive 링크로 대체해야 할 수 있습니다.",
+    "steps": [
+      [
+        "첨부할 파일 크기와 종류를 먼저 확인하세요",
+        "개인 Gmail은 공식 고객센터에서 총 첨부 제한을 25MB로 안내합니다. 여러 파일을 같이 붙일 때는 합산 크기를 확인하고 실행 파일 등 보안상 차단되는 형식은 별도로 점검하세요."
+      ],
+      [
+        "용량 초과 시 생성된 드라이브 링크를 확인하세요",
+        "Gmail은 첨부 크기가 제한을 넘으면 Google Drive 링크를 메시지에 넣을 수 있습니다. 파일이 업로드되었는지, 실제로 올바른 파일을 연결했는지 전송 전 확인하세요."
+      ],
+      [
+        "받는 사람의 접근 권한을 검증하세요",
+        "파일이 드라이브에 올라가도 상대방이 자동으로 열 수 있는 것은 아닙니다. 수신자가 열람할 수 있는지 공유 범위를 확인하고, 민감한 파일이라면 '링크가 있는 모든 사용자'로 공개하지 마세요."
+      ]
+    ],
+    "alternative": "파일의 일부만 필요하다면 압축보다 필요한 페이지만 추려 별도 파일로 보내는 방법도 있습니다. 단 원본의 중요한 정보가 빠지지 않았는지 확인하세요.",
+    "toolIntro": "대용량 이메일 전송은 Gmail과 Google Drive의 공식 기능으로 처리할 수 있습니다. 외부 업로드 사이트에 민감한 파일을 옮길 필요는 없습니다.",
+    "limits": "직장·학교 Gmail의 한도는 조직 관리자가 다르게 설정할 수 있습니다. 드라이브 공유 권한이 없으면 링크를 보냈더라도 수신자가 파일을 열지 못합니다.",
+    "faq": [
+      [
+        "25MB를 넘는 파일을 첨부하면 무조건 실패하나요?",
+        "Google 공식 안내는 한도 초과 첨부를 드라이브 링크로 전환하는 동작을 설명합니다. 다만 업로드·공유 권한에 오류가 있으면 전달할 수 없습니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Send Large Files in Gmail Using Drive Links and Correct Permissions",
+    "description": "Check Gmail attachment limits, verify uploaded files and confirm that recipients can access shared Drive links.",
+    "problem": "Email attachments are not unlimited. Google's Gmail Help documents a personal account attachment limit, so larger files may be delivered as Google Drive links instead of conventional attachments.",
+    "steps": [
+      [
+        "Check the total file size and supported type",
+        "Google documents a 25 MB total attachment limit for personal Gmail. Consider the sum of several files and remember that some file types, including certain executable formats, are blocked for security."
+      ],
+      [
+        "Confirm the Drive link created for an oversized attachment",
+        "Gmail may substitute a Google Drive link when the size limit is exceeded. Verify that the upload finished and that the attached link points to the intended file before sending."
+      ],
+      [
+        "Test the recipient's access level",
+        "A file existing in Drive does not guarantee the recipient has permission. Check the access settings and avoid broadly public links when the file contains confidential material."
+      ]
+    ],
+    "alternative": "If only part of a document is required, exporting the necessary pages to a smaller file can be more appropriate than uploading the full original, provided no essential context is lost.",
+    "toolIntro": "Gmail and Drive already provide official large-file sharing workflows. Sensitive attachments need not be moved to an unrelated upload service.",
+    "limits": "Google Workspace administrators may set different attachment limits. Recipients can still be denied access when a Drive link is shared without appropriate permission.",
+    "faq": [
+      [
+        "Will an attachment larger than 25 MB necessarily make the email fail?",
+        "Google describes replacing oversized Gmail attachments with Drive links. However, upload or sharing errors can still prevent a recipient from accessing the file."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/snNHKZ-mGfE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "정리와 보관이 필요한 여러 문서 파일 묶음",
+        "en": "Organized documents illustrating the need for backups"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "knowledge"
+  }
+}

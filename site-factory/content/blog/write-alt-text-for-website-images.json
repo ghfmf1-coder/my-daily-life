@@ -1,0 +1,84 @@
+{
+  "slug": "write-alt-text-for-website-images",
+  "type": "information",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "sources": [
+    {
+      "name": "W3C Web Accessibility Initiative — Images Tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/images/"
+    }
+  ],
+  "ko": {
+    "title": "웹사이트 사진 대체 텍스트(alt) 작성법: 장식 이미지와 정보 이미지 구분",
+    "description": "사진·버튼 이미지·도표의 역할에 맞춰 스크린리더가 이해할 수 있는 대체 텍스트를 작성하는 기준.",
+    "problem": "이미지의 대체 텍스트는 단순한 검색 키워드 목록이 아닙니다. 화면을 볼 수 없는 사람이 그 이미지를 건너뛰었을 때 빠지는 의미나 기능을 문맥에 맞게 전달하는 것이 목적입니다.",
+    "steps": [
+      [
+        "이미지가 정보를 전달하는지 장식인지 분류하세요",
+        "W3C WAI 안내에 따르면 정보 이미지에는 필요한 의미를 간결하게 설명하고, 내용 전달과 무관한 순수 장식 이미지는 비어 있는 alt 속성으로 처리할 수 있습니다."
+      ],
+      [
+        "이미지 버튼에는 모양보다 동작을 설명하세요",
+        "프린터 아이콘만 있는 버튼이면 '프린터 모양'보다 '인쇄하기'처럼 수행할 기능을 적으세요. 이미 같은 설명이 바로 옆 텍스트에 있다면 중복 설명이 필요할지 다시 검토합니다."
+      ],
+      [
+        "도표는 한 문장의 alt만으로 끝내지 마세요",
+        "복잡한 그래프나 표는 핵심 내용을 alt에 요약하고 주요 수치와 비교 근거를 본문 텍스트나 표에도 제공하세요. 실제 스크린리더로 읽어 보고 의미가 전달되는지 확인합니다."
+      ]
+    ],
+    "alternative": "내용을 전달하지 않는 장식용 이미지는 CSS 배경 처리 또는 빈 대체 텍스트를 활용할 수 있습니다. 모든 사진에 긴 설명을 넣는 것이 정답은 아닙니다.",
+    "toolIntro": "대체 텍스트는 사이트 편집 단계에서 작성하는 것이 가장 정확합니다. 이미지 압축이나 SEO 도구만으로 문맥에 맞는 대체 텍스트를 자동 확정할 수는 없습니다.",
+    "limits": "잘못된 키워드 반복이나 이미지와 무관한 설명은 접근성을 해칩니다. 내용이 수시로 바뀌면 이미지 설명과 주변 본문도 함께 수정해야 합니다.",
+    "faq": [
+      [
+        "장식용 이미지에도 사진 설명을 반드시 써야 하나요?",
+        "아니요. W3C WAI는 단순 장식 이미지에 비어 있는 alt를 사용하는 방법을 안내합니다. 다만 이미지가 기능을 수행한다면 설명이 필요합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Write Useful Alt Text for Website Images and Buttons",
+    "description": "Choose image alternatives based on the information or function an image adds, not on keyword stuffing.",
+    "problem": "Alternative text should communicate what would be missing if a reader could not see an image. It is not a keyword dump. The right description depends on whether the image informs, decorates or performs an action.",
+    "steps": [
+      [
+        "Distinguish informative images from decoration",
+        "W3C WAI advises short meaningful descriptions for informative images, while purely decorative images can use an empty alt attribute when no information is lost."
+      ],
+      [
+        "Describe what image-based buttons do",
+        "A printer icon acting as a button should communicate 'Print' rather than merely 'picture of printer'. Avoid duplicating nearby text when it already communicates the same purpose."
+      ],
+      [
+        "Provide surrounding explanations for complex charts",
+        "A graph may need a short alt summary plus detailed data in nearby text or a table. Test the reading order with assistive technology rather than assuming a short description conveys the full result."
+      ]
+    ],
+    "alternative": "Pure decoration can be handled through CSS backgrounds or empty alt text. More words are not automatically more accessible.",
+    "toolIntro": "The most useful alt text is written alongside the page's actual context. An image optimizer cannot independently determine all of the meaning a specific image contributes.",
+    "limits": "Irrelevant keyword repetition and misleading descriptions undermine accessibility. Update text alternatives when the picture or its role changes.",
+    "faq": [
+      [
+        "Does every decorative photo need a detailed alt description?",
+        "No. W3C WAI recommends empty alt text for purely decorative content, provided it carries no information or function needed by readers."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/Da0pdCekeUs",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "사진 파일을 편집하고 형식을 비교하는 작업 환경",
+        "en": "A photo-editing laptop for comparing image formats"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "knowledge"
+  }
+}

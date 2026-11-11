@@ -1,0 +1,84 @@
+{
+  "slug": "google-drive-restricted-sharing-guide",
+  "type": "information",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "sources": [
+    {
+      "name": "Google Drive Help — Share and manage access to files and folders",
+      "url": "https://support.google.com/drive/answer/7166529"
+    }
+  ],
+  "ko": {
+    "title": "구글 드라이브 파일 공유할 때 편집 권한 막는 법",
+    "description": "구글 드라이브에서 뷰어·댓글 작성자·편집자 권한을 구분하고 링크 공개 범위를 점검하는 방법.",
+    "problem": "공유 링크를 보냈다는 사실만으로 상대방이 어떤 작업까지 할 수 있는지 알 수는 없습니다. '링크가 있는 모든 사용자'로 공개했는지, 지정한 사람만 열 수 있는지, 폴더의 상속 권한이 무엇인지 함께 확인해야 합니다.",
+    "steps": [
+      [
+        "먼저 지정한 사람만 열 수 있도록 접근 범위를 확인하세요",
+        "공유할 파일의 공유 메뉴에서 일반 액세스가 '제한됨'인지 확인하세요. 특정 수신자를 추가한다면 주소를 다시 검토하고 링크를 공개할 필요가 있는지 판단합니다."
+      ],
+      [
+        "작업 목적에 맞는 최소 권한을 지정하세요",
+        "읽기만 필요하면 뷰어, 의견만 받으려면 댓글 작성자, 공동 수정이 필요할 때만 편집자를 선택하세요. Google 공식 문서에 따르면 편집자는 공유·변경 권한을 보유할 수도 있으므로 신중하게 부여합니다."
+      ],
+      [
+        "상위 폴더에서 상속받은 권한도 검사하세요",
+        "파일이 속한 폴더 자체가 넓게 공유되어 있다면 파일만 권한을 낮추기 어렵습니다. 민감한 자료는 제한된 새 폴더로 옮겨 공유하고 수신자 화면에서 접근을 시험하세요."
+      ]
+    ],
+    "alternative": "상대방에게 읽기 전용 사본을 별도로 전달하는 방법도 있습니다. 그러나 사본의 보안 수준은 포함된 정보와 전달 경로에 따라 달라집니다.",
+    "toolIntro": "이 작업에는 구글 드라이브의 공식 공유 메뉴를 사용하는 것이 정확합니다. 외부 사이트에 민감한 파일을 업로드할 필요가 없습니다.",
+    "limits": "회사·학교 계정의 관리자 정책과 상위 폴더 권한에 따라 선택 가능한 공유 범위가 달라질 수 있습니다. 뷰어 권한이 파일 내용의 재촬영·재기록까지 막지는 못합니다.",
+    "faq": [
+      [
+        "파일 권한을 뷰어로 바꾸면 인터넷 전체에서 안 보이게 되나요?",
+        "아니요. 뷰어는 수정 권한을 제한하는 역할이고 공개 범위와는 다릅니다. 일반 액세스가 제한됨인지도 별도로 확인해야 합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Share Google Drive Files Without Accidentally Granting Edit Access",
+    "description": "Review link scope, Viewer/Commenter/Editor roles and inherited folder access before sharing documents.",
+    "problem": "Sending a Drive link alone does not show what the recipient can do with it. Check both whether anyone with the link can open the file and which editing or sharing capabilities the person receives.",
+    "steps": [
+      [
+        "Review the general access setting first",
+        "Open Share and check whether General access is Restricted. Add only intended people and recheck their addresses instead of making a sensitive file public by link."
+      ],
+      [
+        "Grant the least permission needed for the task",
+        "Choose Viewer for reading, Commenter for feedback and Editor only for actual collaboration. Google documents that editors may have broad modification and sharing permissions."
+      ],
+      [
+        "Inspect permissions inherited from parent folders",
+        "A file inside a broadly shared folder may remain accessible through that folder. Move sensitive material to a separate restricted folder if necessary and test the recipient's actual access."
+      ]
+    ],
+    "alternative": "Sending a purpose-built read-only copy can be appropriate, but consider what information the file itself reveals and how it will be distributed.",
+    "toolIntro": "Google Drive's own Share dialog is the correct tool for controlling access. Avoid uploading confidential files to unrelated third-party services.",
+    "limits": "Organization policies and inherited permissions can override your expectations. Viewer access cannot prevent someone from manually recording or photographing visible content.",
+    "faq": [
+      [
+        "Does setting someone to Viewer also make the file private from the public internet?",
+        "No. Viewer is a role, while Restricted versus Anyone with the link controls the audience. Check both settings separately."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/snNHKZ-mGfE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "정리와 보관이 필요한 여러 문서 파일 묶음",
+        "en": "Organized documents illustrating the need for backups"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "knowledge"
+  }
+}
