@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
+import {readdir,readFile} from 'node:fs/promises';
 const browser=await chromium.launch({headless:true});
 const host='http://127.0.0.1:8088';
 const failed=[];
@@ -10,11 +11,16 @@ async function check(path,fn){
  catch(e){failed.push({path,error:String(e.message).slice(0,250)});console.log('BLOG_BROWSER_FAIL',path,String(e.message).slice(0,250))}
  finally{await page.close()}
 }
-const infoSet=new Set(['jpg-png-webp-which-format','excel-csv-leading-zero-preservation','file-backup-321-strategy','iphone-photo-location-privacy']);
+const contentDir='site-factory/content/blog';
+const jsonFiles=(await readdir(contentDir)).filter(name=>name.endsWith('.json'));
+const posts=(await Promise.all(jsonFiles.map(async name=>JSON.parse(await readFile(contentDir+'/'+name,'utf8'))))).filter(post=>post.status==='reviewed');
+const infoSet=new Set(posts.filter(post=>post.type==='information').map(post=>post.slug));
+const hrefs=posts.map(post=>post.slug);
+assert.equal(new Set(hrefs).size,hrefs.length,'Duplicate article slugs');
 for(const [lang,prefix] of [['ko','/blog/'],['en','/en/blog/']]){
  await check(prefix,async p=>{
   assert.equal(await p.locator('html').getAttribute('lang'),lang);
-  assert.equal(await p.locator('#articleGrid .tile').count(),13);
+  assert.equal(await p.locator('#articleGrid .tile').count(),posts.length-1); // Featured lead article renders outside the grid
   assert.ok(await p.locator('.featured img').count()===1);
   assert.ok(await p.locator('#articleSearch').count()===1);
   assert.ok(await p.locator('head link[rel=canonical]').count());
@@ -28,7 +34,6 @@ for(const [lang,prefix] of [['ko','/blog/'],['en','/en/blog/']]){
   assert.ok(await p.locator('#articleGrid .tile:visible').count()>=2);
   await p.locator('button[data-filter=all]').click();
  });
- const hrefs=['photo-file-size-guide','pdf-merge-reorder-guide','recurring-bank-payments-guide','shift-pattern-to-calendar','guest-wifi-qr-card','bulk-rename-photos-files','hide-private-info-in-photos','seller-item-profit-guide','fix-csv-empty-rows','straighten-document-photo',...infoSet];
  for(const slug of hrefs)await check(prefix+slug+'/',async p=>{
   assert.equal(await p.locator('html').getAttribute('lang'),lang);
   assert.ok(await p.locator('article ol.steps li').count()>=3);

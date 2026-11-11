@@ -1,0 +1,79 @@
+{
+  "slug": "merge-csv-with-different-columns",
+  "type": "tool",
+  "tool": "csv-merge-studio",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "ko": {
+    "title": "CSV 파일 열 이름이 다를 때 합치는 법: 누락과 중복을 막는 순서",
+    "description": "여러 CSV의 열 이름과 순서가 다를 때 통합 기준을 먼저 정하고 중복·인코딩 오류를 검수하는 실무 절차.",
+    "problem": "여러 사람에게 받은 CSV는 같은 내용을 담아도 '휴대전화'와 '전화번호'처럼 열 이름이 다르고 열의 순서도 다릅니다. 그냥 아래에 붙이면 한 열에 다른 항목이 섞일 수 있습니다. 합치기 전 열의 의미와 행 식별 기준부터 확정해야 합니다.",
+    "steps": [
+      [
+        "서로 다른 헤더가 가리키는 값을 대조하세요",
+        "각 파일을 원본 그대로 보관하고 첫 행의 열 이름과 실제 데이터 몇 줄을 비교하세요. '작성일'이 날짜인지 시각까지 포함한 기록인지도 확인하고, 같은 이름이라도 의미가 다르면 한 열로 합치지 마세요."
+      ],
+      [
+        "기준 열 목록을 만들고 파일별 이름을 매핑하세요",
+        "통합 파일의 열 목록을 정한 뒤 각 CSV의 '고객명/이름', '연락처/휴대전화'처럼 의미가 같은 항목만 연결하세요. 없는 열을 빈 값으로 둘지, 그 파일 자체를 제외할지도 작업 전에 결정해야 합니다."
+      ],
+      [
+        "중복 기준과 출력 형식을 검증하세요",
+        "중복을 판단할 열을 정하고 삭제 전에는 중복 후보를 확인하세요. 결과 CSV에서 한글 깨짐, 첫 행의 열 순서, 날짜·전화번호 앞자리와 임의로 비워진 필드가 없는지 원본과 대조하세요."
+      ]
+    ],
+    "alternative": "파일 수가 적다면 각 CSV를 스프레드시트로 가져와 열 위치를 맞춘 뒤 새 시트에 복사하는 방식도 가능합니다. 이때 자동 형식 변환을 주의하세요.",
+    "toolIntro": "아브레다 CSV 맞춤 병합기는 열 이름 매칭을 수동으로 조정하고 중복 제거 옵션을 적용한 뒤 통합 CSV를 만드는 브라우저 도구입니다.",
+    "limits": "열 이름이 비슷해도 내용이 다른 열을 자동으로 판별해 주지는 않습니다. 긴 숫자, 앞자리 0, 구분자와 문자 인코딩은 결과 파일을 열어 직접 확인해야 합니다.",
+    "faq": [
+      [
+        "같은 이름을 가진 사람은 중복으로 지워도 되나요?",
+        "아니요. 이름만 같다고 동일 기록은 아닙니다. 식별할 수 있는 추가 열과 원본 행을 비교한 뒤 중복 제거 기준을 정하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Merge CSV Files with Different Column Names Without Losing Records",
+    "description": "A practical checklist for mapping mismatched CSV headers, selecting duplicate keys and checking the merged file.",
+    "problem": "CSV files from different sources often label the same field differently, such as 'phone' versus 'mobile'. Appending rows without a shared schema can put unrelated data in the same column. Decide what each column means and which records count as duplicates before merging.",
+    "steps": [
+      [
+        "Inspect every header and a few actual records",
+        "Keep the source files untouched and compare their header rows with representative records. Check whether similarly named fields contain the same kind of data; a date field with timestamps should not silently be treated as a date-only field."
+      ],
+      [
+        "Define one output schema and map columns deliberately",
+        "Write the target column names, then map source fields to them only when their meaning matches. Decide whether an absent field should become a blank cell or whether the source needs correction before inclusion."
+      ],
+      [
+        "Review duplicates and verify the exported CSV",
+        "Pick a defensible duplicate key before deleting anything. Compare the output with source records for encoding, header order, dates, leading zeros in identifiers and fields that unexpectedly became blank."
+      ]
+    ],
+    "alternative": "With a small number of files, you can import them into a spreadsheet, align the columns manually and copy rows into a new sheet. Watch for automatic type conversions.",
+    "toolIntro": "ABREDA CSV Merge Studio lets you adjust column mappings, select duplicate handling and export one merged CSV in the browser.",
+    "limits": "Similar-looking names can refer to different data. Verify long identifiers, leading zeros, separators, encodings and ambiguous duplicate matches yourself.",
+    "faq": [
+      [
+        "Can two people with the same name be treated as duplicate rows?",
+        "No. A shared name does not establish that two rows represent the same person. Compare additional identifying fields and the original records before removing either row."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1759752393975-7ca7b302fcc6?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/iDqNlr1Y1_w",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "스프레드시트 자료를 입력하는 노트북 키보드와 손",
+        "en": "Hands entering tabular data in a laptop spreadsheet"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "document"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "slug": "fix-delayed-subtitle-timing",
+  "type": "tool",
+  "tool": "subtitle-sync-studio",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "ko": {
+    "title": "자막이 영상보다 늦게 나올 때: SRT·VTT 싱크 일괄 조정",
+    "description": "자막 전체가 일정하게 밀린 경우와 중간부터 틀어지는 경우를 구분하고 시간 오프셋을 적용하는 방법.",
+    "problem": "영상 속 대사와 자막의 시간이 맞지 않을 때는 두 가지부터 구분해야 합니다. 시작부터 끝까지 같은 간격으로 어긋나는지, 재생할수록 차이가 커지는지입니다. 원인이 다르면 같은 보정값으로 해결되지 않습니다.",
+    "steps": [
+      [
+        "영상의 앞·중간·끝에서 차이를 확인하세요",
+        "자막이 처음부터 같은 만큼 늦다면 일정한 오프셋을 검토하세요. 뒤로 갈수록 차이가 늘면 영상 편집본 차이, 프레임레이트 또는 자막 기준 시간 문제를 먼저 확인해야 합니다."
+      ],
+      [
+        "원본 자막을 저장하고 일정한 오프셋을 적용하세요",
+        "SRT 또는 VTT의 원본을 따로 보관한 뒤 자막 표시 시점을 앞으로 당길지 뒤로 밀지 방향을 정하세요. 모든 타임스탬프에 같은 값을 적용한 뒤 음성 시작 지점을 다시 재생해 비교하세요."
+      ],
+      [
+        "음수 시간·겹침과 파일 형식을 검사하세요",
+        "너무 많이 앞당기면 시작 시점이 0보다 작아지거나 자막 간 구간이 겹칠 수 있습니다. 출력한 파일을 실제 재생기에 넣고 시작·중간·끝을 다시 확인하세요."
+      ]
+    ],
+    "alternative": "영상 재생기가 자체 자막 지연 설정을 지원한다면 파일을 수정하지 않고 재생 중에 오프셋을 바꾸는 방법도 있습니다.",
+    "toolIntro": "아브레다 자막 싱크 조정기는 SRT·VTT 시간 이동과 형식 변환, 타임스탬프 오류 점검을 지원합니다.",
+    "limits": "이 도구는 영상 속 음성을 자동으로 인식해 자막을 정확하게 맞추는 기능이 아닙니다. 영상 판본이 다르거나 중간 편집이 있으면 일정 오프셋만으로 해결되지 않습니다.",
+    "faq": [
+      [
+        "자막이 뒤로 갈수록 점점 더 느려지면 어떻게 하나요?",
+        "먼저 영상 판본과 프레임레이트 차이를 확인하세요. 일정한 시간 이동만으로는 누적되는 차이를 교정할 수 없습니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Fix Subtitles That Play Too Late: SRT and VTT Timing Checks",
+    "description": "Distinguish constant subtitle delay from timing drift and adjust an SRT or VTT file without damaging the original.",
+    "problem": "Before changing subtitle timestamps, decide whether the error is constant from beginning to end or grows throughout playback. Those symptoms suggest different problems and should not receive the same blind correction.",
+    "steps": [
+      [
+        "Compare early, middle and late dialogue cues",
+        "If every cue arrives equally late, a fixed offset may help. If the gap grows, check whether the subtitle belongs to another edit or uses a different timing basis before shifting all cues."
+      ],
+      [
+        "Keep the original and apply the offset in the right direction",
+        "Save a copy of the original SRT or VTT first. Choose whether cues must move earlier or later, apply the same offset and replay a known dialogue start to verify the direction."
+      ],
+      [
+        "Check negative timestamps, overlap and playback support",
+        "An excessive earlier shift can move cues before zero or create overlapping intervals. Open the exported file in your target player and confirm the beginning, middle and end."
+      ]
+    ],
+    "alternative": "Some media players offer a temporary subtitle-delay setting, which can be easier than editing the file when you only need a playback fix.",
+    "toolIntro": "ABREDA Subtitle Sync Studio supports timing offsets, SRT/VTT conversion and timestamp checks for subtitle files.",
+    "limits": "It does not automatically transcribe speech or synchronize to audio. A differently edited video cannot always be fixed with one offset.",
+    "faq": [
+      [
+        "What if subtitles drift further behind as the video plays?",
+        "Check for a different video edit or frame-rate mismatch. One constant timestamp shift cannot correct accumulating drift."
+      ]
+    ]
+  },
+  "media": {
+    "category": "document",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/video-editing-timeline-on-dark-screen-yk9VXp4W5-Q",
+      "credit": "Peter Stumpf / Unsplash",
+      "alt": {
+        "ko": "영상 편집 프로그램의 타임라인에 배치된 여러 영상 및 오디오 클립",
+        "en": "Video editing timeline with multiple clips on a computer monitor"
+      },
+      "caption": {
+        "ko": "자막 싱크 조정과 관련된 영상 편집 타임라인의 자료 사진입니다. 아브레다 화면이 아닙니다.",
+        "en": "Illustrative photo of a video editing timeline; not an ABREDA screenshot."
+      }
+    }
+  }
+}

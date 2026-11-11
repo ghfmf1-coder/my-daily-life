@@ -1,0 +1,79 @@
+{
+  "slug": "track-return-and-warranty-deadlines",
+  "type": "tool",
+  "tool": "warranty-deadline-tracker",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "ko": {
+    "title": "반품기한과 제품 보증기간 따로 관리하는 법",
+    "description": "구매일·반품 가능 기한·제조사 보증 종료일을 구분하고 증빙과 일정 알림을 정리하는 방법.",
+    "problem": "반품 가능한 날짜와 무상보증이 끝나는 날짜는 같은 개념이 아닙니다. 판매자 정책과 구매 조건에 따라 기준일도 다를 수 있으므로 영수증과 공식 안내를 기준으로 각각 관리해야 합니다.",
+    "steps": [
+      [
+        "구매 증빙과 판매 조건을 먼저 모으세요",
+        "주문번호, 구입처, 주문·수령 날짜, 전자영수증, 제조사 보증서가 어디 있는지 정리하세요. 광고 문구보다 실제 주문 약관과 제품 보증 안내를 확인하세요."
+      ],
+      [
+        "반품 기한과 보증 종료일을 별도 입력하세요",
+        "반품은 판매처의 반품 정책 및 해당 법률에 따른 기준을 확인하고, 보증은 제조사나 판매자 보증 규정에 따라 종료일을 따로 적으세요. 임의로 구매일부터 같은 기간을 더하지 마세요."
+      ],
+      [
+        "마감 전 확인 일정을 캘린더에 등록하세요",
+        "반품을 검토할 날과 보증 종료를 점검할 날을 구분해 알림을 만드세요. 문제가 생긴다면 사진, 고장 설명, 문의 기록과 구매 증빙을 함께 보관하세요."
+      ]
+    ],
+    "alternative": "구매 건수가 적다면 스마트폰 달력에 개별 알림을 넣고 영수증을 폴더별로 관리하는 것으로도 충분합니다.",
+    "toolIntro": "아브레다 보증기간·반품기한 관리소는 구매 기록과 마감일을 브라우저에 정리하고 캘린더 파일로 알림 일정을 내보냅니다.",
+    "limits": "도구가 실제 반품 가능 여부나 보증 수리 승인 여부를 판정하지는 않습니다. 법적 기한은 상품·거래조건에 따라 달라지므로 판매처의 공식 규정을 확인해야 합니다.",
+    "faq": [
+      [
+        "반품기한이 지났다면 보증 수리도 받을 수 없나요?",
+        "반드시 그렇지는 않습니다. 반품과 보증은 별도 조건이므로 실제 제품 보증서와 판매처 안내에서 각각 확인하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Track Return Deadlines Separately from Product Warranty Dates",
+    "description": "Organize purchase receipts, seller return windows and manufacturer warranty end dates without confusing them.",
+    "problem": "A store's return window and a manufacturer's warranty are different commitments. Their start dates and terms can vary, so treat them as separate records grounded in the actual order terms and warranty documentation.",
+    "steps": [
+      [
+        "Collect the purchase evidence and actual terms",
+        "Keep the order number, retailer, purchase and delivery dates, receipt and warranty document. Use the conditions that applied to the transaction rather than a generic duration found elsewhere."
+      ],
+      [
+        "Record the return and warranty deadlines separately",
+        "Check the retailer's return policy and applicable consumer rights, then separately check the product's warranty document. Do not calculate both dates using one invented interval."
+      ],
+      [
+        "Set calendar reminders and preserve proof",
+        "Add an earlier date to review return eligibility and another to review warranty expiration. Retain defect photos and customer-support records when an issue appears."
+      ]
+    ],
+    "alternative": "For a handful of purchases, normal phone calendar reminders and a receipts folder may be simpler than a separate tracker.",
+    "toolIntro": "ABREDA Warranty & Return Deadline Tracker stores purchase and deadline entries in the browser and exports calendar reminders.",
+    "limits": "The tool does not determine a legal right to return goods or guarantee repair approval. Verify the actual seller rules and warranty terms.",
+    "faq": [
+      [
+        "Does an expired return period also end the product warranty?",
+        "Not necessarily. Return eligibility and warranty service follow separate terms; check both the receipt and product warranty document."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1772588627327-1eeddcf73c11?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/0oZpRxG5Hkk",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "계산기와 노트북을 함께 이용해 금융 기록을 정리하는 손",
+        "en": "Hands reviewing finances with calculator and laptop"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "money"
+  }
+}

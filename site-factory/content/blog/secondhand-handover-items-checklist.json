@@ -1,0 +1,79 @@
+{
+  "slug": "secondhand-handover-items-checklist",
+  "type": "tool",
+  "tool": "handover-checklist",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "ko": {
+    "title": "중고거래 구성품 누락 방지: 인수인계 확인증 작성 방법",
+    "description": "중고 물품을 넘길 때 본체·부속품·상태·인계 날짜를 기록하고 양쪽이 확인할 항목을 정리하는 방법.",
+    "problem": "전자기기나 수집품을 중고로 거래할 때 본품 상태만 확인하고 충전기·설명서·케이스를 빠뜨리기 쉽습니다. 거래가 끝난 뒤 기억에 의존하지 않도록 실제 전달한 구성품을 구체적으로 기록하는 것이 핵심입니다.",
+    "steps": [
+      [
+        "거래 글에 적힌 구성품을 실제 물품과 대조하세요",
+        "본체의 모델명과 수량을 확인하고 케이블, 충전기, 부품, 설명서, 포장재를 각각 목록에 적으세요. 사진에 보이지만 전달하지 않는 물건은 목록에서 분리합니다."
+      ],
+      [
+        "상태와 이미 알려진 결함을 객관적으로 적으세요",
+        "외관 흠집, 작동하지 않는 기능, 수리 이력 중 확인 가능한 내용만 적고 사진으로 남기세요. 동작을 확인하지 않은 항목은 '미확인'이라고 표시해 정상 작동을 보증하는 표현을 피하세요."
+      ],
+      [
+        "인계 시점과 최종 전달 목록을 확인하세요",
+        "실제로 건넨 날짜와 구성품을 함께 검토하고 확인증 사본을 양쪽에 전달하세요. 개인 주소·연락처 등 불필요한 민감 정보는 확인증에 넣지 않는 편이 안전합니다."
+      ]
+    ],
+    "alternative": "메신저 대화에 사진과 최종 구성품 목록을 남기는 방법도 있습니다. 서로 같은 기록을 보유한다는 점이 중요합니다.",
+    "toolIntro": "아브레다 구성품 확인증 제작소는 중고거래 물품의 구성품·상태·사진 등을 정리해 인수인계용 확인 자료를 만듭니다.",
+    "limits": "확인증은 법적 품질 보증서나 진품 감정서가 아닙니다. 제품 기능·소유권·거래의 적법성을 자동 검증하지 않으므로 직접 확인해야 합니다.",
+    "faq": [
+      [
+        "확인증을 작성하면 판매자가 무조건 책임을 지게 되나요?",
+        "아니요. 확인증은 당시 전달 내용의 기록입니다. 실제 분쟁의 책임 범위는 거래 조건과 관련 법률에 따라 따로 판단됩니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Make a Secondhand Item Handover Checklist Before Exchange",
+    "description": "Document included accessories, condition and handover details so buyers and sellers can compare the same record.",
+    "problem": "When exchanging used electronics or collectibles, it is easy to focus on the main item and forget chargers, cases or manuals. A written inventory helps both parties verify what was actually delivered rather than rely on memory.",
+    "steps": [
+      [
+        "Compare the listing with the physical contents",
+        "Record the item model, quantity and each accessory separately. Distinguish objects visible in listing photos from those actually included in the exchange."
+      ],
+      [
+        "Describe condition and only verified functions",
+        "Note visible scratches, known issues and confirmed repairs. Photograph relevant areas and mark functions that were not tested as unverified instead of implying complete working condition."
+      ],
+      [
+        "Confirm the final list and handover date together",
+        "Review the delivered items at the exchange, record the date and give both parties a copy. Avoid adding unnecessary home addresses or other sensitive details to the handover record."
+      ]
+    ],
+    "alternative": "A shared final message with photos and a component list is another workable option. What matters is that both sides retain the same evidence.",
+    "toolIntro": "ABREDA Handover Checklist Maker organizes items, accessories, condition notes and photographs into a handover record.",
+    "limits": "A checklist is not a legal warranty or authenticity certificate. It does not independently verify ownership, functionality or lawful transfer.",
+    "faq": [
+      [
+        "Does a signed handover record automatically settle every dispute?",
+        "No. It documents what was acknowledged at the time. Legal responsibility still depends on the agreement, facts and applicable law."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/snNHKZ-mGfE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "정리와 보관이 필요한 여러 문서 파일 묶음",
+        "en": "Organized documents illustrating the need for backups"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "knowledge"
+  }
+}

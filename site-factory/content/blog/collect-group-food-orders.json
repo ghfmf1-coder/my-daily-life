@@ -1,0 +1,79 @@
+{
+  "slug": "collect-group-food-orders",
+  "type": "tool",
+  "tool": "group-order-summary",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "ko": {
+    "title": "단체 음식 주문 취합하는 법: 메뉴·옵션·개인별 금액 정리",
+    "description": "여러 사람의 메뉴 선택과 추가 옵션을 한 표에 모아 주문 누락·정산 혼선을 줄이는 방법.",
+    "problem": "단체 주문에서 가장 흔한 혼란은 같은 메뉴를 주문한 사람끼리 옵션이 섞이거나, 배달비를 누구에게 어떻게 나눴는지 기록이 남지 않는 것입니다. 주문 전에 이름별 세부 항목을 확정하고 실제 결제 내역과 맞춰야 합니다.",
+    "steps": [
+      [
+        "한 사람의 주문은 옵션까지 별도 행으로 적으세요",
+        "주문자 이름, 메뉴, 맵기, 추가 토핑, 수량, 단가를 각각 확인하세요. 동일한 이름을 가진 사람이 있다면 구분할 수 있는 별칭을 사용해 수령할 때 혼동을 줄이세요."
+      ],
+      [
+        "주문 전 총수량과 가격을 매장 화면과 비교하세요",
+        "메뉴별 수량 합계와 개인별 금액을 다시 읽어 주고, 포장 이름표가 필요한지 확인하세요. 품절·추가요금·할인이 발생하면 기존 주문표를 수정하고 확정본을 다시 공유하세요."
+      ],
+      [
+        "배달비와 할인 처리 방식을 먼저 합의하세요",
+        "개인별 결제액에 배달비를 균등 또는 별도 기준으로 나눌지 미리 정하세요. 계산표 결과와 실제 영수증이 다르면 영수증을 기준으로 조정하고 최종 부담액을 다시 확인하세요."
+      ]
+    ],
+    "alternative": "인원이 적다면 메신저 설문과 간단한 스프레드시트만으로도 가능합니다. 주문 확정 후 수정된 메시지를 놓치지 않게 최종본을 고정하세요.",
+    "toolIntro": "아브레다 단체주문 정리왕은 이름별 메뉴·옵션·수량·가격을 모아 주문표와 개인별 금액, 수령용 이름표를 만들도록 돕습니다.",
+    "limits": "실시간 매장 메뉴·품절·배달요금과 연결된 주문 서비스는 아닙니다. 가격과 주문 가능 여부는 실제 주문처에서 최종 확인해야 합니다.",
+    "faq": [
+      [
+        "할인 쿠폰을 적용한 개인별 금액도 자동으로 맞나요?",
+        "최종 결제 화면의 할인·배달비 분담 규칙과 별도로 맞춰야 합니다. 도구의 입력값만으로 매장의 실제 청구액이 확정되지는 않습니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Organize Group Food Orders Without Mixing Up Options or Payments",
+    "description": "Use a person-by-person order sheet to prevent missing toppings, confused pickup labels and disputed totals.",
+    "problem": "Group orders get messy when people choose the same dish with different options or no one records how delivery fees were divided. Confirm each person's line items first, then reconcile the final order against the actual checkout.",
+    "steps": [
+      [
+        "Write each person's item with its exact options",
+        "Record a distinct name or nickname, dish, spice level, toppings, quantity and unit price. Separate people with identical names so packages can be distributed correctly."
+      ],
+      [
+        "Cross-check the totals with the restaurant checkout",
+        "Compare item counts and subtotals with the order screen. If an item is unavailable or the price changes, update and resend the confirmed list before the order is placed."
+      ],
+      [
+        "Agree on discounts and delivery-fee allocation",
+        "Decide whether fees are split equally or by another stated rule. Use the final receipt as the basis for reconciling any discounts, service fees or payment differences."
+      ]
+    ],
+    "alternative": "For a small team, a chat poll and a spreadsheet may be enough. Pin the finalized message so late edits do not silently change the order.",
+    "toolIntro": "ABREDA Group Order Summary collects person-specific food choices, options, quantities and prices into an order sheet, individual totals and pickup labels.",
+    "limits": "It is not connected to restaurant menus, stock or payment processors. Confirm final prices, availability, fees and delivery details with the actual seller.",
+    "faq": [
+      [
+        "Will the estimated per-person total always match the final checkout?",
+        "No. Restaurant price changes, discounts and delivery fees must be reconciled with the actual receipt and the agreed cost-sharing rule."
+      ]
+    ]
+  },
+  "media": {
+    "category": "daily",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1727291609997-c5ecf416ddd9?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-group-of-people-holding-trays-of-food-Er1jKAhfe4w",
+      "credit": "Nguyễn Bình / Unsplash",
+      "alt": {
+        "ko": "여러 사람이 각자 주문한 포장 음식을 들고 함께 모인 장면",
+        "en": "A group holding separate trays and bowls of takeout food"
+      },
+      "caption": {
+        "ko": "여러 사람의 주문을 모아 확인하는 상황을 설명하는 자료 사진입니다. 아브레다 화면이 아닙니다.",
+        "en": "Illustrative photo of group takeout meals; not an ABREDA screenshot."
+      }
+    }
+  }
+}

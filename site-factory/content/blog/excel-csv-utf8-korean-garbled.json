@@ -1,0 +1,84 @@
+{
+  "slug": "excel-csv-utf8-korean-garbled",
+  "type": "information",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "sources": [
+    {
+      "name": "Microsoft Support — Opening CSV UTF-8 files correctly in Excel",
+      "url": "https://support.microsoft.com/en-gb/excel/opening-csv-utf-8-files-correctly-in-excel"
+    }
+  ],
+  "ko": {
+    "title": "엑셀 CSV 한글 깨짐 해결: UTF-8 파일을 가져오는 정확한 방법",
+    "description": "CSV 파일을 더블클릭했을 때 한글이 깨진다면 엑셀의 텍스트·CSV 가져오기에서 문자 인코딩을 확인하는 절차.",
+    "problem": "CSV는 열과 행 구조를 담는 텍스트 파일이므로 파일에 저장된 문자 인코딩과 프로그램이 해석하는 인코딩이 다르면 한글이 깨져 보일 수 있습니다. 데이터 자체가 이미 손상됐는지, 엑셀에서 잘못 읽었는지를 먼저 구분해야 합니다.",
+    "steps": [
+      [
+        "원본 CSV를 더블클릭하지 말고 백업하세요",
+        "원본 파일을 별도 폴더에 복사한 뒤 텍스트 편집기에서 한글이 정상 보이는지 확인하세요. 엑셀에서 열었다가 그대로 저장하면 원래 문자 인코딩과 형식이 바뀔 수 있으므로 먼저 원본을 보관합니다."
+      ],
+      [
+        "엑셀에서 데이터 가져오기 메뉴를 이용하세요",
+        "Microsoft 공식 안내에 따르면 UTF-8 CSV에 BOM이 없을 때는 '데이터'의 텍스트/CSV 가져오기 또는 텍스트 가져오기 기능으로 열 수 있습니다. 가져오기 미리보기에서 한글이 정상으로 표시되는 문자 집합을 선택하세요."
+      ],
+      [
+        "불러온 후에는 실제 열 값과 유형을 점검하세요",
+        "표가 보인다고 작업을 끝내지 말고 우편번호, 사번, 전화번호의 앞자리 0과 날짜 열을 확인하세요. 특정 열이 숫자로 자동 변환됐다면 다시 가져오면서 해당 열을 텍스트로 지정해야 합니다."
+      ]
+    ],
+    "alternative": "파일을 만들어 제공한 사람에게 UTF-8 BOM 포함 CSV로 다시 저장해 달라고 요청하는 방법도 있습니다. 다만 사용하는 시스템이 BOM을 지원하는지 확인하세요.",
+    "toolIntro": "엑셀 기능만으로 해결할 수 있는 문제이므로 별도의 웹앱이 필요하지 않습니다. 파일 변환 전에는 원본 보존과 미리보기 확인이 우선입니다.",
+    "limits": "파일 자체에 이미 잘못된 문자 데이터가 저장되었다면 인코딩 선택만으로 되돌릴 수 없습니다. 프로그램 버전·파일 형식에 따라 메뉴와 선택지가 다릅니다.",
+    "faq": [
+      [
+        "엑셀에서 한글이 깨져 보이면 원본 파일도 망가진 건가요?",
+        "아니요. 엑셀의 읽기 설정만 잘못된 경우가 있습니다. 다른 텍스트 편집기로 원본을 열어 인코딩 문제인지 먼저 확인하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Fix Garbled Korean Text When Opening UTF-8 CSV in Excel",
+    "description": "Use Excel's text and CSV import options to diagnose character-encoding problems without rewriting the original file.",
+    "problem": "A CSV is a text file, and characters can appear corrupted when the reader chooses the wrong encoding. Before editing, distinguish a display or import problem from data that was already damaged during export.",
+    "steps": [
+      [
+        "Keep a source copy and inspect the raw file",
+        "Duplicate the CSV before opening and saving it in a spreadsheet. Check whether a plain-text editor displays the Korean text correctly; an unwanted save operation may change encoding or data types."
+      ],
+      [
+        "Import through Excel's Text/CSV data menu",
+        "Microsoft documents using Get Data from Text/CSV or the text import wizard when a UTF-8 file has no byte order mark. Inspect the preview and choose the encoding that actually displays your source text correctly."
+      ],
+      [
+        "Verify identifiers and dates after import",
+        "Check that postal codes, employee IDs and phone numbers have not lost leading zeros. Inspect date columns and re-import with explicit text types where Excel converted values unexpectedly."
+      ]
+    ],
+    "alternative": "Ask the file provider for a UTF-8 CSV with a byte order mark if the receiving workflow supports it; first verify compatibility with downstream systems.",
+    "toolIntro": "This issue can be resolved using Excel itself. Preserve the source and confirm the preview before considering a separate converter.",
+    "limits": "Encoding selection cannot restore text already corrupted in the source file. The import menus and conversion behavior depend on the Excel version and platform.",
+    "faq": [
+      [
+        "Does garbled Korean text always mean the CSV is permanently damaged?",
+        "No. It may only have been decoded using the wrong encoding. Check the untouched source in a text editor before deciding whether the original data was damaged."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1759752393975-7ca7b302fcc6?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/iDqNlr1Y1_w",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "스프레드시트 자료를 입력하는 노트북 키보드와 손",
+        "en": "Hands entering tabular data in a laptop spreadsheet"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "document"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "browser-localstorage-data-preservation",
+  "type": "information",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "sources": [
+    {
+      "name": "MDN Web Docs — Web Storage API",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API"
+    }
+  ],
+  "ko": {
+    "title": "브라우저에 저장한 웹앱 기록이 사라지는 이유: 로컬 저장소 확인",
+    "description": "로컬 스토리지와 세션 스토리지를 구분하고 웹앱 기록을 백업해 브라우저 데이터 삭제에 대비하는 방법.",
+    "problem": "회원가입 없이 쓰는 브라우저 웹앱은 입력한 내용을 서버가 아닌 해당 브라우저의 로컬 저장소에 보관할 수 있습니다. 같은 주소로 접속했더라도 다른 기기나 브라우저에서는 원래 데이터가 보이지 않을 수 있습니다.",
+    "steps": [
+      [
+        "웹앱의 저장 위치와 내보내기 기능부터 확인하세요",
+        "서비스 안내에서 로컬 저장 방식인지 계정 동기화 방식인지 확인하세요. JSON이나 CSV 내보내기가 있다면 앱에 중요한 기록을 입력한 뒤에는 별도의 파일로 백업하세요."
+      ],
+      [
+        "시크릿 모드와 일반 브라우저를 구분해 사용하세요",
+        "MDN에 따르면 localStorage는 보통 브라우저 재시작 후에도 남지만 시크릿 모드에서는 종료 시 지워질 수 있습니다. 기록을 오래 보존하려면 임시 창을 저장소처럼 사용하지 마세요."
+      ],
+      [
+        "사이트 데이터 삭제 전에는 복원 가능한 사본을 확인하세요",
+        "브라우저의 사이트 데이터·쿠키·저장 공간 삭제 메뉴를 실행하면 해당 서비스의 로컬 기록이 삭제될 수 있습니다. 백업 파일을 열어 내용이 있는지 확인하고, 복원 기능이 있을 때만 실제로 되돌릴 수 있습니다."
+      ]
+    ],
+    "alternative": "장기간 보관이 필요한 정보는 계정 동기화가 제공되는 서비스나 별도 파일 관리 체계에 저장하는 방법이 있습니다.",
+    "toolIntro": "브라우저 도구가 편리하더라도 로컬 데이터의 보존·백업 책임을 확인해야 합니다. 계정 없이 자동으로 여러 기기에 동기화된다고 생각해서는 안 됩니다.",
+    "limits": "앱이 localStorage 대신 IndexedDB나 서버 데이터베이스를 사용할 수도 있습니다. 정확한 저장 위치와 복원 가능 여부는 서비스별 안내를 확인해야 합니다.",
+    "faq": [
+      [
+        "휴대폰에서 만든 기록을 PC로 열면 자동으로 나오나요?",
+        "아니요. 해당 앱이 계정 기반 동기화를 제공하지 않으면 브라우저와 기기가 바뀔 때 로컬 저장 내용도 공유되지 않습니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Why Browser-App Records Disappear: Local Storage and Backups",
+    "description": "Learn the difference between local and session storage and check backups before clearing browser site data.",
+    "problem": "A browser tool without sign-in may save entries on that one device rather than on an account server. Opening the same URL on another browser or phone does not necessarily reproduce your old records.",
+    "steps": [
+      [
+        "Identify storage behavior and export important entries",
+        "Read the app's data storage explanation. If it offers a JSON or CSV export, save an independent copy after entering information you cannot afford to lose."
+      ],
+      [
+        "Avoid treating private browsing as long-term storage",
+        "MDN explains that localStorage normally persists across restarts, whereas private browsing data is discarded at the end of the private session. Do not rely on an incognito tab for lasting records."
+      ],
+      [
+        "Check recoverability before clearing site data",
+        "Browser controls for deleting site storage can erase locally saved entries. Inspect your exported file before deletion and confirm that the app actually supports importing a backup before assuming recovery is possible."
+      ]
+    ],
+    "alternative": "For information that must survive device changes, consider a service with a documented sync feature or a separate managed-file backup process.",
+    "toolIntro": "Browser-based tools can be convenient, but local retention and backup responsibilities still need checking. A sign-in-free app does not automatically sync data.",
+    "limits": "Some applications use IndexedDB or a remote database instead of localStorage. Storage and recovery behavior must be confirmed for each application.",
+    "faq": [
+      [
+        "Will my records appear automatically on a second device when I open the same page?",
+        "No, not without a sync mechanism. Data stored solely in one browser's site storage is not automatically transferred to another device."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/snNHKZ-mGfE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "정리와 보관이 필요한 여러 문서 파일 묶음",
+        "en": "Organized documents illustrating the need for backups"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "knowledge"
+  }
+}

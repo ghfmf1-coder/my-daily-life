@@ -1,0 +1,88 @@
+{
+  "slug": "pdf-black-box-not-redaction",
+  "type": "information",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "sources": [
+    {
+      "name": "Adobe Help — Redact and sanitize PDFs in Acrobat Pro",
+      "url": "https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/redacting-sanitizing.html"
+    },
+    {
+      "name": "Adobe Help — Sanitize PDFs and remove hidden content",
+      "url": "https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/sanitize.html"
+    }
+  ],
+  "ko": {
+    "title": "PDF 검은 사각형으로 가리기만 하면 위험한 이유: 진짜 삭제와 차이",
+    "description": "PDF 문서의 민감한 글자를 겉으로 가리는 것과 원본 내용·숨은 정보를 제거하는 작업의 차이.",
+    "problem": "PDF 위에 검은 도형을 얹으면 화면에서 글자가 보이지 않을 수 있습니다. 하지만 단순 도형 아래에 문자 객체가 여전히 남아 있다면 복사·검색·추출로 내용이 드러날 위험이 있어 실제 삭제 절차와 구분해야 합니다.",
+    "steps": [
+      [
+        "공유용 사본을 만들고 가릴 대상을 정하세요",
+        "원본 PDF는 따로 보관하고 주민등록번호, 계좌, 주소 등 공유 목적에 필요 없는 내용을 목록으로 정하세요. 한 페이지만 보는 대신 첨부 파일과 모든 페이지를 점검하세요."
+      ],
+      [
+        "지원되는 PDF 편집기의 진짜 내용 삭제 기능을 쓰세요",
+        "Adobe는 Acrobat Pro의 수정·삭제(Redact) 기능으로 눈에 보이는 문자와 이미지 내용을 제거하는 방법을 안내합니다. 단순한 배경색 도형을 덮는 방식과 구분해 처리하세요."
+      ],
+      [
+        "메타데이터와 숨은 내용까지 별도로 검사하세요",
+        "Adobe의 위생화(Sanitize) 기능은 메타데이터·숨김 객체와 같은 비가시 데이터를 대상으로 합니다. 저장한 사본에서 가린 글자를 검색·복사해 보거나 문서 속성에 불필요한 정보가 남았는지 재확인하세요."
+      ]
+    ],
+    "alternative": "민감한 자료라면 기관이 제공하는 개인정보 비식별 제출양식을 받거나 원본에서 필요한 부분만 별도 문서로 작성해 제출할 수 있습니다.",
+    "toolIntro": "PDF의 시각적 가림과 원본 데이터 제거는 별도 작업입니다. 이미지 편집 도구에서 검은 박스를 넣는 것만으로 PDF 내부 문자가 지워졌다고 판단하지 마세요.",
+    "limits": "Acrobat Pro의 기능과 메뉴는 제품 버전에 따라 다를 수 있습니다. 암호화·첨부 객체·전자서명이 포함된 PDF는 후속 검증이 필요하며 원본 내용 삭제는 되돌리기 어려울 수 있습니다.",
+    "faq": [
+      [
+        "가린 문장을 복사해서 붙여 넣을 수 있다면 제대로 지워진 건가요?",
+        "아니요. 내용이 여전히 선택·복사된다면 시각적으로만 덮였을 가능성이 있습니다. 원본 객체 삭제와 숨은 정보 제거를 지원하는 기능으로 다시 처리하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Why a Black Box on a PDF Is Not the Same as Redaction",
+    "description": "Distinguish visual masking from removing underlying PDF text and hidden metadata before sharing confidential files.",
+    "problem": "Drawing a black rectangle over text may hide it on screen while the underlying PDF text object still exists. Search, copy or extraction can potentially reveal content that was only covered, so masking and real redaction must be treated differently.",
+    "steps": [
+      [
+        "Make a share-ready copy and define sensitive fields",
+        "Preserve the original PDF separately. Identify numbers, addresses and other information not needed by the recipient, then inspect all pages and embedded materials rather than one screenshot."
+      ],
+      [
+        "Use a genuine content-removal redaction tool",
+        "Adobe documents Acrobat Pro's Redact function for removing visible text and image content. Do not assume that placing an opaque shape on top has modified the underlying PDF objects."
+      ],
+      [
+        "Inspect hidden metadata and test the saved copy",
+        "Adobe describes sanitization for hidden data such as metadata and embedded objects. Search for the removed terms, attempt copying formerly covered text and review document properties in the exported copy."
+      ]
+    ],
+    "alternative": "For especially sensitive submissions, ask the organization for a purpose-built limited-information form or prepare a fresh document containing only the fields actually required.",
+    "toolIntro": "Visual covering is separate from removing PDF document content. An image editor's black rectangle is not proof that embedded text or hidden information is gone.",
+    "limits": "Acrobat Pro capabilities vary by product version, and complex PDFs with attachments, encryption or signatures need further review. Permanent removal can be difficult to undo.",
+    "faq": [
+      [
+        "If I can still copy text from under a black rectangle, is the PDF safely redacted?",
+        "No. Copyable or searchable covered text indicates the content may still exist. Use actual redaction and sanitization features, then verify the saved result."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1664575262619-b28fef7a40a4?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/241bwQl2uWE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "문서를 확인하는 노트북과 서류 작업 공간",
+        "en": "A laptop and papers being used for document review"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "privacy"
+  }
+}

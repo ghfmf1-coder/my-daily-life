@@ -1,0 +1,84 @@
+{
+  "slug": "google-passkey-shared-device-warning",
+  "type": "information",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "sources": [
+    {
+      "name": "Google Account Help — Sign in with a passkey instead of a password",
+      "url": "https://support.google.com/accounts/answer/13548313?hl=en"
+    }
+  ],
+  "ko": {
+    "title": "구글 패스키 설정할 때 공용 기기를 피해야 하는 이유",
+    "description": "구글 계정 패스키를 개인 기기에 설정하고 잠금·기기 분실 시 삭제 경로까지 점검하는 방법.",
+    "problem": "패스키는 비밀번호를 반복 입력하지 않고 기기의 인증 수단으로 계정에 로그인하도록 돕습니다. 하지만 다른 사람이 잠금 해제할 수 있는 공용 기기에 패스키를 만들면 계정 접근 위험이 생길 수 있습니다.",
+    "steps": [
+      [
+        "개인 소유 기기인지와 화면 잠금을 먼저 확인하세요",
+        "Google 고객센터는 개인적으로 소유하고 쓰는 기기에만 패스키를 만들 것을 권고합니다. 사용 중인 휴대폰이나 컴퓨터에 화면 잠금이 제대로 설정되어 있는지 확인하세요."
+      ],
+      [
+        "공식 계정 설정에서 패스키를 생성하세요",
+        "구글 계정의 보안 및 로그인 설정에서 패스키 메뉴를 열어 만들기를 진행하세요. 기기별 OS와 브라우저 지원 여부가 다를 수 있으므로 표시되는 본인 확인 지침을 따르세요."
+      ],
+      [
+        "분실했을 때 삭제할 수 있는 경로를 기억하세요",
+        "사용하던 기기를 분실하거나 공유 기기에 실수로 등록했다면 다른 신뢰할 수 있는 기기에서 Google 계정 패스키 설정으로 들어가 해당 패스키를 삭제하세요. 추가 보안 알림도 확인합니다."
+      ]
+    ],
+    "alternative": "기기가 패스키를 지원하지 않으면 Google 계정이 제공하는 다른 로그인·복구 방법을 사용할 수 있습니다. 새 방식으로 바꾸기 전에 복구 수단을 확인하세요.",
+    "toolIntro": "패스키 설정과 삭제는 구글의 공식 계정 페이지에서 처리하세요. 외부 도구에 계정 비밀번호나 복구 코드를 입력할 필요가 없습니다.",
+    "limits": "일부 OS·브라우저 조합에서는 패스키 사용이 제한될 수 있으며, 분실한 기기에 설정한 패스키를 삭제하지 않으면 계정 위험이 남을 수 있습니다.",
+    "faq": [
+      [
+        "공용 PC에서 로그아웃하면 패스키도 자동으로 사라지나요?",
+        "아니요. 로그아웃과 기기에 저장된 패스키는 별개일 수 있습니다. Google은 본인이 소유한 기기에만 패스키를 생성하라고 안내합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Why You Should Avoid Creating Google Passkeys on Shared Devices",
+    "description": "Create account passkeys on personally controlled devices and know how to remove them after device loss.",
+    "problem": "Passkeys can reduce repeated password entry by relying on device authentication. But creating one on a computer that someone else can unlock may expose access to the account even after you sign out.",
+    "steps": [
+      [
+        "Check ownership and screen-lock controls first",
+        "Google advises using passkeys only on devices you personally own and control. Verify that the phone or computer has a functioning screen lock before setup."
+      ],
+      [
+        "Create a passkey through the official account settings",
+        "Open Google's Security and sign-in settings and find Passkeys. Follow the device's authentication prompts; support depends on the operating system, browser and security hardware."
+      ],
+      [
+        "Know how to revoke a passkey after losing a device",
+        "If a device is lost or a passkey was created on a shared computer, open the Google Account passkey settings from another trusted device and remove the affected passkey. Review security notifications as well."
+      ]
+    ],
+    "alternative": "If passkeys are not available on a device, use one of the account's supported sign-in and recovery methods. Check recovery options before changing your setup.",
+    "toolIntro": "Use Google's official account controls for passkey creation and deletion. A third-party tool should not request passwords or recovery codes for this task.",
+    "limits": "Passkey support varies by platform and browser. A passkey retained on a lost or shared device requires specific revocation steps rather than assuming logout erased it.",
+    "faq": [
+      [
+        "Does signing out of a shared computer automatically delete its passkey?",
+        "No. Signing out and removing a passkey stored on a device are different actions. Google advises against creating passkeys on shared devices."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1664575262619-b28fef7a40a4?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/241bwQl2uWE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "문서를 확인하는 노트북과 서류 작업 공간",
+        "en": "A laptop and papers being used for document review"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "privacy"
+  }
+}
