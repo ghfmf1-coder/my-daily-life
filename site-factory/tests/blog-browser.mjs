@@ -20,7 +20,7 @@ assert.equal(new Set(hrefs).size,hrefs.length,'Duplicate article slugs');
 for(const [lang,prefix] of [['ko','/blog/'],['en','/en/blog/']]){
  await check(prefix,async p=>{
   assert.equal(await p.locator('html').getAttribute('lang'),lang);
-  assert.equal(await p.locator('#articleGrid .tile').count(),posts.length);
+  assert.equal(await p.locator('#articleGrid .tile').count(),posts.length-1); // Featured lead article renders outside the grid
   assert.ok(await p.locator('.featured img').count()===1);
   assert.ok(await p.locator('#articleSearch').count()===1);
   assert.ok(await p.locator('head link[rel=canonical]').count());
