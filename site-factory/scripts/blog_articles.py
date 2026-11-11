@@ -63,27 +63,60 @@ def check_language(lang,data):
     if lang=='en' and re.search('[가-힣]',data['title']):raise ValueError('English title not translated')
     if lang=='ko' and not re.search('[가-힣]',data['title']):raise ValueError('Korean title missing')
 def load():
+    """Return only source-reviewed bilingual articles with a licensed, relevant photo.
+
+    Informational articles can stand on their own without any tool link.
+    The normal new-tool publishing gate still requires reviewed bilingual copy.
+    """
     files=sorted(CONTENT.glob('*.json'))+sorted(SITES.glob('*/blog.json'))+sorted((ROOT.parent/'work-sites').glob('*/blog.json'))
+    media_path=ROOT/'content'/'blog-media.json'
+    media=json.loads(media_path.read_text(encoding='utf-8'))['entries']
     posts=[];seen=set();tools=set()
     for file in files:
         p=json.loads(file.read_text(encoding='utf-8'))
         if p.get('status')!='reviewed':
-            # Drafts are not indexable or published.
             continue
-        name=p.get('slug')
-        if not isinstance(name,str) or not URL.fullmatch(name):raise ValueError('Invalid blog URL')
-        if name in seen:raise ValueError('Duplicate blog slug '+name)
-        tool=p.get('tool')
-        if not isinstance(tool,str) or not URL.fullmatch(tool):raise ValueError('Invalid tool id')
-        ko,en=tool_info(tool)
-        if not en:raise ValueError('English article has no matching English tool: '+tool)
-        if tool in tools:raise ValueError('Repeated SEO article for same tool '+tool)
-        published=p.get('published')
-        if not isinstance(published,str):raise ValueError('Publication date is required')
-        dt.date.fromisoformat(published)
+        slug=p.get('slug')
+        if not isinstance(slug,str) or not URL.fullmatch(slug):raise ValueError('Invalid blog slug: '+str(slug))
+        if slug in seen:raise ValueError('Duplicate blog slug '+slug)
+        kind=p.get('type','tool')
+        if kind not in ('information','tool'):raise ValueError('Invalid blog type: '+str(kind))
+        if kind=='information':
+            tool=None
+            source_links=p.get('sources')
+            if not isinstance(source_links,list) or not source_links:
+                raise ValueError('Informational articles require verifiable primary sources')
+            for ref in source_links:
+                if not isinstance(ref,dict) or not ref.get('name') or not re.fullmatch(r'https://[a-zA-Z0-9.-]+/[^<>" ]*',str(ref.get('url',''))):
+                    raise ValueError('Invalid source reference for '+slug)
+            links={'ko':None,'en':None}
+        else:
+            tool=p.get('tool')
+            if not isinstance(tool,str) or not URL.fullmatch(tool):raise ValueError('Invalid tool id')
+            if tool in tools:raise ValueError('Repeated SEO article for same tool '+tool)
+            ko,en=tool_info(tool)
+            if not en:raise ValueError('English article lacks an actual matching English tool: '+tool)
+            links={'ko':ko,'en':en}
+            tools.add(tool)
+        date=p.get('published')
+        if not isinstance(date,str):raise ValueError('Publication date required for '+slug)
+        dt.date.fromisoformat(date)
         check_language('ko',p.get('ko'));check_language('en',p.get('en'))
-        seen.add(name);tools.add(tool)
-        posts.append({**p,'toolURLs':{'ko':ko,'en':en}})
+        visual=p.get('media') or media.get(slug)
+        if not isinstance(visual,dict) or not isinstance(visual.get('image'),dict):
+            raise ValueError('Reviewed article requires curated image and usage rights: '+slug)
+        img=visual['image']
+        if not img.get('url','').startswith('https://images.unsplash.com/photo-'):
+            raise ValueError('Unknown or unapproved image source: '+slug)
+        if not img.get('source','').startswith('https://unsplash.com/photos/'):
+            raise ValueError('Image license attribution source missing: '+slug)
+        for locale in ('ko','en'):
+            if len(str(img.get('alt',{}).get(locale,'')))<15:
+                raise ValueError('Descriptive '+locale+' alt text required: '+slug)
+        if visual.get('category') not in ('photo','document','daily','money','privacy','knowledge'):
+            raise ValueError('Invalid editorial category: '+slug)
+        seen.add(slug)
+        posts.append({**p,'type':kind,'toolURLs':links,'media':visual})
     return sorted(posts,key=lambda p:(p['published'],p['slug']),reverse=True)
 def tags(locale,page_url,title,desc,ko_url,en_url,og_type='article'):
     pairs=[('ko',ko_url),('en',en_url),('x-default',ko_url)]
@@ -154,15 +187,8 @@ def listing(posts,lang):
     html+='</section><p>'+('문제에 맞는 방법을 직접 설명한 글만 게시합니다. 웹앱 이용은 선택 사항입니다.' if is_ko else 'We publish reviewed solutions first. Using a linked tool is optional.')+'</p>'
     return html+'</main>'+foot(lang)+'</div></body></html>'
 def generate_blog(out):
-    out=Path(out);posts=load()
-    for lang,sub in [('ko','blog'),('en','en/blog')]:
-        base=out/sub;base.mkdir(parents=True,exist_ok=True)
-        (base/'index.html').write_text(listing(posts,lang),encoding='utf-8')
-        for post in posts:
-            dest=base/post['slug'];dest.mkdir(exist_ok=True)
-            (dest/'index.html').write_text(article(post,lang),encoding='utf-8')
-    return ['https://abreda.com'+prefix+(p['slug']+'/' if p else '')
-            for prefix in ('/blog/','/en/blog/') for p in ([None]+posts)]
+    from blog_magazine import build
+    return build(Path(out),load())
 if __name__=='__main__':
     from tempfile import TemporaryDirectory
     with TemporaryDirectory() as tmp:
