@@ -35,7 +35,7 @@ for(const [lang,prefix] of [['ko','/blog/'],['en','/en/blog/']]){
   assert.equal(await p.locator('.cta a').count(),infoSet.has(slug)?0:1);
   assert.equal(await p.locator('article figure.hero img').count(),1);
   const img=p.locator('article figure.hero img');
-  assert.match(await img.getAttribute('alt'),/\S{10,}/);
+  assert.ok((await img.getAttribute('alt')).trim().length>=18,'Descriptive localized image alt text required');
   assert.match(await img.getAttribute('src'),/^https:\/\/images\.unsplash\.com\/photo-/);
   assert.equal(await p.locator('article figure.hero figcaption a[href^="https://unsplash.com/photos/"]').count(),1);
   assert.ok(await p.locator('head meta[property="og:image"]').count());
