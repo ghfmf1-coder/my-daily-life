@@ -6,6 +6,8 @@ on:
     paths:
       - 'site-factory/scripts/blog_articles.py'
       - 'site-factory/content/blog/**'
+      - 'site-factory/content/blog-media.json'
+      - 'site-factory/scripts/blog_magazine.py'
       - 'site-factory/scripts/factory.py'
       - 'site-factory/scripts/new_site.py'
       - 'site-factory/sites/toolbox-hub/public/**'

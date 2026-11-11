@@ -5,6 +5,8 @@ on:
   pull_request:
     paths:
       - 'site-factory/content/blog/**'
+      - 'site-factory/content/blog-media.json'
+      - 'site-factory/scripts/blog_magazine.py'
       - 'site-factory/scripts/blog_articles.py'
       - 'site-factory/scripts/factory.py'
       - 'site-factory/sites/toolbox-hub/public/**'
