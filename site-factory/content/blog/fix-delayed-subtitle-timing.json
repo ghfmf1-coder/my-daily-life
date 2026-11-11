@@ -61,19 +61,19 @@
     ]
   },
   "media": {
+    "category": "document",
     "image": {
-      "url": "https://images.unsplash.com/photo-1775163035702-06e47ba88857?auto=format&fit=crop&w=1400&q=78",
-      "source": "https://unsplash.com/photos/CHisgnotgwk",
-      "credit": "Unsplash",
+      "url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/video-editing-timeline-on-dark-screen-yk9VXp4W5-Q",
+      "credit": "Peter Stumpf / Unsplash",
       "alt": {
-        "ko": "문서를 스캔하는 복합기와 사무실 장비",
-        "en": "A document scanner being used to capture paperwork"
+        "ko": "영상 편집 프로그램의 타임라인에 배치된 여러 영상 및 오디오 클립",
+        "en": "Video editing timeline with multiple clips on a computer monitor"
       },
       "caption": {
-        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+        "ko": "자막 싱크 조정과 관련된 영상 편집 타임라인의 자료 사진입니다. 아브레다 화면이 아닙니다.",
+        "en": "Illustrative photo of a video editing timeline; not an ABREDA screenshot."
       }
-    },
-    "category": "document"
+    }
   }
 }
