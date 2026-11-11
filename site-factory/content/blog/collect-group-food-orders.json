@@ -61,19 +61,19 @@
     ]
   },
   "media": {
+    "category": "daily",
     "image": {
-      "url": "https://images.unsplash.com/photo-1735825764485-93a381fd5779?auto=format&fit=crop&w=1400&q=78",
-      "source": "https://unsplash.com/photos/YDe0nOZyLHI",
-      "credit": "Unsplash",
+      "url": "https://images.unsplash.com/photo-1727291609997-c5ecf416ddd9?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-group-of-people-holding-trays-of-food-Er1jKAhfe4w",
+      "credit": "Nguyễn Bình / Unsplash",
       "alt": {
-        "ko": "견적과 판매 업무를 위해 컴퓨터와 서류를 함께 사용하는 책상",
-        "en": "A laptop and paper documents for invoice and sales tasks"
+        "ko": "여러 사람이 각자 주문한 포장 음식을 들고 함께 모인 장면",
+        "en": "A group holding separate trays and bowls of takeout food"
       },
       "caption": {
-        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+        "ko": "여러 사람의 주문을 모아 확인하는 상황을 설명하는 자료 사진입니다. 아브레다 화면이 아닙니다.",
+        "en": "Illustrative photo of group takeout meals; not an ABREDA screenshot."
       }
-    },
-    "category": "money"
+    }
   }
 }
