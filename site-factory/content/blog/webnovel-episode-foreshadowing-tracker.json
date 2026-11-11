@@ -1,0 +1,79 @@
+{
+  "slug": "webnovel-episode-foreshadowing-tracker",
+  "type": "tool",
+  "tool": "novel-planner",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "ko": {
+    "title": "웹소설 복선 회수표 만드는 법: 회차와 인물을 함께 관리",
+    "description": "연재 중 뿌린 복선을 놓치지 않도록 등장 회차·관련 인물·회수 상태를 정리하는 작성법.",
+    "problem": "연재가 길어지면 작가 본인도 예전에 등장시킨 물건, 인물의 약속, 미해결 사건을 잊기 쉽습니다. 회차 요약만 모으기보다 '무엇을 던졌는지'와 '언제 회수할지'를 분리해 관리하는 편이 확인하기 쉽습니다.",
+    "steps": [
+      [
+        "회차마다 독자가 새롭게 알게 된 사실을 기록하세요",
+        "한 회차의 사건 요약을 한두 문장으로 적고 신규 인물·새로운 단서·미해결 문제를 별도 항목으로 표시하세요. 독자에게 공개되지 않은 작가만 아는 설정은 명확히 구분합니다."
+      ],
+      [
+        "복선마다 등장과 회수의 연결고리를 만들어 두세요",
+        "단서의 첫 등장 회차, 관련 인물, 현재 상태, 회수 예정 회차를 기록하세요. '예정'은 확정이 아니라 수정 가능한 계획으로 두고, 연재 중 방향이 바뀌면 기록도 갱신합니다."
+      ],
+      [
+        "집필 전에는 미회수 항목만 빠르게 점검하세요",
+        "다음 회차 초고를 쓰기 전에 아직 회수되지 않은 단서를 확인하세요. 불필요하게 모든 복선을 회수하지 말고 독자의 이해에 필요한 항목과 의도적 미스터리를 구분해 관리하세요."
+      ]
+    ],
+    "alternative": "종이 노트나 스프레드시트에 회차·인물·복선 세 개의 시트를 만들어 연결할 수도 있습니다. 적은 분량이라면 이 방식이 더 단순합니다.",
+    "toolIntro": "아브레다 웹소설 연재 설계실은 회차, 복선, 등장인물을 따로 관리하는 브라우저 작업판입니다. 저장된 자료는 별도 백업을 권장합니다.",
+    "limits": "도구가 이야기의 재미나 복선의 완성도를 평가하지는 않습니다. 브라우저 저장 데이터를 삭제하거나 다른 기기로 이동하면 기록 접근에 문제가 생길 수 있어 백업이 필요합니다.",
+    "faq": [
+      [
+        "복선이 많아지면 반드시 전부 회수해야 하나요?",
+        "그렇지 않습니다. 회수 대상과 배경 설정을 구분하고, 독자가 기억할 필요가 있는 약속과 사건 위주로 상태를 관리하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Track Web-Novel Foreshadowing Across Episodes and Characters",
+    "description": "Keep a practical record of introduced clues, involved characters and unresolved plot threads during serialization.",
+    "problem": "Long-running fiction makes it easy to forget a promise, an object or an unresolved event introduced many episodes earlier. An episode summary alone may not tell you which threads still need attention; a separate clue register can.",
+    "steps": [
+      [
+        "Record what the reader actually learned in each episode",
+        "Write a short event summary and separate new characters, revealed clues and unanswered questions. Distinguish the reader's knowledge from private author notes to avoid accidental early reveals."
+      ],
+      [
+        "Connect each plot thread to episodes and characters",
+        "Record the first appearance, relevant characters, current status and intended payoff episode for each clue. Treat the payoff date as an editable plan, not a guaranteed story outcome."
+      ],
+      [
+        "Review unresolved threads before drafting the next installment",
+        "Before writing, scan unresolved clues and decide which matter to the upcoming scene. Keep intentional mysteries separate from forgotten continuity errors, then revise the register as the plot evolves."
+      ]
+    ],
+    "alternative": "You can also use a notebook or a spreadsheet with separate tabs for episodes, characters and clues. For a short series, that may be easier to maintain.",
+    "toolIntro": "ABREDA Novel Planner stores separate episode, character and foreshadowing records in the browser and lets you keep the plan organized.",
+    "limits": "This is an organizational aid, not a judge of literary quality. Back up local records because clearing browser storage or changing devices can make them unavailable.",
+    "faq": [
+      [
+        "Must every foreshadowed detail receive an explicit payoff?",
+        "No. Track promises and major events that affect reader understanding, and distinguish them from atmosphere or deliberately unresolved questions."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1676287569521-20f0fe96eebf?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/NtcuG3ocC_E",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "키보드 옆에 펼쳐진 일정 메모와 할 일 계획표",
+        "en": "A notebook and calendar planning sheet next to a keyboard"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "daily"
+  }
+}

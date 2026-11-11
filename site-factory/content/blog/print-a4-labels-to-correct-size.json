@@ -1,0 +1,79 @@
+{
+  "slug": "print-a4-labels-to-correct-size",
+  "type": "tool",
+  "tool": "label-sheet-maker",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "ko": {
+    "title": "A4 라벨 인쇄 크기 맞추는 법: 100% 출력 전 확인",
+    "description": "원하는 라벨 크기를 실제 종이에 맞춰 인쇄할 때 여백·축소 인쇄·프린터 오차를 줄이는 체크리스트.",
+    "problem": "화면에서 맞아 보이는 라벨도 인쇄할 때 '페이지에 맞춤'이 켜져 있으면 실제 크기가 작아질 수 있습니다. 스티커 용지는 한번 잘못 출력하면 재사용이 어려우므로 먼저 일반 A4용지로 시험해야 합니다.",
+    "steps": [
+      [
+        "라벨 너비·높이·여백을 실측하세요",
+        "사용할 라벨지의 전체 용지 크기, 각 칸의 가로·세로, 가장자리 여백, 칸 사이 간격을 자로 확인하세요. 판매 페이지 이미지 대신 실제 포장에 적힌 규격과 종이를 기준으로 삼으세요."
+      ],
+      [
+        "시안을 먼저 일반 종이에 출력하세요",
+        "인쇄 설정에서 배율을 100% 또는 실제 크기로 지정하고 자동 맞춤·축소 설정을 확인하세요. 종이 종류와 프린터 급지 방향을 맞춘 뒤 일반 A4용지로 첫 장을 시험 출력하세요."
+      ],
+      [
+        "실물 라벨지에 겹쳐 놓고 위치를 확인하세요",
+        "시험 출력물을 라벨지 위에 겹치거나 빛에 비춰 선이 칸 안에 들어가는지 확인하세요. 경계가 밀린다면 프린터의 비인쇄 영역과 여백을 조정한 뒤 다시 시험하세요."
+      ]
+    ],
+    "alternative": "워드나 디자인 프로그램의 표 기능으로도 라벨을 구성할 수 있습니다. 라벨지 제조사가 전용 양식을 제공한다면 그 양식이 더 정확할 수 있습니다.",
+    "toolIntro": "아브레다 실측 라벨 제작소는 A4 기준 라벨의 크기와 배치를 설정하고 인쇄용 결과를 만드는 브라우저 도구입니다.",
+    "limits": "모든 프린터의 실제 출력 위치를 보정할 수는 없습니다. 자동 축소와 비인쇄 영역이 다르면 설정한 크기와 인쇄 결과에 차이가 날 수 있습니다.",
+    "faq": [
+      [
+        "화면에서 정확한데 인쇄하면 크기가 달라지는 이유는 무엇인가요?",
+        "프린터 드라이버의 페이지 맞춤·축소 또는 출력 여백 설정이 적용될 수 있습니다. 배율을 확인하고 일반 용지에 먼저 실측 시험하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Print A4 Labels at the Intended Physical Size",
+    "description": "Check dimensions, printer scaling and test-sheet alignment before using adhesive label stock.",
+    "problem": "A label layout can look correct on screen but print smaller when the driver uses 'Fit to page'. Test on plain A4 paper before consuming adhesive stock that cannot be easily reused.",
+    "steps": [
+      [
+        "Measure the actual sheet and label cells",
+        "Check the paper dimensions, cell widths and heights, outer margins and gaps. Use the physical pack specification rather than estimating sizes from a product photo."
+      ],
+      [
+        "Print one proof on ordinary paper at actual size",
+        "Choose 100% or Actual size in the print dialog. Disable unwanted fit-to-page scaling, confirm paper orientation and print a plain-paper proof first."
+      ],
+      [
+        "Overlay the proof and correct any offset",
+        "Place the proof over the label sheet and check the borders against the cut lines. If the print shifts, inspect non-printable margins and feed orientation before another proof."
+      ]
+    ],
+    "alternative": "You can also make labels with a word processor table or a vendor-provided template. Manufacturer templates may fit a specific stock layout more reliably.",
+    "toolIntro": "ABREDA Label Sheet Maker arranges labels for A4 output using entered dimensions and creates a printable layout.",
+    "limits": "The tool cannot calibrate every printer driver or non-printable margin. Physical output may differ when scaling or paper-feed settings change.",
+    "faq": [
+      [
+        "Why is the printed label smaller than the on-screen layout?",
+        "The printer may have applied Fit to page or other scaling. Check the print percentage and measure a plain-paper proof before using label stock."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1775163035702-06e47ba88857?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/CHisgnotgwk",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "문서를 스캔하는 복합기와 사무실 장비",
+        "en": "A document scanner being used to capture paperwork"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "document"
+  }
+}

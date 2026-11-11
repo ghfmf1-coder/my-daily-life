@@ -1,0 +1,79 @@
+{
+  "slug": "check-text-background-contrast",
+  "type": "tool",
+  "tool": "color-contrast-audit",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "ko": {
+    "title": "글자색과 배경색 대비 확인하는 법: 버튼·본문 디자인 점검",
+    "description": "HEX 색상값으로 글자와 배경의 명도 대비를 비교하고 실제 화면에서 읽기 어려운 경우를 점검하는 순서.",
+    "problem": "밝은 회색 글자와 흰 배경은 세련되어 보일 수 있지만 작은 글씨에서는 알아보기 어려워집니다. 대비 수치만 맞춘다고 모든 이용자가 읽을 수 있는 것은 아니므로 실제 글꼴 크기와 상태 색상까지 확인해야 합니다.",
+    "steps": [
+      [
+        "실제 화면의 글자색과 배경색을 확인하세요",
+        "디자인 파일이 아닌 화면에서 사용된 전경색과 배경색의 HEX 값을 확인하세요. 버튼의 기본·호버·비활성 상태처럼 배경이 달라지는 요소는 각각 확인해야 합니다."
+      ],
+      [
+        "문자 크기에 해당하는 기준을 확인하세요",
+        "W3C WCAG의 문자 대비 기준은 일반 문자와 큰 문자의 조건이 다릅니다. 문자가 아닌 아이콘이나 경계선은 별도 기준이 있으므로 같은 검사 결과를 모든 요소에 적용하지 마세요."
+      ],
+      [
+        "대체 색상을 적용하고 기기 화면에서 다시 보세요",
+        "대비를 높여도 얇은 글꼴, 배경 이미지 위의 텍스트, 밝기와 눈부심 문제가 남을 수 있습니다. 실제 모바일 화면과 키보드 포커스 상태에서 읽고 구분되는지 확인하세요."
+      ]
+    ],
+    "alternative": "브라우저 개발자 도구나 접근성 검사 도구로도 색상 대비를 확인할 수 있습니다. 실제 사용되는 CSS 값을 검증한다는 점이 중요합니다.",
+    "toolIntro": "아브레다 색상 대비 검수관은 앞·배경 HEX 값을 입력해 대비 수치를 계산하고 대체 색상 조정을 도와줍니다.",
+    "limits": "합격 판정은 특정 색 조합에 대한 계산일 뿐 웹페이지 전체의 WCAG 적합성을 인증하지 않습니다. 배경 이미지와 글꼴 크기·상호작용 상태를 별도로 점검해야 합니다.",
+    "faq": [
+      [
+        "대비 수치가 통과하면 웹 접근성 검사가 끝난 건가요?",
+        "아니요. 키보드 사용, 대체 텍스트, 초점 표시, 오류 안내 등 다른 접근성 항목도 각각 확인해야 합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Check Text and Background Color Contrast Before Publishing a Design",
+    "description": "Use actual foreground and background HEX colors to inspect readability and understand what a contrast score cannot prove.",
+    "problem": "Pale text on a white background may look subtle but be difficult to read, particularly at small sizes. A single color ratio cannot account for font weight, imagery behind the text or every interactive state.",
+    "steps": [
+      [
+        "Capture the colors actually used in the interface",
+        "Find the foreground and background HEX values on the live screen or in the CSS. Check normal, hover, focus and disabled states separately when the combinations differ."
+      ],
+      [
+        "Use the text-size-appropriate accessibility requirement",
+        "W3C WCAG distinguishes normal and large text requirements, while icons and component boundaries have different criteria. Do not apply one text-only result to all visual elements."
+      ],
+      [
+        "Change the combination and inspect it on a device",
+        "A stronger contrast ratio can still leave problems with thin fonts, bright glare or text over photos. Review real mobile displays and keyboard focus states before releasing the design."
+      ]
+    ],
+    "alternative": "Browser developer tools and accessibility checkers can also inspect contrast. The key is testing the colors actually rendered in the page.",
+    "toolIntro": "ABREDA Color Contrast Audit calculates contrast for entered foreground and background HEX values and helps compare possible alternatives.",
+    "limits": "Passing one color combination does not certify an entire site as WCAG-conformant. Typography, images, focus indicators and other accessibility requirements need separate review.",
+    "faq": [
+      [
+        "Does a passing contrast ratio mean the whole page is accessible?",
+        "No. Contrast addresses only part of accessibility; keyboard support, image alternatives, focus indication and error handling remain separate requirements."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/Da0pdCekeUs",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "사진 파일을 편집하고 형식을 비교하는 작업 환경",
+        "en": "A photo-editing laptop for comparing image formats"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "knowledge"
+  }
+}

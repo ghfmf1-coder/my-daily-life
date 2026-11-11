@@ -1,0 +1,79 @@
+{
+  "slug": "measure-repeating-task-time",
+  "type": "tool",
+  "tool": "worktime-analyzer",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "ko": {
+    "title": "반복 작업 소요시간 기록하는 법: 현장 공정별 측정표 만들기",
+    "description": "작업의 시작·종료 기준을 고정하고 중단·대기 시간을 구분해 작업시간을 기록하고 검토하는 절차.",
+    "problem": "현장에서 같은 작업을 여러 번 수행해도 어떤 순간을 시작으로 잡는지에 따라 기록이 달라집니다. 작업자마다 기준이 다르면 측정치를 비교하기 어려우니 먼저 관찰 단위와 시작·종료 이벤트를 고정해야 합니다.",
+    "steps": [
+      [
+        "공정마다 시작과 종료의 기준을 문자로 적으세요",
+        "예를 들어 자재 투입부터 적재 완료까지인지, 확인 서명까지 포함할지 결정하세요. 대기·이동·기계 정지 시간을 포함하는지 별도 구분할지도 정합니다."
+      ],
+      [
+        "실제 작업 중 중단 사유를 별도로 기록하세요",
+        "작업시간을 측정하면서 자재 부족, 기계 정지, 지원 인력 대기와 같은 예외를 메모하세요. 숫자만 남기면 긴 작업이 작업자 때문인지 외부 요인 때문인지 해석할 수 없습니다."
+      ],
+      [
+        "측정 목록을 검수한 뒤 CSV로 보관하세요",
+        "작업별 시작·종료가 누락되지 않았는지 확인하고 중단 구간을 따로 표시하세요. 결과를 공유할 때는 개인을 평가하는 단정적 수치로 쓰지 말고 작업 조건을 함께 적으세요."
+      ]
+    ],
+    "alternative": "종이 스톱워치 기록표나 스프레드시트에 작업번호·시작·종료·예외 사유를 적어도 됩니다. 장갑을 착용한 작업에서는 종이 기록이 더 편할 수 있습니다.",
+    "toolIntro": "아브레다 작업시간 분석실은 반복 공정별 시간을 기록하고 결과를 CSV로 내보내도록 지원합니다.",
+    "limits": "작업시간은 근로기준법상 임금 산정이나 표준작업시간을 자동 확정하는 데이터가 아닙니다. 휴게·대기 구분과 근로시간 판단은 관련 기록과 규정에 근거해 따로 확인해야 합니다.",
+    "faq": [
+      [
+        "작업이 멈춘 시간은 무조건 제외해야 하나요?",
+        "아니요. 측정 목적이 공정 처리시간인지 전체 소요시간인지에 따라 구분 기준을 미리 정하고 대기 이유를 함께 기록해야 합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Measure Repetitive Task Time with Clear Start and Stop Rules",
+    "description": "Create consistent time records for recurring work steps and keep delays separate from hands-on process time.",
+    "problem": "Two workers can measure the same operation differently if one starts at material pickup and another at machine start. Define the observed unit and exact start and stop events before comparing records.",
+    "steps": [
+      [
+        "Write down start and stop conditions for each process",
+        "State whether a cycle begins with material loading and ends at completion or final inspection. Decide how movement, waiting and equipment downtime should be labeled."
+      ],
+      [
+        "Record interruptions with a reason, not only a duration",
+        "Note material shortages, machine stops and handoff delays as they occur. A long recorded cycle alone does not explain whether the cause was the task or an external interruption."
+      ],
+      [
+        "Check the log and export an auditable copy",
+        "Find missing start or stop marks, separate interruption labels and retain the conditions alongside the CSV. Avoid using isolated measurements as definitive judgments of individual productivity."
+      ]
+    ],
+    "alternative": "A paper stopwatch log or spreadsheet with task ID, start, finish and interruption notes can work just as well, especially where gloves make touchscreens awkward.",
+    "toolIntro": "ABREDA Worktime Analyzer records durations for repetitive steps and exports the captured list as CSV.",
+    "limits": "Measured cycle duration alone does not establish legal working hours or a valid industrial engineering standard time. Payroll and compliance need separate records and rules.",
+    "faq": [
+      [
+        "Should every stopped period be excluded from the measurement?",
+        "No. Define whether your goal is hands-on processing time or full elapsed time first, and keep the interruption reason for later interpretation."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1676287569521-20f0fe96eebf?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/NtcuG3ocC_E",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "키보드 옆에 펼쳐진 일정 메모와 할 일 계획표",
+        "en": "A notebook and calendar planning sheet next to a keyboard"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "daily"
+  }
+}

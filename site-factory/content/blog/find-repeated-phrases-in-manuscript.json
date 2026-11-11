@@ -1,0 +1,79 @@
+{
+  "slug": "find-repeated-phrases-in-manuscript",
+  "type": "tool",
+  "tool": "manuscript-lens",
+  "published": "2026-11-11",
+  "status": "reviewed",
+  "ko": {
+    "title": "원고에서 반복 표현 찾는 법: 퇴고할 때 먼저 볼 항목",
+    "description": "웹소설 초고의 반복어, 지나치게 긴 문장, 문단 구조를 기계적 검사와 직접 읽기로 점검하는 방법.",
+    "problem": "초고를 쓸 때는 같은 접속어와 행동 묘사를 반복해도 쉽게 눈에 들어오지 않습니다. 다만 반복은 리듬이나 캐릭터 표현을 위해 의도적으로 쓰기도 하므로 숫자가 많다고 바로 삭제해서는 안 됩니다.",
+    "steps": [
+      [
+        "퇴고 전에는 원본을 보관하고 검사할 분량을 정하세요",
+        "작품 전체보다 한 회차나 장면 단위로 원고를 복사해 검사하면 앞뒤 문맥을 잃지 않고 볼 수 있습니다. 원본에 곧바로 일괄 바꾸기를 적용하지 않도록 새 파일을 만드세요."
+      ],
+      [
+        "반복 표현과 긴 문장이 나타난 위치를 확인하세요",
+        "같은 부사나 문장 시작 표현이 몰린 부분을 찾아 인접 문장과 함께 읽으세요. 길게 이어지는 문장은 사건 순서가 모호한지 확인하되 일부러 호흡을 늘린 문장을 기계적으로 쪼개지 마세요."
+      ],
+      [
+        "바꾼 뒤에는 소리 내 읽어 흐름을 확인하세요",
+        "표현을 삭제하거나 교체한 다음 인물의 목소리, 감정의 고조, 시점이 유지되는지 읽어 보세요. 대사 비중이나 문단 길이 수치는 참고용으로 보고 장면 목적에 따라 판단하세요."
+      ]
+    ],
+    "alternative": "워드프로세서의 찾기 기능으로 자주 쓰는 어휘를 하나씩 검색해도 됩니다. 다만 미처 생각하지 못한 반복어를 찾으려면 목록화가 편리합니다.",
+    "toolIntro": "아브레다 원고돋보기는 붙여 넣은 원고의 반복 표현과 문장·문단 특징을 보여주고 해당 위치를 확인하도록 돕습니다.",
+    "limits": "단어 빈도만으로 문학적 완성도나 AI 작성 여부를 판정할 수 없습니다. 비유나 대사의 의도적인 반복을 오류로 판단하지 않도록 최종 수정은 작가가 결정해야 합니다.",
+    "faq": [
+      [
+        "같은 표현이 두 번 나오면 무조건 고쳐야 하나요?",
+        "아니요. 의미를 강조하거나 인물의 말투를 유지하는 반복일 수 있습니다. 같은 장면에서 독해를 방해하는지 직접 읽고 판단하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Find Repeated Phrases in a Manuscript Without Flattening the Voice",
+    "description": "Review repeated wording, long sentences and paragraph patterns while preserving deliberate stylistic choices.",
+    "problem": "Repeated adverbs and action phrases can blend into a first draft, but repetition is not always a mistake. It can support rhythm or character voice, so a frequency count should direct attention rather than dictate deletions.",
+    "steps": [
+      [
+        "Save the original and choose a manageable passage",
+        "Work on a copy of one episode or scene instead of making blind global replacements. A contained excerpt makes it easier to compare each possible issue against the surrounding narrative."
+      ],
+      [
+        "Inspect repeated wording and long sentences in context",
+        "Look for repeated sentence openings and clustered expressions. Review whether long sentences obscure the order of events, but keep intentional pacing and emphasis where they serve the scene."
+      ],
+      [
+        "Read aloud after revisions",
+        "Once you shorten or replace wording, check that the speaker's voice, point of view and emotional progression still make sense. Treat dialogue proportions and paragraph metrics as descriptive signals, not writing scores."
+      ]
+    ],
+    "alternative": "A word processor's Find command is enough when you already know which phrase to check. A focused overview is useful when the repeated terms are less obvious.",
+    "toolIntro": "ABREDA Manuscript Lens highlights repeated expressions and analyzes sentence and paragraph characteristics of text pasted into the browser.",
+    "limits": "Frequency counts cannot measure literary quality or reliably determine who wrote a text. The author should make every final stylistic decision.",
+    "faq": [
+      [
+        "Should I replace every repeated word that the tool flags?",
+        "No. First decide whether repetition weakens comprehension or contributes to tone, emphasis or a character's consistent speech pattern."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/snNHKZ-mGfE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "정리와 보관이 필요한 여러 문서 파일 묶음",
+        "en": "Organized documents illustrating the need for backups"
+      },
+      "caption": {
+        "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
+        "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+      }
+    },
+    "category": "knowledge"
+  }
+}
