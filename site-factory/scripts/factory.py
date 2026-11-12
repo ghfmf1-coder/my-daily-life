@@ -574,13 +574,16 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
             content=content.replace('</body>',footer+'</body>',1)
         # All remaining public tools use a separate privacy-minimal collector.
         # The original four-site traffic collector and metrics are unchanged.
+        # Cover every public standalone tool, not just the original curated subset.
+        # The collector checks a registered site ID and allowed origin server-side.
+        # Keep the original legacy sites on their historical collector only.
         public_tracking_slug = None
-        if slug in ('subtitle-sync-studio',) or (slug in __import__('seo_guides').GUIDES and slug not in tracking_ids):
+        if slug not in tracking_ids and slug not in {'toolbox-admin', 'deployment-check'}:
             if rel in ('index.html', 'en/index.html'):
                 public_tracking_slug = slug
         if slug == 'toolbox-hub':
             match = re.fullmatch(r'(?:en/)?tools/([a-z0-9-]+)/index[.]html', rel)
-            if match and match.group(1) in {'csv-column-extractor','csv-empty-row-remover','jsonl-validator','srt-sdh-cleaner','vtt-cleaner'}:
+            if match:
                 public_tracking_slug = match.group(1)
         if public_tracking_slug and '</body>' in content and 'toolbox-public-traffic.js' not in content:
             content = content.replace('</body>',
