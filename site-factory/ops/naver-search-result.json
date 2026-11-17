@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-17T20:59:45.877415+00:00",
+  "checkedAt": "2026-11-17T21:24:24.463984+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
@@ -17,6 +17,17 @@
       "publication": "canonical_alias",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-card-grading-lab.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://watch-inspection-lab.abreda.com/",
+      "consoleStatus": "not_registered",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-watch-inspection-lab.pages.dev/"
     },
     {
       "consoleStatus": "verified",
@@ -711,10 +722,9 @@
     {
       "consoleStatus": "ownership_pending",
       "indexNow": {
-        "at": "2026-11-10T12:10:57.309675+00:00",
         "count": 2,
         "http": 200,
-        "status": "previous_receipt"
+        "status": "received"
       },
       "indexing": "unknown",
       "publication": "live",
@@ -724,5 +734,5 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "43bcf0fee86fd26163b5f85db74665529fffaaf5"
+  "sourceCommit": "c64acfcbbfab193b874065d693327f4176b68b47"
 }
