@@ -2,14 +2,14 @@
   "sites": [
     {
       "siteId": "tb-aquarium-water-lab",
-      "url": "https://abreda.com/tools/aquarium-water-lab/",
+      "url": "https://tb-aquarium-water-lab.pages.dev/",
       "origins": [
         "https://tb-aquarium-water-lab.pages.dev"
       ]
     },
     {
       "siteId": "tb-audio-quality",
-      "url": "https://abreda.com/tools/audio-quality/",
+      "url": "https://tb-audio-quality.pages.dev/",
       "origins": [
         "https://tb-audio-quality.pages.dev"
       ]
@@ -23,7 +23,7 @@
     },
     {
       "siteId": "tb-camera-lens-check",
-      "url": "https://abreda.com/tools/camera-lens-check/",
+      "url": "https://tb-camera-lens-check.pages.dev/",
       "origins": [
         "https://tb-camera-lens-check.pages.dev"
       ]
@@ -37,14 +37,14 @@
     },
     {
       "siteId": "tb-certificate-batch",
-      "url": "https://abreda.com/tools/certificate-batch/",
+      "url": "https://tb-certificate-batch.pages.dev/",
       "origins": [
         "https://tb-certificate-batch.pages.dev"
       ]
     },
     {
       "siteId": "tb-class-schedule-check",
-      "url": "https://abreda.com/tools/class-schedule-check/",
+      "url": "https://tb-class-schedule-check.pages.dev/",
       "origins": [
         "https://tb-class-schedule-check.pages.dev"
       ]
@@ -58,7 +58,7 @@
     },
     {
       "siteId": "tb-comic-condition-lab",
-      "url": "https://abreda.com/tools/comic-condition-lab/",
+      "url": "https://tb-comic-condition-lab.pages.dev/",
       "origins": [
         "https://tb-comic-condition-lab.pages.dev"
       ]
@@ -86,7 +86,7 @@
     },
     {
       "siteId": "tb-detail-image-review",
-      "url": "https://abreda.com/tools/detail-image-review/",
+      "url": "https://tb-detail-image-review.pages.dev/",
       "origins": [
         "https://tb-detail-image-review.pages.dev"
       ]
@@ -100,35 +100,35 @@
     },
     {
       "siteId": "tb-dst-embroidery",
-      "url": "https://abreda.com/tools/dst-embroidery/",
+      "url": "https://tb-dst-embroidery.pages.dev/",
       "origins": [
         "https://tb-dst-embroidery.pages.dev"
       ]
     },
     {
       "siteId": "tb-epub-preflight",
-      "url": "https://abreda.com/tools/epub-preflight/",
+      "url": "https://tb-epub-preflight.pages.dev/",
       "origins": [
         "https://tb-epub-preflight.pages.dev"
       ]
     },
     {
       "siteId": "tb-event-seating",
-      "url": "https://abreda.com/tools/event-seating/",
+      "url": "https://tb-event-seating.pages.dev/",
       "origins": [
         "https://tb-event-seating.pages.dev"
       ]
     },
     {
       "siteId": "tb-exam-variants",
-      "url": "https://abreda.com/tools/exam-variants/",
+      "url": "https://tb-exam-variants.pages.dev/",
       "origins": [
         "https://tb-exam-variants.pages.dev"
       ]
     },
     {
       "siteId": "tb-gem-photo-inspection",
-      "url": "https://abreda.com/tools/gem-photo-inspection/",
+      "url": "https://tb-gem-photo-inspection.pages.dev/",
       "origins": [
         "https://tb-gem-photo-inspection.pages.dev"
       ]
@@ -156,14 +156,14 @@
     },
     {
       "siteId": "tb-inventory-diff",
-      "url": "https://abreda.com/tools/inventory-diff/",
+      "url": "https://tb-inventory-diff.pages.dev/",
       "origins": [
         "https://tb-inventory-diff.pages.dev"
       ]
     },
     {
       "siteId": "tb-invoice-reconcile",
-      "url": "https://abreda.com/tools/invoice-reconcile/",
+      "url": "https://tb-invoice-reconcile.pages.dev/",
       "origins": [
         "https://tb-invoice-reconcile.pages.dev"
       ]
@@ -177,7 +177,7 @@
     },
     {
       "siteId": "tb-keyboard-switch-diagnostics",
-      "url": "https://abreda.com/tools/keyboard-switch-diagnostics/",
+      "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
       "origins": [
         "https://tb-keyboard-switch-diagnostics.pages.dev"
       ]
@@ -191,7 +191,7 @@
     },
     {
       "siteId": "tb-lease-registry-diff",
-      "url": "https://abreda.com/tools/lease-registry-diff/",
+      "url": "https://tb-lease-registry-diff.pages.dev/",
       "origins": [
         "https://tb-lease-registry-diff.pages.dev"
       ]
@@ -205,21 +205,21 @@
     },
     {
       "siteId": "tb-move-evidence",
-      "url": "https://abreda.com/tools/move-evidence/",
+      "url": "https://tb-move-evidence.pages.dev/",
       "origins": [
         "https://tb-move-evidence.pages.dev"
       ]
     },
     {
       "siteId": "tb-moving-boxes",
-      "url": "https://abreda.com/tools/moving-boxes/",
+      "url": "https://tb-moving-boxes.pages.dev/",
       "origins": [
         "https://tb-moving-boxes.pages.dev"
       ]
     },
     {
       "siteId": "tb-option-combinations",
-      "url": "https://abreda.com/tools/option-combinations/",
+      "url": "https://tb-option-combinations.pages.dev/",
       "origins": [
         "https://tb-option-combinations.pages.dev"
       ]
@@ -233,21 +233,21 @@
     },
     {
       "siteId": "tb-pdf-preflight",
-      "url": "https://abreda.com/tools/pdf-preflight/",
+      "url": "https://tb-pdf-preflight.pages.dev/",
       "origins": [
         "https://tb-pdf-preflight.pages.dev"
       ]
     },
     {
       "siteId": "tb-photo-contact-sheet",
-      "url": "https://abreda.com/tools/photo-contact-sheet/",
+      "url": "https://tb-photo-contact-sheet.pages.dev/",
       "origins": [
         "https://tb-photo-contact-sheet.pages.dev"
       ]
     },
     {
       "siteId": "tb-photo-duplicates",
-      "url": "https://abreda.com/tools/photo-duplicates/",
+      "url": "https://tb-photo-duplicates.pages.dev/",
       "origins": [
         "https://tb-photo-duplicates.pages.dev"
       ]
@@ -261,14 +261,14 @@
     },
     {
       "siteId": "tb-purchase-three-way",
-      "url": "https://abreda.com/tools/purchase-three-way/",
+      "url": "https://tb-purchase-three-way.pages.dev/",
       "origins": [
         "https://tb-purchase-three-way.pages.dev"
       ]
     },
     {
       "siteId": "tb-question-similarity",
-      "url": "https://abreda.com/tools/question-similarity/",
+      "url": "https://tb-question-similarity.pages.dev/",
       "origins": [
         "https://tb-question-similarity.pages.dev"
       ]
@@ -317,35 +317,35 @@
     },
     {
       "siteId": "tb-shipping-audit",
-      "url": "https://abreda.com/tools/shipping-audit/",
+      "url": "https://tb-shipping-audit.pages.dev/",
       "origins": [
         "https://tb-shipping-audit.pages.dev"
       ]
     },
     {
       "siteId": "tb-shotlist-maker",
-      "url": "https://abreda.com/tools/shotlist-maker/",
+      "url": "https://tb-shotlist-maker.pages.dev/",
       "origins": [
         "https://tb-shotlist-maker.pages.dev"
       ]
     },
     {
       "siteId": "tb-show-cues",
-      "url": "https://abreda.com/tools/show-cues/",
+      "url": "https://tb-show-cues.pages.dev/",
       "origins": [
         "https://tb-show-cues.pages.dev"
       ]
     },
     {
       "siteId": "tb-silence-finder",
-      "url": "https://abreda.com/tools/silence-finder/",
+      "url": "https://tb-silence-finder.pages.dev/",
       "origins": [
         "https://tb-silence-finder.pages.dev"
       ]
     },
     {
       "siteId": "tb-sneaker-condition-lab",
-      "url": "https://abreda.com/tools/sneaker-condition-lab/",
+      "url": "https://tb-sneaker-condition-lab.pages.dev/",
       "origins": [
         "https://tb-sneaker-condition-lab.pages.dev"
       ]
@@ -359,7 +359,7 @@
     },
     {
       "siteId": "tb-static-site-check",
-      "url": "https://abreda.com/tools/static-site-check/",
+      "url": "https://tb-static-site-check.pages.dev/",
       "origins": [
         "https://tb-static-site-check.pages.dev"
       ]
@@ -380,56 +380,56 @@
     },
     {
       "siteId": "tb-subtitle-sync-studio",
-      "url": "https://abreda.com/tools/subtitle-sync-studio/",
+      "url": "https://tb-subtitle-sync-studio.pages.dev/",
       "origins": [
         "https://tb-subtitle-sync-studio.pages.dev"
       ]
     },
     {
       "siteId": "tb-survey-review",
-      "url": "https://abreda.com/tools/survey-review/",
+      "url": "https://tb-survey-review.pages.dev/",
       "origins": [
         "https://tb-survey-review.pages.dev"
       ]
     },
     {
       "siteId": "tb-svg-laser-check",
-      "url": "https://abreda.com/tools/svg-laser-check/",
+      "url": "https://tb-svg-laser-check.pages.dev/",
       "origins": [
         "https://tb-svg-laser-check.pages.dev"
       ]
     },
     {
       "siteId": "tb-tournament-maker",
-      "url": "https://abreda.com/tools/tournament-maker/",
+      "url": "https://tb-tournament-maker.pages.dev/",
       "origins": [
         "https://tb-tournament-maker.pages.dev"
       ]
     },
     {
       "siteId": "tb-trip-supplies",
-      "url": "https://abreda.com/tools/trip-supplies/",
+      "url": "https://tb-trip-supplies.pages.dev/",
       "origins": [
         "https://tb-trip-supplies.pages.dev"
       ]
     },
     {
       "siteId": "tb-used-car-inspection",
-      "url": "https://abreda.com/tools/used-car-inspection/",
+      "url": "https://tb-used-car-inspection.pages.dev/",
       "origins": [
         "https://tb-used-car-inspection.pages.dev"
       ]
     },
     {
       "siteId": "tb-video-delivery-check",
-      "url": "https://abreda.com/tools/video-delivery-check/",
+      "url": "https://tb-video-delivery-check.pages.dev/",
       "origins": [
         "https://tb-video-delivery-check.pages.dev"
       ]
     },
     {
       "siteId": "tb-vinyl-condition-lab",
-      "url": "https://abreda.com/tools/vinyl-condition-lab/",
+      "url": "https://tb-vinyl-condition-lab.pages.dev/",
       "origins": [
         "https://tb-vinyl-condition-lab.pages.dev"
       ]
@@ -457,7 +457,7 @@
     },
     {
       "siteId": "tb-webtoon-preflight",
-      "url": "https://abreda.com/tools/webtoon-preflight/",
+      "url": "https://tb-webtoon-preflight.pages.dev/",
       "origins": [
         "https://tb-webtoon-preflight.pages.dev"
       ]
