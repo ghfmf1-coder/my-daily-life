@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-21T08:02:45.233050+00:00",
+  "checkedAt": "2026-11-21T08:40:41.759705+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
@@ -90,16 +90,12 @@
     },
     {
       "consoleStatus": "verified",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-08T07:45:01.334228+00:00",
-        "count": 4,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "submitted",
       "url": "https://my-daily-life.pages.dev/"
     },
@@ -135,586 +131,430 @@
     },
     {
       "consoleStatus": "verified",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:18.932477+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "submitted",
       "url": "https://tb-aquarium-water-lab.pages.dev/"
     },
     {
       "consoleStatus": "verified",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:19.679321+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "submitted",
       "url": "https://tb-audio-quality.pages.dev/"
     },
     {
       "consoleStatus": "verified",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:21.164076+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "submitted",
       "url": "https://tb-camera-lens-check.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:22.124731+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-certificate-batch.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:23.153327+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-class-schedule-check.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:24.706662+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-comic-condition-lab.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:25.441930+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-detail-image-review.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:26.253715+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-dst-embroidery.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:27.255108+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-epub-preflight.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:28.128520+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-event-seating.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:29.093760+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-exam-variants.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:30.718787+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-gem-photo-inspection.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:31.517696+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-inventory-diff.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:32.511358+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-invoice-reconcile.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:33.994097+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-keyboard-switch-diagnostics.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:34.881222+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-lease-registry-diff.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:35.636845+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-move-evidence.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:36.690960+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-moving-boxes.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:37.426287+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-option-combinations.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:38.170730+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-pdf-preflight.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:38.949365+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-photo-contact-sheet.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:39.958403+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-photo-duplicates.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:40.983050+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-purchase-three-way.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:42.050850+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-question-similarity.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:42.799402+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-shipping-audit.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:43.576734+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-shotlist-maker.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:44.348894+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-show-cues.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:45.103444+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-silence-finder.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:46.417726+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-sneaker-condition-lab.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:47.166442+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-static-site-check.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:48.417903+00:00",
-        "count": 6,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-subtitle-sync-studio.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:49.145149+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-survey-review.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:50.003695+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-svg-laser-check.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:50.923328+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-tournament-maker.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:51.768323+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-trip-supplies.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:53.015686+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-used-car-inspection.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:53.933708+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-video-delivery-check.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:55.190338+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-vinyl-condition-lab.pages.dev/"
     },
     {
       "consoleStatus": "ownership_pending",
+      "error": "ValueError",
       "indexNow": {
-        "at": "2026-11-10T12:10:55.941308+00:00",
-        "count": 2,
-        "http": 200,
-        "status": "previous_receipt"
+        "status": "not_confirmed"
       },
       "indexing": "unknown",
       "publication": "live",
-      "robotsSitemap": "present",
-      "sitemapFile": "valid",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-webtoon-preflight.pages.dev/"
     },
@@ -734,5 +574,5 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "b738c1c5bfdd7d2b0bb5473cafba195518c2b7f5"
+  "sourceCommit": "5162a47072bc316150b4d2e24902f24a3cece595"
 }
