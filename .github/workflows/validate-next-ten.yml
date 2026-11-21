@@ -1,0 +1,43 @@
+name: Validate next ten ABREDA tools
+on:
+  push:
+    branches: [feat/abreda-next-ten-tools]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate bilingual tool sources and JS syntax
+        run: |
+          python3 - <<'PY'
+          import sys,subprocess
+          sys.path.insert(0,'site-factory/scripts')
+          from factory import validate_site
+          slugs='secure-password-maker unix-time-converter text-case-converter line-sort-deduplicate json-pretty-validator url-component-codec base64-text-codec word-character-counter text-diff-checker markdown-preview-lite'.split()
+          for slug in slugs:
+              validate_site(slug,require_approval=True)
+              subprocess.run(['node','--check',f'site-factory/sites/{slug}/public/app.js'],check=True)
+              print('PASS',slug)
+          PY
+      - name: Build hub and verify all ten tools and bilingual blog pages
+        run: |
+          python3 - <<'PY'
+          import sys,tempfile
+          from pathlib import Path
+          sys.path.insert(0,'site-factory/scripts')
+          from factory import prepare
+          slugs='secure-password-maker unix-time-converter text-case-converter line-sort-deduplicate json-pretty-validator url-component-codec base64-text-codec word-character-counter text-diff-checker markdown-preview-lite'.split()
+          with tempfile.TemporaryDirectory() as temp:
+              out=Path(temp)
+              prepare('toolbox-hub',out)
+              for slug in slugs:
+                  for path in [out/'tools'/slug/'index.html',out/'en/tools'/slug/'index.html',out/'tools'/slug/'app.js',out/'blog'/('guide-'+slug)/'index.html',out/'en/blog'/('guide-'+slug)/'index.html']:
+                      if not path.is_file():raise AssertionError('Missing '+str(path))
+                  print('BUILT',slug)
+          PY
