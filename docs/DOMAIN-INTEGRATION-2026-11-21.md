@@ -102,3 +102,21 @@ Google 공식 요구와 운영 권장사항을 구분한다. 정책 준수·사�
 - Cloudflare Pages redirects(2026-08-25 갱신): https://developers.cloudflare.com/pages/configuration/redirects/ — Functions 경로 등 적용 조건이 있으므로 검증 없이 리디렉션을 넣지 않았다.
 
 도메인 통합은 승인·광고 게재·검색 색인을 보장하지 않는다.
+
+
+## 후속 작업 — 2026-11-21 (계속 진행)
+
+- **추가 원인 확인:** 검색엔진 자동화 `naver_search_setup.py`가 D1의 보존된 과거 URL로 `visit-sites.json`을 다시 작성했다. 실제 되돌림 커밋 `b738c1c`를 확인했다. 단순 외부 캐시 문제만은 아니었다.
+- `domain-routes.json`의 검증된 대표 주소를 자동 생성의 최종 우선값으로 적용하고 기존 origin을 유지하도록 수정했다. 이로써 다음 검색 동기화가 통합 주소를 되돌리지 않는다. 39개 과거 주소 입력 회귀와 검색 자동화 테스트 5개 통과.
+- Google OAuth 연결을 새로 만들거나 권한을 늘리지 않았다. 기존 `adsense.readonly`와 동일 GitHub OIDC 경계 안에서 공식 `accounts.sites.list` 조회를 추가했다. 인증 경계 회귀 및 페이지네이션/실패 상태/출력 필드 제한 테스트 통과. Edge Function `toolbox-google-ads-oauth` v20 ACTIVE.
+- 코드 커밋: https://github.com/ghfmf1-coder/my-daily-life/commit/0278a976b78cf4a8bc014404bcacd136cc221426
+- 상태 조회 실행 요청: https://github.com/ghfmf1-coder/my-daily-life/commit/dda4fb1fabc8cb23d7ac3cafe91d623659543578
+- 공식 API 문서(2025-02-28 갱신): https://developers.google.com/adsense/management/reference/rest/v2/accounts.sites/list 및 https://developers.google.com/adsense/management/reference/rest/v2/accounts.sites . `READY`와 `REQUIRES_REVIEW` 등을 원천 값으로 구분한다. 목록 조회 실패는 미등록/승인 거절로 간주하지 않는다. 조회는 심사 신청·광고 활성화를 하지 않는다.
+
+- 기존 실패 작업 44882959215를 수집기 v5 상태에서 재실행했다. **71개 추적 설치·수집 진단은 통과**했다. 이후 `verify-source-snapshot.mjs`에서 `unmapped public visit source`가 발생했다. 원인은 Supabase 새 대표 주소와 D1의 보존된 과거 주소를 현재 보고 모델이 정확히 연결하지 못하는 것이다. 이는 Worker/D1 표시 미완료 항목의 구체적 재현 근거이며, 방문 수집 실패와 구분한다. 오류를 숨기려고 검사 조건이나 기존 데이터를 삭제하지 않았다.
+
+- 같은 실행의 Google URL Inspection 응답을 저장했다(`followup-registry.json`). 조회 URL 82개 중 `PASS` 37개, `NEUTRAL` 45개. 옛 별칭/새 주소가 포함된 URL 단위이며 앱 82개나 전체 사이트 색인율이 아니다. `NEUTRAL`에는 발견 후 미색인·미인지 새 URL·대체 페이지가 섞여 있어 전부 스팸 제재로 해석할 수 없다.
+
+## 긴급 마무리: 2026-11-21
+
+기존 OAuth Edge v21의 readinessOnly로 AdSense sites.list 조회 성공(run 44884642494). 아브레다 관련 사이트 항목은 빈 배열이며 승인으로 판정하지 않음. 신청·광고 송출 없음. Worker/D1 인증 장애는 보류. 최신 개발·배포 절차와 권한 장애는 [NEXT-DEVELOPMENT-HANDOFF.md](NEXT-DEVELOPMENT-HANDOFF.md)에 기록. 하루한칸 삭제·신규 앱·콘텐츠는 이번 실행 제외.

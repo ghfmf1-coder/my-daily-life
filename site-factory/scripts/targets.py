@@ -37,7 +37,7 @@ else:
             n.startswith('site-factory/tests/blog-browser.mjs') for n in changed)
     )
     shared=not blog_release and any(n.startswith('site-factory/scripts/') or n=='.github/workflows/toolbox-pages.yml' for n in changed)
-    new_blog=any(n.startswith('site-factory/content/blog/') or n.startswith('work-sites/') and n.endswith('/blog.json') for n in changed)
+    new_blog=any(n.startswith('site-factory/content/blog/') or n=='site-factory/content/blog-media.json' or n=='site-factory/marketing/briefs.json' or n.startswith('work-sites/') and n.endswith('/blog.json') for n in changed)
     selected=['toolbox-hub'] if blog_release else all_sites if shared else sorted(set(p.split('/')[2] for p in changed if p.startswith('site-factory/sites/') and len(p.split('/'))>=4))
     if new_blog and 'toolbox-hub' in all_sites:
         selected=sorted(set(selected+['toolbox-hub']))

@@ -8,7 +8,31 @@ from urllib.parse import urljoin, urlsplit
 from html import escape, unescape
 import json,re,shutil,tempfile
 ROOT=Path(__file__).resolve().parents[2]
+def manual_hub_routes(sites_root):
+    """Discover approved bilingual file-based apps; never create Pages projects."""
+    rows=[]
+    for path in sorted(sites_root.glob('*/site.json')):
+        data=json.loads(path.read_text())
+        if not (data.get('approved') is True and data.get('deploy_mode')=='hub_only'
+                and data.get('generated_en') is not True):
+            continue
+        slug=data.get('slug')
+        if slug!=path.parent.name or not re.fullmatch(r'[a-z0-9][a-z0-9-]{1,39}',str(slug)):
+            raise ValueError('Invalid hub-only slug: '+str(slug))
+        if data.get('locales')!=['ko','en']:
+            raise ValueError('Hub-only apps require actual ko/en pages: '+slug)
+        project=data.get('project','')
+        if project!='tb-'+slug:
+            raise ValueError('Hub-only project/siteId must be tb-'+slug)
+        rows.append({'slug':slug,'source':'factory','project':project,
+                     'old_url':'https://'+project+'.pages.dev/',
+                     'ko_url':'https://abreda.com/tools/'+slug+'/',
+                     'en_url':'https://abreda.com/en/tools/'+slug+'/'})
+    return rows
+
 ROUTES=json.loads((ROOT/'site-factory/ops/domain-routes.json').read_text())['routes']
+_existing={row['slug'] for row in ROUTES}
+ROUTES += [row for row in manual_hub_routes(ROOT/'site-factory/sites') if row['slug'] not in _existing]
 BY_SLUG={r['slug']:r for r in ROUTES}
 
 def canonical_pair(slug):

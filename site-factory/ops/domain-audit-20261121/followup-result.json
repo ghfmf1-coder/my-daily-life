@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-21T17:21:41.587223+09:00",
+  "codeCommit": "0278a976b78cf4a8bc014404bcacd136cc221426",
+  "triggerCommit": "dda4fb1fabc8cb23d7ac3cafe91d623659543578",
+  "manifestRollback": {
+    "observedCommit": "b738c1c",
+    "cause": "naver_search_setup.py rebuilds visit-sites.json from historical D1 URLs",
+    "fix": "reviewed domain-routes.json has final precedence; preserve old origins",
+    "regressionRoutes": 39,
+    "testNaverCases": 5
+  },
+  "adsenseBridge": {
+    "version": 21,
+    "health": true,
+    "unauthenticatedRequestHttp": 401,
+    "authorization": "existing adsense.readonly; unchanged GitHub OIDC validator",
+    "changes": "read-only sites.list and sanitized state reporting; no review request or advertising mutation"
+  },
+  "registryRetry": {
+    "runId": 44882959215,
+    "attempt": 2,
+    "visitorCoverage": 71,
+    "failure": "unmapped public visit source",
+    "reason": "current model exact URL join cannot match migrated Supabase URLs to retained D1 aliases; Worker deployment still blocked"
+  },
+  "adsenseRun": 44884642494,
+  "adsenseState": {
+    "status": "ok",
+    "generatedAt": "2026-11-21T08:23:22.740Z",
+    "account": "accounts/pub-1802341703309961",
+    "sites": []
+  },
+  "readinessOnlyCommit": "453e9be5780243ca12c2e0f3d1374acdc0fecbf6"
+}

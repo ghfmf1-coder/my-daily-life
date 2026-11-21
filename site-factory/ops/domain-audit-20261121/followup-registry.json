@@ -1,0 +1,2946 @@
+{
+  "run": "https://github.com/ghfmf1-coder/my-daily-life/actions/runs/44882959215",
+  "attempt": 2,
+  "visitorCoverage": 71,
+  "conclusion": "failure",
+  "failure": "unmapped public visit source",
+  "sites": [
+    {
+      "url": "https://my-daily-life.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://my-daily-life.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://my-daily-life.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:25.401Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "중복 페이지, Google에서 사용자와 다른 표준을 선택함",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:44Z"
+      }
+    },
+    {
+      "url": "https://tb-aquarium-water-lab.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-aquarium-water-lab.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-aquarium-water-lab.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:26.342Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:44Z"
+      }
+    },
+    {
+      "url": "https://tb-camera-lens-check.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-camera-lens-check.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-camera-lens-check.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:25.705Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:45Z"
+      }
+    },
+    {
+      "url": "https://tb-card-grading-lab.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-card-grading-lab.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-card-grading-lab.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:25.761Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:44Z"
+      }
+    },
+    {
+      "url": "https://tb-comic-condition-lab.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-comic-condition-lab.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-comic-condition-lab.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:25.976Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:02Z"
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/csv-column-extractor/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-20T20:06:51Z"
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/csv-empty-row-remover/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-07T02:06:20Z"
+      }
+    },
+    {
+      "url": "https://csv.abreda.com/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://csv.abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:11:23.624Z",
+            "lastDownloaded": "2026-11-17T19:04:58.699Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-16T05:56:15Z"
+      }
+    },
+    {
+      "url": "https://tb-gem-photo-inspection.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-gem-photo-inspection.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-gem-photo-inspection.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:26.466Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/jsonl-validator/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T03:46:11Z"
+      }
+    },
+    {
+      "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-keyboard-switch-diagnostics.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:29.957Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:18Z"
+      }
+    },
+    {
+      "url": "https://manuscript.abreda.com/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://manuscript.abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:11:36.891Z",
+            "lastDownloaded": "2026-11-17T01:23:55.359Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-08T16:21:16Z"
+      }
+    },
+    {
+      "url": "https://novel.abreda.com/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://novel.abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:11:29.515Z",
+            "lastDownloaded": "2026-11-14T05:27:04.790Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-13T13:12:19Z"
+      }
+    },
+    {
+      "url": "https://tb-sneaker-condition-lab.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-sneaker-condition-lab.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-sneaker-condition-lab.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:31.261Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:04Z"
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/srt-sdh-cleaner/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T02:30:06Z"
+      }
+    },
+    {
+      "url": "https://stl-print-check.abreda.com/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://stl-print-check.abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-22T14:51:07.292Z",
+            "lastDownloaded": "2026-11-21T01:45:25.936Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-23T05:46:10Z"
+      }
+    },
+    {
+      "url": "https://tb-subtitle-sync-studio.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-subtitle-sync-studio.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-subtitle-sync-studio.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:31.788Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-20T22:21:22Z"
+      }
+    },
+    {
+      "url": "https://tb-used-car-inspection.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-used-car-inspection.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-used-car-inspection.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:54:44.288Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:06Z"
+      }
+    },
+    {
+      "url": "https://tb-vinyl-condition-lab.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-vinyl-condition-lab.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-vinyl-condition-lab.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:32.375Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/vtt-cleaner/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T03:00:06Z"
+      }
+    },
+    {
+      "url": "https://watch-inspection-lab.abreda.com/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://watch-inspection-lab.abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-22T14:51:07.371Z",
+            "lastDownloaded": "2026-11-19T12:23:12.374Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-23T05:46:08Z"
+      }
+    },
+    {
+      "url": "https://tb-shipping-audit.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-shipping-audit.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-shipping-audit.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:30.789Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:09Z"
+      }
+    },
+    {
+      "url": "https://tb-pdf-preflight.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-pdf-preflight.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-pdf-preflight.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:26.774Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "크롤링됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:53Z"
+      }
+    },
+    {
+      "url": "https://tb-certificate-batch.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-certificate-batch.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-certificate-batch.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:25.813Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:46Z"
+      }
+    },
+    {
+      "url": "https://tb-inventory-diff.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-inventory-diff.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-inventory-diff.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:29.413Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-13T04:58:52Z"
+      }
+    },
+    {
+      "url": "https://tb-class-schedule-check.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-class-schedule-check.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-class-schedule-check.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:26.377Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://tb-invoice-reconcile.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-invoice-reconcile.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-invoice-reconcile.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:29.517Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:54Z"
+      }
+    },
+    {
+      "url": "https://tb-purchase-three-way.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-purchase-three-way.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-purchase-three-way.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:30.351Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "크롤링됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:56Z"
+      }
+    },
+    {
+      "url": "https://tb-svg-laser-check.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-svg-laser-check.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-svg-laser-check.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:31.611Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:14Z"
+      }
+    },
+    {
+      "url": "https://tb-video-delivery-check.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-video-delivery-check.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-video-delivery-check.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:32.067Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-09T04:27:51Z"
+      }
+    },
+    {
+      "url": "https://tb-static-site-check.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-static-site-check.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-static-site-check.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:26.592Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "크롤링됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:05Z"
+      }
+    },
+    {
+      "url": "https://tb-exam-variants.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-exam-variants.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-exam-variants.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:26.793Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "크롤링됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:06Z"
+      }
+    },
+    {
+      "url": "https://tb-epub-preflight.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-epub-preflight.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-epub-preflight.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:26.311Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "크롤링됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:07Z"
+      }
+    },
+    {
+      "url": "https://tb-move-evidence.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-move-evidence.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-move-evidence.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:30.094Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:59Z"
+      }
+    },
+    {
+      "url": "https://tb-webtoon-preflight.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-webtoon-preflight.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-webtoon-preflight.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:32.157Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "크롤링됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T23:38:12Z"
+      }
+    },
+    {
+      "url": "https://tb-option-combinations.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-option-combinations.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-option-combinations.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:30.138Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "크롤링됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:57Z"
+      }
+    },
+    {
+      "url": "https://tb-lease-registry-diff.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-lease-registry-diff.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-lease-registry-diff.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:29.841Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://tb-event-seating.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-event-seating.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-event-seating.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:29.763Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:55Z"
+      }
+    },
+    {
+      "url": "https://tb-photo-duplicates.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-photo-duplicates.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-photo-duplicates.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:30.478Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:06Z"
+      }
+    },
+    {
+      "url": "https://tb-question-similarity.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-question-similarity.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-question-similarity.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:31.162Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "크롤링됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:04Z"
+      }
+    },
+    {
+      "url": "https://tb-silence-finder.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-silence-finder.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-silence-finder.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:26.808Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:00Z"
+      }
+    },
+    {
+      "url": "https://tb-survey-review.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-survey-review.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-survey-review.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:31.505Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "크롤링됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:13Z"
+      }
+    },
+    {
+      "url": "https://tb-photo-contact-sheet.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-photo-contact-sheet.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-photo-contact-sheet.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:30.576Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:57Z"
+      }
+    },
+    {
+      "url": "https://tb-tournament-maker.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-tournament-maker.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-tournament-maker.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:27.065Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:14Z"
+      }
+    },
+    {
+      "url": "https://tb-trip-supplies.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-trip-supplies.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-trip-supplies.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:27.270Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:42Z"
+      }
+    },
+    {
+      "url": "https://tb-moving-boxes.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-moving-boxes.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-moving-boxes.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:30.259Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-29T09:35:55Z"
+      }
+    },
+    {
+      "url": "https://tb-audio-quality.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-audio-quality.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-audio-quality.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:25.396Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:52Z"
+      }
+    },
+    {
+      "url": "https://tb-detail-image-review.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-detail-image-review.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-detail-image-review.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:26.114Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-13T08:38:42Z"
+      }
+    },
+    {
+      "url": "https://tb-dst-embroidery.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-dst-embroidery.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-dst-embroidery.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-22T15:03:26.119Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:54Z"
+      }
+    },
+    {
+      "url": "https://tb-show-cues.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-show-cues.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-show-cues.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:31.108Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:17:04Z"
+      }
+    },
+    {
+      "url": "https://tb-shotlist-maker.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-shotlist-maker.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-shotlist-maker.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-10-23T00:52:31.060Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "크롤링됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-10-22T16:16:57Z"
+      }
+    },
+    {
+      "url": "https://card-grading-lab.abreda.com/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://card-grading-lab.abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-11-09T13:58:21.592Z",
+            "lastDownloaded": "2026-11-20T20:27:53.831Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-09T16:34:37Z"
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/cut-plan-optimizer/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/group-order-summary/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/handover-checklist/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/label-sheet-maker/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/meal-timeline/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/privacy-redactor/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/recurring-payment-finder/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/shift-calendar/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/submission-auditor/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/worktime-analyzer/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/bulk-file-renamer/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/color-contrast-audit/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/document-scan-studio/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/image-compress-lab/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/pdf-page-workshop/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/quote-document-maker/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/room-layout-planner/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/seller-profit-math/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/share-qr-card/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/warranty-deadline-tracker/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://tb-watch-inspection-lab.pages.dev/",
+      "ownership": "accessible",
+      "property": "https://tb-watch-inspection-lab.pages.dev/",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://tb-watch-inspection-lab.pages.dev/sitemap.xml",
+            "isPending": true,
+            "lastSubmitted": "2026-11-17T21:23:31.007Z",
+            "lastDownloaded": null,
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "적절한 표준 태그가 포함된 대체 페이지",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-17T22:06:39Z"
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/aquarium-water-lab/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/camera-lens-check/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/comic-condition-lab/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/gem-photo-inspection/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/keyboard-switch-diagnostics/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/sneaker-condition-lab/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/subtitle-sync-studio/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/used-car-inspection/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    },
+    {
+      "url": "https://abreda.com/tools/vinyl-condition-lab/",
+      "ownership": "accessible",
+      "property": "sc-domain:abreda.com",
+      "permission": "siteOwner",
+      "sitemaps": {
+        "status": "ok",
+        "entries": [
+          {
+            "path": "https://abreda.com/sitemap.xml",
+            "isPending": false,
+            "lastSubmitted": "2026-10-16T09:09:42.359Z",
+            "lastDownloaded": "2026-11-21T07:35:53.012Z",
+            "errors": "0",
+            "warnings": "0"
+          }
+        ]
+      },
+      "index": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      }
+    }
+  ],
+  "collector": [
+    {
+      "url": "https://abreda.com/tools/aquarium-water-lab/",
+      "siteId": "tb-aquarium-water-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/audio-quality/",
+      "siteId": "tb-audio-quality",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/bulk-file-renamer/",
+      "siteId": "tb-bulk-file-renamer",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/camera-lens-check/",
+      "siteId": "tb-camera-lens-check",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://card-grading-lab.abreda.com/",
+      "siteId": "tb-card-grading-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/certificate-batch/",
+      "siteId": "tb-certificate-batch",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/class-schedule-check/",
+      "siteId": "tb-class-schedule-check",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/color-contrast-audit/",
+      "siteId": "tb-color-contrast-audit",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/comic-condition-lab/",
+      "siteId": "tb-comic-condition-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/csv-column-extractor/",
+      "siteId": "tb-csv-column-extractor",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/csv-empty-row-remover/",
+      "siteId": "tb-csv-empty-row-remover",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/cut-plan-optimizer/",
+      "siteId": "tb-cut-plan-optimizer",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/detail-image-review/",
+      "siteId": "tb-detail-image-review",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/document-scan-studio/",
+      "siteId": "tb-document-scan-studio",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/dst-embroidery/",
+      "siteId": "tb-dst-embroidery",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/epub-preflight/",
+      "siteId": "tb-epub-preflight",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/event-seating/",
+      "siteId": "tb-event-seating",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/exam-variants/",
+      "siteId": "tb-exam-variants",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/gem-photo-inspection/",
+      "siteId": "tb-gem-photo-inspection",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/group-order-summary/",
+      "siteId": "tb-group-order-summary",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/handover-checklist/",
+      "siteId": "tb-handover-checklist",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/image-compress-lab/",
+      "siteId": "tb-image-compress-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/inventory-diff/",
+      "siteId": "tb-inventory-diff",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/invoice-reconcile/",
+      "siteId": "tb-invoice-reconcile",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/jsonl-validator/",
+      "siteId": "tb-jsonl-validator",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/keyboard-switch-diagnostics/",
+      "siteId": "tb-keyboard-switch-diagnostics",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/label-sheet-maker/",
+      "siteId": "tb-label-sheet-maker",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/lease-registry-diff/",
+      "siteId": "tb-lease-registry-diff",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/meal-timeline/",
+      "siteId": "tb-meal-timeline",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/move-evidence/",
+      "siteId": "tb-move-evidence",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/moving-boxes/",
+      "siteId": "tb-moving-boxes",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/option-combinations/",
+      "siteId": "tb-option-combinations",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/pdf-page-workshop/",
+      "siteId": "tb-pdf-page-workshop",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/pdf-preflight/",
+      "siteId": "tb-pdf-preflight",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/photo-contact-sheet/",
+      "siteId": "tb-photo-contact-sheet",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/photo-duplicates/",
+      "siteId": "tb-photo-duplicates",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/privacy-redactor/",
+      "siteId": "tb-privacy-redactor",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/purchase-three-way/",
+      "siteId": "tb-purchase-three-way",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/question-similarity/",
+      "siteId": "tb-question-similarity",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/quote-document-maker/",
+      "siteId": "tb-quote-document-maker",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/recurring-payment-finder/",
+      "siteId": "tb-recurring-payment-finder",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/room-layout-planner/",
+      "siteId": "tb-room-layout-planner",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/seller-profit-math/",
+      "siteId": "tb-seller-profit-math",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/share-qr-card/",
+      "siteId": "tb-share-qr-card",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/shift-calendar/",
+      "siteId": "tb-shift-calendar",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/shipping-audit/",
+      "siteId": "tb-shipping-audit",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/shotlist-maker/",
+      "siteId": "tb-shotlist-maker",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/show-cues/",
+      "siteId": "tb-show-cues",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/silence-finder/",
+      "siteId": "tb-silence-finder",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/sneaker-condition-lab/",
+      "siteId": "tb-sneaker-condition-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/srt-sdh-cleaner/",
+      "siteId": "tb-srt-sdh-cleaner",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/static-site-check/",
+      "siteId": "tb-static-site-check",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://stl-print-check.abreda.com/",
+      "siteId": "tb-stl-print-check",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/submission-auditor/",
+      "siteId": "tb-submission-auditor",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/subtitle-sync-studio/",
+      "siteId": "tb-subtitle-sync-studio",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/survey-review/",
+      "siteId": "tb-survey-review",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/svg-laser-check/",
+      "siteId": "tb-svg-laser-check",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/tournament-maker/",
+      "siteId": "tb-tournament-maker",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/trip-supplies/",
+      "siteId": "tb-trip-supplies",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/used-car-inspection/",
+      "siteId": "tb-used-car-inspection",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/video-delivery-check/",
+      "siteId": "tb-video-delivery-check",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/vinyl-condition-lab/",
+      "siteId": "tb-vinyl-condition-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/vtt-cleaner/",
+      "siteId": "tb-vtt-cleaner",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/warranty-deadline-tracker/",
+      "siteId": "tb-warranty-deadline-tracker",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://watch-inspection-lab.abreda.com/",
+      "siteId": "tb-watch-inspection-lab",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/webtoon-preflight/",
+      "siteId": "tb-webtoon-preflight",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://abreda.com/tools/worktime-analyzer/",
+      "siteId": "tb-worktime-analyzer",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://my-daily-life.pages.dev/",
+      "siteId": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://csv.abreda.com/",
+      "siteId": "toolbox-csv-merge-studio",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://manuscript.abreda.com/",
+      "siteId": "toolbox-manuscript-lens",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    },
+    {
+      "url": "https://novel.abreda.com/",
+      "siteId": "toolbox-novel-planner",
+      "tracking": true,
+      "scriptAvailable": true,
+      "collectorDiagnostic": true,
+      "english": "tracking_present",
+      "status": "ok"
+    }
+  ]
+}

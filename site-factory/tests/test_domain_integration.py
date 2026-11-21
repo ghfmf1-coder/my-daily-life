@@ -4,7 +4,7 @@ from urllib.parse import urlparse,urljoin
 from html.parser import HTMLParser
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from factory import prepare
-from hub_domains import ROUTES, mount_html
+from hub_domains import ROUTES, mount_html, manual_hub_routes
 class Assets(HTMLParser):
  def __init__(self):super().__init__();self.assets=[]
  def handle_starttag(self,t,items):
@@ -37,3 +37,17 @@ class DomainIntegration(unittest.TestCase):
   rendered=mount_html(source,row,'en',{})
   self.assertIn('href="https://abreda.com/en/privacy"',rendered)
   self.assertIn('href="https://abreda.com/en/terms"',rendered)
+
+
+class ManualHubDiscovery(unittest.TestCase):
+ def test_approved_file_based_apps_mount_without_a_new_pages_project(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp)
+   for slug,approved,generated in [('manual-qa',True,False),('draft-qa',False,False),('curated-qa',True,True)]:
+    folder=root/slug;folder.mkdir()
+    (folder/'site.json').write_text(json.dumps({'slug':slug,'project':'tb-'+slug,'approved':approved,'generated_en':generated,'deploy_mode':'hub_only','locales':['ko','en']}))
+   rows=manual_hub_routes(root)
+   self.assertEqual([r['slug'] for r in rows],['manual-qa'])
+   self.assertEqual(rows[0]['en_url'],'https://abreda.com/en/tools/manual-qa/')
+   (root/'manual-qa/site.json').write_text(json.dumps({'slug':'manual-qa','project':'tb-manual-qa','approved':True,'deploy_mode':'hub_only','locales':['ko']}))
+   with self.assertRaisesRegex(ValueError,'actual ko/en'):manual_hub_routes(root)
