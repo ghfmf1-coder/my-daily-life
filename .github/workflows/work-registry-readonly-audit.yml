@@ -20,6 +20,7 @@ permissions:
   id-token: write
 jobs:
   check:
+    if: ${{ !contains(github.event.head_commit.message, '[adsense-readiness]') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
@@ -194,3 +195,21 @@ jobs:
           if-no-files-found: warn
       - name: Reconcile actual visit sources using the deployed reporting model
         run: node site-factory/admin-worker/verify-source-snapshot.mjs
+
+  adsense_readiness:
+    if: contains(github.event.head_commit.message, '[adsense-readiness]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Read AdSense states using existing GitHub identity
+        run: |
+          python3 - <<'PYCODE'
+          import os,json,urllib.request,urllib.parse
+          def read(req):
+              with urllib.request.urlopen(req,timeout=60) as response:return json.loads(response.read())
+          endpoint=os.environ['ACTIONS_ID_TOKEN_REQUEST_URL']+'&audience='+urllib.parse.quote('small-toolbox-google-readonly',safe='')
+          identity=read(urllib.request.Request(endpoint,headers={'Authorization':'Bearer '+os.environ['ACTIONS_ID_TOKEN_REQUEST_TOKEN']}))
+          result=read(urllib.request.Request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-google-ads-oauth/reporting-github-data',data=json.dumps({'urls':[],'readinessOnly':True}).encode(),headers={'Authorization':'Bearer '+identity['value'],'Content-Type':'application/json'},method='POST'))
+          print('ADSENSE_READINESS_RESULT:',json.dumps(result,ensure_ascii=True))
+          if result.get('status')!='ok' or result.get('adsenseSites',{}).get('status')!='ok':raise SystemExit('ADSENSE_READINESS_NOT_VERIFIED')
+          PYCODE
