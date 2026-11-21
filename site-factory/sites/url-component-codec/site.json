@@ -1,0 +1,17 @@
+{
+  "slug": "url-component-codec",
+  "project": "tb-url-component-codec",
+  "title": "URL 인코딩·디코딩",
+  "description": "URL 구성 요소 인코딩 및 디코딩",
+  "approved": true,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

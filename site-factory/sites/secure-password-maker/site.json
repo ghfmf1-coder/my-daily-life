@@ -1,0 +1,17 @@
+{
+  "slug": "secure-password-maker",
+  "project": "tb-secure-password-maker",
+  "title": "안전한 비밀번호 생성기",
+  "description": "브라우저의 암호학적 난수로 비밀번호를 생성하고 복사합니다.",
+  "approved": true,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

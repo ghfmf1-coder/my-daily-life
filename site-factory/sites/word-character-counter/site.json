@@ -1,0 +1,17 @@
+{
+  "slug": "word-character-counter",
+  "project": "tb-word-character-counter",
+  "title": "글자·단어 수 계산기",
+  "description": "글자 수, 단어 수, 줄 수 계산",
+  "approved": true,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

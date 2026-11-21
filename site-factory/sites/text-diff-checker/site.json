@@ -1,0 +1,17 @@
+{
+  "slug": "text-diff-checker",
+  "project": "tb-text-diff-checker",
+  "title": "텍스트 차이 비교기",
+  "description": "두 텍스트 줄별 차이 확인",
+  "approved": true,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}
