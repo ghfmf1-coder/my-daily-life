@@ -1,0 +1,17 @@
+{
+  "slug": "unix-time-converter",
+  "project": "tb-unix-time-converter",
+  "title": "유닉스 시간 변환기",
+  "description": "초·밀리초 유닉스 타임스탬프와 UTC·현지 시간을 상호 변환합니다.",
+  "approved": true,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}
