@@ -62,7 +62,7 @@ class BilingualFleetTests(unittest.TestCase):
                 self.assertIn(__import__('html').escape(EDITORIAL[slug][2]),localized)
                 self.assertIn('hreflang="ko"',localized)
                 self.assertIn('hreflang="en"',localized)
-                self.assertIn('rel="canonical" href="https://tb-'+slug+'.pages.dev/en/"',localized)
+                self.assertIn('rel="canonical" href="https://abreda.com/en/tools/'+slug+'/"',localized)
                 self.assertIn('runtime-translate.js',localized)
                 for match in re.findall(r'id="(file\d+|run|save|form|orderFile|shipFile|download)"',source):
                     self.assertIn('id="'+match+'"',localized)

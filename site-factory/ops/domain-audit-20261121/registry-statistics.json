@@ -1,0 +1,567 @@
+{
+  "checkedAt": "2026-11-21",
+  "run": 44881209944,
+  "publicServices": [
+    {
+      "service_id": "https://my-daily-life.pages.dev/",
+      "canonical_url": "https://my-daily-life.pages.dev/",
+      "cf_project": "my-daily-life",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-aquarium-water-lab.pages.dev/",
+      "canonical_url": "https://tb-aquarium-water-lab.pages.dev/",
+      "cf_project": "tb-aquarium-water-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-camera-lens-check.pages.dev/",
+      "canonical_url": "https://tb-camera-lens-check.pages.dev/",
+      "cf_project": "tb-camera-lens-check",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-card-grading-lab.pages.dev/",
+      "canonical_url": "https://tb-card-grading-lab.pages.dev/",
+      "cf_project": "tb-card-grading-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-comic-condition-lab.pages.dev/",
+      "canonical_url": "https://tb-comic-condition-lab.pages.dev/",
+      "cf_project": "tb-comic-condition-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/csv-column-extractor/",
+      "canonical_url": "https://abreda.com/tools/csv-column-extractor/",
+      "cf_project": "tb-pages-csv-column-extractor",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/csv-empty-row-remover/",
+      "canonical_url": "https://abreda.com/tools/csv-empty-row-remover/",
+      "cf_project": "tb-pages-csv-empty-row-remover",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://csv.abreda.com/",
+      "canonical_url": "https://csv.abreda.com/",
+      "cf_project": "tb-csv-merge-studio",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-gem-photo-inspection.pages.dev/",
+      "canonical_url": "https://tb-gem-photo-inspection.pages.dev/",
+      "cf_project": "tb-gem-photo-inspection",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/jsonl-validator/",
+      "canonical_url": "https://abreda.com/tools/jsonl-validator/",
+      "cf_project": "tb-pages-jsonl-validator",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "canonical_url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "cf_project": "tb-keyboard-switch-diagnostics",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://manuscript.abreda.com/",
+      "canonical_url": "https://manuscript.abreda.com/",
+      "cf_project": "tb-manuscript-lens",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://novel.abreda.com/",
+      "canonical_url": "https://novel.abreda.com/",
+      "cf_project": "tb-novel-planner",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-sneaker-condition-lab.pages.dev/",
+      "canonical_url": "https://tb-sneaker-condition-lab.pages.dev/",
+      "cf_project": "tb-sneaker-condition-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/srt-sdh-cleaner/",
+      "canonical_url": "https://abreda.com/tools/srt-sdh-cleaner/",
+      "cf_project": "tb-pages-srt-sdh-cleaner",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://stl-print-check.abreda.com/",
+      "canonical_url": "https://stl-print-check.abreda.com/",
+      "cf_project": "tb-stl-print-check",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-subtitle-sync-studio.pages.dev/",
+      "canonical_url": "https://tb-subtitle-sync-studio.pages.dev/",
+      "cf_project": "tb-subtitle-sync-studio",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-used-car-inspection.pages.dev/",
+      "canonical_url": "https://tb-used-car-inspection.pages.dev/",
+      "cf_project": "tb-used-car-inspection",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-vinyl-condition-lab.pages.dev/",
+      "canonical_url": "https://tb-vinyl-condition-lab.pages.dev/",
+      "cf_project": "tb-vinyl-condition-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/vtt-cleaner/",
+      "canonical_url": "https://abreda.com/tools/vtt-cleaner/",
+      "cf_project": "tb-pages-vtt-cleaner",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://watch-inspection-lab.abreda.com/",
+      "canonical_url": "https://watch-inspection-lab.abreda.com/",
+      "cf_project": "tb-watch-inspection-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-shipping-audit.pages.dev/",
+      "canonical_url": "https://tb-shipping-audit.pages.dev/",
+      "cf_project": "tb-shipping-audit",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-pdf-preflight.pages.dev/",
+      "canonical_url": "https://tb-pdf-preflight.pages.dev/",
+      "cf_project": "tb-pdf-preflight",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-certificate-batch.pages.dev/",
+      "canonical_url": "https://tb-certificate-batch.pages.dev/",
+      "cf_project": "tb-certificate-batch",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-inventory-diff.pages.dev/",
+      "canonical_url": "https://tb-inventory-diff.pages.dev/",
+      "cf_project": "tb-inventory-diff",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-class-schedule-check.pages.dev/",
+      "canonical_url": "https://tb-class-schedule-check.pages.dev/",
+      "cf_project": "tb-class-schedule-check",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-invoice-reconcile.pages.dev/",
+      "canonical_url": "https://tb-invoice-reconcile.pages.dev/",
+      "cf_project": "tb-invoice-reconcile",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-purchase-three-way.pages.dev/",
+      "canonical_url": "https://tb-purchase-three-way.pages.dev/",
+      "cf_project": "tb-purchase-three-way",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-svg-laser-check.pages.dev/",
+      "canonical_url": "https://tb-svg-laser-check.pages.dev/",
+      "cf_project": "tb-svg-laser-check",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-video-delivery-check.pages.dev/",
+      "canonical_url": "https://tb-video-delivery-check.pages.dev/",
+      "cf_project": "tb-video-delivery-check",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-static-site-check.pages.dev/",
+      "canonical_url": "https://tb-static-site-check.pages.dev/",
+      "cf_project": "tb-static-site-check",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-exam-variants.pages.dev/",
+      "canonical_url": "https://tb-exam-variants.pages.dev/",
+      "cf_project": "tb-exam-variants",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-epub-preflight.pages.dev/",
+      "canonical_url": "https://tb-epub-preflight.pages.dev/",
+      "cf_project": "tb-epub-preflight",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-move-evidence.pages.dev/",
+      "canonical_url": "https://tb-move-evidence.pages.dev/",
+      "cf_project": "tb-move-evidence",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-webtoon-preflight.pages.dev/",
+      "canonical_url": "https://tb-webtoon-preflight.pages.dev/",
+      "cf_project": "tb-webtoon-preflight",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-option-combinations.pages.dev/",
+      "canonical_url": "https://tb-option-combinations.pages.dev/",
+      "cf_project": "tb-option-combinations",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-lease-registry-diff.pages.dev/",
+      "canonical_url": "https://tb-lease-registry-diff.pages.dev/",
+      "cf_project": "tb-lease-registry-diff",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-event-seating.pages.dev/",
+      "canonical_url": "https://tb-event-seating.pages.dev/",
+      "cf_project": "tb-event-seating",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-photo-duplicates.pages.dev/",
+      "canonical_url": "https://tb-photo-duplicates.pages.dev/",
+      "cf_project": "tb-photo-duplicates",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-question-similarity.pages.dev/",
+      "canonical_url": "https://tb-question-similarity.pages.dev/",
+      "cf_project": "tb-question-similarity",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-silence-finder.pages.dev/",
+      "canonical_url": "https://tb-silence-finder.pages.dev/",
+      "cf_project": "tb-silence-finder",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-survey-review.pages.dev/",
+      "canonical_url": "https://tb-survey-review.pages.dev/",
+      "cf_project": "tb-survey-review",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-photo-contact-sheet.pages.dev/",
+      "canonical_url": "https://tb-photo-contact-sheet.pages.dev/",
+      "cf_project": "tb-photo-contact-sheet",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-tournament-maker.pages.dev/",
+      "canonical_url": "https://tb-tournament-maker.pages.dev/",
+      "cf_project": "tb-tournament-maker",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-trip-supplies.pages.dev/",
+      "canonical_url": "https://tb-trip-supplies.pages.dev/",
+      "cf_project": "tb-trip-supplies",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-moving-boxes.pages.dev/",
+      "canonical_url": "https://tb-moving-boxes.pages.dev/",
+      "cf_project": "tb-moving-boxes",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-audio-quality.pages.dev/",
+      "canonical_url": "https://tb-audio-quality.pages.dev/",
+      "cf_project": "tb-audio-quality",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-detail-image-review.pages.dev/",
+      "canonical_url": "https://tb-detail-image-review.pages.dev/",
+      "cf_project": "tb-detail-image-review",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-dst-embroidery.pages.dev/",
+      "canonical_url": "https://tb-dst-embroidery.pages.dev/",
+      "cf_project": "tb-dst-embroidery",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-show-cues.pages.dev/",
+      "canonical_url": "https://tb-show-cues.pages.dev/",
+      "cf_project": "tb-show-cues",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://tb-shotlist-maker.pages.dev/",
+      "canonical_url": "https://tb-shotlist-maker.pages.dev/",
+      "cf_project": "tb-shotlist-maker",
+      "status": "deployed_not_listed"
+    },
+    {
+      "service_id": "https://card-grading-lab.abreda.com/",
+      "canonical_url": "https://card-grading-lab.abreda.com/",
+      "cf_project": "tb-card-grading-lab",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/cut-plan-optimizer/",
+      "canonical_url": "https://abreda.com/tools/cut-plan-optimizer/",
+      "cf_project": "tb-cut-plan-optimizer",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/group-order-summary/",
+      "canonical_url": "https://abreda.com/tools/group-order-summary/",
+      "cf_project": "tb-group-order-summary",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/handover-checklist/",
+      "canonical_url": "https://abreda.com/tools/handover-checklist/",
+      "cf_project": "tb-handover-checklist",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/label-sheet-maker/",
+      "canonical_url": "https://abreda.com/tools/label-sheet-maker/",
+      "cf_project": "tb-label-sheet-maker",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/meal-timeline/",
+      "canonical_url": "https://abreda.com/tools/meal-timeline/",
+      "cf_project": "tb-meal-timeline",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/privacy-redactor/",
+      "canonical_url": "https://abreda.com/tools/privacy-redactor/",
+      "cf_project": "tb-privacy-redactor",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/recurring-payment-finder/",
+      "canonical_url": "https://abreda.com/tools/recurring-payment-finder/",
+      "cf_project": "tb-recurring-payment-finder",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/shift-calendar/",
+      "canonical_url": "https://abreda.com/tools/shift-calendar/",
+      "cf_project": "tb-shift-calendar",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/submission-auditor/",
+      "canonical_url": "https://abreda.com/tools/submission-auditor/",
+      "cf_project": "tb-submission-auditor",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/worktime-analyzer/",
+      "canonical_url": "https://abreda.com/tools/worktime-analyzer/",
+      "cf_project": "tb-worktime-analyzer",
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/bulk-file-renamer/",
+      "canonical_url": "https://abreda.com/tools/bulk-file-renamer/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/color-contrast-audit/",
+      "canonical_url": "https://abreda.com/tools/color-contrast-audit/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/document-scan-studio/",
+      "canonical_url": "https://abreda.com/tools/document-scan-studio/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/image-compress-lab/",
+      "canonical_url": "https://abreda.com/tools/image-compress-lab/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/pdf-page-workshop/",
+      "canonical_url": "https://abreda.com/tools/pdf-page-workshop/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/quote-document-maker/",
+      "canonical_url": "https://abreda.com/tools/quote-document-maker/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/room-layout-planner/",
+      "canonical_url": "https://abreda.com/tools/room-layout-planner/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/seller-profit-math/",
+      "canonical_url": "https://abreda.com/tools/seller-profit-math/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/share-qr-card/",
+      "canonical_url": "https://abreda.com/tools/share-qr-card/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://abreda.com/tools/warranty-deadline-tracker/",
+      "canonical_url": "https://abreda.com/tools/warranty-deadline-tracker/",
+      "cf_project": null,
+      "status": "listed"
+    },
+    {
+      "service_id": "https://tb-watch-inspection-lab.pages.dev/",
+      "canonical_url": "https://tb-watch-inspection-lab.pages.dev/",
+      "cf_project": "tb-watch-inspection-lab",
+      "status": "deployed_not_listed"
+    }
+  ],
+  "dbEvents": [
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-14",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-14",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 11,
+      "tab_day_visits": 11
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-15",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 5,
+      "tab_day_visits": 5
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-16",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-16",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 17,
+      "tab_day_visits": 17
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-17",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 31,
+      "tab_day_visits": 31
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-18",
+      "category": "bot",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-18",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 7,
+      "tab_day_visits": 7
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-18",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 6,
+      "tab_day_visits": 6
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-18",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 31,
+      "tab_day_visits": 31
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-19",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 7,
+      "tab_day_visits": 7
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-20",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-20",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 15,
+      "tab_day_visits": 15
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-21",
+      "category": "bot",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "public_events",
+      "visit_day": "2026-11-21",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 3,
+      "tab_day_visits": 3
+    }
+  ],
+  "dailyMismatches": []
+}

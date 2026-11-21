@@ -1,0 +1,101 @@
+name: Abreda verified domain integration
+on:
+  push:
+    branches: [main]
+    paths: ['site-factory/ops/domain-integration-request.json']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: abreda-domain-integration
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    outputs:
+      aliases: ${{ steps.targets.outputs.aliases }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source and asset regression gates
+        run: |
+          python3 -m unittest discover -s site-factory/tests
+          node site-factory/tests/test_ga4_consent.js
+          node site-factory/tests/test_visit_session.js
+          node --test work-sites/shipping-audit/tests.mjs
+          python3 site-factory/scripts/deploy_site.py --site toolbox-hub --dry-run
+      - name: Existing browser test dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Browser functionality, downloads, error input and both languages
+        env:
+          HUB_BASE_URL: http://127.0.0.1:8088
+        run: |
+          python3 -m http.server 8088 --bind 127.0.0.1 --directory site-factory/.build/toolbox-hub >/tmp/preview.log 2>&1 &
+          node site-factory/tests/domain-integration-browser.mjs
+          TEST_LANGUAGE=ko node site-factory/tests/work-tools-browser.mjs
+          TEST_LANGUAGE=en node site-factory/tests/work-tools-browser.mjs
+      - name: Read explicit existing project targets
+        id: targets
+        run: |
+          python3 - <<'PY'
+          import json,os
+          rows=json.load(open('site-factory/ops/domain-routes.json'))['routes']
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('aliases='+json.dumps([r['slug'] for r in rows]+['toolbox-admin'])+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: domain-browser-results
+          path: /tmp/domain-browser-results.json
+  hub:
+    needs: validate
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock wrangler@4
+      - name: Publish verified hub to existing project
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 site-factory/ops/publish-domain-integration.py toolbox-hub
+      - name: Verify every destination before publishing canonical aliases
+        run: |
+          python3 - <<'PY'
+          import json,urllib.request,time
+          for row in json.load(open('site-factory/ops/domain-routes.json'))['routes']:
+            for lang in ('ko','en'):
+              url=row[lang+'_url']
+              for attempt in range(4):
+                with urllib.request.urlopen(url,timeout=25) as r:html=r.read().decode()
+                if 'rel="canonical" href="'+url+'"' in html and 'lang="'+lang+'"' in html:break
+                if attempt==3:raise ValueError('Wrong destination '+url)
+                time.sleep(5)
+              print('DESTINATION_VERIFIED',url)
+          PY
+  aliases:
+    needs: [validate,hub]
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        site: ${{ fromJSON(needs.validate.outputs.aliases) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock wrangler@4
+      - name: Preserve existing project and publish canonical update
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          TARGET: ${{ matrix.site }}
+        run: python3 site-factory/ops/publish-domain-integration.py "$TARGET"

@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "publisherId": null,
+  "approvalStatus": "unverified",
+  "adUnits": [],
+  "allowedHosts": [
+    "abreda.com"
+  ],
+  "note": "Do not enable before account/site readiness and consent requirements are verified. No ad loader is installed."
+}

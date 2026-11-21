@@ -75,7 +75,7 @@ jobs:
                       html=response.read().decode('utf-8','replace')
                       assert response.status==200
                       assert '<html lang="en"' in html
-                      assert 'rel="canonical" href="'+url+'"' in html
+                      assert 'rel="canonical" href="https://abreda.com/en/tools/'+site+'/"' in html
                       assert 'class="tb-editorial"' in html
                       print('ENGLISH_LIVE_PASS',site,url)
                       break

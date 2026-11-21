@@ -1,0 +1,1164 @@
+{
+  "sources": [
+    {
+      "site_id": "tb-aquarium-water-lab",
+      "url": "https://tb-aquarium-water-lab.pages.dev/",
+      "title": "aquarium water lab"
+    },
+    {
+      "site_id": "tb-audio-quality",
+      "url": "https://tb-audio-quality.pages.dev/",
+      "title": "audio quality"
+    },
+    {
+      "site_id": "tb-bulk-file-renamer",
+      "url": "https://abreda.com/tools/bulk-file-renamer/",
+      "title": "파일명 일괄 정리왕"
+    },
+    {
+      "site_id": "tb-camera-lens-check",
+      "url": "https://tb-camera-lens-check.pages.dev/",
+      "title": "camera lens check"
+    },
+    {
+      "site_id": "tb-card-grading-lab",
+      "url": "https://card-grading-lab.abreda.com/",
+      "title": "card grading lab"
+    },
+    {
+      "site_id": "tb-certificate-batch",
+      "url": "https://tb-certificate-batch.pages.dev/",
+      "title": "certificate batch"
+    },
+    {
+      "site_id": "tb-class-schedule-check",
+      "url": "https://tb-class-schedule-check.pages.dev/",
+      "title": "class schedule check"
+    },
+    {
+      "site_id": "tb-color-contrast-audit",
+      "url": "https://abreda.com/tools/color-contrast-audit/",
+      "title": "색상 대비 검수관"
+    },
+    {
+      "site_id": "tb-comic-condition-lab",
+      "url": "https://tb-comic-condition-lab.pages.dev/",
+      "title": "comic condition lab"
+    },
+    {
+      "site_id": "tb-csv-column-extractor",
+      "url": "https://abreda.com/tools/csv-column-extractor/",
+      "title": "csv column extractor"
+    },
+    {
+      "site_id": "tb-csv-empty-row-remover",
+      "url": "https://abreda.com/tools/csv-empty-row-remover/",
+      "title": "csv empty row remover"
+    },
+    {
+      "site_id": "tb-cut-plan-optimizer",
+      "url": "https://abreda.com/tools/cut-plan-optimizer/",
+      "title": "자재 재단 설계실"
+    },
+    {
+      "site_id": "tb-detail-image-review",
+      "url": "https://tb-detail-image-review.pages.dev/",
+      "title": "detail image review"
+    },
+    {
+      "site_id": "tb-document-scan-studio",
+      "url": "https://abreda.com/tools/document-scan-studio/",
+      "title": "문서 스캔 보정소"
+    },
+    {
+      "site_id": "tb-dst-embroidery",
+      "url": "https://tb-dst-embroidery.pages.dev/",
+      "title": "dst embroidery"
+    },
+    {
+      "site_id": "tb-epub-preflight",
+      "url": "https://tb-epub-preflight.pages.dev/",
+      "title": "epub preflight"
+    },
+    {
+      "site_id": "tb-event-seating",
+      "url": "https://tb-event-seating.pages.dev/",
+      "title": "event seating"
+    },
+    {
+      "site_id": "tb-exam-variants",
+      "url": "https://tb-exam-variants.pages.dev/",
+      "title": "exam variants"
+    },
+    {
+      "site_id": "tb-gem-photo-inspection",
+      "url": "https://tb-gem-photo-inspection.pages.dev/",
+      "title": "gem photo inspection"
+    },
+    {
+      "site_id": "tb-group-order-summary",
+      "url": "https://abreda.com/tools/group-order-summary/",
+      "title": "단체주문 정리왕"
+    },
+    {
+      "site_id": "tb-handover-checklist",
+      "url": "https://abreda.com/tools/handover-checklist/",
+      "title": "구성품 확인증 제작소"
+    },
+    {
+      "site_id": "tb-image-compress-lab",
+      "url": "https://abreda.com/tools/image-compress-lab/",
+      "title": "사진 용량 다이어트"
+    },
+    {
+      "site_id": "tb-inventory-diff",
+      "url": "https://tb-inventory-diff.pages.dev/",
+      "title": "inventory diff"
+    },
+    {
+      "site_id": "tb-invoice-reconcile",
+      "url": "https://tb-invoice-reconcile.pages.dev/",
+      "title": "invoice reconcile"
+    },
+    {
+      "site_id": "tb-jsonl-validator",
+      "url": "https://abreda.com/tools/jsonl-validator/",
+      "title": "jsonl validator"
+    },
+    {
+      "site_id": "tb-keyboard-switch-diagnostics",
+      "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+      "title": "keyboard switch diagnostics"
+    },
+    {
+      "site_id": "tb-label-sheet-maker",
+      "url": "https://abreda.com/tools/label-sheet-maker/",
+      "title": "실측 라벨 제작소"
+    },
+    {
+      "site_id": "tb-lease-registry-diff",
+      "url": "https://tb-lease-registry-diff.pages.dev/",
+      "title": "lease registry diff"
+    },
+    {
+      "site_id": "tb-meal-timeline",
+      "url": "https://abreda.com/tools/meal-timeline/",
+      "title": "동시요리 타임라인"
+    },
+    {
+      "site_id": "tb-move-evidence",
+      "url": "https://tb-move-evidence.pages.dev/",
+      "title": "move evidence"
+    },
+    {
+      "site_id": "tb-moving-boxes",
+      "url": "https://tb-moving-boxes.pages.dev/",
+      "title": "moving boxes"
+    },
+    {
+      "site_id": "tb-option-combinations",
+      "url": "https://tb-option-combinations.pages.dev/",
+      "title": "option combinations"
+    },
+    {
+      "site_id": "tb-pdf-page-workshop",
+      "url": "https://abreda.com/tools/pdf-page-workshop/",
+      "title": "PDF 페이지 수리점"
+    },
+    {
+      "site_id": "tb-pdf-preflight",
+      "url": "https://tb-pdf-preflight.pages.dev/",
+      "title": "pdf preflight"
+    },
+    {
+      "site_id": "tb-photo-contact-sheet",
+      "url": "https://tb-photo-contact-sheet.pages.dev/",
+      "title": "photo contact sheet"
+    },
+    {
+      "site_id": "tb-photo-duplicates",
+      "url": "https://tb-photo-duplicates.pages.dev/",
+      "title": "photo duplicates"
+    },
+    {
+      "site_id": "tb-privacy-redactor",
+      "url": "https://abreda.com/tools/privacy-redactor/",
+      "title": "개인정보 지우개"
+    },
+    {
+      "site_id": "tb-purchase-three-way",
+      "url": "https://tb-purchase-three-way.pages.dev/",
+      "title": "purchase three way"
+    },
+    {
+      "site_id": "tb-question-similarity",
+      "url": "https://tb-question-similarity.pages.dev/",
+      "title": "question similarity"
+    },
+    {
+      "site_id": "tb-quote-document-maker",
+      "url": "https://abreda.com/tools/quote-document-maker/",
+      "title": "무료 견적서 제작소"
+    },
+    {
+      "site_id": "tb-recurring-payment-finder",
+      "url": "https://abreda.com/tools/recurring-payment-finder/",
+      "title": "숨은 정기결제 탐지기"
+    },
+    {
+      "site_id": "tb-room-layout-planner",
+      "url": "https://abreda.com/tools/room-layout-planner/",
+      "title": "우리집 가구 배치 연구소"
+    },
+    {
+      "site_id": "tb-seller-profit-math",
+      "url": "https://abreda.com/tools/seller-profit-math/",
+      "title": "온라인 판매 순이익 분석기"
+    },
+    {
+      "site_id": "tb-share-qr-card",
+      "url": "https://abreda.com/tools/share-qr-card/",
+      "title": "QR 공유카드 제작소"
+    },
+    {
+      "site_id": "tb-shift-calendar",
+      "url": "https://abreda.com/tools/shift-calendar/",
+      "title": "교대근무 달력 제작소"
+    },
+    {
+      "site_id": "tb-shipping-audit",
+      "url": "https://tb-shipping-audit.pages.dev/",
+      "title": "shipping audit"
+    },
+    {
+      "site_id": "tb-shotlist-maker",
+      "url": "https://tb-shotlist-maker.pages.dev/",
+      "title": "shotlist maker"
+    },
+    {
+      "site_id": "tb-show-cues",
+      "url": "https://tb-show-cues.pages.dev/",
+      "title": "show cues"
+    },
+    {
+      "site_id": "tb-silence-finder",
+      "url": "https://tb-silence-finder.pages.dev/",
+      "title": "silence finder"
+    },
+    {
+      "site_id": "tb-sneaker-condition-lab",
+      "url": "https://tb-sneaker-condition-lab.pages.dev/",
+      "title": "sneaker condition lab"
+    },
+    {
+      "site_id": "tb-srt-sdh-cleaner",
+      "url": "https://abreda.com/tools/srt-sdh-cleaner/",
+      "title": "srt sdh cleaner"
+    },
+    {
+      "site_id": "tb-static-site-check",
+      "url": "https://tb-static-site-check.pages.dev/",
+      "title": "static site check"
+    },
+    {
+      "site_id": "tb-stl-print-check",
+      "url": "https://stl-print-check.abreda.com/",
+      "title": "stl print check"
+    },
+    {
+      "site_id": "tb-submission-auditor",
+      "url": "https://abreda.com/tools/submission-auditor/",
+      "title": "제출파일 검수관"
+    },
+    {
+      "site_id": "tb-subtitle-sync-studio",
+      "url": "https://tb-subtitle-sync-studio.pages.dev/",
+      "title": "subtitle sync studio"
+    },
+    {
+      "site_id": "tb-survey-review",
+      "url": "https://tb-survey-review.pages.dev/",
+      "title": "survey review"
+    },
+    {
+      "site_id": "tb-svg-laser-check",
+      "url": "https://tb-svg-laser-check.pages.dev/",
+      "title": "svg laser check"
+    },
+    {
+      "site_id": "tb-tournament-maker",
+      "url": "https://tb-tournament-maker.pages.dev/",
+      "title": "tournament maker"
+    },
+    {
+      "site_id": "tb-trip-supplies",
+      "url": "https://tb-trip-supplies.pages.dev/",
+      "title": "trip supplies"
+    },
+    {
+      "site_id": "tb-used-car-inspection",
+      "url": "https://tb-used-car-inspection.pages.dev/",
+      "title": "used car inspection"
+    },
+    {
+      "site_id": "tb-video-delivery-check",
+      "url": "https://tb-video-delivery-check.pages.dev/",
+      "title": "video delivery check"
+    },
+    {
+      "site_id": "tb-vinyl-condition-lab",
+      "url": "https://tb-vinyl-condition-lab.pages.dev/",
+      "title": "vinyl condition lab"
+    },
+    {
+      "site_id": "tb-vtt-cleaner",
+      "url": "https://abreda.com/tools/vtt-cleaner/",
+      "title": "vtt cleaner"
+    },
+    {
+      "site_id": "tb-warranty-deadline-tracker",
+      "url": "https://abreda.com/tools/warranty-deadline-tracker/",
+      "title": "보증기간·반품기한 관리소"
+    },
+    {
+      "site_id": "tb-watch-inspection-lab",
+      "url": "https://watch-inspection-lab.abreda.com/",
+      "title": "watch inspection lab"
+    },
+    {
+      "site_id": "tb-webtoon-preflight",
+      "url": "https://tb-webtoon-preflight.pages.dev/",
+      "title": "webtoon preflight"
+    },
+    {
+      "site_id": "tb-worktime-analyzer",
+      "url": "https://abreda.com/tools/worktime-analyzer/",
+      "title": "작업시간 분석실"
+    }
+  ],
+  "branches": [
+    {
+      "name": "chore/rebrand-abreda-20261110",
+      "commit": {
+        "sha": "3bd5223e2b26a2a930788d5a9b27e55eef543a0b",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/3bd5223e2b26a2a930788d5a9b27e55eef543a0b"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 40,
+      "source_directories_vs_main": [
+        "site-factory/content/blog",
+        "site-factory/content/blog-media.json",
+        "site-factory/sites/toolbox-admin",
+        "site-factory/sites/toolbox-hub",
+        "site-factory/sites/watch-inspection-lab"
+      ]
+    },
+    {
+      "name": "feat/abreda-editorial-20261111",
+      "commit": {
+        "sha": "68022b0d28f151f30ff35ef8de2fd73210edb215",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/68022b0d28f151f30ff35ef8de2fd73210edb215"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 2,
+      "source_directories_vs_main": [
+        "site-factory/sites/toolbox-admin",
+        "site-factory/sites/watch-inspection-lab"
+      ]
+    },
+    {
+      "name": "feat/abreda-editorial-magazine-20261111",
+      "commit": {
+        "sha": "d00cc503a3e027149245817db8c2794ce91c0675",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/d00cc503a3e027149245817db8c2794ce91c0675"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 22,
+      "source_directories_vs_main": [
+        "site-factory/content/blog",
+        "site-factory/sites/toolbox-admin",
+        "site-factory/sites/watch-inspection-lab"
+      ]
+    },
+    {
+      "name": "feat/abreda-problem-solving-blog-20261110",
+      "commit": {
+        "sha": "2a9f3034da48979c3542267d279a3731846df369",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/2a9f3034da48979c3542267d279a3731846df369"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 28,
+      "source_directories_vs_main": [
+        "site-factory/content/blog",
+        "site-factory/content/blog-media.json",
+        "site-factory/sites/toolbox-admin",
+        "site-factory/sites/watch-inspection-lab"
+      ]
+    },
+    {
+      "name": "feat/bilingual-seo-fleet-20261110",
+      "commit": {
+        "sha": "bb9b642679800afa3d4683cc1daa6238c9076cfe",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/bb9b642679800afa3d4683cc1daa6238c9076cfe"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 150,
+      "source_directories_vs_main": [
+        "site-factory/content/blog",
+        "site-factory/content/blog-media.json",
+        "site-factory/sites/aquarium-water-lab",
+        "site-factory/sites/bulk-file-renamer",
+        "site-factory/sites/camera-lens-check",
+        "site-factory/sites/card-grading-lab",
+        "site-factory/sites/color-contrast-audit",
+        "site-factory/sites/comic-condition-lab",
+        "site-factory/sites/csv-column-extractor",
+        "site-factory/sites/csv-empty-row-remover",
+        "site-factory/sites/csv-merge-studio",
+        "site-factory/sites/cut-plan-optimizer",
+        "site-factory/sites/deployment-check",
+        "site-factory/sites/document-scan-studio",
+        "site-factory/sites/gem-photo-inspection",
+        "site-factory/sites/group-order-summary",
+        "site-factory/sites/handover-checklist",
+        "site-factory/sites/image-compress-lab",
+        "site-factory/sites/jsonl-validator",
+        "site-factory/sites/keyboard-switch-diagnostics",
+        "site-factory/sites/label-sheet-maker",
+        "site-factory/sites/manuscript-lens",
+        "site-factory/sites/meal-timeline",
+        "site-factory/sites/novel-planner",
+        "site-factory/sites/pdf-page-workshop",
+        "site-factory/sites/privacy-redactor",
+        "site-factory/sites/quote-document-maker",
+        "site-factory/sites/recurring-payment-finder",
+        "site-factory/sites/room-layout-planner",
+        "site-factory/sites/seller-profit-math",
+        "site-factory/sites/share-qr-card",
+        "site-factory/sites/shift-calendar",
+        "site-factory/sites/sneaker-condition-lab",
+        "site-factory/sites/srt-sdh-cleaner",
+        "site-factory/sites/stl-print-check",
+        "site-factory/sites/submission-auditor",
+        "site-factory/sites/subtitle-sync-studio",
+        "site-factory/sites/toolbox-admin",
+        "site-factory/sites/toolbox-hub",
+        "site-factory/sites/used-car-inspection",
+        "site-factory/sites/vinyl-condition-lab",
+        "site-factory/sites/vtt-cleaner",
+        "site-factory/sites/warranty-deadline-tracker",
+        "site-factory/sites/watch-inspection-lab",
+        "site-factory/sites/worktime-analyzer",
+        "work-sites/audio-quality/public",
+        "work-sites/certificate-batch/public",
+        "work-sites/class-schedule-check/public",
+        "work-sites/detail-image-review/public",
+        "work-sites/dst-embroidery/public",
+        "work-sites/epub-preflight/public",
+        "work-sites/event-seating/public",
+        "work-sites/exam-variants/public",
+        "work-sites/inventory-diff/public",
+        "work-sites/invoice-reconcile/public",
+        "work-sites/lease-registry-diff/public",
+        "work-sites/move-evidence/public",
+        "work-sites/moving-boxes/public",
+        "work-sites/option-combinations/public",
+        "work-sites/pdf-preflight/public",
+        "work-sites/photo-contact-sheet/public",
+        "work-sites/photo-duplicates/public",
+        "work-sites/purchase-three-way/public",
+        "work-sites/question-similarity/public",
+        "work-sites/shipping-audit/public",
+        "work-sites/shotlist-maker/public",
+        "work-sites/show-cues/public",
+        "work-sites/silence-finder/public",
+        "work-sites/static-site-check/public",
+        "work-sites/survey-review/public",
+        "work-sites/svg-laser-check/public",
+        "work-sites/tournament-maker/public",
+        "work-sites/trip-supplies/public",
+        "work-sites/video-delivery-check/public",
+        "work-sites/webtoon-preflight/public"
+      ]
+    },
+    {
+      "name": "feat/second-ten-tools-20261110",
+      "commit": {
+        "sha": "4f27056c7786241675813cb385c52e5f487c8044",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/4f27056c7786241675813cb385c52e5f487c8044"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 170,
+      "source_directories_vs_main": [
+        "site-factory/content/blog",
+        "site-factory/content/blog-media.json",
+        "site-factory/sites/aquarium-water-lab",
+        "site-factory/sites/bulk-file-renamer",
+        "site-factory/sites/camera-lens-check",
+        "site-factory/sites/card-grading-lab",
+        "site-factory/sites/color-contrast-audit",
+        "site-factory/sites/comic-condition-lab",
+        "site-factory/sites/csv-column-extractor",
+        "site-factory/sites/csv-empty-row-remover",
+        "site-factory/sites/csv-merge-studio",
+        "site-factory/sites/cut-plan-optimizer",
+        "site-factory/sites/deployment-check",
+        "site-factory/sites/document-scan-studio",
+        "site-factory/sites/gem-photo-inspection",
+        "site-factory/sites/group-order-summary",
+        "site-factory/sites/handover-checklist",
+        "site-factory/sites/image-compress-lab",
+        "site-factory/sites/jsonl-validator",
+        "site-factory/sites/keyboard-switch-diagnostics",
+        "site-factory/sites/label-sheet-maker",
+        "site-factory/sites/manuscript-lens",
+        "site-factory/sites/meal-timeline",
+        "site-factory/sites/novel-planner",
+        "site-factory/sites/pdf-page-workshop",
+        "site-factory/sites/privacy-redactor",
+        "site-factory/sites/quote-document-maker",
+        "site-factory/sites/recurring-payment-finder",
+        "site-factory/sites/room-layout-planner",
+        "site-factory/sites/seller-profit-math",
+        "site-factory/sites/share-qr-card",
+        "site-factory/sites/shift-calendar",
+        "site-factory/sites/sneaker-condition-lab",
+        "site-factory/sites/srt-sdh-cleaner",
+        "site-factory/sites/stl-print-check",
+        "site-factory/sites/submission-auditor",
+        "site-factory/sites/subtitle-sync-studio",
+        "site-factory/sites/toolbox-admin",
+        "site-factory/sites/toolbox-hub",
+        "site-factory/sites/used-car-inspection",
+        "site-factory/sites/vinyl-condition-lab",
+        "site-factory/sites/vtt-cleaner",
+        "site-factory/sites/warranty-deadline-tracker",
+        "site-factory/sites/watch-inspection-lab",
+        "site-factory/sites/worktime-analyzer",
+        "work-sites/audio-quality/public",
+        "work-sites/certificate-batch/public",
+        "work-sites/class-schedule-check/public",
+        "work-sites/detail-image-review/public",
+        "work-sites/dst-embroidery/public",
+        "work-sites/epub-preflight/public",
+        "work-sites/event-seating/public",
+        "work-sites/exam-variants/public",
+        "work-sites/inventory-diff/public",
+        "work-sites/invoice-reconcile/public",
+        "work-sites/lease-registry-diff/public",
+        "work-sites/move-evidence/public",
+        "work-sites/moving-boxes/public",
+        "work-sites/option-combinations/public",
+        "work-sites/pdf-preflight/public",
+        "work-sites/photo-contact-sheet/public",
+        "work-sites/photo-duplicates/public",
+        "work-sites/purchase-three-way/public",
+        "work-sites/question-similarity/public",
+        "work-sites/shipping-audit/public",
+        "work-sites/shotlist-maker/public",
+        "work-sites/show-cues/public",
+        "work-sites/silence-finder/public",
+        "work-sites/static-site-check/public",
+        "work-sites/survey-review/public",
+        "work-sites/svg-laser-check/public",
+        "work-sites/tournament-maker/public",
+        "work-sites/trip-supplies/public",
+        "work-sites/video-delivery-check/public",
+        "work-sites/webtoon-preflight/public"
+      ]
+    },
+    {
+      "name": "feat/ten-useful-tools-20261110",
+      "commit": {
+        "sha": "986f0f1f7a7dde333c428e07b9f58138bafb6506",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/986f0f1f7a7dde333c428e07b9f58138bafb6506"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 182,
+      "source_directories_vs_main": [
+        "site-factory/content/blog",
+        "site-factory/content/blog-media.json",
+        "site-factory/sites/aquarium-water-lab",
+        "site-factory/sites/bulk-file-renamer",
+        "site-factory/sites/camera-lens-check",
+        "site-factory/sites/card-grading-lab",
+        "site-factory/sites/color-contrast-audit",
+        "site-factory/sites/comic-condition-lab",
+        "site-factory/sites/csv-column-extractor",
+        "site-factory/sites/csv-empty-row-remover",
+        "site-factory/sites/csv-merge-studio",
+        "site-factory/sites/cut-plan-optimizer",
+        "site-factory/sites/deployment-check",
+        "site-factory/sites/document-scan-studio",
+        "site-factory/sites/gem-photo-inspection",
+        "site-factory/sites/group-order-summary",
+        "site-factory/sites/handover-checklist",
+        "site-factory/sites/image-compress-lab",
+        "site-factory/sites/jsonl-validator",
+        "site-factory/sites/keyboard-switch-diagnostics",
+        "site-factory/sites/label-sheet-maker",
+        "site-factory/sites/manuscript-lens",
+        "site-factory/sites/meal-timeline",
+        "site-factory/sites/novel-planner",
+        "site-factory/sites/pdf-page-workshop",
+        "site-factory/sites/privacy-redactor",
+        "site-factory/sites/quote-document-maker",
+        "site-factory/sites/recurring-payment-finder",
+        "site-factory/sites/room-layout-planner",
+        "site-factory/sites/seller-profit-math",
+        "site-factory/sites/share-qr-card",
+        "site-factory/sites/shift-calendar",
+        "site-factory/sites/sneaker-condition-lab",
+        "site-factory/sites/srt-sdh-cleaner",
+        "site-factory/sites/stl-print-check",
+        "site-factory/sites/submission-auditor",
+        "site-factory/sites/subtitle-sync-studio",
+        "site-factory/sites/toolbox-admin",
+        "site-factory/sites/toolbox-hub",
+        "site-factory/sites/used-car-inspection",
+        "site-factory/sites/vinyl-condition-lab",
+        "site-factory/sites/vtt-cleaner",
+        "site-factory/sites/warranty-deadline-tracker",
+        "site-factory/sites/watch-inspection-lab",
+        "site-factory/sites/worktime-analyzer",
+        "work-sites/audio-quality/public",
+        "work-sites/certificate-batch/public",
+        "work-sites/class-schedule-check/public",
+        "work-sites/detail-image-review/public",
+        "work-sites/dst-embroidery/public",
+        "work-sites/epub-preflight/public",
+        "work-sites/event-seating/public",
+        "work-sites/exam-variants/public",
+        "work-sites/inventory-diff/public",
+        "work-sites/invoice-reconcile/public",
+        "work-sites/lease-registry-diff/public",
+        "work-sites/move-evidence/public",
+        "work-sites/moving-boxes/public",
+        "work-sites/option-combinations/public",
+        "work-sites/pdf-preflight/public",
+        "work-sites/photo-contact-sheet/public",
+        "work-sites/photo-duplicates/public",
+        "work-sites/purchase-three-way/public",
+        "work-sites/question-similarity/public",
+        "work-sites/shipping-audit/public",
+        "work-sites/shotlist-maker/public",
+        "work-sites/show-cues/public",
+        "work-sites/silence-finder/public",
+        "work-sites/static-site-check/public",
+        "work-sites/survey-review/public",
+        "work-sites/svg-laser-check/public",
+        "work-sites/tournament-maker/public",
+        "work-sites/trip-supplies/public",
+        "work-sites/video-delivery-check/public",
+        "work-sites/webtoon-preflight/public"
+      ]
+    },
+    {
+      "name": "feature/shipping-audit-work",
+      "commit": {
+        "sha": "3b5c415a19415ef09f1788578152c9fabe31f03a",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/3b5c415a19415ef09f1788578152c9fabe31f03a"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 339,
+      "source_directories_vs_main": [
+        "site-factory/content/blog",
+        "site-factory/content/blog-media.json",
+        "site-factory/sites/aquarium-water-lab",
+        "site-factory/sites/bulk-file-renamer",
+        "site-factory/sites/camera-lens-check",
+        "site-factory/sites/card-grading-lab",
+        "site-factory/sites/color-contrast-audit",
+        "site-factory/sites/comic-condition-lab",
+        "site-factory/sites/csv-column-extractor",
+        "site-factory/sites/csv-empty-row-remover",
+        "site-factory/sites/csv-merge-studio",
+        "site-factory/sites/cut-plan-optimizer",
+        "site-factory/sites/deployment-check",
+        "site-factory/sites/document-scan-studio",
+        "site-factory/sites/gem-photo-inspection",
+        "site-factory/sites/group-order-summary",
+        "site-factory/sites/handover-checklist",
+        "site-factory/sites/image-compress-lab",
+        "site-factory/sites/jsonl-validator",
+        "site-factory/sites/keyboard-switch-diagnostics",
+        "site-factory/sites/label-sheet-maker",
+        "site-factory/sites/manuscript-lens",
+        "site-factory/sites/meal-timeline",
+        "site-factory/sites/novel-planner",
+        "site-factory/sites/pdf-page-workshop",
+        "site-factory/sites/privacy-redactor",
+        "site-factory/sites/quote-document-maker",
+        "site-factory/sites/recurring-payment-finder",
+        "site-factory/sites/room-layout-planner",
+        "site-factory/sites/seller-profit-math",
+        "site-factory/sites/share-qr-card",
+        "site-factory/sites/shift-calendar",
+        "site-factory/sites/sneaker-condition-lab",
+        "site-factory/sites/srt-sdh-cleaner",
+        "site-factory/sites/stl-print-check",
+        "site-factory/sites/submission-auditor",
+        "site-factory/sites/subtitle-sync-studio",
+        "site-factory/sites/toolbox-admin",
+        "site-factory/sites/toolbox-hub",
+        "site-factory/sites/used-car-inspection",
+        "site-factory/sites/vinyl-condition-lab",
+        "site-factory/sites/vtt-cleaner",
+        "site-factory/sites/warranty-deadline-tracker",
+        "site-factory/sites/watch-inspection-lab",
+        "site-factory/sites/worktime-analyzer",
+        "work-sites/audio-quality/public",
+        "work-sites/certificate-batch/public",
+        "work-sites/class-schedule-check/public",
+        "work-sites/detail-image-review/public",
+        "work-sites/dst-embroidery/public",
+        "work-sites/epub-preflight/public",
+        "work-sites/event-seating/public",
+        "work-sites/exam-variants/public",
+        "work-sites/inventory-diff/public",
+        "work-sites/invoice-reconcile/public",
+        "work-sites/lease-registry-diff/public",
+        "work-sites/move-evidence/public",
+        "work-sites/moving-boxes/public",
+        "work-sites/option-combinations/public",
+        "work-sites/pdf-preflight/public",
+        "work-sites/photo-contact-sheet/public",
+        "work-sites/photo-duplicates/public",
+        "work-sites/purchase-three-way/public",
+        "work-sites/question-similarity/public",
+        "work-sites/shipping-audit/public",
+        "work-sites/shotlist-maker/public",
+        "work-sites/show-cues/public",
+        "work-sites/silence-finder/public",
+        "work-sites/static-site-check/public",
+        "work-sites/survey-review/public",
+        "work-sites/svg-laser-check/public",
+        "work-sites/tournament-maker/public",
+        "work-sites/trip-supplies/public",
+        "work-sites/video-delivery-check/public",
+        "work-sites/webtoon-preflight/public"
+      ]
+    },
+    {
+      "name": "fix/bilingual-content-quality-20261110",
+      "commit": {
+        "sha": "908c6a6584f7611400d9682b19ed2b739e7c43c3",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/908c6a6584f7611400d9682b19ed2b739e7c43c3"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 150,
+      "source_directories_vs_main": [
+        "site-factory/content/blog",
+        "site-factory/content/blog-media.json",
+        "site-factory/sites/aquarium-water-lab",
+        "site-factory/sites/bulk-file-renamer",
+        "site-factory/sites/camera-lens-check",
+        "site-factory/sites/card-grading-lab",
+        "site-factory/sites/color-contrast-audit",
+        "site-factory/sites/comic-condition-lab",
+        "site-factory/sites/csv-column-extractor",
+        "site-factory/sites/csv-empty-row-remover",
+        "site-factory/sites/csv-merge-studio",
+        "site-factory/sites/cut-plan-optimizer",
+        "site-factory/sites/deployment-check",
+        "site-factory/sites/document-scan-studio",
+        "site-factory/sites/gem-photo-inspection",
+        "site-factory/sites/group-order-summary",
+        "site-factory/sites/handover-checklist",
+        "site-factory/sites/image-compress-lab",
+        "site-factory/sites/jsonl-validator",
+        "site-factory/sites/keyboard-switch-diagnostics",
+        "site-factory/sites/label-sheet-maker",
+        "site-factory/sites/manuscript-lens",
+        "site-factory/sites/meal-timeline",
+        "site-factory/sites/novel-planner",
+        "site-factory/sites/pdf-page-workshop",
+        "site-factory/sites/privacy-redactor",
+        "site-factory/sites/quote-document-maker",
+        "site-factory/sites/recurring-payment-finder",
+        "site-factory/sites/room-layout-planner",
+        "site-factory/sites/seller-profit-math",
+        "site-factory/sites/share-qr-card",
+        "site-factory/sites/shift-calendar",
+        "site-factory/sites/sneaker-condition-lab",
+        "site-factory/sites/srt-sdh-cleaner",
+        "site-factory/sites/stl-print-check",
+        "site-factory/sites/submission-auditor",
+        "site-factory/sites/subtitle-sync-studio",
+        "site-factory/sites/toolbox-admin",
+        "site-factory/sites/toolbox-hub",
+        "site-factory/sites/used-car-inspection",
+        "site-factory/sites/vinyl-condition-lab",
+        "site-factory/sites/vtt-cleaner",
+        "site-factory/sites/warranty-deadline-tracker",
+        "site-factory/sites/watch-inspection-lab",
+        "site-factory/sites/worktime-analyzer",
+        "work-sites/audio-quality/public",
+        "work-sites/certificate-batch/public",
+        "work-sites/class-schedule-check/public",
+        "work-sites/detail-image-review/public",
+        "work-sites/dst-embroidery/public",
+        "work-sites/epub-preflight/public",
+        "work-sites/event-seating/public",
+        "work-sites/exam-variants/public",
+        "work-sites/inventory-diff/public",
+        "work-sites/invoice-reconcile/public",
+        "work-sites/lease-registry-diff/public",
+        "work-sites/move-evidence/public",
+        "work-sites/moving-boxes/public",
+        "work-sites/option-combinations/public",
+        "work-sites/pdf-preflight/public",
+        "work-sites/photo-contact-sheet/public",
+        "work-sites/photo-duplicates/public",
+        "work-sites/purchase-three-way/public",
+        "work-sites/question-similarity/public",
+        "work-sites/shipping-audit/public",
+        "work-sites/shotlist-maker/public",
+        "work-sites/show-cues/public",
+        "work-sites/silence-finder/public",
+        "work-sites/static-site-check/public",
+        "work-sites/survey-review/public",
+        "work-sites/svg-laser-check/public",
+        "work-sites/tournament-maker/public",
+        "work-sites/trip-supplies/public",
+        "work-sites/video-delivery-check/public",
+        "work-sites/webtoon-preflight/public"
+      ]
+    },
+    {
+      "name": "fix/preserve-work-english-deploy-20261110",
+      "commit": {
+        "sha": "4440967030bd0c2805dc2d6aacedc8b51f93c68c",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/4440967030bd0c2805dc2d6aacedc8b51f93c68c"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 150,
+      "source_directories_vs_main": [
+        "site-factory/content/blog",
+        "site-factory/content/blog-media.json",
+        "site-factory/sites/aquarium-water-lab",
+        "site-factory/sites/bulk-file-renamer",
+        "site-factory/sites/camera-lens-check",
+        "site-factory/sites/card-grading-lab",
+        "site-factory/sites/color-contrast-audit",
+        "site-factory/sites/comic-condition-lab",
+        "site-factory/sites/csv-column-extractor",
+        "site-factory/sites/csv-empty-row-remover",
+        "site-factory/sites/csv-merge-studio",
+        "site-factory/sites/cut-plan-optimizer",
+        "site-factory/sites/deployment-check",
+        "site-factory/sites/document-scan-studio",
+        "site-factory/sites/gem-photo-inspection",
+        "site-factory/sites/group-order-summary",
+        "site-factory/sites/handover-checklist",
+        "site-factory/sites/image-compress-lab",
+        "site-factory/sites/jsonl-validator",
+        "site-factory/sites/keyboard-switch-diagnostics",
+        "site-factory/sites/label-sheet-maker",
+        "site-factory/sites/manuscript-lens",
+        "site-factory/sites/meal-timeline",
+        "site-factory/sites/novel-planner",
+        "site-factory/sites/pdf-page-workshop",
+        "site-factory/sites/privacy-redactor",
+        "site-factory/sites/quote-document-maker",
+        "site-factory/sites/recurring-payment-finder",
+        "site-factory/sites/room-layout-planner",
+        "site-factory/sites/seller-profit-math",
+        "site-factory/sites/share-qr-card",
+        "site-factory/sites/shift-calendar",
+        "site-factory/sites/sneaker-condition-lab",
+        "site-factory/sites/srt-sdh-cleaner",
+        "site-factory/sites/stl-print-check",
+        "site-factory/sites/submission-auditor",
+        "site-factory/sites/subtitle-sync-studio",
+        "site-factory/sites/toolbox-admin",
+        "site-factory/sites/toolbox-hub",
+        "site-factory/sites/used-car-inspection",
+        "site-factory/sites/vinyl-condition-lab",
+        "site-factory/sites/vtt-cleaner",
+        "site-factory/sites/warranty-deadline-tracker",
+        "site-factory/sites/watch-inspection-lab",
+        "site-factory/sites/worktime-analyzer",
+        "work-sites/audio-quality/public",
+        "work-sites/certificate-batch/public",
+        "work-sites/class-schedule-check/public",
+        "work-sites/detail-image-review/public",
+        "work-sites/dst-embroidery/public",
+        "work-sites/epub-preflight/public",
+        "work-sites/event-seating/public",
+        "work-sites/exam-variants/public",
+        "work-sites/inventory-diff/public",
+        "work-sites/invoice-reconcile/public",
+        "work-sites/lease-registry-diff/public",
+        "work-sites/move-evidence/public",
+        "work-sites/moving-boxes/public",
+        "work-sites/option-combinations/public",
+        "work-sites/pdf-preflight/public",
+        "work-sites/photo-contact-sheet/public",
+        "work-sites/photo-duplicates/public",
+        "work-sites/purchase-three-way/public",
+        "work-sites/question-similarity/public",
+        "work-sites/shipping-audit/public",
+        "work-sites/shotlist-maker/public",
+        "work-sites/show-cues/public",
+        "work-sites/silence-finder/public",
+        "work-sites/static-site-check/public",
+        "work-sites/survey-review/public",
+        "work-sites/svg-laser-check/public",
+        "work-sites/tournament-maker/public",
+        "work-sites/trip-supplies/public",
+        "work-sites/video-delivery-check/public",
+        "work-sites/webtoon-preflight/public"
+      ]
+    },
+    {
+      "name": "main",
+      "commit": {
+        "sha": "5d4f601e442dc6fcb586962cb7840616e4cad345",
+        "url": "https://api.github.com/repos/ghfmf1-coder/my-daily-life/commits/5d4f601e442dc6fcb586962cb7840616e4cad345"
+      },
+      "protected": false,
+      "changed_path_count_vs_main": 0,
+      "source_directories_vs_main": []
+    }
+  ],
+  "ga4": {
+    "status": "done",
+    "data": [],
+    "total_rows": 0
+  },
+  "gsc": {
+    "status": "done",
+    "data": [
+      {
+        "date": "2026-11-14",
+        "page": "https://abreda.com/en/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-14",
+        "page": "https://abreda.com/en/tools/srt-sdh-cleaner/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-14",
+        "page": "https://csv.abreda.com/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-14",
+        "page": "https://novel.abreda.com/en/",
+        "clicks": 0,
+        "impressions": 2
+      },
+      {
+        "date": "2026-11-15",
+        "page": "https://abreda.com/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-15",
+        "page": "https://abreda.com/en/",
+        "clicks": 0,
+        "impressions": 4
+      },
+      {
+        "date": "2026-11-15",
+        "page": "https://abreda.com/en/contact/",
+        "clicks": 0,
+        "impressions": 2
+      },
+      {
+        "date": "2026-11-15",
+        "page": "https://card-grading-lab.abreda.com/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-15",
+        "page": "https://csv.abreda.com/en/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-15",
+        "page": "https://novel.abreda.com/en/",
+        "clicks": 0,
+        "impressions": 3
+      },
+      {
+        "date": "2026-11-16",
+        "page": "https://abreda.com/en/",
+        "clicks": 0,
+        "impressions": 7
+      },
+      {
+        "date": "2026-11-16",
+        "page": "https://abreda.com/en/contact/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-16",
+        "page": "https://manuscript.abreda.com/en/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-16",
+        "page": "https://novel.abreda.com/en/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-17",
+        "page": "https://abreda.com/en/",
+        "clicks": 0,
+        "impressions": 5
+      },
+      {
+        "date": "2026-11-17",
+        "page": "https://abreda.com/en/blog/pdf-merge-reorder-guide/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-17",
+        "page": "https://card-grading-lab.abreda.com/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-17",
+        "page": "https://novel.abreda.com/en/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-18",
+        "page": "https://abreda.com/blog/gmail-large-attachment-drive-link/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-18",
+        "page": "https://abreda.com/blog/iphone-photo-location-privacy/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-18",
+        "page": "https://abreda.com/en/",
+        "clicks": 0,
+        "impressions": 5
+      },
+      {
+        "date": "2026-11-18",
+        "page": "https://abreda.com/en/blog/fill-pdf-form-without-editing-original/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-18",
+        "page": "https://abreda.com/en/blog/pdf-merge-reorder-guide/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-18",
+        "page": "https://abreda.com/en/contact/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-18",
+        "page": "https://abreda.com/en/tools/csv-column-extractor/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-18",
+        "page": "https://abreda.com/tools/csv-column-extractor/",
+        "clicks": 0,
+        "impressions": 2
+      },
+      {
+        "date": "2026-11-18",
+        "page": "https://card-grading-lab.abreda.com/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-18",
+        "page": "https://card-grading-lab.abreda.com/en/",
+        "clicks": 0,
+        "impressions": 2
+      },
+      {
+        "date": "2026-11-19",
+        "page": "https://abreda.com/blog/gmail-large-attachment-drive-link/",
+        "clicks": 1,
+        "impressions": 6
+      },
+      {
+        "date": "2026-11-19",
+        "page": "https://abreda.com/blog/bulk-rename-photos-files/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-19",
+        "page": "https://abreda.com/blog/shift-pattern-to-calendar/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-19",
+        "page": "https://abreda.com/en/",
+        "clicks": 0,
+        "impressions": 5
+      },
+      {
+        "date": "2026-11-19",
+        "page": "https://abreda.com/en/blog/bulk-rename-photos-files/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-19",
+        "page": "https://abreda.com/en/blog/fix-csv-empty-rows/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-19",
+        "page": "https://abreda.com/en/blog/pdf-merge-reorder-guide/",
+        "clicks": 0,
+        "impressions": 2
+      },
+      {
+        "date": "2026-11-19",
+        "page": "https://abreda.com/tools/csv-column-extractor/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-19",
+        "page": "https://novel.abreda.com/en/",
+        "clicks": 0,
+        "impressions": 1
+      },
+      {
+        "date": "2026-11-19",
+        "page": "https://watch-inspection-lab.abreda.com/en/",
+        "clicks": 0,
+        "impressions": 1
+      }
+    ],
+    "total_rows": 38
+  }
+}

@@ -646,13 +646,15 @@ def render_native(slug,output):
     text=text.replace('</body>','<script defer src="./runtime-translate.js"></script></body>',1)
     (output/'index.html').write_text(text,encoding='utf-8')
     return text
-def generate_work(slug,write=True):
-    path=ROOT/'work-sites'/slug/'public'/'index.html'
+def generate_work(slug,write=True,public_root=None):
+    path=(Path(public_root) if public_root is not None else ROOT/'work-sites'/slug/'public')/'index.html'
     if not path.is_file():raise FileNotFoundError(path)
     if slug not in EDITORIAL:raise KeyError(slug)
     root=path.parent
     ko='https://tb-'+slug+'.pages.dev/'
     en=ko+'en/'
+    from hub_domains import canonical_pair
+    if pair:=canonical_pair(slug):ko,en=pair
     source=path.read_text(encoding='utf-8')
     result=localize_html(source,slug,ko,en,app_path='work')
     # The original scripts are the unchanged calculation engine.
@@ -672,6 +674,8 @@ def generate_work(slug,write=True):
                 if '</urlset>' not in text:raise ValueError('Invalid sitemap for '+slug)
                 text=text.replace('</urlset>','<url><loc>'+escape(en)+'</loc></url>\n</urlset>')
                 sitemap.write_text(text,encoding='utf-8')
+            from hub_domains import rewrite_links
+            sitemap.write_text(rewrite_links(sitemap.read_text()),encoding='utf-8')
     return result
 # Translation runs only on known UI strings; no rewriting of user-supplied files.
 RUNTIME=r"""(()=>{'use strict';if(document.documentElement.lang!=='en')return;

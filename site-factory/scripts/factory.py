@@ -521,6 +521,8 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         r'(?im)^\s*Disallow:\s*/\s*$', robots_source.read_text(encoding='utf-8')))
     localized = data.get('locales') == ['ko', 'en']
     migrated_tools = {'csv-column-extractor','csv-empty-row-remover','jsonl-validator','srt-sdh-cleaner','vtt-cleaner'} | set(NATIVE_ROOT_TOOLS)
+    from hub_domains import BY_SLUG
+    migrated_tools |= set(BY_SLUG)
     ko_canonical = ('https://abreda.com/tools/' + slug + '/') if slug in migrated_tools else canonical + '/'
     en_canonical = ('https://abreda.com/en/tools/' + slug + '/') if slug in migrated_tools else canonical + '/en/'
     alternatives = {'ko': ko_canonical, 'en': en_canonical} if localized else {}
@@ -663,4 +665,12 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         from marketing import build_packets
         (out / 'promotion-packets.json').write_text(
             json.dumps(build_packets(),ensure_ascii=False,indent=2),encoding='utf-8')
+    if slug == 'toolbox-hub':
+        from hub_domains import integrate
+        integrate(out,data)
+    elif slug in BY_SLUG or slug == 'toolbox-admin':
+        from hub_domains import rewrite_links
+        for file in out.rglob('*'):
+            if file.is_file() and file.suffix in ('.xml','.json'):
+                file.write_text(rewrite_links(file.read_text()))
     return data, canonical

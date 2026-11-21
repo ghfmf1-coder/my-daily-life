@@ -28,10 +28,13 @@ const cases={
 };
 function wav(){const rate=8000,buf=Buffer.alloc(44+rate*2);buf.write('RIFF');buf.writeUInt32LE(buf.length-8,4);buf.write('WAVEfmt ',8);buf.writeUInt32LE(16,16);buf.writeUInt16LE(1,20);buf.writeUInt16LE(1,22);buf.writeUInt32LE(rate,24);buf.writeUInt32LE(rate*2,28);buf.writeUInt16LE(2,32);buf.writeUInt16LE(16,34);buf.write('data',36);buf.writeUInt32LE(rate*2,40);for(let i=6400;i<rate;i++)buf.writeInt16LE(3000,44+i*2);return {name:'qa.wav',mimeType:'audio/wav',buffer:buf}}
 const browser=await chromium.launch({headless:true});const results=[];
+const hub=process.env.HUB_BASE_URL,language=process.env.TEST_LANGUAGE||'ko';
 for(const [slug,[initial,expected]] of Object.entries(cases)){
  const p=await browser.newPage({acceptDownloads:true,viewport:{width:1200,height:800}}),faults=[];p.on('pageerror',e=>faults.push(e.message));
  try{
-  const response=await p.goto('https://tb-'+slug+'.pages.dev/?tb_test=1',{waitUntil:'domcontentloaded',timeout:25000});assert.equal(response.status(),200);await p.locator('#form').waitFor();
+  if(hub?.startsWith('http://127.0.0.1'))await p.route('https://abreda.com/**',async route=>{const u=new URL(route.request().url());const r=await route.fetch({url:hub+u.pathname+u.search});await route.fulfill({response:r})});
+  const target=hub?hub+(language==='en'?'/en':'')+'/tools/'+slug+'/':'https://tb-'+slug+'.pages.dev/';
+  const response=await p.goto(target+'?tb_test=1',{waitUntil:'domcontentloaded',timeout:25000});assert.equal(response.status(),200);await p.locator('#form').waitFor();
   await p.locator('#form button[type=submit]').click();assert(await p.locator('#save').isDisabled(),'missing-file input accepted');
   let files=[...initial];
   if(['webtoon-preflight','detail-image-review','photo-contact-sheet','move-evidence','photo-duplicates'].includes(slug)){const bytes=await p.evaluate(()=>{const c=document.createElement('canvas');c.width=100;c.height=100;c.getContext('2d').fillRect(0,0,100,100);return Array.from(Uint8Array.from(atob(c.toDataURL().split(',')[1]),c=>c.charCodeAt(0)))});files=[{name:'qa.png',mimeType:'image/png',buffer:Buffer.from(bytes)}];if(slug==='photo-duplicates')files.push({...files[0],name:'qa-copy.png'})}
@@ -40,7 +43,7 @@ for(const [slug,[initial,expected]] of Object.entries(cases)){
   if(slug==='dst-embroidery'){const buf=Buffer.alloc(518);buf.write('LA:QA');buf[514]=3;buf[517]=0xf3;files=[{name:'qa.dst',mimeType:'application/octet-stream',buffer:buf}]}
   if(slug==='epub-preflight'){const bytes=execFileSync('python3',['-c',"import io,sys,zipfile; b=io.BytesIO(); z=zipfile.ZipFile(b,'w'); z.writestr('mimetype','application/epub+zip'); z.writestr('META-INF/container.xml','<container/>'); z.writestr('content.opf','<package/>'); z.close(); sys.stdout.buffer.write(b.getvalue())"]);files=[{name:'qa.epub',mimeType:'application/epub+zip',buffer:bytes}]}
   const inputs=await p.locator('input[type=file]').count();if(inputs===1)await p.locator('#file0').setInputFiles(files);else for(let i=0;i<inputs;i++)await p.locator('#file'+i).setInputFiles(files[i]);
-  await p.locator('#form button[type=submit]').click();await p.waitForFunction(()=>!document.querySelector('#save').disabled,{timeout:15000});assert.match(await p.locator('#out').textContent(),expected);
+  await p.locator('#form button[type=submit]').click();await p.waitForFunction(()=>!document.querySelector('#save').disabled,{timeout:15000});if(language==='ko')assert.match(await p.locator('#out').textContent(),expected);else assert((await p.locator('#out').textContent()).length>10);
   const promise=p.waitForEvent('download');await p.locator('#save').click();const download=await promise,data=await fs.readFile(await download.path());assert(data.length>20);assert(data.toString('utf8').includes(','),'CSV structure missing');assert.equal(faults.length,0,faults.join('; '));
   console.log('WORK_CORE_PASS',slug);results.push({slug,status:'pass'});
  }catch(e){console.error('WORK_CORE_FAIL',slug,e.message);results.push({slug,status:'fail',error:e.message.slice(0,300)})}finally{await p.close()}
