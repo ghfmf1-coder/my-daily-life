@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-21T08:44:11+00:00",
+  "checkedAt": "2026-11-21T09:29:51+00:00",
   "status": "fail",
   "summary": {
-    "sites": 44,
+    "sites": 54,
     "sitePassed": 34,
     "siteWarnings": 0,
-    "siteFailed": 10,
+    "siteFailed": 20,
     "browserPassed": 10,
     "browserFailed": 2,
     "sourceTestsPassed": true,
-    "issues": 80
+    "issues": 130
   },
   "sites": [
     {
@@ -23,7 +23,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 136ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +63,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -133,7 +133,7 @@
         {
           "check": "page_app",
           "status": "pass",
-          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -158,7 +158,7 @@
         {
           "check": "page_en_app",
           "status": "pass",
-          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -210,7 +210,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -250,7 +250,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -340,6 +340,55 @@
       ]
     },
     {
+      "slug": "base64-text-codec",
+      "name": "Base64 텍스트 변환기",
+      "url": "https://tb-base64-text-codec.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "bulk-file-renamer",
       "name": "파일명 일괄 정리왕",
       "url": "https://abreda.com/tools/bulk-file-renamer/",
@@ -349,7 +398,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -449,12 +498,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -515,7 +564,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 112ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -555,7 +604,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -654,7 +703,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 198ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 106ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -694,7 +743,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -785,7 +834,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -825,7 +874,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -885,12 +934,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -941,7 +990,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -981,7 +1030,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1080,7 +1129,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 161ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1120,7 +1169,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1211,7 +1260,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 175ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1251,7 +1300,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 46ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1342,7 +1391,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 129ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1382,7 +1431,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1503,7 +1552,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1543,7 +1592,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1603,12 +1652,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -1659,7 +1708,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 167ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 50ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1730,7 +1779,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1770,7 +1819,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1830,12 +1879,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -1886,7 +1935,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1926,7 +1975,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2025,7 +2074,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2065,7 +2114,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2125,12 +2174,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2181,7 +2230,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2221,7 +2270,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2281,12 +2330,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2337,7 +2386,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 92ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2377,7 +2426,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2437,12 +2486,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2494,6 +2543,55 @@
       "failures": []
     },
     {
+      "slug": "json-pretty-validator",
+      "name": "JSON 정리·검증기",
+      "url": "https://tb-json-pretty-validator.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "jsonl-validator",
       "name": "jsonl validator | Small Toolbox",
       "url": "https://tb-pages-jsonl-validator.pages.dev/",
@@ -2503,7 +2601,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 150ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2543,7 +2641,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 36ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2634,7 +2732,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 99ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2674,7 +2772,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2773,7 +2871,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 49ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2813,7 +2911,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2873,12 +2971,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2920,6 +3018,55 @@
       "failures": []
     },
     {
+      "slug": "line-sort-deduplicate",
+      "name": "줄 정렬·중복 제거기",
+      "url": "https://tb-line-sort-deduplicate.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "manuscript-lens",
       "name": "웹소설 원고돋보기 | 반복 표현·대사·문장 분석",
       "url": "https://manuscript.abreda.com/",
@@ -2929,7 +3076,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 118ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2969,7 +3116,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3071,6 +3218,55 @@
       "failures": []
     },
     {
+      "slug": "markdown-preview-lite",
+      "name": "마크다운 미리보기",
+      "url": "https://tb-markdown-preview-lite.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "meal-timeline",
       "name": "동시요리 타임라인",
       "url": "https://abreda.com/tools/meal-timeline/",
@@ -3080,7 +3276,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3120,7 +3316,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3180,12 +3376,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3236,7 +3432,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 101ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 87ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3276,7 +3472,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 109ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3387,7 +3583,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3427,7 +3623,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3487,12 +3683,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3543,7 +3739,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3583,7 +3779,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 48ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3643,12 +3839,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3699,7 +3895,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3739,7 +3935,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3799,12 +3995,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3855,7 +4051,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3895,7 +4091,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 48ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3955,12 +4151,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4011,7 +4207,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4051,7 +4247,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 278ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4111,12 +4307,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4158,6 +4354,55 @@
       "failures": []
     },
     {
+      "slug": "secure-password-maker",
+      "name": "안전한 비밀번호 생성기",
+      "url": "https://tb-secure-password-maker.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "seller-profit-math",
       "name": "온라인 판매 순이익 분석기",
       "url": "https://abreda.com/tools/seller-profit-math/",
@@ -4167,7 +4412,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 154ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4207,7 +4452,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4267,12 +4512,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4323,7 +4568,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4363,7 +4608,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 50ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4423,12 +4668,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4479,7 +4724,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4519,7 +4764,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4579,12 +4824,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4635,7 +4880,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4675,7 +4920,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4774,7 +5019,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 163ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4814,7 +5059,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 89ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4905,7 +5150,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4945,7 +5190,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5036,7 +5281,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5076,7 +5321,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5136,12 +5381,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -5192,7 +5437,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 47ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5232,7 +5477,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 49ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5342,6 +5587,104 @@
       ]
     },
     {
+      "slug": "text-case-converter",
+      "name": "대소문자 변환기",
+      "url": "https://tb-text-case-converter.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
+      "slug": "text-diff-checker",
+      "name": "텍스트 차이 비교기",
+      "url": "https://tb-text-diff-checker.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "toolbox-admin",
       "name": "아브레다 통합 관리자 v1.2",
       "url": "https://tb-toolbox-admin.pages.dev/",
@@ -5367,7 +5710,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 45ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5407,7 +5750,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5467,12 +5810,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -5507,26 +5850,124 @@
         {
           "check": "text_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 16272 bytes"
+          "detail": "HTTP 200, 20403 bytes"
         },
         {
           "check": "rss_feed.xml",
           "status": "pass",
-          "detail": "41 valid RSS entries"
+          "detail": "51 valid RSS entries"
         },
         {
           "check": "text_en_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15747 bytes"
+          "detail": "HTTP 200, 19604 bytes"
         },
         {
           "check": "rss_en_feed.xml",
           "status": "pass",
-          "detail": "41 valid RSS entries"
+          "detail": "51 valid RSS entries"
         }
       ],
       "warnings": [],
       "failures": []
+    },
+    {
+      "slug": "unix-time-converter",
+      "name": "유닉스 시간 변환기",
+      "url": "https://tb-unix-time-converter.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
+      "slug": "url-component-codec",
+      "name": "URL 인코딩·디코딩",
+      "url": "https://tb-url-component-codec.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
     },
     {
       "slug": "used-car-inspection",
@@ -5538,7 +5979,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5578,7 +6019,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5677,7 +6118,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 96ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5717,7 +6158,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 46ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5816,7 +6257,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 158ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5856,7 +6297,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5947,7 +6388,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -6047,12 +6488,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -6103,7 +6544,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -6143,7 +6584,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 105ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -6225,6 +6666,55 @@
       "failures": []
     },
     {
+      "slug": "word-character-counter",
+      "name": "글자·단어 수 계산기",
+      "url": "https://tb-word-character-counter.pages.dev/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "page_en",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "warning",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "fail",
+          "detail": "HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+        }
+      ],
+      "warnings": [
+        "svg_favicon.svg: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ],
+      "failures": [
+        "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>",
+        "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+      ]
+    },
+    {
       "slug": "worktime-analyzer",
       "name": "작업시간 분석실",
       "url": "https://abreda.com/tools/worktime-analyzer/",
@@ -6234,7 +6724,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -6274,7 +6764,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -6334,12 +6824,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 15061 bytes"
+          "detail": "HTTP 200, 18033 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 210"
+          "detail": "entries: 250"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -6388,7 +6878,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 323
+      "elapsedMs": 272
     },
     {
       "name": "English plot planner",
@@ -6396,7 +6886,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 294
+      "elapsedMs": 245
     },
     {
       "name": "Korean manuscript",
@@ -6404,7 +6894,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Korean word repetition detection",
-      "elapsedMs": 246
+      "elapsedMs": 213
     },
     {
       "name": "English manuscript",
@@ -6412,7 +6902,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 229
+      "elapsedMs": 231
     },
     {
       "name": "Korean CSV merger",
@@ -6420,7 +6910,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "CSV header mapping and deduplication",
-      "elapsedMs": 301
+      "elapsedMs": 251
     },
     {
       "name": "English CSV merger",
@@ -6428,7 +6918,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English CSV header mapping and deduplication",
-      "elapsedMs": 293
+      "elapsedMs": 295
     },
     {
       "name": "Haru English landing",
@@ -6436,7 +6926,7 @@
       "device": "mobile",
       "status": "fail",
       "detail": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for getByRole('heading', { name: /better routine/i }) to be visible\n",
-      "elapsedMs": 14128
+      "elapsedMs": 14124
     },
     {
       "name": "Haru English app",
@@ -6444,7 +6934,7 @@
       "device": "mobile",
       "status": "fail",
       "detail": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#authForm') to be visible\n",
-      "elapsedMs": 14103
+      "elapsedMs": 14115
     },
     {
       "name": "Admin authentication gate",
@@ -6452,7 +6942,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 430
+      "elapsedMs": 480
     },
     {
       "name": "Toolbox hub search",
@@ -6460,7 +6950,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 178
+      "elapsedMs": 176
     },
     {
       "name": "Technical deployment smoke",
@@ -6468,7 +6958,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 227
+      "elapsedMs": 164
     },
     {
       "name": "GA4 sanitized query and successful tool completion",
@@ -6476,7 +6966,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "page_view and tool_complete accepted; debug only; query/hash absent; one pageview",
-      "elapsedMs": 5719
+      "elapsedMs": 5721
     }
   ],
   "issues": [
@@ -6569,6 +7059,26 @@
       "details": "sitemap_content: entries: 2"
     },
     {
+      "scope": "base64-text-codec",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "base64-text-codec",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "base64-text-codec",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "base64-text-codec",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "base64-text-codec",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
       "scope": "camera-lens-check",
       "details": "canonical_ko: https://abreda.com/tools/camera-lens-check/"
     },
@@ -6653,6 +7163,26 @@
       "details": "sitemap_content: entries: 2"
     },
     {
+      "scope": "json-pretty-validator",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "json-pretty-validator",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "json-pretty-validator",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "json-pretty-validator",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "json-pretty-validator",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
       "scope": "keyboard-switch-diagnostics",
       "details": "canonical_ko: https://abreda.com/tools/keyboard-switch-diagnostics/"
     },
@@ -6679,6 +7209,66 @@
     {
       "scope": "keyboard-switch-diagnostics",
       "details": "sitemap_content: entries: 2"
+    },
+    {
+      "scope": "line-sort-deduplicate",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "line-sort-deduplicate",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "line-sort-deduplicate",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "line-sort-deduplicate",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "line-sort-deduplicate",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "markdown-preview-lite",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "markdown-preview-lite",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "markdown-preview-lite",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "markdown-preview-lite",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "markdown-preview-lite",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "secure-password-maker",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "secure-password-maker",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "secure-password-maker",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "secure-password-maker",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "scope": "secure-password-maker",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
       "scope": "sneaker-condition-lab",
@@ -6737,68 +7327,48 @@
       "details": "sitemap_content: entries: 6"
     },
     {
-      "scope": "used-car-inspection",
-      "details": "canonical_ko: https://abreda.com/tools/used-car-inspection/"
+      "scope": "text-case-converter",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "used-car-inspection",
-      "details": "hreflang_ko_ko: https://abreda.com/tools/used-car-inspection/"
+      "scope": "text-case-converter",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "used-car-inspection",
-      "details": "hreflang_ko_en: https://abreda.com/en/tools/used-car-inspection/"
+      "scope": "text-case-converter",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "used-car-inspection",
-      "details": "canonical_en: https://abreda.com/en/tools/used-car-inspection/"
+      "scope": "text-case-converter",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "used-car-inspection",
-      "details": "hreflang_en_ko: https://abreda.com/tools/used-car-inspection/"
+      "scope": "text-case-converter",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "used-car-inspection",
-      "details": "hreflang_en_en: https://abreda.com/en/tools/used-car-inspection/"
+      "scope": "text-diff-checker",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "used-car-inspection",
-      "details": "sitemap_content: entries: 2"
+      "scope": "text-diff-checker",
+      "details": "page_en: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "vinyl-condition-lab",
-      "details": "canonical_ko: https://abreda.com/tools/vinyl-condition-lab/"
+      "scope": "text-diff-checker",
+      "details": "icon_favicon.ico: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "vinyl-condition-lab",
-      "details": "hreflang_ko_ko: https://abreda.com/tools/vinyl-condition-lab/"
+      "scope": "text-diff-checker",
+      "details": "text_robots.txt: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "vinyl-condition-lab",
-      "details": "hreflang_ko_en: https://abreda.com/en/tools/vinyl-condition-lab/"
+      "scope": "text-diff-checker",
+      "details": "sitemap_sitemap.xml: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     },
     {
-      "scope": "vinyl-condition-lab",
-      "details": "canonical_en: https://abreda.com/en/tools/vinyl-condition-lab/"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "hreflang_en_ko: https://abreda.com/tools/vinyl-condition-lab/"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "hreflang_en_en: https://abreda.com/en/tools/vinyl-condition-lab/"
-    },
-    {
-      "scope": "vinyl-condition-lab",
-      "details": "sitemap_content: entries: 2"
-    },
-    {
-      "scope": "browser:Haru English landing",
-      "details": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for getByRole('heading', { name: /better routine/i }) to be visible\n"
-    },
-    {
-      "scope": "browser:Haru English app",
-      "details": "locator.waitFor: Timeout 14000ms exceeded.\nCall log:\n  - waiting for locator('#authForm') to be visible\n"
+      "scope": "unix-time-converter",
+      "details": "page_ko: HTTP fetch failed after 3 attempts: <urlopen error [Errno -2] Name or service not known>"
     }
   ],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
