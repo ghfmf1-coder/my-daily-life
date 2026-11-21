@@ -114,3 +114,15 @@ HTTP 200뿐 아니라 해당 title/H1·canonical·hreflang·자산 경로를 확
 AdSense 실제 조회 로그: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/44884642494
 방문 커버리지 통과 후 D1 결합 실패 로그: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/44882959215
 공식 API(2025-02-28 문서): https://developers.google.com/adsense/management/reference/rest/v2/accounts.sites/list
+
+## 최종 실행 기록
+
+- 자동화·인수인계 커밋: `f61e70f2324fb0b5381f7a24db0c374ed357a585`.
+- 최초 배포 `6913123090e2771914f96f60dea5b622be63381c`는 별도 작업에서 이미 종료한 하루한칸에 옛 공개 상태를 요구하는 공유 테스트 때문에 중단. 서비스 파일은 변경하지 않고 종료 페이지의 noindex·빈 sitemap을 검증하도록 조건을 갱신했다.
+- 수정 배포 커밋: `9f3e1b237bb079cd6fe0613b6f13625b2fd398da`.
+
+- 최종 배포 성공: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/44886045314 (checks, toolbox-hub, toolbox-admin 모두 success).
+- 허브 배포: https://c045c2a7.tb-toolbox-hub.pages.dev / 관리 카탈로그 배포: https://b90bb474.tb-toolbox-admin.pages.dev
+- 운영 확인: https://abreda.com/deployment-check.json 에서 codeCommit f61e70f2324fb0b5381f7a24db0c374ed357a585 및 retirement-aware 목적 문자열 일치.
+- toolbox-admin Pages 성공은 adminivo.com/next/ Worker/D1 수정 성공을 의미하지 않는다. 별도 하루한칸 .github/workflows/pages.yml은 run 44886044332에서 실패했고 이번 제외 범위로 유지했다.
+- 기계 판독 근거: site-factory/ops/domain-audit-20261121/final-deployment.json.

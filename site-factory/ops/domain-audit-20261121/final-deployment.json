@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-21",
+  "timezone": "Asia/Seoul",
+  "codeCommit": "f61e70f2324fb0b5381f7a24db0c374ed357a585",
+  "deployedCommit": "9f3e1b237bb079cd6fe0613b6f13625b2fd398da",
+  "runId": 44886045314,
+  "runUrl": "https://github.com/ghfmf1-coder/my-daily-life/actions/runs/44886045314",
+  "jobs": [
+    {
+      "id": 136791437670,
+      "name": "checks",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 136791489536,
+      "name": "deploy (toolbox-hub)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 136791489543,
+      "name": "deploy (toolbox-admin)",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "deploymentUrls": {
+    "hub": "https://c045c2a7.tb-toolbox-hub.pages.dev",
+    "adminCatalog": "https://b90bb474.tb-toolbox-admin.pages.dev"
+  },
+  "productionProof": {
+    "url": "https://abreda.com/deployment-check.json",
+    "expectedCodeCommit": "f61e70f2324fb0b5381f7a24db0c374ed357a585",
+    "matched": true
+  },
+  "incomplete": [
+    "Worker/D1 authorization and migrated URL join",
+    "AdSense relevant site entry absent; ads.txt not valid; no submission or ad serving",
+    "Historical GA4 vs Supabase discrepancy not conclusively resolved"
+  ],
+  "excluded": [
+    "Haru deletion/legacy deployment",
+    "New apps and content"
+  ]
+}
