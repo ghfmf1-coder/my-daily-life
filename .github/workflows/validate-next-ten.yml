@@ -37,7 +37,8 @@ jobs:
               out=Path(temp)
               prepare('toolbox-hub',out)
               for slug in slugs:
-                  for path in [out/'tools'/slug/'index.html',out/'en/tools'/slug/'index.html',out/'tools'/slug/'app.js',out/'blog'/('guide-'+slug)/'index.html',out/'en/blog'/('guide-'+slug)/'index.html']:
+                  article={'secure-password-maker':'generate-random-password-safely','unix-time-converter':'convert-unix-timestamps-utc-local'}.get(slug,'guide-'+slug)
+                  for path in [out/'tools'/slug/'index.html',out/'en/tools'/slug/'index.html',out/'tools'/slug/'app.js',out/'blog'/article/'index.html',out/'en/blog'/('guide-'+slug)/'index.html']:
                       if not path.is_file():raise AssertionError('Missing '+str(path))
                   print('BUILT',slug)
           PY
