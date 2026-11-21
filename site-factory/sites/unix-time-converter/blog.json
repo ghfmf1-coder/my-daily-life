@@ -1,0 +1,78 @@
+{
+  "slug": "convert-unix-timestamps-utc-local",
+  "type": "tool",
+  "tool": "unix-time-converter",
+  "published": "2026-11-21",
+  "status": "reviewed",
+  "ko": {
+    "title": "유닉스 타임스탬프 초·밀리초 구분하고 날짜 변환하기",
+    "description": "로그의 유닉스 시간값을 UTC와 현지 날짜로 읽고 단위 오류를 확인합니다.",
+    "problem": "API와 서버 로그에서 숫자로 된 시각을 발견했다면 초와 밀리초 중 어떤 단위인지 먼저 확인해야 합니다. 같은 숫자를 잘못 해석하면 전혀 다른 날짜가 나옵니다.",
+    "steps": [
+      [
+        "원본 요구사항을 먼저 확인하세요",
+        "사용할 서비스가 요구하는 길이와 문자 제한을 먼저 확인하고, 도구에서 해당 옵션을 선택하세요. 지원하지 않는 문자나 날짜 형식을 임의로 적용하지 않는 것이 중요합니다."
+      ],
+      [
+        "브라우저에서 값을 생성하거나 변환하세요",
+        "입력값을 확인한 뒤 실행 버튼을 누르고 출력된 결과를 검토하세요. 출력이 비어 있거나 오류가 나오면 입력 조건부터 다시 확인해야 합니다."
+      ],
+      [
+        "결과를 실제 용도에 맞게 검증하세요",
+        "결과를 바로 사용하기 전에 원본과 대조하고, 민감한 값은 공유하거나 공개 화면에 남기지 마세요. 필요한 경우 별도의 검증 절차를 거치세요."
+      ]
+    ],
+    "alternative": "브라우저 기능 외에도 운영체제의 비밀번호 관리자 또는 프로그래밍 언어의 표준 날짜 처리 기능을 사용할 수 있습니다. 중요한 작업에는 독립적인 방법으로 결과를 교차 검증하세요.",
+    "toolIntro": "아브레다 유닉스 시간 변환기는 초와 밀리초를 구분하여 UTC 및 기기 현지 시각을 보여줍니다.",
+    "limits": "브라우저의 현지 시각은 사용 중인 기기의 시간대 설정을 따릅니다. 법적 기록이나 서버 감사에서는 원본 UTC 값과 서버 시간대 설정을 함께 확인해야 합니다.",
+    "faq": [
+      [
+        "이 도구의 결과만으로 보안이나 정확성을 보장할 수 있나요?",
+        "아니요. 입력 조건과 실제 서비스 요구사항을 확인해야 하며, 민감한 작업이나 공식 기록은 별도의 검증 수단으로 확인해야 합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Convert Unix Timestamps to UTC and Local Time Without Unit Errors",
+    "description": "Learn to distinguish Unix seconds from milliseconds and inspect UTC and device-local dates.",
+    "problem": "When you encounter a numeric time value in an API or server log, first determine whether it represents seconds or milliseconds. Using the wrong unit can produce a completely different date.",
+    "steps": [
+      [
+        "Check the original format and requirements first",
+        "Confirm the allowed characters, length, units or source format before entering anything. Using the wrong assumptions can produce a plausible but unusable result."
+      ],
+      [
+        "Run the operation locally in the browser",
+        "Enter the input, select the appropriate options, and run the tool. If an error appears, inspect the original input and settings rather than trusting a partial result."
+      ],
+      [
+        "Verify the output before using it elsewhere",
+        "Compare the output with the original requirements. Avoid sharing sensitive values or leaving them on public screens, and use an independent verification method for important tasks."
+      ]
+    ],
+    "alternative": "A dedicated password manager or a programming language's standard date-time library may be more appropriate for automated workflows. Cross-check important results with a separate trusted method.",
+    "toolIntro": "ABREDA Unix Timestamp Converter displays seconds or milliseconds as UTC and device-local dates.",
+    "limits": "Local time is calculated using the browser device time zone. For audits or legal records, preserve the original UTC timestamp and verify the server time-zone configuration.",
+    "faq": [
+      [
+        "Does using this browser tool guarantee security or correctness?",
+        "No. You must confirm the original requirements and verify any important result independently before using it in a production or sensitive workflow."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/Da0pdCekeUs",
+      "alt": {
+        "ko": "컴퓨터 화면에서 디지털 파일을 확인하는 작업 환경 자료 사진",
+        "en": "Illustrative photograph of a computer workspace used for digital tasks"
+      },
+      "caption": {
+        "ko": "도구 화면이 아닌 작업 환경 자료 사진입니다.",
+        "en": "Illustrative workspace image, not a screenshot of the tool."
+      }
+    },
+    "category": "knowledge"
+  }
+}
