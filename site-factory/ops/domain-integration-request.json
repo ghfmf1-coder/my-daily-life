@@ -1,4 +1,1 @@
-{
-  "requestId": "20261121-domain-integration-02",
-  "purpose": "Verify browser gates and publish existing hub and canonical aliases"
-}
+{"requestId":"20261121-domain-integration-03","purpose":"Use verified curl transport for destination gate and verify production functionality"}

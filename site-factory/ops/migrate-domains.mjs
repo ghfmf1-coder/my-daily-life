@@ -22,8 +22,9 @@ function candidates(){
 const mode=process.argv[2]||'plan';
 const targets=candidates();
 if(mode==='self-test'){
-  assert(targets.some(x=>x.id==='tb-camera-lens-check'));
-  assert(targets.some(x=>x.id==='tb-card-grading-lab'));
+  assert((manifest.sites||[]).some(x=>x.siteId==='tb-camera-lens-check'));
+  assert((manifest.sites||[]).some(x=>x.siteId==='tb-card-grading-lab'));
+  assert(targets.every(x=>manifest.sites.some(s=>s.siteId===x.id&&new URL(s.url).hostname.endsWith('.pages.dev'))));
   assert(targets.every(x=>x.domain.endsWith('.abreda.com')&&x.project.startsWith('tb-')));
   console.log('DOMAIN_MIGRATION_SELFTEST_PASS',JSON.stringify({mode,inventory:targets.length}));
   process.exit(0);

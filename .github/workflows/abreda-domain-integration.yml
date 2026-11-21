@@ -68,12 +68,12 @@ jobs:
       - name: Verify every destination before publishing canonical aliases
         run: |
           python3 - <<'PY'
-          import json,urllib.request,time
+          import json,subprocess,time
           for row in json.load(open('site-factory/ops/domain-routes.json'))['routes']:
             for lang in ('ko','en'):
               url=row[lang+'_url']
               for attempt in range(4):
-                with urllib.request.urlopen(url,timeout=25) as r:html=r.read().decode()
+                html=subprocess.check_output(['curl','--fail','--silent','--show-error','--location','--max-time','25',url],text=True)
                 if 'rel="canonical" href="'+url+'"' in html and 'lang="'+lang+'"' in html:break
                 if attempt==3:raise ValueError('Wrong destination '+url)
                 time.sleep(5)
@@ -99,3 +99,35 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           TARGET: ${{ matrix.site }}
         run: python3 site-factory/ops/publish-domain-integration.py "$TARGET"
+
+  verify_live:
+    needs: aliases
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Production mobile and bilingual core functions
+        env:
+          HUB_BASE_URL: https://abreda.com
+        run: |
+          node site-factory/tests/domain-integration-browser.mjs
+          TEST_LANGUAGE=ko node site-factory/tests/work-tools-browser.mjs
+          TEST_LANGUAGE=en node site-factory/tests/work-tools-browser.mjs
+      - name: Existing apps and real GA4 debug transport
+        if: always()
+        env:
+          GA4_SMOKE: '1'
+        run: node site-factory/monitoring/browser_smoke.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: production-domain-verification
+          path: |
+            /tmp/domain-browser-results.json
+            /tmp/browser-report.json
+            /tmp/ga4-live-events.json
