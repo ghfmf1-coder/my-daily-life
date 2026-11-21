@@ -7,7 +7,7 @@ node --check config.js
 node --check en/app/translate.js
 
 # Regenerate deployment-specific search metadata without dropping localized pages.
-python3 prepare_seo.py "https://my-daily-life.pages.dev"
+# Retired: do not regenerate search-indexable SEO metadata.
 
 mkdir -p dist/app dist/en/app dist/quest
 cp toolbox-traffic.js index.html landing.css styles.css app.js config.js icon.svg favicon.ico manifest.webmanifest privacy.html terms.html sitemap.xml robots.txt dist/
@@ -21,7 +21,7 @@ cp 009bd80b09e04b4e82564b5ae044a4e7.txt dist/
 test -s dist/en/index.html
 test -s dist/en/app/index.html
 test -s dist/favicon.ico
-grep -q 'my-daily-life.pages.dev/en/' dist/sitemap.xml
+grep -q '<urlset' dist/sitemap.xml
 grep -q 'Disallow: /en/app/' dist/robots.txt
 
 echo "Cloudflare Pages public bilingual assets prepared in dist/"
