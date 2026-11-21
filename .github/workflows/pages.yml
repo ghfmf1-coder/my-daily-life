@@ -25,7 +25,7 @@ jobs:
           node --check config.js
           node --check en/app/translate.js
       - name: Generate SEO URLs for GitHub Pages
-        run: python3 prepare_seo.py "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+        run: echo "Retired app: preserve noindex pages and empty sitemap"
       - name: Assemble public static site
         run: |
           mkdir -p dist/app dist/en/app dist/quest
@@ -40,38 +40,3 @@ jobs:
           path: dist
       - id: deployment
         uses: actions/deploy-pages@v4
-      - name: Verify deployed pages and sitemap
-        id: website
-        shell: bash
-        run: |
-          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
-          ready=false
-          for attempt in 1 2 3 4 5 6; do
-            if curl -fsSL --max-time 15 "${base}/" | grep -q '하루한칸'; then
-              if curl -fsSL --max-time 15 "${base}/sitemap.xml" | grep -q '<urlset'; then
-                if curl -fsSL --max-time 15 "${base}/009bd80b09e04b4e82564b5ae044a4e7.txt" | grep -q '009bd80b09e04b4e82564b5ae044a4e7'; then
-                  ready=true
-                  break
-                fi
-              fi
-            fi
-            echo "Waiting for public site propagation, try ${attempt}/6..."
-            sleep 10
-          done
-          echo "ready=${ready}" >> "$GITHUB_OUTPUT"
-          echo "Public site ready: ${ready}"
-          # Verify the personal Quest app was included in the published artifact.
-          quest_page="$(curl -fsSL --max-time 20 "${base}/quest/")"
-          grep -Fq 'id="cloud-panel"' <<< "${quest_page}"
-          quest_js="$(curl -fsSL --max-time 20 "${base}/quest/app.js")"
-          grep -Fq 'function connectCloud' <<< "${quest_js}"
-          echo "Quest route and cloud sync client published."
-      - name: Notify IndexNow search engines
-        if: steps.website.outputs.ready == 'true'
-        shell: bash
-        run: |
-          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
-          result=$(curl -sS --max-time 25 -o /tmp/indexnow-response.txt -w "%{http_code}" --get 'https://api.indexnow.org/indexnow' --data-urlencode "url=${base}/" --data-urlencode "key=009bd80b09e04b4e82564b5ae044a4e7" --data-urlencode "keyLocation=${base}/009bd80b09e04b4e82564b5ae044a4e7.txt" || true)
-          echo "IndexNow response HTTP ${result}; 200/202 means received, not indexed."
-          head -c 600 /tmp/indexnow-response.txt || true
-          echo
