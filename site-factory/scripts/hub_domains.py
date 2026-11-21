@@ -31,7 +31,7 @@ def mount_html(text,row,language,config):
         path=p.path
         if path in ('/','/index.html','/ko/','/ko/index.html'):target=row['ko_url']
         elif path in ('/en','/en/','/en/index.html'):target=row['en_url']
-        elif path in ('/privacy','/privacy.html','/terms','/terms.html','/contact','/contact/'):
+        elif re.fullmatch(r'/(?:en/)?(?:privacy|terms|contact)(?:[.]html|/)?',path):
             target='https://abreda.com'+path
         else:target=row['ko_url']+path.lstrip('/')
         if p.query:target+='?'+p.query

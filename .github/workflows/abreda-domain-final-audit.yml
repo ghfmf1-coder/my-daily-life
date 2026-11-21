@@ -1,0 +1,52 @@
+name: Abreda final domain audit
+on:
+  push:
+    branches: [main]
+    paths: ['site-factory/ops/domain-final-audit-request.json']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Policy link regression and existing hub build
+        run: python3 -m unittest discover -s site-factory/tests -p test_domain_integration.py
+      - run: npm install --no-save --no-package-lock wrangler@4 playwright@1.56.1
+      - name: Publish corrected policy links to existing hub only
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 site-factory/ops/publish-domain-integration.py toolbox-hub
+      - name: Read existing Pages inventory and DNS credential availability
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_DNS_TOKEN: ${{ secrets.CLOUDFLARE_DNS_TOKEN }}
+        run: |
+          node --input-type=module <<'NODE'
+          const account=process.env.CLOUDFLARE_ACCOUNT_ID,token=process.env.CLOUDFLARE_API_TOKEN;
+          const base='https://api.cloudflare.com/client/v4';
+          const inventory=[];
+          for(let page=1;page<=12;page++){
+            const r=await fetch(base+'/accounts/'+account+'/pages/projects?page='+page,{headers:{Authorization:'Bearer '+token}}),j=await r.json();
+            if(!r.ok||!j.success)throw Error('PAGES_READ_FAILED_'+r.status);
+            inventory.push(...j.result.map(x=>({name:x.name,domains:x.domains||[],productionUrl:x.canonical_deployment?.url||null})));
+            if(!j.result.length || (j.result_info?.total_count!=null && inventory.length>=j.result_info.total_count))break;
+          }
+          console.log('PAGES_INVENTORY',JSON.stringify(inventory));
+          console.log('DNS_CREDENTIAL_AVAILABLE',Boolean(process.env.CLOUDFLARE_DNS_TOKEN));
+          console.log('CLOUDFLARE_ANALYTICS','NOT_QUERIED_NO_VERIFIED_ANALYTICS_CAPABILITY');
+          NODE
+      - run: npx playwright install --with-deps chromium
+      - name: Live policy links and blog mobile layout
+        run: node site-factory/tests/domain-blog-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: final-blog-mobile-audit
+          path: /tmp/domain-blog-results.json

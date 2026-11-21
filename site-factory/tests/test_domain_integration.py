@@ -4,7 +4,7 @@ from urllib.parse import urlparse,urljoin
 from html.parser import HTMLParser
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from factory import prepare
-from hub_domains import ROUTES
+from hub_domains import ROUTES, mount_html
 class Assets(HTMLParser):
  def __init__(self):super().__init__();self.assets=[]
  def handle_starttag(self,t,items):
@@ -30,3 +30,10 @@ class DomainIntegration(unittest.TestCase):
    # Existing hub navigation cannot send visitors back to old migrated hosts.
    for file in (out/'index.html',out/'en/index.html',out/'new-tools/index.html',out/'en/new-tools/index.html'):
     for row in ROUTES:self.assertNotIn(row['old_url'],file.read_text())
+
+ def test_english_policy_links_resolve_to_hub_policy(self):
+  row=next(r for r in ROUTES if r['slug']=='subtitle-sync-studio')
+  source='<html><head><title>QA</title></head><body><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></body></html>'
+  rendered=mount_html(source,row,'en',{})
+  self.assertIn('href="https://abreda.com/en/privacy"',rendered)
+  self.assertIn('href="https://abreda.com/en/terms"',rendered)
