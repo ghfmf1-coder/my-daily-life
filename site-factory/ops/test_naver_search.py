@@ -25,3 +25,13 @@ class PublicDiscoveryTests(unittest.TestCase):
         self.assertEqual(key_for('https://a.example/'),key_for('https://a.example/'))
         self.assertNotEqual(key_for('https://a.example/'),key_for('https://b.example/'))
 if __name__=='__main__':unittest.main()
+
+class DomainRoutePreservation(unittest.TestCase):
+    def test_historical_ledger_cannot_restore_old_primary(self):
+        from naver_search_setup import preserve_domain_routes
+        mapped={'tb-example':{'siteId':'tb-example','url':'https://tb-example.pages.dev/','origins':['https://tb-example.pages.dev']},'unrelated':{'url':'https://other.example/'}}
+        routes=[{'slug':'example','old_url':'https://tb-example.pages.dev/','ko_url':'https://abreda.com/tools/example/'}]
+        updated=preserve_domain_routes(mapped,routes)
+        self.assertEqual(updated['tb-example']['url'],routes[0]['ko_url'])
+        self.assertEqual(updated['tb-example']['origins'],['https://tb-example.pages.dev'])
+        self.assertEqual(updated['unrelated']['url'],'https://other.example/')

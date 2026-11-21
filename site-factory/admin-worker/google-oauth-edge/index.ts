@@ -1,3 +1,4 @@
+import {readAdSenseSites} from "./adsense-sites.mjs";
 import {githubAuthenticated} from "./github-oidc.mjs";
 import {authenticated} from "./access-auth.mjs";
 // Small Toolbox Google Ads OAuth. Sensitive credentials are never returned to the browser.
@@ -197,8 +198,9 @@ async function githubReporting(req:Request){
  }));
  const end=new Date(Date.now()-3*86400000).toISOString().slice(0,10),start=new Date(Date.now()-27*86400000).toISOString().slice(0,10);
  const report=await reportingData(start,end);
+ const adsenseSites=await readAdSenseSites((url:string)=>googleRead(token,url),REPORTING_ADSENSE,relevantPage);
  const scopes=grantedScopes as string[]|null;
- return reply({status:'ok',capabilities:{scopeMetadataAvailable:scopes!==null,searchConsoleManagement:scopes?scopes.includes('https://www.googleapis.com/auth/webmasters'):null,newSiteVerification:scopes?(scopes.includes('https://www.googleapis.com/auth/siteverification.verify_only')||scopes.includes('https://www.googleapis.com/auth/siteverification')):null},generatedAt:new Date().toISOString(),sites:output,gsc:report.gsc,adsense:report.adsense,start,end,
+ return reply({status:'ok',capabilities:{scopeMetadataAvailable:scopes!==null,searchConsoleManagement:scopes?scopes.includes('https://www.googleapis.com/auth/webmasters'):null,newSiteVerification:scopes?(scopes.includes('https://www.googleapis.com/auth/siteverification.verify_only')||scopes.includes('https://www.googleapis.com/auth/siteverification')):null},generatedAt:new Date().toISOString(),sites:output,gsc:report.gsc,adsense:report.adsense,adsenseSites,start,end,
   sitemapSubmission:'not_attempted_by_readonly_audit_endpoint',naver:'not_connected_to_this_bridge',
   inspectionMeaning:'Google indexed-version report for the supplied URL, not a live test or whole-site indexing guarantee'});
 }

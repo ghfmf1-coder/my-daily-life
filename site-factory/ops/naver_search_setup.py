@@ -9,6 +9,16 @@ from factory import prepare,read_site,site_list
 STATE=ROOT/'site-factory/ops/naver-public-sites.json'
 RESULT=ROOT/'site-factory/ops/naver-search-result.json'
 AGENT='SmallToolbox-Naver-Discovery/1.0'
+def preserve_domain_routes(mapped,routes):
+    # D1 retains historical URLs. They must not undo the reviewed primary routes.
+    for route in routes:
+        sid='tb-'+route['slug']
+        if sid not in mapped:continue
+        row=mapped[sid];old_origin=urllib.parse.urlsplit(route['old_url'])
+        row['url']=route['ko_url']
+        row['origins']=list(dict.fromkeys(row.get('origins',[])+[old_origin.scheme+'://'+old_origin.netloc]))
+    return mapped
+
 def public_text(url,limit=2000000):
     with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':AGENT}),timeout=25) as r:return r.read(limit).decode('utf-8','replace')
 def key_for(url):
@@ -154,6 +164,7 @@ def main():
     for url,project in entries.items():
         if project.startswith('tb-') and project not in {'tb-toolbox-hub','tb-csv-merge-studio','tb-novel-planner','tb-manuscript-lens'}:
             mapped[project]={'siteId':project,'url':url,'origins':['https://'+project+'.pages.dev']}
+    mapped=preserve_domain_routes(mapped,json.loads((ROOT/'site-factory/ops/domain-routes.json').read_text())['routes'])
     manifest.write_text(json.dumps({'sites':sorted(mapped.values(),key=lambda x:x['siteId'])},indent=2)+'\n');changed.append(manifest)
     STATE.write_text(json.dumps(state,indent=2,sort_keys=True)+'\n');changed.append(STATE);persist(changed)
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
