@@ -1,0 +1,891 @@
+{
+  "pages": [
+    {
+      "name": "tb-photo-contact-sheet",
+      "domains": [
+        "tb-photo-contact-sheet.pages.dev",
+        "photo-contact-sheet.abreda.com"
+      ],
+      "productionUrl": "https://e88cdf0c.tb-photo-contact-sheet.pages.dev"
+    },
+    {
+      "name": "tb-toolbox-hub",
+      "domains": [
+        "tb-toolbox-hub.pages.dev",
+        "abreda.com",
+        "www.abreda.com"
+      ],
+      "productionUrl": "https://b93bb8c7.tb-toolbox-hub.pages.dev"
+    },
+    {
+      "name": "tb-pdf-preflight",
+      "domains": [
+        "tb-pdf-preflight.pages.dev",
+        "pdf-preflight.abreda.com"
+      ],
+      "productionUrl": "https://f0a64b52.tb-pdf-preflight.pages.dev"
+    },
+    {
+      "name": "tb-srt-sdh-cleaner",
+      "domains": [
+        "tb-srt-sdh-cleaner.pages.dev"
+      ],
+      "productionUrl": null
+    },
+    {
+      "name": "my-daily-life",
+      "domains": [
+        "my-daily-life.pages.dev"
+      ],
+      "productionUrl": "https://c49e14a9.my-daily-life.pages.dev"
+    },
+    {
+      "name": "tb-option-combinations",
+      "domains": [
+        "tb-option-combinations.pages.dev",
+        "option-combinations.abreda.com"
+      ],
+      "productionUrl": "https://2574ae44.tb-option-combinations.pages.dev"
+    },
+    {
+      "name": "tb-moving-boxes",
+      "domains": [
+        "tb-moving-boxes.pages.dev",
+        "moving-boxes.abreda.com"
+      ],
+      "productionUrl": "https://19bd0493.tb-moving-boxes.pages.dev"
+    },
+    {
+      "name": "tb-lease-registry-diff",
+      "domains": [
+        "tb-lease-registry-diff.pages.dev",
+        "lease-registry-diff.abreda.com"
+      ],
+      "productionUrl": "https://58d9f3d0.tb-lease-registry-diff.pages.dev"
+    },
+    {
+      "name": "tb-move-evidence",
+      "domains": [
+        "tb-move-evidence.pages.dev",
+        "move-evidence.abreda.com"
+      ],
+      "productionUrl": "https://f49079bf.tb-move-evidence.pages.dev"
+    },
+    {
+      "name": "tb-invoice-reconcile",
+      "domains": [
+        "tb-invoice-reconcile.pages.dev",
+        "invoice-reconcile.abreda.com"
+      ],
+      "productionUrl": "https://2b278d7b.tb-invoice-reconcile.pages.dev"
+    },
+    {
+      "name": "tb-inventory-diff",
+      "domains": [
+        "tb-inventory-diff.pages.dev",
+        "inventory-diff.abreda.com"
+      ],
+      "productionUrl": "https://257b0582.tb-inventory-diff.pages.dev"
+    },
+    {
+      "name": "tb-exam-variants",
+      "domains": [
+        "tb-exam-variants.pages.dev",
+        "exam-variants.abreda.com"
+      ],
+      "productionUrl": "https://5377eae3.tb-exam-variants.pages.dev"
+    },
+    {
+      "name": "tb-event-seating",
+      "domains": [
+        "tb-event-seating.pages.dev",
+        "event-seating.abreda.com"
+      ],
+      "productionUrl": "https://3d11fe3d.tb-event-seating.pages.dev"
+    },
+    {
+      "name": "tb-epub-preflight",
+      "domains": [
+        "tb-epub-preflight.pages.dev",
+        "epub-preflight.abreda.com"
+      ],
+      "productionUrl": "https://1f693e27.tb-epub-preflight.pages.dev"
+    },
+    {
+      "name": "tb-detail-image-review",
+      "domains": [
+        "tb-detail-image-review.pages.dev",
+        "detail-image-review.abreda.com"
+      ],
+      "productionUrl": "https://0e6e25ca.tb-detail-image-review.pages.dev"
+    },
+    {
+      "name": "tb-dst-embroidery",
+      "domains": [
+        "tb-dst-embroidery.pages.dev",
+        "dst-embroidery.abreda.com"
+      ],
+      "productionUrl": "https://c1a97874.tb-dst-embroidery.pages.dev"
+    },
+    {
+      "name": "tb-class-schedule-check",
+      "domains": [
+        "tb-class-schedule-check.pages.dev",
+        "class-schedule-check.abreda.com"
+      ],
+      "productionUrl": "https://331bab30.tb-class-schedule-check.pages.dev"
+    },
+    {
+      "name": "tb-certificate-batch",
+      "domains": [
+        "tb-certificate-batch.pages.dev",
+        "certificate-batch.abreda.com"
+      ],
+      "productionUrl": "https://5ed0881f.tb-certificate-batch.pages.dev"
+    },
+    {
+      "name": "tb-vinyl-condition-lab",
+      "domains": [
+        "tb-vinyl-condition-lab.pages.dev",
+        "vinyl-condition-lab.abreda.com"
+      ],
+      "productionUrl": "https://88f18a94.tb-vinyl-condition-lab.pages.dev"
+    },
+    {
+      "name": "tb-audio-quality",
+      "domains": [
+        "tb-audio-quality.pages.dev",
+        "audio-quality.abreda.com"
+      ],
+      "productionUrl": "https://4f578e38.tb-audio-quality.pages.dev"
+    },
+    {
+      "name": "tb-used-car-inspection",
+      "domains": [
+        "tb-used-car-inspection.pages.dev",
+        "used-car-inspection.abreda.com"
+      ],
+      "productionUrl": "https://f584d88d.tb-used-car-inspection.pages.dev"
+    },
+    {
+      "name": "tb-sneaker-condition-lab",
+      "domains": [
+        "tb-sneaker-condition-lab.pages.dev",
+        "sneaker-condition-lab.abreda.com"
+      ],
+      "productionUrl": "https://deae0031.tb-sneaker-condition-lab.pages.dev"
+    },
+    {
+      "name": "tb-subtitle-sync-studio",
+      "domains": [
+        "tb-subtitle-sync-studio.pages.dev",
+        "subtitle-sync-studio.abreda.com"
+      ],
+      "productionUrl": "https://a76ad4f0.tb-subtitle-sync-studio.pages.dev"
+    },
+    {
+      "name": "tb-keyboard-switch-diagnostics",
+      "domains": [
+        "tb-keyboard-switch-diagnostics.pages.dev",
+        "keyboard-switch-diagnostics.abreda.com"
+      ],
+      "productionUrl": "https://fef327b3.tb-keyboard-switch-diagnostics.pages.dev"
+    },
+    {
+      "name": "tb-gem-photo-inspection",
+      "domains": [
+        "tb-gem-photo-inspection.pages.dev",
+        "gem-photo-inspection.abreda.com"
+      ],
+      "productionUrl": "https://13815bc4.tb-gem-photo-inspection.pages.dev"
+    },
+    {
+      "name": "tb-camera-lens-check",
+      "domains": [
+        "tb-camera-lens-check.pages.dev",
+        "camera-lens-check.abreda.com"
+      ],
+      "productionUrl": "https://c5f8d4c2.tb-camera-lens-check.pages.dev"
+    },
+    {
+      "name": "tb-comic-condition-lab",
+      "domains": [
+        "tb-comic-condition-lab.pages.dev",
+        "comic-condition-lab.abreda.com"
+      ],
+      "productionUrl": "https://73ba74a8.tb-comic-condition-lab.pages.dev"
+    },
+    {
+      "name": "tb-aquarium-water-lab",
+      "domains": [
+        "tb-aquarium-water-lab.pages.dev",
+        "aquarium-water-lab.abreda.com"
+      ],
+      "productionUrl": "https://19bc5236.tb-aquarium-water-lab.pages.dev"
+    },
+    {
+      "name": "tb-toolbox-admin",
+      "domains": [
+        "tb-toolbox-admin.pages.dev",
+        "adminivo.com"
+      ],
+      "productionUrl": "https://fe116294.tb-toolbox-admin.pages.dev"
+    },
+    {
+      "name": "tb-watch-inspection-lab",
+      "domains": [
+        "tb-watch-inspection-lab.pages.dev",
+        "watch-inspection-lab.abreda.com"
+      ],
+      "productionUrl": "https://9f6667a6.tb-watch-inspection-lab.pages.dev"
+    },
+    {
+      "name": "tb-worktime-analyzer",
+      "domains": [
+        "tb-worktime-analyzer.pages.dev"
+      ],
+      "productionUrl": "https://d3a33e06.tb-worktime-analyzer.pages.dev"
+    },
+    {
+      "name": "tb-pages-vtt-cleaner",
+      "domains": [
+        "tb-pages-vtt-cleaner.pages.dev"
+      ],
+      "productionUrl": "https://c66385e6.tb-pages-vtt-cleaner.pages.dev"
+    },
+    {
+      "name": "tb-stl-print-check",
+      "domains": [
+        "tb-stl-print-check.pages.dev",
+        "stl-print-check.abreda.com"
+      ],
+      "productionUrl": "https://48b0a0f7.tb-stl-print-check.pages.dev"
+    },
+    {
+      "name": "tb-submission-auditor",
+      "domains": [
+        "tb-submission-auditor.pages.dev"
+      ],
+      "productionUrl": "https://5d1a121d.tb-submission-auditor.pages.dev"
+    },
+    {
+      "name": "tb-pages-srt-sdh-cleaner",
+      "domains": [
+        "tb-pages-srt-sdh-cleaner.pages.dev"
+      ],
+      "productionUrl": "https://04cfe513.tb-pages-srt-sdh-cleaner.pages.dev"
+    },
+    {
+      "name": "tb-recurring-payment-finder",
+      "domains": [
+        "tb-recurring-payment-finder.pages.dev"
+      ],
+      "productionUrl": "https://7cb5dc9b.tb-recurring-payment-finder.pages.dev"
+    },
+    {
+      "name": "tb-shift-calendar",
+      "domains": [
+        "tb-shift-calendar.pages.dev"
+      ],
+      "productionUrl": "https://6162e960.tb-shift-calendar.pages.dev"
+    },
+    {
+      "name": "tb-privacy-redactor",
+      "domains": [
+        "tb-privacy-redactor.pages.dev"
+      ],
+      "productionUrl": "https://db1e2213.tb-privacy-redactor.pages.dev"
+    },
+    {
+      "name": "tb-novel-planner",
+      "domains": [
+        "tb-novel-planner.pages.dev",
+        "novel.abreda.com"
+      ],
+      "productionUrl": "https://71741a0d.tb-novel-planner.pages.dev"
+    },
+    {
+      "name": "tb-manuscript-lens",
+      "domains": [
+        "tb-manuscript-lens.pages.dev",
+        "manuscript.abreda.com"
+      ],
+      "productionUrl": "https://435bd6fb.tb-manuscript-lens.pages.dev"
+    },
+    {
+      "name": "tb-meal-timeline",
+      "domains": [
+        "tb-meal-timeline.pages.dev"
+      ],
+      "productionUrl": "https://905452c6.tb-meal-timeline.pages.dev"
+    },
+    {
+      "name": "tb-label-sheet-maker",
+      "domains": [
+        "tb-label-sheet-maker.pages.dev"
+      ],
+      "productionUrl": "https://f7d99a6a.tb-label-sheet-maker.pages.dev"
+    },
+    {
+      "name": "tb-pages-jsonl-validator",
+      "domains": [
+        "tb-pages-jsonl-validator.pages.dev"
+      ],
+      "productionUrl": "https://ae9280df.tb-pages-jsonl-validator.pages.dev"
+    },
+    {
+      "name": "tb-handover-checklist",
+      "domains": [
+        "tb-handover-checklist.pages.dev"
+      ],
+      "productionUrl": "https://1c77afd2.tb-handover-checklist.pages.dev"
+    },
+    {
+      "name": "tb-group-order-summary",
+      "domains": [
+        "tb-group-order-summary.pages.dev"
+      ],
+      "productionUrl": "https://22575c99.tb-group-order-summary.pages.dev"
+    },
+    {
+      "name": "tb-deployment-check",
+      "domains": [
+        "tb-deployment-check.pages.dev"
+      ],
+      "productionUrl": "https://752b3c08.tb-deployment-check.pages.dev"
+    },
+    {
+      "name": "tb-cut-plan-optimizer",
+      "domains": [
+        "tb-cut-plan-optimizer.pages.dev"
+      ],
+      "productionUrl": "https://b7057b0e.tb-cut-plan-optimizer.pages.dev"
+    },
+    {
+      "name": "tb-csv-merge-studio",
+      "domains": [
+        "tb-csv-merge-studio.pages.dev",
+        "csv.abreda.com"
+      ],
+      "productionUrl": "https://0b0f4168.tb-csv-merge-studio.pages.dev"
+    },
+    {
+      "name": "tb-pages-csv-empty-row-remover",
+      "domains": [
+        "tb-pages-csv-empty-row-remover.pages.dev"
+      ],
+      "productionUrl": "https://8e8f0d00.tb-pages-csv-empty-row-remover.pages.dev"
+    },
+    {
+      "name": "tb-pages-csv-column-extractor",
+      "domains": [
+        "tb-pages-csv-column-extractor.pages.dev"
+      ],
+      "productionUrl": "https://ee686b58.tb-pages-csv-column-extractor.pages.dev"
+    },
+    {
+      "name": "tb-card-grading-lab",
+      "domains": [
+        "tb-card-grading-lab.pages.dev",
+        "card-grading-lab.abreda.com"
+      ],
+      "productionUrl": "https://283f4f1a.tb-card-grading-lab.pages.dev"
+    },
+    {
+      "name": "tb-webtoon-preflight",
+      "domains": [
+        "tb-webtoon-preflight.pages.dev",
+        "webtoon-preflight.abreda.com"
+      ],
+      "productionUrl": "https://2f12110a.tb-webtoon-preflight.pages.dev"
+    },
+    {
+      "name": "tb-video-delivery-check",
+      "domains": [
+        "tb-video-delivery-check.pages.dev",
+        "video-delivery-check.abreda.com"
+      ],
+      "productionUrl": "https://9289638e.tb-video-delivery-check.pages.dev"
+    },
+    {
+      "name": "tb-trip-supplies",
+      "domains": [
+        "tb-trip-supplies.pages.dev",
+        "trip-supplies.abreda.com"
+      ],
+      "productionUrl": "https://66e673ad.tb-trip-supplies.pages.dev"
+    },
+    {
+      "name": "tb-tournament-maker",
+      "domains": [
+        "tb-tournament-maker.pages.dev",
+        "tournament-maker.abreda.com"
+      ],
+      "productionUrl": "https://cf3e8d3f.tb-tournament-maker.pages.dev"
+    },
+    {
+      "name": "tb-svg-laser-check",
+      "domains": [
+        "tb-svg-laser-check.pages.dev",
+        "svg-laser-check.abreda.com"
+      ],
+      "productionUrl": "https://71479ccc.tb-svg-laser-check.pages.dev"
+    },
+    {
+      "name": "tb-survey-review",
+      "domains": [
+        "tb-survey-review.pages.dev",
+        "survey-review.abreda.com"
+      ],
+      "productionUrl": "https://f9a39b59.tb-survey-review.pages.dev"
+    },
+    {
+      "name": "tb-static-site-check",
+      "domains": [
+        "tb-static-site-check.pages.dev",
+        "static-site-check.abreda.com"
+      ],
+      "productionUrl": "https://1151b758.tb-static-site-check.pages.dev"
+    },
+    {
+      "name": "tb-silence-finder",
+      "domains": [
+        "tb-silence-finder.pages.dev",
+        "silence-finder.abreda.com"
+      ],
+      "productionUrl": "https://d2d4f5a6.tb-silence-finder.pages.dev"
+    },
+    {
+      "name": "tb-shotlist-maker",
+      "domains": [
+        "tb-shotlist-maker.pages.dev",
+        "shotlist-maker.abreda.com"
+      ],
+      "productionUrl": "https://41eecada.tb-shotlist-maker.pages.dev"
+    },
+    {
+      "name": "tb-show-cues",
+      "domains": [
+        "tb-show-cues.pages.dev",
+        "show-cues.abreda.com"
+      ],
+      "productionUrl": "https://2bbc042d.tb-show-cues.pages.dev"
+    },
+    {
+      "name": "tb-question-similarity",
+      "domains": [
+        "tb-question-similarity.pages.dev",
+        "question-similarity.abreda.com"
+      ],
+      "productionUrl": "https://75681435.tb-question-similarity.pages.dev"
+    },
+    {
+      "name": "tb-shipping-audit",
+      "domains": [
+        "tb-shipping-audit.pages.dev",
+        "shipping-audit.abreda.com"
+      ],
+      "productionUrl": "https://5126f837.tb-shipping-audit.pages.dev"
+    },
+    {
+      "name": "tb-purchase-three-way",
+      "domains": [
+        "tb-purchase-three-way.pages.dev",
+        "purchase-three-way.abreda.com"
+      ],
+      "productionUrl": "https://f2173607.tb-purchase-three-way.pages.dev"
+    },
+    {
+      "name": "tb-photo-duplicates",
+      "domains": [
+        "tb-photo-duplicates.pages.dev",
+        "photo-duplicates.abreda.com"
+      ],
+      "productionUrl": "https://6bbb0768.tb-photo-duplicates.pages.dev"
+    },
+    {
+      "name": "proto-lab",
+      "domains": [
+        "proto-lab-2nw.pages.dev"
+      ],
+      "productionUrl": "https://a46728e0.proto-lab-2nw.pages.dev"
+    }
+  ],
+  "dnsCredentialAvailable": false,
+  "cloudflareAnalytics": "not_verified",
+  "blogMobile": [
+    {
+      "url": "https://abreda.com/blog/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/write-alt-text-for-website-images/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/webnovel-episode-foreshadowing-tracker/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/track-return-and-warranty-deadlines/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/secondhand-handover-items-checklist/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/scan-qr-code-links-safely/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/print-a4-labels-to-correct-size/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/pdf-black-box-not-redaction/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/merge-csv-with-different-columns/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/measure-repeating-task-time/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/jpg-png-webp-which-format/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/iphone-photo-location-privacy/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/google-passkey-shared-device-warning/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/google-drive-restricted-sharing-guide/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/gmail-large-attachment-drive-link/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/fix-delayed-subtitle-timing/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/find-repeated-phrases-in-manuscript/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/fill-pdf-form-without-editing-original/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/file-backup-321-strategy/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/excel-highlight-duplicates-before-removing/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/excel-csv-utf8-korean-garbled/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/excel-csv-leading-zero-preservation/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/collect-group-food-orders/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/check-text-background-contrast/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/browser-localstorage-data-preservation/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/straighten-document-photo/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/shift-pattern-to-calendar/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/seller-item-profit-guide/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/recurring-bank-payments-guide/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/photo-file-size-guide/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/pdf-merge-reorder-guide/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/hide-private-info-in-photos/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/guest-wifi-qr-card/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/fix-csv-empty-rows/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/blog/bulk-rename-photos-files/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/write-alt-text-for-website-images/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/webnovel-episode-foreshadowing-tracker/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/track-return-and-warranty-deadlines/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/secondhand-handover-items-checklist/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/scan-qr-code-links-safely/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/print-a4-labels-to-correct-size/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/pdf-black-box-not-redaction/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/merge-csv-with-different-columns/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/measure-repeating-task-time/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/jpg-png-webp-which-format/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/iphone-photo-location-privacy/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/google-passkey-shared-device-warning/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/google-drive-restricted-sharing-guide/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/gmail-large-attachment-drive-link/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/fix-delayed-subtitle-timing/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/find-repeated-phrases-in-manuscript/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/fill-pdf-form-without-editing-original/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/file-backup-321-strategy/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/excel-highlight-duplicates-before-removing/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/excel-csv-utf8-korean-garbled/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/excel-csv-leading-zero-preservation/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/collect-group-food-orders/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/check-text-background-contrast/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/browser-localstorage-data-preservation/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/straighten-document-photo/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/shift-pattern-to-calendar/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/seller-item-profit-guide/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/recurring-bank-payments-guide/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/photo-file-size-guide/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/pdf-merge-reorder-guide/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/hide-private-info-in-photos/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/guest-wifi-qr-card/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/fix-csv-empty-rows/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    },
+    {
+      "url": "https://abreda.com/en/blog/bulk-rename-photos-files/",
+      "status": "pass",
+      "scope": "mobile layout, metadata, image ALT, migrated tool links"
+    }
+  ],
+  "collectorVersion": 5,
+  "collectorRecords": [
+    {
+      "event_id": "e21789f9-4386-4951-86d3-a36dffdd53e8",
+      "site_id": "tb-jsonl-validator",
+      "visit_day": "2026-11-21",
+      "received_at": "2026-11-21 07:55:28.555389+00",
+      "category": "automated",
+      "is_visit": false,
+      "page_lang": "ko"
+    },
+    {
+      "event_id": "1aa5dd31-4ce4-47d7-9b54-4b78cf4d1f25",
+      "site_id": "tb-aquarium-water-lab",
+      "visit_day": "2026-11-21",
+      "received_at": "2026-11-21 08:09:32.846507+00",
+      "category": "automated",
+      "is_visit": false,
+      "page_lang": "en"
+    }
+  ],
+  "run": "https://github.com/ghfmf1-coder/my-daily-life/actions/runs/44883268672",
+  "status": "success"
+}

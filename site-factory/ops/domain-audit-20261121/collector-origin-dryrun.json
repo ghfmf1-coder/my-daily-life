@@ -1,0 +1,314 @@
+[
+  {
+    "siteId": "tb-aquarium-water-lab",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-camera-lens-check",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-comic-condition-lab",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-gem-photo-inspection",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-keyboard-switch-diagnostics",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-sneaker-condition-lab",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-subtitle-sync-studio",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-used-car-inspection",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-vinyl-condition-lab",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-audio-quality",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-certificate-batch",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-class-schedule-check",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-detail-image-review",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-dst-embroidery",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-epub-preflight",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-event-seating",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-exam-variants",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-inventory-diff",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-invoice-reconcile",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-lease-registry-diff",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-move-evidence",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-moving-boxes",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-option-combinations",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-pdf-preflight",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-photo-contact-sheet",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-photo-duplicates",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-purchase-three-way",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-question-similarity",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-shipping-audit",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-shotlist-maker",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-show-cues",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-silence-finder",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-static-site-check",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-survey-review",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-svg-laser-check",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-tournament-maker",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-trip-supplies",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-video-delivery-check",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  },
+  {
+    "siteId": "tb-webtoon-preflight",
+    "response": {
+      "accepted": false,
+      "diagnostic": true,
+      "category": "unknown"
+    }
+  }
+]

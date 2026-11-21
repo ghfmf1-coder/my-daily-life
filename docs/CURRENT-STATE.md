@@ -1,6 +1,14 @@
-# 2026-11-21 진행 중: 도메인 통합·애드센스 준비
+# 최신 작업 — 2026-11-21 아브레다 도메인 통합
 
-현재 작업 및 근거는 [DOMAIN-INTEGRATION-2026-11-21.md](DOMAIN-INTEGRATION-2026-11-21.md). 운영 배포와 브라우저 검증은 아직 완료로 판정하지 않음. 아래는 이전 검수 이력.
+**일반 ChatGPT Plus 인수인계:** [최종 작업 보고서](DOMAIN-INTEGRATION-2026-11-21.md), [앱별 주소/검수 CSV](../site-factory/ops/domain-audit-20261121/inventory.csv), [검증 원천 폴더](../site-factory/ops/domain-audit-20261121/).
+
+- 기존 공개 앱 71개 중 70개 아브레다 대표 주소, 하루한칸 1개 이전 보류. 이번에 39개 통합, Supabase 주소 39행 갱신. 공용 등록 67행과 앱 전체 수는 다름.
+- 한·영 블로그 각 34글. 기존 주소는 기능 유지 및 canonical 적용. 디자인/기능/기록 삭제 없음.
+- 통합/운영 검사 [44882826087](https://github.com/ghfmf1-coder/my-daily-life/actions/runs/44882826087) completed/success. 최종 정책·블로그 [44883268672](https://github.com/ghfmf1-coder/my-daily-life/actions/runs/44883268672) completed/success.
+- Supabase 공개 수집기 v5 배포, 새 origin 39개 진단 통과, 자동화 표시 실데이터 기록 확인. GA4 page_view/tool_complete 204 확인. 최근 GA4 빈 보고서 원인은 미확정.
+- 추가 미등록 proto-lab 배포 발견. 소스/방문자 미확인이므로 보류. 통합 불가능으로 확정한 앱 없음, 폐기 없음.
+- 남음: DNS secret 부재로 하루한칸 연결, AdSense 로그인/Ready·광고 준비, 관제센터 Worker/D1 최신 표시, 전체 색인/CWV·콘텐츠 심사. 완료로 오인하지 말 것.
+- 실제 변경·통계 지표 정의·권한 제한·실패 이력은 최종 보고서 참조. 아래 과거 기록은 당시 이력으로 보존.
 
 # 현재 운영 상태 — 작은도구함
 

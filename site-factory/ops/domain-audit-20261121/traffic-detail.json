@@ -1,0 +1,2574 @@
+{
+  "range": {
+    "from": "2026-10-24",
+    "to": "2026-11-20"
+  },
+  "legacy": [
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-24",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-24",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-10-24",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 6,
+      "tab_day_visits": 6
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-25",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-10-25",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-10-25",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-26",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-26",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-10-26",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 6,
+      "tab_day_visits": 6
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "visit_day": "2026-10-27",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-27",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 4,
+      "tab_day_visits": 4
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-27",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-10-27",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "visit_day": "2026-10-28",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-28",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-28",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-10-28",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-10-28",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-29",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-10-29",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 6,
+      "tab_day_visits": 6
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "visit_day": "2026-10-30",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-30",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 7,
+      "tab_day_visits": 7
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-10-30",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 6,
+      "tab_day_visits": 6
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "visit_day": "2026-10-31",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-31",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-10-31",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-10-31",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-01",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-01",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-11-01",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 4,
+      "tab_day_visits": 4
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-02",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-11-02",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-11-02",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "visit_day": "2026-11-03",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 6,
+      "tab_day_visits": 4
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-03",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-03",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-11-03",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-11-03",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-04",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-11-04",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-manuscript-lens",
+      "visit_day": "2026-11-04",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-05",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-05",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-05",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-manuscript-lens",
+      "visit_day": "2026-11-05",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-06",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-06",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-11-06",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-07",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-07",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 4,
+      "tab_day_visits": 4
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-11-07",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "visit_day": "2026-11-08",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-08",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-08",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-manuscript-lens",
+      "visit_day": "2026-11-08",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 4,
+      "tab_day_visits": 4
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-11-08",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-09",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-09",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 4,
+      "tab_day_visits": 4
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-manuscript-lens",
+      "visit_day": "2026-11-09",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-11-09",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "visit_day": "2026-11-10",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-10",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 30,
+      "tab_day_visits": 27
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-10",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 9,
+      "tab_day_visits": 9
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-11",
+      "category": "bot",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-11",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 11,
+      "tab_day_visits": 11
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-11",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 26,
+      "tab_day_visits": 24
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-11-11",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-12",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-12",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-11-12",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-11-12",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-13",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 3,
+      "tab_day_visits": 3
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-13",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-11-13",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-14",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-manuscript-lens",
+      "visit_day": "2026-11-14",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-15",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 6,
+      "tab_day_visits": 6
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-manuscript-lens",
+      "visit_day": "2026-11-15",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-11-15",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 4,
+      "tab_day_visits": 4
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-16",
+      "category": "bot",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-16",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-16",
+      "category": "bot",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-11-16",
+      "category": "bot",
+      "page_lang": "ko",
+      "events": 3,
+      "tab_day_visits": 3
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-11-16",
+      "category": "bot",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-manuscript-lens",
+      "visit_day": "2026-11-16",
+      "category": "bot",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-11-16",
+      "category": "bot",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-novel-planner",
+      "visit_day": "2026-11-16",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-17",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-17",
+      "category": "bot",
+      "page_lang": "ko",
+      "events": 4,
+      "tab_day_visits": 4
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "toolbox-csv-merge-studio",
+      "visit_day": "2026-11-17",
+      "category": "bot",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "visit_day": "2026-11-18",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-18",
+      "category": "bot",
+      "page_lang": "en",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-18",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-18",
+      "category": "bot",
+      "page_lang": "ko",
+      "events": 11,
+      "tab_day_visits": 11
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "visit_day": "2026-11-19",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-19",
+      "category": "bot",
+      "page_lang": "ko",
+      "events": 3,
+      "tab_day_visits": 3
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-19",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-19",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "3b329586-c3fd-45ce-8a29-2f976e96f45c",
+      "visit_day": "2026-11-20",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-20",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2
+    },
+    {
+      "source": "legacy_classified",
+      "site_id": "catalog-toolbox-hub",
+      "visit_day": "2026-11-20",
+      "category": "bot",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1
+    }
+  ],
+  "public": [
+    {
+      "site_id": "tb-aquarium-water-lab",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-10-31",
+      "last_day": "2026-10-31"
+    },
+    {
+      "site_id": "tb-aquarium-water-lab",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 3,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-aquarium-water-lab",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-audio-quality",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-10-30",
+      "last_day": "2026-11-04"
+    },
+    {
+      "site_id": "tb-audio-quality",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 2,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-audio-quality",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 2,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-camera-lens-check",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-04",
+      "last_day": "2026-11-04"
+    },
+    {
+      "site_id": "tb-camera-lens-check",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 435,
+      "tab_day_visits": 435,
+      "active_days": 16,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-camera-lens-check",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 2,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-camera-lens-check",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 32,
+      "tab_day_visits": 32,
+      "active_days": 11,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-camera-lens-check",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-09"
+    },
+    {
+      "site_id": "tb-card-grading-lab",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 2,
+      "first_day": "2026-11-03",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-card-grading-lab",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-10-26",
+      "last_day": "2026-10-26"
+    },
+    {
+      "site_id": "tb-card-grading-lab",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-card-grading-lab",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 10,
+      "tab_day_visits": 10,
+      "active_days": 5,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-card-grading-lab",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-09"
+    },
+    {
+      "site_id": "tb-certificate-batch",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 4,
+      "tab_day_visits": 4,
+      "active_days": 3,
+      "first_day": "2026-11-04",
+      "last_day": "2026-11-06"
+    },
+    {
+      "site_id": "tb-certificate-batch",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-class-schedule-check",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-class-schedule-check",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 15,
+      "tab_day_visits": 14,
+      "active_days": 4,
+      "first_day": "2026-10-30",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-comic-condition-lab",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 4,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-01"
+    },
+    {
+      "site_id": "tb-comic-condition-lab",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-comic-condition-lab",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-csv-column-extractor",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 4,
+      "tab_day_visits": 4,
+      "active_days": 3,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-csv-column-extractor",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 24,
+      "tab_day_visits": 24,
+      "active_days": 9,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-csv-column-extractor",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-csv-column-extractor",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 3,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-19"
+    },
+    {
+      "site_id": "tb-csv-empty-row-remover",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 21,
+      "tab_day_visits": 21,
+      "active_days": 8,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-06"
+    },
+    {
+      "site_id": "tb-csv-empty-row-remover",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 3,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-cut-plan-optimizer",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 16,
+      "tab_day_visits": 16,
+      "active_days": 3,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-16"
+    },
+    {
+      "site_id": "tb-detail-image-review",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 3,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-14"
+    },
+    {
+      "site_id": "tb-detail-image-review",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 11,
+      "tab_day_visits": 10,
+      "active_days": 2,
+      "first_day": "2026-11-01",
+      "last_day": "2026-11-04"
+    },
+    {
+      "site_id": "tb-document-scan-studio",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-dst-embroidery",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-10-31",
+      "last_day": "2026-10-31"
+    },
+    {
+      "site_id": "tb-dst-embroidery",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 2,
+      "first_day": "2026-11-14",
+      "last_day": "2026-11-17"
+    },
+    {
+      "site_id": "tb-epub-preflight",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-epub-preflight",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 9,
+      "tab_day_visits": 9,
+      "active_days": 4,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-05"
+    },
+    {
+      "site_id": "tb-event-seating",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 9,
+      "tab_day_visits": 8,
+      "active_days": 1,
+      "first_day": "2026-10-30",
+      "last_day": "2026-10-30"
+    },
+    {
+      "site_id": "tb-event-seating",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 2,
+      "first_day": "2026-11-16",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-exam-variants",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-exam-variants",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 2,
+      "first_day": "2026-11-04",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-gem-photo-inspection",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-gem-photo-inspection",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-10-30",
+      "last_day": "2026-10-31"
+    },
+    {
+      "site_id": "tb-gem-photo-inspection",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-09"
+    },
+    {
+      "site_id": "tb-gem-photo-inspection",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 2,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-group-order-summary",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-13",
+      "last_day": "2026-11-13"
+    },
+    {
+      "site_id": "tb-group-order-summary",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 98,
+      "tab_day_visits": 98,
+      "active_days": 6,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-17"
+    },
+    {
+      "site_id": "tb-handover-checklist",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 16,
+      "tab_day_visits": 16,
+      "active_days": 3,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-17"
+    },
+    {
+      "site_id": "tb-image-compress-lab",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-inventory-diff",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-13",
+      "last_day": "2026-11-13"
+    },
+    {
+      "site_id": "tb-inventory-diff",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 8,
+      "tab_day_visits": 8,
+      "active_days": 2,
+      "first_day": "2026-10-31",
+      "last_day": "2026-11-05"
+    },
+    {
+      "site_id": "tb-inventory-diff",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-inventory-diff",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-invoice-reconcile",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 12,
+      "tab_day_visits": 11,
+      "active_days": 2,
+      "first_day": "2026-10-30",
+      "last_day": "2026-11-06"
+    },
+    {
+      "site_id": "tb-invoice-reconcile",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 4,
+      "tab_day_visits": 4,
+      "active_days": 2,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-invoice-reconcile",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 2,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-jsonl-validator",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 3,
+      "first_day": "2026-10-28",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-jsonl-validator",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 8,
+      "tab_day_visits": 8,
+      "active_days": 4,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-05"
+    },
+    {
+      "site_id": "tb-jsonl-validator",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-20",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-keyboard-switch-diagnostics",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 6,
+      "tab_day_visits": 5,
+      "active_days": 4,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-keyboard-switch-diagnostics",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-09"
+    },
+    {
+      "site_id": "tb-keyboard-switch-diagnostics",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 2,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-label-sheet-maker",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 16,
+      "tab_day_visits": 16,
+      "active_days": 5,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-17"
+    },
+    {
+      "site_id": "tb-lease-registry-diff",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-lease-registry-diff",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 1,
+      "first_day": "2026-10-30",
+      "last_day": "2026-10-30"
+    },
+    {
+      "site_id": "tb-lease-registry-diff",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-meal-timeline",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 13,
+      "tab_day_visits": 13,
+      "active_days": 3,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-16"
+    },
+    {
+      "site_id": "tb-move-evidence",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-move-evidence",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 17,
+      "tab_day_visits": 16,
+      "active_days": 5,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-07"
+    },
+    {
+      "site_id": "tb-move-evidence",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 5,
+      "first_day": "2026-11-11",
+      "last_day": "2026-11-17"
+    },
+    {
+      "site_id": "tb-move-evidence",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-09"
+    },
+    {
+      "site_id": "tb-moving-boxes",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 4,
+      "tab_day_visits": 4,
+      "active_days": 3,
+      "first_day": "2026-10-29",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-moving-boxes",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 345,
+      "tab_day_visits": 345,
+      "active_days": 4,
+      "first_day": "2026-10-28",
+      "last_day": "2026-10-31"
+    },
+    {
+      "site_id": "tb-moving-boxes",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-09"
+    },
+    {
+      "site_id": "tb-option-combinations",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-option-combinations",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 1,
+      "first_day": "2026-10-26",
+      "last_day": "2026-10-26"
+    },
+    {
+      "site_id": "tb-option-combinations",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-09"
+    },
+    {
+      "site_id": "tb-pdf-page-workshop",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-pdf-page-workshop",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-pdf-preflight",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-pdf-preflight",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 2,
+      "first_day": "2026-10-30",
+      "last_day": "2026-11-01"
+    },
+    {
+      "site_id": "tb-pdf-preflight",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 4,
+      "tab_day_visits": 4,
+      "active_days": 3,
+      "first_day": "2026-11-15",
+      "last_day": "2026-11-17"
+    },
+    {
+      "site_id": "tb-photo-contact-sheet",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-04",
+      "last_day": "2026-11-04"
+    },
+    {
+      "site_id": "tb-photo-contact-sheet",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 8,
+      "tab_day_visits": 8,
+      "active_days": 3,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-06"
+    },
+    {
+      "site_id": "tb-photo-duplicates",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-10-30",
+      "last_day": "2026-11-04"
+    },
+    {
+      "site_id": "tb-photo-duplicates",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-11-17",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-privacy-redactor",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-privacy-redactor",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 23,
+      "tab_day_visits": 23,
+      "active_days": 5,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-purchase-three-way",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-purchase-three-way",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 14,
+      "tab_day_visits": 13,
+      "active_days": 4,
+      "first_day": "2026-11-01",
+      "last_day": "2026-11-05"
+    },
+    {
+      "site_id": "tb-purchase-three-way",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-09"
+    },
+    {
+      "site_id": "tb-question-similarity",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-question-similarity",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 11,
+      "tab_day_visits": 10,
+      "active_days": 3,
+      "first_day": "2026-10-30",
+      "last_day": "2026-11-06"
+    },
+    {
+      "site_id": "tb-question-similarity",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-recurring-payment-finder",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 25,
+      "tab_day_visits": 25,
+      "active_days": 5,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-17"
+    },
+    {
+      "site_id": "tb-room-layout-planner",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 2,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-13"
+    },
+    {
+      "site_id": "tb-seller-profit-math",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-share-qr-card",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-13",
+      "last_day": "2026-11-13"
+    },
+    {
+      "site_id": "tb-shift-calendar",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-shift-calendar",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 14,
+      "tab_day_visits": 14,
+      "active_days": 4,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-17"
+    },
+    {
+      "site_id": "tb-shipping-audit",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-shipping-audit",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 44,
+      "tab_day_visits": 44,
+      "active_days": 7,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-05"
+    },
+    {
+      "site_id": "tb-shipping-audit",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-shipping-audit",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 2,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-12"
+    },
+    {
+      "site_id": "tb-shotlist-maker",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-shotlist-maker",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-10-31",
+      "last_day": "2026-11-05"
+    },
+    {
+      "site_id": "tb-shotlist-maker",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-12",
+      "last_day": "2026-11-12"
+    },
+    {
+      "site_id": "tb-show-cues",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-show-cues",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 8,
+      "tab_day_visits": 8,
+      "active_days": 2,
+      "first_day": "2026-11-02",
+      "last_day": "2026-11-04"
+    },
+    {
+      "site_id": "tb-silence-finder",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 2,
+      "first_day": "2026-11-04",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-silence-finder",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 12,
+      "tab_day_visits": 11,
+      "active_days": 3,
+      "first_day": "2026-10-31",
+      "last_day": "2026-11-03"
+    },
+    {
+      "site_id": "tb-silence-finder",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-silence-finder",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 4,
+      "tab_day_visits": 4,
+      "active_days": 4,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-sneaker-condition-lab",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-10-24",
+      "last_day": "2026-10-30"
+    },
+    {
+      "site_id": "tb-sneaker-condition-lab",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-sneaker-condition-lab",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-20",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-srt-sdh-cleaner",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 4,
+      "first_day": "2026-11-04",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-srt-sdh-cleaner",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 6,
+      "tab_day_visits": 6,
+      "active_days": 3,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-06"
+    },
+    {
+      "site_id": "tb-srt-sdh-cleaner",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-20",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-srt-sdh-cleaner",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-11",
+      "last_day": "2026-11-11"
+    },
+    {
+      "site_id": "tb-static-site-check",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-static-site-check",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-10-30",
+      "last_day": "2026-10-30"
+    },
+    {
+      "site_id": "tb-static-site-check",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-stl-print-check",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-20",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-stl-print-check",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 4,
+      "active_days": 3,
+      "first_day": "2026-10-27",
+      "last_day": "2026-11-02"
+    },
+    {
+      "site_id": "tb-stl-print-check",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 1,
+      "first_day": "2026-11-20",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-submission-auditor",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 17,
+      "tab_day_visits": 17,
+      "active_days": 3,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-16"
+    },
+    {
+      "site_id": "tb-subtitle-sync-studio",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-02",
+      "last_day": "2026-11-02"
+    },
+    {
+      "site_id": "tb-subtitle-sync-studio",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 4,
+      "tab_day_visits": 4,
+      "active_days": 2,
+      "first_day": "2026-11-15",
+      "last_day": "2026-11-16"
+    },
+    {
+      "site_id": "tb-subtitle-sync-studio",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-10-31",
+      "last_day": "2026-10-31"
+    },
+    {
+      "site_id": "tb-survey-review",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-survey-review",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 6,
+      "tab_day_visits": 6,
+      "active_days": 3,
+      "first_day": "2026-10-30",
+      "last_day": "2026-11-04"
+    },
+    {
+      "site_id": "tb-svg-laser-check",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 18,
+      "tab_day_visits": 18,
+      "active_days": 3,
+      "first_day": "2026-11-03",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-tournament-maker",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 11,
+      "tab_day_visits": 10,
+      "active_days": 2,
+      "first_day": "2026-10-30",
+      "last_day": "2026-11-03"
+    },
+    {
+      "site_id": "tb-tournament-maker",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-trip-supplies",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-10-30",
+      "last_day": "2026-11-04"
+    },
+    {
+      "site_id": "tb-used-car-inspection",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 5,
+      "tab_day_visits": 5,
+      "active_days": 2,
+      "first_day": "2026-11-04",
+      "last_day": "2026-11-05"
+    },
+    {
+      "site_id": "tb-used-car-inspection",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-09",
+      "last_day": "2026-11-09"
+    },
+    {
+      "site_id": "tb-used-car-inspection",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-20",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-video-delivery-check",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-video-delivery-check",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 20,
+      "tab_day_visits": 17,
+      "active_days": 5,
+      "first_day": "2026-10-25",
+      "last_day": "2026-11-06"
+    },
+    {
+      "site_id": "tb-video-delivery-check",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 16,
+      "tab_day_visits": 14,
+      "active_days": 4,
+      "first_day": "2026-11-11",
+      "last_day": "2026-11-19"
+    },
+    {
+      "site_id": "tb-video-delivery-check",
+      "category": "unknown",
+      "page_lang": "unknown",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-10-25",
+      "last_day": "2026-10-25"
+    },
+    {
+      "site_id": "tb-vinyl-condition-lab",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 2,
+      "first_day": "2026-10-24",
+      "last_day": "2026-10-31"
+    },
+    {
+      "site_id": "tb-vinyl-condition-lab",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-vinyl-condition-lab",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-vtt-cleaner",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 3,
+      "tab_day_visits": 3,
+      "active_days": 2,
+      "first_day": "2026-10-30",
+      "last_day": "2026-11-10"
+    },
+    {
+      "site_id": "tb-vtt-cleaner",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 4,
+      "tab_day_visits": 4,
+      "active_days": 2,
+      "first_day": "2026-10-29",
+      "last_day": "2026-11-07"
+    },
+    {
+      "site_id": "tb-vtt-cleaner",
+      "category": "unknown",
+      "page_lang": "en",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-16",
+      "last_day": "2026-11-16"
+    },
+    {
+      "site_id": "tb-watch-inspection-lab",
+      "category": "bot",
+      "page_lang": "ko",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-18",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-watch-inspection-lab",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 6,
+      "tab_day_visits": 6,
+      "active_days": 4,
+      "first_day": "2026-11-04",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-watch-inspection-lab",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 6,
+      "tab_day_visits": 6,
+      "active_days": 2,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-01"
+    },
+    {
+      "site_id": "tb-watch-inspection-lab",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 1,
+      "tab_day_visits": 1,
+      "active_days": 1,
+      "first_day": "2026-11-20",
+      "last_day": "2026-11-20"
+    },
+    {
+      "site_id": "tb-webtoon-preflight",
+      "category": "bot",
+      "page_lang": "unknown",
+      "events": 2,
+      "tab_day_visits": 2,
+      "active_days": 1,
+      "first_day": "2026-11-08",
+      "last_day": "2026-11-08"
+    },
+    {
+      "site_id": "tb-webtoon-preflight",
+      "category": "likely_human",
+      "page_lang": "unknown",
+      "events": 11,
+      "tab_day_visits": 10,
+      "active_days": 4,
+      "first_day": "2026-10-24",
+      "last_day": "2026-11-03"
+    },
+    {
+      "site_id": "tb-webtoon-preflight",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 9,
+      "tab_day_visits": 9,
+      "active_days": 2,
+      "first_day": "2026-11-14",
+      "last_day": "2026-11-18"
+    },
+    {
+      "site_id": "tb-worktime-analyzer",
+      "category": "unknown",
+      "page_lang": "ko",
+      "events": 12,
+      "tab_day_visits": 12,
+      "active_days": 3,
+      "first_day": "2026-11-10",
+      "last_day": "2026-11-17"
+    }
+  ],
+  "ga4_month": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"status\":\"done\",\"data\":[{\"date\":\"2026-11-08\",\"event_name\":\"page_view\",\"event_count\":3.0},{\"date\":\"2026-11-08\",\"event_name\":\"tool_complete\",\"event_count\":3.0},{\"date\":\"2026-11-08\",\"event_name\":\"user_engagement\",\"event_count\":2.0},{\"date\":\"2026-11-08\",\"event_name\":\"first_visit\",\"event_count\":1.0},{\"date\":\"2026-11-08\",\"event_name\":\"session_start\",\"event_count\":1.0},{\"date\":\"2026-11-10\",\"event_name\":\"page_view\",\"event_count\":6.0},{\"date\":\"2026-11-10\",\"event_name\":\"scroll\",\"event_count\":4.0},{\"date\":\"2026-11-10\",\"event_name\":\"user_engagement\",\"event_count\":3.0},{\"date\":\"2026-11-10\",\"event_name\":\"session_start\",\"event_count\":2.0},{\"date\":\"2026-11-10\",\"event_name\":\"first_visit\",\"event_count\":1.0},{\"date\":\"2026-11-11\",\"event_name\":\"page_view\",\"event_count\":3.0},{\"date\":\"2026-11-11\",\"event_name\":\"session_start\",\"event_count\":2.0},{\"date\":\"2026-11-11\",\"event_name\":\"first_visit\",\"event_count\":1.0},{\"date\":\"2026-11-11\",\"event_name\":\"user_engagement\",\"event_count\":1.0}],\"total_rows\":14}"
+      }
+    ],
+    "structuredContent": {
+      "status": "done",
+      "data": [
+        {
+          "date": "2026-11-08",
+          "event_name": "page_view",
+          "event_count": 3
+        },
+        {
+          "date": "2026-11-08",
+          "event_name": "tool_complete",
+          "event_count": 3
+        },
+        {
+          "date": "2026-11-08",
+          "event_name": "user_engagement",
+          "event_count": 2
+        },
+        {
+          "date": "2026-11-08",
+          "event_name": "first_visit",
+          "event_count": 1
+        },
+        {
+          "date": "2026-11-08",
+          "event_name": "session_start",
+          "event_count": 1
+        },
+        {
+          "date": "2026-11-10",
+          "event_name": "page_view",
+          "event_count": 6
+        },
+        {
+          "date": "2026-11-10",
+          "event_name": "scroll",
+          "event_count": 4
+        },
+        {
+          "date": "2026-11-10",
+          "event_name": "user_engagement",
+          "event_count": 3
+        },
+        {
+          "date": "2026-11-10",
+          "event_name": "session_start",
+          "event_count": 2
+        },
+        {
+          "date": "2026-11-10",
+          "event_name": "first_visit",
+          "event_count": 1
+        },
+        {
+          "date": "2026-11-11",
+          "event_name": "page_view",
+          "event_count": 3
+        },
+        {
+          "date": "2026-11-11",
+          "event_name": "session_start",
+          "event_count": 2
+        },
+        {
+          "date": "2026-11-11",
+          "event_name": "first_visit",
+          "event_count": 1
+        },
+        {
+          "date": "2026-11-11",
+          "event_name": "user_engagement",
+          "event_count": 1
+        }
+      ],
+      "total_rows": 14
+    },
+    "isError": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "event_id": "e21789f9-4386-4951-86d3-a36dffdd53e8",
+  "site_id": "tb-jsonl-validator",
+  "is_visit": false,
+  "expected_category": "automated",
+  "purpose": "Explicit collector persistence and duplicate retry QA; never count as a person",
+  "results": [
+    {
+      "attempt": 1,
+      "response": {
+        "accepted": true,
+        "duplicate": false
+      }
+    },
+    {
+      "attempt": 2,
+      "response": {
+        "accepted": false,
+        "duplicate": true
+      }
+    }
+  ]
+}

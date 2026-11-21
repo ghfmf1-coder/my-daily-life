@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-21T17:13:28.788033+09:00",
+  "collector": {
+    "previousVersion": 4,
+    "newVersion": 5,
+    "status": "ACTIVE",
+    "fix": "Embedded fallback origin map includes every registered canonical URL; historical origins preserved",
+    "before": "39 dry-run requests invalid_event on newly integrated origin",
+    "after": "39 no-write diagnostics accepted; migrated app English automated event stored"
+  },
+  "adsense": {
+    "sourcePublisherAccount": "accounts/pub-1802341703309961",
+    "approved": "unverified_sign_in_required",
+    "adActivation": false,
+    "reviewRequested": false,
+    "adsTxt": "HTTP 200 returns home HTML; no verified ads.txt"
+  },
+  "haru": {
+    "status": "retain_pending_dns_and_authenticated_migration_review",
+    "reason": "No DNS secret available; localStorage origin and signup/recovery return URLs require validation; not proven impossible"
+  },
+  "unregisteredProject": {
+    "name": "proto-lab",
+    "url": "https://proto-lab-2nw.pages.dev/",
+    "title": "PROTO LAB | 경기 데이터 분석 도구",
+    "http": 200,
+    "sourceInRepository": false,
+    "traffic": "unknown",
+    "disposition": "hold_not_proven_impossible"
+  },
+  "cloudflareAnalytics": "not_verified",
+  "deletedApps": []
+}

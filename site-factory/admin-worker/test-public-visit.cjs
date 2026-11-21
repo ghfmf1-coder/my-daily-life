@@ -20,3 +20,9 @@ async function duplicateResponse(){
  console.log('PASS: duplicate RPC rejection is not reported as a new visit');
 }
 duplicateResponse().catch(e=>{console.error(e);process.exitCode=1});
+
+(async()=>{
+ const manifest=JSON.parse(fs.readFileSync(__dirname+'/../ops/visit-sites.json','utf8'));
+ for(const row of manifest.sites)await check('public-visit-edge/index.ts',row.siteId,new URL(row.url).origin);
+ console.log('PASS: every registered primary origin works without remote manifest entries');
+})().catch(e=>{console.error(e);process.exitCode=1});

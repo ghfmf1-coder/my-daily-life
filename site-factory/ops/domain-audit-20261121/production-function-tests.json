@@ -1,0 +1,735 @@
+{
+  "run": "https://github.com/ghfmf1-coder/my-daily-life/actions/runs/44882826087",
+  "status": "completed",
+  "conclusion": "success",
+  "domainMobile": [
+    {
+      "slug": "aquarium-water-lab",
+      "lang": "ko",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "aquarium-water-lab",
+      "lang": "en",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "camera-lens-check",
+      "lang": "ko",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "camera-lens-check",
+      "lang": "en",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "comic-condition-lab",
+      "lang": "ko",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "comic-condition-lab",
+      "lang": "en",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "gem-photo-inspection",
+      "lang": "ko",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "gem-photo-inspection",
+      "lang": "en",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "keyboard-switch-diagnostics",
+      "lang": "ko",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "keyboard-switch-diagnostics",
+      "lang": "en",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "sneaker-condition-lab",
+      "lang": "ko",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "sneaker-condition-lab",
+      "lang": "en",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "subtitle-sync-studio",
+      "lang": "ko",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "subtitle-sync-studio",
+      "lang": "en",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "used-car-inspection",
+      "lang": "ko",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "used-car-inspection",
+      "lang": "en",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "vinyl-condition-lab",
+      "lang": "ko",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "vinyl-condition-lab",
+      "lang": "en",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "audio-quality",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "audio-quality",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "certificate-batch",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "certificate-batch",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "class-schedule-check",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "class-schedule-check",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "detail-image-review",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "detail-image-review",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "dst-embroidery",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "dst-embroidery",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "epub-preflight",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "epub-preflight",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "event-seating",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "event-seating",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "exam-variants",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "exam-variants",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "inventory-diff",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "inventory-diff",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "invoice-reconcile",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "invoice-reconcile",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "lease-registry-diff",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "lease-registry-diff",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "move-evidence",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "move-evidence",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "moving-boxes",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "moving-boxes",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "option-combinations",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "option-combinations",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "pdf-preflight",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "pdf-preflight",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "photo-contact-sheet",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "photo-contact-sheet",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "photo-duplicates",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "photo-duplicates",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "purchase-three-way",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "purchase-three-way",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "question-similarity",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "question-similarity",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "shipping-audit",
+      "lang": "ko",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "shipping-audit",
+      "lang": "en",
+      "status": "pass",
+      "core": true
+    },
+    {
+      "slug": "shotlist-maker",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "shotlist-maker",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "show-cues",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "show-cues",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "silence-finder",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "silence-finder",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "static-site-check",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "static-site-check",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "survey-review",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "survey-review",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "svg-laser-check",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "svg-laser-check",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "tournament-maker",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "tournament-maker",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "trip-supplies",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "trip-supplies",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "video-delivery-check",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "video-delivery-check",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "webtoon-preflight",
+      "lang": "ko",
+      "status": "pass",
+      "core": false
+    },
+    {
+      "slug": "webtoon-preflight",
+      "lang": "en",
+      "status": "pass",
+      "core": false
+    }
+  ],
+  "workCore": [
+    [
+      {
+        "slug": "invoice-reconcile",
+        "status": "pass"
+      },
+      {
+        "slug": "purchase-three-way",
+        "status": "pass"
+      },
+      {
+        "slug": "inventory-diff",
+        "status": "pass"
+      },
+      {
+        "slug": "class-schedule-check",
+        "status": "pass"
+      },
+      {
+        "slug": "certificate-batch",
+        "status": "pass"
+      },
+      {
+        "slug": "lease-registry-diff",
+        "status": "pass"
+      },
+      {
+        "slug": "event-seating",
+        "status": "pass"
+      },
+      {
+        "slug": "exam-variants",
+        "status": "pass"
+      },
+      {
+        "slug": "moving-boxes",
+        "status": "pass"
+      },
+      {
+        "slug": "option-combinations",
+        "status": "pass"
+      },
+      {
+        "slug": "question-similarity",
+        "status": "pass"
+      },
+      {
+        "slug": "shotlist-maker",
+        "status": "pass"
+      },
+      {
+        "slug": "show-cues",
+        "status": "pass"
+      },
+      {
+        "slug": "static-site-check",
+        "status": "pass"
+      },
+      {
+        "slug": "survey-review",
+        "status": "pass"
+      },
+      {
+        "slug": "svg-laser-check",
+        "status": "pass"
+      },
+      {
+        "slug": "tournament-maker",
+        "status": "pass"
+      },
+      {
+        "slug": "trip-supplies",
+        "status": "pass"
+      },
+      {
+        "slug": "video-delivery-check",
+        "status": "pass"
+      },
+      {
+        "slug": "dst-embroidery",
+        "status": "pass"
+      },
+      {
+        "slug": "epub-preflight",
+        "status": "pass"
+      },
+      {
+        "slug": "pdf-preflight",
+        "status": "pass"
+      },
+      {
+        "slug": "audio-quality",
+        "status": "pass"
+      },
+      {
+        "slug": "silence-finder",
+        "status": "pass"
+      },
+      {
+        "slug": "webtoon-preflight",
+        "status": "pass"
+      },
+      {
+        "slug": "detail-image-review",
+        "status": "pass"
+      },
+      {
+        "slug": "photo-contact-sheet",
+        "status": "pass"
+      },
+      {
+        "slug": "move-evidence",
+        "status": "pass"
+      },
+      {
+        "slug": "photo-duplicates",
+        "status": "pass"
+      }
+    ],
+    [
+      {
+        "slug": "invoice-reconcile",
+        "status": "pass"
+      },
+      {
+        "slug": "purchase-three-way",
+        "status": "pass"
+      },
+      {
+        "slug": "inventory-diff",
+        "status": "pass"
+      },
+      {
+        "slug": "class-schedule-check",
+        "status": "pass"
+      },
+      {
+        "slug": "certificate-batch",
+        "status": "pass"
+      },
+      {
+        "slug": "lease-registry-diff",
+        "status": "pass"
+      },
+      {
+        "slug": "event-seating",
+        "status": "pass"
+      },
+      {
+        "slug": "exam-variants",
+        "status": "pass"
+      },
+      {
+        "slug": "moving-boxes",
+        "status": "pass"
+      },
+      {
+        "slug": "option-combinations",
+        "status": "pass"
+      },
+      {
+        "slug": "question-similarity",
+        "status": "pass"
+      },
+      {
+        "slug": "shotlist-maker",
+        "status": "pass"
+      },
+      {
+        "slug": "show-cues",
+        "status": "pass"
+      },
+      {
+        "slug": "static-site-check",
+        "status": "pass"
+      },
+      {
+        "slug": "survey-review",
+        "status": "pass"
+      },
+      {
+        "slug": "svg-laser-check",
+        "status": "pass"
+      },
+      {
+        "slug": "tournament-maker",
+        "status": "pass"
+      },
+      {
+        "slug": "trip-supplies",
+        "status": "pass"
+      },
+      {
+        "slug": "video-delivery-check",
+        "status": "pass"
+      },
+      {
+        "slug": "dst-embroidery",
+        "status": "pass"
+      },
+      {
+        "slug": "epub-preflight",
+        "status": "pass"
+      },
+      {
+        "slug": "pdf-preflight",
+        "status": "pass"
+      },
+      {
+        "slug": "audio-quality",
+        "status": "pass"
+      },
+      {
+        "slug": "silence-finder",
+        "status": "pass"
+      },
+      {
+        "slug": "webtoon-preflight",
+        "status": "pass"
+      },
+      {
+        "slug": "detail-image-review",
+        "status": "pass"
+      },
+      {
+        "slug": "photo-contact-sheet",
+        "status": "pass"
+      },
+      {
+        "slug": "move-evidence",
+        "status": "pass"
+      },
+      {
+        "slug": "photo-duplicates",
+        "status": "pass"
+      }
+    ]
+  ],
+  "ga4": [
+    {
+      "event": "page_view",
+      "location": "https://abreda.com/tools/jsonl-validator/",
+      "referrer": "",
+      "debug": true,
+      "status": 204,
+      "sensitiveLeak": false
+    },
+    {
+      "event": "tool_complete",
+      "location": "https://abreda.com/tools/jsonl-validator/",
+      "referrer": "",
+      "debug": true,
+      "status": 204,
+      "sensitiveLeak": false
+    }
+  ],
+  "existingSmoke": {
+    "passed": 12,
+    "failed": 0
+  }
+}

@@ -1,0 +1,3153 @@
+[
+  {
+    "url": "https://tb-aquarium-water-lab.pages.dev/",
+    "slug": "aquarium-water-lab",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/aquarium-water-lab/",
+    "http": 200,
+    "final_url": "https://tb-aquarium-water-lab.pages.dev/",
+    "seconds": 4.717,
+    "bytes": 13775,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "수족관 수질 분석실 | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-aquarium-water-lab"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "어항의 수질 측정값을 환수 전후로 비교할 때. 실측 pH·온도·암모니아 값을 입력하고 주의 표시를 확인하세요.",
+    "title": "수족관 수질 분석실 | ABREDA",
+    "canonical": "https://abreda.com/tools/aquarium-water-lab/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/aquarium-water-lab/",
+      "en": "https://abreda.com/en/tools/aquarium-water-lab/",
+      "x-default": "https://abreda.com/tools/aquarium-water-lab/"
+    },
+    "link_count": 3,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-aquarium-water-lab.pages.dev/en/",
+    "slug": "aquarium-water-lab",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/aquarium-water-lab/",
+    "http": 200,
+    "final_url": "https://tb-aquarium-water-lab.pages.dev/en/",
+    "seconds": 4.822,
+    "bytes": 13005,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "Aquarium Water Lab | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-aquarium-water-lab"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "Log aquarium pH, temperature, ammonia, nitrite and nitrate, with general caution flags.",
+    "title": "Aquarium Water Lab | ABREDA",
+    "canonical": "https://abreda.com/en/tools/aquarium-water-lab/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/aquarium-water-lab/",
+      "en": "https://abreda.com/en/tools/aquarium-water-lab/",
+      "x-default": "https://abreda.com/tools/aquarium-water-lab/"
+    },
+    "link_count": 3,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-camera-lens-check.pages.dev/",
+    "slug": "camera-lens-check",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/camera-lens-check/",
+    "http": 200,
+    "final_url": "https://tb-camera-lens-check.pages.dev/",
+    "seconds": 4.836,
+    "bytes": 9913,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "중고 카메라 렌즈 검수 | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-camera-lens-check"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "중고 렌즈 거래 전 스크래치·자동초점·조리개를 확인할 때. 실제 관찰한 사항과 사진을 기록하고 판매자와 확인하세요.",
+    "title": "중고 카메라 렌즈 검수 | ABREDA",
+    "canonical": "https://abreda.com/tools/camera-lens-check/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/camera-lens-check/",
+      "en": "https://abreda.com/en/tools/camera-lens-check/",
+      "x-default": "https://abreda.com/tools/camera-lens-check/"
+    },
+    "link_count": 2,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-camera-lens-check.pages.dev/en/",
+    "slug": "camera-lens-check",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/camera-lens-check/",
+    "http": 200,
+    "final_url": "https://tb-camera-lens-check.pages.dev/en/",
+    "seconds": 4.808,
+    "bytes": 9360,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "Used Camera Lens Check | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-camera-lens-check"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "Document scratches, haze, autofocus behavior and aperture movement before buying a used lens. Record your observations and attach photos locally when useful.",
+    "title": "Used Camera Lens Check | ABREDA",
+    "canonical": "https://abreda.com/en/tools/camera-lens-check/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/camera-lens-check/",
+      "en": "https://abreda.com/en/tools/camera-lens-check/",
+      "x-default": "https://abreda.com/tools/camera-lens-check/"
+    },
+    "link_count": 2,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-comic-condition-lab.pages.dev/",
+    "slug": "comic-condition-lab",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/comic-condition-lab/",
+    "http": 200,
+    "final_url": "https://tb-comic-condition-lab.pages.dev/",
+    "seconds": 5.172,
+    "bytes": 9885,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "코믹북·만화책 상태 검수 | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-comic-condition-lab"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "중고 만화책의 표지·책등·페이지 상태를 기록할 때. 낙장과 손상을 직접 확인해 상태 보고서를 작성하세요.",
+    "title": "코믹북·만화책 상태 검수 | ABREDA",
+    "canonical": "https://abreda.com/tools/comic-condition-lab/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/comic-condition-lab/",
+      "en": "https://abreda.com/en/tools/comic-condition-lab/",
+      "x-default": "https://abreda.com/tools/comic-condition-lab/"
+    },
+    "link_count": 2,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-comic-condition-lab.pages.dev/en/",
+    "slug": "comic-condition-lab",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/comic-condition-lab/",
+    "http": 200,
+    "final_url": "https://tb-comic-condition-lab.pages.dev/en/",
+    "seconds": 5.26,
+    "bytes": 9317,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "Comic Book Condition Lab | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-comic-condition-lab"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "Keep a consistent record of spine, cover and page condition for used comics. Record observed wear or missing pages and save a condition report.",
+    "title": "Comic Book Condition Lab | ABREDA",
+    "canonical": "https://abreda.com/en/tools/comic-condition-lab/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/comic-condition-lab/",
+      "en": "https://abreda.com/en/tools/comic-condition-lab/",
+      "x-default": "https://abreda.com/tools/comic-condition-lab/"
+    },
+    "link_count": 2,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-gem-photo-inspection.pages.dev/",
+    "slug": "gem-photo-inspection",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/gem-photo-inspection/",
+    "http": 200,
+    "final_url": "https://tb-gem-photo-inspection.pages.dev/",
+    "seconds": 5.035,
+    "bytes": 12709,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "보석·원석 외관 검수 | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-gem-photo-inspection"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "보석 사진의 치수·외관을 정리해 기록할 때. 실측 값과 촬영 조건 및 특징을 보고서로 남기세요.",
+    "title": "보석·원석 외관 검수 | ABREDA",
+    "canonical": "https://abreda.com/tools/gem-photo-inspection/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/gem-photo-inspection/",
+      "en": "https://abreda.com/en/tools/gem-photo-inspection/",
+      "x-default": "https://abreda.com/tools/gem-photo-inspection/"
+    },
+    "link_count": 3,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-gem-photo-inspection.pages.dev/en/",
+    "slug": "gem-photo-inspection",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/gem-photo-inspection/",
+    "http": 200,
+    "final_url": "https://tb-gem-photo-inspection.pages.dev/en/",
+    "seconds": 5.047,
+    "bytes": 8256,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "Gemstone Photo Inspection | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-gem-photo-inspection"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "Document gemstone dimensions, visible marks and photography conditions before professional inspection.",
+    "title": "Gemstone Photo Inspection | ABREDA",
+    "canonical": "https://abreda.com/en/tools/gem-photo-inspection/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/gem-photo-inspection/",
+      "en": "https://abreda.com/en/tools/gem-photo-inspection/",
+      "x-default": "https://abreda.com/tools/gem-photo-inspection/"
+    },
+    "link_count": 2,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+    "slug": "keyboard-switch-diagnostics",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/keyboard-switch-diagnostics/",
+    "http": 200,
+    "final_url": "https://tb-keyboard-switch-diagnostics.pages.dev/",
+    "seconds": 6.014,
+    "bytes": 10897,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "키보드 키 입력 진단실 | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-keyboard-switch-diagnostics"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "키가 씹히거나 반복 입력되는 현상을 확인할 때. 키보드 테스트 영역을 선택하고 실제 키 입력을 확인하세요.",
+    "title": "키보드 키 입력 진단실 | ABREDA",
+    "canonical": "https://abreda.com/tools/keyboard-switch-diagnostics/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/keyboard-switch-diagnostics/",
+      "en": "https://abreda.com/en/tools/keyboard-switch-diagnostics/",
+      "x-default": "https://abreda.com/tools/keyboard-switch-diagnostics/"
+    },
+    "link_count": 2,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-keyboard-switch-diagnostics.pages.dev/en/",
+    "slug": "keyboard-switch-diagnostics",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/keyboard-switch-diagnostics/",
+    "http": 200,
+    "final_url": "https://tb-keyboard-switch-diagnostics.pages.dev/en/",
+    "seconds": 6.054,
+    "bytes": 10261,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "Keyboard Switch Diagnostics | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-keyboard-switch-diagnostics"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "Inspect browser key events when a keyboard key repeats or fails. Focus the test area and press keys while observing the event log.",
+    "title": "Keyboard Switch Diagnostics | ABREDA",
+    "canonical": "https://abreda.com/en/tools/keyboard-switch-diagnostics/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/keyboard-switch-diagnostics/",
+      "en": "https://abreda.com/en/tools/keyboard-switch-diagnostics/",
+      "x-default": "https://abreda.com/tools/keyboard-switch-diagnostics/"
+    },
+    "link_count": 2,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-sneaker-condition-lab.pages.dev/",
+    "slug": "sneaker-condition-lab",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/sneaker-condition-lab/",
+    "http": 200,
+    "final_url": "https://tb-sneaker-condition-lab.pages.dev/",
+    "seconds": 4.942,
+    "bytes": 12329,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "스니커즈 중고 상태 검수 | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-sneaker-condition-lab"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "중고 운동화의 밑창 마모·주름·오염을 기록할 때. 실제 외관 상태를 확인해 사진과 함께 보고서를 작성하세요.",
+    "title": "스니커즈 중고 상태 검수 | ABREDA",
+    "canonical": "https://abreda.com/tools/sneaker-condition-lab/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/sneaker-condition-lab/",
+      "en": "https://abreda.com/en/tools/sneaker-condition-lab/",
+      "x-default": "https://abreda.com/tools/sneaker-condition-lab/"
+    },
+    "link_count": 3,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-sneaker-condition-lab.pages.dev/en/",
+    "slug": "sneaker-condition-lab",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/sneaker-condition-lab/",
+    "http": 200,
+    "final_url": "https://tb-sneaker-condition-lab.pages.dev/en/",
+    "seconds": 5.034,
+    "bytes": 11620,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "Sneaker Condition Lab | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-sneaker-condition-lab"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "Record visible outsole wear, creases and stains before a sneaker resale. Write observation notes and attach local photos to the report.",
+    "title": "Sneaker Condition Lab | ABREDA",
+    "canonical": "https://abreda.com/en/tools/sneaker-condition-lab/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/sneaker-condition-lab/",
+      "en": "https://abreda.com/en/tools/sneaker-condition-lab/",
+      "x-default": "https://abreda.com/tools/sneaker-condition-lab/"
+    },
+    "link_count": 3,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-subtitle-sync-studio.pages.dev/",
+    "slug": "subtitle-sync-studio",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/subtitle-sync-studio/",
+    "http": 200,
+    "final_url": "https://tb-subtitle-sync-studio.pages.dev/",
+    "seconds": 4.708,
+    "bytes": 11641,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "자막 싱크 조정 · SRT VTT 변환 및 자막 오류 검사 | 무료 온라인 자막 편집기"
+      },
+      {
+        "defer": null,
+        "src": "/subtitle-core.js"
+      },
+      {
+        "defer": null,
+        "src": "/app.js"
+      },
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-subtitle-sync-studio"
+      }
+    ],
+    "h1": 1,
+    "h2": 11,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "SRT·VTT 자막 파일의 시간 싱크를 초 단위로 이동하고 FPS를 변환하세요. 겹친 자막·시간 오류 검사와 텍스트 교체까지, 파일 업로드 없이 브라우저에서 처리합니다.",
+    "robots": "index,follow,max-image-preview:large",
+    "title": "자막 싱크 조정 · SRT VTT 변환 및 자막 오류 검사 | 무료 온라인 자막 편집기",
+    "canonical": "https://abreda.com/tools/subtitle-sync-studio/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/subtitle-sync-studio/",
+      "en": "https://abreda.com/en/tools/subtitle-sync-studio/",
+      "x-default": "https://abreda.com/tools/subtitle-sync-studio/"
+    },
+    "link_count": 8,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-subtitle-sync-studio.pages.dev/en/",
+    "slug": "subtitle-sync-studio",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/subtitle-sync-studio/",
+    "http": 200,
+    "final_url": "https://tb-subtitle-sync-studio.pages.dev/en/",
+    "seconds": 4.81,
+    "bytes": 10774,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "Free Subtitle Sync & SRT VTT Converter | Fix Subtitle Timing Online"
+      },
+      {
+        "defer": null,
+        "src": "/subtitle-core.js"
+      },
+      {
+        "defer": null,
+        "src": "/app.js"
+      },
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-subtitle-sync-studio"
+      }
+    ],
+    "h1": 1,
+    "h2": 11,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "Shift subtitle timing, convert SRT to VTT or VTT to SRT, adjust for frame rates, find overlaps and empty cues. Private browser-only subtitle editor.",
+    "robots": "index,follow,max-image-preview:large",
+    "title": "Free Subtitle Sync & SRT VTT Converter | Fix Subtitle Timing Online",
+    "canonical": "https://abreda.com/en/tools/subtitle-sync-studio/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/subtitle-sync-studio/",
+      "en": "https://abreda.com/en/tools/subtitle-sync-studio/",
+      "x-default": "https://abreda.com/tools/subtitle-sync-studio/"
+    },
+    "link_count": 8,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-used-car-inspection.pages.dev/",
+    "slug": "used-car-inspection",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/used-car-inspection/",
+    "http": 200,
+    "final_url": "https://tb-used-car-inspection.pages.dev/",
+    "seconds": 4.861,
+    "bytes": 13439,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "중고차 구매 전 검수실 | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-used-car-inspection"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "중고차 현장 점검에서 도장 두께와 외관을 기록할 때. 부위별 실측값과 확인이 필요한 사항을 메모하세요.",
+    "title": "중고차 구매 전 검수실 | ABREDA",
+    "canonical": "https://abreda.com/tools/used-car-inspection/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/used-car-inspection/",
+      "en": "https://abreda.com/en/tools/used-car-inspection/",
+      "x-default": "https://abreda.com/tools/used-car-inspection/"
+    },
+    "link_count": 3,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-used-car-inspection.pages.dev/en/",
+    "slug": "used-car-inspection",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/used-car-inspection/",
+    "http": 200,
+    "final_url": "https://tb-used-car-inspection.pages.dev/en/",
+    "seconds": 4.905,
+    "bytes": 12671,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "Used Car Inspection | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-used-car-inspection"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "Record used-car inspection observations, paint thickness readings and follow-up questions.",
+    "title": "Used Car Inspection | ABREDA",
+    "canonical": "https://abreda.com/en/tools/used-car-inspection/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/used-car-inspection/",
+      "en": "https://abreda.com/en/tools/used-car-inspection/",
+      "x-default": "https://abreda.com/tools/used-car-inspection/"
+    },
+    "link_count": 3,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-vinyl-condition-lab.pages.dev/",
+    "slug": "vinyl-condition-lab",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/vinyl-condition-lab/",
+    "http": 200,
+    "final_url": "https://tb-vinyl-condition-lab.pages.dev/",
+    "seconds": 4.964,
+    "bytes": 12263,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "LP 레코드 상태 검수 | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-vinyl-condition-lab"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "LP 레코드의 표면 손상과 실제 재생 상태를 기록할 때. 스크래치와 청음 결과를 구분해 보고서에 작성하세요.",
+    "title": "LP 레코드 상태 검수 | ABREDA",
+    "canonical": "https://abreda.com/tools/vinyl-condition-lab/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/vinyl-condition-lab/",
+      "en": "https://abreda.com/en/tools/vinyl-condition-lab/",
+      "x-default": "https://abreda.com/tools/vinyl-condition-lab/"
+    },
+    "link_count": 3,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-vinyl-condition-lab.pages.dev/en/",
+    "slug": "vinyl-condition-lab",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/vinyl-condition-lab/",
+    "http": 200,
+    "final_url": "https://tb-vinyl-condition-lab.pages.dev/en/",
+    "seconds": 5.028,
+    "bytes": 11606,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "Vinyl Record Condition | ABREDA"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-vinyl-condition-lab"
+      }
+    ],
+    "h1": 1,
+    "h2": 7,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "Describe vinyl surface condition separately from playback observations. Record visible scratches and listening notes for your collection or resale listing.",
+    "title": "Vinyl Record Condition | ABREDA",
+    "canonical": "https://abreda.com/en/tools/vinyl-condition-lab/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/vinyl-condition-lab/",
+      "en": "https://abreda.com/en/tools/vinyl-condition-lab/",
+      "x-default": "https://abreda.com/tools/vinyl-condition-lab/"
+    },
+    "link_count": 3,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-audio-quality.pages.dev/",
+    "slug": "audio-quality",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/audio-quality/",
+    "http": 200,
+    "final_url": "https://tb-audio-quality.pages.dev/",
+    "seconds": 5.524,
+    "bytes": 8551,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "오디오 클리핑 의심·피크 분석 | 채널별 검사 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-audio-quality"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "음원이나 음성 파일을 납품하기 전에 피크를 확인할 때 오디오 파일을 선택하면 채널·샘플레이트·피크 결과를 볼 수 있습니다.",
+    "title": "오디오 클리핑 의심·피크 분석 | 채널별 검사 | 아브레다",
+    "canonical": "https://abreda.com/tools/audio-quality/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/audio-quality/",
+      "en": "https://abreda.com/en/tools/audio-quality/",
+      "x-default": "https://abreda.com/tools/audio-quality/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-audio-quality.pages.dev/en/",
+    "slug": "audio-quality",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/audio-quality/",
+    "http": 200,
+    "final_url": "https://tb-audio-quality.pages.dev/en/",
+    "seconds": 5.571,
+    "bytes": 8435,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "오디오 클리핑 의심·피크 분석 | 채널별 검사 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-audio-quality"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Inspect sample rate, channel count, peak level and possible clipped samples in an audio file.",
+    "title": "Audio Peak and Channel Inspector | ABREDA",
+    "canonical": "https://abreda.com/en/tools/audio-quality/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/audio-quality/",
+      "en": "https://abreda.com/en/tools/audio-quality/",
+      "x-default": "https://abreda.com/tools/audio-quality/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-certificate-batch.pages.dev/",
+    "slug": "certificate-batch",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/certificate-batch/",
+    "http": 200,
+    "final_url": "https://tb-certificate-batch.pages.dev/",
+    "seconds": 4.834,
+    "bytes": 9366,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "수료증 일괄 제작 | 명단 CSV에서 PDF 인쇄 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-certificate-batch"
+      }
+    ],
+    "h1": 1,
+    "h2": 8,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "교육생 수십 명의 수료증을 한꺼번에 출력할 때 이름,과정,날짜 열의 CSV를 올리고 미리보기를 검토한 뒤 PDF로 인쇄하세요.",
+    "title": "수료증 일괄 제작 | 명단 CSV에서 PDF 인쇄 | 아브레다",
+    "canonical": "https://abreda.com/tools/certificate-batch/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/certificate-batch/",
+      "en": "https://abreda.com/en/tools/certificate-batch/",
+      "x-default": "https://abreda.com/tools/certificate-batch/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-certificate-batch.pages.dev/en/",
+    "slug": "certificate-batch",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/certificate-batch/",
+    "http": 200,
+    "final_url": "https://tb-certificate-batch.pages.dev/en/",
+    "seconds": 4.881,
+    "bytes": 8994,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "수료증 일괄 제작 | 명단 CSV에서 PDF 인쇄 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-certificate-batch"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Turn a participant list into printable certificates for events or classes.",
+    "title": "Batch Certificate Maker | ABREDA",
+    "canonical": "https://abreda.com/en/tools/certificate-batch/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/certificate-batch/",
+      "en": "https://abreda.com/en/tools/certificate-batch/",
+      "x-default": "https://abreda.com/tools/certificate-batch/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-class-schedule-check.pages.dev/",
+    "slug": "class-schedule-check",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/class-schedule-check/",
+    "http": 200,
+    "final_url": "https://tb-class-schedule-check.pages.dev/",
+    "seconds": 5.368,
+    "bytes": 9455,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "학원 시간표 겹침 검사 | 강사·교실·학생 중복 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-class-schedule-check"
+      }
+    ],
+    "h1": 1,
+    "h2": 8,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "학기 시간표를 바꾼 뒤 중복 수업을 미리 찾아야 할 때 요일,시작,종료,강사,강의실 열을 CSV로 준비하고 시각은 09:00처럼 입력하세요.",
+    "title": "학원 시간표 겹침 검사 | 강사·교실·학생 중복 | 아브레다",
+    "canonical": "https://abreda.com/tools/class-schedule-check/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/class-schedule-check/",
+      "en": "https://abreda.com/en/tools/class-schedule-check/",
+      "x-default": "https://abreda.com/tools/class-schedule-check/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-class-schedule-check.pages.dev/en/",
+    "slug": "class-schedule-check",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/class-schedule-check/",
+    "http": 200,
+    "final_url": "https://tb-class-schedule-check.pages.dev/en/",
+    "seconds": 5.367,
+    "bytes": 9018,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "학원 시간표 겹침 검사 | 강사·교실·학생 중복 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-class-schedule-check"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Find overlapping teaching or room assignments in an exported class timetable.",
+    "title": "Class Schedule Conflict Checker | ABREDA",
+    "canonical": "https://abreda.com/en/tools/class-schedule-check/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/class-schedule-check/",
+      "en": "https://abreda.com/en/tools/class-schedule-check/",
+      "x-default": "https://abreda.com/tools/class-schedule-check/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-detail-image-review.pages.dev/",
+    "slug": "detail-image-review",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/detail-image-review/",
+    "http": 200,
+    "final_url": "https://tb-detail-image-review.pages.dev/",
+    "seconds": 4.704,
+    "bytes": 8512,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "상품 상세이미지 규격 검사 | 크기·용량·비율 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-detail-image-review"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "온라인 상품 상세 이미지를 대량 등록하기 전에 검수할 때 상품 이미지 파일을 여러 개 선택하면 너비·용량·종횡비 결과가 표시됩니다.",
+    "title": "상품 상세이미지 규격 검사 | 크기·용량·비율 | 아브레다",
+    "canonical": "https://abreda.com/tools/detail-image-review/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/detail-image-review/",
+      "en": "https://abreda.com/en/tools/detail-image-review/",
+      "x-default": "https://abreda.com/tools/detail-image-review/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-detail-image-review.pages.dev/en/",
+    "slug": "detail-image-review",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/detail-image-review/",
+    "http": 200,
+    "final_url": "https://tb-detail-image-review.pages.dev/en/",
+    "seconds": 4.738,
+    "bytes": 8161,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "상품 상세이미지 규격 검사 | 크기·용량·비율 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-detail-image-review"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Check image dimensions, ratio and file size before publishing a product detail page.",
+    "title": "Product Detail Image Checker | ABREDA",
+    "canonical": "https://abreda.com/en/tools/detail-image-review/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/detail-image-review/",
+      "en": "https://abreda.com/en/tools/detail-image-review/",
+      "x-default": "https://abreda.com/tools/detail-image-review/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-dst-embroidery.pages.dev/",
+    "slug": "dst-embroidery",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/dst-embroidery/",
+    "http": 200,
+    "final_url": "https://tb-dst-embroidery.pages.dev/",
+    "seconds": 4.918,
+    "bytes": 8643,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "DST 자수 파일 기초 분석 | 스티치·점프 명령 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-dst-embroidery"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "자수 기계에 도안을 보내기 전에 명령 구성을 확인할 때 DST 파일을 선택하면 추정 명령 수와 색 변경 수가 나옵니다.",
+    "title": "DST 자수 파일 기초 분석 | 스티치·점프 명령 | 아브레다",
+    "canonical": "https://abreda.com/tools/dst-embroidery/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/dst-embroidery/",
+      "en": "https://abreda.com/en/tools/dst-embroidery/",
+      "x-default": "https://abreda.com/tools/dst-embroidery/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-dst-embroidery.pages.dev/en/",
+    "slug": "dst-embroidery",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/dst-embroidery/",
+    "http": 200,
+    "final_url": "https://tb-dst-embroidery.pages.dev/en/",
+    "seconds": 5.011,
+    "bytes": 8433,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "DST 자수 파일 기초 분석 | 스티치·점프 명령 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-dst-embroidery"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Review stitch and jump commands before handing a DST design to an embroidery machine.",
+    "title": "DST Embroidery File Inspector | ABREDA",
+    "canonical": "https://abreda.com/en/tools/dst-embroidery/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/dst-embroidery/",
+      "en": "https://abreda.com/en/tools/dst-embroidery/",
+      "x-default": "https://abreda.com/tools/dst-embroidery/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-epub-preflight.pages.dev/",
+    "slug": "epub-preflight",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/epub-preflight/",
+    "http": 200,
+    "final_url": "https://tb-epub-preflight.pages.dev/",
+    "seconds": 4.719,
+    "bytes": 8457,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "EPUB 기본 구조 검사 | 전자책 ZIP 필수 항목 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-epub-preflight"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "전자책을 제출하기 전 파일 자체에 기초 구조가 있는지 확인할 때 EPUB 파일을 선택하면 내부 이름 기준 검사 결과를 확인할 수 있습니다.",
+    "title": "EPUB 기본 구조 검사 | 전자책 ZIP 필수 항목 | 아브레다",
+    "canonical": "https://abreda.com/tools/epub-preflight/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/epub-preflight/",
+      "en": "https://abreda.com/en/tools/epub-preflight/",
+      "x-default": "https://abreda.com/tools/epub-preflight/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-epub-preflight.pages.dev/en/",
+    "slug": "epub-preflight",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/epub-preflight/",
+    "http": 200,
+    "final_url": "https://tb-epub-preflight.pages.dev/en/",
+    "seconds": 4.688,
+    "bytes": 8008,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "EPUB 기본 구조 검사 | 전자책 ZIP 필수 항목 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-epub-preflight"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Check whether an EPUB has basic required ZIP components and ebook metadata.",
+    "title": "EPUB Structure Inspector | ABREDA",
+    "canonical": "https://abreda.com/en/tools/epub-preflight/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/epub-preflight/",
+      "en": "https://abreda.com/en/tools/epub-preflight/",
+      "x-default": "https://abreda.com/tools/epub-preflight/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-event-seating.pages.dev/",
+    "slug": "event-seating",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/event-seating/",
+    "http": 200,
+    "final_url": "https://tb-event-seating.pages.dev/",
+    "seconds": 5.18,
+    "bytes": 8566,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "행사 테이블 배치 | 참가자 그룹별 자동 분배 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-event-seating"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "워크숍이나 행사에서 좌석표 초안을 빠르게 만들 때 이름,그룹 CSV를 선택하고 테이블당 정원을 지정하세요.",
+    "title": "행사 테이블 배치 | 참가자 그룹별 자동 분배 | 아브레다",
+    "canonical": "https://abreda.com/tools/event-seating/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/event-seating/",
+      "en": "https://abreda.com/en/tools/event-seating/",
+      "x-default": "https://abreda.com/tools/event-seating/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-event-seating.pages.dev/en/",
+    "slug": "event-seating",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/event-seating/",
+    "http": 200,
+    "final_url": "https://tb-event-seating.pages.dev/en/",
+    "seconds": 5.248,
+    "bytes": 8292,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "행사 테이블 배치 | 참가자 그룹별 자동 분배 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-event-seating"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Distribute attendees into table groups and review the result before an event.",
+    "title": "Event Seating Organizer | ABREDA",
+    "canonical": "https://abreda.com/en/tools/event-seating/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/event-seating/",
+      "en": "https://abreda.com/en/tools/event-seating/",
+      "x-default": "https://abreda.com/tools/event-seating/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-exam-variants.pages.dev/",
+    "slug": "exam-variants",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/exam-variants/",
+    "http": 200,
+    "final_url": "https://tb-exam-variants.pages.dev/",
+    "seconds": 4.42,
+    "bytes": 8917,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "시험지 A·B·C형 생성 | 문항 순서와 정답표 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-exam-variants"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "같은 문제로 여러 형태의 시험지를 준비할 때 문제,정답 열의 CSV를 올리면 A·B·C형을 인쇄할 수 있습니다.",
+    "title": "시험지 A·B·C형 생성 | 문항 순서와 정답표 | 아브레다",
+    "canonical": "https://abreda.com/tools/exam-variants/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/exam-variants/",
+      "en": "https://abreda.com/en/tools/exam-variants/",
+      "x-default": "https://abreda.com/tools/exam-variants/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-exam-variants.pages.dev/en/",
+    "slug": "exam-variants",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/exam-variants/",
+    "http": 200,
+    "final_url": "https://tb-exam-variants.pages.dev/en/",
+    "seconds": 4.508,
+    "bytes": 8655,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "시험지 A·B·C형 생성 | 문항 순서와 정답표 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-exam-variants"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Create alternate question orders for different exam versions and corresponding answer keys.",
+    "title": "Exam Form Variants Maker | ABREDA",
+    "canonical": "https://abreda.com/en/tools/exam-variants/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/exam-variants/",
+      "en": "https://abreda.com/en/tools/exam-variants/",
+      "x-default": "https://abreda.com/tools/exam-variants/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-inventory-diff.pages.dev/",
+    "slug": "inventory-diff",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/inventory-diff/",
+    "http": 200,
+    "final_url": "https://tb-inventory-diff.pages.dev/",
+    "seconds": 4.496,
+    "bytes": 9327,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "재고 실사 차이 분석 | 장부·실사 수량 대조 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-inventory-diff"
+      }
+    ],
+    "h1": 1,
+    "h2": 8,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "창고 실사 후 부족하거나 초과된 재고를 확인할 때 상품코드,수량 열이 있는 장부 CSV와 실사 CSV를 두 파일로 올리세요.",
+    "title": "재고 실사 차이 분석 | 장부·실사 수량 대조 | 아브레다",
+    "canonical": "https://abreda.com/tools/inventory-diff/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/inventory-diff/",
+      "en": "https://abreda.com/en/tools/inventory-diff/",
+      "x-default": "https://abreda.com/tools/inventory-diff/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-inventory-diff.pages.dev/en/",
+    "slug": "inventory-diff",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/inventory-diff/",
+    "http": 200,
+    "final_url": "https://tb-inventory-diff.pages.dev/en/",
+    "seconds": 4.54,
+    "bytes": 8899,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "재고 실사 차이 분석 | 장부·실사 수량 대조 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-inventory-diff"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Compare stock ledger quantities to physical count quantities.",
+    "title": "Inventory Count Comparator | ABREDA",
+    "canonical": "https://abreda.com/en/tools/inventory-diff/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/inventory-diff/",
+      "en": "https://abreda.com/en/tools/inventory-diff/",
+      "x-default": "https://abreda.com/tools/inventory-diff/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-invoice-reconcile.pages.dev/",
+    "slug": "invoice-reconcile",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/invoice-reconcile/",
+    "http": 200,
+    "final_url": "https://tb-invoice-reconcile.pages.dev/",
+    "seconds": 4.675,
+    "bytes": 9808,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "입금 내역·청구서 대조 | 미입금·금액 차이 검사 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-invoice-reconcile"
+      }
+    ],
+    "h1": 1,
+    "h2": 8,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "여러 거래처 청구서를 은행 입금 자료와 비교할 때 청구번호·청구금액을 담은 청구서 CSV와 청구번호·입금액을 담은 은행 CSV를 선택하세요.",
+    "title": "입금 내역·청구서 대조 | 미입금·금액 차이 검사 | 아브레다",
+    "canonical": "https://abreda.com/tools/invoice-reconcile/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/invoice-reconcile/",
+      "en": "https://abreda.com/en/tools/invoice-reconcile/",
+      "x-default": "https://abreda.com/tools/invoice-reconcile/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-invoice-reconcile.pages.dev/en/",
+    "slug": "invoice-reconcile",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/invoice-reconcile/",
+    "http": 200,
+    "final_url": "https://tb-invoice-reconcile.pages.dev/en/",
+    "seconds": 4.74,
+    "bytes": 9379,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "입금 내역·청구서 대조 | 미입금·금액 차이 검사 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-invoice-reconcile"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Compare invoice amounts against bank receipt records to find unmatched or differing amounts.",
+    "title": "Invoice Payment Reconciliation | ABREDA",
+    "canonical": "https://abreda.com/en/tools/invoice-reconcile/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/invoice-reconcile/",
+      "en": "https://abreda.com/en/tools/invoice-reconcile/",
+      "x-default": "https://abreda.com/tools/invoice-reconcile/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-lease-registry-diff.pages.dev/",
+    "slug": "lease-registry-diff",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/lease-registry-diff/",
+    "http": 200,
+    "final_url": "https://tb-lease-registry-diff.pages.dev/",
+    "seconds": 4.373,
+    "bytes": 8595,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "등기 기재 변경 문구 비교 | 계약 전후 TXT 파일 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-lease-registry-diff"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "계약 당시와 잔금 직전 서류의 문구를 비교할 때 공식 등기 서류에서 추출한 이전/최근 텍스트(.txt)를 각각 올리세요.",
+    "title": "등기 기재 변경 문구 비교 | 계약 전후 TXT 파일 | 아브레다",
+    "canonical": "https://abreda.com/tools/lease-registry-diff/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/lease-registry-diff/",
+      "en": "https://abreda.com/en/tools/lease-registry-diff/",
+      "x-default": "https://abreda.com/tools/lease-registry-diff/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-lease-registry-diff.pages.dev/en/",
+    "slug": "lease-registry-diff",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/lease-registry-diff/",
+    "http": 200,
+    "final_url": "https://tb-lease-registry-diff.pages.dev/en/",
+    "seconds": 4.335,
+    "bytes": 8238,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "등기 기재 변경 문구 비교 | 계약 전후 TXT 파일 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-lease-registry-diff"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Compare text descriptions from two property registry snapshots.",
+    "title": "Lease Registry Text Comparator | ABREDA",
+    "canonical": "https://abreda.com/en/tools/lease-registry-diff/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/lease-registry-diff/",
+      "en": "https://abreda.com/en/tools/lease-registry-diff/",
+      "x-default": "https://abreda.com/tools/lease-registry-diff/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-move-evidence.pages.dev/",
+    "slug": "move-evidence",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/move-evidence/",
+    "http": 200,
+    "final_url": "https://tb-move-evidence.pages.dev/",
+    "seconds": 7.936,
+    "bytes": 8537,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "입주·퇴거 사진 정리 | 하자 기록용 PDF 출력 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-move-evidence"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "임대주택 하자를 촬영해서 상태 기록을 보관할 때 방 이름과 날짜가 드러나는 파일명으로 사진을 선택하고 PDF로 인쇄하세요.",
+    "title": "입주·퇴거 사진 정리 | 하자 기록용 PDF 출력 | 아브레다",
+    "canonical": "https://abreda.com/tools/move-evidence/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/move-evidence/",
+      "en": "https://abreda.com/en/tools/move-evidence/",
+      "x-default": "https://abreda.com/tools/move-evidence/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-move-evidence.pages.dev/en/",
+    "slug": "move-evidence",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/move-evidence/",
+    "http": 200,
+    "final_url": "https://tb-move-evidence.pages.dev/en/",
+    "seconds": 7.908,
+    "bytes": 8200,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "입주·퇴거 사진 정리 | 하자 기록용 PDF 출력 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-move-evidence"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Organize property condition photos and notes for a move-in or move-out inspection.",
+    "title": "Move-In Photo Evidence Organizer | ABREDA",
+    "canonical": "https://abreda.com/en/tools/move-evidence/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/move-evidence/",
+      "en": "https://abreda.com/en/tools/move-evidence/",
+      "x-default": "https://abreda.com/tools/move-evidence/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-moving-boxes.pages.dev/",
+    "slug": "moving-boxes",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/moving-boxes/",
+    "http": 200,
+    "final_url": "https://tb-moving-boxes.pages.dev/",
+    "seconds": 5.291,
+    "bytes": 8364,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "이사 박스 내용물 목록 | 박스번호별 물품 정리 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-moving-boxes"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "이사할 때 어떤 물건을 어느 박스에 넣었는지 관리할 때 박스,물품 열의 CSV를 업로드하면 박스별 내용물 목록이 만들어집니다.",
+    "title": "이사 박스 내용물 목록 | 박스번호별 물품 정리 | 아브레다",
+    "canonical": "https://abreda.com/tools/moving-boxes/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/moving-boxes/",
+      "en": "https://abreda.com/en/tools/moving-boxes/",
+      "x-default": "https://abreda.com/tools/moving-boxes/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-moving-boxes.pages.dev/en/",
+    "slug": "moving-boxes",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/moving-boxes/",
+    "http": 200,
+    "final_url": "https://tb-moving-boxes.pages.dev/en/",
+    "seconds": 5.244,
+    "bytes": 7947,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "이사 박스 내용물 목록 | 박스번호별 물품 정리 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-moving-boxes"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Track which belongings are packed in each numbered moving box.",
+    "title": "Moving Box Inventory | ABREDA",
+    "canonical": "https://abreda.com/en/tools/moving-boxes/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/moving-boxes/",
+      "en": "https://abreda.com/en/tools/moving-boxes/",
+      "x-default": "https://abreda.com/tools/moving-boxes/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-option-combinations.pages.dev/",
+    "slug": "option-combinations",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/option-combinations/",
+    "http": 200,
+    "final_url": "https://tb-option-combinations.pages.dev/",
+    "seconds": 4.771,
+    "bytes": 8537,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "상품 옵션 중복 검사 | 쇼핑몰 색상·사이즈 CSV | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-option-combinations"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "쇼핑몰 상품을 대량 등록하기 전에 옵션표를 검수할 때 상품코드,색상,사이즈 열의 CSV를 올려 중복 행과 누락값을 확인하세요.",
+    "title": "상품 옵션 중복 검사 | 쇼핑몰 색상·사이즈 CSV | 아브레다",
+    "canonical": "https://abreda.com/tools/option-combinations/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/option-combinations/",
+      "en": "https://abreda.com/en/tools/option-combinations/",
+      "x-default": "https://abreda.com/tools/option-combinations/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-option-combinations.pages.dev/en/",
+    "slug": "option-combinations",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/option-combinations/",
+    "http": 200,
+    "final_url": "https://tb-option-combinations.pages.dev/en/",
+    "seconds": 4.964,
+    "bytes": 8193,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "상품 옵션 중복 검사 | 쇼핑몰 색상·사이즈 CSV | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-option-combinations"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Detect repeated color, size or other product option combinations in an exported CSV.",
+    "title": "Product Option Duplicate Checker | ABREDA",
+    "canonical": "https://abreda.com/en/tools/option-combinations/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/option-combinations/",
+      "en": "https://abreda.com/en/tools/option-combinations/",
+      "x-default": "https://abreda.com/tools/option-combinations/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-pdf-preflight.pages.dev/",
+    "slug": "pdf-preflight",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/pdf-preflight/",
+    "http": 200,
+    "final_url": "https://tb-pdf-preflight.pages.dev/",
+    "seconds": 5.744,
+    "bytes": 9285,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "인쇄 PDF 크기·도련 검사 | MediaBox·TrimBox 확인 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-pdf-preflight"
+      }
+    ],
+    "h1": 1,
+    "h2": 8,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "인쇄소에 납품하기 전에 PDF 크기를 대략 확인할 때 PDF를 선택하면 판독 가능한 MediaBox·BleedBox·TrimBox 정보를 볼 수 있습니다.",
+    "title": "인쇄 PDF 크기·도련 검사 | MediaBox·TrimBox 확인 | 아브레다",
+    "canonical": "https://abreda.com/tools/pdf-preflight/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/pdf-preflight/",
+      "en": "https://abreda.com/en/tools/pdf-preflight/",
+      "x-default": "https://abreda.com/tools/pdf-preflight/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-pdf-preflight.pages.dev/en/",
+    "slug": "pdf-preflight",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/pdf-preflight/",
+    "http": 200,
+    "final_url": "https://tb-pdf-preflight.pages.dev/en/",
+    "seconds": 5.834,
+    "bytes": 8854,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "인쇄 PDF 크기·도련 검사 | MediaBox·TrimBox 확인 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-pdf-preflight"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Inspect PDF page boxes and dimensions before commercial printing.",
+    "title": "Print PDF Preflight | ABREDA",
+    "canonical": "https://abreda.com/en/tools/pdf-preflight/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/pdf-preflight/",
+      "en": "https://abreda.com/en/tools/pdf-preflight/",
+      "x-default": "https://abreda.com/tools/pdf-preflight/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-photo-contact-sheet.pages.dev/",
+    "slug": "photo-contact-sheet",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/photo-contact-sheet/",
+    "http": 200,
+    "final_url": "https://tb-photo-contact-sheet.pages.dev/",
+    "seconds": 4.16,
+    "bytes": 8547,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "사진 연락시트 만들기 | 여러 사진 미리보기·인쇄 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-photo-contact-sheet"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "촬영 사진을 한눈에 확인할 수 있는 시트가 필요할 때 여러 이미지를 선택해 썸네일 목록을 만든 후 브라우저 인쇄를 실행하세요.",
+    "title": "사진 연락시트 만들기 | 여러 사진 미리보기·인쇄 | 아브레다",
+    "canonical": "https://abreda.com/tools/photo-contact-sheet/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/photo-contact-sheet/",
+      "en": "https://abreda.com/en/tools/photo-contact-sheet/",
+      "x-default": "https://abreda.com/tools/photo-contact-sheet/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-photo-contact-sheet.pages.dev/en/",
+    "slug": "photo-contact-sheet",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/photo-contact-sheet/",
+    "http": 200,
+    "final_url": "https://tb-photo-contact-sheet.pages.dev/en/",
+    "seconds": 4.152,
+    "bytes": 8106,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "사진 연락시트 만들기 | 여러 사진 미리보기·인쇄 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-photo-contact-sheet"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Arrange selected pictures into a printable thumbnail index.",
+    "title": "Photo Contact Sheet | ABREDA",
+    "canonical": "https://abreda.com/en/tools/photo-contact-sheet/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/photo-contact-sheet/",
+      "en": "https://abreda.com/en/tools/photo-contact-sheet/",
+      "x-default": "https://abreda.com/tools/photo-contact-sheet/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-photo-duplicates.pages.dev/",
+    "slug": "photo-duplicates",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/photo-duplicates/",
+    "http": 200,
+    "final_url": "https://tb-photo-duplicates.pages.dev/",
+    "seconds": 4.308,
+    "bytes": 8411,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "동일 사진 파일 중복 찾기 | SHA-256 비교 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-photo-duplicates"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "사진 폴더에서 파일명만 다른 복사본을 검수할 때 이미지를 여러 개 선택하면 같은 해시를 가진 파일끼리 표시합니다.",
+    "title": "동일 사진 파일 중복 찾기 | SHA-256 비교 | 아브레다",
+    "canonical": "https://abreda.com/tools/photo-duplicates/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/photo-duplicates/",
+      "en": "https://abreda.com/en/tools/photo-duplicates/",
+      "x-default": "https://abreda.com/tools/photo-duplicates/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-photo-duplicates.pages.dev/en/",
+    "slug": "photo-duplicates",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/photo-duplicates/",
+    "http": 200,
+    "final_url": "https://tb-photo-duplicates.pages.dev/en/",
+    "seconds": 4.32,
+    "bytes": 7933,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "동일 사진 파일 중복 찾기 | SHA-256 비교 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-photo-duplicates"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Compare files to find exact binary duplicates using file hashes.",
+    "title": "Duplicate Photo Finder | ABREDA",
+    "canonical": "https://abreda.com/en/tools/photo-duplicates/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/photo-duplicates/",
+      "en": "https://abreda.com/en/tools/photo-duplicates/",
+      "x-default": "https://abreda.com/tools/photo-duplicates/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-purchase-three-way.pages.dev/",
+    "slug": "purchase-three-way",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/purchase-three-way/",
+    "http": 200,
+    "final_url": "https://tb-purchase-three-way.pages.dev/",
+    "seconds": 4.504,
+    "bytes": 9891,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "발주서·납품서·청구서 3중 대조 | 품목코드 검사 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-purchase-three-way"
+      }
+    ],
+    "h1": 1,
+    "h2": 8,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "입고된 물품의 수량과 청구 금액을 발주서와 비교할 때 품목코드·수량·단가 열을 가진 CSV 세 파일을 발주·납품·청구 순서로 선택하세요.",
+    "title": "발주서·납품서·청구서 3중 대조 | 품목코드 검사 | 아브레다",
+    "canonical": "https://abreda.com/tools/purchase-three-way/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/purchase-three-way/",
+      "en": "https://abreda.com/en/tools/purchase-three-way/",
+      "x-default": "https://abreda.com/tools/purchase-three-way/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-purchase-three-way.pages.dev/en/",
+    "slug": "purchase-three-way",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/purchase-three-way/",
+    "http": 200,
+    "final_url": "https://tb-purchase-three-way.pages.dev/en/",
+    "seconds": 4.54,
+    "bytes": 9458,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "발주서·납품서·청구서 3중 대조 | 품목코드 검사 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-purchase-three-way"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Compare purchase orders, delivery records and invoices to find mismatched quantities and prices.",
+    "title": "Purchase Order Three-Way Match | ABREDA",
+    "canonical": "https://abreda.com/en/tools/purchase-three-way/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/purchase-three-way/",
+      "en": "https://abreda.com/en/tools/purchase-three-way/",
+      "x-default": "https://abreda.com/tools/purchase-three-way/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-question-similarity.pages.dev/",
+    "slug": "question-similarity",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/question-similarity/",
+    "http": 200,
+    "final_url": "https://tb-question-similarity.pages.dev/",
+    "seconds": 4.195,
+    "bytes": 8426,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "문제은행 중복 문항 찾기 | 객관식 CSV 비교 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-question-similarity"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "여러 사람의 문제은행 파일을 합쳐 중복을 검수할 때 문제 열을 가진 CSV를 선택해 같은 문장의 중복 결과를 확인하세요.",
+    "title": "문제은행 중복 문항 찾기 | 객관식 CSV 비교 | 아브레다",
+    "canonical": "https://abreda.com/tools/question-similarity/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/question-similarity/",
+      "en": "https://abreda.com/en/tools/question-similarity/",
+      "x-default": "https://abreda.com/tools/question-similarity/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-question-similarity.pages.dev/en/",
+    "slug": "question-similarity",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/question-similarity/",
+    "http": 200,
+    "final_url": "https://tb-question-similarity.pages.dev/en/",
+    "seconds": 4.177,
+    "bytes": 8125,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "문제은행 중복 문항 찾기 | 객관식 CSV 비교 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-question-similarity"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Identify similar or repeated questions in an exported question CSV.",
+    "title": "Question Bank Duplicate Finder | ABREDA",
+    "canonical": "https://abreda.com/en/tools/question-similarity/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/question-similarity/",
+      "en": "https://abreda.com/en/tools/question-similarity/",
+      "x-default": "https://abreda.com/tools/question-similarity/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-shipping-audit.pages.dev/",
+    "slug": "shipping-audit",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/shipping-audit/",
+    "http": 200,
+    "final_url": "https://tb-shipping-audit.pages.dev/",
+    "seconds": 4.598,
+    "bytes": 11323,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "송장 누락·중복 검사 | 쇼핑몰 주문 발송 대조 | 아브레다"
+      },
+      {
+        "type": "module",
+        "src": "./app.mjs"
+      },
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-shipping-audit"
+      }
+    ],
+    "h1": 1,
+    "h2": 12,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "출고 전 주문 목록과 운송장 목록을 대조해야 할 때 주문 파일과 송장 파일을 입력하고 누락·불일치를 원본과 재확인하세요.",
+    "title": "송장 누락·중복 검사 | 쇼핑몰 주문 발송 대조 | 아브레다",
+    "canonical": "https://abreda.com/tools/shipping-audit/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/shipping-audit/",
+      "en": "https://abreda.com/en/tools/shipping-audit/",
+      "x-default": "https://abreda.com/tools/shipping-audit/"
+    },
+    "link_count": 6,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-shipping-audit.pages.dev/en/",
+    "slug": "shipping-audit",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/shipping-audit/",
+    "http": 200,
+    "final_url": "https://tb-shipping-audit.pages.dev/en/",
+    "seconds": 4.397,
+    "bytes": 10231,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "송장 누락·중복 검사 | 쇼핑몰 주문 발송 대조 | 아브레다"
+      },
+      {
+        "type": "module",
+        "src": "../app.mjs"
+      },
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-shipping-audit"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 13,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Compare store orders with tracking-label exports before dispatch.",
+    "title": "Shipping Label Audit | ABREDA",
+    "canonical": "https://abreda.com/en/tools/shipping-audit/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/shipping-audit/",
+      "en": "https://abreda.com/en/tools/shipping-audit/",
+      "x-default": "https://abreda.com/tools/shipping-audit/"
+    },
+    "link_count": 6,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-shotlist-maker.pages.dev/",
+    "slug": "shotlist-maker",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/shotlist-maker/",
+    "http": 200,
+    "final_url": "https://tb-shotlist-maker.pages.dev/",
+    "seconds": 4.44,
+    "bytes": 8354,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "촬영 샷리스트 정리 | 장면·장소·출연자 목록 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-shotlist-maker"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "촬영 전 장소별로 필요한 장면과 소품을 확인할 때 장면,장소,출연자,소품 열을 가진 CSV를 올려 정리된 목록을 받으세요.",
+    "title": "촬영 샷리스트 정리 | 장면·장소·출연자 목록 | 아브레다",
+    "canonical": "https://abreda.com/tools/shotlist-maker/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/shotlist-maker/",
+      "en": "https://abreda.com/en/tools/shotlist-maker/",
+      "x-default": "https://abreda.com/tools/shotlist-maker/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-shotlist-maker.pages.dev/en/",
+    "slug": "shotlist-maker",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/shotlist-maker/",
+    "http": 200,
+    "final_url": "https://tb-shotlist-maker.pages.dev/en/",
+    "seconds": 4.48,
+    "bytes": 7999,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "촬영 샷리스트 정리 | 장면·장소·출연자 목록 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-shotlist-maker"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Organize planned shots, scenes and filming locations for a production day.",
+    "title": "Film Shoot Shot List Maker | ABREDA",
+    "canonical": "https://abreda.com/en/tools/shotlist-maker/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/shotlist-maker/",
+      "en": "https://abreda.com/en/tools/shotlist-maker/",
+      "x-default": "https://abreda.com/tools/shotlist-maker/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-show-cues.pages.dev/",
+    "slug": "show-cues",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/show-cues/",
+    "http": 200,
+    "final_url": "https://tb-show-cues.pages.dev/",
+    "seconds": 5.357,
+    "bytes": 8528,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "공연 큐시트 오류 확인 | 시간 중복·순서 역전 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-show-cues"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "리허설 전에 조명·영상·음향 큐의 시간을 확인할 때 큐,시간 열을 담은 CSV를 올리고 HH:MM 또는 HH:MM:SS로 작성하세요.",
+    "title": "공연 큐시트 오류 확인 | 시간 중복·순서 역전 | 아브레다",
+    "canonical": "https://abreda.com/tools/show-cues/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/show-cues/",
+      "en": "https://abreda.com/en/tools/show-cues/",
+      "x-default": "https://abreda.com/tools/show-cues/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-show-cues.pages.dev/en/",
+    "slug": "show-cues",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/show-cues/",
+    "http": 200,
+    "final_url": "https://tb-show-cues.pages.dev/en/",
+    "seconds": 5.152,
+    "bytes": 8111,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "공연 큐시트 오류 확인 | 시간 중복·순서 역전 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-show-cues"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Check time ordering and possible overlaps in event or stage cue sheets.",
+    "title": "Performance Cue Sheet Checker | ABREDA",
+    "canonical": "https://abreda.com/en/tools/show-cues/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/show-cues/",
+      "en": "https://abreda.com/en/tools/show-cues/",
+      "x-default": "https://abreda.com/tools/show-cues/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-silence-finder.pages.dev/",
+    "slug": "silence-finder",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/silence-finder/",
+    "http": 200,
+    "final_url": "https://tb-silence-finder.pages.dev/",
+    "seconds": 4.423,
+    "bytes": 8667,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "오디오 무음 구간 탐지 | 침묵 위치 시간 표시 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-silence-finder"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "긴 녹음에서 편집할 침묵 위치를 찾아야 할 때 브라우저에서 재생 가능한 오디오 파일을 선택하면 초 단위 구간을 표시합니다.",
+    "title": "오디오 무음 구간 탐지 | 침묵 위치 시간 표시 | 아브레다",
+    "canonical": "https://abreda.com/tools/silence-finder/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/silence-finder/",
+      "en": "https://abreda.com/en/tools/silence-finder/",
+      "x-default": "https://abreda.com/tools/silence-finder/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-silence-finder.pages.dev/en/",
+    "slug": "silence-finder",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/silence-finder/",
+    "http": 200,
+    "final_url": "https://tb-silence-finder.pages.dev/en/",
+    "seconds": 4.383,
+    "bytes": 8212,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "오디오 무음 구간 탐지 | 침묵 위치 시간 표시 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-silence-finder"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Locate quiet or silent intervals in an audio recording.",
+    "title": "Audio Silence Locator | ABREDA",
+    "canonical": "https://abreda.com/en/tools/silence-finder/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/silence-finder/",
+      "en": "https://abreda.com/en/tools/silence-finder/",
+      "x-default": "https://abreda.com/tools/silence-finder/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-static-site-check.pages.dev/",
+    "slug": "static-site-check",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/static-site-check/",
+    "http": 200,
+    "final_url": "https://tb-static-site-check.pages.dev/",
+    "seconds": 4.335,
+    "bytes": 9278,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "HTML·CSS·JS 파일 참조 누락 검사 | 정적 사이트 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-static-site-check"
+      }
+    ],
+    "h1": 1,
+    "h2": 8,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "정적 웹사이트 배포 뒤 스타일이나 이미지가 빠지는 실수를 줄일 때 HTML 및 관련 JS·CSS 파일을 같이 선택하고 누락으로 나온 경로를 확인하세요.",
+    "title": "HTML·CSS·JS 파일 참조 누락 검사 | 정적 사이트 | 아브레다",
+    "canonical": "https://abreda.com/tools/static-site-check/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/static-site-check/",
+      "en": "https://abreda.com/en/tools/static-site-check/",
+      "x-default": "https://abreda.com/tools/static-site-check/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-static-site-check.pages.dev/en/",
+    "slug": "static-site-check",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/static-site-check/",
+    "http": 200,
+    "final_url": "https://tb-static-site-check.pages.dev/en/",
+    "seconds": 4.356,
+    "bytes": 8776,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "HTML·CSS·JS 파일 참조 누락 검사 | 정적 사이트 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-static-site-check"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Find broken local links and missing referenced assets in a static site package.",
+    "title": "Static Website Asset Checker | ABREDA",
+    "canonical": "https://abreda.com/en/tools/static-site-check/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/static-site-check/",
+      "en": "https://abreda.com/en/tools/static-site-check/",
+      "x-default": "https://abreda.com/tools/static-site-check/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-survey-review.pages.dev/",
+    "slug": "survey-review",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/survey-review/",
+    "http": 200,
+    "final_url": "https://tb-survey-review.pages.dev/",
+    "seconds": 9.044,
+    "bytes": 8442,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "설문 문항 중복·척도 누락 검사 | CSV 점검 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-survey-review"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "온라인 설문을 열기 전에 문항표의 구조를 검토할 때 문항번호,척도 열을 가진 CSV를 올려 중복 번호와 척도 누락을 확인하세요.",
+    "title": "설문 문항 중복·척도 누락 검사 | CSV 점검 | 아브레다",
+    "canonical": "https://abreda.com/tools/survey-review/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/survey-review/",
+      "en": "https://abreda.com/en/tools/survey-review/",
+      "x-default": "https://abreda.com/tools/survey-review/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-survey-review.pages.dev/en/",
+    "slug": "survey-review",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/survey-review/",
+    "http": 200,
+    "final_url": "https://tb-survey-review.pages.dev/en/",
+    "seconds": 8.992,
+    "bytes": 8102,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "설문 문항 중복·척도 누락 검사 | CSV 점검 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-survey-review"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Inspect survey CSV data for missing entries and inconsistent response fields.",
+    "title": "Survey Data Review | ABREDA",
+    "canonical": "https://abreda.com/en/tools/survey-review/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/survey-review/",
+      "en": "https://abreda.com/en/tools/survey-review/",
+      "x-default": "https://abreda.com/tools/survey-review/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-svg-laser-check.pages.dev/",
+    "slug": "svg-laser-check",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/svg-laser-check/",
+    "http": 200,
+    "final_url": "https://tb-svg-laser-check.pages.dev/",
+    "seconds": 4.376,
+    "bytes": 9483,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "SVG 레이저 도면 구조 검사 | 열린 경로·중복 도형 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-svg-laser-check"
+      }
+    ],
+    "h1": 1,
+    "h2": 8,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "레이저커팅 도면을 전달하기 전에 기초 구조를 확인할 때 SVG를 선택하면 경로·중복 요소 검사 결과가 출력됩니다.",
+    "title": "SVG 레이저 도면 구조 검사 | 열린 경로·중복 도형 | 아브레다",
+    "canonical": "https://abreda.com/tools/svg-laser-check/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/svg-laser-check/",
+      "en": "https://abreda.com/en/tools/svg-laser-check/",
+      "x-default": "https://abreda.com/tools/svg-laser-check/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-svg-laser-check.pages.dev/en/",
+    "slug": "svg-laser-check",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/svg-laser-check/",
+    "http": 200,
+    "final_url": "https://tb-svg-laser-check.pages.dev/en/",
+    "seconds": 4.386,
+    "bytes": 9139,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "SVG 레이저 도면 구조 검사 | 열린 경로·중복 도형 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-svg-laser-check"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Inspect an SVG's dimensions and basic elements before sending it to a laser cutter.",
+    "title": "SVG Laser Cutting Preflight | ABREDA",
+    "canonical": "https://abreda.com/en/tools/svg-laser-check/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/svg-laser-check/",
+      "en": "https://abreda.com/en/tools/svg-laser-check/",
+      "x-default": "https://abreda.com/tools/svg-laser-check/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-tournament-maker.pages.dev/",
+    "slug": "tournament-maker",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/tournament-maker/",
+    "http": 200,
+    "final_url": "https://tb-tournament-maker.pages.dev/",
+    "seconds": 4.214,
+    "bytes": 8342,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "토너먼트 대진표 만들기 | 첫 라운드 부전승 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-tournament-maker"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "동호회 소규모 대회의 첫 경기 대진을 정할 때 이름 열을 가진 CSV를 올리면 1라운드의 대결 목록이 나타납니다.",
+    "title": "토너먼트 대진표 만들기 | 첫 라운드 부전승 | 아브레다",
+    "canonical": "https://abreda.com/tools/tournament-maker/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/tournament-maker/",
+      "en": "https://abreda.com/en/tools/tournament-maker/",
+      "x-default": "https://abreda.com/tools/tournament-maker/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-tournament-maker.pages.dev/en/",
+    "slug": "tournament-maker",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/tournament-maker/",
+    "http": 200,
+    "final_url": "https://tb-tournament-maker.pages.dev/en/",
+    "seconds": 4.096,
+    "bytes": 7993,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "토너먼트 대진표 만들기 | 첫 라운드 부전승 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-tournament-maker"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Generate a tournament fixture bracket from a participant list.",
+    "title": "Tournament Bracket Maker | ABREDA",
+    "canonical": "https://abreda.com/en/tools/tournament-maker/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/tournament-maker/",
+      "en": "https://abreda.com/en/tools/tournament-maker/",
+      "x-default": "https://abreda.com/tools/tournament-maker/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-trip-supplies.pages.dev/",
+    "slug": "trip-supplies",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/trip-supplies/",
+    "http": 200,
+    "final_url": "https://tb-trip-supplies.pages.dev/",
+    "seconds": 4.274,
+    "bytes": 8438,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "체험학습 준비물 조별 분배 | 수량 균등 나누기 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-trip-supplies"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "학교 행사에서 각 조에 물품을 나눠야 할 때 물품,수량 CSV를 올리고 몇 개 조로 나눌지 입력하세요.",
+    "title": "체험학습 준비물 조별 분배 | 수량 균등 나누기 | 아브레다",
+    "canonical": "https://abreda.com/tools/trip-supplies/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/trip-supplies/",
+      "en": "https://abreda.com/en/tools/trip-supplies/",
+      "x-default": "https://abreda.com/tools/trip-supplies/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-trip-supplies.pages.dev/en/",
+    "slug": "trip-supplies",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/trip-supplies/",
+    "http": 200,
+    "final_url": "https://tb-trip-supplies.pages.dev/en/",
+    "seconds": 4.311,
+    "bytes": 8172,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "체험학습 준비물 조별 분배 | 수량 균등 나누기 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-trip-supplies"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Prepare a practical packing checklist for a planned trip.",
+    "title": "Travel Packing Checklist | ABREDA",
+    "canonical": "https://abreda.com/en/tools/trip-supplies/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/trip-supplies/",
+      "en": "https://abreda.com/en/tools/trip-supplies/",
+      "x-default": "https://abreda.com/tools/trip-supplies/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-video-delivery-check.pages.dev/",
+    "slug": "video-delivery-check",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/video-delivery-check/",
+    "http": 200,
+    "final_url": "https://tb-video-delivery-check.pages.dev/",
+    "seconds": 4.848,
+    "bytes": 9133,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "영상 납품 누락 확인 | 예정 파일명·실제 파일 대조 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-video-delivery-check"
+      }
+    ],
+    "h1": 1,
+    "h2": 8,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "촬영 납품 폴더를 고객에게 보내기 전 목록을 대조할 때 파일명 열의 CSV 및 MP4·MOV·WebM 파일을 함께 선택하세요.",
+    "title": "영상 납품 누락 확인 | 예정 파일명·실제 파일 대조 | 아브레다",
+    "canonical": "https://abreda.com/tools/video-delivery-check/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/video-delivery-check/",
+      "en": "https://abreda.com/en/tools/video-delivery-check/",
+      "x-default": "https://abreda.com/tools/video-delivery-check/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-video-delivery-check.pages.dev/en/",
+    "slug": "video-delivery-check",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/video-delivery-check/",
+    "http": 200,
+    "final_url": "https://tb-video-delivery-check.pages.dev/en/",
+    "seconds": 4.892,
+    "bytes": 8800,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "영상 납품 누락 확인 | 예정 파일명·실제 파일 대조 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-video-delivery-check"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Inspect basic codec, size and format information before submitting a video.",
+    "title": "Video Delivery Spec Inspector | ABREDA",
+    "canonical": "https://abreda.com/en/tools/video-delivery-check/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/video-delivery-check/",
+      "en": "https://abreda.com/en/tools/video-delivery-check/",
+      "x-default": "https://abreda.com/tools/video-delivery-check/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-webtoon-preflight.pages.dev/",
+    "slug": "webtoon-preflight",
+    "lang": "ko",
+    "expected_canonical": "https://abreda.com/tools/webtoon-preflight/",
+    "http": 200,
+    "final_url": "https://tb-webtoon-preflight.pages.dev/",
+    "seconds": 5.115,
+    "bytes": 8516,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "웹툰 회차 이미지 규격 검사 | 픽셀·파일 용량 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-webtoon-preflight"
+      }
+    ],
+    "h1": 1,
+    "h2": 9,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "웹툰 플랫폼에 원고 이미지를 올리기 전에 크기를 확인할 때 한 회차에 사용할 이미지 파일을 여러 개 선택하고 규격 경고를 확인하세요.",
+    "title": "웹툰 회차 이미지 규격 검사 | 픽셀·파일 용량 | 아브레다",
+    "canonical": "https://abreda.com/tools/webtoon-preflight/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/webtoon-preflight/",
+      "en": "https://abreda.com/en/tools/webtoon-preflight/",
+      "x-default": "https://abreda.com/tools/webtoon-preflight/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://tb-webtoon-preflight.pages.dev/en/",
+    "slug": "webtoon-preflight",
+    "lang": "en",
+    "expected_canonical": "https://abreda.com/en/tools/webtoon-preflight/",
+    "http": 200,
+    "final_url": "https://tb-webtoon-preflight.pages.dev/en/",
+    "seconds": 5.199,
+    "bytes": 8114,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "웹툰 회차 이미지 규격 검사 | 픽셀·파일 용량 | 아브레다"
+      },
+      {},
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-webtoon-preflight"
+      },
+      {
+        "defer": null,
+        "src": "../runtime-translate.js"
+      }
+    ],
+    "h1": 1,
+    "h2": 10,
+    "viewport": "width=device-width,initial-scale=1",
+    "robots": "index,follow",
+    "description": "Inspect webtoon image sequence dimensions and file properties before upload.",
+    "title": "Webtoon Upload Preflight | ABREDA",
+    "canonical": "https://abreda.com/en/tools/webtoon-preflight/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/webtoon-preflight/",
+      "en": "https://abreda.com/en/tools/webtoon-preflight/",
+      "x-default": "https://abreda.com/tools/webtoon-preflight/"
+    },
+    "link_count": 5,
+    "image_count": 0
+  },
+  {
+    "url": "https://proto-lab-2nw.pages.dev/",
+    "slug": "proto-lab",
+    "lang": "ko",
+    "http": 200,
+    "final_url": "https://proto-lab-2nw.pages.dev/",
+    "seconds": 4.36,
+    "bytes": 22238,
+    "scripts": [
+      {}
+    ],
+    "h1": 1,
+    "h2": 4,
+    "viewport": "width=device-width,initial-scale=1",
+    "title": "PROTO LAB | 경기 데이터 분석 도구",
+    "description": "출처가 확인된 경기 배당 데이터의 검색, 필터링 및 조합 배당 계산 도구. 공식 검증되지 않은 정보는 별도 표시합니다.",
+    "link_count": 0,
+    "image_count": 0
+  },
+  {
+    "url": "https://abreda.com/en/tools/subtitle-sync-studio/",
+    "slug": "policy-fix",
+    "lang": "en",
+    "http": 200,
+    "final_url": "https://abreda.com/en/tools/subtitle-sync-studio/",
+    "seconds": 4.317,
+    "bytes": 11080,
+    "scripts": [
+      {
+        "defer": null,
+        "src": "/toolbox-ga4.js",
+        "data-measurement-id": "G-YHSK49NC2E",
+        "data-page-title": "Free Subtitle Sync & SRT VTT Converter | Fix Subtitle Timing Online"
+      },
+      {
+        "defer": null,
+        "src": "https://abreda.com/tools/subtitle-sync-studio/subtitle-core.js"
+      },
+      {
+        "defer": null,
+        "src": "https://abreda.com/tools/subtitle-sync-studio/app.js"
+      },
+      {
+        "defer": null,
+        "src": "https://abreda.com/toolbox-public-traffic.js",
+        "data-toolbox-site": "tb-subtitle-sync-studio"
+      }
+    ],
+    "h1": 1,
+    "h2": 11,
+    "viewport": "width=device-width,initial-scale=1",
+    "description": "Shift subtitle timing, convert SRT to VTT or VTT to SRT, adjust for frame rates, find overlaps and empty cues. Private browser-only subtitle editor.",
+    "robots": "index,follow,max-image-preview:large",
+    "title": "Free Subtitle Sync & SRT VTT Converter | Fix Subtitle Timing Online",
+    "canonical": "https://abreda.com/en/tools/subtitle-sync-studio/",
+    "hreflang": {
+      "ko": "https://abreda.com/tools/subtitle-sync-studio/",
+      "en": "https://abreda.com/en/tools/subtitle-sync-studio/",
+      "x-default": "https://abreda.com/tools/subtitle-sync-studio/"
+    },
+    "link_count": 8,
+    "image_count": 0
+  }
+]
