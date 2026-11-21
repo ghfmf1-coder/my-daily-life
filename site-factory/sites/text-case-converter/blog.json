@@ -1,0 +1,79 @@
+{
+  "slug": "guide-text-case-converter",
+  "type": "tool",
+  "tool": "text-case-converter",
+  "published": "2026-11-21",
+  "status": "reviewed",
+  "ko": {
+    "title": "영문 대소문자 변환에서 고유명사를 검토하는 방법",
+    "description": "대소문자 변환기의 실제 사용 방법과 주의할 점을 단계별로 정리했습니다.",
+    "problem": "입력한 텍스트의 대소문자를 변환하고 복사할 수 있습니다. 언어별 표기 관습과 고유명사는 변환 후 직접 확인하세요. 중요한 문서를 수정하기 전에는 반드시 원본을 따로 보관해야 변경 내용을 되돌릴 수 있습니다.",
+    "steps": [
+      [
+        "작업 전 원본 텍스트를 복사해 두세요",
+        "변환을 시작하기 전에 원본을 따로 저장하세요. 잘못 삭제된 줄이나 변경된 문자를 비교하고 되돌릴 수 있도록 준비하는 단계입니다."
+      ],
+      [
+        "목적에 맞는 기능을 선택하세요",
+        "입력창에 텍스트를 붙여넣고 필요한 기능을 선택하세요. 입력 형식이 지원되는지 확인하고 변환 결과를 확인하세요."
+      ],
+      [
+        "특수문자와 예외를 확인하세요",
+        "빈 줄, 특수문자, 한글 및 영문 혼합 데이터가 있는 경우 변환 후 원본과 비교하세요. 중요한 작업에서는 독립적인 방법으로 다시 검증하세요."
+      ]
+    ],
+    "alternative": "같은 작업은 텍스트 편집기나 프로그래밍 언어의 표준 라이브러리로도 수행할 수 있습니다. 반복 작업에서는 입력과 출력의 예시를 보관하세요.",
+    "toolIntro": "아브레다 대소문자 변환기는 입력한 텍스트를 서버로 전송하지 않고 브라우저에서 처리하는 도구입니다.",
+    "limits": "이 도구는 의미나 모든 파일 형식을 검증하지 않습니다. 언어별 표기 규칙과 다른 프로그램에서의 호환성은 별도로 확인해야 합니다.",
+    "faq": [
+      [
+        "결과를 검토하지 않고 그대로 사용해도 되나요?",
+        "아니요. 선택한 변환 기능만 실행하므로 다른 서비스나 문서에서 요구하는 형식까지 보장하지 않습니다. 결과를 반드시 확인하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Reviewing proper nouns after changing text case",
+    "description": "A practical guide to text case converter, with browser-only steps and limitations explained clearly.",
+    "problem": "Convert text case locally. Proper nouns and language-specific capitalization should be checked manually. Before applying changes to important documents, keep the original input so you can reverse mistakes.",
+    "steps": [
+      [
+        "Keep a copy of the original text",
+        "Copy the original data before processing. This allows you to compare results, recover removed lines, and detect any unexpected formatting changes."
+      ],
+      [
+        "Choose the appropriate operation",
+        "Paste your input into the tool and select the operation that matches your actual task. Check that the input format is supported before running it."
+      ],
+      [
+        "Review the output carefully",
+        "Compare the resulting text against the original and verify edge cases such as empty lines, special characters, language-specific text, or missing values."
+      ]
+    ],
+    "alternative": "You can also use a trusted text editor or a programming language's standard library to perform the same operation. For automated workflows, preserve a test fixture and compare outputs.",
+    "toolIntro": "ABREDA Text Case Converter performs this task directly in the browser without sending your text to a server.",
+    "limits": "This utility is not a semantic validator and does not guarantee suitability for every language, file format, or downstream system. Always review results before publishing.",
+    "faq": [
+      [
+        "Can I rely on the output without checking it?",
+        "No. This tool only performs the selected transformation. It cannot confirm that the output meets the requirements of another application or document."
+      ]
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/Da0pdCekeUs",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "컴퓨터로 텍스트 파일을 편집하는 작업 환경을 보여주는 자료 사진",
+        "en": "Illustrative photograph of a laptop workspace for editing digital text files"
+      },
+      "caption": {
+        "ko": "실제 도구 화면이 아닌 자료 사진입니다.",
+        "en": "Illustrative workspace photograph, not an app screenshot."
+      }
+    },
+    "category": "knowledge"
+  }
+}

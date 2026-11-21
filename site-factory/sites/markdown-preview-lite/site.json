@@ -1,0 +1,17 @@
+{
+  "slug": "markdown-preview-lite",
+  "project": "tb-markdown-preview-lite",
+  "title": "마크다운 미리보기",
+  "description": "기본 마크다운 텍스트 미리보기",
+  "approved": true,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

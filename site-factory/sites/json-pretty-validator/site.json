@@ -1,0 +1,17 @@
+{
+  "slug": "json-pretty-validator",
+  "project": "tb-json-pretty-validator",
+  "title": "JSON 정리·검증기",
+  "description": "JSON 문법 검사 및 들여쓰기",
+  "approved": true,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

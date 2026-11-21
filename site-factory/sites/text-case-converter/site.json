@@ -1,0 +1,17 @@
+{
+  "slug": "text-case-converter",
+  "project": "tb-text-case-converter",
+  "title": "대소문자 변환기",
+  "description": "텍스트 대문자·소문자·제목형 변환",
+  "approved": true,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

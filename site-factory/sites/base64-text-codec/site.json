@@ -1,0 +1,17 @@
+{
+  "slug": "base64-text-codec",
+  "project": "tb-base64-text-codec",
+  "title": "Base64 텍스트 변환기",
+  "description": "UTF-8 텍스트 Base64 변환",
+  "approved": true,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}
