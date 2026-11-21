@@ -160,13 +160,14 @@ async function githubReporting(req:Request){
  if(req.method!=='POST')return reply({error:'POST_only'},405);
  if(!await githubAuthenticated(req.headers.get('Authorization')))return reply({error:'github_identity_rejected'},401);
  const raw=await req.text();if(raw.length>24000)return reply({error:'request_too_large'},413);
- let urls:string[];try{
-  const input=JSON.parse(raw);
+ let urls:string[],readinessOnly=false;try{
+  const input=JSON.parse(raw);readinessOnly=input.readinessOnly===true;
   if(!Array.isArray(input.urls)||input.urls.length>100)throw Error();
   urls=[...new Set(input.urls)] as string[];
   if(urls.some(value=>typeof value!=='string'||!relevantPage(value)||new URL(value).search||new URL(value).hash||value.length>1000))throw Error();
  }catch{return reply({error:'invalid_site_urls'},400)}
  let token:string,grantedScopes:string[]|null=null;try{token=await reportingAccess(scopes=>{grantedScopes=scopes})}catch{return reply({status:'oauth_refresh_failed',sites:[]},503)}
+ if(readinessOnly)return reply({status:'ok',generatedAt:new Date().toISOString(),adsenseSites:await readAdSenseSites((url:string)=>googleRead(token,url),REPORTING_ADSENSE,relevantPage)});
  let available:any[];try{
   const data=await googleRead(token,'https://www.googleapis.com/webmasters/v3/sites');
   available=(data.siteEntry||[]).filter((s:any)=>s.permissionLevel!=='siteUnverifiedUser'&&(s.siteUrl==='sc-domain:abreda.com'||relevantPage(s.siteUrl)));
