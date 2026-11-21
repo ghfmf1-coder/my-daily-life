@@ -69,6 +69,11 @@ class InternationalizationTests(unittest.TestCase):
     def test_haruhankan_english_and_sitemap(self):
         ko=(REPO/'index.html').read_text(encoding='utf-8')
         en=(REPO/'en/index.html').read_text(encoding='utf-8')
+        if 'name="robots" content="noindex,nofollow,noarchive"' in ko:
+            self.assertIn('name="robots" content="noindex,nofollow,noarchive"',en)
+            self.assertNotIn('<loc>',(REPO/'sitemap.xml').read_text())
+            self.assertNotIn('href="/en/app/"',en)
+            return
         self.assertIn('hreflang="en"',ko)
         self.assertIn('hreflang="ko"',en)
         self.assertIn('https://my-daily-life.pages.dev/en/',(REPO/'sitemap.xml').read_text())
