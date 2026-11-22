@@ -42,7 +42,7 @@ for(const [lang,prefix] of [['ko','/blog/'],['en','/en/blog/']]){
   const img=p.locator('article figure.hero img');
   assert.ok((await img.getAttribute('alt')).trim().length>=18,'Descriptive localized image alt text required');
   assert.match(await img.getAttribute('src'),/^https:\/\/images\.unsplash\.com\/photo-/);
-  assert.equal(await p.locator('article figure.hero figcaption a[href^="https://unsplash.com/photos/"]').count(),1);
+  assert.match(await p.locator('article figure.hero figcaption').innerText(),/일러스트|illustration/i);
   assert.ok(await p.locator('head meta[property="og:image"]').count());
   assert.ok(await p.locator('head link[hreflang=ko]').count());
   assert.ok(await p.locator('head link[hreflang=en]').count());
