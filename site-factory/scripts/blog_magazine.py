@@ -47,7 +47,7 @@ a{color:#2058c1;text-underline-offset:3px}a:hover{color:#123b8d}img{max-width:10
 .article-bottom{margin-top:32px;padding-top:17px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #79a6ee;outline-offset:3px}
 @media(max-width:980px){.article-layout{grid-template-columns:minmax(0,1fr)}.sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:12px}.side-panel{margin:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){.wrap{width:calc(100% - 28px)}.mast-in{min-height:70px;align-items:center}.brand{font-size:21px}.brand small{font-size:8px;margin-top:-9px}.nav{justify-content:flex-end;gap:8px}.nav a{font-size:12px}.nav a:nth-of-type(3){display:none}.switch{padding:4px 7px}.intro{padding:30px 0 20px}.featured{grid-template-columns:1fr}.featured-photo img{height:205px;min-height:0}.featured-body{padding:20px}.featured h2{font-size:25px}.filter-panel{margin:31px 0 14px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.tile-body{padding:12px;gap:6px}.tile h2{font-size:15px}.tile p{font-size:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.tile .date{font-size:11px}.cat{font-size:10px;padding:4px 8px}.article{padding:20px 17px}.article h2{font-size:21px}.article .steps li{padding-left:43px}.sidebar{grid-template-columns:1fr}.related-section .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.grid{grid-template-columns:1fr!important}.tile{display:grid;grid-template-columns:128px minmax(0,1fr);min-height:150px}.tile-image{height:100%;aspect-ratio:auto}.tile-image img{height:100%;object-fit:cover}.tile-body{padding:12px;gap:5px}.tile h2{font-size:15px;line-height:1.35}.tile .date{font-size:10px}.tile p{font-size:12px;-webkit-line-clamp:2}.related-section .grid{grid-template-columns:1fr!important}.wrap{width:calc(100% - 28px)}.mast-in{min-height:70px;align-items:center}.brand{font-size:21px}.brand small{font-size:8px;margin-top:-9px}.nav{justify-content:flex-end;gap:8px}.nav a{font-size:12px}.nav a:nth-of-type(3){display:none}.switch{padding:4px 7px}.intro{padding:30px 0 20px}.featured{grid-template-columns:1fr}.featured-photo img{height:205px;min-height:0}.featured-body{padding:20px}.featured h2{font-size:25px}.filter-panel{margin:31px 0 14px}.grid{gap:11px}.tile-body{gap:6px}.tile h2{font-size:15px}.tile p{font-size:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.tile .date{font-size:11px}.cat{font-size:10px;padding:4px 8px}.article{padding:20px 17px}.article h2{font-size:21px}.article .steps li{padding-left:43px}.sidebar{grid-template-columns:1fr}.related-section .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 """
 def E(s):return escape(str(s),quote=True)
 def href(lang,slug=''):
@@ -60,13 +60,51 @@ def cat_name(post,lang):
     return data[0 if lang=='ko' else 1]
 def sized_url(original,width):
     return original.split('?')[0]+'?auto=format&fit=crop&w='+str(width)+'&q=76'
+def editorial_art(post,lang):
+    """Unique, topic-labelled editorial SVG; never misrepresent a stock photo as tool UI."""
+    from urllib.parse import quote
+    from hashlib import sha256
+    slug=post['slug']
+    title=post[lang]['title']
+    category=post['media']['category']
+    colors={'photo':('#e7f4ff','#155e9e'),'document':('#f1ebff','#6745a0'),'daily':('#e5f7ed','#176c4b'),'money':('#fff3dd','#92601d'),'privacy':('#fceaf0','#a52f60'),'knowledge':('#e6f5f4','#146e78')}
+    bg,accent=colors.get(category,colors['knowledge'])
+    seed=sha256(slug.encode('utf-8')).digest()
+    glyphs=['▤','⌘','≡','◈','⌁','⊞','◉','◇','▣','↔','✦','⧉']
+    symbol=glyphs[seed[0]%len(glyphs)]
+    # Each article has its own stable geometric motif and visible topic label.
+    lines=[]
+    for i in range(5):
+        x=100+(seed[i+1]%9)*90
+        y=80+(seed[i+6]%5)*40
+        w=80+(seed[i+11]%5)*35
+        lines.append(f'<rect x="{x}" y="{y}" width="{w}" height="9" rx="5" fill="{accent}" opacity=".11"/>')
+    from html import escape as xml_escape
+    title=xml_escape(title[:38])
+    if len(title)>24:
+        first=title[:24];second=title[24:]
+    else:first=title;second=''
+    svg=(f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">'
+         f'<rect width="1200" height="675" fill="{bg}"/>'
+         +''.join(lines)
+         +f'<rect x="70" y="64" width="1060" height="547" rx="34" fill="#ffffff" opacity=".84"/>'
+         +f'<rect x="115" y="116" width="112" height="112" rx="27" fill="{accent}"/>'
+         +f'<text x="171" y="190" font-family="Arial,sans-serif" text-anchor="middle" font-size="68" fill="white">{symbol}</text>'
+         +f'<text x="116" y="306" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="{accent}">ABREDA  /  {category.upper()}</text>'
+         +f'<text x="116" y="385" font-family="Arial, sans-serif" font-size="45" font-weight="800" fill="#17324d">{first}</text>'
+         +f'<text x="116" y="446" font-family="Arial, sans-serif" font-size="45" font-weight="800" fill="#17324d">{second}</text>'
+         +f'<path d="M116 520H1080" stroke="{accent}" stroke-width="3" opacity=".18"/>'
+         +'<text x="116" y="560" font-family="Arial,sans-serif" font-size="21" fill="#63758b">PRACTICAL GUIDE  ·  EDITORIAL ILLUSTRATION</text></svg>')
+    return 'data:image/svg+xml;charset=UTF-8,'+quote(svg,safe='')
+
 def image_tag(post,lang,cls='',is_hero=False):
-    m=post['media']['image'];url=m['url'];alt=m['alt'][lang]
-    return ('<img'+(' class="'+cls+'"' if cls else '')+' src="'+E(sized_url(url,1200 if is_hero else 640))+'" '
-            'srcset="'+E(sized_url(url,400))+' 400w, '+E(sized_url(url,800))+' 800w, '+E(sized_url(url,1200))+' 1200w" '
-            'sizes="'+(' (max-width:700px) 100vw, 800px' if is_hero else '(max-width:650px) 50vw, 360px')+'" '
-            'alt="'+E(alt)+'" width="1200" height="675" decoding="async"'
+    title=post[lang]['title']
+    src=editorial_art(post,lang)
+    return ('<img'+(' class="'+cls+'"' if cls else '')+' src="'+E(src)+'" '
+            'alt="'+E(('주제별 편집 일러스트: ' if lang=='ko' else 'Topic-specific editorial illustration: ')+title)+'" '
+            'width="1200" height="675" decoding="async"'
             +(' fetchpriority="high"' if is_hero else ' loading="lazy"')+'>')
+
 def head(lang,post=None):
     info=post is None
     title=(label(lang,'아브레다 매거진 | 생활에 필요한 해결 방법과 디지털 팁','ABREDA Magazine | Practical Guides and Digital Know-How') if info else post[lang]['title'])
@@ -145,8 +183,8 @@ def article(post,lang,posts):
     h+='<div class="article-layout"><article class="article"><header><div class="meta"><span class="cat">'+E(cat_name(post,lang))+'</span><time datetime="'+E(post['published'])+'">'+E(post['published'])+'</time><span>'+label(lang,'아브레다 콘텐츠','ABREDA Editorial')+'</span></div>'
     h+='<h1>'+E(d['title'])+'</h1><p class="lead">'+E(d['description'])+'</p></header>'
     image=post['media']['image']
-    h+='<figure class="hero">'+image_tag(post,lang,is_hero=True)+'<figcaption>'+E(image.get('caption',{}).get(lang,''))+' · '
-    h+='<a href="'+E(image['source'])+'" rel="noopener noreferrer" target="_blank">'+label(lang,'사진 출처: Unsplash 원본','Photo source: Unsplash')+'</a></figcaption></figure>'
+    h+='<figure class="hero">'+image_tag(post,lang,is_hero=True)+'<figcaption>'+label(lang,'글 주제에 맞춰 제작한 편집 일러스트입니다.','Original topic-specific editorial illustration.')+' · '
+    h+='</figcaption></figure>'
     toc=[('problem',label(lang,'무엇이 문제인가요?','What is the problem?')),('steps',label(lang,'순서대로 해결하기','Step-by-step solution')),('alternative',label(lang,'다른 해결 방법','Alternative method')),('limits',label(lang,'해결되지 않는 경우','Known limitations')),('faq',label(lang,'자주 묻는 질문','Frequently asked questions'))]
     if post.get('sources'):toc.append(('sources',label(lang,'공식 참고자료','Primary sources')))
     h+='<nav class="toc" aria-label="'+label(lang,'목차','Table of contents')+'"><strong>'+label(lang,'이 글의 내용','On this page')+'</strong><ul>'
