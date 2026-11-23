@@ -131,7 +131,6 @@ def head(lang,post=None):
         org={'@type':'Organization','name':'ABREDA','url':'https://abreda.com/'}
         schema={'@context':'https://schema.org','@type':'BlogPosting','headline':title,'description':desc,'inLanguage':lang,
                 'url':url,'mainEntityOfPage':{'@type':'WebPage','@id':url},'datePublished':post['published'],
-                'image':[sized_url(post['media']['image']['url'],1200)],
                 'author':org,'publisher':org}
         breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[
             {'@type':'ListItem','position':1,'name':label(lang,'블로그','Blog'),'item':canonical(lang)},
