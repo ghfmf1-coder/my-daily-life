@@ -121,7 +121,7 @@ def head(lang,post=None):
     if post:
         meta+='<meta property="article:published_time" content="'+E(post['published'])+'">'
         meta+='<meta property="article:section" content="'+E(cat_name(post,lang))+'">'
-        meta+='<meta property="og:image" content="'+E(sized_url(post['media']['image']['url'],1200))+'">'
+        # No external OG image: article art is generated per topic and no unrelated stock photo is advertised.
         meta+='<meta property="og:image:alt" content="'+E(post['media']['image']['alt'][lang])+'">'
         meta+='<meta name="twitter:image" content="'+E(sized_url(post['media']['image']['url'],1200))+'">'
         org={'@type':'Organization','name':'ABREDA','url':'https://abreda.com/'}
