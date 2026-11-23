@@ -2,7 +2,7 @@
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest import TestCase, mock
-import json, sys
+import json, sys, re, html
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'site-factory/scripts'))
 import blog_articles, factory
@@ -46,6 +46,9 @@ class BlogTests(TestCase):
                 self.assertIn('id="articleSearch"',index)
                 self.assertIn('data-filter="all"',index)
                 self.assertIn('data:image/svg+xml',index)
+                card_sources=re.findall(r'<img[^>]+src="([^"]+)"',index)
+                self.assertEqual(len(card_sources),len(set(card_sources)),"Duplicate editorial image in blog listing")
+                self.assertIn('grid-template-columns:1fr!important',index,"Mobile blog list must be single column")
                 for post in blog_articles.load():
                     page=directory/post['slug']/'index.html'
                     self.assertTrue(page.is_file(),str(page))
@@ -55,6 +58,7 @@ class BlogTests(TestCase):
                     if post['toolURLs'][locale]:self.assertIn(post['toolURLs'][locale],text)
                     else:self.assertIn('id="sources"',text)
                     self.assertIn('data:image/svg+xml',text)
+                    self.assertNotIn('images.unsplash.com/photo-',text,"Repeated unrelated stock photo must not render")
                     self.assertIn('<img',text)
                     self.assertIn('class="hero"',text)
                     self.assertIn('editorial illustration',text.lower()) if locale=='en' else self.assertIn('편집 일러스트',text)
