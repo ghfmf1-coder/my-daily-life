@@ -45,7 +45,7 @@ class BlogTests(TestCase):
                 self.assertIn('class="featured"',index)
                 self.assertIn('id="articleSearch"',index)
                 self.assertIn('data-filter="all"',index)
-                self.assertIn('images.unsplash.com/photo-',index)
+                self.assertIn('data:image/svg+xml',index)
                 for post in blog_articles.load():
                     page=directory/post['slug']/'index.html'
                     self.assertTrue(page.is_file(),str(page))
@@ -57,7 +57,7 @@ class BlogTests(TestCase):
                     self.assertIn('property="og:image"',text)
                     self.assertIn('<img',text)
                     self.assertIn('class="hero"',text)
-                    self.assertIn('Photo',text) if locale=='en' else self.assertIn('사진 출처:',text)
+                    self.assertIn('editorial illustration',text.lower()) if locale=='en' else self.assertIn('편집 일러스트',text)
                     self.assertIn('"@type":"BlogPosting"',text)
                     self.assertIn('href="https://abreda.com/'+prefix+'/'+post['slug']+'/"',text)
                     self.assertIn('href="/'+prefix+'/'+post['slug']+'/"',index)
