@@ -48,7 +48,7 @@ class BlogTests(TestCase):
                 self.assertIn('data:image/svg+xml',index)
                 card_sources=re.findall(r'<img[^>]+src="([^"]+)"',index)
                 self.assertEqual(len(card_sources),len(set(card_sources)),"Duplicate editorial image in blog listing")
-                self.assertIn('grid-template-columns:1fr!important',index,"Mobile blog list must be single column")
+                self.assertIn('grid-template-columns:repeat(2,minmax(0,1fr))!important',index,"Mobile blog list must remain two columns")
                 for post in blog_articles.load():
                     page=directory/post['slug']/'index.html'
                     self.assertTrue(page.is_file(),str(page))
