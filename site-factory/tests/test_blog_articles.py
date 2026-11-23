@@ -54,7 +54,7 @@ class BlogTests(TestCase):
                     self.assertIn(post[locale]['limits'].replace('&','&amp;'),text)
                     if post['toolURLs'][locale]:self.assertIn(post['toolURLs'][locale],text)
                     else:self.assertIn('id="sources"',text)
-                    self.assertIn('property="og:image"',text)
+                    self.assertIn('data:image/svg+xml',text)
                     self.assertIn('<img',text)
                     self.assertIn('class="hero"',text)
                     self.assertIn('editorial illustration',text.lower()) if locale=='en' else self.assertIn('편집 일러스트',text)
