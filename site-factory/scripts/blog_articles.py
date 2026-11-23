@@ -73,7 +73,7 @@ def load():
     files=sorted(CONTENT.glob('*.json'))+sorted(SITES.glob('*/blog.json'))+sorted((ROOT.parent/'work-sites').glob('*/blog.json'))
     media_path=ROOT/'content'/'blog-media.json'
     media=json.loads(media_path.read_text(encoding='utf-8'))['entries']
-    posts=[];seen=set();tools=set()
+    posts=[];seen=set();tools=set();photo_ids=set()
     for file in files:
         p=json.loads(file.read_text(encoding='utf-8'))
         if p.get('status')!='reviewed':
@@ -104,7 +104,7 @@ def load():
         if not isinstance(date,str):raise ValueError('Publication date required for '+slug)
         dt.date.fromisoformat(date)
         check_language('ko',p.get('ko'));check_language('en',p.get('en'))
-        visual=p.get('media') or media.get(slug)
+        visual=media.get(slug) or p.get('media')
         if not isinstance(visual,dict) or not isinstance(visual.get('image'),dict):
             raise ValueError('Reviewed article requires curated image and usage rights: '+slug)
         img=visual['image']
@@ -117,6 +117,10 @@ def load():
                 raise ValueError('Descriptive '+locale+' alt text required: '+slug)
         if visual.get('category') not in ('photo','document','daily','money','privacy','knowledge'):
             raise ValueError('Invalid editorial category: '+slug)
+        photo_id=img['url'].split('?')[0]
+        if photo_id in photo_ids:
+            raise ValueError('Duplicate published photo: '+photo_id+' in '+slug)
+        photo_ids.add(photo_id)
         seen.add(slug)
         posts.append({**p,'type':kind,'toolURLs':links,'media':visual})
     return sorted(posts,key=lambda p:(p['published'],p['slug']),reverse=True)

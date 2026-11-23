@@ -30,7 +30,7 @@ a{color:#2058c1;text-underline-offset:3px}a:hover{color:#123b8d}img{max-width:10
 .featured{display:grid;grid-template-columns:1.05fr .95fr;min-height:355px;border-radius:20px;overflow:hidden;background:#122b44;color:#fff;box-shadow:var(--shadow)}.featured a{color:#fff;text-decoration:none}.featured-photo{position:relative;background:#b9c8d4}.featured-photo img{width:100%;height:100%;min-height:320px;max-height:465px;object-fit:cover;display:block}.featured-body{padding:clamp(28px,4vw,58px);align-self:center}.featured h2{font-size:clamp(25px,3vw,39px);line-height:1.32;letter-spacing:-.04em;margin:14px 0}.featured p{color:#cfdae5;line-height:1.7}.featured .action{display:inline-block;margin-top:19px;background:white;color:#183859!important;padding:9px 17px;border-radius:9px;font-size:14px;font-weight:800}
 .featured .cat{background:#ffffff22;color:#f0fbff}.filter-panel{display:flex;justify-content:space-between;gap:16px;align-items:center;margin:42px 0 18px;flex-wrap:wrap}.section-title{font-size:24px;letter-spacing:-.04em;margin:0}.filters{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0 20px}.filters button{padding:7px 14px;background:#fff;border:1px solid var(--line);border-radius:999px;color:#465d74;font-size:13px;font-weight:750}.filters button[aria-pressed=true]{background:#1b467e;border-color:#1b467e;color:white}.search{display:block;width:min(330px,100%);border:1px solid #cdd9e6;border-radius:10px;padding:10px 13px;background:#fff;color:var(--ink);font-size:14px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .tile{border:1px solid var(--line);border-radius:17px;background:#fff;overflow:hidden;box-shadow:0 9px 24px #1e405009;display:flex;flex-direction:column;min-width:0}.tile[hidden]{display:none!important}
-.tile-image{display:block;overflow:hidden;aspect-ratio:16/9;background:#dbe6f1}.tile-image img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .25s}.tile-image:hover img{transform:scale(1.025)}.tile-body{padding:19px;flex:1;display:flex;flex-direction:column;gap:9px}.cat{font-size:11px;background:#e7f6f3;color:#14756e;border-radius:999px;padding:5px 10px;display:inline-block;line-height:1.4;font-weight:800;width:fit-content}.date{color:#788b9d;font-size:12px}.tile h2{font-size:18px;letter-spacing:-.035em;line-height:1.4;margin:0}.tile h2 a{text-decoration:none;color:#17334f}.tile p{color:#63768b;font-size:13px;line-height:1.7;margin:0;flex:1}.read-more{font-size:12px;font-weight:850;text-decoration:none;margin-top:4px}
+.tile-image{display:block;overflow:hidden;aspect-ratio:16/9;background:#dbe6f1}.tile-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}.tile-image:hover img{transform:scale(1.025)}.tile-body{padding:19px;flex:1;display:flex;flex-direction:column;gap:9px}.cat{font-size:11px;background:#e7f6f3;color:#14756e;border-radius:999px;padding:5px 10px;display:inline-block;line-height:1.4;font-weight:800;width:fit-content}.date{color:#788b9d;font-size:12px}.tile h2{font-size:18px;letter-spacing:-.035em;line-height:1.4;margin:0}.tile h2 a{text-decoration:none;color:#17334f}.tile p{color:#63768b;font-size:13px;line-height:1.7;margin:0;flex:1}.read-more{font-size:12px;font-weight:850;text-decoration:none;margin-top:4px}
 .empty{padding:35px;text-align:center;color:var(--muted);border:1px dashed #cbd7e5;border-radius:12px}
 .breadcrumb{font-size:12px;color:#657a91;padding:23px 0 17px}.breadcrumb a{color:#5e7796;text-decoration:none}.article-layout{display:grid;grid-template-columns:minmax(0,820px) minmax(220px,300px);gap:24px;align-items:start}
 .article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3.5vw,42px);box-shadow:var(--shadow)}
@@ -47,7 +47,7 @@ a{color:#2058c1;text-underline-offset:3px}a:hover{color:#123b8d}img{max-width:10
 .article-bottom{margin-top:32px;padding-top:17px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #79a6ee;outline-offset:3px}
 @media(max-width:980px){.article-layout{grid-template-columns:minmax(0,1fr)}.sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:12px}.side-panel{margin:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.tile{display:flex;flex-direction:column;min-height:0}.tile-image{height:auto;aspect-ratio:16/9}.tile-image img{height:100%;width:100%;object-fit:contain}.tile-body{padding:12px;gap:6px}.tile h2{font-size:15px;line-height:1.35}.tile .date{font-size:10px}.tile p{font-size:12px;-webkit-line-clamp:2}.related-section .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.wrap{width:calc(100% - 28px)}.mast-in{min-height:70px;align-items:center}.brand{font-size:21px}.brand small{font-size:8px;margin-top:-9px}.nav{justify-content:flex-end;gap:8px}.nav a{font-size:12px}.nav a:nth-of-type(3){display:none}.switch{padding:4px 7px}.intro{padding:30px 0 20px}.featured{grid-template-columns:1fr}.featured-photo img{height:205px;min-height:0}.featured-body{padding:20px}.featured h2{font-size:25px}.filter-panel{margin:31px 0 14px}.grid{gap:11px}.tile-body{gap:6px}.tile h2{font-size:15px}.tile p{font-size:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.tile .date{font-size:11px}.cat{font-size:10px;padding:4px 8px}.article{padding:20px 17px}.article h2{font-size:21px}.article .steps li{padding-left:43px}.sidebar{grid-template-columns:1fr}.related-section .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.tile{display:flex;flex-direction:column;min-height:0}.tile-image{height:auto;aspect-ratio:16/9}.tile-image img{height:100%;width:100%;object-fit:cover}.tile-body{padding:12px;gap:6px}.tile h2{font-size:15px;line-height:1.35}.tile .date{font-size:10px}.tile p{font-size:12px;-webkit-line-clamp:2}.related-section .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.wrap{width:calc(100% - 28px)}.mast-in{min-height:70px;align-items:center}.brand{font-size:21px}.brand small{font-size:8px;margin-top:-9px}.nav{justify-content:flex-end;gap:8px}.nav a{font-size:12px}.nav a:nth-of-type(3){display:none}.switch{padding:4px 7px}.intro{padding:30px 0 20px}.featured{grid-template-columns:1fr}.featured-photo img{height:205px;min-height:0}.featured-body{padding:20px}.featured h2{font-size:25px}.filter-panel{margin:31px 0 14px}.grid{gap:11px}.tile-body{gap:6px}.tile h2{font-size:15px}.tile p{font-size:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.tile .date{font-size:11px}.cat{font-size:10px;padding:4px 8px}.article{padding:20px 17px}.article h2{font-size:21px}.article .steps li{padding-left:43px}.sidebar{grid-template-columns:1fr}.related-section .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 """
 def E(s):return escape(str(s),quote=True)
 def href(lang,slug=''):
@@ -60,53 +60,12 @@ def cat_name(post,lang):
     return data[0 if lang=='ko' else 1]
 def sized_url(original,width):
     return original.split('?')[0]+'?auto=format&fit=crop&w='+str(width)+'&q=76'
-def editorial_art(post,lang):
-    """Unique, readable, text-free subject diagrams suitable for small thumbnails."""
-    from urllib.parse import quote
-    from hashlib import sha256
-    slug=post['slug']
-    topic=(slug+' '+str(post.get('tool',''))).lower()
-    seed=sha256(slug.encode('utf-8')).digest()
-    palette=['#2563eb','#0f766e','#7c3aed','#c2410c','#be185d','#0369a1','#15803d']
-    accent=palette[seed[0]%len(palette)]
-    # Each drawing communicates the operation, without illegible article titles.
-    def card(x,y,w,h):
-        return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18" fill="white" stroke="{accent}" stroke-width="5"/>'
-    def bar(x,y,w):
-        return f'<rect x="{x}" y="{y}" width="{w}" height="18" rx="9" fill="{accent}" opacity=".48"/>'
-    arrow=f'<path d="M535 335H650m-32-32 32 32-32 32" fill="none" stroke="{accent}" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>'
-    if 'password' in topic or 'privacy' in topic or 'security' in topic:
-        motif=card(380,160,440,360)+f'<path d="M505 305v-58a95 95 0 0 1 190 0v58" fill="none" stroke="{accent}" stroke-width="23"/><rect x="455" y="298" width="290" height="180" rx="26" fill="{accent}"/><circle cx="600" cy="376" r="22" fill="white"/><path d="M600 395v35" stroke="white" stroke-width="18"/>'
-    elif 'json' in topic or 'code' in topic:
-        motif=card(300,160,600,360)+f'<text x="600" y="380" font-family="monospace" font-size="165" font-weight="bold" fill="{accent}" text-anchor="middle">{{ }}</text>'+bar(405,432,390)
-    elif 'base64' in topic or 'encode' in topic or 'url-' in topic:
-        motif=card(135,225,360,225)+card(705,225,360,225)+arrow+bar(195,295,220)+bar(195,340,160)+bar(765,295,200)+bar(765,340,240)
-    elif 'time' in topic or 'date' in topic or 'timestamp' in topic:
-        motif=f'<circle cx="600" cy="338" r="185" fill="white" stroke="{accent}" stroke-width="22"/><path d="M600 205v142l105 72" stroke="{accent}" stroke-width="24" fill="none" stroke-linecap="round"/><circle cx="600" cy="338" r="18" fill="{accent}"/>'
-    elif 'word' in topic or 'character' in topic or 'text' in topic or 'case' in topic or 'markdown' in topic:
-        motif=card(275,145,650,390)+bar(335,225,490)+bar(335,282,365)+bar(335,339,435)+bar(335,396,250)+f'<circle cx="815" cy="415" r="46" fill="{accent}" opacity=".85"/>'
-    elif 'sort' in topic or 'duplicate' in topic or 'line' in topic:
-        motif=card(280,145,640,390)+''.join(bar(365,215+i*65,180+((seed[i+1]%5)*60)) for i in range(5))
-    elif 'photo' in topic or 'image' in topic or 'picture' in topic:
-        motif=card(270,145,660,390)+f'<circle cx="455" cy="260" r="53" fill="{accent}" opacity=".65"/><path d="M310 490l180-155 115 100 115-155 175 210Z" fill="{accent}" opacity=".8"/>'
-    elif 'money' in topic or 'cost' in topic or 'budget' in topic:
-        motif=card(290,155,620,370)+f'<circle cx="600" cy="338" r="140" fill="none" stroke="{accent}" stroke-width="22"/><path d="M600 240v195m75-155c-70-45-150-18-150 28 0 60 150 18 150 80 0 48-80 76-150 25" stroke="{accent}" stroke-width="17" fill="none"/>'
-    else:
-        motif=card(285,150,630,380)+f'<circle cx="{490+seed[1]%80}" cy="330" r="92" fill="{accent}" opacity=".25"/><path d="M560 355l65 65 135-160" stroke="{accent}" stroke-width="27" fill="none" stroke-linecap="round"/>'
-    # Distinct visible composition for every article, even within the same topic.
-    marks=''.join(f'<circle cx="{85+i*85}" cy="{580-(seed[i+2]%4)*14}" r="{8+seed[i+6]%9}" fill="{accent}" opacity="{(25+seed[i+10]%45)/100:.2f}"/>' for i in range(8))
-    badge=f'<rect x="{910+seed[1]%60}" y="85" width="96" height="96" rx="{12+seed[2]%25}" fill="{accent}" opacity=".13"/>'
-    svg=(f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">'
-         f'<rect width="1200" height="675" fill="#f0f5fa"/>'
-         f'<rect x="55" y="50" width="1090" height="575" rx="45" fill="{accent}" opacity=".07"/>'
-         +motif+marks+badge+'</svg>')
-    return 'data:image/svg+xml;charset=UTF-8,'+quote(svg,safe='')
-
 def image_tag(post,lang,cls='',is_hero=False):
-    title=post[lang]['title']
-    src=editorial_art(post,lang)
+    """Actual licensed photo selected and credited for this exact article."""
+    photo=post['media']['image']
+    src=sized_url(photo['url'],1200 if is_hero else 720)
     return ('<img'+(' class="'+cls+'"' if cls else '')+' src="'+E(src)+'" '
-            'alt="'+E(('주제별 편집 일러스트: ' if lang=='ko' else 'Topic-specific editorial illustration: ')+title)+'" '
+            'alt="'+E(photo['alt'][lang])+'" '
             'width="1200" height="675" decoding="async"'
             +(' fetchpriority="high"' if is_hero else ' loading="lazy"')+'>')
 
@@ -126,12 +85,12 @@ def head(lang,post=None):
     if post:
         meta+='<meta property="article:published_time" content="'+E(post['published'])+'">'
         meta+='<meta property="article:section" content="'+E(cat_name(post,lang))+'">'
-        # No external OG image: article art is generated per topic and no unrelated stock photo is advertised.
+        meta+='<meta property="og:image" content="'+E(sized_url(post['media']['image']['url'],1200))+'">'
 
         org={'@type':'Organization','name':'ABREDA','url':'https://abreda.com/'}
         schema={'@context':'https://schema.org','@type':'BlogPosting','headline':title,'description':desc,'inLanguage':lang,
                 'url':url,'mainEntityOfPage':{'@type':'WebPage','@id':url},'datePublished':post['published'],
-                'author':org,'publisher':org}
+                'author':org,'publisher':org,'image':[sized_url(post['media']['image']['url'],1200)]}
         breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[
             {'@type':'ListItem','position':1,'name':label(lang,'블로그','Blog'),'item':canonical(lang)},
             {'@type':'ListItem','position':2,'name':title,'item':url}]}
@@ -186,8 +145,8 @@ def article(post,lang,posts):
     h+='<div class="article-layout"><article class="article"><header><div class="meta"><span class="cat">'+E(cat_name(post,lang))+'</span><time datetime="'+E(post['published'])+'">'+E(post['published'])+'</time><span>'+label(lang,'아브레다 콘텐츠','ABREDA Editorial')+'</span></div>'
     h+='<h1>'+E(d['title'])+'</h1><p class="lead">'+E(d['description'])+'</p></header>'
     image=post['media']['image']
-    h+='<figure class="hero">'+image_tag(post,lang,is_hero=True)+'<figcaption>'+label(lang,'글 주제에 맞춰 제작한 편집 일러스트입니다.','Original topic-specific editorial illustration.')+' · '
-    h+='</figcaption></figure>'
+    h+='<figure class="hero">'+image_tag(post,lang,is_hero=True)+'<figcaption>'+E(image['caption'][lang])+' · '
+    h+='<a href="'+E(image['source'])+'" rel="noopener noreferrer" target="_blank">'+label(lang,'사진 출처: Unsplash 원본','Photo source: Unsplash original')+'</a></figcaption></figure>'
     toc=[('problem',label(lang,'무엇이 문제인가요?','What is the problem?')),('steps',label(lang,'순서대로 해결하기','Step-by-step solution')),('alternative',label(lang,'다른 해결 방법','Alternative method')),('limits',label(lang,'해결되지 않는 경우','Known limitations')),('faq',label(lang,'자주 묻는 질문','Frequently asked questions'))]
     if post.get('sources'):toc.append(('sources',label(lang,'공식 참고자료','Primary sources')))
     h+='<nav class="toc" aria-label="'+label(lang,'목차','Table of contents')+'"><strong>'+label(lang,'이 글의 내용','On this page')+'</strong><ul>'
