@@ -1,229 +1,709 @@
 {
-  "license": "Each linked photograph verified Free to use under Unsplash License; photographer source links supplied",
+  "license": "Photographs selected from individual Unsplash free-photo listings; each article uses a unique photo and links to its original source. Do not reuse photo IDs across articles.",
   "entries": {
-    "photo-file-size-guide": {
+    "browser-localstorage-data-preservation": {
+      "category": "knowledge",
       "image": {
-        "url": "https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/Da0pdCekeUs",
+        "url": "https://images.unsplash.com/photo-1657972407371-2e8760673c20?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/a-computer-monitor-and-keyboard-ZqeN49AdPKo",
         "credit": "Unsplash",
         "alt": {
-          "ko": "노트북 화면에서 사진을 분류하고 편집하는 작업 공간",
-          "en": "A photo-editing workspace with images on a laptop screen"
+          "ko": "모니터와 키보드가 놓인 컴퓨터 작업 환경",
+          "en": "Real photograph: browser localstorage data preservation — 모니터와 키보드가 놓인 컴퓨터 작업 환경"
         },
         "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
         }
-      },
-      "category": "photo"
-    },
-    "pdf-merge-reorder-guide": {
-      "image": {
-        "url": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/snNHKZ-mGfE",
-        "credit": "Unsplash",
-        "alt": {
-          "ko": "정리할 종이 서류와 파일철이 쌓여 있는 책상",
-          "en": "Stacks of paper documents and office files to organize"
-        },
-        "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
-        }
-      },
-      "category": "document"
-    },
-    "recurring-bank-payments-guide": {
-      "image": {
-        "url": "https://images.unsplash.com/photo-1772588627327-1eeddcf73c11?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/0oZpRxG5Hkk",
-        "credit": "Unsplash",
-        "alt": {
-          "ko": "계산기와 노트북을 함께 이용해 금융 기록을 정리하는 손",
-          "en": "Hands reviewing finances with calculator and laptop"
-        },
-        "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
-        }
-      },
-      "category": "money"
-    },
-    "shift-pattern-to-calendar": {
-      "image": {
-        "url": "https://images.unsplash.com/photo-1676287569521-20f0fe96eebf?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/NtcuG3ocC_E",
-        "credit": "Unsplash",
-        "alt": {
-          "ko": "키보드 옆에 펼쳐진 일정 메모와 할 일 계획표",
-          "en": "A notebook and calendar planning sheet next to a keyboard"
-        },
-        "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
-        }
-      },
-      "category": "daily"
-    },
-    "guest-wifi-qr-card": {
-      "image": {
-        "url": "https://images.unsplash.com/photo-1745847768408-b7b83796cae6?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/43ak6tfF4Ss",
-        "credit": "Unsplash",
-        "alt": {
-          "ko": "안테나와 표시등이 있는 무선 인터넷 공유기",
-          "en": "A Wi-Fi router with antennas and indicator lights"
-        },
-        "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
-        }
-      },
-      "category": "daily"
+      }
     },
     "bulk-rename-photos-files": {
+      "category": "document",
       "image": {
         "url": "https://images.unsplash.com/photo-1720118727698-65b0345b8708?auto=format&fit=crop&w=1400&q=78",
         "source": "https://unsplash.com/photos/puVdaBorXVg",
         "credit": "Unsplash",
         "alt": {
-          "ko": "키보드와 메모지가 놓인 파일 정리 작업용 책상",
-          "en": "A computer keyboard and notes on an organized office desk"
+          "ko": "파일을 정리하는 작업용 책상과 키보드",
+          "en": "Real photograph: bulk rename photos files — 파일을 정리하는 작업용 책상과 키보드"
         },
         "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
         }
-      },
-      "category": "document"
+      }
     },
-    "hide-private-info-in-photos": {
+    "check-text-background-contrast": {
+      "category": "knowledge",
       "image": {
-        "url": "https://images.unsplash.com/photo-1664575262619-b28fef7a40a4?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/241bwQl2uWE",
+        "url": "https://images.unsplash.com/photo-1642480532034-362360552ccb?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/a-close-up-of-a-pantone-book-with-color-swatches-7RQsi6bxJT4",
         "credit": "Unsplash",
         "alt": {
-          "ko": "문서를 확인하는 노트북과 서류 작업 공간",
-          "en": "A laptop and papers being used for document review"
+          "ko": "다양한 색상 견본이 나열된 팬톤 컬러 북",
+          "en": "Real photograph: check text background contrast — 다양한 색상 견본이 나열된 팬톤 컬러 북"
         },
         "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
         }
-      },
-      "category": "privacy"
+      }
     },
-    "seller-item-profit-guide": {
+    "collect-group-food-orders": {
+      "category": "daily",
       "image": {
-        "url": "https://images.unsplash.com/photo-1735825764485-93a381fd5779?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/YDe0nOZyLHI",
+        "url": "https://images.unsplash.com/photo-1755494541391-a8a55ed860f4?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/takeaway-food-containers-with-spring-rolls-rice-and-drinks-Vz1qu0p1mF8",
         "credit": "Unsplash",
         "alt": {
-          "ko": "견적과 판매 업무를 위해 컴퓨터와 서류를 함께 사용하는 책상",
-          "en": "A laptop and paper documents for invoice and sales tasks"
+          "ko": "여러 사람이 함께 주문한 포장 음식과 음료",
+          "en": "Real photograph: collect group food orders — 여러 사람이 함께 주문한 포장 음식과 음료"
         },
         "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
         }
-      },
-      "category": "money"
-    },
-    "fix-csv-empty-rows": {
-      "image": {
-        "url": "https://images.unsplash.com/photo-1759752393975-7ca7b302fcc6?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/iDqNlr1Y1_w",
-        "credit": "Unsplash",
-        "alt": {
-          "ko": "스프레드시트 자료를 입력하는 노트북 키보드와 손",
-          "en": "Hands entering tabular data in a laptop spreadsheet"
-        },
-        "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
-        }
-      },
-      "category": "document"
-    },
-    "straighten-document-photo": {
-      "image": {
-        "url": "https://images.unsplash.com/photo-1775163035702-06e47ba88857?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/CHisgnotgwk",
-        "credit": "Unsplash",
-        "alt": {
-          "ko": "문서를 스캔하는 복합기와 사무실 장비",
-          "en": "A document scanner being used to capture paperwork"
-        },
-        "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
-        }
-      },
-      "category": "document"
-    },
-    "jpg-png-webp-which-format": {
-      "image": {
-        "url": "https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/Da0pdCekeUs",
-        "credit": "Unsplash",
-        "alt": {
-          "ko": "사진 파일을 편집하고 형식을 비교하는 작업 환경",
-          "en": "A photo-editing laptop for comparing image formats"
-        },
-        "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
-        }
-      },
-      "category": "knowledge"
+      }
     },
     "excel-csv-leading-zero-preservation": {
+      "category": "document",
       "image": {
         "url": "https://images.unsplash.com/photo-1759752393975-7ca7b302fcc6?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/iDqNlr1Y1_w",
+        "source": "https://unsplash.com/photos/hands-typing-on-a-laptop-with-a-spreadsheet-on-screen-iDqNlr1Y1_w",
         "credit": "Unsplash",
         "alt": {
-          "ko": "스프레드시트 파일의 숫자 자료를 다루는 작업",
-          "en": "Working with numeric columns in a spreadsheet"
+          "ko": "스프레드시트가 표시된 노트북에 데이터를 입력하는 손",
+          "en": "Real photograph: excel csv leading zero preservation — 스프레드시트가 표시된 노트북에 데이터를 입력하는 손"
         },
         "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
         }
-      },
-      "category": "knowledge"
+      }
+    },
+    "excel-csv-utf8-korean-garbled": {
+      "category": "document",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1783115259399-3a5a3e0e4592?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/hands-typing-on-a-laptop-displaying-a-data-spreadsheet-9fZuqBYlV1w",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "스프레드시트 데이터가 열린 노트북에서 타이핑하는 손",
+          "en": "Real photograph: excel csv utf8 korean garbled — 스프레드시트 데이터가 열린 노트북에서 타이핑하는 손"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "excel-highlight-duplicates-before-removing": {
+      "category": "document",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1763038311036-6d18805537e5?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/woman-working-on-laptop-with-charts-and-graphs-KNQUEQwTCY4",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "차트와 그래프를 보며 노트북으로 데이터 작업을 하는 사람",
+          "en": "Real photograph: excel highlight duplicates before removing — 차트와 그래프를 보며 노트북으로 데이터 작업을 하는 사람"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
     },
     "file-backup-321-strategy": {
+      "category": "document",
       "image": {
-        "url": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?auto=format&fit=crop&w=1400&q=78",
-        "source": "https://unsplash.com/photos/snNHKZ-mGfE",
+        "url": "https://images.unsplash.com/photo-1581725645226-92ad3b4c16d8?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/black-and-silver-hard-disk-drive-E1IGaRKg0N4",
         "credit": "Unsplash",
         "alt": {
-          "ko": "정리와 보관이 필요한 여러 문서 파일 묶음",
-          "en": "Organized documents illustrating the need for backups"
+          "ko": "파일 백업에 사용하는 하드 디스크 드라이브",
+          "en": "Real photograph: file backup 321 strategy — 파일 백업에 사용하는 하드 디스크 드라이브"
         },
         "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
         }
-      },
-      "category": "knowledge"
+      }
+    },
+    "fill-pdf-form-without-editing-original": {
+      "category": "document",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1664575262619-b28fef7a40a4?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/a-person-sitting-at-a-desk-with-a-laptop-and-papers-241bwQl2uWE",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "노트북과 종이 서류를 함께 확인하는 사람",
+          "en": "Real photograph: fill pdf form without editing original — 노트북과 종이 서류를 함께 확인하는 사람"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "find-repeated-phrases-in-manuscript": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1510034696085-597d716bd162?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/black-fountain-pen-on-white-paper-IcT8l8DDek8",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "원고를 작성하고 검토할 때 사용하는 종이와 만년필",
+          "en": "Real photograph: find repeated phrases in manuscript — 원고를 작성하고 검토할 때 사용하는 종이와 만년필"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "fix-csv-empty-rows": {
+      "category": "document",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1783113938335-ba83ccde7f5f?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/person-working-on-a-laptop-with-a-spreadsheet-outdoors-RbQ4j2ggOmY",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "노트북의 스프레드시트를 확인하는 작업자",
+          "en": "Real photograph: fix csv empty rows — 노트북의 스프레드시트를 확인하는 작업자"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "fix-delayed-subtitle-timing": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1781606989257-6484c82d5560?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/person-editing-video-on-a-tablet-showing-three-people-fhg1P_UIaZI",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "태블릿에서 영상을 편집하는 사람",
+          "en": "Real photograph: fix delayed subtitle timing — 태블릿에서 영상을 편집하는 사람"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "gmail-large-attachment-drive-link": {
+      "category": "document",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/black-laptop-computer-3Mhgvrk4tjM",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "이메일과 파일을 확인할 때 사용하는 노트북 컴퓨터",
+          "en": "Real photograph: gmail large attachment drive link — 이메일과 파일을 확인할 때 사용하는 노트북 컴퓨터"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "google-drive-restricted-sharing-guide": {
+      "category": "privacy",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1687820079859-479b3b578c1e?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/person-using-phone-and-laptop-in-a-workspace-hRAtfHZdwWs",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "휴대전화와 노트북을 함께 사용하는 작업 환경",
+          "en": "Real photograph: google drive restricted sharing guide — 휴대전화와 노트북을 함께 사용하는 작업 환경"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "google-passkey-shared-device-warning": {
+      "category": "privacy",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1768839721176-2fa91fdce725?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/an-unlocked-padlock-rests-on-a-computer-keyboard-KdCJ1nIkgOU",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "컴퓨터 키보드 위에 놓인 열린 자물쇠",
+          "en": "Real photograph: google passkey shared device warning — 컴퓨터 키보드 위에 놓인 열린 자물쇠"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "guest-wifi-qr-card": {
+      "category": "daily",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1595079835357-a94a13cab10c?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/black-android-smartphone-displaying-qr-code-kHMiTbqI5QU",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "QR 코드가 화면에 표시된 스마트폰",
+          "en": "Real photograph: guest wifi qr card — QR 코드가 화면에 표시된 스마트폰"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "hide-private-info-in-photos": {
+      "category": "privacy",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1742837823394-c70033e9d8b3?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/editing-photos-on-a-tablet-with-a-stylus-aLHupNT056I",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "태블릿과 펜으로 사진을 편집하는 모습",
+          "en": "Real photograph: hide private info in photos — 태블릿과 펜으로 사진을 편집하는 모습"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
     },
     "iphone-photo-location-privacy": {
+      "category": "privacy",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1730337356162-19c636fda8b5?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/a-person-holding-a-cell-phone-with-multiple-pictures-on-the-screen-L8dpOf2r1Mo",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "여러 사진이 화면에 표시된 스마트폰",
+          "en": "Real photograph: iphone photo location privacy — 여러 사진이 화면에 표시된 스마트폰"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "jpg-png-webp-which-format": {
+      "category": "photo",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1487537708572-3c850b5e856e?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/person-editing-photo-on-computer-SL5d_8ywAAA",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "컴퓨터에서 사진을 편집하는 사람",
+          "en": "Real photograph: jpg png webp which format — 컴퓨터에서 사진을 편집하는 사람"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "measure-repeating-task-time": {
+      "category": "daily",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1775590766125-3b49bece6c22?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/desk-calendar-with-business-symbols-and-alarm-clock-YKyyz4T3Rr4",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "책상 위 달력과 알람 시계",
+          "en": "Real photograph: measure repeating task time — 책상 위 달력과 알람 시계"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "merge-csv-with-different-columns": {
+      "category": "document",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1753715613373-90b1ea010731?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/coding-code-on-multiple-computer-screens-O3ChbcT94NM",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "여러 컴퓨터 화면에서 데이터를 다루는 작업 환경",
+          "en": "Real photograph: merge csv with different columns — 여러 컴퓨터 화면에서 데이터를 다루는 작업 환경"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "pdf-black-box-not-redaction": {
+      "category": "privacy",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1771173479042-810085465e49?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/stack-of-papers-marked-with-colorful-sticky-tabs-81ikZZG7_AA",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "색색의 표시지가 붙은 문서 더미",
+          "en": "Real photograph: pdf black box not redaction — 색색의 표시지가 붙은 문서 더미"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "pdf-merge-reorder-guide": {
+      "category": "document",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/stacks-of-paper-documents-and-file-folders-snNHKZ-mGfE",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "정리할 종이 서류와 파일철이 쌓여 있는 책상",
+          "en": "Real photograph: pdf merge reorder guide — 정리할 종이 서류와 파일철이 쌓여 있는 책상"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "photo-file-size-guide": {
+      "category": "photo",
       "image": {
         "url": "https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&w=1400&q=78",
         "source": "https://unsplash.com/photos/Da0pdCekeUs",
         "credit": "Unsplash",
         "alt": {
-          "ko": "사진을 공유하기 전 확인하는 사진 편집 화면",
-          "en": "Reviewing images on a laptop before sharing them"
+          "ko": "노트북에서 사진을 분류하고 편집하는 작업 공간",
+          "en": "Real photograph: photo file size guide — 노트북에서 사진을 분류하고 편집하는 작업 공간"
         },
         "caption": {
-          "ko": "관련 작업 환경을 보여주는 자료 사진입니다. 실제 아브레다 화면이 아닙니다.",
-          "en": "Illustrative workspace photograph, not an ABREDA app screenshot."
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
         }
-      },
-      "category": "knowledge"
+      }
+    },
+    "print-a4-labels-to-correct-size": {
+      "category": "document",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1775163035702-06e47ba88857?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/woman-placing-tablet-into-scanner-document-feeder-CHisgnotgwk",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "문서 스캐너에 인쇄물을 넣는 사람",
+          "en": "Real photograph: print a4 labels to correct size — 문서 스캐너에 인쇄물을 넣는 사람"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "recurring-bank-payments-guide": {
+      "category": "money",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1772588627327-1eeddcf73c11?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/0oZpRxG5Hkk",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "계산기와 노트북으로 금융 기록을 정리하는 손",
+          "en": "Real photograph: recurring bank payments guide — 계산기와 노트북으로 금융 기록을 정리하는 손"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "scan-qr-code-links-safely": {
+      "category": "privacy",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1762340915700-356b34475448?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/quick-scan-button-on-a-blue-background-Tol3g-7rmXc",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "스캔 기능을 나타내는 버튼을 촬영한 사진",
+          "en": "Real photograph: scan qr code links safely — 스캔 기능을 나타내는 버튼을 촬영한 사진"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "secondhand-handover-items-checklist": {
+      "category": "daily",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1752578753798-ff3a23e16498?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/papers-pens-and-highlighters-are-laid-out-for-studying-h6pUcouJ9BA",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "체크리스트 작성에 사용할 종이와 펜",
+          "en": "Real photograph: secondhand handover items checklist — 체크리스트 작성에 사용할 종이와 펜"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "seller-item-profit-guide": {
+      "category": "money",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1725258080098-727051947997?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/a-calculator-sitting-on-top-of-a-pile-of-money-zR7nFjjIAWE",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "지폐 위에 놓인 계산기",
+          "en": "Real photograph: seller item profit guide — 지폐 위에 놓인 계산기"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "shift-pattern-to-calendar": {
+      "category": "daily",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1435527173128-983b87201f4d?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/open-monthly-planner-on-wooden-desk-FoKO4DpXamQ",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "책상 위에 펼쳐진 월간 일정표",
+          "en": "Real photograph: shift pattern to calendar — 책상 위에 펼쳐진 월간 일정표"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "straighten-document-photo": {
+      "category": "photo",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1488926756850-a13b25e2f415?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/person-holding-black-dslr-camera-p8kaVRe4edM",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "카메라를 들고 사진을 촬영하는 사람",
+          "en": "Real photograph: straighten document photo — 카메라를 들고 사진을 촬영하는 사람"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "track-return-and-warranty-deadlines": {
+      "category": "daily",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1750935578389-6e1445f5fd8d?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/red-file-folders-are-neatly-arranged-on-a-shelf-SiJt15u6Yw4",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "서류를 보관하기 위해 정리된 빨간 파일철",
+          "en": "Real photograph: track return and warranty deadlines — 서류를 보관하기 위해 정리된 빨간 파일철"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "webnovel-episode-foreshadowing-tracker": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1786082110367-74bf69a5ef16?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/fountain-pen-on-handwritten-manuscript-paper-J4xW6osMDlg",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "손글씨 원고 위에 놓인 만년필",
+          "en": "Real photograph: webnovel episode foreshadowing tracker — 손글씨 원고 위에 놓인 만년필"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "write-alt-text-for-website-images": {
+      "category": "photo",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1522204538344-922f76ecc041?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/flat-view-of-cameras-beside-computer-tablet-and-smartphone-cqOZcjOOmRw",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "카메라와 태블릿 스마트폰이 놓인 사진 작업 책상",
+          "en": "Real photograph: write alt text for website images — 카메라와 태블릿 스마트폰이 놓인 사진 작업 책상"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "guide-base64-text-codec": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1754548930550-be9fa88874f4?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/a-coders-workspace-filled-with-code-and-keyboards-FjtWczJWRlc",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "코드가 표시된 화면과 키보드가 놓인 개발 작업 공간",
+          "en": "Real photograph: guide base64 text codec — 코드가 표시된 화면과 키보드가 놓인 개발 작업 공간"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "guide-json-pretty-validator": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1753715613457-63127ec40824?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/screens-display-coding-text-representing-programming-work-gCyjEr-g2oI",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "프로그램 코드가 표시된 여러 컴퓨터 화면",
+          "en": "Real photograph: guide json pretty validator — 프로그램 코드가 표시된 여러 컴퓨터 화면"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "guide-line-sort-deduplicate": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1780394799229-ee29ad4b0900?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/a-row-of-old-worn-binders-on-a-dusty-shelf-nKM7Z36eGY4",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "순서대로 꽂혀 있는 문서 바인더",
+          "en": "Real photograph: guide line sort deduplicate — 순서대로 꽂혀 있는 문서 바인더"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "guide-markdown-preview-lite": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1753715613434-9c7cb58876b9?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/programmer-coding-at-a-desk-with-several-monitors-bWVBCDtTRJI",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "모니터 여러 대로 코드를 작성하는 개발자",
+          "en": "Real photograph: guide markdown preview lite — 모니터 여러 대로 코드를 작성하는 개발자"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "generate-random-password-safely": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1774898989484-0b9becf69efb?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/a-padlock-rests-on-a-computer-keyboard-QP7RBa5r8HM",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "컴퓨터 키보드 위에 놓인 자물쇠",
+          "en": "Real photograph: generate random password safely — 컴퓨터 키보드 위에 놓인 자물쇠"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "guide-text-case-converter": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1761120036701-6de25e54fd7f?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/person-writing-in-a-notebook-with-a-pen-qkuP7Xq5CDQ",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "공책에 펜으로 글을 쓰는 사람",
+          "en": "Real photograph: guide text case converter — 공책에 펜으로 글을 쓰는 사람"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "guide-text-diff-checker": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/laptop-screen-displaying-code-with-glasses-and-plush-toy-7lzjMwexxnU",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "코드가 표시된 노트북 화면과 안경",
+          "en": "Real photograph: guide text diff checker — 코드가 표시된 노트북 화면과 안경"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "convert-unix-timestamps-utc-local": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1662920390970-512b5279ad27?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/person-wearing-black-leather-strap-watch-reading-book-LsaNmO-KrsA",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "시계를 찬 사람이 책을 읽는 모습",
+          "en": "Real photograph: convert unix timestamps utc local — 시계를 찬 사람이 책을 읽는 모습"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "guide-url-component-codec": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1509966756634-9c23dd6e6815?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/laptop-computer-showing-codes-zE007SNgcdE",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "프로그램 코드가 표시된 노트북 컴퓨터",
+          "en": "Real photograph: guide url component codec — 프로그램 코드가 표시된 노트북 컴퓨터"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
+    },
+    "guide-word-character-counter": {
+      "category": "knowledge",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1744472653757-93f5524b7827?auto=format&fit=crop&w=1400&q=78",
+        "source": "https://unsplash.com/photos/old-books-and-papers-with-text-and-illustrations-HYTj0dDirvU",
+        "credit": "Unsplash",
+        "alt": {
+          "ko": "글자가 적힌 책과 문서들이 펼쳐진 책상",
+          "en": "Real photograph: guide word character counter — 글자가 적힌 책과 문서들이 펼쳐진 책상"
+        },
+        "caption": {
+          "ko": "글의 주제와 관련된 실제 자료 사진입니다. 아브레다 웹앱 화면은 아닙니다.",
+          "en": "Real topic-related stock photograph, not an ABREDA app screenshot."
+        }
+      }
     }
   }
 }
