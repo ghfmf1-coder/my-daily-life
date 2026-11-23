@@ -47,7 +47,7 @@ a{color:#2058c1;text-underline-offset:3px}a:hover{color:#123b8d}img{max-width:10
 .article-bottom{margin-top:32px;padding-top:17px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #79a6ee;outline-offset:3px}
 @media(max-width:980px){.article-layout{grid-template-columns:minmax(0,1fr)}.sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:12px}.side-panel{margin:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){.grid{grid-template-columns:1fr!important}.tile{display:grid;grid-template-columns:128px minmax(0,1fr);min-height:150px}.tile-image{height:100%;aspect-ratio:auto}.tile-image img{height:100%;object-fit:cover}.tile-body{padding:12px;gap:5px}.tile h2{font-size:15px;line-height:1.35}.tile .date{font-size:10px}.tile p{font-size:12px;-webkit-line-clamp:2}.related-section .grid{grid-template-columns:1fr!important}.wrap{width:calc(100% - 28px)}.mast-in{min-height:70px;align-items:center}.brand{font-size:21px}.brand small{font-size:8px;margin-top:-9px}.nav{justify-content:flex-end;gap:8px}.nav a{font-size:12px}.nav a:nth-of-type(3){display:none}.switch{padding:4px 7px}.intro{padding:30px 0 20px}.featured{grid-template-columns:1fr}.featured-photo img{height:205px;min-height:0}.featured-body{padding:20px}.featured h2{font-size:25px}.filter-panel{margin:31px 0 14px}.grid{gap:11px}.tile-body{gap:6px}.tile h2{font-size:15px}.tile p{font-size:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.tile .date{font-size:11px}.cat{font-size:10px;padding:4px 8px}.article{padding:20px 17px}.article h2{font-size:21px}.article .steps li{padding-left:43px}.sidebar{grid-template-columns:1fr}.related-section .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.tile{display:block;min-height:0}.tile-image{height:auto;aspect-ratio:16/9}.tile-image img{height:100%;width:100%;object-fit:contain}.tile-body{padding:12px;gap:6px}.tile h2{font-size:15px;line-height:1.35}.tile .date{font-size:10px}.tile p{font-size:12px;-webkit-line-clamp:2}.related-section .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.wrap{width:calc(100% - 28px)}.mast-in{min-height:70px;align-items:center}.brand{font-size:21px}.brand small{font-size:8px;margin-top:-9px}.nav{justify-content:flex-end;gap:8px}.nav a{font-size:12px}.nav a:nth-of-type(3){display:none}.switch{padding:4px 7px}.intro{padding:30px 0 20px}.featured{grid-template-columns:1fr}.featured-photo img{height:205px;min-height:0}.featured-body{padding:20px}.featured h2{font-size:25px}.filter-panel{margin:31px 0 14px}.grid{gap:11px}.tile-body{gap:6px}.tile h2{font-size:15px}.tile p{font-size:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.tile .date{font-size:11px}.cat{font-size:10px;padding:4px 8px}.article{padding:20px 17px}.article h2{font-size:21px}.article .steps li{padding-left:43px}.sidebar{grid-template-columns:1fr}.related-section .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 """
 def E(s):return escape(str(s),quote=True)
 def href(lang,slug=''):
@@ -61,40 +61,42 @@ def cat_name(post,lang):
 def sized_url(original,width):
     return original.split('?')[0]+'?auto=format&fit=crop&w='+str(width)+'&q=76'
 def editorial_art(post,lang):
-    """Unique, topic-labelled editorial SVG; never misrepresent a stock photo as tool UI."""
+    """Unique, readable, text-free subject diagrams suitable for small thumbnails."""
     from urllib.parse import quote
     from hashlib import sha256
     slug=post['slug']
-    title=post[lang]['title']
-    category=post['media']['category']
-    colors={'photo':('#e7f4ff','#155e9e'),'document':('#f1ebff','#6745a0'),'daily':('#e5f7ed','#176c4b'),'money':('#fff3dd','#92601d'),'privacy':('#fceaf0','#a52f60'),'knowledge':('#e6f5f4','#146e78')}
-    bg,accent=colors.get(category,colors['knowledge'])
+    topic=(slug+' '+str(post.get('tool',''))).lower()
     seed=sha256(slug.encode('utf-8')).digest()
-    glyphs=['▤','⌘','≡','◈','⌁','⊞','◉','◇','▣','↔','✦','⧉']
-    symbol=glyphs[seed[0]%len(glyphs)]
-    # Each article has its own stable geometric motif and visible topic label.
-    lines=[]
-    for i in range(5):
-        x=100+(seed[i+1]%9)*90
-        y=80+(seed[i+6]%5)*40
-        w=80+(seed[i+11]%5)*35
-        lines.append(f'<rect x="{x}" y="{y}" width="{w}" height="9" rx="5" fill="{accent}" opacity=".11"/>')
-    from html import escape as xml_escape
-    title=xml_escape(title[:38])
-    if len(title)>24:
-        first=title[:24];second=title[24:]
-    else:first=title;second=''
-    svg=(f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img">'
-         f'<rect width="1200" height="675" fill="{bg}"/>'
-         +''.join(lines)
-         +f'<rect x="70" y="64" width="1060" height="547" rx="34" fill="#ffffff" opacity=".84"/>'
-         +f'<rect x="115" y="116" width="112" height="112" rx="27" fill="{accent}"/>'
-         +f'<text x="171" y="190" font-family="Arial,sans-serif" text-anchor="middle" font-size="68" fill="white">{symbol}</text>'
-         +f'<text x="116" y="306" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="{accent}">ABREDA  /  {category.upper()}</text>'
-         +f'<text x="116" y="385" font-family="Arial, sans-serif" font-size="45" font-weight="800" fill="#17324d">{first}</text>'
-         +f'<text x="116" y="446" font-family="Arial, sans-serif" font-size="45" font-weight="800" fill="#17324d">{second}</text>'
-         +f'<path d="M116 520H1080" stroke="{accent}" stroke-width="3" opacity=".18"/>'
-         +'<text x="116" y="560" font-family="Arial,sans-serif" font-size="21" fill="#63758b">PRACTICAL GUIDE  ·  EDITORIAL ILLUSTRATION</text></svg>')
+    palette=['#2563eb','#0f766e','#7c3aed','#c2410c','#be185d','#0369a1','#15803d']
+    accent=palette[seed[0]%len(palette)]
+    # Each drawing communicates the operation, without illegible article titles.
+    def card(x,y,w,h):
+        return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18" fill="white" stroke="{accent}" stroke-width="5"/>'
+    def bar(x,y,w):
+        return f'<rect x="{x}" y="{y}" width="{w}" height="18" rx="9" fill="{accent}" opacity=".48"/>'
+    arrow=f'<path d="M535 335H650m-32-32 32 32-32 32" fill="none" stroke="{accent}" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>'
+    if 'password' in topic or 'privacy' in topic or 'security' in topic:
+        motif=card(380,160,440,360)+f'<path d="M505 305v-58a95 95 0 0 1 190 0v58" fill="none" stroke="{accent}" stroke-width="23"/><rect x="455" y="298" width="290" height="180" rx="26" fill="{accent}"/><circle cx="600" cy="376" r="22" fill="white"/><path d="M600 395v35" stroke="white" stroke-width="18"/>'
+    elif 'json' in topic or 'code' in topic:
+        motif=card(300,160,600,360)+f'<text x="600" y="380" font-family="monospace" font-size="165" font-weight="bold" fill="{accent}" text-anchor="middle">{{ }}</text>'+bar(405,432,390)
+    elif 'base64' in topic or 'encode' in topic or 'url-' in topic:
+        motif=card(135,225,360,225)+card(705,225,360,225)+arrow+bar(195,295,220)+bar(195,340,160)+bar(765,295,200)+bar(765,340,240)
+    elif 'time' in topic or 'date' in topic or 'timestamp' in topic:
+        motif=f'<circle cx="600" cy="338" r="185" fill="white" stroke="{accent}" stroke-width="22"/><path d="M600 205v142l105 72" stroke="{accent}" stroke-width="24" fill="none" stroke-linecap="round"/><circle cx="600" cy="338" r="18" fill="{accent}"/>'
+    elif 'word' in topic or 'character' in topic or 'text' in topic or 'case' in topic or 'markdown' in topic:
+        motif=card(275,145,650,390)+bar(335,225,490)+bar(335,282,365)+bar(335,339,435)+bar(335,396,250)+f'<circle cx="815" cy="415" r="46" fill="{accent}" opacity=".85"/>'
+    elif 'sort' in topic or 'duplicate' in topic or 'line' in topic:
+        motif=card(280,145,640,390)+''.join(bar(365,215+i*65,180+((seed[i+1]%5)*60)) for i in range(5))
+    elif 'photo' in topic or 'image' in topic or 'picture' in topic:
+        motif=card(270,145,660,390)+f'<circle cx="455" cy="260" r="53" fill="{accent}" opacity=".65"/><path d="M310 490l180-155 115 100 115-155 175 210Z" fill="{accent}" opacity=".8"/>'
+    elif 'money' in topic or 'cost' in topic or 'budget' in topic:
+        motif=card(290,155,620,370)+f'<circle cx="600" cy="338" r="140" fill="none" stroke="{accent}" stroke-width="22"/><path d="M600 240v195m75-155c-70-45-150-18-150 28 0 60 150 18 150 80 0 48-80 76-150 25" stroke="{accent}" stroke-width="17" fill="none"/>'
+    else:
+        motif=card(285,150,630,380)+f'<circle cx="{490+seed[1]%80}" cy="330" r="92" fill="{accent}" opacity=".25"/><path d="M560 355l65 65 135-160" stroke="{accent}" stroke-width="27" fill="none" stroke-linecap="round"/>'
+    svg=(f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">'
+         f'<rect width="1200" height="675" fill="#f0f5fa"/>'
+         f'<rect x="55" y="50" width="1090" height="575" rx="45" fill="{accent}" opacity=".07"/>'
+         +motif+'</svg>')
     return 'data:image/svg+xml;charset=UTF-8,'+quote(svg,safe='')
 
 def image_tag(post,lang,cls='',is_hero=False):
