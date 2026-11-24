@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/work-registry-readonly-audit.yml'
       - 'site-factory/ops/visit_coverage_audit.py'
+      - 'site-factory/ops/blog_index_audit.py'
       - 'site-factory/admin-worker/verify-source-snapshot.mjs'
   workflow_dispatch:
   schedule:
@@ -213,3 +214,19 @@ jobs:
           print('ADSENSE_READINESS_RESULT:',json.dumps(result,ensure_ascii=True))
           if result.get('status')!='ok' or result.get('adsenseSites',{}).get('status')!='ok':raise SystemExit('ADSENSE_READINESS_NOT_VERIFIED')
           PYCODE
+
+  blog_index_audit:
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, '[blog-index-audit]'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read actual Google URL Inspection results for published blog pages
+        run: python3 site-factory/ops/blog_index_audit.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: abreda-blog-index-audit
+          path: /tmp/abreda-blog-index-audit.json
+          if-no-files-found: warn
+          retention-days: 30

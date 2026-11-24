@@ -36,6 +36,9 @@ else:
             n.startswith('site-factory/tests/test_blog_articles.py') or
             n.startswith('site-factory/tests/blog-browser.mjs') for n in changed)
     )
+    # Editorial-only changes affect the public hub, not standalone Pages projects.
+    hub_only_editorial=bool(changed) and all(n in blog_release_paths or n=='site-factory/scripts/seo_quality.py' or n.startswith('site-factory/content/blog/') or (n.startswith('site-factory/sites/') and n.endswith('/blog.json')) or n=='site-factory/tests/test_blog_articles.py' or n in {'site-factory/ops/blog_index_audit.py','site-factory/ops/seo-revision-20261125.md','.github/workflows/work-registry-readonly-audit.yml'} for n in changed)
+    blog_release=blog_release or hub_only_editorial
     shared=not blog_release and any(n.startswith('site-factory/scripts/') or n=='.github/workflows/toolbox-pages.yml' for n in changed)
     new_blog=any(n.startswith('site-factory/content/blog/') or n=='site-factory/content/blog-media.json' or n=='site-factory/marketing/briefs.json' or n.startswith('work-sites/') and n.endswith('/blog.json') for n in changed)
     selected=['toolbox-hub'] if blog_release else all_sites if shared else sorted(set(p.split('/')[2] for p in changed if p.startswith('site-factory/sites/') and len(p.split('/'))>=4))

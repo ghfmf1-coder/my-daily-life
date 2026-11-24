@@ -60,6 +60,9 @@ class BlogTests(TestCase):
                     else:self.assertIn('id="sources"',text)
                     self.assertIn('images.unsplash.com/photo-',text)
                     self.assertNotIn('data:image/svg+xml',text)
+                    if post.get('updated'):
+                        self.assertIn('property="article:modified_time"',text)
+                        self.assertIn('"dateModified":"'+post['updated']+'"',text)
                     self.assertIn('property="og:image"',text)
                     self.assertIn('<img',text)
                     self.assertIn('class="hero"',text)
@@ -71,6 +74,11 @@ class BlogTests(TestCase):
             sitemap=(out/'sitemap.xml').read_text(encoding='utf8')
             for url in ['https://abreda.com/blog/','https://abreda.com/en/blog/',*all_urls]:
                 self.assertEqual(sitemap.count('<loc>'+url+'</loc>'),1,url)
+            for post in blog_articles.load():
+                if post.get('updated'):
+                    for prefix in ('blog','en/blog'):
+                        u='https://abreda.com/'+prefix+'/'+post['slug']+'/'
+                        self.assertIn('<loc>'+u+'</loc><lastmod>'+post['updated']+'</lastmod>',sitemap)
             source=(out/'index.html').read_text(encoding='utf8')
             self.assertIn('href="/blog/"',source)
             self.assertIn('grid-template-columns:53px minmax(0,1fr)',source)
