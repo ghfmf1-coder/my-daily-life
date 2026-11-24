@@ -25,6 +25,10 @@
       [
         "개인정보와 저장된 내용을 검토해 사본으로 보관하세요",
         "성명·날짜·연락처·서명 위치를 다시 확인하고 '다른 이름으로 저장'으로 사본을 만드세요. 제출기관에서 전자서명을 인정하는지, 출력한 서명이 필요한지도 별도로 확인하세요."
+      ],
+      [
+        "저장한 신청서에서 입력 내용이 보이는지 재확인하기",
+        "신청서를 작성한 뒤 새 파일로 저장하고 다른 PDF 뷰어에서 열어 입력값을 확인합니다. 서명 필드나 편집 제한이 있는 문서는 강제로 수정하지 말고 제출 기관이 요구하는 파일 형식을 따르세요."
       ]
     ],
     "alternative": "작성 대상이 종이 양식이라면 출력해 손으로 작성한 뒤 스캔하는 방법도 있습니다. 기관이 요구하는 제출 형태가 우선입니다.",
@@ -53,6 +57,10 @@
       [
         "Review the details and save a separate copy",
         "Verify names, dates, contact details and signature placement, then use Save As to keep the untouched original. Check the receiving organization's rules for acceptable electronic or handwritten signatures."
+      ],
+      [
+        "Reopen the saved application in another viewer",
+        "Save the completed application as a separate file and reopen it in another PDF viewer to verify the entered values. Respect signature fields and editing restrictions, and follow the recipient's file requirements."
       ]
     ],
     "alternative": "If the authority requires a paper form, printing, writing by hand and scanning may be the correct submission method. Follow the recipient's stated requirements.",
@@ -80,5 +88,6 @@
       }
     },
     "category": "document"
-  }
+  },
+  "updated": "2026-11-25"
 }

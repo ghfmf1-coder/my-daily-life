@@ -19,6 +19,10 @@
       [
         "컬러와 흑백 결과를 비교한 뒤 저장하기",
         "문서 안에 도장이나 색상이 중요하면 컬러 결과를 사용하세요. 흑백 경계값을 높이면 연한 글씨가 사라질 수 있으니 저장한 이미지에서 중요한 글자를 다시 확인하세요."
+      ],
+      [
+        "모서리가 잘못 지정된 경우 결과 다시 보정하기",
+        "문서의 모서리가 배경과 섞이면 원근을 펴도 한쪽 글자가 늘어나거나 잘릴 수 있습니다. 모서리를 실제 종이 경계에 맞춘 다음 컬러 결과를 먼저 보고 도장이나 서명이 남아 있는지 확인하세요."
       ]
     ],
     "alternative": "휴대폰의 문서 스캔 기능이나 스캐너 앱이 있다면 그 기능을 이용해도 됩니다. 원본 화질이 낮거나 접힌 종이는 다시 촬영하는 편이 낫습니다.",
@@ -28,6 +32,10 @@
       [
         "흑백으로 바꾸니 글자가 일부 사라지는데 어떻게 하나요?",
         "색상이 연하거나 촬영 품질이 낮으면 임계값 처리에서 글자가 지워질 수 있습니다. 컬러 또는 회색조로 다시 저장하고 원본을 비교하세요."
+      ],
+      [
+        "원근 보정으로 흔들린 글씨도 선명해지나요?",
+        "원근 보정은 형태를 바꾸는 처리이므로 촬영에서 잃어버린 글자 정보를 복구하지 못합니다. 가능하면 선명하게 다시 촬영하고 원본을 보관하세요."
       ]
     ]
   },
@@ -47,6 +55,10 @@
       [
         "Compare color and black-and-white results",
         "Use color if stamps or highlighting matter. Threshold-based black-and-white output can erase faint text, so inspect the final saved file before submitting it."
+      ],
+      [
+        "Recheck the four corners before export",
+        "If a corner includes the background, text can stretch or be cropped. Align all points with the actual paper edges, preview color output first, and inspect stamps or signatures."
       ]
     ],
     "alternative": "You can also use a built-in phone document scanner or a scanner app. Retaking a photo is better when important source details were never captured clearly.",
@@ -56,7 +68,12 @@
       [
         "Why does black-and-white conversion remove some letters?",
         "Faint text can fall below the selected brightness threshold. Try the color or grayscale mode and compare the output with your original photo."
+      ],
+      [
+        "Can perspective correction restore blurred letters?",
+        "No. It changes geometry rather than recovering missing detail. Retake a sharp photograph when possible and retain the unmodified original."
       ]
     ]
-  }
+  },
+  "updated": "2026-11-25"
 }

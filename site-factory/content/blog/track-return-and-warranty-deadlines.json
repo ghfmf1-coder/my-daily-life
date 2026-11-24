@@ -20,6 +20,10 @@
       [
         "마감 전 확인 일정을 캘린더에 등록하세요",
         "반품을 검토할 날과 보증 종료를 점검할 날을 구분해 알림을 만드세요. 문제가 생긴다면 사진, 고장 설명, 문의 기록과 구매 증빙을 함께 보관하세요."
+      ],
+      [
+        "판매처 반품 조건과 제조사 보증 조건 대조하기",
+        "같은 제품이라도 판매처의 반품 마감과 제조사의 보증 종료 기준은 다를 수 있습니다. 주문 상세와 보증 문서를 각각 보관하고 날짜 변경이나 예외 조건이 확인되면 기록과 알림을 함께 수정하세요."
       ]
     ],
     "alternative": "구매 건수가 적다면 스마트폰 달력에 개별 알림을 넣고 영수증을 폴더별로 관리하는 것으로도 충분합니다.",
@@ -48,6 +52,10 @@
       [
         "Set calendar reminders and preserve proof",
         "Add an earlier date to review return eligibility and another to review warranty expiration. Retain defect photos and customer-support records when an issue appears."
+      ],
+      [
+        "Compare retailer returns with manufacturer warranty terms",
+        "The return deadline and warranty end date can follow different rules for the same product. Keep the order details and warranty terms separately, and update both your record and reminder when confirmed exceptions apply."
       ]
     ],
     "alternative": "For a handful of purchases, normal phone calendar reminders and a receipts folder may be simpler than a separate tracker.",
@@ -75,5 +83,6 @@
       }
     },
     "category": "money"
-  }
+  },
+  "updated": "2026-11-25"
 }

@@ -20,6 +20,10 @@
       [
         "음수 시간·겹침과 파일 형식을 검사하세요",
         "너무 많이 앞당기면 시작 시점이 0보다 작아지거나 자막 간 구간이 겹칠 수 있습니다. 출력한 파일을 실제 재생기에 넣고 시작·중간·끝을 다시 확인하세요."
+      ],
+      [
+        "자막 오차 방향을 짧은 구간에서 먼저 확인하기",
+        "대사는 먼저 나오고 자막이 뒤늦게 나타나는지, 반대인지 확인합니다. 작은 보정값을 적용한 사본을 영상의 앞부분에서 재생하고 방향이 맞는지 확인한 뒤 중간과 마지막 구간까지 점검하세요."
       ]
     ],
     "alternative": "영상 재생기가 자체 자막 지연 설정을 지원한다면 파일을 수정하지 않고 재생 중에 오프셋을 바꾸는 방법도 있습니다.",
@@ -48,6 +52,10 @@
       [
         "Check negative timestamps, overlap and playback support",
         "An excessive earlier shift can move cues before zero or create overlapping intervals. Open the exported file in your target player and confirm the beginning, middle and end."
+      ],
+      [
+        "Confirm the offset direction on a short segment",
+        "Determine whether dialogue occurs before or after the caption. Apply a small adjustment to a copy, preview the beginning to confirm the direction, then inspect the middle and final sections."
       ]
     ],
     "alternative": "Some media players offer a temporary subtitle-delay setting, which can be easier than editing the file when you only need a playback fix.",
@@ -75,5 +83,6 @@
         "en": "Illustrative photo of a video editing timeline; not an ABREDA screenshot."
       }
     }
-  }
+  },
+  "updated": "2026-11-25"
 }

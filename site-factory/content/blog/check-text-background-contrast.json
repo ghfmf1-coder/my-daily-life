@@ -20,6 +20,10 @@
       [
         "대체 색상을 적용하고 기기 화면에서 다시 보세요",
         "대비를 높여도 얇은 글꼴, 배경 이미지 위의 텍스트, 밝기와 눈부심 문제가 남을 수 있습니다. 실제 모바일 화면과 키보드 포커스 상태에서 읽고 구분되는지 확인하세요."
+      ],
+      [
+        "반투명 글자와 배경 이미지도 실제 화면에서 비교하기",
+        "글자색이 반투명하거나 배경이 이미지라면 지정한 색상 코드만으로는 화면의 실제 대비를 알 수 없습니다. 글자 뒤 가장 불리한 영역을 확인하고 버튼의 비활성화·초점 상태도 따로 점검하세요."
       ]
     ],
     "alternative": "브라우저 개발자 도구나 접근성 검사 도구로도 색상 대비를 확인할 수 있습니다. 실제 사용되는 CSS 값을 검증한다는 점이 중요합니다.",
@@ -48,6 +52,10 @@
       [
         "Change the combination and inspect it on a device",
         "A stronger contrast ratio can still leave problems with thin fonts, bright glare or text over photos. Review real mobile displays and keyboard focus states before releasing the design."
+      ],
+      [
+        "Check transparency and image backgrounds",
+        "A transparent foreground or image background can make the displayed contrast differ from the specified colors. Inspect the least favorable area behind text and check focus and disabled states separately."
       ]
     ],
     "alternative": "Browser developer tools and accessibility checkers can also inspect contrast. The key is testing the colors actually rendered in the page.",
@@ -75,5 +83,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

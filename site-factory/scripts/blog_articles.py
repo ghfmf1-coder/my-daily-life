@@ -102,7 +102,9 @@ def load():
             tools.add(tool)
         date=p.get('published')
         if not isinstance(date,str):raise ValueError('Publication date required for '+slug)
-        dt.date.fromisoformat(date)
+        published_date=dt.date.fromisoformat(date)
+        if p.get('updated') and dt.date.fromisoformat(p['updated']) < published_date:
+            raise ValueError('Revision date precedes publication: '+slug)
         check_language('ko',p.get('ko'));check_language('en',p.get('en'))
         visual=media.get(slug) or p.get('media')
         if not isinstance(visual,dict) or not isinstance(visual.get('image'),dict):

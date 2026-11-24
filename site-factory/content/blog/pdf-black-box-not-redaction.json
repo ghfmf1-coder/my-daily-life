@@ -29,6 +29,10 @@
       [
         "메타데이터와 숨은 내용까지 별도로 검사하세요",
         "Adobe의 위생화(Sanitize) 기능은 메타데이터·숨김 객체와 같은 비가시 데이터를 대상으로 합니다. 저장한 사본에서 가린 글자를 검색·복사해 보거나 문서 속성에 불필요한 정보가 남았는지 재확인하세요."
+      ],
+      [
+        "공유용 파일에서 숨긴 문자열을 다시 검색하기",
+        "삭제와 저장을 마친 공유용 PDF를 새로 열어 가렸던 이름이나 번호가 검색되는지 확인하세요. 텍스트 선택과 문서 속성도 확인하되 검색되지 않는다는 사실만으로 모든 숨은 객체가 제거됐다고 보지는 않습니다."
       ]
     ],
     "alternative": "민감한 자료라면 기관이 제공하는 개인정보 비식별 제출양식을 받거나 원본에서 필요한 부분만 별도 문서로 작성해 제출할 수 있습니다.",
@@ -57,6 +61,10 @@
       [
         "Inspect hidden metadata and test the saved copy",
         "Adobe describes sanitization for hidden data such as metadata and embedded objects. Search for the removed terms, attempt copying formerly covered text and review document properties in the exported copy."
+      ],
+      [
+        "Search the exported copy for removed text",
+        "Reopen the exported PDF and search for the previously sensitive name or number. Check text selection and document properties too; an unsuccessful search alone does not prove that every hidden object was removed."
       ]
     ],
     "alternative": "For especially sensitive submissions, ask the organization for a purpose-built limited-information form or prepare a fresh document containing only the fields actually required.",
@@ -84,5 +92,6 @@
       }
     },
     "category": "privacy"
-  }
+  },
+  "updated": "2026-11-25"
 }

@@ -10,8 +10,8 @@
     }
   ],
   "ko": {
-    "title": "지메일 대용량 첨부파일 보내는 법: 드라이브 링크와 권한 점검",
-    "description": "지메일 첨부 용량 제한에 걸렸을 때 드라이브 링크로 보내고 받는 사람의 열람 권한을 확인하는 방법.",
+    "title": "지메일 대용량 첨부파일 보내는 법: ZIP 파일·구글 드라이브 링크",
+    "description": "Gmail에서 용량이 큰 파일이나 ZIP을 보낼 때 첨부 제한, 드라이브 링크 공유와 수신자의 접근 권한을 확인하는 방법입니다.",
     "problem": "파일이 크다고 해서 이메일 첨부 자체를 무한정 늘릴 수 있는 것은 아닙니다. Google 공식 안내에 따르면 개인 Gmail의 일반 첨부 용량 제한이 있으므로 큰 파일은 Google Drive 링크로 대체해야 할 수 있습니다.",
     "steps": [
       [
@@ -25,6 +25,10 @@
       [
         "받는 사람의 접근 권한을 검증하세요",
         "파일이 드라이브에 올라가도 상대방이 자동으로 열 수 있는 것은 아닙니다. 수신자가 열람할 수 있는지 공유 범위를 확인하고, 민감한 파일이라면 '링크가 있는 모든 사용자'로 공개하지 마세요."
+      ],
+      [
+        "ZIP 파일 전송 시 첨부 차단과 공유 권한 구분하기",
+        "ZIP 파일을 보낼 때는 용량 제한 외에도 Gmail이 차단하는 파일 형식이 포함됐는지 확인하세요. 보안 차단을 우회하지 말고 허용된 파일이라면 드라이브에 올린 후 받는 사람에게 필요한 권한만 부여합니다."
       ]
     ],
     "alternative": "파일의 일부만 필요하다면 압축보다 필요한 페이지만 추려 별도 파일로 보내는 방법도 있습니다. 단 원본의 중요한 정보가 빠지지 않았는지 확인하세요.",
@@ -53,6 +57,10 @@
       [
         "Test the recipient's access level",
         "A file existing in Drive does not guarantee the recipient has permission. Check the access settings and avoid broadly public links when the file contains confidential material."
+      ],
+      [
+        "Distinguish attachment restrictions from Drive access",
+        "A ZIP can encounter file-type restrictions as well as size limits. Do not bypass Gmail's security blocks; for permitted files, upload to Drive and grant only the access the recipient needs."
       ]
     ],
     "alternative": "If only part of a document is required, exporting the necessary pages to a smaller file can be more appropriate than uploading the full original, provided no essential context is lost.",
@@ -80,5 +88,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

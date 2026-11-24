@@ -6,12 +6,12 @@
   "status": "reviewed",
   "ko": {
     "title": "영문 대소문자 변환에서 고유명사를 검토하는 방법",
-    "description": "영문 상품명이나 제목의 대소문자를 통일할 때 수동 수정 대신 문자 변환을 사용할 수 있다. 이 작업은 맞춤법이나 문장 스타일 편집과 다르다.",
+    "description": "영문 텍스트를 대문자·소문자·첫 글자 형태로 바꾸고 브랜드명과 약어를 검토하는 방법입니다.",
     "problem": "영문 상품명이나 제목의 대소문자를 통일할 때 수동 수정 대신 문자 변환을 사용할 수 있다. 이 작업은 맞춤법이나 문장 스타일 편집과 다르다.",
     "steps": [
       [
         "영문 대소문자 변환 목적 정하기",
-        "영문 상품명이나 제목의 대소문자를 통일할 때 수동 수정 대신 문자 변환을 사용할 수 있다. 이 작업은 맞춤법이나 문장 스타일 편집과 다르다."
+        "제목이나 상품명에서 필요한 표기 형태를 먼저 정하세요. 코드, 비밀번호, 파일명처럼 대소문자 자체에 의미가 있는 문자열은 대상에서 제외합니다."
       ],
       [
         "세 가지 영문 변환 결과 비교하기",
@@ -19,7 +19,7 @@
       ],
       [
         "약어와 고유 브랜드 표기 확인하기",
-        "첫 글자 변환은 영문 위주의 단어 경계를 따른다. NASA 같은 약어, iPhone 같은 브랜드 표기나 언어별 대문자 규칙은 자동으로 보존하지 않는다."
+        "변환 후 고유명사와 약어를 원본과 대조하세요. 편집 규정에서 특정 단어의 대문자 여부를 정해 놓았다면 자동 변환 결과를 그대로 확정하지 않습니다."
       ]
     ],
     "alternative": "스프레드시트의 UPPER, LOWER, PROPER 함수로 열 전체를 처리할 수 있다. 상품 코드나 고유명사는 변환 전 사본과 비교한다.",
@@ -34,12 +34,12 @@
   },
   "en": {
     "title": "Reviewing proper nouns after changing text case",
-    "description": "Case conversion helps normalize English headings or product lists. It changes characters rather than applying an editorial style guide or correcting spelling.",
+    "description": "Convert English text to uppercase, lowercase or title-style casing while checking acronyms, brands and case-sensitive strings.",
     "problem": "Case conversion helps normalize English headings or product lists. It changes characters rather than applying an editorial style guide or correcting spelling.",
     "steps": [
       [
         "Choose the intended English casing",
-        "Case conversion helps normalize English headings or product lists. It changes characters rather than applying an editorial style guide or correcting spelling."
+        "Decide on the casing needed for headings or product names. Exclude passwords, identifiers and filenames when case carries meaning."
       ],
       [
         "Compare uppercase lowercase and title-style output",
@@ -47,7 +47,7 @@
       ],
       [
         "Review acronyms and brand spelling",
-        "Title-style conversion relies on word boundaries. Acronyms such as NASA and brands such as iPhone can lose their intended form."
+        "Compare transformed proper names and acronyms with the originals. If a style guide specifies exceptions, review those manually before publishing."
       ]
     ],
     "alternative": "For spreadsheet columns, use UPPER, LOWER or PROPER. Compare product identifiers and proper names against the original before replacing a column.",
@@ -75,5 +75,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

@@ -25,6 +25,10 @@
       [
         "분실했을 때 삭제할 수 있는 경로를 기억하세요",
         "사용하던 기기를 분실하거나 공유 기기에 실수로 등록했다면 다른 신뢰할 수 있는 기기에서 Google 계정 패스키 설정으로 들어가 해당 패스키를 삭제하세요. 추가 보안 알림도 확인합니다."
+      ],
+      [
+        "공용 기기에 실수로 만든 패스키 삭제하기",
+        "개인 기기에서 Google 계정의 패스키 목록을 열어 해당 공용 기기의 항목을 제거합니다. 계정에 연결된 세션과 보안 활동도 확인하세요. 기기에서 계정을 삭제하는 것만으로 패스키가 폐기됐다고 단정하지 않습니다."
       ]
     ],
     "alternative": "기기가 패스키를 지원하지 않으면 Google 계정이 제공하는 다른 로그인·복구 방법을 사용할 수 있습니다. 새 방식으로 바꾸기 전에 복구 수단을 확인하세요.",
@@ -53,6 +57,10 @@
       [
         "Know how to revoke a passkey after losing a device",
         "If a device is lost or a passkey was created on a shared computer, open the Google Account passkey settings from another trusted device and remove the affected passkey. Review security notifications as well."
+      ],
+      [
+        "Remove a passkey accidentally created on a shared device",
+        "From a trusted personal device, open the Google Account passkey list and remove the shared-device credential. Review active sessions and security activity; do not assume removing an account from a device revokes every credential."
       ]
     ],
     "alternative": "If passkeys are not available on a device, use one of the account's supported sign-in and recovery methods. Check recovery options before changing your setup.",
@@ -80,5 +88,6 @@
       }
     },
     "category": "privacy"
-  }
+  },
+  "updated": "2026-11-25"
 }

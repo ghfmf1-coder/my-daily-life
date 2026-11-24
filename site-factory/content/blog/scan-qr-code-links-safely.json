@@ -25,6 +25,10 @@
       [
         "수상한 화면에는 계정·카드 정보를 입력하지 마세요",
         "이미 열었더라도 주소가 다르거나 로그인 절차가 낯설면 닫고 공식 서비스에서 상태를 확인하세요. 앱 설치를 요구하는 화면도 곧바로 승인하지 않는 편이 안전합니다."
+      ],
+      [
+        "이미 QR 링크에 정보를 입력했다면 공식 경로로 조치하기",
+        "가짜 결제 화면이나 로그인 페이지에 정보를 입력했다면 해당 서비스의 공식 앱이나 고객센터로 직접 접속하세요. 계정 보안을 점검하고 결제정보를 입력한 경우에는 카드사 또는 은행의 공식 안내를 따르세요."
       ]
     ],
     "alternative": "QR코드 대신 종이에 적힌 공식 홈페이지를 직접 입력하거나 회사의 검증된 앱에서 같은 정보를 찾을 수 있습니다.",
@@ -53,6 +57,10 @@
       [
         "Do not enter credentials on suspicious pages",
         "Close unfamiliar sign-in or payment pages and confirm account status through the provider's official route. Treat unsolicited app-install prompts as another warning sign."
+      ],
+      [
+        "Respond through official channels after entering information",
+        "If you entered data on a suspicious payment or sign-in page, contact the service through its official app or website. Review account security, and contact the card issuer or bank directly if payment details were exposed."
       ]
     ],
     "alternative": "Type the official company address yourself or navigate inside its authenticated app instead of scanning an untrusted code.",
@@ -80,5 +88,6 @@
       }
     },
     "category": "daily"
-  }
+  },
+  "updated": "2026-11-25"
 }

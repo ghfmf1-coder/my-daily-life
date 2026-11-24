@@ -19,6 +19,10 @@
       [
         "정리 후 행과 열 구성을 비교하기",
         "빈 행을 제거했다면 첫 행의 열 제목과 각 열의 순서가 그대로인지 확인하세요. 중요한 항목이 빠지지 않았는지 원본과 비교하고 실제 사용할 시스템에서 테스트하세요."
+      ],
+      [
+        "빈 행과 값이 없는 셀 구별하기",
+        "예시 CSV에 name,qty 머리글과 Kim,2 행, 쉼표만 있는 행, Lee, 행이 있다면 쉼표만 있는 행이 제거 후보입니다. Lee, 행에는 이름이 있으므로 수량이 비어 있어도 유지할지 확인하세요."
       ]
     ],
     "alternative": "엑셀에서 필요한 범위를 선택해 불필요한 빈 행을 직접 삭제할 수도 있습니다. 다만 필터와 선택 범위가 다른 실제 데이터를 포함하지 않는지 확인하세요.",
@@ -28,6 +32,10 @@
       [
         "값이 한 칸이라도 비어 있으면 행을 삭제해야 하나요?",
         "아니요. 특정 열에 빈 값이 있더라도 다른 열에 중요한 데이터가 들어 있을 수 있습니다. 삭제하기 전 실제로 모든 필드가 비어 있는지 확인하세요."
+      ],
+      [
+        "공백 문자만 들어 있는 셀도 빈 셀인가요?",
+        "공백을 빈 값으로 처리하는지는 정리 도구의 규칙에 따라 다릅니다. 공백만 있는 행은 따로 확인하고 유의미한 값이 있는 행은 보존하세요."
       ]
     ]
   },
@@ -47,6 +55,10 @@
       [
         "Verify the header and rows after cleanup",
         "Compare column names, order and critical values against the original. Test the exported file in the system where it will actually be used."
+      ],
+      [
+        "Distinguish an empty row from an empty field",
+        "In a sample CSV headed name,qty, compare Kim,2, a line containing only a comma, and Lee, with a missing quantity. The comma-only row is a removal candidate; Lee still contains a name."
       ]
     ],
     "alternative": "You can filter and remove truly blank rows in a spreadsheet editor. Check the selected range carefully to avoid deleting legitimate records.",
@@ -56,7 +68,12 @@
       [
         "Should I remove a row if one field is empty?",
         "Not automatically. Other fields in the same row may contain required information. Verify that the whole record is empty before deleting it."
+      ],
+      [
+        "What if a cell contains only spaces?",
+        "Whether whitespace counts as empty depends on the cleanup rule. Inspect whitespace-only rows separately and retain any row containing a meaningful value."
       ]
     ]
-  }
+  },
+  "updated": "2026-11-25"
 }

@@ -33,6 +33,10 @@
       [
         "백업한 파일을 직접 복원해 보세요",
         "백업 목록에 이름이 있다는 이유만으로 복구를 믿지 마세요. 임의의 중요 파일을 복원해 열어보고 현재 파일과 내용이 일치하는지 확인하세요."
+      ],
+      [
+        "백업 파일을 실제로 열어 복원할 수 있는지 확인하기",
+        "백업 목록에서 중요 사진과 문서 하나씩을 선택해 별도 폴더로 복원합니다. 원본을 덮어쓰지 않고 파일이 열리는지 확인하고 암호화된 백업이라면 복구 키도 안전하게 보관하세요."
       ]
     ],
     "alternative": "클라우드 동기화가 익숙하지 않다면 외장 저장장치에 정기적으로 백업하는 방법부터 시작할 수 있습니다. 다만 외장장치 하나에만 저장하면 그 장치가 손상될 때 대안이 없을 수 있습니다.",
@@ -42,6 +46,10 @@
       [
         "외장하드 하나에만 복사해 두어도 백업이 충분한가요?",
         "원본과 외장하드가 같은 장소에 있으면 화재·도난·장비 손상에 함께 영향을 받을 수 있습니다. 별도 장소의 추가 복사본과 정기 복원 검사를 고려하세요."
+      ],
+      [
+        "클라우드 동기화만 켜 두면 백업이 되나요?",
+        "삭제나 손상이 다른 기기에도 동기화될 수 있습니다. 버전 기록과 복구 정책을 확인하고 중요한 자료는 독립된 사본도 보관하세요."
       ]
     ]
   },
@@ -65,6 +73,10 @@
       [
         "Practice restoring an actual file",
         "Do not rely only on the presence of a filename. Restore a sample document, open it, and compare the contents with the original."
+      ],
+      [
+        "Restore a sample without overwriting originals",
+        "Pick a key photo and document from the backup and restore them to a separate folder. Confirm both open, and keep recovery keys accessible for encrypted backups."
       ]
     ],
     "alternative": "If cloud storage is not suitable, scheduled copies to removable storage are another option. A single local drive is still a single point of failure.",
@@ -74,7 +86,12 @@
       [
         "Is one external drive enough for reliable backups?",
         "One drive can fail or be lost alongside the source computer. Consider an independent off-site copy and periodically test restoring your files."
+      ],
+      [
+        "Is cloud synchronization alone a backup?",
+        "Not necessarily. Deletions or corruption can sync across devices. Check version history and recovery rules, and retain an independent copy for important files."
       ]
     ]
-  }
+  },
+  "updated": "2026-11-25"
 }

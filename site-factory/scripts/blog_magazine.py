@@ -84,6 +84,8 @@ def head(lang,post=None):
     meta+='<meta property="og:url" content="'+E(url)+'"><meta name="twitter:card" content="summary_large_image">'
     if post:
         meta+='<meta property="article:published_time" content="'+E(post['published'])+'">'
+        if post.get('updated'):
+            meta+='<meta property="article:modified_time" content="'+E(post['updated'])+'">'
         meta+='<meta property="article:section" content="'+E(cat_name(post,lang))+'">'
         meta+='<meta property="og:image" content="'+E(sized_url(post['media']['image']['url'],1200))+'">'
 
@@ -91,6 +93,8 @@ def head(lang,post=None):
         schema={'@context':'https://schema.org','@type':'BlogPosting','headline':title,'description':desc,'inLanguage':lang,
                 'url':url,'mainEntityOfPage':{'@type':'WebPage','@id':url},'datePublished':post['published'],
                 'author':org,'publisher':org,'image':[sized_url(post['media']['image']['url'],1200)]}
+        if post.get('updated'):
+            schema['dateModified']=post['updated']
         breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[
             {'@type':'ListItem','position':1,'name':label(lang,'블로그','Blog'),'item':canonical(lang)},
             {'@type':'ListItem','position':2,'name':title,'item':url}]}
@@ -134,15 +138,25 @@ def listing(posts,lang):
     h+='</main>'+foot(lang)
     h+='''<script>(function(){'use strict';const box=document.getElementById('articleSearch'),items=Array.from(document.querySelectorAll('#articleGrid .tile')),buttons=Array.from(document.querySelectorAll('.filters button')),none=document.getElementById('noResults');let chosen='all';function refresh(){const search=box.value.toLocaleLowerCase().trim();let visible=0;for(const card of items){const matchCategory=chosen==='all'||card.dataset.category===chosen;const matchText=!search||card.dataset.search.toLocaleLowerCase().includes(search);card.hidden=!(matchCategory&&matchText);if(!card.hidden)visible++}none.hidden=visible!==0;}for(const b of buttons){b.addEventListener('click',()=>{chosen=b.dataset.filter;for(const el of buttons)el.setAttribute('aria-pressed',String(el===b));refresh()})}box.addEventListener('input',refresh);})();</script>'''
     return h+'</body></html>'
+# Editorial topic clusters: use existing complementary articles only.
+RELATED_TOPICS = [["bulk-rename-photos-files","file-backup-321-strategy","photo-file-size-guide","jpg-png-webp-which-format"],["fix-csv-empty-rows","excel-csv-utf8-korean-garbled","excel-csv-leading-zero-preservation","excel-highlight-duplicates-before-removing","merge-csv-with-different-columns"],["guest-wifi-qr-card","scan-qr-code-links-safely","google-passkey-shared-device-warning"],["hide-private-info-in-photos","iphone-photo-location-privacy","pdf-black-box-not-redaction","scan-qr-code-links-safely"],["pdf-merge-reorder-guide","fill-pdf-form-without-editing-original","pdf-black-box-not-redaction","straighten-document-photo","print-a4-labels-to-correct-size"],["recurring-bank-payments-guide","seller-item-profit-guide","track-return-and-warranty-deadlines"],["shift-pattern-to-calendar","measure-repeating-task-time","collect-group-food-orders"],["gmail-large-attachment-drive-link","google-drive-restricted-sharing-guide","file-backup-321-strategy","photo-file-size-guide"],["find-repeated-phrases-in-manuscript","webnovel-episode-foreshadowing-tracker","guide-word-character-counter","guide-text-diff-checker"],["guide-json-pretty-validator","guide-url-component-codec","guide-base64-text-codec","guide-text-diff-checker","convert-unix-timestamps-utc-local"],["guide-text-case-converter","guide-line-sort-deduplicate","guide-word-character-counter","guide-markdown-preview-lite","guide-text-diff-checker"],["generate-random-password-safely","google-passkey-shared-device-warning","scan-qr-code-links-safely","google-drive-restricted-sharing-guide"],["write-alt-text-for-website-images","check-text-background-contrast","jpg-png-webp-which-format"],["browser-localstorage-data-preservation","file-backup-321-strategy","webnovel-episode-foreshadowing-tracker"],["secondhand-handover-items-checklist","track-return-and-warranty-deadlines","hide-private-info-in-photos"],["fix-delayed-subtitle-timing","guide-text-diff-checker","guide-line-sort-deduplicate"]]
 def related(posts,current):
-    same=[p for p in posts if p['slug']!=current['slug'] and p['media']['category']==current['media']['category']]
-    rest=[p for p in posts if p['slug']!=current['slug'] and p not in same]
-    return (same+rest)[:3]
+    slug=current['slug']; by_slug={p['slug']:p for p in posts}
+    ranked=[]
+    for group in RELATED_TOPICS:
+        if slug in group:
+            for other in group:
+                if other!=slug and other in by_slug and other not in ranked:
+                    ranked.append(other)
+    same=[p for p in posts if p['slug']!=slug and p['media']['category']==current['media']['category'] and p['slug'] not in ranked]
+    return ([by_slug[s] for s in ranked]+same)[:3]
 def article(post,lang,posts):
     d=post[lang];ko=lang=='ko';found=related(posts,post)
     h=head(lang,post)+'<body>'+mast(lang)+'<main class="wrap">'
     h+='<div class="breadcrumb"><a href="'+('/' if ko else '/en/')+'">'+label(lang,'홈','Home')+'</a> / <a href="'+href(lang)+'">'+label(lang,'매거진','Magazine')+'</a> / '+E(cat_name(post,lang))+'</div>'
     h+='<div class="article-layout"><article class="article"><header><div class="meta"><span class="cat">'+E(cat_name(post,lang))+'</span><time datetime="'+E(post['published'])+'">'+E(post['published'])+'</time><span>'+label(lang,'아브레다 콘텐츠','ABREDA Editorial')+'</span></div>'
+    if post.get('updated'):
+        h+='<p class="date">'+label(lang,'최종 수정: ','Updated: ')+'<time datetime="'+E(post['updated'])+'">'+E(post['updated'])+'</time></p>'
     h+='<h1>'+E(d['title'])+'</h1><p class="lead">'+E(d['description'])+'</p></header>'
     image=post['media']['image']
     h+='<figure class="hero">'+image_tag(post,lang,is_hero=True)+'<figcaption>'+E(image['caption'][lang])+' · '

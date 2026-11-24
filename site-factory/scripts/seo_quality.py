@@ -22,7 +22,12 @@ def improve_hub(out):
     if len(urls) != len(set(urls)):
         raise ValueError('Duplicate sitemap URLs')
     edited = set()
+    revisions = {}
     for post in load():
+        if post.get('updated'):
+            for lang in ('ko','en'):
+                prefix='/en/blog/' if lang=='en' else '/blog/'
+                revisions[HOST+prefix+post['slug']+'/']=post['updated']
         if post.get('type') != 'tool':
             continue
         for lang in ('ko', 'en'):
@@ -84,6 +89,10 @@ def improve_hub(out):
             edited.add(HOST+prefix)
     # lastmod only for known substantive revisions, not every generated page.
     for u in edited:
-        xml = xml.replace('<loc>'+u+'</loc></url>','<loc>'+u+'</loc><lastmod>2026-11-25</lastmod></url>')
+        revisions.setdefault(u,'2026-11-25')
+    def mark(m):
+        loc=m.group(1)
+        return m.group(0) if loc not in revisions else '<loc>'+loc+'</loc><lastmod>'+revisions[loc]+'</lastmod></url>'
+    xml=re.sub(r'<loc>([^<]+)</loc>\s*(?:<lastmod>[^<]+</lastmod>\s*)?</url>',mark,xml)
     ET.fromstring(xml)
     sitemap.write_text(xml,encoding='utf-8')

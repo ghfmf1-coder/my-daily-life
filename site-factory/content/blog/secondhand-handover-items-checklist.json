@@ -20,6 +20,10 @@
       [
         "인계 시점과 최종 전달 목록을 확인하세요",
         "실제로 건넨 날짜와 구성품을 함께 검토하고 확인증 사본을 양쪽에 전달하세요. 개인 주소·연락처 등 불필요한 민감 정보는 확인증에 넣지 않는 편이 안전합니다."
+      ],
+      [
+        "구성품과 미확인 작동 상태를 분리해 기록하기",
+        "중고 노트북 거래라면 본체와 충전기를 각각 적고 충전 여부, 화면, 키보드 등 확인한 항목만 표시하세요. 테스트하지 못한 배터리나 포트는 미확인으로 남기고 인계 당사자가 목록을 함께 검토합니다."
       ]
     ],
     "alternative": "메신저 대화에 사진과 최종 구성품 목록을 남기는 방법도 있습니다. 서로 같은 기록을 보유한다는 점이 중요합니다.",
@@ -48,6 +52,10 @@
       [
         "Confirm the final list and handover date together",
         "Review the delivered items at the exchange, record the date and give both parties a copy. Avoid adding unnecessary home addresses or other sensitive details to the handover record."
+      ],
+      [
+        "Separate included accessories from untested functions",
+        "For a used laptop, list the device and charger individually and mark only the screen, keyboard or charging checks actually performed. Record untested ports or battery condition as unknown, and review the list together."
       ]
     ],
     "alternative": "A shared final message with photos and a component list is another workable option. What matters is that both sides retain the same evidence.",
@@ -75,5 +83,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

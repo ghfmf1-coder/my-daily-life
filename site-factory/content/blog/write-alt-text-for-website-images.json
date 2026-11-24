@@ -25,6 +25,10 @@
       [
         "도표는 한 문장의 alt만으로 끝내지 마세요",
         "복잡한 그래프나 표는 핵심 내용을 alt에 요약하고 주요 수치와 비교 근거를 본문 텍스트나 표에도 제공하세요. 실제 스크린리더로 읽어 보고 의미가 전달되는지 확인합니다."
+      ],
+      [
+        "동일한 사진도 페이지 문맥에 맞게 설명하기",
+        "제품 상세 페이지의 사진은 중요한 제품 특징을 전달할 수 있지만 같은 이미지가 장식으로 반복되면 추가 설명이 불필요할 수 있습니다. 주변 문장을 함께 읽고 독자에게 빠지는 정보가 무엇인지 판단하세요."
       ]
     ],
     "alternative": "내용을 전달하지 않는 장식용 이미지는 CSS 배경 처리 또는 빈 대체 텍스트를 활용할 수 있습니다. 모든 사진에 긴 설명을 넣는 것이 정답은 아닙니다.",
@@ -53,6 +57,10 @@
       [
         "Provide surrounding explanations for complex charts",
         "A graph may need a short alt summary plus detailed data in nearby text or a table. Test the reading order with assistive technology rather than assuming a short description conveys the full result."
+      ],
+      [
+        "Adapt alternative text to the image's context",
+        "A product photo may convey important characteristics on a detail page, while the same image repeated decoratively may not need another description. Read the surrounding text and identify what information would otherwise be lost."
       ]
     ],
     "alternative": "Pure decoration can be handled through CSS backgrounds or empty alt text. More words are not automatically more accessible.",
@@ -80,5 +88,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

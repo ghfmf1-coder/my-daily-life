@@ -19,6 +19,10 @@
       [
         "손익분기점과 실제 정산 내역 비교하기",
         "입력한 비용을 바탕으로 순이익과 손익분기 판매가를 살펴보고 실제 판매 플랫폼의 정산 내역과 맞는지 비교하세요. 반품·쿠폰 부담이나 세금 처리는 필요에 따라 별도로 계산하세요."
+      ],
+      [
+        "정산 내역과 건별 비용을 구분하는 방법",
+        "판매 건별로 실제 지급받은 정산액과 별도 지출을 기록합니다. 정산액에서 이미 차감된 수수료를 또 비용으로 빼지 않도록 항목별로 확인하고 반품이나 쿠폰은 발생 기록에 맞춰 반영하세요."
       ]
     ],
     "alternative": "품목이 적다면 엑셀이나 스프레드시트에서 원가·판매가·기타 비용 열을 나누어 직접 계산할 수 있습니다. 판매 건별 정산서와 대조하는 과정은 반드시 남겨두세요.",
@@ -28,6 +32,10 @@
       [
         "판매가에서 매입 원가만 빼면 순이익인가요?",
         "아니요. 판매 과정에서 부담하는 플랫폼 수수료·배송비·포장비·광고비가 있다면 이를 함께 반영해야 실제 남는 금액을 판단할 수 있습니다."
+      ],
+      [
+        "계산한 순이익과 플랫폼 정산액이 왜 다르죠?",
+        "정산액에 이미 수수료나 할인, 환불이 차감됐을 수 있습니다. 항목별로 비교해 같은 비용을 두 번 빼지 말고 세금 처리는 별도로 확인하세요."
       ]
     ]
   },
@@ -47,6 +55,10 @@
       [
         "Compare calculated profit with the real settlement",
         "Review the break-even price and net result against your platform statement. Handle returns, tax filing and coupon allocation separately where needed."
+      ],
+      [
+        "Reconcile expenses against actual payout",
+        "Record actual payout and separately paid costs for each order. Check whether fees were already deducted before subtracting them; enter discounts and refunds from the transaction record."
       ]
     ],
     "alternative": "For a small catalog, a spreadsheet with clearly separated cost fields may be enough. Always reconcile calculations against actual platform settlements.",
@@ -56,7 +68,12 @@
       [
         "Is the sale price minus purchase cost the final profit?",
         "No. Marketplace fees and seller-paid expenses also reduce the result. Include those costs and compare against the actual transaction settlement."
+      ],
+      [
+        "Why does my calculation disagree with platform payout?",
+        "Some fees, discounts or refunds may already be deducted in the payout. Compare line items and avoid subtracting the same expense twice; account for tax separately."
       ]
     ]
-  }
+  },
+  "updated": "2026-11-25"
 }

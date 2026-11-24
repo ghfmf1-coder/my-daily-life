@@ -6,12 +6,12 @@
   "status": "reviewed",
   "ko": {
     "title": "JSON 문법 오류를 확인하고 가독성 있게 정리하는 법",
-    "description": "API 응답이나 설정 파일의 JSON이 파싱되지 않을 때 쉼표와 큰따옴표, 중괄호를 확인한다. 문법 검사는 데이터의 업무상 타당성과 별개다.",
+    "description": "JSON 문법 오류를 찾아 읽기 좋은 들여쓰기로 바꾸고, 스키마 검사와 숫자 정밀도 문제를 구분하는 방법입니다.",
     "problem": "API 응답이나 설정 파일의 JSON이 파싱되지 않을 때 쉼표와 큰따옴표, 중괄호를 확인한다. 문법 검사는 데이터의 업무상 타당성과 별개다.",
     "steps": [
       [
         "JSON 문법 오류가 발생하는 지점 살펴보기",
-        "API 응답이나 설정 파일의 JSON이 파싱되지 않을 때 쉼표와 큰따옴표, 중괄호를 확인한다. 문법 검사는 데이터의 업무상 타당성과 별개다."
+        "설정 파일이나 API 요청 본문에서 오류가 발생하면 문제가 된 JSON 텍스트만 분리하세요. 비밀번호나 토큰 등은 공유용 사본에서 제거하고 원본을 보관합니다."
       ],
       [
         "정상 객체와 마지막 쉼표 오류 비교하기",
@@ -19,7 +19,7 @@
       ],
       [
         "중복 키와 큰 정수의 처리 한계 확인하기",
-        "같은 키가 반복되면 마지막 값만 남을 수 있고 큰 정수는 자바스크립트 숫자 정밀도의 영향을 받는다. 비밀키나 토큰은 공유하지 않는다."
+        "정리된 객체의 필드와 값을 원본과 비교하세요. 중복 키가 있는 데이터와 큰 식별번호는 파싱 중 값이 달라질 수 있으므로 별도의 검증이 필요합니다."
       ]
     ],
     "alternative": "코드 편집기의 JSON 오류 위치 표시를 활용하거나 Node.js의 JSON.parse로 검사한다. 허용되는 필드와 타입은 별도 스키마로 검증한다.",
@@ -34,12 +34,12 @@
   },
   "en": {
     "title": "How to validate and format JSON without sharing secrets",
-    "description": "When an API payload or configuration fails to parse, inspect its commas, double quotes and braces. Syntax validity is separate from schema validation.",
+    "description": "Format JSON for readability, diagnose syntax errors, and distinguish parsing from schema checks and numeric precision issues.",
     "problem": "When an API payload or configuration fails to parse, inspect its commas, double quotes and braces. Syntax validity is separate from schema validation.",
     "steps": [
       [
         "Identify JSON parsing errors",
-        "When an API payload or configuration fails to parse, inspect its commas, double quotes and braces. Syntax validity is separate from schema validation."
+        "Isolate the failing JSON payload or configuration. Keep the original, and remove passwords or tokens from any copy intended for sharing."
       ],
       [
         "Compare valid JSON with a trailing comma",
@@ -47,7 +47,7 @@
       ],
       [
         "Watch for duplicate keys and numeric precision",
-        "Repeated object keys may be collapsed to their last value and very large integers can lose JavaScript precision. Never share secret tokens when asking for help."
+        "Compare the formatted object's keys and values with the source. Duplicate keys and very large numeric identifiers need separate validation because parsing can change their representation."
       ]
     ],
     "alternative": "Use editor diagnostics or Node.js JSON.parse to locate a syntax error. Validate required fields and types against the actual API schema separately.",
@@ -75,5 +75,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }
