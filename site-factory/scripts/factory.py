@@ -678,6 +678,8 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
     if slug == 'toolbox-hub':
         from hub_domains import integrate
         integrate(out,data)
+        from seo_quality import improve_hub
+        improve_hub(out)
     elif slug in BY_SLUG or slug == 'toolbox-admin':
         from hub_domains import rewrite_links
         for file in out.rglob('*'):

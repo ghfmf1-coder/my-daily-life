@@ -6,57 +6,57 @@
   "status": "reviewed",
   "ko": {
     "title": "안전한 무작위 비밀번호 만드는 법: 길이·문자·보관까지",
-    "description": "암호학적 난수로 비밀번호를 만들고 재사용을 피하는 방법을 정리했습니다.",
-    "problem": "사람이 직접 만든 비밀번호는 기억하기 쉬운 단어와 생일을 반복하기 쉽습니다. 길고 서로 다른 비밀번호를 사이트별로 만들고, 안전하게 보관하는 과정이 중요합니다.",
+    "description": "여러 계정에서 같은 비밀번호를 재사용하면 하나의 유출이 다른 계정에도 영향을 준다. 서비스마다 다른 무작위 비밀번호를 만들어 관리한다.",
+    "problem": "여러 계정에서 같은 비밀번호를 재사용하면 하나의 유출이 다른 계정에도 영향을 준다. 서비스마다 다른 무작위 비밀번호를 만들어 관리한다.",
     "steps": [
       [
-        "원본 요구사항을 먼저 확인하세요",
-        "사용할 서비스가 요구하는 길이와 문자 제한을 먼저 확인하고, 도구에서 해당 옵션을 선택하세요. 지원하지 않는 문자나 날짜 형식을 임의로 적용하지 않는 것이 중요합니다."
+        "처리하려는 값과 기준을 먼저 확인하기",
+        "여러 계정에서 같은 비밀번호를 재사용하면 하나의 유출이 다른 계정에도 영향을 준다. 서비스마다 다른 무작위 비밀번호를 만들어 관리한다."
       ],
       [
-        "브라우저에서 값을 생성하거나 변환하세요",
-        "입력값을 확인한 뒤 실행 버튼을 누르고 출력된 결과를 검토하세요. 출력이 비어 있거나 오류가 나오면 입력 조건부터 다시 확인해야 합니다."
+        "입력 예시를 사용해 결과 직접 확인하기",
+        "서비스 문자 제한을 확인한 뒤 길이와 대문자, 소문자, 숫자, 기호를 선택해 생성한다. 지원 범위는 8~128자이며 선택한 그룹의 문자가 각각 포함된다."
       ],
       [
-        "결과를 실제 용도에 맞게 검증하세요",
-        "결과를 바로 사용하기 전에 원본과 대조하고, 민감한 값은 공유하거나 공개 화면에 남기지 마세요. 필요한 경우 별도의 검증 절차를 거치세요."
+        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "브라우저의 Web Crypto 난수를 사용하지만 서비스 보안 수준이나 계정 보호 전체를 보장하지는 않는다. 클립보드와 화면 노출도 주의한다."
       ]
     ],
-    "alternative": "브라우저 기능 외에도 운영체제의 비밀번호 관리자 또는 프로그래밍 언어의 표준 날짜 처리 기능을 사용할 수 있습니다. 중요한 작업에는 독립적인 방법으로 결과를 교차 검증하세요.",
+    "alternative": "신뢰할 수 있는 비밀번호 관리자의 생성과 저장 기능을 이용하면 계정별 비밀번호 관리에 편리하다. 가능한 계정에는 다중 인증도 설정한다.",
     "toolIntro": "아브레다 안전한 비밀번호 생성기는 선택한 문자와 길이를 바탕으로 브라우저에서 무작위 비밀번호를 생성합니다.",
-    "limits": "브라우저에서 생성한 비밀번호는 별도 서버에 전송하지 않지만 클립보드에 복사하면 다른 앱에서 읽을 가능성을 고려해야 합니다.",
+    "limits": "브라우저의 Web Crypto 난수를 사용하지만 서비스 보안 수준이나 계정 보호 전체를 보장하지는 않는다. 클립보드와 화면 노출도 주의한다.",
     "faq": [
       [
-        "이 도구의 결과만으로 보안이나 정확성을 보장할 수 있나요?",
-        "아니요. 입력 조건과 실제 서비스 요구사항을 확인해야 하며, 민감한 작업이나 공식 기록은 별도의 검증 수단으로 확인해야 합니다."
+        "한 번 생성한 비밀번호를 여러 사이트에서 사용해도 되나요?",
+        "재사용을 피해야 한다. 한 사이트에서 비밀번호가 유출되더라도 다른 계정으로 피해가 번지지 않도록 각각 다른 값을 사용한다."
       ]
     ]
   },
   "en": {
     "title": "How to Create a Strong Random Password Without Reusing It",
-    "description": "Generate a long random password in your browser and store it safely without repeating credentials.",
-    "problem": "People often reuse memorable words and dates across accounts. A long, randomly generated password helps avoid predictable patterns, but storage and account recovery remain just as important.",
+    "description": "Reusing a password makes one credential leak relevant to other accounts. Generate a different random password for each service and store it securely.",
+    "problem": "Reusing a password makes one credential leak relevant to other accounts. Generate a different random password for each service and store it securely.",
     "steps": [
       [
-        "Check the original format and requirements first",
-        "Confirm the allowed characters, length, units or source format before entering anything. Using the wrong assumptions can produce a plausible but unusable result."
+        "Identify the input and expected behavior",
+        "Reusing a password makes one credential leak relevant to other accounts. Generate a different random password for each service and store it securely."
       ],
       [
-        "Run the operation locally in the browser",
-        "Enter the input, select the appropriate options, and run the tool. If an error appears, inspect the original input and settings rather than trusting a partial result."
+        "Try this specific input and inspect the result",
+        "Check the site's character restrictions, choose length and character groups, and generate. The supported length is 8–128 and each selected group is represented."
       ],
       [
-        "Verify the output before using it elsewhere",
-        "Compare the output with the original requirements. Avoid sharing sensitive values or leaving them on public screens, and use an independent verification method for important tasks."
+        "Check the result against your intended destination",
+        "The generator uses browser Web Crypto randomness but cannot guarantee account security. Clipboard exposure and password reuse remain separate risks."
       ]
     ],
-    "alternative": "A dedicated password manager or a programming language's standard date-time library may be more appropriate for automated workflows. Cross-check important results with a separate trusted method.",
+    "alternative": "A trusted password manager can generate and store separate credentials for each account. Enable multi-factor authentication where available.",
     "toolIntro": "ABREDA Secure Password Generator creates random passwords in the browser with selectable character groups and length.",
-    "limits": "The generator operates in the browser, but copying a password to the clipboard introduces a separate exposure risk. Clear sensitive clipboard contents when practical.",
+    "limits": "The generator uses browser Web Crypto randomness but cannot guarantee account security. Clipboard exposure and password reuse remain separate risks.",
     "faq": [
       [
-        "Does using this browser tool guarantee security or correctness?",
-        "No. You must confirm the original requirements and verify any important result independently before using it in a production or sensitive workflow."
+        "Can I use one generated password for several websites?",
+        "Avoid reuse. Separate credentials limit the chance that one compromised password can also be used to access your other accounts."
       ]
     ]
   },

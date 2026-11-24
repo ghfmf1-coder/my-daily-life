@@ -6,57 +6,57 @@
   "status": "reviewed",
   "ko": {
     "title": "마크다운 기본 문법과 안전한 미리보기 방법",
-    "description": "마크다운 미리보기의 실제 사용 방법과 주의할 점을 단계별로 정리했습니다.",
-    "problem": "제목, 목록, 강조 등 기본 마크다운 형식을 확인합니다. HTML은 실행하지 않으며 복잡한 확장 문법은 지원하지 않습니다. 중요한 문서를 수정하기 전에는 반드시 원본을 따로 보관해야 변경 내용을 되돌릴 수 있습니다.",
+    "description": "README나 메모를 작성할 때 제목과 강조, 목록이 어떻게 보이는지 확인할 수 있다. 이 도구는 간단한 마크다운 문법의 일부를 미리 보여준다.",
+    "problem": "README나 메모를 작성할 때 제목과 강조, 목록이 어떻게 보이는지 확인할 수 있다. 이 도구는 간단한 마크다운 문법의 일부를 미리 보여준다.",
     "steps": [
       [
-        "작업 전 원본 텍스트를 복사해 두세요",
-        "변환을 시작하기 전에 원본을 따로 저장하세요. 잘못 삭제된 줄이나 변경된 문자를 비교하고 되돌릴 수 있도록 준비하는 단계입니다."
+        "처리하려는 값과 기준을 먼저 확인하기",
+        "README나 메모를 작성할 때 제목과 강조, 목록이 어떻게 보이는지 확인할 수 있다. 이 도구는 간단한 마크다운 문법의 일부를 미리 보여준다."
       ],
       [
-        "목적에 맞는 기능을 선택하세요",
-        "입력창에 텍스트를 붙여넣고 필요한 기능을 선택하세요. 입력 형식이 지원되는지 확인하고 변환 결과를 확인하세요."
+        "입력 예시를 사용해 결과 직접 확인하기",
+        "'# 제목', '**강조**', '- 항목'을 각각 한 줄에 입력하고 실행한다. 미리보기에서 제목과 굵은 글씨, 글머리 기호를 확인한다."
       ],
       [
-        "특수문자와 예외를 확인하세요",
-        "빈 줄, 특수문자, 한글 및 영문 혼합 데이터가 있는 경우 변환 후 원본과 비교하세요. 중요한 작업에서는 독립적인 방법으로 다시 검증하세요."
+        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "전체 CommonMark 또는 GitHub Flavored Markdown 렌더러가 아니다. 표와 링크, 코드 블록은 다르게 보일 수 있으며 복사는 렌더링된 텍스트 기준이다."
       ]
     ],
-    "alternative": "같은 작업은 텍스트 편집기나 프로그래밍 언어의 표준 라이브러리로도 수행할 수 있습니다. 반복 작업에서는 입력과 출력의 예시를 보관하세요.",
+    "alternative": "GitHub에 올릴 문서는 GitHub 편집기의 미리보기로 확인한다. 표와 코드 블록이 필요하면 해당 문법을 지원하는 전문 편집기를 선택한다.",
     "toolIntro": "아브레다 마크다운 미리보기는 입력한 텍스트를 서버로 전송하지 않고 브라우저에서 처리하는 도구입니다.",
-    "limits": "이 도구는 의미나 모든 파일 형식을 검증하지 않습니다. 언어별 표기 규칙과 다른 프로그램에서의 호환성은 별도로 확인해야 합니다.",
+    "limits": "전체 CommonMark 또는 GitHub Flavored Markdown 렌더러가 아니다. 표와 링크, 코드 블록은 다르게 보일 수 있으며 복사는 렌더링된 텍스트 기준이다.",
     "faq": [
       [
-        "결과를 검토하지 않고 그대로 사용해도 되나요?",
-        "아니요. 선택한 변환 기능만 실행하므로 다른 서비스나 문서에서 요구하는 형식까지 보장하지 않습니다. 결과를 반드시 확인하세요."
+        "표와 코드 블록도 GitHub처럼 표시되나요?",
+        "아니다. 이 미리보기는 제목과 일부 강조, 목록만 다룬다. 게시할 서비스의 실제 렌더러에서 복잡한 문법을 확인해야 한다."
       ]
     ]
   },
   "en": {
     "title": "Basic Markdown syntax and safe preview techniques",
-    "description": "A practical guide to markdown preview lite, with browser-only steps and limitations explained clearly.",
-    "problem": "Preview basic Markdown headings, lists and emphasis without executing embedded HTML. Before applying changes to important documents, keep the original input so you can reverse mistakes.",
+    "description": "Preview basic README headings, emphasis and list items before publishing a short note. This utility implements a limited Markdown subset, not a complete renderer.",
+    "problem": "Preview basic README headings, emphasis and list items before publishing a short note. This utility implements a limited Markdown subset, not a complete renderer.",
     "steps": [
       [
-        "Keep a copy of the original text",
-        "Copy the original data before processing. This allows you to compare results, recover removed lines, and detect any unexpected formatting changes."
+        "Identify the input and expected behavior",
+        "Preview basic README headings, emphasis and list items before publishing a short note. This utility implements a limited Markdown subset, not a complete renderer."
       ],
       [
-        "Choose the appropriate operation",
-        "Paste your input into the tool and select the operation that matches your actual task. Check that the input format is supported before running it."
+        "Try this specific input and inspect the result",
+        "Enter '# Heading', '**bold**' and '- item' on separate lines. Run the preview and inspect the heading, emphasized text and bullet."
       ],
       [
-        "Review the output carefully",
-        "Compare the resulting text against the original and verify edge cases such as empty lines, special characters, language-specific text, or missing values."
+        "Check the result against your intended destination",
+        "This is not a complete CommonMark or GitHub Flavored Markdown renderer. Links, tables and code fences may not render as expected; copying returns visible text."
       ]
     ],
-    "alternative": "You can also use a trusted text editor or a programming language's standard library to perform the same operation. For automated workflows, preserve a test fixture and compare outputs.",
+    "alternative": "For a GitHub README, use GitHub's own preview for final review. Choose a full Markdown editor when tables or fenced code blocks matter.",
     "toolIntro": "ABREDA Markdown Preview Lite performs this task directly in the browser without sending your text to a server.",
-    "limits": "This utility is not a semantic validator and does not guarantee suitability for every language, file format, or downstream system. Always review results before publishing.",
+    "limits": "This is not a complete CommonMark or GitHub Flavored Markdown renderer. Links, tables and code fences may not render as expected; copying returns visible text.",
     "faq": [
       [
-        "Can I rely on the output without checking it?",
-        "No. This tool only performs the selected transformation. It cannot confirm that the output meets the requirements of another application or document."
+        "Will tables and fenced code blocks look exactly like GitHub?",
+        "No. This lightweight preview supports headings and selected emphasis and list patterns. Use the destination's renderer for complex Markdown syntax."
       ]
     ]
   },

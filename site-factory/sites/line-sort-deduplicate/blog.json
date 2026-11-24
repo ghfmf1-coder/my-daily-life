@@ -6,57 +6,57 @@
   "status": "reviewed",
   "ko": {
     "title": "목록 중복 제거 전에 원본 순서를 보존하는 방법",
-    "description": "줄 정렬·중복 제거기의 실제 사용 방법과 주의할 점을 단계별로 정리했습니다.",
-    "problem": "목록을 줄 단위로 정렬하고 중복을 제거합니다. 원래 순서가 필요한 경우 먼저 복사본을 저장하세요. 중요한 문서를 수정하기 전에는 반드시 원본을 따로 보관해야 변경 내용을 되돌릴 수 있습니다.",
+    "description": "주소 목록이나 태그를 한 줄에 하나씩 정리할 때 순서 정렬과 중복 제거는 서로 다른 작업이다. 목적에 맞춰 두 기능을 따로 실행한다.",
+    "problem": "주소 목록이나 태그를 한 줄에 하나씩 정리할 때 순서 정렬과 중복 제거는 서로 다른 작업이다. 목적에 맞춰 두 기능을 따로 실행한다.",
     "steps": [
       [
-        "작업 전 원본 텍스트를 복사해 두세요",
-        "변환을 시작하기 전에 원본을 따로 저장하세요. 잘못 삭제된 줄이나 변경된 문자를 비교하고 되돌릴 수 있도록 준비하는 단계입니다."
+        "처리하려는 값과 기준을 먼저 확인하기",
+        "주소 목록이나 태그를 한 줄에 하나씩 정리할 때 순서 정렬과 중복 제거는 서로 다른 작업이다. 목적에 맞춰 두 기능을 따로 실행한다."
       ],
       [
-        "목적에 맞는 기능을 선택하세요",
-        "입력창에 텍스트를 붙여넣고 필요한 기능을 선택하세요. 입력 형식이 지원되는지 확인하고 변환 결과를 확인하세요."
+        "입력 예시를 사용해 결과 직접 확인하기",
+        "b, a, b를 각각 다른 줄에 넣는다. 중복 제거는 b와 a를 처음 나온 순서로 남기며 정렬은 a, b, b를 줄 단위로 나열한다."
       ],
       [
-        "특수문자와 예외를 확인하세요",
-        "빈 줄, 특수문자, 한글 및 영문 혼합 데이터가 있는 경우 변환 후 원본과 비교하세요. 중요한 작업에서는 독립적인 방법으로 다시 검증하세요."
+        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "앞뒤 공백과 대소문자, 빈 줄은 문자열 비교에 영향을 준다. 정렬 순서는 브라우저 로케일에 의존하며 중복 제거는 대소문자를 구분한다."
       ]
     ],
-    "alternative": "같은 작업은 텍스트 편집기나 프로그래밍 언어의 표준 라이브러리로도 수행할 수 있습니다. 반복 작업에서는 입력과 출력의 예시를 보관하세요.",
+    "alternative": "스프레드시트의 중복 제거 또는 정렬 기능을 사용할 수 있다. 숫자 목록에서는 수치 정렬이 필요한지 문자열 정렬이 필요한지 구별한다.",
     "toolIntro": "아브레다 줄 정렬·중복 제거기는 입력한 텍스트를 서버로 전송하지 않고 브라우저에서 처리하는 도구입니다.",
-    "limits": "이 도구는 의미나 모든 파일 형식을 검증하지 않습니다. 언어별 표기 규칙과 다른 프로그램에서의 호환성은 별도로 확인해야 합니다.",
+    "limits": "앞뒤 공백과 대소문자, 빈 줄은 문자열 비교에 영향을 준다. 정렬 순서는 브라우저 로케일에 의존하며 중복 제거는 대소문자를 구분한다.",
     "faq": [
       [
-        "결과를 검토하지 않고 그대로 사용해도 되나요?",
-        "아니요. 선택한 변환 기능만 실행하므로 다른 서비스나 문서에서 요구하는 형식까지 보장하지 않습니다. 결과를 반드시 확인하세요."
+        "Apple과 apple도 한 항목으로 합쳐지나요?",
+        "아니다. 완전히 같은 문자열만 제거한다. 대소문자 구분이 필요 없는 목록이라면 별도 사본에서 대소문자를 먼저 통일한다."
       ]
     ]
   },
   "en": {
     "title": "How to preserve list order before deduplicating",
-    "description": "A practical guide to line sort & deduplicator, with browser-only steps and limitations explained clearly.",
-    "problem": "Sort lines and remove duplicates. Keep a backup when the original ordering matters. Before applying changes to important documents, keep the original input so you can reverse mistakes.",
+    "description": "Sorting and deduplication are distinct operations when cleaning one-item-per-line tags or address lists. Choose the operation that matches the task.",
+    "problem": "Sorting and deduplication are distinct operations when cleaning one-item-per-line tags or address lists. Choose the operation that matches the task.",
     "steps": [
       [
-        "Keep a copy of the original text",
-        "Copy the original data before processing. This allows you to compare results, recover removed lines, and detect any unexpected formatting changes."
+        "Identify the input and expected behavior",
+        "Sorting and deduplication are distinct operations when cleaning one-item-per-line tags or address lists. Choose the operation that matches the task."
       ],
       [
-        "Choose the appropriate operation",
-        "Paste your input into the tool and select the operation that matches your actual task. Check that the input format is supported before running it."
+        "Try this specific input and inspect the result",
+        "Enter b, a, b on separate lines. Deduplication keeps b then a in first-seen order, while sorting returns a, b, b on separate lines."
       ],
       [
-        "Review the output carefully",
-        "Compare the resulting text against the original and verify edge cases such as empty lines, special characters, language-specific text, or missing values."
+        "Check the result against your intended destination",
+        "Exact duplicate matching preserves case and spaces, including empty lines. Sort order uses the browser's locale comparison and may not be numeric."
       ]
     ],
-    "alternative": "You can also use a trusted text editor or a programming language's standard library to perform the same operation. For automated workflows, preserve a test fixture and compare outputs.",
+    "alternative": "A spreadsheet can sort or remove duplicate rows. Distinguish numeric ordering from text ordering when entries are numbers rather than labels.",
     "toolIntro": "ABREDA Line Sort & Deduplicator performs this task directly in the browser without sending your text to a server.",
-    "limits": "This utility is not a semantic validator and does not guarantee suitability for every language, file format, or downstream system. Always review results before publishing.",
+    "limits": "Exact duplicate matching preserves case and spaces, including empty lines. Sort order uses the browser's locale comparison and may not be numeric.",
     "faq": [
       [
-        "Can I rely on the output without checking it?",
-        "No. This tool only performs the selected transformation. It cannot confirm that the output meets the requirements of another application or document."
+        "Are Apple and apple treated as duplicate lines?",
+        "No. Deduplication compares exact strings, including case and whitespace. Normalize a copy first only if case-insensitive matching is appropriate."
       ]
     ]
   },

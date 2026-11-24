@@ -6,57 +6,57 @@
   "status": "reviewed",
   "ko": {
     "title": "Base64 인코딩은 암호화가 아닌 이유와 변환 방법",
-    "description": "Base64 텍스트 변환기의 실제 사용 방법과 주의할 점을 단계별로 정리했습니다.",
-    "problem": "문자열을 Base64로 변환하거나 원문으로 복원합니다. Base64는 암호화가 아니므로 비밀정보 보호에 사용하지 마세요. 중요한 문서를 수정하기 전에는 반드시 원본을 따로 보관해야 변경 내용을 되돌릴 수 있습니다.",
+    "description": "API나 로그에서 Base64 문자열을 볼 때 원래 텍스트를 읽거나 전송용 표현으로 변환할 수 있다. Base64는 암호화나 개인정보 보호 수단이 아니다.",
+    "problem": "API나 로그에서 Base64 문자열을 볼 때 원래 텍스트를 읽거나 전송용 표현으로 변환할 수 있다. Base64는 암호화나 개인정보 보호 수단이 아니다.",
     "steps": [
       [
-        "작업 전 원본 텍스트를 복사해 두세요",
-        "변환을 시작하기 전에 원본을 따로 저장하세요. 잘못 삭제된 줄이나 변경된 문자를 비교하고 되돌릴 수 있도록 준비하는 단계입니다."
+        "처리하려는 값과 기준을 먼저 확인하기",
+        "API나 로그에서 Base64 문자열을 볼 때 원래 텍스트를 읽거나 전송용 표현으로 변환할 수 있다. Base64는 암호화나 개인정보 보호 수단이 아니다."
       ],
       [
-        "목적에 맞는 기능을 선택하세요",
-        "입력창에 텍스트를 붙여넣고 필요한 기능을 선택하세요. 입력 형식이 지원되는지 확인하고 변환 결과를 확인하세요."
+        "입력 예시를 사용해 결과 직접 확인하기",
+        "'hello'를 입력해 인코딩하면 aGVsbG8=가 나온다. 이를 디코딩하면 hello로 돌아온다. 한글은 UTF-8 바이트로 변환해 처리한다."
       ],
       [
-        "특수문자와 예외를 확인하세요",
-        "빈 줄, 특수문자, 한글 및 영문 혼합 데이터가 있는 경우 변환 후 원본과 비교하세요. 중요한 작업에서는 독립적인 방법으로 다시 검증하세요."
+        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "표준 Base64와 UTF-8 텍스트를 처리한다. URL-safe Base64 및 UTF-8이 아닌 바이트는 오류가 날 수 있다. 비밀 정보를 감추는 용도가 아니다."
       ]
     ],
-    "alternative": "같은 작업은 텍스트 편집기나 프로그래밍 언어의 표준 라이브러리로도 수행할 수 있습니다. 반복 작업에서는 입력과 출력의 예시를 보관하세요.",
+    "alternative": "개발 환경에서는 표준 Base64 라이브러리로 변환할 수 있다. 이미지나 압축 파일처럼 텍스트가 아닌 데이터에는 바이너리 지원 도구를 사용한다.",
     "toolIntro": "아브레다 Base64 텍스트 변환기는 입력한 텍스트를 서버로 전송하지 않고 브라우저에서 처리하는 도구입니다.",
-    "limits": "이 도구는 의미나 모든 파일 형식을 검증하지 않습니다. 언어별 표기 규칙과 다른 프로그램에서의 호환성은 별도로 확인해야 합니다.",
+    "limits": "표준 Base64와 UTF-8 텍스트를 처리한다. URL-safe Base64 및 UTF-8이 아닌 바이트는 오류가 날 수 있다. 비밀 정보를 감추는 용도가 아니다.",
     "faq": [
       [
-        "결과를 검토하지 않고 그대로 사용해도 되나요?",
-        "아니요. 선택한 변환 기능만 실행하므로 다른 서비스나 문서에서 요구하는 형식까지 보장하지 않습니다. 결과를 반드시 확인하세요."
+        "Base64로 바꾸면 다른 사람이 읽을 수 없나요?",
+        "아니다. Base64는 누구나 되돌릴 수 있는 표현 방식이다. 민감한 내용은 암호화 또는 접근 통제 같은 별도 보호 수단이 필요하다."
       ]
     ]
   },
   "en": {
     "title": "Why Base64 encoding is not encryption and how to decode it",
-    "description": "A practical guide to base64 text encoder & decoder, with browser-only steps and limitations explained clearly.",
-    "problem": "Convert UTF-8 text to and from Base64. Base64 is an encoding, not encryption. Before applying changes to important documents, keep the original input so you can reverse mistakes.",
+    "description": "Base64 represents bytes as printable text for transport. It can help read an encoded API value or prepare a UTF-8 text payload; it is not encryption.",
+    "problem": "Base64 represents bytes as printable text for transport. It can help read an encoded API value or prepare a UTF-8 text payload; it is not encryption.",
     "steps": [
       [
-        "Keep a copy of the original text",
-        "Copy the original data before processing. This allows you to compare results, recover removed lines, and detect any unexpected formatting changes."
+        "Identify the input and expected behavior",
+        "Base64 represents bytes as printable text for transport. It can help read an encoded API value or prepare a UTF-8 text payload; it is not encryption."
       ],
       [
-        "Choose the appropriate operation",
-        "Paste your input into the tool and select the operation that matches your actual task. Check that the input format is supported before running it."
+        "Try this specific input and inspect the result",
+        "Encode 'hello' to obtain aGVsbG8=. Decode that string to recover hello. Non-ASCII text is first converted to UTF-8 bytes."
       ],
       [
-        "Review the output carefully",
-        "Compare the resulting text against the original and verify edge cases such as empty lines, special characters, language-specific text, or missing values."
+        "Check the result against your intended destination",
+        "The decoder expects standard Base64 and valid UTF-8 text. URL-safe variants or arbitrary binary data may fail. Never treat encoding as secrecy."
       ]
     ],
-    "alternative": "You can also use a trusted text editor or a programming language's standard library to perform the same operation. For automated workflows, preserve a test fixture and compare outputs.",
+    "alternative": "Use a standard Base64 library in application code. For images, archives or other binary files, use a binary-capable tool instead of a UTF-8 decoder.",
     "toolIntro": "ABREDA Base64 Text Encoder & Decoder performs this task directly in the browser without sending your text to a server.",
-    "limits": "This utility is not a semantic validator and does not guarantee suitability for every language, file format, or downstream system. Always review results before publishing.",
+    "limits": "The decoder expects standard Base64 and valid UTF-8 text. URL-safe variants or arbitrary binary data may fail. Never treat encoding as secrecy.",
     "faq": [
       [
-        "Can I rely on the output without checking it?",
-        "No. This tool only performs the selected transformation. It cannot confirm that the output meets the requirements of another application or document."
+        "Does Base64 prevent another person from reading my text?",
+        "No. Anyone can reverse the encoding. Sensitive information requires actual encryption or appropriate access controls, not a different text representation."
       ]
     ]
   },

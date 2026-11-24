@@ -6,57 +6,57 @@
   "status": "reviewed",
   "ko": {
     "title": "유닉스 타임스탬프 초·밀리초 구분하고 날짜 변환하기",
-    "description": "로그의 유닉스 시간값을 UTC와 현지 날짜로 읽고 단위 오류를 확인합니다.",
-    "problem": "API와 서버 로그에서 숫자로 된 시각을 발견했다면 초와 밀리초 중 어떤 단위인지 먼저 확인해야 합니다. 같은 숫자를 잘못 해석하면 전혀 다른 날짜가 나옵니다.",
+    "description": "로그와 API의 숫자형 시간값은 초인지 밀리초인지 명세를 확인해야 한다. 숫자 자릿수만 보고 단위를 확정하면 오래된 기록에서 오류가 생길 수 있다.",
+    "problem": "로그와 API의 숫자형 시간값은 초인지 밀리초인지 명세를 확인해야 한다. 숫자 자릿수만 보고 단위를 확정하면 오래된 기록에서 오류가 생길 수 있다.",
     "steps": [
       [
-        "원본 요구사항을 먼저 확인하세요",
-        "사용할 서비스가 요구하는 길이와 문자 제한을 먼저 확인하고, 도구에서 해당 옵션을 선택하세요. 지원하지 않는 문자나 날짜 형식을 임의로 적용하지 않는 것이 중요합니다."
+        "처리하려는 값과 기준을 먼저 확인하기",
+        "로그와 API의 숫자형 시간값은 초인지 밀리초인지 명세를 확인해야 한다. 숫자 자릿수만 보고 단위를 확정하면 오래된 기록에서 오류가 생길 수 있다."
       ],
       [
-        "브라우저에서 값을 생성하거나 변환하세요",
-        "입력값을 확인한 뒤 실행 버튼을 누르고 출력된 결과를 검토하세요. 출력이 비어 있거나 오류가 나오면 입력 조건부터 다시 확인해야 합니다."
+        "입력 예시를 사용해 결과 직접 확인하기",
+        "입력에 0을 넣고 초 단위로 변환하면 UTC는 1970-01-01T00:00:00.000Z로 표시된다. 기기 현지 시간은 시간대에 따라 달라진다."
       ],
       [
-        "결과를 실제 용도에 맞게 검증하세요",
-        "결과를 바로 사용하기 전에 원본과 대조하고, 민감한 값은 공유하거나 공개 화면에 남기지 마세요. 필요한 경우 별도의 검증 절차를 거치세요."
+        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "정수만 처리하며 브라우저 Date 지원 범위 밖의 값은 오류가 난다. 현지 시각은 기기 시간대 설정을 따르므로 공식 기록에서는 UTC도 확인한다."
       ]
     ],
-    "alternative": "브라우저 기능 외에도 운영체제의 비밀번호 관리자 또는 프로그래밍 언어의 표준 날짜 처리 기능을 사용할 수 있습니다. 중요한 작업에는 독립적인 방법으로 결과를 교차 검증하세요.",
+    "alternative": "JavaScript Date나 운영체제의 날짜 변환 기능으로 확인할 수 있다. 서버 기록과 비교할 때 원본 숫자와 단위, UTC 값을 함께 보관한다.",
     "toolIntro": "아브레다 유닉스 시간 변환기는 초와 밀리초를 구분하여 UTC 및 기기 현지 시각을 보여줍니다.",
-    "limits": "브라우저의 현지 시각은 사용 중인 기기의 시간대 설정을 따릅니다. 법적 기록이나 서버 감사에서는 원본 UTC 값과 서버 시간대 설정을 함께 확인해야 합니다.",
+    "limits": "정수만 처리하며 브라우저 Date 지원 범위 밖의 값은 오류가 난다. 현지 시각은 기기 시간대 설정을 따르므로 공식 기록에서는 UTC도 확인한다.",
     "faq": [
       [
-        "이 도구의 결과만으로 보안이나 정확성을 보장할 수 있나요?",
-        "아니요. 입력 조건과 실제 서비스 요구사항을 확인해야 하며, 민감한 작업이나 공식 기록은 별도의 검증 수단으로 확인해야 합니다."
+        "숫자가 13자리면 무조건 밀리초인가요?",
+        "아니다. 자릿수는 참고가 될 수 있지만 데이터 제공자의 시간 단위 명세를 먼저 확인해야 한다. 단위를 바꿔 결과를 비교하는 것도 도움이 된다."
       ]
     ]
   },
   "en": {
     "title": "Convert Unix Timestamps to UTC and Local Time Without Unit Errors",
-    "description": "Learn to distinguish Unix seconds from milliseconds and inspect UTC and device-local dates.",
-    "problem": "When you encounter a numeric time value in an API or server log, first determine whether it represents seconds or milliseconds. Using the wrong unit can produce a completely different date.",
+    "description": "A numeric timestamp in a log or API needs a documented unit: seconds or milliseconds. Digit length alone is not a reliable way to determine the unit.",
+    "problem": "A numeric timestamp in a log or API needs a documented unit: seconds or milliseconds. Digit length alone is not a reliable way to determine the unit.",
     "steps": [
       [
-        "Check the original format and requirements first",
-        "Confirm the allowed characters, length, units or source format before entering anything. Using the wrong assumptions can produce a plausible but unusable result."
+        "Identify the input and expected behavior",
+        "A numeric timestamp in a log or API needs a documented unit: seconds or milliseconds. Digit length alone is not a reliable way to determine the unit."
       ],
       [
-        "Run the operation locally in the browser",
-        "Enter the input, select the appropriate options, and run the tool. If an error appears, inspect the original input and settings rather than trusting a partial result."
+        "Try this specific input and inspect the result",
+        "Enter 0 with seconds selected and convert. UTC displays 1970-01-01T00:00:00.000Z; the local display depends on your device time zone."
       ],
       [
-        "Verify the output before using it elsewhere",
-        "Compare the output with the original requirements. Avoid sharing sensitive values or leaving them on public screens, and use an independent verification method for important tasks."
+        "Check the result against your intended destination",
+        "Only integer inputs are supported, within the browser Date range. Device-local output follows the time-zone setting, so retain UTC for official records."
       ]
     ],
-    "alternative": "A dedicated password manager or a programming language's standard date-time library may be more appropriate for automated workflows. Cross-check important results with a separate trusted method.",
+    "alternative": "Use JavaScript Date or an operating-system date utility to cross-check. Preserve the original numeric timestamp, unit and UTC value when reconciling logs.",
     "toolIntro": "ABREDA Unix Timestamp Converter displays seconds or milliseconds as UTC and device-local dates.",
-    "limits": "Local time is calculated using the browser device time zone. For audits or legal records, preserve the original UTC timestamp and verify the server time-zone configuration.",
+    "limits": "Only integer inputs are supported, within the browser Date range. Device-local output follows the time-zone setting, so retain UTC for official records.",
     "faq": [
       [
-        "Does using this browser tool guarantee security or correctness?",
-        "No. You must confirm the original requirements and verify any important result independently before using it in a production or sensitive workflow."
+        "Does a 13-digit timestamp always represent milliseconds?",
+        "No. Digit length is a clue but not a guarantee. Consult the producer's unit specification and compare conversion results with a known event."
       ]
     ]
   },

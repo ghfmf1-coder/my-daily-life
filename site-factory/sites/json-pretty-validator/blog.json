@@ -6,57 +6,57 @@
   "status": "reviewed",
   "ko": {
     "title": "JSON 문법 오류를 확인하고 가독성 있게 정리하는 법",
-    "description": "JSON 정리·검증기의 실제 사용 방법과 주의할 점을 단계별로 정리했습니다.",
-    "problem": "JSON 형식 오류를 확인하고 들여쓰기를 정리합니다. JSON에 비밀키가 포함되어 있다면 공유하지 마세요. 중요한 문서를 수정하기 전에는 반드시 원본을 따로 보관해야 변경 내용을 되돌릴 수 있습니다.",
+    "description": "API 응답이나 설정 파일의 JSON이 파싱되지 않을 때 쉼표와 큰따옴표, 중괄호를 확인한다. 문법 검사는 데이터의 업무상 타당성과 별개다.",
+    "problem": "API 응답이나 설정 파일의 JSON이 파싱되지 않을 때 쉼표와 큰따옴표, 중괄호를 확인한다. 문법 검사는 데이터의 업무상 타당성과 별개다.",
     "steps": [
       [
-        "작업 전 원본 텍스트를 복사해 두세요",
-        "변환을 시작하기 전에 원본을 따로 저장하세요. 잘못 삭제된 줄이나 변경된 문자를 비교하고 되돌릴 수 있도록 준비하는 단계입니다."
+        "처리하려는 값과 기준을 먼저 확인하기",
+        "API 응답이나 설정 파일의 JSON이 파싱되지 않을 때 쉼표와 큰따옴표, 중괄호를 확인한다. 문법 검사는 데이터의 업무상 타당성과 별개다."
       ],
       [
-        "목적에 맞는 기능을 선택하세요",
-        "입력창에 텍스트를 붙여넣고 필요한 기능을 선택하세요. 입력 형식이 지원되는지 확인하고 변환 결과를 확인하세요."
+        "입력 예시를 사용해 결과 직접 확인하기",
+        "{\"name\":\"Kim\",\"active\":true}를 입력하면 두 칸 들여쓰기로 정리된다. 마지막 속성 뒤에 쉼표를 넣으면 JSON 오류가 표시된다."
       ],
       [
-        "특수문자와 예외를 확인하세요",
-        "빈 줄, 특수문자, 한글 및 영문 혼합 데이터가 있는 경우 변환 후 원본과 비교하세요. 중요한 작업에서는 독립적인 방법으로 다시 검증하세요."
+        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "같은 키가 반복되면 마지막 값만 남을 수 있고 큰 정수는 자바스크립트 숫자 정밀도의 영향을 받는다. 비밀키나 토큰은 공유하지 않는다."
       ]
     ],
-    "alternative": "같은 작업은 텍스트 편집기나 프로그래밍 언어의 표준 라이브러리로도 수행할 수 있습니다. 반복 작업에서는 입력과 출력의 예시를 보관하세요.",
+    "alternative": "코드 편집기의 JSON 오류 위치 표시를 활용하거나 Node.js의 JSON.parse로 검사한다. 허용되는 필드와 타입은 별도 스키마로 검증한다.",
     "toolIntro": "아브레다 JSON 정리·검증기는 입력한 텍스트를 서버로 전송하지 않고 브라우저에서 처리하는 도구입니다.",
-    "limits": "이 도구는 의미나 모든 파일 형식을 검증하지 않습니다. 언어별 표기 규칙과 다른 프로그램에서의 호환성은 별도로 확인해야 합니다.",
+    "limits": "같은 키가 반복되면 마지막 값만 남을 수 있고 큰 정수는 자바스크립트 숫자 정밀도의 영향을 받는다. 비밀키나 토큰은 공유하지 않는다.",
     "faq": [
       [
-        "결과를 검토하지 않고 그대로 사용해도 되나요?",
-        "아니요. 선택한 변환 기능만 실행하므로 다른 서비스나 문서에서 요구하는 형식까지 보장하지 않습니다. 결과를 반드시 확인하세요."
+        "정리된 JSON이라면 API에서 반드시 사용할 수 있나요?",
+        "아니다. JSON 문법을 통과하더라도 API가 요구하는 필드와 타입이 다르면 거부될 수 있으므로 해당 API 스키마를 확인해야 한다."
       ]
     ]
   },
   "en": {
     "title": "How to validate and format JSON without sharing secrets",
-    "description": "A practical guide to json formatter & validator, with browser-only steps and limitations explained clearly.",
-    "problem": "Check JSON syntax and format indentation without uploading data. Never share secrets contained in JSON. Before applying changes to important documents, keep the original input so you can reverse mistakes.",
+    "description": "When an API payload or configuration fails to parse, inspect its commas, double quotes and braces. Syntax validity is separate from schema validation.",
+    "problem": "When an API payload or configuration fails to parse, inspect its commas, double quotes and braces. Syntax validity is separate from schema validation.",
     "steps": [
       [
-        "Keep a copy of the original text",
-        "Copy the original data before processing. This allows you to compare results, recover removed lines, and detect any unexpected formatting changes."
+        "Identify the input and expected behavior",
+        "When an API payload or configuration fails to parse, inspect its commas, double quotes and braces. Syntax validity is separate from schema validation."
       ],
       [
-        "Choose the appropriate operation",
-        "Paste your input into the tool and select the operation that matches your actual task. Check that the input format is supported before running it."
+        "Try this specific input and inspect the result",
+        "Run the tool on {\"name\":\"Kim\",\"active\":true}; output uses two-space indentation. Add a trailing comma after the last property and the parser reports an error."
       ],
       [
-        "Review the output carefully",
-        "Compare the resulting text against the original and verify edge cases such as empty lines, special characters, language-specific text, or missing values."
+        "Check the result against your intended destination",
+        "Repeated object keys may be collapsed to their last value and very large integers can lose JavaScript precision. Never share secret tokens when asking for help."
       ]
     ],
-    "alternative": "You can also use a trusted text editor or a programming language's standard library to perform the same operation. For automated workflows, preserve a test fixture and compare outputs.",
+    "alternative": "Use editor diagnostics or Node.js JSON.parse to locate a syntax error. Validate required fields and types against the actual API schema separately.",
     "toolIntro": "ABREDA JSON Formatter & Validator performs this task directly in the browser without sending your text to a server.",
-    "limits": "This utility is not a semantic validator and does not guarantee suitability for every language, file format, or downstream system. Always review results before publishing.",
+    "limits": "Repeated object keys may be collapsed to their last value and very large integers can lose JavaScript precision. Never share secret tokens when asking for help.",
     "faq": [
       [
-        "Can I rely on the output without checking it?",
-        "No. This tool only performs the selected transformation. It cannot confirm that the output meets the requirements of another application or document."
+        "Does valid JSON guarantee an API accepts my request?",
+        "No. A valid object can still contain missing fields, incorrect types or invalid business values. Check the API schema and requirements."
       ]
     ]
   },

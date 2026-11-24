@@ -6,57 +6,57 @@
   "status": "reviewed",
   "ko": {
     "title": "URL 쿼리값 인코딩과 전체 주소 인코딩의 차이",
-    "description": "URL 인코딩·디코딩의 실제 사용 방법과 주의할 점을 단계별로 정리했습니다.",
-    "problem": "주소의 쿼리 값에 포함된 특수문자를 인코딩하거나 디코딩합니다. 전체 URL과 구성 요소는 다릅니다. 중요한 문서를 수정하기 전에는 반드시 원본을 따로 보관해야 변경 내용을 되돌릴 수 있습니다.",
+    "description": "검색어와 쿼리 값에 공백, 한글, 앰퍼샌드가 들어가면 주소 구문과 데이터가 섞일 수 있다. 전체 주소가 아니라 개별 구성 요소를 인코딩한다.",
+    "problem": "검색어와 쿼리 값에 공백, 한글, 앰퍼샌드가 들어가면 주소 구문과 데이터가 섞일 수 있다. 전체 주소가 아니라 개별 구성 요소를 인코딩한다.",
     "steps": [
       [
-        "작업 전 원본 텍스트를 복사해 두세요",
-        "변환을 시작하기 전에 원본을 따로 저장하세요. 잘못 삭제된 줄이나 변경된 문자를 비교하고 되돌릴 수 있도록 준비하는 단계입니다."
+        "처리하려는 값과 기준을 먼저 확인하기",
+        "검색어와 쿼리 값에 공백, 한글, 앰퍼샌드가 들어가면 주소 구문과 데이터가 섞일 수 있다. 전체 주소가 아니라 개별 구성 요소를 인코딩한다."
       ],
       [
-        "목적에 맞는 기능을 선택하세요",
-        "입력창에 텍스트를 붙여넣고 필요한 기능을 선택하세요. 입력 형식이 지원되는지 확인하고 변환 결과를 확인하세요."
+        "입력 예시를 사용해 결과 직접 확인하기",
+        "'a b&c'를 인코딩하면 a%20b%26c가 된다. 이 문자열을 검색어 값으로 사용하고 디코딩을 실행해 원문이 돌아오는지 확인한다."
       ],
       [
-        "특수문자와 예외를 확인하세요",
-        "빈 줄, 특수문자, 한글 및 영문 혼합 데이터가 있는 경우 변환 후 원본과 비교하세요. 중요한 작업에서는 독립적인 방법으로 다시 검증하세요."
+        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "전체 주소를 인코딩하면 주소 구분자까지 변환된다. decodeURIComponent는 플러스 기호를 공백으로 바꾸지 않으며 잘못된 퍼센트 표기에서 오류가 난다."
       ]
     ],
-    "alternative": "같은 작업은 텍스트 편집기나 프로그래밍 언어의 표준 라이브러리로도 수행할 수 있습니다. 반복 작업에서는 입력과 출력의 예시를 보관하세요.",
+    "alternative": "개발 환경에서는 URLSearchParams로 쿼리 문자열을 구성할 수 있다. 이미 인코딩된 값은 다시 변환하기 전에 퍼센트 표기를 확인한다.",
     "toolIntro": "아브레다 URL 인코딩·디코딩는 입력한 텍스트를 서버로 전송하지 않고 브라우저에서 처리하는 도구입니다.",
-    "limits": "이 도구는 의미나 모든 파일 형식을 검증하지 않습니다. 언어별 표기 규칙과 다른 프로그램에서의 호환성은 별도로 확인해야 합니다.",
+    "limits": "전체 주소를 인코딩하면 주소 구분자까지 변환된다. decodeURIComponent는 플러스 기호를 공백으로 바꾸지 않으며 잘못된 퍼센트 표기에서 오류가 난다.",
     "faq": [
       [
-        "결과를 검토하지 않고 그대로 사용해도 되나요?",
-        "아니요. 선택한 변환 기능만 실행하므로 다른 서비스나 문서에서 요구하는 형식까지 보장하지 않습니다. 결과를 반드시 확인하세요."
+        "이미 %20으로 바뀐 문자열을 다시 인코딩해도 되나요?",
+        "다시 인코딩하면 퍼센트 기호가 %25로 바뀌어 이중 인코딩될 수 있다. 원본 값인지 기존 인코딩 결과인지 먼저 구분한다."
       ]
     ]
   },
   "en": {
     "title": "The difference between encoding a URL and its query values",
-    "description": "A practical guide to url encoder & decoder, with browser-only steps and limitations explained clearly.",
-    "problem": "Encode or decode a URL component. Encoding an entire URL as one component can break its structure. Before applying changes to important documents, keep the original input so you can reverse mistakes.",
+    "description": "Spaces, non-ASCII characters and ampersands in a query value can be confused with URL syntax. Encode the component, not the whole address.",
+    "problem": "Spaces, non-ASCII characters and ampersands in a query value can be confused with URL syntax. Encode the component, not the whole address.",
     "steps": [
       [
-        "Keep a copy of the original text",
-        "Copy the original data before processing. This allows you to compare results, recover removed lines, and detect any unexpected formatting changes."
+        "Identify the input and expected behavior",
+        "Spaces, non-ASCII characters and ampersands in a query value can be confused with URL syntax. Encode the component, not the whole address."
       ],
       [
-        "Choose the appropriate operation",
-        "Paste your input into the tool and select the operation that matches your actual task. Check that the input format is supported before running it."
+        "Try this specific input and inspect the result",
+        "Encode 'a b&c' to get a%20b%26c. Use it as the parameter value and decode it to check that the original text is recovered."
       ],
       [
-        "Review the output carefully",
-        "Compare the resulting text against the original and verify edge cases such as empty lines, special characters, language-specific text, or missing values."
+        "Check the result against your intended destination",
+        "Encoding a complete address also escapes its delimiters. decodeURIComponent does not turn plus signs into spaces and rejects malformed percent escapes."
       ]
     ],
-    "alternative": "You can also use a trusted text editor or a programming language's standard library to perform the same operation. For automated workflows, preserve a test fixture and compare outputs.",
+    "alternative": "In application code, use URLSearchParams when assembling query parameters. Check for existing percent escapes before encoding a value again.",
     "toolIntro": "ABREDA URL Encoder & Decoder performs this task directly in the browser without sending your text to a server.",
-    "limits": "This utility is not a semantic validator and does not guarantee suitability for every language, file format, or downstream system. Always review results before publishing.",
+    "limits": "Encoding a complete address also escapes its delimiters. decodeURIComponent does not turn plus signs into spaces and rejects malformed percent escapes.",
     "faq": [
       [
-        "Can I rely on the output without checking it?",
-        "No. This tool only performs the selected transformation. It cannot confirm that the output meets the requirements of another application or document."
+        "Should I encode a value that already contains %20?",
+        "Encoding again escapes the percent sign as %25, which can create double encoding. Determine whether the input is raw text or an already encoded value."
       ]
     ]
   },

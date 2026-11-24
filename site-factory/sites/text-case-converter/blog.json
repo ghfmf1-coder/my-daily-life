@@ -6,57 +6,57 @@
   "status": "reviewed",
   "ko": {
     "title": "영문 대소문자 변환에서 고유명사를 검토하는 방법",
-    "description": "대소문자 변환기의 실제 사용 방법과 주의할 점을 단계별로 정리했습니다.",
-    "problem": "입력한 텍스트의 대소문자를 변환하고 복사할 수 있습니다. 언어별 표기 관습과 고유명사는 변환 후 직접 확인하세요. 중요한 문서를 수정하기 전에는 반드시 원본을 따로 보관해야 변경 내용을 되돌릴 수 있습니다.",
+    "description": "영문 상품명이나 제목의 대소문자를 통일할 때 수동 수정 대신 문자 변환을 사용할 수 있다. 이 작업은 맞춤법이나 문장 스타일 편집과 다르다.",
+    "problem": "영문 상품명이나 제목의 대소문자를 통일할 때 수동 수정 대신 문자 변환을 사용할 수 있다. 이 작업은 맞춤법이나 문장 스타일 편집과 다르다.",
     "steps": [
       [
-        "작업 전 원본 텍스트를 복사해 두세요",
-        "변환을 시작하기 전에 원본을 따로 저장하세요. 잘못 삭제된 줄이나 변경된 문자를 비교하고 되돌릴 수 있도록 준비하는 단계입니다."
+        "처리하려는 값과 기준을 먼저 확인하기",
+        "영문 상품명이나 제목의 대소문자를 통일할 때 수동 수정 대신 문자 변환을 사용할 수 있다. 이 작업은 맞춤법이나 문장 스타일 편집과 다르다."
       ],
       [
-        "목적에 맞는 기능을 선택하세요",
-        "입력창에 텍스트를 붙여넣고 필요한 기능을 선택하세요. 입력 형식이 지원되는지 확인하고 변환 결과를 확인하세요."
+        "입력 예시를 사용해 결과 직접 확인하기",
+        "'hello WORLD'를 입력한다. 대문자는 HELLO WORLD, 소문자는 hello world, 첫 글자 변환은 Hello World로 표시된다."
       ],
       [
-        "특수문자와 예외를 확인하세요",
-        "빈 줄, 특수문자, 한글 및 영문 혼합 데이터가 있는 경우 변환 후 원본과 비교하세요. 중요한 작업에서는 독립적인 방법으로 다시 검증하세요."
+        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "첫 글자 변환은 영문 위주의 단어 경계를 따른다. NASA 같은 약어, iPhone 같은 브랜드 표기나 언어별 대문자 규칙은 자동으로 보존하지 않는다."
       ]
     ],
-    "alternative": "같은 작업은 텍스트 편집기나 프로그래밍 언어의 표준 라이브러리로도 수행할 수 있습니다. 반복 작업에서는 입력과 출력의 예시를 보관하세요.",
+    "alternative": "스프레드시트의 UPPER, LOWER, PROPER 함수로 열 전체를 처리할 수 있다. 상품 코드나 고유명사는 변환 전 사본과 비교한다.",
     "toolIntro": "아브레다 대소문자 변환기는 입력한 텍스트를 서버로 전송하지 않고 브라우저에서 처리하는 도구입니다.",
-    "limits": "이 도구는 의미나 모든 파일 형식을 검증하지 않습니다. 언어별 표기 규칙과 다른 프로그램에서의 호환성은 별도로 확인해야 합니다.",
+    "limits": "첫 글자 변환은 영문 위주의 단어 경계를 따른다. NASA 같은 약어, iPhone 같은 브랜드 표기나 언어별 대문자 규칙은 자동으로 보존하지 않는다.",
     "faq": [
       [
-        "결과를 검토하지 않고 그대로 사용해도 되나요?",
-        "아니요. 선택한 변환 기능만 실행하므로 다른 서비스나 문서에서 요구하는 형식까지 보장하지 않습니다. 결과를 반드시 확인하세요."
+        "고유 브랜드명도 올바르게 자동 보정되나요?",
+        "아니다. 문자 형태만 변환하므로 iPhone 같은 고유 표기와 약어가 달라질 수 있다. 브랜드 목록은 원본과 별도로 비교해야 한다."
       ]
     ]
   },
   "en": {
     "title": "Reviewing proper nouns after changing text case",
-    "description": "A practical guide to text case converter, with browser-only steps and limitations explained clearly.",
-    "problem": "Convert text case locally. Proper nouns and language-specific capitalization should be checked manually. Before applying changes to important documents, keep the original input so you can reverse mistakes.",
+    "description": "Case conversion helps normalize English headings or product lists. It changes characters rather than applying an editorial style guide or correcting spelling.",
+    "problem": "Case conversion helps normalize English headings or product lists. It changes characters rather than applying an editorial style guide or correcting spelling.",
     "steps": [
       [
-        "Keep a copy of the original text",
-        "Copy the original data before processing. This allows you to compare results, recover removed lines, and detect any unexpected formatting changes."
+        "Identify the input and expected behavior",
+        "Case conversion helps normalize English headings or product lists. It changes characters rather than applying an editorial style guide or correcting spelling."
       ],
       [
-        "Choose the appropriate operation",
-        "Paste your input into the tool and select the operation that matches your actual task. Check that the input format is supported before running it."
+        "Try this specific input and inspect the result",
+        "Enter 'hello WORLD'. Uppercase gives HELLO WORLD, lowercase gives hello world, and title-style conversion gives Hello World."
       ],
       [
-        "Review the output carefully",
-        "Compare the resulting text against the original and verify edge cases such as empty lines, special characters, language-specific text, or missing values."
+        "Check the result against your intended destination",
+        "Title-style conversion relies on word boundaries. Acronyms such as NASA and brands such as iPhone can lose their intended form."
       ]
     ],
-    "alternative": "You can also use a trusted text editor or a programming language's standard library to perform the same operation. For automated workflows, preserve a test fixture and compare outputs.",
+    "alternative": "For spreadsheet columns, use UPPER, LOWER or PROPER. Compare product identifiers and proper names against the original before replacing a column.",
     "toolIntro": "ABREDA Text Case Converter performs this task directly in the browser without sending your text to a server.",
-    "limits": "This utility is not a semantic validator and does not guarantee suitability for every language, file format, or downstream system. Always review results before publishing.",
+    "limits": "Title-style conversion relies on word boundaries. Acronyms such as NASA and brands such as iPhone can lose their intended form.",
     "faq": [
       [
-        "Can I rely on the output without checking it?",
-        "No. This tool only performs the selected transformation. It cannot confirm that the output meets the requirements of another application or document."
+        "Will this preserve the spelling of special brand names?",
+        "No. It transforms character case without a brand dictionary, so verify names and acronyms separately before publishing changed text."
       ]
     ]
   },
