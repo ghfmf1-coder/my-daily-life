@@ -10,15 +10,15 @@
     "problem": "글자 수는 공백과 줄바꿈을 포함한 유니코드 코드 포인트 기준이고, 단어 수는 공백으로 구분한 묶음, 줄 수는 실제 개행 기준이다.",
     "steps": [
       [
-        "처리하려는 값과 기준을 먼저 확인하기",
+        "공백과 줄바꿈을 세는 기준 알아보기",
         "글자 수는 공백과 줄바꿈을 포함한 유니코드 코드 포인트 기준이고, 단어 수는 공백으로 구분한 묶음, 줄 수는 실제 개행 기준이다."
       ],
       [
-        "입력 예시를 사용해 결과 직접 확인하기",
+        "짧은 한글 문장으로 계산 결과 확인하기",
         "'안녕 세상'을 입력하고 실행하면 글자 5, 단어 2, 줄 1로 표시된다. 공백을 포함한 글자 수이므로 제출 사이트의 계산 기준과 비교한다."
       ],
       [
-        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "이모지와 자동 줄바꿈의 차이 구분하기",
         "한글 띄어쓰기 단어 수는 형태소 수와 다르다. 결합 이모지는 여러 코드 포인트로 계산되며 화면에서 자동 줄바꿈된 줄은 포함되지 않는다."
       ]
     ],
@@ -38,15 +38,15 @@
     "problem": "The counter includes spaces and line breaks in its Unicode code-point count, splits words on whitespace and counts explicit newline characters.",
     "steps": [
       [
-        "Identify the input and expected behavior",
+        "Understand whitespace and newline counting",
         "The counter includes spaces and line breaks in its Unicode code-point count, splits words on whitespace and counts explicit newline characters."
       ],
       [
-        "Try this specific input and inspect the result",
+        "Check a short sample against the counter",
         "Paste 'hello world' and run the counter. It reports 11 characters, 2 words and 1 line; the space counts as a character."
       ],
       [
-        "Check the result against your intended destination",
+        "Distinguish code points from visual characters",
         "Combined emoji can contain multiple code points; whitespace-based counts are not linguistic tokenization. Visual wrapping is not an explicit newline."
       ]
     ],

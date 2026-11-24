@@ -10,15 +10,15 @@
     "problem": "주소 목록이나 태그를 한 줄에 하나씩 정리할 때 순서 정렬과 중복 제거는 서로 다른 작업이다. 목적에 맞춰 두 기능을 따로 실행한다.",
     "steps": [
       [
-        "처리하려는 값과 기준을 먼저 확인하기",
+        "정렬과 중복 제거의 차이 구분하기",
         "주소 목록이나 태그를 한 줄에 하나씩 정리할 때 순서 정렬과 중복 제거는 서로 다른 작업이다. 목적에 맞춰 두 기능을 따로 실행한다."
       ],
       [
-        "입력 예시를 사용해 결과 직접 확인하기",
+        "반복된 세 줄로 두 기능 비교하기",
         "b, a, b를 각각 다른 줄에 넣는다. 중복 제거는 b와 a를 처음 나온 순서로 남기며 정렬은 a, b, b를 줄 단위로 나열한다."
       ],
       [
-        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "공백 대소문자와 숫자 순서 확인하기",
         "앞뒤 공백과 대소문자, 빈 줄은 문자열 비교에 영향을 준다. 정렬 순서는 브라우저 로케일에 의존하며 중복 제거는 대소문자를 구분한다."
       ]
     ],
@@ -38,15 +38,15 @@
     "problem": "Sorting and deduplication are distinct operations when cleaning one-item-per-line tags or address lists. Choose the operation that matches the task.",
     "steps": [
       [
-        "Identify the input and expected behavior",
+        "Distinguish sorting from deduplication",
         "Sorting and deduplication are distinct operations when cleaning one-item-per-line tags or address lists. Choose the operation that matches the task."
       ],
       [
-        "Try this specific input and inspect the result",
+        "Compare both operations on three lines",
         "Enter b, a, b on separate lines. Deduplication keeps b then a in first-seen order, while sorting returns a, b, b on separate lines."
       ],
       [
-        "Check the result against your intended destination",
+        "Check case whitespace and sort order",
         "Exact duplicate matching preserves case and spaces, including empty lines. Sort order uses the browser's locale comparison and may not be numeric."
       ]
     ],

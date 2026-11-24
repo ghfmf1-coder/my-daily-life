@@ -10,15 +10,15 @@
     "problem": "README나 메모를 작성할 때 제목과 강조, 목록이 어떻게 보이는지 확인할 수 있다. 이 도구는 간단한 마크다운 문법의 일부를 미리 보여준다.",
     "steps": [
       [
-        "처리하려는 값과 기준을 먼저 확인하기",
+        "간단한 마크다운 미리보기 범위 확인하기",
         "README나 메모를 작성할 때 제목과 강조, 목록이 어떻게 보이는지 확인할 수 있다. 이 도구는 간단한 마크다운 문법의 일부를 미리 보여준다."
       ],
       [
-        "입력 예시를 사용해 결과 직접 확인하기",
+        "제목 강조 목록을 직접 입력해 보기",
         "'# 제목', '**강조**', '- 항목'을 각각 한 줄에 입력하고 실행한다. 미리보기에서 제목과 굵은 글씨, 글머리 기호를 확인한다."
       ],
       [
-        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "실제 게시 서비스의 렌더링과 대조하기",
         "전체 CommonMark 또는 GitHub Flavored Markdown 렌더러가 아니다. 표와 링크, 코드 블록은 다르게 보일 수 있으며 복사는 렌더링된 텍스트 기준이다."
       ]
     ],
@@ -38,15 +38,15 @@
     "problem": "Preview basic README headings, emphasis and list items before publishing a short note. This utility implements a limited Markdown subset, not a complete renderer.",
     "steps": [
       [
-        "Identify the input and expected behavior",
+        "Identify the supported Markdown syntax",
         "Preview basic README headings, emphasis and list items before publishing a short note. This utility implements a limited Markdown subset, not a complete renderer."
       ],
       [
-        "Try this specific input and inspect the result",
+        "Preview a heading emphasis and bullet",
         "Enter '# Heading', '**bold**' and '- item' on separate lines. Run the preview and inspect the heading, emphasized text and bullet."
       ],
       [
-        "Check the result against your intended destination",
+        "Check unsupported syntax at the destination",
         "This is not a complete CommonMark or GitHub Flavored Markdown renderer. Links, tables and code fences may not render as expected; copying returns visible text."
       ]
     ],

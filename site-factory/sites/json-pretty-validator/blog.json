@@ -10,15 +10,15 @@
     "problem": "API 응답이나 설정 파일의 JSON이 파싱되지 않을 때 쉼표와 큰따옴표, 중괄호를 확인한다. 문법 검사는 데이터의 업무상 타당성과 별개다.",
     "steps": [
       [
-        "처리하려는 값과 기준을 먼저 확인하기",
+        "JSON 문법 오류가 발생하는 지점 살펴보기",
         "API 응답이나 설정 파일의 JSON이 파싱되지 않을 때 쉼표와 큰따옴표, 중괄호를 확인한다. 문법 검사는 데이터의 업무상 타당성과 별개다."
       ],
       [
-        "입력 예시를 사용해 결과 직접 확인하기",
+        "정상 객체와 마지막 쉼표 오류 비교하기",
         "{\"name\":\"Kim\",\"active\":true}를 입력하면 두 칸 들여쓰기로 정리된다. 마지막 속성 뒤에 쉼표를 넣으면 JSON 오류가 표시된다."
       ],
       [
-        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "중복 키와 큰 정수의 처리 한계 확인하기",
         "같은 키가 반복되면 마지막 값만 남을 수 있고 큰 정수는 자바스크립트 숫자 정밀도의 영향을 받는다. 비밀키나 토큰은 공유하지 않는다."
       ]
     ],
@@ -38,15 +38,15 @@
     "problem": "When an API payload or configuration fails to parse, inspect its commas, double quotes and braces. Syntax validity is separate from schema validation.",
     "steps": [
       [
-        "Identify the input and expected behavior",
+        "Identify JSON parsing errors",
         "When an API payload or configuration fails to parse, inspect its commas, double quotes and braces. Syntax validity is separate from schema validation."
       ],
       [
-        "Try this specific input and inspect the result",
+        "Compare valid JSON with a trailing comma",
         "Run the tool on {\"name\":\"Kim\",\"active\":true}; output uses two-space indentation. Add a trailing comma after the last property and the parser reports an error."
       ],
       [
-        "Check the result against your intended destination",
+        "Watch for duplicate keys and numeric precision",
         "Repeated object keys may be collapsed to their last value and very large integers can lose JavaScript precision. Never share secret tokens when asking for help."
       ]
     ],

@@ -10,15 +10,15 @@
     "problem": "공지문이나 원고의 수정 전후를 확인할 때 줄 번호별로 문자열을 대조하면 어느 위치의 문장이 변경되었는지 빠르게 찾을 수 있다.",
     "steps": [
       [
-        "처리하려는 값과 기준을 먼저 확인하기",
+        "비교할 두 문서의 줄 순서 맞추기",
         "공지문이나 원고의 수정 전후를 확인할 때 줄 번호별로 문자열을 대조하면 어느 위치의 문장이 변경되었는지 빠르게 찾을 수 있다."
       ],
       [
-        "입력 예시를 사용해 결과 직접 확인하기",
+        "한 줄만 달라진 예시 비교하기",
         "첫 입력에 A와 B를 두 줄로 넣고 두 번째에는 A와 C를 두 줄로 넣는다. 실행하면 2번 줄에 기존 B와 변경 C가 표시된다."
       ],
       [
-        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "삽입과 삭제는 별도 비교 도구로 확인하기",
         "앞부분에 한 줄을 삽입하면 뒤의 여러 줄이 변경으로 표시될 수 있다. 줄 위치 비교만 수행하며 맞춤법이나 문장 의미는 판단하지 않는다."
       ]
     ],
@@ -38,15 +38,15 @@
     "problem": "A positional line comparison is useful when versions of a notice or configuration retain the same line order. It identifies exact changes at each line number.",
     "steps": [
       [
-        "Identify the input and expected behavior",
+        "Align the two versions by line position",
         "A positional line comparison is useful when versions of a notice or configuration retain the same line order. It identifies exact changes at each line number."
       ],
       [
-        "Try this specific input and inspect the result",
+        "Compare a single changed line",
         "Put A and B on separate lines in the first field and A and C in the second. Run the comparison; line 2 shows old B and new C."
       ],
       [
-        "Check the result against your intended destination",
+        "Recognize the effect of inserted lines",
         "This is positional comparison rather than an alignment-based diff. An inserted line can make subsequent lines appear changed; meaning and grammar are not checked."
       ]
     ],

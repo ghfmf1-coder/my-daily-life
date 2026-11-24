@@ -10,15 +10,15 @@
     "problem": "영문 상품명이나 제목의 대소문자를 통일할 때 수동 수정 대신 문자 변환을 사용할 수 있다. 이 작업은 맞춤법이나 문장 스타일 편집과 다르다.",
     "steps": [
       [
-        "처리하려는 값과 기준을 먼저 확인하기",
+        "영문 대소문자 변환 목적 정하기",
         "영문 상품명이나 제목의 대소문자를 통일할 때 수동 수정 대신 문자 변환을 사용할 수 있다. 이 작업은 맞춤법이나 문장 스타일 편집과 다르다."
       ],
       [
-        "입력 예시를 사용해 결과 직접 확인하기",
+        "세 가지 영문 변환 결과 비교하기",
         "'hello WORLD'를 입력한다. 대문자는 HELLO WORLD, 소문자는 hello world, 첫 글자 변환은 Hello World로 표시된다."
       ],
       [
-        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "약어와 고유 브랜드 표기 확인하기",
         "첫 글자 변환은 영문 위주의 단어 경계를 따른다. NASA 같은 약어, iPhone 같은 브랜드 표기나 언어별 대문자 규칙은 자동으로 보존하지 않는다."
       ]
     ],
@@ -38,15 +38,15 @@
     "problem": "Case conversion helps normalize English headings or product lists. It changes characters rather than applying an editorial style guide or correcting spelling.",
     "steps": [
       [
-        "Identify the input and expected behavior",
+        "Choose the intended English casing",
         "Case conversion helps normalize English headings or product lists. It changes characters rather than applying an editorial style guide or correcting spelling."
       ],
       [
-        "Try this specific input and inspect the result",
+        "Compare uppercase lowercase and title-style output",
         "Enter 'hello WORLD'. Uppercase gives HELLO WORLD, lowercase gives hello world, and title-style conversion gives Hello World."
       ],
       [
-        "Check the result against your intended destination",
+        "Review acronyms and brand spelling",
         "Title-style conversion relies on word boundaries. Acronyms such as NASA and brands such as iPhone can lose their intended form."
       ]
     ],

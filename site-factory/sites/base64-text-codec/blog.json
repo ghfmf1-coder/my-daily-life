@@ -10,15 +10,15 @@
     "problem": "API나 로그에서 Base64 문자열을 볼 때 원래 텍스트를 읽거나 전송용 표현으로 변환할 수 있다. Base64는 암호화나 개인정보 보호 수단이 아니다.",
     "steps": [
       [
-        "처리하려는 값과 기준을 먼저 확인하기",
+        "Base64와 암호화의 차이 알아보기",
         "API나 로그에서 Base64 문자열을 볼 때 원래 텍스트를 읽거나 전송용 표현으로 변환할 수 있다. Base64는 암호화나 개인정보 보호 수단이 아니다."
       ],
       [
-        "입력 예시를 사용해 결과 직접 확인하기",
+        "짧은 문자열을 인코딩하고 되돌리기",
         "'hello'를 입력해 인코딩하면 aGVsbG8=가 나온다. 이를 디코딩하면 hello로 돌아온다. 한글은 UTF-8 바이트로 변환해 처리한다."
       ],
       [
-        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "바이너리와 URL-safe 형식의 한계 확인하기",
         "표준 Base64와 UTF-8 텍스트를 처리한다. URL-safe Base64 및 UTF-8이 아닌 바이트는 오류가 날 수 있다. 비밀 정보를 감추는 용도가 아니다."
       ]
     ],
@@ -38,15 +38,15 @@
     "problem": "Base64 represents bytes as printable text for transport. It can help read an encoded API value or prepare a UTF-8 text payload; it is not encryption.",
     "steps": [
       [
-        "Identify the input and expected behavior",
+        "Distinguish encoding from encryption",
         "Base64 represents bytes as printable text for transport. It can help read an encoded API value or prepare a UTF-8 text payload; it is not encryption."
       ],
       [
-        "Try this specific input and inspect the result",
+        "Encode and decode a short sample",
         "Encode 'hello' to obtain aGVsbG8=. Decode that string to recover hello. Non-ASCII text is first converted to UTF-8 bytes."
       ],
       [
-        "Check the result against your intended destination",
+        "Check UTF-8 and variant limitations",
         "The decoder expects standard Base64 and valid UTF-8 text. URL-safe variants or arbitrary binary data may fail. Never treat encoding as secrecy."
       ]
     ],

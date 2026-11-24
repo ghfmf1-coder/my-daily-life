@@ -10,15 +10,15 @@
     "problem": "여러 계정에서 같은 비밀번호를 재사용하면 하나의 유출이 다른 계정에도 영향을 준다. 서비스마다 다른 무작위 비밀번호를 만들어 관리한다.",
     "steps": [
       [
-        "처리하려는 값과 기준을 먼저 확인하기",
+        "계정마다 다른 비밀번호가 필요한 이유",
         "여러 계정에서 같은 비밀번호를 재사용하면 하나의 유출이 다른 계정에도 영향을 준다. 서비스마다 다른 무작위 비밀번호를 만들어 관리한다."
       ],
       [
-        "입력 예시를 사용해 결과 직접 확인하기",
+        "서비스 조건에 맞는 무작위 비밀번호 생성하기",
         "서비스 문자 제한을 확인한 뒤 길이와 대문자, 소문자, 숫자, 기호를 선택해 생성한다. 지원 범위는 8~128자이며 선택한 그룹의 문자가 각각 포함된다."
       ],
       [
-        "실제 사용 목적에 맞는 결과인지 확인하기",
+        "비밀번호 보관과 화면 노출에 주의하기",
         "브라우저의 Web Crypto 난수를 사용하지만 서비스 보안 수준이나 계정 보호 전체를 보장하지는 않는다. 클립보드와 화면 노출도 주의한다."
       ]
     ],
@@ -38,15 +38,15 @@
     "problem": "Reusing a password makes one credential leak relevant to other accounts. Generate a different random password for each service and store it securely.",
     "steps": [
       [
-        "Identify the input and expected behavior",
+        "Identify why credentials should be unique",
         "Reusing a password makes one credential leak relevant to other accounts. Generate a different random password for each service and store it securely."
       ],
       [
-        "Try this specific input and inspect the result",
+        "Generate using the site's character rules",
         "Check the site's character restrictions, choose length and character groups, and generate. The supported length is 8–128 and each selected group is represented."
       ],
       [
-        "Check the result against your intended destination",
+        "Protect generated credentials from exposure",
         "The generator uses browser Web Crypto randomness but cannot guarantee account security. Clipboard exposure and password reuse remain separate risks."
       ]
     ],
