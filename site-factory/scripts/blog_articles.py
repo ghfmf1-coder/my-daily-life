@@ -123,6 +123,31 @@ def load():
         photo_ids.add(photo_id)
         seen.add(slug)
         posts.append({**p,'type':kind,'toolURLs':links,'media':visual})
+    # Editorial policy effective 2026-11-25. Reject copied substantive prose
+    # on newly published articles; legacy articles can be repaired incrementally.
+    def editorial_paragraphs(d):
+        return [d['problem'],d['alternative'],d['limits'],d['toolIntro'],
+                *[s[1] for s in d['steps']], *[q[1] for q in d['faq']]]
+    for lang in ('ko','en'):
+        owners={}
+        for post in posts:
+            for paragraph in editorial_paragraphs(post[lang]):
+                normalized=re.sub(r'\s+',' ',paragraph.strip()).casefold()
+                if len(normalized)>=45:
+                    owners.setdefault(normalized,set()).add(post['slug'])
+        for post in posts:
+            if post['published']<'2026-11-25':
+                continue
+            data=post[lang]
+            for paragraph in editorial_paragraphs(data):
+                normalized=re.sub(r'\s+',' ',paragraph.strip()).casefold()
+                if len(owners.get(normalized,set()))>1:
+                    raise ValueError('Copied editorial paragraph: '+post['slug']+' '+lang)
+            boilerplate=('작업 전 원본 텍스트를 복사해 두세요','목적에 맞는 기능을 선택하세요',
+                         'Keep a copy of the original text','Choose the appropriate operation',
+                         'Identify the input and expected behavior','처리하려는 값과 기준을 먼저 확인하기')
+            if any(h in boilerplate for h,_ in data['steps']):
+                raise ValueError('Generic editorial steps are not allowed: '+post['slug'])
     return sorted(posts,key=lambda p:(p['published'],p['slug']),reverse=True)
 def tags(locale,page_url,title,desc,ko_url,en_url,og_type='article'):
     pairs=[('ko',ko_url),('en',en_url),('x-default',ko_url)]
