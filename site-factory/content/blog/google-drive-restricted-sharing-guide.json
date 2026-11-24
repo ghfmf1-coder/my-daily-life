@@ -25,6 +25,10 @@
       [
         "상위 폴더에서 상속받은 권한도 검사하세요",
         "파일이 속한 폴더 자체가 넓게 공유되어 있다면 파일만 권한을 낮추기 어렵습니다. 민감한 자료는 제한된 새 폴더로 옮겨 공유하고 수신자 화면에서 접근을 시험하세요."
+      ],
+      [
+        "수신자 계정에서 실제 열람 권한 확인하기",
+        "공유 목록에서 정확한 이메일 주소와 역할을 확인하고 일반 액세스가 제한됨인지 점검하세요. 조직 외부 사용자가 열 수 없는 경우에는 관리자의 공유 정책이 적용되는지 확인하고 임의로 전체 공개하지 마세요."
       ]
     ],
     "alternative": "상대방에게 읽기 전용 사본을 별도로 전달하는 방법도 있습니다. 그러나 사본의 보안 수준은 포함된 정보와 전달 경로에 따라 달라집니다.",
@@ -53,6 +57,10 @@
       [
         "Inspect permissions inherited from parent folders",
         "A file inside a broadly shared folder may remain accessible through that folder. Move sensitive material to a separate restricted folder if necessary and test the recipient's actual access."
+      ],
+      [
+        "Verify access for the intended recipient",
+        "Review the exact email address and role, and check whether general access is restricted. If an external recipient cannot open the file, inspect organization sharing policies rather than making the file public."
       ]
     ],
     "alternative": "Sending a purpose-built read-only copy can be appropriate, but consider what information the file itself reveals and how it will be distributed.",
@@ -80,5 +88,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

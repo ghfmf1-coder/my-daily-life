@@ -20,6 +20,10 @@
       [
         "집필 전에는 미회수 항목만 빠르게 점검하세요",
         "다음 회차 초고를 쓰기 전에 아직 회수되지 않은 단서를 확인하세요. 불필요하게 모든 복선을 회수하지 말고 독자의 이해에 필요한 항목과 의도적 미스터리를 구분해 관리하세요."
+      ],
+      [
+        "한 복선의 등장 회차와 회수 상태 기록하기",
+        "예를 들어 첫 장에서 발견한 낡은 열쇠가 후반부 사건과 연결된다면 첫 등장 회차, 관련 인물, 독자가 아는 사실, 회수 예정 장면을 구분해 적습니다. 집필 방향이 바뀌면 예정 상태를 수정합니다."
       ]
     ],
     "alternative": "종이 노트나 스프레드시트에 회차·인물·복선 세 개의 시트를 만들어 연결할 수도 있습니다. 적은 분량이라면 이 방식이 더 단순합니다.",
@@ -48,6 +52,10 @@
       [
         "Review unresolved threads before drafting the next installment",
         "Before writing, scan unresolved clues and decide which matter to the upcoming scene. Keep intentional mysteries separate from forgotten continuity errors, then revise the register as the plot evolves."
+      ],
+      [
+        "Record the first appearance and resolution of one clue",
+        "For example, if an old key introduced early becomes relevant later, record its first appearance, related character, what the reader knows and the planned resolution. Update the plan if the story changes."
       ]
     ],
     "alternative": "You can also use a notebook or a spreadsheet with separate tabs for episodes, characters and clues. For a short series, that may be easier to maintain.",
@@ -75,5 +83,6 @@
       }
     },
     "category": "daily"
-  }
+  },
+  "updated": "2026-11-25"
 }

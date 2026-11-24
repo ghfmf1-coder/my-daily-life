@@ -6,12 +6,12 @@
   "status": "reviewed",
   "ko": {
     "title": "안전한 무작위 비밀번호 만드는 법: 길이·문자·보관까지",
-    "description": "여러 계정에서 같은 비밀번호를 재사용하면 하나의 유출이 다른 계정에도 영향을 준다. 서비스마다 다른 무작위 비밀번호를 만들어 관리한다.",
+    "description": "무작위 비밀번호의 길이와 문자 종류를 고르고 계정별 재사용을 피하는 방법을 설명합니다.",
     "problem": "여러 계정에서 같은 비밀번호를 재사용하면 하나의 유출이 다른 계정에도 영향을 준다. 서비스마다 다른 무작위 비밀번호를 만들어 관리한다.",
     "steps": [
       [
         "계정마다 다른 비밀번호가 필요한 이유",
-        "여러 계정에서 같은 비밀번호를 재사용하면 하나의 유출이 다른 계정에도 영향을 준다. 서비스마다 다른 무작위 비밀번호를 만들어 관리한다."
+        "사용할 서비스의 허용 길이와 문자 규칙을 읽고 생성기에 맞춰 입력하세요. 다른 계정에서 이미 사용한 비밀번호를 후보로 두지 않습니다."
       ],
       [
         "서비스 조건에 맞는 무작위 비밀번호 생성하기",
@@ -19,7 +19,7 @@
       ],
       [
         "비밀번호 보관과 화면 노출에 주의하기",
-        "브라우저의 Web Crypto 난수를 사용하지만 서비스 보안 수준이나 계정 보호 전체를 보장하지는 않는다. 클립보드와 화면 노출도 주의한다."
+        "생성한 비밀번호는 신뢰할 수 있는 관리자에 저장하고 로그인 성공 여부를 확인하세요. 화면이나 클립보드의 민감한 내용을 불필요하게 공유하지 않습니다."
       ]
     ],
     "alternative": "신뢰할 수 있는 비밀번호 관리자의 생성과 저장 기능을 이용하면 계정별 비밀번호 관리에 편리하다. 가능한 계정에는 다중 인증도 설정한다.",
@@ -34,12 +34,12 @@
   },
   "en": {
     "title": "How to Create a Strong Random Password Without Reusing It",
-    "description": "Reusing a password makes one credential leak relevant to other accounts. Generate a different random password for each service and store it securely.",
+    "description": "Generate passwords with suitable character groups and length, avoid credential reuse, and store new credentials safely.",
     "problem": "Reusing a password makes one credential leak relevant to other accounts. Generate a different random password for each service and store it securely.",
     "steps": [
       [
         "Identify why credentials should be unique",
-        "Reusing a password makes one credential leak relevant to other accounts. Generate a different random password for each service and store it securely."
+        "Read the service's allowed length and character rules before selecting the generator settings. Do not use a password already assigned to another account."
       ],
       [
         "Generate using the site's character rules",
@@ -47,7 +47,7 @@
       ],
       [
         "Protect generated credentials from exposure",
-        "The generator uses browser Web Crypto randomness but cannot guarantee account security. Clipboard exposure and password reuse remain separate risks."
+        "Store the generated credential in a trusted manager and verify login. Avoid unnecessarily exposing it on shared screens or in clipboard history."
       ]
     ],
     "alternative": "A trusted password manager can generate and store separate credentials for each account. Enable multi-factor authentication where available.",
@@ -74,5 +74,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

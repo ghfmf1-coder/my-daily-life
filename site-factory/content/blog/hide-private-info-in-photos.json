@@ -19,6 +19,10 @@
       [
         "새 이미지로 저장한 뒤 확대해서 재검수하기",
         "원본 사진 위에 가림 표시만 보이는 편집 화면과 최종 저장 파일은 다를 수 있습니다. 새 파일을 다시 열고 모든 가림 영역과 남아 있는 글자를 확인하세요."
+      ],
+      [
+        "택배 송장과 사진 배경을 함께 점검하기",
+        "송장 사진을 공유할 때 주소뿐 아니라 바코드, QR코드, 운송장 번호도 공개 필요성을 따져보세요. 가린 결과를 별도 이미지로 저장하고 확대해 확인하며 위치 메타데이터도 따로 검사합니다."
       ]
     ],
     "alternative": "휴대폰 사진 편집기의 불투명 그리기 도구도 사용할 수 있습니다. 이 경우 저장 후 편집 레이어가 아닌 실제 픽셀에 가림이 적용됐는지 확인해야 합니다.",
@@ -28,6 +32,10 @@
       [
         "글자를 흐릿하게 만드는 것만으로 충분한가요?",
         "흐림 처리 방법마다 원본 정보의 일부가 보일 수 있습니다. 민감한 정보라면 불투명하게 완전히 가리고 저장한 이미지 자체를 검사하세요."
+      ],
+      [
+        "송장 QR을 가리면 사진 위치정보도 제거되나요?",
+        "아닙니다. 사진 픽셀을 가리는 작업과 촬영 위치 같은 메타데이터 제거는 별개입니다. 저장된 이미지와 메타데이터를 모두 점검하세요."
       ]
     ]
   },
@@ -47,6 +55,10 @@
       [
         "Export a new file and inspect it again",
         "Save the result and reopen it at a larger zoom. Confirm that all blocks were actually rendered and no private details remain visible."
+      ],
+      [
+        "Inspect a shipping-label photo beyond the name",
+        "Decide whether the tracking number, barcode and QR code should also be hidden. Export a separate image, zoom in to inspect the masked areas, and check its metadata independently."
       ]
     ],
     "alternative": "You may also use a mobile image editor that paints opaque areas. Verify that the final exported pixels contain the redaction rather than a temporary editing overlay.",
@@ -56,7 +68,12 @@
       [
         "Is applying a blur enough for private information?",
         "Blur techniques differ and may leave recognizable details. Use opaque coverage for sensitive fields and inspect the final exported image."
+      ],
+      [
+        "Does hiding a printed QR code remove image metadata?",
+        "No. Pixel redaction does not necessarily remove metadata such as capture location. Review both the exported image and its metadata before sharing."
       ]
     ]
-  }
+  },
+  "updated": "2026-11-25"
 }

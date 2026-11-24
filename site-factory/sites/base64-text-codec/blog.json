@@ -6,12 +6,12 @@
   "status": "reviewed",
   "ko": {
     "title": "Base64 인코딩은 암호화가 아닌 이유와 변환 방법",
-    "description": "API나 로그에서 Base64 문자열을 볼 때 원래 텍스트를 읽거나 전송용 표현으로 변환할 수 있다. Base64는 암호화나 개인정보 보호 수단이 아니다.",
+    "description": "Base64 텍스트를 인코딩·디코딩하고, UTF-8 및 URL-safe 형식의 차이와 보안 한계를 확인합니다.",
     "problem": "API나 로그에서 Base64 문자열을 볼 때 원래 텍스트를 읽거나 전송용 표현으로 변환할 수 있다. Base64는 암호화나 개인정보 보호 수단이 아니다.",
     "steps": [
       [
         "Base64와 암호화의 차이 알아보기",
-        "API나 로그에서 Base64 문자열을 볼 때 원래 텍스트를 읽거나 전송용 표현으로 변환할 수 있다. Base64는 암호화나 개인정보 보호 수단이 아니다."
+        "원본이 사람이 읽는 텍스트인지 이미 인코딩된 문자열인지 구분하세요. 비밀번호나 인증키는 Base64로 변환해도 공개 가능한 정보가 되지 않습니다."
       ],
       [
         "짧은 문자열을 인코딩하고 되돌리기",
@@ -19,7 +19,7 @@
       ],
       [
         "바이너리와 URL-safe 형식의 한계 확인하기",
-        "표준 Base64와 UTF-8 텍스트를 처리한다. URL-safe Base64 및 UTF-8이 아닌 바이트는 오류가 날 수 있다. 비밀 정보를 감추는 용도가 아니다."
+        "디코딩 결과가 오류라면 표준 Base64인지와 UTF-8 텍스트인지 확인하세요. 원본이 이미지나 압축 데이터라면 텍스트 디코더가 아니라 바이너리 도구를 선택합니다."
       ]
     ],
     "alternative": "개발 환경에서는 표준 Base64 라이브러리로 변환할 수 있다. 이미지나 압축 파일처럼 텍스트가 아닌 데이터에는 바이너리 지원 도구를 사용한다.",
@@ -34,12 +34,12 @@
   },
   "en": {
     "title": "Why Base64 encoding is not encryption and how to decode it",
-    "description": "Base64 represents bytes as printable text for transport. It can help read an encoded API value or prepare a UTF-8 text payload; it is not encryption.",
+    "description": "Encode and decode Base64 text, understand UTF-8 and URL-safe variants, and avoid confusing encoding with encryption.",
     "problem": "Base64 represents bytes as printable text for transport. It can help read an encoded API value or prepare a UTF-8 text payload; it is not encryption.",
     "steps": [
       [
         "Distinguish encoding from encryption",
-        "Base64 represents bytes as printable text for transport. It can help read an encoded API value or prepare a UTF-8 text payload; it is not encryption."
+        "Identify whether the input is plain text or an already encoded string. Encoding a password or authentication key does not make it safe to disclose."
       ],
       [
         "Encode and decode a short sample",
@@ -47,7 +47,7 @@
       ],
       [
         "Check UTF-8 and variant limitations",
-        "The decoder expects standard Base64 and valid UTF-8 text. URL-safe variants or arbitrary binary data may fail. Never treat encoding as secrecy."
+        "If decoding fails, check the Base64 variant and whether the decoded bytes represent UTF-8. Use a binary-capable decoder for images or archives instead."
       ]
     ],
     "alternative": "Use a standard Base64 library in application code. For images, archives or other binary files, use a binary-capable tool instead of a UTF-8 decoder.",
@@ -75,5 +75,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

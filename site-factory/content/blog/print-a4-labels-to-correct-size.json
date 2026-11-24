@@ -20,6 +20,10 @@
       [
         "실물 라벨지에 겹쳐 놓고 위치를 확인하세요",
         "시험 출력물을 라벨지 위에 겹치거나 빛에 비춰 선이 칸 안에 들어가는지 확인하세요. 경계가 밀린다면 프린터의 비인쇄 영역과 여백을 조정한 뒤 다시 시험하세요."
+      ],
+      [
+        "첫 줄과 마지막 줄의 밀림을 각각 확인하기",
+        "첫 줄은 맞지만 마지막 줄이 밀린다면 라벨 간격이나 인쇄 배율을 다시 확인합니다. 모든 줄이 같은 거리만큼 밀린다면 시작 여백을 먼저 점검하고 일반 종이에서 수정 결과를 시험하세요."
       ]
     ],
     "alternative": "워드나 디자인 프로그램의 표 기능으로도 라벨을 구성할 수 있습니다. 라벨지 제조사가 전용 양식을 제공한다면 그 양식이 더 정확할 수 있습니다.",
@@ -48,6 +52,10 @@
       [
         "Overlay the proof and correct any offset",
         "Place the proof over the label sheet and check the borders against the cut lines. If the print shifts, inspect non-printable margins and feed orientation before another proof."
+      ],
+      [
+        "Inspect alignment at both ends of the label sheet",
+        "If the first row aligns but the last row drifts, recheck label spacing and print scale. If every row shifts by the same distance, inspect the starting margin and test the adjustment on plain paper."
       ]
     ],
     "alternative": "You can also make labels with a word processor table or a vendor-provided template. Manufacturer templates may fit a specific stock layout more reliably.",
@@ -75,5 +83,6 @@
         "en": "Illustrative label printing workspace; not an A4 proof or an ABREDA screenshot."
       }
     }
-  }
+  },
+  "updated": "2026-11-25"
 }

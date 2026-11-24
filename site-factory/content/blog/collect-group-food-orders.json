@@ -20,6 +20,10 @@
       [
         "배달비와 할인 처리 방식을 먼저 합의하세요",
         "개인별 결제액에 배달비를 균등 또는 별도 기준으로 나눌지 미리 정하세요. 계산표 결과와 실제 영수증이 다르면 영수증을 기준으로 조정하고 최종 부담액을 다시 확인하세요."
+      ],
+      [
+        "한 사람이 여러 메뉴를 주문할 때 기록하는 방법",
+        "같은 사람의 메인 메뉴와 추가 음료를 별도 항목으로 기록한 뒤 이름별로 합칩니다. 매장 장바구니의 메뉴 개수와 옵션을 대조하고 결제 직전에 바뀐 주문은 원래 목록에도 반영하세요."
       ]
     ],
     "alternative": "인원이 적다면 메신저 설문과 간단한 스프레드시트만으로도 가능합니다. 주문 확정 후 수정된 메시지를 놓치지 않게 최종본을 고정하세요.",
@@ -48,6 +52,10 @@
       [
         "Agree on discounts and delivery-fee allocation",
         "Decide whether fees are split equally or by another stated rule. Use the final receipt as the basis for reconciling any discounts, service fees or payment differences."
+      ],
+      [
+        "Record multiple dishes ordered by one person",
+        "Record the main dish and extra drink separately, then group entries by person. Compare item counts and options with the restaurant's cart, and update your list after any last-minute changes."
       ]
     ],
     "alternative": "For a small team, a chat poll and a spreadsheet may be enough. Pin the finalized message so late edits do not silently change the order.",
@@ -75,5 +83,6 @@
         "en": "Illustrative photo of group takeout meals; not an ABREDA screenshot."
       }
     }
-  }
+  },
+  "updated": "2026-11-25"
 }

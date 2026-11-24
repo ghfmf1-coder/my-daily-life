@@ -25,6 +25,10 @@
       [
         "사이트 데이터 삭제 전에는 복원 가능한 사본을 확인하세요",
         "브라우저의 사이트 데이터·쿠키·저장 공간 삭제 메뉴를 실행하면 해당 서비스의 로컬 기록이 삭제될 수 있습니다. 백업 파일을 열어 내용이 있는지 확인하고, 복원 기능이 있을 때만 실제로 되돌릴 수 있습니다."
+      ],
+      [
+        "주소와 브라우저 프로필이 바뀌었는지 확인하기",
+        "기존 기록이 안 보인다면 접속 주소의 도메인과 프로토콜, 사용한 브라우저 프로필을 확인하세요. 원래 환경에서 기록이 보이면 앱의 내보내기 기능으로 별도 사본을 만든 뒤 새 환경으로 옮깁니다."
       ]
     ],
     "alternative": "장기간 보관이 필요한 정보는 계정 동기화가 제공되는 서비스나 별도 파일 관리 체계에 저장하는 방법이 있습니다.",
@@ -53,6 +57,10 @@
       [
         "Check recoverability before clearing site data",
         "Browser controls for deleting site storage can erase locally saved entries. Inspect your exported file before deletion and confirm that the app actually supports importing a backup before assuming recovery is possible."
+      ],
+      [
+        "Check the original site address and browser profile",
+        "If records disappear, compare the domain, protocol and browser profile with the original session. If the records reappear, use the app's export feature before moving to another environment."
       ]
     ],
     "alternative": "For information that must survive device changes, consider a service with a documented sync feature or a separate managed-file backup process.",
@@ -80,5 +88,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

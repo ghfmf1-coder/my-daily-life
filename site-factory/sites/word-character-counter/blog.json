@@ -6,12 +6,12 @@
   "status": "reviewed",
   "ko": {
     "title": "글자 수와 단어 수가 서비스마다 다르게 나오는 이유",
-    "description": "글자 수는 공백과 줄바꿈을 포함한 유니코드 코드 포인트 기준이고, 단어 수는 공백으로 구분한 묶음, 줄 수는 실제 개행 기준이다.",
+    "description": "글자 수와 단어 수가 다른 서비스에서 달라지는 이유, 공백과 개행의 계산 방식 및 제출 기준 확인 방법을 설명합니다.",
     "problem": "글자 수는 공백과 줄바꿈을 포함한 유니코드 코드 포인트 기준이고, 단어 수는 공백으로 구분한 묶음, 줄 수는 실제 개행 기준이다.",
     "steps": [
       [
         "공백과 줄바꿈을 세는 기준 알아보기",
-        "글자 수는 공백과 줄바꿈을 포함한 유니코드 코드 포인트 기준이고, 단어 수는 공백으로 구분한 묶음, 줄 수는 실제 개행 기준이다."
+        "제출 양식에서 공백 포함 여부, 최대 글자 수와 줄바꿈 허용 여부를 먼저 확인하세요. 같은 문장을 여러 계산기에 넣었을 때 결과가 다르다면 계산 단위를 비교해야 합니다."
       ],
       [
         "짧은 한글 문장으로 계산 결과 확인하기",
@@ -19,7 +19,7 @@
       ],
       [
         "이모지와 자동 줄바꿈의 차이 구분하기",
-        "한글 띄어쓰기 단어 수는 형태소 수와 다르다. 결합 이모지는 여러 코드 포인트로 계산되며 화면에서 자동 줄바꿈된 줄은 포함되지 않는다."
+        "제출처가 공백 제외 글자 수를 요구한다면 해당 서비스의 계산 기능을 우선 사용하세요. 결합 문자나 이모지가 있는 원고는 제출 화면에서도 다시 확인합니다."
       ]
     ],
     "alternative": "공백 제외 조건은 텍스트 편집기에서 공백을 제거한 사본을 따로 계산할 수 있다. 자동 줄바꿈이 있는 문장과 실제 개행이 들어간 문장을 구별한다.",
@@ -34,12 +34,12 @@
   },
   "en": {
     "title": "Why word and character counts differ between tools",
-    "description": "The counter includes spaces and line breaks in its Unicode code-point count, splits words on whitespace and counts explicit newline characters.",
+    "description": "Learn why character and word counts differ, how this tool counts whitespace and line breaks, and how to check submission limits.",
     "problem": "The counter includes spaces and line breaks in its Unicode code-point count, splits words on whitespace and counts explicit newline characters.",
     "steps": [
       [
         "Understand whitespace and newline counting",
-        "The counter includes spaces and line breaks in its Unicode code-point count, splits words on whitespace and counts explicit newline characters."
+        "Before counting, read the destination's rules for spaces, maximum length and line breaks. Different counters may use different units for the same text."
       ],
       [
         "Check a short sample against the counter",
@@ -47,7 +47,7 @@
       ],
       [
         "Distinguish code points from visual characters",
-        "Combined emoji can contain multiple code points; whitespace-based counts are not linguistic tokenization. Visual wrapping is not an explicit newline."
+        "Use the submission platform's own counter when its rules differ. Recheck text containing combined characters or emoji directly in the destination form."
       ]
     ],
     "alternative": "If a form excludes spaces, count a separate copy without spaces in a text editor. Compare a paragraph with and without a trailing newline.",
@@ -75,5 +75,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

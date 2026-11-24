@@ -20,6 +20,10 @@
       [
         "중복 기준과 출력 형식을 검증하세요",
         "중복을 판단할 열을 정하고 삭제 전에는 중복 후보를 확인하세요. 결과 CSV에서 한글 깨짐, 첫 행의 열 순서, 날짜·전화번호 앞자리와 임의로 비워진 필드가 없는지 원본과 대조하세요."
+      ],
+      [
+        "서로 다른 순서의 열을 실제로 대조하기",
+        "예시 파일 A는 이름·전화번호 순서이고 B는 연락처·이름 순서라면 같은 의미의 열을 먼저 매핑합니다. 빈 연락처를 다른 행의 연락처로 채우지 말고 통합 결과의 열 제목과 원본 행을 대조하세요."
       ]
     ],
     "alternative": "파일 수가 적다면 각 CSV를 스프레드시트로 가져와 열 위치를 맞춘 뒤 새 시트에 복사하는 방식도 가능합니다. 이때 자동 형식 변환을 주의하세요.",
@@ -48,6 +52,10 @@
       [
         "Review duplicates and verify the exported CSV",
         "Pick a defensible duplicate key before deleting anything. Compare the output with source records for encoding, header order, dates, leading zeros in identifiers and fields that unexpectedly became blank."
+      ],
+      [
+        "Compare CSV files whose columns are ordered differently",
+        "If one file has name and phone, while another has contact and name, map equivalent fields before combining rows. Do not fill missing contact values from unrelated records; compare the merged headers and source rows."
       ]
     ],
     "alternative": "With a small number of files, you can import them into a spreadsheet, align the columns manually and copy rows into a new sheet. Watch for automatic type conversions.",
@@ -75,5 +83,6 @@
       }
     },
     "category": "document"
-  }
+  },
+  "updated": "2026-11-25"
 }

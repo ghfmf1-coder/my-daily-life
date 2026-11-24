@@ -6,12 +6,12 @@
   "status": "reviewed",
   "ko": {
     "title": "목록 중복 제거 전에 원본 순서를 보존하는 방법",
-    "description": "주소 목록이나 태그를 한 줄에 하나씩 정리할 때 순서 정렬과 중복 제거는 서로 다른 작업이다. 목적에 맞춰 두 기능을 따로 실행한다.",
+    "description": "줄 단위 목록의 중복 제거와 정렬 결과를 비교하고, 대소문자·공백·숫자 순서에 주의하는 방법입니다.",
     "problem": "주소 목록이나 태그를 한 줄에 하나씩 정리할 때 순서 정렬과 중복 제거는 서로 다른 작업이다. 목적에 맞춰 두 기능을 따로 실행한다.",
     "steps": [
       [
         "정렬과 중복 제거의 차이 구분하기",
-        "주소 목록이나 태그를 한 줄에 하나씩 정리할 때 순서 정렬과 중복 제거는 서로 다른 작업이다. 목적에 맞춰 두 기능을 따로 실행한다."
+        "주소나 태그를 한 줄에 하나씩 배치한 뒤 원래 등장 순서를 유지해야 하는지 결정하세요. 정렬과 중복 제거는 같은 작업이 아니므로 구분해서 실행합니다."
       ],
       [
         "반복된 세 줄로 두 기능 비교하기",
@@ -19,7 +19,7 @@
       ],
       [
         "공백 대소문자와 숫자 순서 확인하기",
-        "앞뒤 공백과 대소문자, 빈 줄은 문자열 비교에 영향을 준다. 정렬 순서는 브라우저 로케일에 의존하며 중복 제거는 대소문자를 구분한다."
+        "중복 제거 결과의 앞뒤 공백과 대소문자를 검사하세요. 숫자값의 오름차순이 필요하다면 문자열 정렬 결과 대신 수치 정렬 기능으로 확인합니다."
       ]
     ],
     "alternative": "스프레드시트의 중복 제거 또는 정렬 기능을 사용할 수 있다. 숫자 목록에서는 수치 정렬이 필요한지 문자열 정렬이 필요한지 구별한다.",
@@ -34,12 +34,12 @@
   },
   "en": {
     "title": "How to preserve list order before deduplicating",
-    "description": "Sorting and deduplication are distinct operations when cleaning one-item-per-line tags or address lists. Choose the operation that matches the task.",
+    "description": "Compare line sorting with exact deduplication, including case sensitivity, whitespace and numeric ordering.",
     "problem": "Sorting and deduplication are distinct operations when cleaning one-item-per-line tags or address lists. Choose the operation that matches the task.",
     "steps": [
       [
         "Distinguish sorting from deduplication",
-        "Sorting and deduplication are distinct operations when cleaning one-item-per-line tags or address lists. Choose the operation that matches the task."
+        "Put each address or tag on its own line and decide whether first-seen order matters. Sorting and deduplication are different tasks, so apply the intended operation."
       ],
       [
         "Compare both operations on three lines",
@@ -47,7 +47,7 @@
       ],
       [
         "Check case whitespace and sort order",
-        "Exact duplicate matching preserves case and spaces, including empty lines. Sort order uses the browser's locale comparison and may not be numeric."
+        "Inspect whitespace and case in the output. When the required ordering is numeric, cross-check with a numeric sort rather than relying on locale-based string comparison."
       ]
     ],
     "alternative": "A spreadsheet can sort or remove duplicate rows. Distinguish numeric ordering from text ordering when entries are numbers rather than labels.",
@@ -75,5 +75,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

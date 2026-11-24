@@ -6,12 +6,12 @@
   "status": "reviewed",
   "ko": {
     "title": "마크다운 기본 문법과 안전한 미리보기 방법",
-    "description": "README나 메모를 작성할 때 제목과 강조, 목록이 어떻게 보이는지 확인할 수 있다. 이 도구는 간단한 마크다운 문법의 일부를 미리 보여준다.",
+    "description": "마크다운 제목·강조·목록을 미리 보고, 표와 코드 블록 등 지원하지 않는 문법을 구분하는 가이드입니다.",
     "problem": "README나 메모를 작성할 때 제목과 강조, 목록이 어떻게 보이는지 확인할 수 있다. 이 도구는 간단한 마크다운 문법의 일부를 미리 보여준다.",
     "steps": [
       [
         "간단한 마크다운 미리보기 범위 확인하기",
-        "README나 메모를 작성할 때 제목과 강조, 목록이 어떻게 보이는지 확인할 수 있다. 이 도구는 간단한 마크다운 문법의 일부를 미리 보여준다."
+        "README나 문서의 간단한 제목과 강조를 먼저 작성하세요. 실제 게시 환경에서 쓰는 확장 문법이 있다면 해당 서비스의 지원 범위도 확인합니다."
       ],
       [
         "제목 강조 목록을 직접 입력해 보기",
@@ -19,7 +19,7 @@
       ],
       [
         "실제 게시 서비스의 렌더링과 대조하기",
-        "전체 CommonMark 또는 GitHub Flavored Markdown 렌더러가 아니다. 표와 링크, 코드 블록은 다르게 보일 수 있으며 복사는 렌더링된 텍스트 기준이다."
+        "미리보기에서 표시된 기본 요소를 확인한 뒤 실제 게시 서비스에서도 문서를 열어 보세요. 표, 링크, 코드 블록이 중요한 경우 그 서비스의 렌더링이 최종 기준입니다."
       ]
     ],
     "alternative": "GitHub에 올릴 문서는 GitHub 편집기의 미리보기로 확인한다. 표와 코드 블록이 필요하면 해당 문법을 지원하는 전문 편집기를 선택한다.",
@@ -34,12 +34,12 @@
   },
   "en": {
     "title": "Basic Markdown syntax and safe preview techniques",
-    "description": "Preview basic README headings, emphasis and list items before publishing a short note. This utility implements a limited Markdown subset, not a complete renderer.",
+    "description": "Preview basic Markdown headings, emphasis and lists, and recognize syntax that needs the destination's full renderer.",
     "problem": "Preview basic README headings, emphasis and list items before publishing a short note. This utility implements a limited Markdown subset, not a complete renderer.",
     "steps": [
       [
         "Identify the supported Markdown syntax",
-        "Preview basic README headings, emphasis and list items before publishing a short note. This utility implements a limited Markdown subset, not a complete renderer."
+        "Start with a short section of a README containing headings and emphasis. Check whether the publication platform requires any extended Markdown syntax."
       ],
       [
         "Preview a heading emphasis and bullet",
@@ -47,7 +47,7 @@
       ],
       [
         "Check unsupported syntax at the destination",
-        "This is not a complete CommonMark or GitHub Flavored Markdown renderer. Links, tables and code fences may not render as expected; copying returns visible text."
+        "Review the supported elements in this preview, then open the document in its intended renderer. Use that platform as the final check for tables, links and code blocks."
       ]
     ],
     "alternative": "For a GitHub README, use GitHub's own preview for final review. Choose a full Markdown editor when tables or fenced code blocks matter.",
@@ -75,5 +75,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

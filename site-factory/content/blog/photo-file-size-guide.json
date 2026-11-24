@@ -19,6 +19,10 @@
       [
         "JPG·PNG·WebP를 비교하고 결과 확인하기",
         "일반 사진에는 JPG 또는 WebP를 검토하세요. 투명 배경이 중요한 이미지는 PNG가 필요할 수 있습니다. 저장한 사진을 다시 열어 글자와 세부 사항을 확인하세요."
+      ],
+      [
+        "업로드 실패 원인이 용량인지 형식인지 확인하기",
+        "업로드 제한이 있다면 파일 속성에서 용량과 형식을 함께 확인합니다. 사본을 줄인 뒤 결과가 제한 아래인지 확인하고 휴대폰과 PC에서 글자나 얼굴이 필요한 수준으로 보이는지 검사하세요."
       ]
     ],
     "alternative": "사진이 한두 장이면 기기에 기본 설치된 편집기로 충분할 수 있습니다. 여러 사진을 같은 규격으로 줄여야 한다면 일괄 처리 방식을 선택할 수 있습니다.",
@@ -28,6 +32,10 @@
       [
         "PNG 사진의 용량이 줄지 않는 이유는 무엇인가요?",
         "PNG 형식은 JPG 방식의 화질 손실 압축과 다릅니다. 투명 배경을 보존할 필요가 없다면 JPG나 WebP 결과를 비교한 뒤 실제 화질을 확인하세요."
+      ],
+      [
+        "사진의 해상도와 JPEG 화질 중 무엇을 먼저 줄이나요?",
+        "제출처가 원본 픽셀 크기를 요구하지 않는다면 사본 해상도를 줄이는 방법부터 비교하세요. 저장 후 실제 파일 크기와 중요한 세부 정보가 보이는지 확인합니다."
       ]
     ]
   },
@@ -47,6 +55,10 @@
       [
         "Compare formats and inspect the output",
         "Try JPG or WebP for photographs. PNG may be needed for transparency. Reopen each output and inspect small text and important image details before submitting."
+      ],
+      [
+        "Separate size limits from format restrictions",
+        "Check the destination's allowed file formats and the photo's actual size. Export a smaller copy, verify it meets the limit, and inspect required text or detail on the intended device."
       ]
     ],
     "alternative": "For one image, an operating-system editor may be sufficient. For many images that need the same settings, batch processing can reduce repeated steps.",
@@ -56,7 +68,12 @@
       [
         "Why does my PNG image remain almost as large as before?",
         "PNG does not use the same lossy quality setting as JPG. If you do not need transparency, compare a JPG or WebP export while checking image quality."
+      ],
+      [
+        "Should I reduce dimensions or JPEG quality first?",
+        "If the destination does not require the original dimensions, try resizing a copy before lowering quality further. Compare visual detail and the actual exported file size."
       ]
     ]
-  }
+  },
+  "updated": "2026-11-25"
 }

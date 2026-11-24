@@ -6,12 +6,12 @@
   "status": "reviewed",
   "ko": {
     "title": "유닉스 타임스탬프 초·밀리초 구분하고 날짜 변환하기",
-    "description": "로그와 API의 숫자형 시간값은 초인지 밀리초인지 명세를 확인해야 한다. 숫자 자릿수만 보고 단위를 확정하면 오래된 기록에서 오류가 생길 수 있다.",
+    "description": "유닉스 타임스탬프의 초와 밀리초를 구별하고 UTC 및 현지 시간으로 변환하는 방법입니다.",
     "problem": "로그와 API의 숫자형 시간값은 초인지 밀리초인지 명세를 확인해야 한다. 숫자 자릿수만 보고 단위를 확정하면 오래된 기록에서 오류가 생길 수 있다.",
     "steps": [
       [
         "타임스탬프 단위 명세부터 확인하기",
-        "로그와 API의 숫자형 시간값은 초인지 밀리초인지 명세를 확인해야 한다. 숫자 자릿수만 보고 단위를 확정하면 오래된 기록에서 오류가 생길 수 있다."
+        "로그 제공 시스템의 시간 필드 설명에서 단위를 확인하고 해당 이벤트의 원본 숫자를 보관하세요. 자릿수는 힌트일 뿐 확정 기준이 아닙니다."
       ],
       [
         "유닉스 기준 시각을 직접 변환하기",
@@ -19,7 +19,7 @@
       ],
       [
         "기기 시간대와 UTC의 차이 검토하기",
-        "정수만 처리하며 브라우저 Date 지원 범위 밖의 값은 오류가 난다. 현지 시각은 기기 시간대 설정을 따르므로 공식 기록에서는 UTC도 확인한다."
+        "변환된 UTC 값과 기기의 현지 시각을 각각 확인하세요. 다른 시스템의 기록과 대조할 때는 타임스탬프 단위와 시간대 설정을 함께 기록합니다."
       ]
     ],
     "alternative": "JavaScript Date나 운영체제의 날짜 변환 기능으로 확인할 수 있다. 서버 기록과 비교할 때 원본 숫자와 단위, UTC 값을 함께 보관한다.",
@@ -34,12 +34,12 @@
   },
   "en": {
     "title": "Convert Unix Timestamps to UTC and Local Time Without Unit Errors",
-    "description": "A numeric timestamp in a log or API needs a documented unit: seconds or milliseconds. Digit length alone is not a reliable way to determine the unit.",
+    "description": "Convert Unix seconds or milliseconds to UTC and local time while checking the producer's unit specification.",
     "problem": "A numeric timestamp in a log or API needs a documented unit: seconds or milliseconds. Digit length alone is not a reliable way to determine the unit.",
     "steps": [
       [
         "Identify seconds or milliseconds",
-        "A numeric timestamp in a log or API needs a documented unit: seconds or milliseconds. Digit length alone is not a reliable way to determine the unit."
+        "Read the field definition in the system that generated the timestamp and preserve its original numeric value. Digit count is only a clue, not a definitive unit."
       ],
       [
         "Convert the Unix epoch as a reference",
@@ -47,7 +47,7 @@
       ],
       [
         "Check the browser time zone against UTC",
-        "Only integer inputs are supported, within the browser Date range. Device-local output follows the time-zone setting, so retain UTC for official records."
+        "Compare the UTC output with the device-local time. When reconciling logs from different systems, record both the source unit and the relevant time zone."
       ]
     ],
     "alternative": "Use JavaScript Date or an operating-system date utility to cross-check. Preserve the original numeric timestamp, unit and UTC value when reconciling logs.",
@@ -74,5 +74,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

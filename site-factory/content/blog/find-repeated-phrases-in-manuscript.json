@@ -20,6 +20,10 @@
       [
         "바꾼 뒤에는 소리 내 읽어 흐름을 확인하세요",
         "표현을 삭제하거나 교체한 다음 인물의 목소리, 감정의 고조, 시점이 유지되는지 읽어 보세요. 대사 비중이나 문단 길이 수치는 참고용으로 보고 장면 목적에 따라 판단하세요."
+      ],
+      [
+        "반복 표현을 수정할 때 장면 의미를 먼저 살펴보기",
+        "같은 인물의 대사에 반복되는 말버릇은 캐릭터 특징일 수 있지만 서술부에서 의도 없이 반복되는 표현은 퇴고 후보입니다. 표시된 표현의 앞뒤 문장을 읽고 교체 후 장면의 흐름을 확인하세요."
       ]
     ],
     "alternative": "워드프로세서의 찾기 기능으로 자주 쓰는 어휘를 하나씩 검색해도 됩니다. 다만 미처 생각하지 못한 반복어를 찾으려면 목록화가 편리합니다.",
@@ -48,6 +52,10 @@
       [
         "Read aloud after revisions",
         "Once you shorten or replace wording, check that the speaker's voice, point of view and emotional progression still make sense. Treat dialogue proportions and paragraph metrics as descriptive signals, not writing scores."
+      ],
+      [
+        "Review repetition in its narrative context",
+        "A repeated phrase in dialogue may be a character trait, while unintentional repetition in narration may warrant editing. Read the surrounding lines and check the scene's rhythm after revising."
       ]
     ],
     "alternative": "A word processor's Find command is enough when you already know which phrase to check. A focused overview is useful when the repeated terms are less obvious.",
@@ -75,5 +83,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

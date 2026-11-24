@@ -6,12 +6,12 @@
   "status": "reviewed",
   "ko": {
     "title": "URL 쿼리값 인코딩과 전체 주소 인코딩의 차이",
-    "description": "검색어와 쿼리 값에 공백, 한글, 앰퍼샌드가 들어가면 주소 구문과 데이터가 섞일 수 있다. 전체 주소가 아니라 개별 구성 요소를 인코딩한다.",
+    "description": "URL 전체와 검색어 값을 구분해 인코딩하고, 퍼센트 표기와 플러스 기호로 발생하는 오류를 확인하는 방법입니다.",
     "problem": "검색어와 쿼리 값에 공백, 한글, 앰퍼샌드가 들어가면 주소 구문과 데이터가 섞일 수 있다. 전체 주소가 아니라 개별 구성 요소를 인코딩한다.",
     "steps": [
       [
         "전체 URL과 개별 쿼리 값을 구분하기",
-        "검색어와 쿼리 값에 공백, 한글, 앰퍼샌드가 들어가면 주소 구문과 데이터가 섞일 수 있다. 전체 주소가 아니라 개별 구성 요소를 인코딩한다."
+        "검색 주소를 만들 때 스킴, 호스트, 경로와 쿼리 값을 먼저 구분하세요. 입력할 검색어에 주소 구분 문자와 동일한 기호가 있더라도 그것은 데이터입니다."
       ],
       [
         "공백과 앰퍼샌드가 포함된 값 변환하기",
@@ -19,7 +19,7 @@
       ],
       [
         "이중 인코딩과 플러스 기호 확인하기",
-        "전체 주소를 인코딩하면 주소 구분자까지 변환된다. decodeURIComponent는 플러스 기호를 공백으로 바꾸지 않으며 잘못된 퍼센트 표기에서 오류가 난다."
+        "이미 퍼센트 인코딩이 적용된 값을 중복 변환하지 않았는지 확인하세요. 폼 인코딩에서 사용하는 플러스 기호는 이 디코더에서 공백으로 자동 변환되지 않습니다."
       ]
     ],
     "alternative": "개발 환경에서는 URLSearchParams로 쿼리 문자열을 구성할 수 있다. 이미 인코딩된 값은 다시 변환하기 전에 퍼센트 표기를 확인한다.",
@@ -34,12 +34,12 @@
   },
   "en": {
     "title": "The difference between encoding a URL and its query values",
-    "description": "Spaces, non-ASCII characters and ampersands in a query value can be confused with URL syntax. Encode the component, not the whole address.",
+    "description": "Encode individual query values rather than entire URLs, and troubleshoot percent escapes, double encoding and plus signs.",
     "problem": "Spaces, non-ASCII characters and ampersands in a query value can be confused with URL syntax. Encode the component, not the whole address.",
     "steps": [
       [
         "Separate URL syntax from parameter values",
-        "Spaces, non-ASCII characters and ampersands in a query value can be confused with URL syntax. Encode the component, not the whole address."
+        "Separate the scheme, host, path and query values when building an address. A delimiter that occurs inside the actual search term is data rather than URL syntax."
       ],
       [
         "Encode spaces and ampersands in a sample",
@@ -47,7 +47,7 @@
       ],
       [
         "Avoid double encoding and plus-sign confusion",
-        "Encoding a complete address also escapes its delimiters. decodeURIComponent does not turn plus signs into spaces and rejects malformed percent escapes."
+        "Verify that existing percent escapes were not encoded again. A plus sign used for a space in form encoding is not automatically converted by this decoder."
       ]
     ],
     "alternative": "In application code, use URLSearchParams when assembling query parameters. Check for existing percent escapes before encoding a value again.",
@@ -75,5 +75,6 @@
       }
     },
     "category": "knowledge"
-  }
+  },
+  "updated": "2026-11-25"
 }

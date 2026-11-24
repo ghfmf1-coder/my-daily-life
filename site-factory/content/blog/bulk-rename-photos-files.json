@@ -19,6 +19,10 @@
       [
         "미리보기에서 중복 이름 검사 후 저장하기",
         "접두어·접미어·문자 치환·시작 번호를 적용한 결과를 확인하고 중복 이름이 없으면 새 파일을 받으세요. ZIP을 풀어 일부 파일이 정상적으로 열리는지 확인하세요."
+      ],
+      [
+        "파일명 일괄 변경 전 중복과 확장자를 검사하는 방법",
+        "예를 들어 여행 사진을 trip-001.jpg, trip-002.jpg처럼 이름을 붙이려면 원본 정렬 순서를 확인한 뒤 시작 번호와 접두어를 정하세요. 기존 이름이 같은 파일은 미리보기에서 별도로 검토하고 새 파일을 열어 확인합니다."
       ]
     ],
     "alternative": "Windows 파일 탐색기에서 여러 파일을 선택하고 F2를 누르면 기본 이름을 일괄 변경할 수 있습니다. 문자 치환 규칙이 복잡하면 전용 도구를 사용할 수 있습니다.",
@@ -28,6 +32,10 @@
       [
         "확장자를 바꾸면 파일 형식도 자동 변환되나요?",
         "아니요. 파일 이름만 JPG로 바꾼다고 이미지가 되지는 않습니다. 실제 파일 형식 변경은 별도 변환 도구를 이용해야 합니다."
+      ],
+      [
+        "파일 형식이 다른 파일도 한꺼번에 이름을 바꿀 수 있나요?",
+        "원래 확장자를 유지하는 이름 변경이라면 가능합니다. 미리보기에서 각각의 확장자와 이름 충돌을 확인하고 실제 형식 변환과 혼동하지 마세요."
       ]
     ]
   },
@@ -47,6 +55,10 @@
       [
         "Preview collisions and inspect the resulting ZIP",
         "Apply prefix, suffix, text replacement or serial numbering rules. Review the entire preview and then open a sample of the renamed files after downloading."
+      ],
+      [
+        "Preview a batch rename before applying it",
+        "For example, name travel photos trip-001.jpg and trip-002.jpg after confirming the original order. Preview the starting number and prefix, inspect collisions, then open a renamed copy."
       ]
     ],
     "alternative": "Windows File Explorer supports basic multi-file renaming with the F2 key. A specialized tool offers more control over replacements and serial numbers.",
@@ -56,7 +68,12 @@
       [
         "Does changing a filename to JPG convert the document?",
         "No. A filename change cannot turn an arbitrary file into an image. Use a real file converter to change its format."
+      ],
+      [
+        "Can I rename mixed file types in one batch?",
+        "Yes, if the renaming operation preserves each original extension. Check the planned names and collisions, and avoid converting extensions as if they were formats."
       ]
     ]
-  }
+  },
+  "updated": "2026-11-25"
 }

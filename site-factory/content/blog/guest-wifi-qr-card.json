@@ -19,6 +19,10 @@
       [
         "다른 휴대폰에서 스캔해 보고 게시하기",
         "QR코드를 만든 뒤 다른 휴대폰으로 스캔해 연결할 네트워크가 정확히 표시되는지 확인하세요. 누구든 볼 수 있는 카드에는 민감한 사내 암호를 넣지 마세요."
+      ],
+      [
+        "공개 전에 손님 기기로 접속 테스트하기",
+        "손님용 네트워크 이름을 확인해 QR을 만든 뒤 기존 연결이 없는 휴대폰으로 스캔합니다. 올바른 네트워크인지 확인하고 접속에 성공하는지 테스트하세요. 비밀번호를 바꾸면 이전 QR을 회수합니다."
       ]
     ],
     "alternative": "기기에서 제공하는 와이파이 공유 기능을 이용해 직접 접속 정보를 전달하는 방법도 있습니다. 지원 방식은 운영체제와 기기에 따라 다릅니다.",
@@ -28,6 +32,10 @@
       [
         "와이파이 QR코드에서 비밀번호를 읽을 수 있나요?",
         "네. QR을 읽는 도구로 해당 네트워크의 접속 정보를 확인할 수 있습니다. 비공개 네트워크의 자격정보는 공개 QR에 넣지 마세요."
+      ],
+      [
+        "와이파이 비밀번호를 변경하면 기존 QR은 어떻게 되나요?",
+        "기존 QR에는 이전 접속 정보가 그대로 남습니다. 새 비밀번호로 QR을 다시 만들고 연결을 확인한 다음 오래된 인쇄물을 회수하세요."
       ]
     ]
   },
@@ -47,6 +55,10 @@
       [
         "Test with a second phone before publishing",
         "Scan the generated code on another device to confirm the correct network is offered. Only display the card where visitors should receive access."
+      ],
+      [
+        "Test the guest network with another device",
+        "Create the QR with the guest network name, then scan it on a phone that has not already joined. Check the network name and test connection; replace printed codes when credentials change."
       ]
     ],
     "alternative": "Many devices offer their own Wi-Fi sharing features. You can use those for one-off visitors when printing a public QR card is unnecessary.",
@@ -56,7 +68,12 @@
       [
         "Can someone retrieve the password from a Wi-Fi QR image?",
         "Yes. A QR decoder can read the included connection details, so treat public posting as sharing those credentials with viewers."
+      ],
+      [
+        "What happens when the Wi-Fi password changes?",
+        "The old QR code still contains the previous credentials. Generate and test a replacement, and remove old printed copies from public areas."
       ]
     ]
-  }
+  },
+  "updated": "2026-11-25"
 }
