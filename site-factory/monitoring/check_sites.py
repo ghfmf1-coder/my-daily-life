@@ -22,6 +22,7 @@ import xml.etree.ElementTree as ET
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "site-factory" / "scripts"))
 from factory import read_site, site_list, NATIVE_ROOT_TOOLS  # noqa: E402
+from hub_domains import BY_SLUG
 
 USER_AGENT = "SmallToolbox-Maintenance/1.0 (+https://github.com/ghfmf1-coder/my-daily-life)"
 MAX_BYTES = 1_800_000
@@ -79,9 +80,7 @@ def roster():
         if host not in ALLOWED_HOSTS and host != f"{info['project']}.pages.dev" and host != info.get("domain"):
             raise ValueError("Unapproved monitored host: " + str(host))
         hub_only = info.get("deploy_mode") == "hub_only" or slug in NATIVE_ROOT_TOOLS
-        source_page = SiteHTML()
-        source_page.feed((directory / 'public' / 'index.html').read_text(encoding='utf-8'))
-        hub_canonical = hub_only or source_page.canonical() == 'https://abreda.com/tools/' + slug + '/'
+        hub_canonical = hub_only or slug in BY_SLUG
         if hub_only:
             url="https://abreda.com"
         sites.append({"hub_canonical": hub_canonical, "page_path": "/tools/"+slug+"/" if hub_only else "/", "slug": slug, "name": info["title"], "origin": url,
