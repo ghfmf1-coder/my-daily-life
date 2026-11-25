@@ -2,7 +2,7 @@
 """Public, read-only maintenance checks of the Small Toolbox fleet.
 
 Runs in GitHub Actions without login tokens, cookies or private user data.
-The authoritative roster is the site factory registry plus Haruhankan.
+The authoritative active roster is the site factory registry.
 Admin-only items saved privately in a browser are intentionally NOT fetched.
 """
 from __future__ import annotations
@@ -69,8 +69,8 @@ def representative_urls(site):
     return {'ko': site['origin'] + '/', 'en': site['origin'] + '/en/'}
 
 def roster():
-    sites = [{"slug": "my-daily-life", "name": "하루한칸", "origin": "https://my-daily-life.pages.dev",
-              "locales": ["ko", "en"], "internal": False, "independent": True}]
+    # Haruhankan is retired; its noindex pages are not active tool failures.
+    sites = []
     for slug in site_list():
         info, _ = read_site(slug)
         if not info.get("approved"): continue

@@ -1,3 +1,11 @@
+# 최신 배포 장애 복구 — 2026-11-25 KST
+
+- 장애: HTML escape된 작은따옴표를 블로그 회귀 검사가 원문과 비교하여 실패. Google setup/유지보수에는 폐기된 하루한칸이 활성 대상에 남아 있었음.
+- 수정: `47d151e152bf2fc29909009c6de672ce58db05a3`, 정상 assertion을 유지하고 `html.escape`로 비교. 전체 Python 및 CSV/자막/GA4 회귀 통과.
+- 자동 push 배포: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/45541920125 . 허브만 배포, Wrangler production URL https://6d4ff2ff.tb-toolbox-hub.pages.dev . 운영 대조·최종 실행 상태·색인 결과는 후속 기록으로 확정.
+- 폐기 서비스의 활성 유지보수/Google sitemap 대상만 제외. 기존 D1 행·인증·통계·페이지 데이터는 보존. 폐기 GitHub Pages의 자동 push 배포 중지, YAML 구문 수정. 활성 도구 검사는 유지.
+- 블로그 URL Inspection은 성공한 허브 자동 배포 후 기존 인증으로 실행하도록 연결. 실패/미확인 색인은 성공으로 표시하지 않음.
+
 # 최신 작업 — 2026-11-21 아브레다 도메인 통합
 
 **일반 ChatGPT Plus 인수인계:** [최종 작업 보고서](DOMAIN-INTEGRATION-2026-11-21.md), [앱별 주소/검수 CSV](../site-factory/ops/domain-audit-20261121/inventory.csv), [검증 원천 폴더](../site-factory/ops/domain-audit-20261121/).

@@ -41,6 +41,10 @@ def ledger():
     for row in data['result'][0].get('results',[]):
         u=urllib.parse.urlsplit(row['canonical_url'])
         host=u.hostname or ''
+        # Retired service: keep its historical ledger row, but never submit its empty sitemap.
+        if host=='my-daily-life.pages.dev':
+            emit('EXCLUDED',{'url':row['canonical_url'],'status':'retired_service'})
+            continue
         if u.scheme!='https' or u.username or u.password or u.query or u.fragment:continue
         if not (host=='abreda.com' or host.endswith('.abreda.com') or re.fullmatch(r'(tb-[a-z0-9-]+|my-daily-life)\.pages\.dev',host)):continue
         root=urllib.parse.urlunsplit(('https',u.netloc,'/','',''))

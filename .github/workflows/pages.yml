@@ -1,7 +1,6 @@
 name: Publish to GitHub Pages
 on:
-  push:
-    branches: [main]
+  # Retired Haruhankan only: no automatic deployment on ABREDA changes.
   workflow_dispatch:
 permissions:
   contents: read
@@ -25,7 +24,8 @@ jobs:
           node --check config.js
           node --check en/app/translate.js
       - name: Generate SEO URLs for GitHub Pages
-        run: echo "Retired app: preserve noindex pages and empty sitemap"
+        run: |
+          echo "Retired app: preserve noindex pages and empty sitemap"
       - name: Assemble public static site
         run: |
           mkdir -p dist/app dist/en/app dist/quest

@@ -13,8 +13,9 @@ class HealthMonitoringTests(unittest.TestCase):
     def test_registry_includes_existing_and_future_factory_sites(self):
         items=mod.roster()
         keys={s["slug"] for s in items}
-        self.assertTrue({"my-daily-life","novel-planner","manuscript-lens",
+        self.assertTrue({"novel-planner","manuscript-lens",
                          "csv-merge-studio","toolbox-admin"}.issubset(keys))
+        self.assertNotIn("my-daily-life", keys)
         self.assertEqual(len(keys),len(items))
         self.assertTrue(next(x for x in items if x["slug"]=="toolbox-admin")["internal"])
     def test_parser_extracts_canonical_and_languages(self):

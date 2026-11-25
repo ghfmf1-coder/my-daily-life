@@ -76,18 +76,7 @@ function finalize(extraFailure){
   assert(await page.locator('#preview tbody tr').count()===3,'Expected 3 unique English CSV rows');
   return 'English CSV header mapping and deduplication';
  });
- await check('Haru English landing','https://my-daily-life.pages.dev/en/','mobile',async page=>{
-  await page.getByRole('heading',{name:/better routine/i}).waitFor();
-  assert((await page.title()).includes('Habit'),'English title missing');
-  const width=await page.evaluate(()=>document.documentElement.scrollWidth);
-  assert(width<=430,'Horizontal overflow on mobile: '+width);
-  return 'English landing search content and mobile layout';
- });
- await check('Haru English app','https://my-daily-life.pages.dev/en/app/','mobile',async page=>{
-  await page.locator('#authForm').waitFor();
-  await page.getByText('Log in',{exact:true}).first().waitFor({timeout:14000});
-  return 'Unauthenticated English login displayed';
- });
+ // Haruhankan was retired; active tool and analytics checks remain below.
  await check('Admin authentication gate',origin('tb-toolbox-admin'),'mobile',async page=>{
   if(await page.locator('#adminLoginForm').count()){
    assert(await page.locator('#adminGate').isVisible(),'Login gate hidden');
