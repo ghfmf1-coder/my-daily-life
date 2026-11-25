@@ -54,8 +54,8 @@ class BlogTests(TestCase):
                     page=directory/post['slug']/'index.html'
                     self.assertTrue(page.is_file(),str(page))
                     text=page.read_text(encoding='utf8')
-                    self.assertIn(post[locale]['title'],text)
-                    self.assertIn(post[locale]['limits'].replace('&','&amp;'),text)
+                    self.assertIn(html.escape(post[locale]['title']),text)
+                    self.assertIn(html.escape(post[locale]['limits']),text)
                     if post['toolURLs'][locale]:self.assertIn(post['toolURLs'][locale],text)
                     else:self.assertIn('id="sources"',text)
                     self.assertIn('images.unsplash.com/photo-',text)
