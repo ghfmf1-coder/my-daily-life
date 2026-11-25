@@ -2,9 +2,11 @@
 
 - 장애: HTML escape된 작은따옴표를 블로그 회귀 검사가 원문과 비교하여 실패. Google setup/유지보수에는 폐기된 하루한칸이 활성 대상에 남아 있었음.
 - 수정: `47d151e152bf2fc29909009c6de672ce58db05a3`, 정상 assertion을 유지하고 `html.escape`로 비교. 전체 Python 및 CSV/자막/GA4 회귀 통과.
-- 자동 push 배포: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/45541920125 . 허브만 배포, Wrangler production URL https://6d4ff2ff.tb-toolbox-hub.pages.dev . 운영 대조·최종 실행 상태·색인 결과는 후속 기록으로 확정.
+- 자동 push 배포: https://github.com/ghfmf1-coder/my-daily-life/actions/runs/45541920125 . 허브만 배포, Wrangler production URL https://6d4ff2ff.tb-toolbox-hub.pages.dev . 실행 completed/success. 운영 246개 경로(블로그 88, 도구 한영 페이지 148 포함)를 빌드와 대조하여 전부 일치. 기존 Cloudflare beacon 삽입/email_off 주석 제거만 비교 정규화. 색인 최종 결과는 후속 기록으로 확정.
 - 폐기 서비스의 활성 유지보수/Google sitemap 대상만 제외. 기존 D1 행·인증·통계·페이지 데이터는 보존. 폐기 GitHub Pages의 자동 push 배포 중지, YAML 구문 수정. 활성 도구 검사는 유지.
-- 블로그 URL Inspection은 성공한 허브 자동 배포 후 기존 인증으로 실행하도록 연결. 실패/미확인 색인은 성공으로 표시하지 않음.
+- 블로그 URL Inspection은 기존 수동 실행 또는 [blog-index-audit] 커밋으로 실행. 일반 setup 이벤트가 명시적 검사 실행을 취소하지 않도록 대기열을 분리. 실패/미확인 색인은 성공으로 표시하지 않음.
+
+- Google 읽기 함수 v21이 HTTP 546 및 WallClockTime 종료. URL Inspection 후 불필요한 전체 검색·수익 보고서를 기다리는 경로를 분리하여 기존 함수 v22로 배포. 기존 인증 검증·기본 보고서 경로는 보존; 인증/기본보고서/오류응답 회귀 검사 통과. 실조회 결과 확인 전 색인 성공으로 표시하지 않음.
 
 # 최신 작업 — 2026-11-21 아브레다 도메인 통합
 

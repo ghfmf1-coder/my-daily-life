@@ -77,6 +77,8 @@ class HealthMonitoringTests(unittest.TestCase):
         items={x['slug']: x for x in mod.roster()}
         self.assertEqual(items['base64-text-codec']['origin'], 'https://abreda.com')
         self.assertEqual(items['base64-text-codec']['page_path'], '/tools/base64-text-codec/')
+        self.assertEqual(mod.representative_urls(items['base64-text-codec'])['en'],
+                         'https://abreda.com/en/tools/base64-text-codec/')
         self.assertEqual(mod.representative_urls(items['aquarium-water-lab'])['en'],
                          'https://abreda.com/en/tools/aquarium-water-lab/')
         self.assertIn('.pages.dev', items['aquarium-water-lab']['origin'])

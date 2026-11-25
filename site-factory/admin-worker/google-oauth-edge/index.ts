@@ -160,8 +160,8 @@ async function githubReporting(req:Request){
  if(req.method!=='POST')return reply({error:'POST_only'},405);
  if(!await githubAuthenticated(req.headers.get('Authorization')))return reply({error:'github_identity_rejected'},401);
  const raw=await req.text();if(raw.length>24000)return reply({error:'request_too_large'},413);
- let urls:string[],readinessOnly=false;try{
-  const input=JSON.parse(raw);readinessOnly=input.readinessOnly===true;
+ let urls:string[],readinessOnly=false,inspectionOnly=false;try{
+  const input=JSON.parse(raw);readinessOnly=input.readinessOnly===true;inspectionOnly=input.inspectionOnly===true;
   if(!Array.isArray(input.urls)||input.urls.length>100)throw Error();
   urls=[...new Set(input.urls)] as string[];
   if(urls.some(value=>typeof value!=='string'||!relevantPage(value)||new URL(value).search||new URL(value).hash||value.length>1000))throw Error();
@@ -197,6 +197,8 @@ async function githubReporting(req:Request){
    output[i]={url,ownership:'accessible',property:site.siteUrl,permission:site.permissionLevel,sitemaps:{status:maps.status,entries:ownMaps},index:inspection};
   }
  }));
+ // URL inspection must not wait for unrelated fleet-wide revenue/search reports.
+ if(inspectionOnly)return reply({status:'ok',generatedAt:new Date().toISOString(),sites:output,inspectionMeaning:'Google indexed-version report for the supplied URL, not a live test or whole-site indexing guarantee'});
  const end=new Date(Date.now()-3*86400000).toISOString().slice(0,10),start=new Date(Date.now()-27*86400000).toISOString().slice(0,10);
  const report=await reportingData(start,end);
  const adsenseSites=await readAdSenseSites((url:string)=>googleRead(token,url),REPORTING_ADSENSE,relevantPage);

@@ -16,7 +16,7 @@ def identity():
     req=urllib.request.Request(endpoint,headers={'Authorization':'Bearer '+os.environ['ACTIONS_ID_TOKEN_REQUEST_TOKEN']})
     return json.loads(read(req))['value']
 def inspect(urls):
-    req=urllib.request.Request(BRIDGE,data=json.dumps({'urls':urls}).encode(),headers={'Authorization':'Bearer '+identity(),'Content-Type':'application/json'},method='POST')
+    req=urllib.request.Request(BRIDGE,data=json.dumps({'urls':urls,'inspectionOnly':True}).encode(),headers={'Authorization':'Bearer '+identity(),'Content-Type':'application/json'},method='POST')
     return json.loads(read(req,140))
 def main():
     xml=read(urllib.request.Request(SITEMAP,headers={'User-Agent':'ABREDA-IndexAudit/1.0'}))
