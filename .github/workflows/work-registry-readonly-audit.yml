@@ -14,7 +14,7 @@ on:
     workflows: ['Toolbox Google ownership and sitemap setup', 'Toolbox approved-site auto-deploy', 'Work twenty standalone preview sites', 'Work toolbox nine site builds and test deployments', 'Work shipping audit - tests and independent Pages deployment', 'Verify and deploy existing toolbox admin Worker']
     types: [completed]
 concurrency:
-  group: work-registry-readonly-audit
+  group: work-registry-readonly-audit-${{ github.event_name == 'workflow_run' && github.event.workflow_run.name || github.event_name }}
   cancel-in-progress: false
 permissions:
   contents: read

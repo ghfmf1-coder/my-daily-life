@@ -73,6 +73,14 @@ class HealthMonitoringTests(unittest.TestCase):
                 self.assertEqual(result['status'],'pass',result['failures'])
         self.assertEqual(mod.create_site_record(site)['url'],'https://abreda.com/tools/image-compress-lab/')
 
+    def test_hub_only_and_migrated_sources_have_real_monitor_targets(self):
+        items={x['slug']: x for x in mod.roster()}
+        self.assertEqual(items['base64-text-codec']['origin'], 'https://abreda.com')
+        self.assertEqual(items['base64-text-codec']['page_path'], '/tools/base64-text-codec/')
+        self.assertEqual(mod.representative_urls(items['aquarium-water-lab'])['en'],
+                         'https://abreda.com/en/tools/aquarium-water-lab/')
+        self.assertIn('.pages.dev', items['aquarium-water-lab']['origin'])
+
     def test_result_does_not_expose_user_records(self):
         s=mod.roster()[0]
         record=mod.create_site_record(s)

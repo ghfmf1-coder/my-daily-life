@@ -63,7 +63,7 @@ MIGRATED_TO_HUB = frozenset({'csv-column-extractor', 'csv-empty-row-remover',
 
 def representative_urls(site):
     """The fetch origin is an alias; metadata still names the public canonical."""
-    if site['slug'] in MIGRATED_TO_HUB or site['slug'] in NATIVE_ROOT_TOOLS:
+    if site.get('hub_canonical') or site['slug'] in MIGRATED_TO_HUB or site['slug'] in NATIVE_ROOT_TOOLS:
         return {'ko': 'https://abreda.com/tools/' + site['slug'] + '/',
                 'en': 'https://abreda.com/en/tools/' + site['slug'] + '/'}
     return {'ko': site['origin'] + '/', 'en': site['origin'] + '/en/'}
@@ -72,15 +72,19 @@ def roster():
     # Haruhankan is retired; its noindex pages are not active tool failures.
     sites = []
     for slug in site_list():
-        info, _ = read_site(slug)
+        info, directory = read_site(slug)
         if not info.get("approved"): continue
         url = (info.get("canonical_url") or f"https://{info['project']}.pages.dev").rstrip("/")
         host = urllib.parse.urlparse(url).hostname
         if host not in ALLOWED_HOSTS and host != f"{info['project']}.pages.dev" and host != info.get("domain"):
             raise ValueError("Unapproved monitored host: " + str(host))
-        if slug in NATIVE_ROOT_TOOLS:
+        hub_only = info.get("deploy_mode") == "hub_only" or slug in NATIVE_ROOT_TOOLS
+        source_page = SiteHTML()
+        source_page.feed((directory / 'public' / 'index.html').read_text(encoding='utf-8'))
+        hub_canonical = hub_only or source_page.canonical() == 'https://abreda.com/tools/' + slug + '/'
+        if hub_only:
             url="https://abreda.com"
-        sites.append({"page_path": "/tools/"+slug+"/" if slug in NATIVE_ROOT_TOOLS else "/", "slug": slug, "name": info["title"], "origin": url,
+        sites.append({"hub_canonical": hub_canonical, "page_path": "/tools/"+slug+"/" if hub_only else "/", "slug": slug, "name": info["title"], "origin": url,
                       "locales": info.get("locales", ["ko"]),
                       "internal": slug in ("toolbox-admin", "deployment-check"), "independent": False})
     return sites
@@ -204,7 +208,7 @@ def check_site(site):
     root = safe_page(site,result,site.get("page_path","/"),lang="ko",indexable=not is_internal)
     english = None
     if "en" in locales and not is_internal:
-        en_path="/en/tools/"+site["slug"]+"/" if site["slug"] in NATIVE_ROOT_TOOLS else "/en/"
+        en_path="/en/tools/"+site["slug"]+"/" if site.get("page_path", "/").startswith("/tools/") else "/en/"
         english = safe_page(site,result,en_path,lang="en",indexable=True)
     ico = check_file(site,result,"/favicon.ico",kind="icon")
     svg = check_file(site,result,"/icon.svg" if site["slug"] == "my-daily-life" else "/favicon.svg",kind="svg",necessary=False)
