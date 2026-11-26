@@ -2,7 +2,5 @@
   "operation": "reconcile_google_ownership_and_sitemaps",
   "requestId": "abreda-recovery-20261126",
   "paused": false,
-  "resubmitSitemaps": [
-    "https://abreda.com/"
-  ]
+  "resubmitSitemaps": []
 }
