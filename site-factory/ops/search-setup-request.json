@@ -1,5 +1,8 @@
 {
   "operation": "reconcile_google_ownership_and_sitemaps",
-  "requestId": "한국어-알림-연결-검증-20261023",
-  "paused": false
+  "requestId": "abreda-recovery-20261126",
+  "paused": false,
+  "resubmitSitemaps": [
+    "https://abreda.com/"
+  ]
 }
