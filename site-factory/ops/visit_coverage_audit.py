@@ -15,6 +15,13 @@ def request(url,method='GET',body=None,headers=None):
  data=None if body is None else json.dumps(body).encode()
  req=urllib.request.Request(url,data=data,headers=h,method=method)
  with urllib.request.urlopen(req,timeout=25) as r:return r.status,r.read(1800000).decode('utf-8','replace')
+def collector_from_script(code,expected=None):
+ # Only the two existing project collectors are permitted. Never guess from
+ # the registry origin or send diagnostics to an arbitrary script URL.
+ endpoints=set(re.findall(r"https://ytifxhpizractdeytrok[.]supabase[.]co/functions/v1/(toolbox-public-visit|toolbox-visit-collector)(?=[\"'\s?])",code))
+ if len(endpoints)!=1 or (expected is not None and endpoints!={expected}):raise ValueError('COLLECTOR_ENDPOINT_MISMATCH')
+ return next(iter(endpoints))
+def retired(url):return urllib.parse.urlsplit(url).hostname=='my-daily-life.pages.dev'
 def check(site):
  url=site['url'];sid=site['siteId'];row={'url':url,'siteId':sid}
  try:
@@ -24,9 +31,9 @@ def check(site):
   scripts=re.findall(r'<script[^>]*src=["\']([^"\']+)["\'][^>]*data-toolbox-site=["\']'+re.escape(sid),html)
   if not scripts:raise ValueError('TRACKING_SCRIPT_NOT_RESOLVED')
   script=urllib.parse.urljoin(url,scripts[0]);_,code=request(script)
-  collector=site.get('collector','toolbox-public-visit')
-  row['scriptAvailable']=collector in code
-  if not row['scriptAvailable']:raise ValueError('COLLECTOR_ENDPOINT_MISMATCH')
+  collector=collector_from_script(code,site.get('collector'))
+  row['scriptAvailable']=True
+  row['collector']=collector
   origin=urllib.parse.urlunsplit((*urllib.parse.urlsplit(url)[:2],'','',''))
   status,response=request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/'+collector,'POST',{'siteId':sid,'eventId':str(uuid.uuid4()),'isVisit':False,'dryRun':True},{'Origin':origin,'Content-Type':'text/plain'})
   reply=json.loads(response);row['collectorDiagnostic']=status==202 and reply.get('diagnostic') is True and reply.get('accepted') is False
@@ -43,11 +50,15 @@ def check(site):
  return row
 def main():
  sites=json.loads(MANIFEST.read_text())['sites']
+ excluded=[{'url':s['url'],'reason':'retired_service'} for s in sites if retired(s['url'])]
+ sites=[s for s in sites if not retired(s['url'])]
  snapshot=Path('/tmp/toolbox-performance-source.json')
  if snapshot.exists():
   known={s['url'] for s in sites}
   known_ids={s['siteId'] for s in sites}
   for entry in json.loads(snapshot.read_text())['entries']:
+   if retired(entry['url']):
+    excluded.append({'url':entry['url'],'reason':'retired_service'});continue
    if entry['url'] in known:continue
    _,html=request(entry['url']);found=re.search(r'data-toolbox-site=["\']([^"\']+)',html)
    if not found:raise ValueError('LEDGER_TRACKING_MISSING: '+entry['url'])
@@ -56,10 +67,11 @@ def main():
    # Verify the logical site only once to avoid a legacy-collector false alarm.
    if site_id in known_ids:continue
    known_ids.add(site_id)
-   sites.append({'siteId':site_id,'url':entry['url'],'collector':'toolbox-visit-collector'})
+   sites.append({'siteId':site_id,'url':entry['url']})
  with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:rows=list(pool.map(check,sites))
+ for row in excluded:print('VISIT_COVERAGE_EXCLUDED:',json.dumps(row))
  for row in rows:print('VISIT_COVERAGE:',json.dumps(row))
- report={'source':'production HTML and no-write diagnostic requests','sites':rows,'failed':[r['url'] for r in rows if r['status']!='ok']}
+ report={'source':'production HTML and no-write diagnostic requests','sites':rows,'excluded':excluded,'failed':[r['url'] for r in rows if r['status']!='ok']}
  Path('/tmp/toolbox-visit-coverage.json').write_text(json.dumps(report,indent=2))
  if report['failed']:raise SystemExit('VISIT_COVERAGE_INCOMPLETE')
  print('VISIT_COVERAGE_COMPLETE:',len(rows))
