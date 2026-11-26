@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-25T22:01:17.492274+00:00",
+  "checkedAt": "2026-11-26T04:27:07.916157+00:00",
   "limitations": [
     "IndexNow is not Search Advisor console registration or sitemap submission.",
     "No indexing guarantee.",
     "No private login session is stored."
   ],
-  "roots": 46,
+  "roots": 7,
   "sites": [
     {
       "canonicalTarget": "https://card-grading-lab.abreda.com/",
@@ -28,6 +28,435 @@
       "publication": "canonical_alias",
       "sitemapSubmission": "not_submitted",
       "url": "https://tb-watch-inspection-lab.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/aquarium-water-lab/",
+      "consoleStatus": "verified",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "submitted",
+      "url": "https://tb-aquarium-water-lab.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/camera-lens-check/",
+      "consoleStatus": "verified",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "submitted",
+      "url": "https://tb-camera-lens-check.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/comic-condition-lab/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-comic-condition-lab.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/gem-photo-inspection/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-gem-photo-inspection.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/keyboard-switch-diagnostics/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-keyboard-switch-diagnostics.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/sneaker-condition-lab/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-sneaker-condition-lab.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/subtitle-sync-studio/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-subtitle-sync-studio.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/used-car-inspection/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-used-car-inspection.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/vinyl-condition-lab/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-vinyl-condition-lab.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/audio-quality/",
+      "consoleStatus": "verified",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "submitted",
+      "url": "https://tb-audio-quality.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/certificate-batch/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-certificate-batch.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/class-schedule-check/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-class-schedule-check.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/detail-image-review/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-detail-image-review.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/dst-embroidery/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-dst-embroidery.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/epub-preflight/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-epub-preflight.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/event-seating/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-event-seating.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/exam-variants/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-exam-variants.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/inventory-diff/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-inventory-diff.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/invoice-reconcile/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-invoice-reconcile.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/lease-registry-diff/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-lease-registry-diff.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/move-evidence/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-move-evidence.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/moving-boxes/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-moving-boxes.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/option-combinations/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-option-combinations.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/pdf-preflight/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-pdf-preflight.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/photo-contact-sheet/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-photo-contact-sheet.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/photo-duplicates/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-photo-duplicates.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/purchase-three-way/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-purchase-three-way.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/question-similarity/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-question-similarity.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/shipping-audit/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-shipping-audit.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/shotlist-maker/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-shotlist-maker.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/show-cues/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-show-cues.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/silence-finder/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-silence-finder.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/static-site-check/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-static-site-check.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/survey-review/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-survey-review.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/svg-laser-check/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-svg-laser-check.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/tournament-maker/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-tournament-maker.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/trip-supplies/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-trip-supplies.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/video-delivery-check/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-video-delivery-check.pages.dev/"
+    },
+    {
+      "canonicalTarget": "https://abreda.com/tools/webtoon-preflight/",
+      "consoleStatus": "ownership_pending",
+      "indexNow": {
+        "status": "canonical_alias"
+      },
+      "indexing": "unknown",
+      "publication": "canonical_alias",
+      "sitemapSubmission": "not_submitted",
+      "url": "https://tb-webtoon-preflight.pages.dev/"
     },
     {
       "consoleStatus": "verified",
@@ -120,435 +549,6 @@
       "url": "https://stl-print-check.abreda.com/"
     },
     {
-      "consoleStatus": "verified",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "submitted",
-      "url": "https://tb-aquarium-water-lab.pages.dev/"
-    },
-    {
-      "consoleStatus": "verified",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "submitted",
-      "url": "https://tb-audio-quality.pages.dev/"
-    },
-    {
-      "consoleStatus": "verified",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "submitted",
-      "url": "https://tb-camera-lens-check.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-certificate-batch.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-class-schedule-check.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-comic-condition-lab.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-detail-image-review.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-dst-embroidery.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-epub-preflight.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-event-seating.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-exam-variants.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-gem-photo-inspection.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-inventory-diff.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-invoice-reconcile.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-keyboard-switch-diagnostics.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-lease-registry-diff.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-move-evidence.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-moving-boxes.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-option-combinations.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-pdf-preflight.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-photo-contact-sheet.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-photo-duplicates.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-purchase-three-way.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-question-similarity.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-shipping-audit.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-shotlist-maker.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-show-cues.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-silence-finder.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-sneaker-condition-lab.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-static-site-check.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-subtitle-sync-studio.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-survey-review.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-svg-laser-check.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-tournament-maker.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-trip-supplies.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-used-car-inspection.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-video-delivery-check.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-vinyl-condition-lab.pages.dev/"
-    },
-    {
-      "consoleStatus": "ownership_pending",
-      "error": "ValueError",
-      "indexNow": {
-        "status": "not_confirmed"
-      },
-      "indexing": "unknown",
-      "publication": "live",
-      "sitemapSubmission": "not_submitted",
-      "url": "https://tb-webtoon-preflight.pages.dev/"
-    },
-    {
       "consoleStatus": "ownership_pending",
       "indexNow": {
         "at": "2026-11-17T21:24:24.463141+00:00",
@@ -564,5 +564,5 @@
       "url": "https://watch-inspection-lab.abreda.com/"
     }
   ],
-  "sourceCommit": "04f9a11a42248a3d33331508aa92275e15fbe102"
+  "sourceCommit": "5a7dc6ac40463fe5ed943913666348b00f167dac"
 }
