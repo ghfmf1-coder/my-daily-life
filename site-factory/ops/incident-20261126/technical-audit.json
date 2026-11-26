@@ -1,0 +1,1949 @@
+{
+  "checkedAt": "2026-11-26T04:27:30.560793+00:00",
+  "inspectionSource": "https://github.com/ghfmf1-coder/my-daily-life/actions/runs/45543084281",
+  "inspectionCheckedAt": "2026-11-25T03:53:55.216129+00:00",
+  "sitemapUrlCount": 250,
+  "coverageStates": {
+    "Google에는 아직 알려지지 않은 URL입니다.": 33,
+    "제출되고 색인이 생성되었습니다.": 17,
+    "발견됨 - 현재 색인이 생성되지 않음": 38
+  },
+  "pages": [
+    {
+      "url": "https://abreda.com/blog/browser-localstorage-data-preservation/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/browser-localstorage-data-preservation/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/browser-localstorage-data-preservation/",
+        "en": "https://abreda.com/en/blog/browser-localstorage-data-preservation/",
+        "x-default": "https://abreda.com/blog/browser-localstorage-data-preservation/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/bulk-rename-photos-files/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T01:22:36Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/bulk-rename-photos-files/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/bulk-rename-photos-files/",
+        "en": "https://abreda.com/en/blog/bulk-rename-photos-files/",
+        "x-default": "https://abreda.com/blog/bulk-rename-photos-files/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/check-text-background-contrast/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/check-text-background-contrast/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/check-text-background-contrast/",
+        "en": "https://abreda.com/en/blog/check-text-background-contrast/",
+        "x-default": "https://abreda.com/blog/check-text-background-contrast/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/collect-group-food-orders/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/collect-group-food-orders/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/collect-group-food-orders/",
+        "en": "https://abreda.com/en/blog/collect-group-food-orders/",
+        "x-default": "https://abreda.com/blog/collect-group-food-orders/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/convert-unix-timestamps-utc-local/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/convert-unix-timestamps-utc-local/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/convert-unix-timestamps-utc-local/",
+        "en": "https://abreda.com/en/blog/convert-unix-timestamps-utc-local/",
+        "x-default": "https://abreda.com/blog/convert-unix-timestamps-utc-local/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/excel-csv-leading-zero-preservation/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/excel-csv-leading-zero-preservation/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/excel-csv-leading-zero-preservation/",
+        "en": "https://abreda.com/en/blog/excel-csv-leading-zero-preservation/",
+        "x-default": "https://abreda.com/blog/excel-csv-leading-zero-preservation/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/excel-csv-utf8-korean-garbled/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/excel-csv-utf8-korean-garbled/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/excel-csv-utf8-korean-garbled/",
+        "en": "https://abreda.com/en/blog/excel-csv-utf8-korean-garbled/",
+        "x-default": "https://abreda.com/blog/excel-csv-utf8-korean-garbled/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/excel-highlight-duplicates-before-removing/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/excel-highlight-duplicates-before-removing/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/excel-highlight-duplicates-before-removing/",
+        "en": "https://abreda.com/en/blog/excel-highlight-duplicates-before-removing/",
+        "x-default": "https://abreda.com/blog/excel-highlight-duplicates-before-removing/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/file-backup-321-strategy/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/file-backup-321-strategy/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/file-backup-321-strategy/",
+        "en": "https://abreda.com/en/blog/file-backup-321-strategy/",
+        "x-default": "https://abreda.com/blog/file-backup-321-strategy/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/fill-pdf-form-without-editing-original/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-17T12:34:53Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/fill-pdf-form-without-editing-original/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/fill-pdf-form-without-editing-original/",
+        "en": "https://abreda.com/en/blog/fill-pdf-form-without-editing-original/",
+        "x-default": "https://abreda.com/blog/fill-pdf-form-without-editing-original/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/find-repeated-phrases-in-manuscript/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/find-repeated-phrases-in-manuscript/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/find-repeated-phrases-in-manuscript/",
+        "en": "https://abreda.com/en/blog/find-repeated-phrases-in-manuscript/",
+        "x-default": "https://abreda.com/blog/find-repeated-phrases-in-manuscript/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/fix-csv-empty-rows/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/fix-csv-empty-rows/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/fix-csv-empty-rows/",
+        "en": "https://abreda.com/en/blog/fix-csv-empty-rows/",
+        "x-default": "https://abreda.com/blog/fix-csv-empty-rows/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/fix-delayed-subtitle-timing/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-17T18:03:30Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/fix-delayed-subtitle-timing/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/fix-delayed-subtitle-timing/",
+        "en": "https://abreda.com/en/blog/fix-delayed-subtitle-timing/",
+        "x-default": "https://abreda.com/blog/fix-delayed-subtitle-timing/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/generate-random-password-safely/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/generate-random-password-safely/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/generate-random-password-safely/",
+        "en": "https://abreda.com/en/blog/generate-random-password-safely/",
+        "x-default": "https://abreda.com/blog/generate-random-password-safely/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/gmail-large-attachment-drive-link/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T01:10:06Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/gmail-large-attachment-drive-link/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/gmail-large-attachment-drive-link/",
+        "en": "https://abreda.com/en/blog/gmail-large-attachment-drive-link/",
+        "x-default": "https://abreda.com/blog/gmail-large-attachment-drive-link/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/google-drive-restricted-sharing-guide/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/google-drive-restricted-sharing-guide/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/google-drive-restricted-sharing-guide/",
+        "en": "https://abreda.com/en/blog/google-drive-restricted-sharing-guide/",
+        "x-default": "https://abreda.com/blog/google-drive-restricted-sharing-guide/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/google-passkey-shared-device-warning/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/google-passkey-shared-device-warning/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/google-passkey-shared-device-warning/",
+        "en": "https://abreda.com/en/blog/google-passkey-shared-device-warning/",
+        "x-default": "https://abreda.com/blog/google-passkey-shared-device-warning/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/guest-wifi-qr-card/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/guest-wifi-qr-card/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guest-wifi-qr-card/",
+        "en": "https://abreda.com/en/blog/guest-wifi-qr-card/",
+        "x-default": "https://abreda.com/blog/guest-wifi-qr-card/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/guide-base64-text-codec/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/guide-base64-text-codec/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-base64-text-codec/",
+        "en": "https://abreda.com/en/blog/guide-base64-text-codec/",
+        "x-default": "https://abreda.com/blog/guide-base64-text-codec/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/guide-json-pretty-validator/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/guide-json-pretty-validator/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-json-pretty-validator/",
+        "en": "https://abreda.com/en/blog/guide-json-pretty-validator/",
+        "x-default": "https://abreda.com/blog/guide-json-pretty-validator/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/guide-line-sort-deduplicate/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/guide-line-sort-deduplicate/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-line-sort-deduplicate/",
+        "en": "https://abreda.com/en/blog/guide-line-sort-deduplicate/",
+        "x-default": "https://abreda.com/blog/guide-line-sort-deduplicate/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/guide-markdown-preview-lite/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/guide-markdown-preview-lite/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-markdown-preview-lite/",
+        "en": "https://abreda.com/en/blog/guide-markdown-preview-lite/",
+        "x-default": "https://abreda.com/blog/guide-markdown-preview-lite/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/guide-text-case-converter/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/guide-text-case-converter/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-text-case-converter/",
+        "en": "https://abreda.com/en/blog/guide-text-case-converter/",
+        "x-default": "https://abreda.com/blog/guide-text-case-converter/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/guide-text-diff-checker/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/guide-text-diff-checker/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-text-diff-checker/",
+        "en": "https://abreda.com/en/blog/guide-text-diff-checker/",
+        "x-default": "https://abreda.com/blog/guide-text-diff-checker/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/guide-url-component-codec/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/guide-url-component-codec/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-url-component-codec/",
+        "en": "https://abreda.com/en/blog/guide-url-component-codec/",
+        "x-default": "https://abreda.com/blog/guide-url-component-codec/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/guide-word-character-counter/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/guide-word-character-counter/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-word-character-counter/",
+        "en": "https://abreda.com/en/blog/guide-word-character-counter/",
+        "x-default": "https://abreda.com/blog/guide-word-character-counter/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/hide-private-info-in-photos/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T00:57:36Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/hide-private-info-in-photos/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/hide-private-info-in-photos/",
+        "en": "https://abreda.com/en/blog/hide-private-info-in-photos/",
+        "x-default": "https://abreda.com/blog/hide-private-info-in-photos/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/iphone-photo-location-privacy/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T00:45:06Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/iphone-photo-location-privacy/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/iphone-photo-location-privacy/",
+        "en": "https://abreda.com/en/blog/iphone-photo-location-privacy/",
+        "x-default": "https://abreda.com/blog/iphone-photo-location-privacy/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/jpg-png-webp-which-format/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/jpg-png-webp-which-format/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/jpg-png-webp-which-format/",
+        "en": "https://abreda.com/en/blog/jpg-png-webp-which-format/",
+        "x-default": "https://abreda.com/blog/jpg-png-webp-which-format/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/measure-repeating-task-time/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/measure-repeating-task-time/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/measure-repeating-task-time/",
+        "en": "https://abreda.com/en/blog/measure-repeating-task-time/",
+        "x-default": "https://abreda.com/blog/measure-repeating-task-time/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/merge-csv-with-different-columns/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/merge-csv-with-different-columns/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/merge-csv-with-different-columns/",
+        "en": "https://abreda.com/en/blog/merge-csv-with-different-columns/",
+        "x-default": "https://abreda.com/blog/merge-csv-with-different-columns/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/pdf-black-box-not-redaction/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/pdf-black-box-not-redaction/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/pdf-black-box-not-redaction/",
+        "en": "https://abreda.com/en/blog/pdf-black-box-not-redaction/",
+        "x-default": "https://abreda.com/blog/pdf-black-box-not-redaction/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/pdf-merge-reorder-guide/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/pdf-merge-reorder-guide/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/pdf-merge-reorder-guide/",
+        "en": "https://abreda.com/en/blog/pdf-merge-reorder-guide/",
+        "x-default": "https://abreda.com/blog/pdf-merge-reorder-guide/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/photo-file-size-guide/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T00:32:36Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/photo-file-size-guide/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/photo-file-size-guide/",
+        "en": "https://abreda.com/en/blog/photo-file-size-guide/",
+        "x-default": "https://abreda.com/blog/photo-file-size-guide/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/print-a4-labels-to-correct-size/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/print-a4-labels-to-correct-size/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/print-a4-labels-to-correct-size/",
+        "en": "https://abreda.com/en/blog/print-a4-labels-to-correct-size/",
+        "x-default": "https://abreda.com/blog/print-a4-labels-to-correct-size/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/recurring-bank-payments-guide/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/recurring-bank-payments-guide/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/recurring-bank-payments-guide/",
+        "en": "https://abreda.com/en/blog/recurring-bank-payments-guide/",
+        "x-default": "https://abreda.com/blog/recurring-bank-payments-guide/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/scan-qr-code-links-safely/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T00:20:07Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/scan-qr-code-links-safely/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/scan-qr-code-links-safely/",
+        "en": "https://abreda.com/en/blog/scan-qr-code-links-safely/",
+        "x-default": "https://abreda.com/blog/scan-qr-code-links-safely/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/secondhand-handover-items-checklist/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/secondhand-handover-items-checklist/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/secondhand-handover-items-checklist/",
+        "en": "https://abreda.com/en/blog/secondhand-handover-items-checklist/",
+        "x-default": "https://abreda.com/blog/secondhand-handover-items-checklist/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/seller-item-profit-guide/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/seller-item-profit-guide/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/seller-item-profit-guide/",
+        "en": "https://abreda.com/en/blog/seller-item-profit-guide/",
+        "x-default": "https://abreda.com/blog/seller-item-profit-guide/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/shift-pattern-to-calendar/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T00:20:06Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/shift-pattern-to-calendar/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/shift-pattern-to-calendar/",
+        "en": "https://abreda.com/en/blog/shift-pattern-to-calendar/",
+        "x-default": "https://abreda.com/blog/shift-pattern-to-calendar/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/straighten-document-photo/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/straighten-document-photo/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/straighten-document-photo/",
+        "en": "https://abreda.com/en/blog/straighten-document-photo/",
+        "x-default": "https://abreda.com/blog/straighten-document-photo/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/track-return-and-warranty-deadlines/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/track-return-and-warranty-deadlines/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/track-return-and-warranty-deadlines/",
+        "en": "https://abreda.com/en/blog/track-return-and-warranty-deadlines/",
+        "x-default": "https://abreda.com/blog/track-return-and-warranty-deadlines/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/webnovel-episode-foreshadowing-tracker/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/webnovel-episode-foreshadowing-tracker/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/webnovel-episode-foreshadowing-tracker/",
+        "en": "https://abreda.com/en/blog/webnovel-episode-foreshadowing-tracker/",
+        "x-default": "https://abreda.com/blog/webnovel-episode-foreshadowing-tracker/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/blog/write-alt-text-for-website-images/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/blog/write-alt-text-for-website-images/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/write-alt-text-for-website-images/",
+        "en": "https://abreda.com/en/blog/write-alt-text-for-website-images/",
+        "x-default": "https://abreda.com/blog/write-alt-text-for-website-images/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/browser-localstorage-data-preservation/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/browser-localstorage-data-preservation/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/browser-localstorage-data-preservation/",
+        "en": "https://abreda.com/en/blog/browser-localstorage-data-preservation/",
+        "x-default": "https://abreda.com/blog/browser-localstorage-data-preservation/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/bulk-rename-photos-files/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T02:00:06Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/bulk-rename-photos-files/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/bulk-rename-photos-files/",
+        "en": "https://abreda.com/en/blog/bulk-rename-photos-files/",
+        "x-default": "https://abreda.com/blog/bulk-rename-photos-files/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/check-text-background-contrast/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/check-text-background-contrast/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/check-text-background-contrast/",
+        "en": "https://abreda.com/en/blog/check-text-background-contrast/",
+        "x-default": "https://abreda.com/blog/check-text-background-contrast/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/collect-group-food-orders/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/collect-group-food-orders/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/collect-group-food-orders/",
+        "en": "https://abreda.com/en/blog/collect-group-food-orders/",
+        "x-default": "https://abreda.com/blog/collect-group-food-orders/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/convert-unix-timestamps-utc-local/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/convert-unix-timestamps-utc-local/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/convert-unix-timestamps-utc-local/",
+        "en": "https://abreda.com/en/blog/convert-unix-timestamps-utc-local/",
+        "x-default": "https://abreda.com/blog/convert-unix-timestamps-utc-local/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/excel-csv-leading-zero-preservation/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/excel-csv-leading-zero-preservation/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/excel-csv-leading-zero-preservation/",
+        "en": "https://abreda.com/en/blog/excel-csv-leading-zero-preservation/",
+        "x-default": "https://abreda.com/blog/excel-csv-leading-zero-preservation/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/excel-csv-utf8-korean-garbled/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/excel-csv-utf8-korean-garbled/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/excel-csv-utf8-korean-garbled/",
+        "en": "https://abreda.com/en/blog/excel-csv-utf8-korean-garbled/",
+        "x-default": "https://abreda.com/blog/excel-csv-utf8-korean-garbled/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/excel-highlight-duplicates-before-removing/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/excel-highlight-duplicates-before-removing/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/excel-highlight-duplicates-before-removing/",
+        "en": "https://abreda.com/en/blog/excel-highlight-duplicates-before-removing/",
+        "x-default": "https://abreda.com/blog/excel-highlight-duplicates-before-removing/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/file-backup-321-strategy/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/file-backup-321-strategy/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/file-backup-321-strategy/",
+        "en": "https://abreda.com/en/blog/file-backup-321-strategy/",
+        "x-default": "https://abreda.com/blog/file-backup-321-strategy/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/fill-pdf-form-without-editing-original/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-18T01:35:06Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/fill-pdf-form-without-editing-original/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/fill-pdf-form-without-editing-original/",
+        "en": "https://abreda.com/en/blog/fill-pdf-form-without-editing-original/",
+        "x-default": "https://abreda.com/blog/fill-pdf-form-without-editing-original/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/find-repeated-phrases-in-manuscript/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/find-repeated-phrases-in-manuscript/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/find-repeated-phrases-in-manuscript/",
+        "en": "https://abreda.com/en/blog/find-repeated-phrases-in-manuscript/",
+        "x-default": "https://abreda.com/blog/find-repeated-phrases-in-manuscript/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/fix-csv-empty-rows/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-17T18:04:31Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/fix-csv-empty-rows/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/fix-csv-empty-rows/",
+        "en": "https://abreda.com/en/blog/fix-csv-empty-rows/",
+        "x-default": "https://abreda.com/blog/fix-csv-empty-rows/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/fix-delayed-subtitle-timing/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-22T22:19:11Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/fix-delayed-subtitle-timing/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/fix-delayed-subtitle-timing/",
+        "en": "https://abreda.com/en/blog/fix-delayed-subtitle-timing/",
+        "x-default": "https://abreda.com/blog/fix-delayed-subtitle-timing/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/generate-random-password-safely/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/generate-random-password-safely/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/generate-random-password-safely/",
+        "en": "https://abreda.com/en/blog/generate-random-password-safely/",
+        "x-default": "https://abreda.com/blog/generate-random-password-safely/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/gmail-large-attachment-drive-link/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/gmail-large-attachment-drive-link/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/gmail-large-attachment-drive-link/",
+        "en": "https://abreda.com/en/blog/gmail-large-attachment-drive-link/",
+        "x-default": "https://abreda.com/blog/gmail-large-attachment-drive-link/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/google-drive-restricted-sharing-guide/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/google-drive-restricted-sharing-guide/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/google-drive-restricted-sharing-guide/",
+        "en": "https://abreda.com/en/blog/google-drive-restricted-sharing-guide/",
+        "x-default": "https://abreda.com/blog/google-drive-restricted-sharing-guide/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/google-passkey-shared-device-warning/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/google-passkey-shared-device-warning/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/google-passkey-shared-device-warning/",
+        "en": "https://abreda.com/en/blog/google-passkey-shared-device-warning/",
+        "x-default": "https://abreda.com/blog/google-passkey-shared-device-warning/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/guest-wifi-qr-card/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/guest-wifi-qr-card/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guest-wifi-qr-card/",
+        "en": "https://abreda.com/en/blog/guest-wifi-qr-card/",
+        "x-default": "https://abreda.com/blog/guest-wifi-qr-card/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/guide-base64-text-codec/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/guide-base64-text-codec/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-base64-text-codec/",
+        "en": "https://abreda.com/en/blog/guide-base64-text-codec/",
+        "x-default": "https://abreda.com/blog/guide-base64-text-codec/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/guide-json-pretty-validator/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/guide-json-pretty-validator/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-json-pretty-validator/",
+        "en": "https://abreda.com/en/blog/guide-json-pretty-validator/",
+        "x-default": "https://abreda.com/blog/guide-json-pretty-validator/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/guide-line-sort-deduplicate/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/guide-line-sort-deduplicate/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-line-sort-deduplicate/",
+        "en": "https://abreda.com/en/blog/guide-line-sort-deduplicate/",
+        "x-default": "https://abreda.com/blog/guide-line-sort-deduplicate/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/guide-markdown-preview-lite/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/guide-markdown-preview-lite/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-markdown-preview-lite/",
+        "en": "https://abreda.com/en/blog/guide-markdown-preview-lite/",
+        "x-default": "https://abreda.com/blog/guide-markdown-preview-lite/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/guide-text-case-converter/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/guide-text-case-converter/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-text-case-converter/",
+        "en": "https://abreda.com/en/blog/guide-text-case-converter/",
+        "x-default": "https://abreda.com/blog/guide-text-case-converter/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/guide-text-diff-checker/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/guide-text-diff-checker/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-text-diff-checker/",
+        "en": "https://abreda.com/en/blog/guide-text-diff-checker/",
+        "x-default": "https://abreda.com/blog/guide-text-diff-checker/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/guide-url-component-codec/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/guide-url-component-codec/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-url-component-codec/",
+        "en": "https://abreda.com/en/blog/guide-url-component-codec/",
+        "x-default": "https://abreda.com/blog/guide-url-component-codec/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/guide-word-character-counter/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/guide-word-character-counter/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/guide-word-character-counter/",
+        "en": "https://abreda.com/en/blog/guide-word-character-counter/",
+        "x-default": "https://abreda.com/blog/guide-word-character-counter/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/hide-private-info-in-photos/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-22T17:22:12Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/hide-private-info-in-photos/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/hide-private-info-in-photos/",
+        "en": "https://abreda.com/en/blog/hide-private-info-in-photos/",
+        "x-default": "https://abreda.com/blog/hide-private-info-in-photos/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/iphone-photo-location-privacy/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-20T21:32:17Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/iphone-photo-location-privacy/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/iphone-photo-location-privacy/",
+        "en": "https://abreda.com/en/blog/iphone-photo-location-privacy/",
+        "x-default": "https://abreda.com/blog/iphone-photo-location-privacy/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/jpg-png-webp-which-format/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/jpg-png-webp-which-format/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/jpg-png-webp-which-format/",
+        "en": "https://abreda.com/en/blog/jpg-png-webp-which-format/",
+        "x-default": "https://abreda.com/blog/jpg-png-webp-which-format/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/measure-repeating-task-time/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/measure-repeating-task-time/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/measure-repeating-task-time/",
+        "en": "https://abreda.com/en/blog/measure-repeating-task-time/",
+        "x-default": "https://abreda.com/blog/measure-repeating-task-time/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/merge-csv-with-different-columns/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/merge-csv-with-different-columns/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/merge-csv-with-different-columns/",
+        "en": "https://abreda.com/en/blog/merge-csv-with-different-columns/",
+        "x-default": "https://abreda.com/blog/merge-csv-with-different-columns/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/pdf-black-box-not-redaction/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/pdf-black-box-not-redaction/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/pdf-black-box-not-redaction/",
+        "en": "https://abreda.com/en/blog/pdf-black-box-not-redaction/",
+        "x-default": "https://abreda.com/blog/pdf-black-box-not-redaction/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/pdf-merge-reorder-guide/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-17T12:14:13Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/pdf-merge-reorder-guide/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/pdf-merge-reorder-guide/",
+        "en": "https://abreda.com/en/blog/pdf-merge-reorder-guide/",
+        "x-default": "https://abreda.com/blog/pdf-merge-reorder-guide/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/photo-file-size-guide/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/photo-file-size-guide/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/photo-file-size-guide/",
+        "en": "https://abreda.com/en/blog/photo-file-size-guide/",
+        "x-default": "https://abreda.com/blog/photo-file-size-guide/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/print-a4-labels-to-correct-size/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/print-a4-labels-to-correct-size/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/print-a4-labels-to-correct-size/",
+        "en": "https://abreda.com/en/blog/print-a4-labels-to-correct-size/",
+        "x-default": "https://abreda.com/blog/print-a4-labels-to-correct-size/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/recurring-bank-payments-guide/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/recurring-bank-payments-guide/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/recurring-bank-payments-guide/",
+        "en": "https://abreda.com/en/blog/recurring-bank-payments-guide/",
+        "x-default": "https://abreda.com/blog/recurring-bank-payments-guide/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/scan-qr-code-links-safely/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/scan-qr-code-links-safely/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/scan-qr-code-links-safely/",
+        "en": "https://abreda.com/en/blog/scan-qr-code-links-safely/",
+        "x-default": "https://abreda.com/blog/scan-qr-code-links-safely/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/secondhand-handover-items-checklist/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/secondhand-handover-items-checklist/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/secondhand-handover-items-checklist/",
+        "en": "https://abreda.com/en/blog/secondhand-handover-items-checklist/",
+        "x-default": "https://abreda.com/blog/secondhand-handover-items-checklist/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/seller-item-profit-guide/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "발견됨 - 현재 색인이 생성되지 않음",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/seller-item-profit-guide/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/seller-item-profit-guide/",
+        "en": "https://abreda.com/en/blog/seller-item-profit-guide/",
+        "x-default": "https://abreda.com/blog/seller-item-profit-guide/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/shift-pattern-to-calendar/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "PASS",
+        "coverageState": "제출되고 색인이 생성되었습니다.",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "pageFetchState": "SUCCESSFUL",
+        "lastCrawlTime": "2026-11-21T02:32:15Z"
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/shift-pattern-to-calendar/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/shift-pattern-to-calendar/",
+        "en": "https://abreda.com/en/blog/shift-pattern-to-calendar/",
+        "x-default": "https://abreda.com/blog/shift-pattern-to-calendar/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/straighten-document-photo/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/straighten-document-photo/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/straighten-document-photo/",
+        "en": "https://abreda.com/en/blog/straighten-document-photo/",
+        "x-default": "https://abreda.com/blog/straighten-document-photo/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/track-return-and-warranty-deadlines/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/track-return-and-warranty-deadlines/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/track-return-and-warranty-deadlines/",
+        "en": "https://abreda.com/en/blog/track-return-and-warranty-deadlines/",
+        "x-default": "https://abreda.com/blog/track-return-and-warranty-deadlines/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/webnovel-episode-foreshadowing-tracker/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/webnovel-episode-foreshadowing-tracker/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/webnovel-episode-foreshadowing-tracker/",
+        "en": "https://abreda.com/en/blog/webnovel-episode-foreshadowing-tracker/",
+        "x-default": "https://abreda.com/blog/webnovel-episode-foreshadowing-tracker/"
+      },
+      "issues": []
+    },
+    {
+      "url": "https://abreda.com/en/blog/write-alt-text-for-website-images/",
+      "inspection": {
+        "status": "ok",
+        "verdict": "NEUTRAL",
+        "coverageState": "Google에는 아직 알려지지 않은 URL입니다.",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      "http": 200,
+      "canonical": [
+        "https://abreda.com/en/blog/write-alt-text-for-website-images/"
+      ],
+      "hreflang": {
+        "ko": "https://abreda.com/blog/write-alt-text-for-website-images/",
+        "en": "https://abreda.com/en/blog/write-alt-text-for-website-images/",
+        "x-default": "https://abreda.com/blog/write-alt-text-for-website-images/"
+      },
+      "issues": []
+    }
+  ]
+}

@@ -161,8 +161,20 @@ jobs:
           identity=read_json(urllib.request.Request(request_url,headers={'Authorization':'Bearer '+os.environ['ACTIONS_ID_TOKEN_REQUEST_TOKEN']}))
           identity_token=identity.get('value')
           if not identity_token:raise SystemExit('GITHUB_OIDC_UNAVAILABLE')
-          payload=open('/tmp/toolbox-public-urls.json','rb').read()
-          data=read_json(urllib.request.Request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-google-ads-oauth/reporting-github-data',data=payload,headers={'Authorization':'Bearer '+identity_token,'Content-Type':'application/json'},method='POST'),timeout=140)
+          urls=json.load(open('/tmp/toolbox-public-urls.json'))['urls']
+          def bridge(payload):
+              return read_json(urllib.request.Request('https://ytifxhpizractdeytrok.supabase.co/functions/v1/toolbox-google-ads-oauth/reporting-github-data',data=json.dumps(payload).encode(),headers={'Authorization':'Bearer '+identity_token,'Content-Type':'application/json'},method='POST'),timeout=140)
+          # Preserve every existing check, but bound each Edge request. Do not
+          # repeat fleet-wide reports for each URL Inspection batch.
+          data=bridge({'urls':[]})
+          sites=[]
+          for offset in range(0,len(urls),12):
+              batch=urls[offset:offset+12]
+              result=bridge({'urls':batch,'inspectionOnly':True})
+              received=result.get('sites',[])
+              if result.get('status')!='ok' or {r.get('url') for r in received}!=set(batch):raise SystemExit('GOOGLE_INSPECTION_BATCH_INCOMPLETE')
+              sites.extend(received)
+          data['sites']=sites
           if data.get('status')!='ok':raise SystemExit('GOOGLE_LIVE_CHECK_FAILED')
           print('GOOGLE_LIVE_OAUTH_AND_SITES_API: OK')
           print('GOOGLE_GRANTED_CAPABILITIES:',json.dumps(data.get('capabilities',{}),sort_keys=True))

@@ -165,7 +165,17 @@ def main():
             if valid:ready.append(url)
             else:
                 failure={'url':url,'status':'live_sitemap_missing_or_invalid'};emit('SITEMAP',failure);failures.append(failure)
-    submitted=bridge('sitemaps',ready)
+    control_path=ROOT/'site-factory/ops/search-setup-request.json'
+    control=json.loads(control_path.read_text())
+    requested=set(control.get('resubmitSitemaps',[]))
+    # Explicit, one-shot resubmission uses the existing authenticated setup path.
+    forced=[u for u in ready if u in requested]
+    submitted=bridge('sitemaps',[u for u in ready if u not in requested])+bridge('resubmit_sitemaps',forced)
+    completed={r['url'] for r in submitted if r.get('status')=='submitted'}
+    if requested & completed:
+        control['resubmitSitemaps']=sorted(requested-completed)
+        control_path.write_text(json.dumps(control,ensure_ascii=False,indent=2)+'\n')
+        persist([control_path])
     for row in submitted:
         emit('SITEMAP',row)
         if row['status'] not in ('submitted','already_submitted'):failures.append(row)

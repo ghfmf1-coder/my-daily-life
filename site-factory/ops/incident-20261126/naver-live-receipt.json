@@ -1,0 +1,13 @@
+{
+  "url": "https://abreda.com/",
+  "consoleStatus": "verified",
+  "sitemapSubmission": "submitted",
+  "indexing": "unknown",
+  "sitemapFile": "valid",
+  "robotsSitemap": "present",
+  "indexNow": {
+    "status": "received",
+    "http": 200,
+    "count": 250
+  }
+}

@@ -35,3 +35,18 @@ class DomainRoutePreservation(unittest.TestCase):
         self.assertEqual(updated['tb-example']['url'],routes[0]['ko_url'])
         self.assertEqual(updated['tb-example']['origins'],['https://tb-example.pages.dev'])
         self.assertEqual(updated['unrelated']['url'],'https://other.example/')
+
+class MigratedDomainTests(unittest.TestCase):
+    def test_real_routes_preserve_history_and_require_hub_and_project(self):
+        import json
+        from naver_search_setup import ROOT
+        route=json.loads((ROOT/'site-factory/ops/domain-routes.json').read_text())['routes'][0]
+        entries={route['old_url']:route['project'],'https://abreda.com/':'tb-toolbox-hub'}
+        before=entries.copy()
+        active,aliases=canonical_entries(entries)
+        self.assertEqual(entries,before)
+        self.assertEqual(aliases[route['old_url']],route['ko_url'])
+        self.assertEqual(active,{'https://abreda.com/':'tb-toolbox-hub'})
+        self.assertIn(route['old_url'],canonical_entries({route['old_url']:route['project']})[0])
+        entries[route['old_url']]='unrelated-project'
+        self.assertIn(route['old_url'],canonical_entries(entries)[0])

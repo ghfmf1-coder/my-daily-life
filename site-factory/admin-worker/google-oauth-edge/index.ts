@@ -223,7 +223,7 @@ async function githubSetup(req:Request){
  let urls:string[],action:string;
  try{
   const input=JSON.parse(raw);action=input.action;
-  if(!['tokens','verify','sitemaps'].includes(action)||!Array.isArray(input.urls)||input.urls.length>100)throw Error();
+  if(!['tokens','verify','sitemaps','resubmit_sitemaps'].includes(action)||!Array.isArray(input.urls)||input.urls.length>100)throw Error();
   urls=[...new Set(input.urls)] as string[];
   if(urls.some(v=>typeof v!=='string'||!relevantPage(v)||new URL(v).pathname!=='/'||new URL(v).search||new URL(v).hash||v.length>300))throw Error();
  }catch{return reply({error:'invalid_setup_request'},400)}
@@ -257,9 +257,12 @@ async function githubSetup(req:Request){
      if(!existing){rows[i]={url,status:'property_access_missing'};continue}
      const sitemap=new URL('/sitemap.xml',url).toString();
      const listed=await api('https://www.googleapis.com/webmasters/v3/sites/'+encodeURIComponent(existing.siteUrl)+'/sitemaps');
-     if((listed.sitemap||[]).some((s:any)=>s.path===sitemap)){rows[i]={url,status:'already_submitted',sitemap};continue}
-     await api('https://www.googleapis.com/webmasters/v3/sites/'+encodeURIComponent(existing.siteUrl)+'/sitemaps/'+encodeURIComponent(sitemap),'PUT');
-     rows[i]={url,status:'submitted',sitemap};
+     const endpoint='https://www.googleapis.com/webmasters/v3/sites/'+encodeURIComponent(existing.siteUrl)+'/sitemaps/'+encodeURIComponent(sitemap);
+     const previous=(listed.sitemap||[]).find((s:any)=>s.path===sitemap);
+     if(previous&&action!=='resubmit_sitemaps'){rows[i]={url,status:'already_submitted',sitemap,lastSubmitted:previous.lastSubmitted,lastDownloaded:previous.lastDownloaded,isPending:previous.isPending,errors:previous.errors,warnings:previous.warnings};continue}
+     await api(endpoint,'PUT');
+     const receipt=await api(endpoint);
+     rows[i]={url,status:receipt.path===sitemap?'submitted':'submission_not_confirmed',sitemap,lastSubmitted:receipt.lastSubmitted,lastDownloaded:receipt.lastDownloaded,isPending:receipt.isPending,errors:receipt.errors,warnings:receipt.warnings};
     }
    }catch(error){const e=error as any;rows[i]={url,status:'error',httpStatus:e.httpStatus||null,apiStatus:e.apiStatus||'REQUEST_FAILED',serviceDisabled:!!e.serviceDisabled,activationUrl:e.activationUrl||null,apiService:e.apiService||null,apiReasons:e.apiReasons||[],quota:e.quota||null}}
   }
