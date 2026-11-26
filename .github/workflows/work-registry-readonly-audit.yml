@@ -101,12 +101,15 @@ jobs:
           print('EXPECTED_NEW_PUBLIC_SITES:',len(new_wanted))
           print('ALL_EXPECTED_LINKED_PROJECTS:',len(wanted-missing))
           print('MISSING_PROJECT_NAMES:',','.join(sorted(missing)) or 'NONE')
-          state=call('/d1/database/'+db['uuid']+'/query',{'sql':'SELECT source,last_check_at,status FROM report_sync ORDER BY source'})
+          state=call('/d1/database/'+db['uuid']+'/query',{'sql':'SELECT source,last_check_at,status,detail FROM report_sync ORDER BY source'})
           if not state.get('success'):raise SystemExit('SYNC_STATUS_QUERY_FAILED')
           sync_rows=(state.get('result') or [{}])[0].get('results',[])
           sync_failures=[]
           for row in sync_rows:
               print('SYNC_SOURCE_STATUS:',json.dumps({k:row.get(k) for k in ('source','last_check_at','status')},ensure_ascii=True))
+              detail=str(row.pop('detail',''))
+              diagnostic={'source':row.get('source'),'httpCodes':re.findall(r'HTTP[ _]+([0-9]{3})',detail),'timeout':bool(re.search(r'timeout|timed out|aborted',detail,re.I)),'invalidUrl':'Invalid URL' in detail,'limitReached':'limit reached' in detail,'credentialMissing':'credential missing' in detail}
+              print('SYNC_SOURCE_DIAGNOSTIC:',json.dumps(diagnostic))
               source=row.get('source')
               if source in ('CATALOG','GSC'):
                   try:
@@ -145,6 +148,7 @@ jobs:
           with open('/tmp/toolbox-performance-source.json','w') as f:json.dump(snapshot,f)
           PY
       - name: Verify live Google connection ownership sitemaps and indexed URL reports
+        if: ${{ !cancelled() }}
         run: |
           python3 - <<'PY'
           import os,json,urllib.request,urllib.error,urllib.parse
@@ -167,6 +171,9 @@ jobs:
           for site in data.get('sites',[]):print('GOOGLE_SITE_AUDIT:',json.dumps(site,ensure_ascii=True))
           gsc=data.get('gsc') or {}
           print('GOOGLE_LIVE_SEARCH_REPORT_STATUS:',gsc.get('status','unknown'))
+          import re
+          detail=str(gsc.get('detail',''))
+          print('GOOGLE_SEARCH_DIAGNOSTIC:',json.dumps({'httpCodes':re.findall(r'HTTP[ _]+([0-9]{3})',detail),'timeout':bool(re.search(r'timeout|timed out|aborted',detail,re.I)),'invalidUrl':'Invalid URL' in detail}))
           print('GOOGLE_LIVE_SEARCH_PERIOD:',data.get('start'),data.get('end'))
           for row in gsc.get('rows',[]):print('GOOGLE_LIVE_PAGE_METRICS:',json.dumps({k:row.get(k) for k in ('date','url','clicks','impressions','property')},ensure_ascii=True))
           missing=[s['url'] for s in data.get('sites',[]) if s.get('ownership')!='accessible']
