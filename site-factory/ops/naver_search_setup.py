@@ -51,6 +51,16 @@ def canonical_entries(entries):
         alias='https://'+project+'.pages.dev/'
         if root!=alias and root in entries and alias in entries and entries[root]==entries[alias]==project:
             aliases[alias]=root
+    # Reviewed domain integration maps the old root to a path in the hub.
+    # The historical root's sitemap now contains hub URLs, so it cannot be
+    # submitted under the old host's IndexNow key. Preserve all receipts.
+    routes=json.loads((ROOT/'site-factory/ops/domain-routes.json').read_text())['routes']
+    for route in routes:
+        old=route['old_url'].rstrip('/')+'/'
+        target=route['ko_url']
+        root=urllib.parse.urlunsplit((*urllib.parse.urlsplit(target)[:2],'/','',''))
+        if old in entries and entries[old]==route['project'] and root in entries:
+            aliases[old]=target
     return {u:p for u,p in entries.items() if u not in aliases},aliases
 
 def live_ready(url,row):
