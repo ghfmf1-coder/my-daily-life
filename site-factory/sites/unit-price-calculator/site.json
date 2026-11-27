@@ -1,0 +1,17 @@
+{
+  "slug": "unit-price-calculator",
+  "project": "tb-unit-price-calculator",
+  "title": "단위가격 비교 계산기",
+  "description": "상품의 총가격과 내용량을 입력해 100g·100ml·개당 가격을 비교하세요. 묶음상품은 전체 내용량을 입력합니다.",
+  "approved": true,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

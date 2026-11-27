@@ -40,8 +40,20 @@ else:
     hub_only_editorial=bool(changed) and all(n in blog_release_paths or n=='site-factory/scripts/seo_quality.py' or n.startswith('site-factory/content/blog/') or (n.startswith('site-factory/sites/') and n.endswith('/blog.json')) or n=='site-factory/tests/test_blog_articles.py' or n in {'site-factory/ops/blog_index_audit.py','site-factory/ops/seo-revision-20261125.md','.github/workflows/work-registry-readonly-audit.yml'} for n in changed)
     blog_release=blog_release or hub_only_editorial
     shared=not blog_release and any(n.startswith('site-factory/scripts/') or n=='.github/workflows/toolbox-pages.yml' for n in changed)
+    # A release of file-based hub-only tools and editorial assets affects only the hub and admin catalogue.
+    def hub_rollout_path(n):
+        if n.startswith('site-factory/sites/'):
+            parts=n.split('/')
+            if len(parts)<4:return False
+            try:return read_site(parts[2])[0].get('deploy_mode')=='hub_only'
+            except SiteError:return False
+        return n in {'site-factory/scripts/factory.py','site-factory/scripts/blog_articles.py','site-factory/scripts/blog_magazine.py','site-factory/scripts/targets.py','site-factory/marketing/briefs.json','site-factory/content/blog-media.json','site-factory/ops/visit-sites.json','site-factory/ops/consumer-release-20261127.md','site-factory/tests/test_consumer_tools_20261127.py','site-factory/tests/blog-browser.mjs'} or n.startswith('site-factory/content/blog/')
+    hub_rollout=bool(changed) and any(n.startswith('site-factory/sites/') for n in changed) and all(hub_rollout_path(n) for n in changed)
+    if hub_rollout:shared=False
     new_blog=any(n.startswith('site-factory/content/blog/') or n=='site-factory/content/blog-media.json' or n=='site-factory/marketing/briefs.json' or n.startswith('work-sites/') and n.endswith('/blog.json') for n in changed)
     selected=['toolbox-hub'] if blog_release else all_sites if shared else sorted(set(p.split('/')[2] for p in changed if p.startswith('site-factory/sites/') and len(p.split('/'))>=4))
+    if hub_rollout:
+        selected=[s for s in ('toolbox-hub','toolbox-admin') if s in all_sites]
     if new_blog and 'toolbox-hub' in all_sites:
         selected=sorted(set(selected+['toolbox-hub']))
 # Redeploy the live directory whenever another approved public tool changes.

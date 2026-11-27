@@ -1,0 +1,17 @@
+{
+  "slug": "dimensional-weight-calculator",
+  "project": "tb-dimensional-weight-calculator",
+  "title": "택배 부피무게 계산기",
+  "description": "상자 가로·세로·높이와 실측 무게, 운송사 부피무게 환산계수를 입력해 과금 기준 무게를 비교합니다.",
+  "approved": false,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

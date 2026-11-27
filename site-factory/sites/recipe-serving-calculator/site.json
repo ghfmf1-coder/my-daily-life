@@ -1,0 +1,17 @@
+{
+  "slug": "recipe-serving-calculator",
+  "project": "tb-recipe-serving-calculator",
+  "title": "요리 레시피 인분 변환기",
+  "description": "원래 인분과 원하는 인분을 입력하고 여러 재료의 수량을 같은 비율로 변환합니다.",
+  "approved": false,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}

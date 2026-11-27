@@ -1,0 +1,169 @@
+{
+  "slug": "compare-grocery-unit-prices",
+  "type": "tool",
+  "tool": "unit-price-calculator",
+  "status": "reviewed",
+  "published": "2026-11-27",
+  "ko": {
+    "title": "마트·쿠팡 100g당 가격 계산하는 법, 대용량 상품이 정말 저렴할까?",
+    "description": "마트 진열대나 온라인 장바구니에서 총가격과 실제 내용량을 같은 기준으로 환산하는 법을 알아봅니다. 100g·100ml·개당 가격을 비교할 때 빠뜨리기 쉬운 묶음 수량과 배송비도 확인합니다.",
+    "problem": "대용량 세제나 식품은 표시된 총가격이 높아도 같은 양을 기준으로 보면 저렴할 수 있습니다. 반대로 묶음 할인이라는 문구만 보고 구매하면 한 개당 실제 가격이 더 비싸거나 필요 이상으로 많이 구매할 수 있습니다. 가격표의 단위와 실제 내용량을 함께 확인해야 합니다.",
+    "steps": [
+      [
+        "포장에 표시된 순내용량과 총수량 확인하기",
+        "상품명이나 포장 크기로 비교하지 말고 실제 표시된 내용량을 확인합니다. 묶음 상품은 각 포장의 순내용량에 묶음 개수를 곱해 전체 내용량을 적습니다. 배송용 포장 무게를 식품 무게에 포함하지 않습니다."
+      ],
+      [
+        "두 상품을 동일한 비교 단위로 환산하기",
+        "총가격을 전체 내용량으로 나눈 뒤 원하는 비교 단위를 곱합니다. 예를 들어 g으로 표시된 식품은 100g당 가격을 비교하고, ml로 표시된 음료는 100ml당 가격을 비교합니다. 무게와 부피는 밀도를 모르는 상태에서 서로 바꾸지 않습니다."
+      ],
+      [
+        "장바구니에서 실제 지출과 낭비 가능성 점검하기",
+        "이미 적용된 쿠폰을 다시 차감하지 말고 최종 결제 금액을 확인합니다. 배송비가 상품 선택에 따라 달라지면 그 차이도 고려합니다. 냉장고 공간과 소비기한 때문에 일부를 버려야 한다면 단위가격이 낮다는 이유만으로 구매하지 않습니다."
+      ]
+    ],
+    "alternative": "스마트폰 계산기에 총가격 ÷ 전체 내용량 × 비교 단위를 입력해도 됩니다. 마트 가격표에 단위가격이 표시되어 있으면 양쪽의 기준 단위가 동일한지 먼저 확인하면 수고를 줄일 수 있습니다.",
+    "toolIntro": "아브레다 단위가격 비교 계산기는 두 상품의 가격과 전체 내용량을 입력받아 각각의 단위가격과 더 낮은 쪽을 표시합니다. 금액과 수량은 직접 입력하며 판매처 가격을 자동 조회하지 않습니다.",
+    "limits": "무게와 부피가 섞인 상품, 서로 다른 품질이나 원재료, 배송비 분담이 불명확한 주문은 단위가격만으로 우열을 결정할 수 없습니다. 결제 전에 실제 상품 상세 페이지를 확인하세요.",
+    "faq": [
+      [
+        "묶음 상품의 단위가격은 어떻게 비교하나요?",
+        "묶음 전체의 실제 결제 가격을 사용하고 모든 포장의 내용량을 합산한 수량을 입력합니다. 사은품이 별도 상품이라면 같은 상품으로 합산하지 않는 편이 정확합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Compare Grocery Prices per Ounce Without Doing Mental Math",
+    "description": "Compare shelf labels, multipacks and warehouse sizes on an equal price-per-ounce or price-per-item basis before choosing which grocery purchase is cheaper.",
+    "problem": "A larger cereal box can look like a bargain even when a smaller package has a better unit price. Retail labels sometimes use different measurement units, and a club-store package may be more food than a household can use. Separate the cost of the purchase from the amount you can actually consume.",
+    "steps": [
+      [
+        "Read the net quantity on each package",
+        "For boxed food, look for the net weight rather than the shipping weight or carton dimensions. A multipack requires the sum of the individual package quantities. Keep fluid ounces separate from ounces by weight, even when both labels shorten the unit to oz."
+      ],
+      [
+        "Make the denominator consistent across shelf tags",
+        "Divide the checkout price attributable to each package by its total quantity. Compare both in the same unit: ounces for solid food, fluid ounces for drinks, or individual items for identical multipacks. If one label uses pounds, convert the weight to ounces before comparing."
+      ],
+      [
+        "Consider storage and the amount you will actually use",
+        "Warehouse-sized packs may have attractive unit prices but require freezer space or a plan to use the contents before they spoil. A promotion that requires purchasing more items changes the total quantity. Check the offer conditions and any delivery charges before deciding."
+      ]
+    ],
+    "alternative": "Use a calculator or the unit-price line on a grocery shelf label. When a label uses a different unit, convert the quantity first rather than comparing the printed numbers directly. Keep a short shopping list of the package sizes you actually consume.",
+    "toolIntro": "The ABREDA Unit Price Calculator compares two prices and quantities without needing a shopping account. Use the one-unit option for ounces or individual items; use the same measurement and currency for both products.",
+    "limits": "Unit pricing cannot account for flavor, nutrition, quality, spoilage or membership costs unless you evaluate them separately. The calculator does not know local shelf prices or retailer coupon rules.",
+    "faq": [
+      [
+        "Can I compare a price per fluid ounce with a price per weight ounce?",
+        "No. Fluid ounces measure volume while weight ounces measure mass. Compare products on the same basis or obtain a reliable density conversion when one is genuinely appropriate."
+      ]
+    ]
+  },
+  "media": {
+    "category": "money",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1741389064022-6d470321710e?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-grocery-store-window-displaying-price-tags-YdHEHUzI_no",
+      "credit": "Mirna Wabi-Sabi",
+      "alt": {
+        "ko": "여러 상품의 가격표가 붙어 있는 식료품점 진열창",
+        "en": "A grocery store window displaying price tags"
+      },
+      "caption": {
+        "ko": "가격표가 붙은 식료품점 진열창",
+        "en": "A grocery store window displaying price tags"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1741389064022-6d470321710e?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-grocery-store-window-displaying-price-tags-YdHEHUzI_no",
+          "credit": "Mirna Wabi-Sabi",
+          "alt": {
+            "ko": "여러 상품의 가격표가 붙어 있는 식료품점 진열창",
+            "en": "A grocery store window displaying price tags"
+          },
+          "caption": {
+            "ko": "가격표가 붙은 식료품점 진열창",
+            "en": "A grocery store window displaying price tags"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1760273464017-4bb7dfa42d91?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/shelves-stocked-with-various-dairy-products-and-drinks-OR5v5V2PPRs",
+          "credit": "Bruce",
+          "alt": {
+            "ko": "우유와 음료가 진열된 식료품점 냉장 선반",
+            "en": "Shelves displaying dairy products and beverages"
+          },
+          "caption": {
+            "ko": "우유와 음료가 진열된 식료품점 냉장 선반",
+            "en": "Shelves displaying dairy products and beverages"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1774978613233-55427453aa02?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/gloved-hands-weighing-produce-on-a-scale-ybPMYSYzZMo",
+          "credit": "Adhitya Sibikumar",
+          "alt": {
+            "ko": "장갑을 낀 손이 저울로 농산물 무게를 재는 모습",
+            "en": "Gloved hands weighing produce on a scale"
+          },
+          "caption": {
+            "ko": "장갑을 낀 손이 저울로 농산물 무게를 재는 모습",
+            "en": "Gloved hands weighing produce on a scale"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/grocery-store-aisle-with-stocked-shelves-rWMIbqmOxrY",
+          "credit": "Nathália Rosa",
+          "alt": {
+            "ko": "여러 식료품이 진열된 슈퍼마켓 통로",
+            "en": "A grocery store aisle with stocked shelves"
+          },
+          "caption": {
+            "ko": "여러 식료품이 진열된 슈퍼마켓 통로",
+            "en": "A grocery store aisle with stocked shelves"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1751151950056-cfaf797f4653?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/shopping-cart-filled-in-a-large-grocery-store-421nTYTZLSI",
+          "credit": "Unsplash photographer",
+          "alt": {
+            "ko": "대형 슈퍼마켓에서 상품이 담긴 쇼핑카트",
+            "en": "A shopping cart filled in a large grocery store"
+          },
+          "caption": {
+            "ko": "대형 슈퍼마켓에서 상품이 담긴 쇼핑카트",
+            "en": "A shopping cart filled in a large grocery store"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1755752917179-28746dd4dd74?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/shelves-stocked-with-various-packaged-food-items-in-a-supermarket-iDGTGktD97Q",
+          "credit": "Adhitya Sibikumar",
+          "alt": {
+            "ko": "여러 종류의 포장 식품이 진열된 선반",
+            "en": "Shelves stocked with packaged grocery items"
+          },
+          "caption": {
+            "ko": "여러 종류의 포장 식품이 진열된 선반",
+            "en": "Shelves stocked with packaged grocery items"
+          }
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "NIST SP 1181 — Unit Pricing Guide (2025 edition)",
+      "url": "https://www.nist.gov/publications/nist-sp-1181-unit-pricing-guide-best-practice-approach-unit-pricing-2025-ed"
+    }
+  ]
+}

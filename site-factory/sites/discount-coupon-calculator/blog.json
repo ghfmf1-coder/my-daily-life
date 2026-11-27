@@ -1,0 +1,173 @@
+{
+  "slug": "black-friday-2026-real-checkout-price",
+  "type": "tool",
+  "tool": "discount-coupon-calculator",
+  "status": "reviewed",
+  "published": "2026-11-27",
+  "sources": [
+    {
+      "name": "관세청 2026-11-02 해외직구 특별단속 안내 / Korea Customs Service",
+      "url": "https://customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10181844&nttSnUrl=f800fe56d540cfe0f2529d51491a729f"
+    },
+    {
+      "name": "Federal Trade Commission — Online Shopping",
+      "url": "https://consumer.ftc.gov/articles/online-shopping"
+    }
+  ],
+  "ko": {
+    "title": "2026 블랙프라이데이 해외직구, 배송비·관세까지 포함한 실결제 가격 비교하는 법",
+    "description": "블랙프라이데이 해외직구 상품을 구매할 때 할인율, 쿠폰, 해외배송비, 카드 환율과 통관 비용을 구분해 최종 부담액을 비교하세요.",
+    "problem": "해외 쇼핑몰의 큰 할인율이 곧 저렴한 구매를 의미하지는 않습니다. 결제 통화와 배송 조건이 다르면 국내 가격과 바로 비교할 수 없고, 쿠폰 적용 조건에 따라 표시 할인과 실제 할인액이 달라집니다. 통관에 필요한 비용이나 반품 비용도 구매 결정 전에 확인해야 합니다.",
+    "steps": [
+      [
+        "할인코드가 적용된 상품 가격부터 확인하기",
+        "상품의 정가가 아니라 실제 옵션을 선택한 장바구니 금액을 확인합니다. 정률 할인과 정액 쿠폰의 적용 순서, 최소 구매 금액 및 최대 할인액은 판매처의 약관을 따릅니다. 이미 할인된 금액에는 같은 쿠폰을 한 번 더 빼지 않습니다."
+      ],
+      [
+        "배송비·통관 비용과 결제 통화 맞추기",
+        "직배송인지 배송대행인지 확인하고 실제 배송비를 더합니다. 면세 여부는 물품의 종류, 가격, 통관 조건에 따라 달라지므로 관세청 안내와 판매처 결제 화면에서 확인한 비용을 사용합니다. 해외 통화는 카드사의 적용 환율 및 수수료 기준으로 같은 통화로 환산한 뒤 비교합니다."
+      ],
+      [
+        "정상 통관과 판매처 신뢰도 확인하기",
+        "관세청은 2026년 11월 2일부터 12월 27일까지 해외직구 악용에 대한 집중 단속을 진행한다고 발표했습니다. 개인통관고유부호를 타인에게 빌려주지 말고 자가사용 요건이나 수입 제한에 해당하는 상품인지 확인하세요. 반품 배송비, 보증 범위 및 환불 조건을 읽고 나서 결제합니다."
+      ]
+    ],
+    "alternative": "쇼핑몰별로 상품 금액과 할인 후 금액, 배송비, 확인한 통관 비용, 결제 수수료를 표에 적어 비교할 수 있습니다. 정확한 총액이 아직 나오지 않았다면 결제 직전까지 진행해 비용을 확인하되 주문을 확정하지 마세요.",
+    "toolIntro": "아브레다 할인쿠폰 실결제 비교기는 정률 할인을 먼저 적용하고 정액 쿠폰을 차감한 다음 추가비를 합산합니다. 확인한 배송비와 세금 등은 직접 입력해야 하며 관세나 환율을 자동 계산하지 않습니다.",
+    "limits": "이 도구의 계산 순서가 쇼핑몰의 실제 할인 방식과 다르거나 세금이 결제 후 확정된다면 결과는 실제 청구액과 다를 수 있습니다. 관세 면제나 배송일을 보장하지 않으므로 통관 요건과 최종 결제액을 따로 확인하세요.",
+    "faq": [
+      [
+        "해외직구 할인 쿠폰과 카드 혜택을 동시에 계산해도 되나요?",
+        "판매처에서 함께 사용할 수 있는 할인인지 확인해야 합니다. 결제 이후 카드사가 지급하는 혜택은 즉시 차감되는 쿠폰과 구분하고 실제 수혜 조건을 확인하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "Black Friday 2026: How to Calculate the Real Final Price After Coupons, Tax and Shipping",
+    "description": "Compare Black Friday checkout totals after percentage discounts, fixed coupons, delivery charges and sales tax rather than relying on a headline savings claim.",
+    "problem": "A product advertised at a steep discount can cost more at checkout than a competing offer. Online stores apply coupon restrictions, tax rules, and shipping thresholds in different ways. Comparing the headline price alone also overlooks membership requirements and costs to return an unwanted item.",
+    "steps": [
+      [
+        "Compare the exact model and checkout configuration",
+        "Start with the actual model number, storage capacity, size, or warranty offered by each seller. A lower price on a different configuration is not an equivalent deal. Put the intended option in the cart and inspect the discount terms before entering payment information."
+      ],
+      [
+        "Calculate discounts in the retailer's actual order",
+        "Check whether a percentage promotion can be combined with a fixed-value coupon. Subtract eligible discounts from the appropriate subtotal, then include the shipping and tax displayed at checkout. Tax treatment can vary by location and product; do not assume a universal rate."
+      ],
+      [
+        "Review shipping, returns and seller reliability",
+        "Read the delivery estimate, the seller's return window and any restocking or return-shipping costs. The FTC advises checking the total cost, return policy and seller information when shopping online. A gift that will arrive after the required date or cannot be returned may not be worth a small apparent saving."
+      ]
+    ],
+    "alternative": "Compare screenshots of the final checkout summaries from competing stores, with personal details removed. If a rebate is paid later, record it separately from the amount charged today. Check the order confirmation after purchasing.",
+    "toolIntro": "The ABREDA Discount and Coupon Calculator compares two prices using an explicit sequence: percentage discount, fixed coupon, then shipping and additional charges. Supply the actual tax or other fees yourself and verify the result against checkout.",
+    "limits": "Some retailers calculate taxes or discounts in a different sequence, exclude particular products, or impose limits. The calculator does not look up promotions, seller reputations, tax rates or foreign exchange rates and cannot guarantee a particular final charge.",
+    "faq": [
+      [
+        "Does a twenty-percent discount plus a ten-percent discount equal thirty percent off?",
+        "Not when the percentages are applied sequentially to a changing subtotal. Check how the seller calculates them and use the confirmed discounted merchandise amount if the calculator's sequence is different."
+      ]
+    ]
+  },
+  "media": {
+    "category": "money",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1768987439370-bd60d3d0b28b?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-scrolling-through-online-shopping-on-phone-Iywgu-a_eCs",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "스마트폰에서 해외 온라인 쇼핑 상품을 둘러보는 손",
+        "en": "A person browsing an online shopping app on a phone"
+      },
+      "caption": {
+        "ko": "스마트폰에서 해외 온라인 쇼핑 상품을 둘러보는 손",
+        "en": "A person browsing an online shopping app on a phone"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1768987439370-bd60d3d0b28b?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/person-scrolling-through-online-shopping-on-phone-Iywgu-a_eCs",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "스마트폰에서 해외 온라인 쇼핑 상품을 둘러보는 손",
+            "en": "A person browsing an online shopping app on a phone"
+          },
+          "caption": {
+            "ko": "스마트폰에서 해외 온라인 쇼핑 상품을 둘러보는 손",
+            "en": "A person browsing an online shopping app on a phone"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1770013413878-2530e2c3d82b?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/woman-checking-package-with-phone-near-laptop-and-boxes-k63Or81F8-M",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "택배 상자와 노트북 옆에서 배송 상품을 확인하는 사람",
+            "en": "A person checking packages beside a laptop and shipping boxes"
+          },
+          "caption": {
+            "ko": "택배 상자와 노트북 옆에서 배송 상품을 확인하는 사람",
+            "en": "A person checking packages beside a laptop and shipping boxes"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1733503747506-773e56e4078f?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-person-sitting-in-a-chair-with-a-laptop-and-a-credit-card-ShB9pI4mpRg",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "신용카드와 노트북을 이용해 온라인 결제를 준비하는 사람",
+            "en": "A shopper holding a credit card while using a laptop"
+          },
+          "caption": {
+            "ko": "신용카드와 노트북을 이용해 온라인 결제를 준비하는 사람",
+            "en": "A shopper holding a credit card while using a laptop"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1758686254082-0f91a27b3075?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/elderly-couple-shopping-online-with-credit-card-and-laptop-EqFH-tZ4hUQ",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "신용카드와 노트북을 함께 사용하는 두 사람의 모습",
+            "en": "Two people shopping online using a laptop and card"
+          },
+          "caption": {
+            "ko": "신용카드와 노트북을 함께 사용하는 두 사람의 모습",
+            "en": "Two people shopping online using a laptop and card"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1758874573126-cf93a36261e8?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/man-holding-credit-card-and-phone-for-online-shopping-pzrDjRo-qGs",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "스마트폰과 결제카드를 들고 상품을 구매하는 사람",
+            "en": "A man holding a credit card and phone while shopping online"
+          },
+          "caption": {
+            "ko": "스마트폰과 결제카드를 들고 상품을 구매하는 사람",
+            "en": "A man holding a credit card and phone while shopping online"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1758611974001-2e7ad7b83432?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/woman-holding-credit-card-and-phone-for-online-shopping-0byhYAVF1Do",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "온라인 쇼핑 결제에 휴대전화와 카드를 사용하는 사람",
+            "en": "A woman using a phone and card for online shopping"
+          },
+          "caption": {
+            "ko": "온라인 쇼핑 결제에 휴대전화와 카드를 사용하는 사람",
+            "en": "A woman using a phone and card for online shopping"
+          }
+        }
+      ]
+    }
+  }
+}
