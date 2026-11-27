@@ -57,6 +57,35 @@ for(const [path,nav] of [['/','/blog/'],['/en/','/en/blog/']])await check(path,a
  const sizes=await cards.evaluateAll(xs=>xs.slice(0,5).map(x=>[x.getBoundingClientRect().width,x.getBoundingClientRect().height]));
  assert.ok(sizes.every(s=>s[0]<205&&s[1]<185),JSON.stringify(sizes));
 });
+// First 2026-11-27 reviewed rollout: real bilingual calculator and article behavior.
+const newTools=[
+ ['unit-price-calculator','compare-grocery-unit-prices',{a:'5000',aq:'500',b:'7200',bq:'900'},'B'],
+ ['discount-coupon-calculator','black-friday-2026-real-checkout-price',{a:'10000',ar:'20',ac:'1000',as:'3000',b:'9000',br:'10',bc:'0',bs:'0'},'B']
+];
+const newPhotoIds=new Set();
+for(const [lang,prefix] of [['ko','/'],['en','/en/']]){
+ for(const [tool,slug,values,winner] of newTools){
+  await check(prefix+'tools/'+tool+'/',async p=>{
+   assert.equal(await p.locator('html').getAttribute('lang'),lang);
+   for(const [k,v] of Object.entries(values))await p.locator('#'+k).fill(v);
+   await p.locator('#toolForm button[type=submit]').click();
+   assert.match(await p.locator('#out').innerText(),new RegExp('(?:Lower (?:unit|checkout) price|저렴한 상품): '+winner));
+   await p.locator('#toolForm button[type=reset]').click();
+   assert.equal(await p.locator('#out').innerText(),'');
+  });
+  await check(prefix+'blog/'+slug+'/',async p=>{
+   const photos=p.locator('article figure.hero img, article figure.article-photo img');
+   assert.equal(await photos.count(),3);
+   for(const img of await photos.all()){
+    const src=(await img.getAttribute('src')).split('?')[0];
+    assert.match(src,/^https:\/\/images\.unsplash\.com\/photo-/);
+    assert.ok(!newPhotoIds.has(src),'Duplicate new article image');
+    newPhotoIds.add(src);
+   }
+   assert.equal(await p.locator('.cta a').getAttribute('href'),'https://abreda.com'+prefix+'tools/'+tool+'/');
+  });
+ }
+}
 await browser.close();
 console.log('BLOG_BROWSER_SUMMARY',JSON.stringify({failed:failed.length,errors:failed}));
 if(failed.length)process.exitCode=1;

@@ -159,5 +159,11 @@
         }
       ]
     }
-  }
+  },
+  "sources": [
+    {
+      "name": "NIST SP 1181 — Unit Pricing Guide (2025 edition)",
+      "url": "https://www.nist.gov/publications/nist-sp-1181-unit-pricing-guide-best-practice-approach-unit-pricing-2025-ed"
+    }
+  ]
 }
