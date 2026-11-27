@@ -109,20 +109,36 @@ def load():
         visual=media.get(slug) or p.get('media')
         if not isinstance(visual,dict) or not isinstance(visual.get('image'),dict):
             raise ValueError('Reviewed article requires curated image and usage rights: '+slug)
-        img=visual['image']
-        if not img.get('url','').startswith('https://images.unsplash.com/photo-'):
-            raise ValueError('Unknown or unapproved image source: '+slug)
-        if not img.get('source','').startswith('https://unsplash.com/photos/'):
-            raise ValueError('Image license attribution source missing: '+slug)
-        for locale in ('ko','en'):
-            if len(str(img.get('alt',{}).get(locale,'')))<15:
-                raise ValueError('Descriptive '+locale+' alt text required: '+slug)
         if visual.get('category') not in ('photo','document','daily','money','privacy','knowledge'):
             raise ValueError('Invalid editorial category: '+slug)
-        photo_id=img['url'].split('?')[0]
-        if photo_id in photo_ids:
-            raise ValueError('Duplicate published photo: '+photo_id+' in '+slug)
-        photo_ids.add(photo_id)
+        localized=visual.get('photos')
+        # New articles must use independent, curated photo sets in each language.
+        # Legacy articles retain their existing published media.
+        if date >= '2026-11-27' and not localized:
+            raise ValueError('New articles require separate Korean and English photo sets: '+slug)
+        if localized:
+            if not isinstance(localized,dict) or set(localized)!= {'ko','en'}:
+                raise ValueError('Missing localized photos: '+slug)
+            for locale in ('ko','en'):
+                if not isinstance(localized[locale],list) or not 3<=len(localized[locale])<=6:
+                    raise ValueError('Three to six photos required per language: '+slug)
+            images=localized['ko']+localized['en']
+            if visual['image'] != localized['ko'][0]:
+                raise ValueError('Legacy image field must reference the Korean cover: '+slug)
+        else:
+            images=[visual['image']]
+        for img in images:
+            if not isinstance(img,dict) or not img.get('url','').startswith('https://images.unsplash.com/photo-'):
+                raise ValueError('Unknown or unapproved image source: '+slug)
+            if not img.get('source','').startswith('https://unsplash.com/photos/'):
+                raise ValueError('Image license attribution source missing: '+slug)
+            for locale in ('ko','en'):
+                if len(str(img.get('alt',{}).get(locale,'')))<15:
+                    raise ValueError('Descriptive '+locale+' alt text required: '+slug)
+            photo_id=img['url'].split('?')[0]
+            if photo_id in photo_ids:
+                raise ValueError('Duplicate published photo: '+photo_id+' in '+slug)
+            photo_ids.add(photo_id)
         seen.add(slug)
         posts.append({**p,'type':kind,'toolURLs':links,'media':visual})
     # Editorial policy effective 2026-11-25. Reject copied substantive prose

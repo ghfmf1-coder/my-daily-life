@@ -60,9 +60,13 @@ def cat_name(post,lang):
     return data[0 if lang=='ko' else 1]
 def sized_url(original,width):
     return original.split('?')[0]+'?auto=format&fit=crop&w='+str(width)+'&q=76'
-def image_tag(post,lang,cls='',is_hero=False):
+def photo_set(post,lang):
+    media=post['media']
+    return media.get('photos',{}).get(lang,[media['image']])
+
+def image_tag(post,lang,cls='',is_hero=False,photo=None):
     """Actual licensed photo selected and credited for this exact article."""
-    photo=post['media']['image']
+    photo=photo or photo_set(post,lang)[0]
     src=sized_url(photo['url'],1200 if is_hero else 720)
     return ('<img'+(' class="'+cls+'"' if cls else '')+' src="'+E(src)+'" '
             'alt="'+E(photo['alt'][lang])+'" '
@@ -87,12 +91,12 @@ def head(lang,post=None):
         if post.get('updated'):
             meta+='<meta property="article:modified_time" content="'+E(post['updated'])+'">'
         meta+='<meta property="article:section" content="'+E(cat_name(post,lang))+'">'
-        meta+='<meta property="og:image" content="'+E(sized_url(post['media']['image']['url'],1200))+'">'
+        meta+='<meta property="og:image" content="'+E(sized_url(photo_set(post,lang)[0]['url'],1200))+'">'
 
         org={'@type':'Organization','name':'ABREDA','url':'https://abreda.com/'}
         schema={'@context':'https://schema.org','@type':'BlogPosting','headline':title,'description':desc,'inLanguage':lang,
                 'url':url,'mainEntityOfPage':{'@type':'WebPage','@id':url},'datePublished':post['published'],
-                'author':org,'publisher':org,'image':[sized_url(post['media']['image']['url'],1200)]}
+                'author':org,'publisher':org,'image':[sized_url(photo_set(post,lang)[0]['url'],1200)]}
         if post.get('updated'):
             schema['dateModified']=post['updated']
         breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[
@@ -158,7 +162,7 @@ def article(post,lang,posts):
     if post.get('updated'):
         h+='<p class="date">'+label(lang,'최종 수정: ','Updated: ')+'<time datetime="'+E(post['updated'])+'">'+E(post['updated'])+'</time></p>'
     h+='<h1>'+E(d['title'])+'</h1><p class="lead">'+E(d['description'])+'</p></header>'
-    image=post['media']['image']
+    image=photo_set(post,lang)[0]
     h+='<figure class="hero">'+image_tag(post,lang,is_hero=True)+'<figcaption>'+E(image['caption'][lang])+' · '
     h+='<a href="'+E(image['source'])+'" rel="noopener noreferrer" target="_blank">'+label(lang,'사진 출처: Unsplash 원본','Photo source: Unsplash original')+'</a></figcaption></figure>'
     toc=[('problem',label(lang,'무엇이 문제인가요?','What is the problem?')),('steps',label(lang,'순서대로 해결하기','Step-by-step solution')),('alternative',label(lang,'다른 해결 방법','Alternative method')),('limits',label(lang,'해결되지 않는 경우','Known limitations')),('faq',label(lang,'자주 묻는 질문','Frequently asked questions'))]
@@ -168,8 +172,15 @@ def article(post,lang,posts):
     h+='</ul></nav>'
     h+='<section aria-labelledby="problem"><h2 id="problem">'+E(toc[0][1])+'</h2><p>'+E(d['problem'])+'</p></section>'
     h+='<section aria-labelledby="steps"><h2 id="steps">'+E(toc[1][1])+'</h2><ol class="steps">'
-    for heading,body in d['steps']:
-        h+='<li><h3>'+E(heading)+'</h3><p>'+E(body)+'</p></li>'
+    extra=photo_set(post,lang)[1:]
+    for i,(heading,body) in enumerate(d['steps']):
+        h+='<li><h3>'+E(heading)+'</h3><p>'+E(body)+'</p>'
+        if i<len(extra):
+            photo=extra[i]
+            h+='<figure class="hero">'+image_tag(post,lang,photo=photo)+'<figcaption>'+E(photo['caption'][lang])+' · <a href="'+E(photo['source'])+'" target="_blank" rel="noopener noreferrer">'+label(lang,'사진 출처','Photo source')+'</a></figcaption></figure>'
+        h+='</li>'
+    for photo in extra[len(d['steps']):]:
+        h+='<li><figure class="hero">'+image_tag(post,lang,photo=photo)+'<figcaption>'+E(photo['caption'][lang])+' · <a href="'+E(photo['source'])+'" target="_blank" rel="noopener noreferrer">'+label(lang,'사진 출처','Photo source')+'</a></figcaption></figure></li>'
     h+='</ol></section><section><h2 id="alternative">'+E(toc[2][1])+'</h2><div class="box"><p>'+E(d['alternative'])+'</p></div></section>'
     if post['toolURLs'][lang]:
         h+='<aside class="cta"><h2>'+label(lang,'작업이 많다면 무료 도구도 활용해 보세요','An optional free browser tool')+'</h2>'
