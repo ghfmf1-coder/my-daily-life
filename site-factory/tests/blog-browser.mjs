@@ -6,6 +6,8 @@ const host='http://127.0.0.1:8088';
 const failed=[];
 async function check(path,fn){
  const page=await browser.newPage({viewport:{width:390,height:844}});
+ // Production-equivalent builds use canonical absolute tool asset URLs; map those requests to the local QA build rather than the older live site.
+ await page.route('https://abreda.com/tools/**',async route=>{const u=new URL(route.request().url());if(!/\.(?:js|css|svg|png|ico)$/.test(u.pathname))return route.continue();const response=await route.fetch({url:host+u.pathname+u.search});await route.fulfill({response});});
  const jsErrors=[];page.on('pageerror',e=>jsErrors.push(e.message));
  try{const r=await page.goto(host+path,{waitUntil:'domcontentloaded',timeout:20000});assert.equal(r.status(),200);await fn(page);assert.deepEqual(jsErrors,[]);console.log('BLOG_BROWSER_PASS',path)}
  catch(e){failed.push({path,error:String(e.message).slice(0,250)});console.log('BLOG_BROWSER_FAIL',path,String(e.message).slice(0,250))}
@@ -69,6 +71,7 @@ for(const [lang,prefix] of [['ko','/'],['en','/en/']]){
    assert.equal(await p.locator('html').getAttribute('lang'),lang);
    for(const [k,v] of Object.entries(values))await p.locator('#'+k).fill(v);
    await p.locator('#toolForm button[type=submit]').click();
+   await p.waitForFunction(()=>document.getElementById('out').textContent.length>0);
    assert.match(await p.locator('#out').innerText(),new RegExp('(?:Lower (?:unit|checkout) price|저렴한 상품): '+winner));
    await p.locator('#toolForm button[type=reset]').click();
    assert.equal(await p.locator('#out').innerText(),'');

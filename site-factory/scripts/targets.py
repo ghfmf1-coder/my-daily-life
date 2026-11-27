@@ -47,7 +47,7 @@ else:
             if len(parts)<4:return False
             try:return read_site(parts[2])[0].get('deploy_mode')=='hub_only'
             except SiteError:return False
-        return n in {'site-factory/scripts/factory.py','site-factory/scripts/blog_articles.py','site-factory/scripts/blog_magazine.py','site-factory/scripts/targets.py','site-factory/marketing/briefs.json','site-factory/ops/visit-sites.json','site-factory/ops/consumer-release-20261127.md','site-factory/tests/test_consumer_tools_20261127.py','site-factory/tests/blog-browser.mjs'} or n.startswith('site-factory/content/blog/')
+        return n in {'site-factory/scripts/factory.py','site-factory/scripts/blog_articles.py','site-factory/scripts/blog_magazine.py','site-factory/scripts/targets.py','site-factory/marketing/briefs.json','site-factory/content/blog-media.json','site-factory/ops/visit-sites.json','site-factory/ops/consumer-release-20261127.md','site-factory/tests/test_consumer_tools_20261127.py','site-factory/tests/blog-browser.mjs'} or n.startswith('site-factory/content/blog/')
     hub_rollout=bool(changed) and any(n.startswith('site-factory/sites/') for n in changed) and all(hub_rollout_path(n) for n in changed)
     if hub_rollout:shared=False
     new_blog=any(n.startswith('site-factory/content/blog/') or n=='site-factory/content/blog-media.json' or n=='site-factory/marketing/briefs.json' or n.startswith('work-sites/') and n.endswith('/blog.json') for n in changed)
