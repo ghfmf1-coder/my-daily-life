@@ -92,6 +92,13 @@
       ]
     },
     {
+      "siteId": "tb-discount-coupon-calculator",
+      "url": "https://abreda.com/tools/discount-coupon-calculator/",
+      "origins": [
+        "https://abreda.com"
+      ]
+    },
+    {
       "siteId": "tb-document-scan-studio",
       "url": "https://abreda.com/tools/document-scan-studio/",
       "origins": [

@@ -3,7 +3,7 @@
   "project": "tb-discount-coupon-calculator",
   "title": "할인쿠폰 실결제 비교기",
   "description": "정가·정률 할인·정액 쿠폰·배송비를 반영한 실제 결제 금액을 두 상품 간 비교합니다.",
-  "approved": false,
+  "approved": true,
   "deploy_mode": "hub_only",
   "locales": [
     "ko",

@@ -35,7 +35,7 @@ a{color:#2058c1;text-underline-offset:3px}a:hover{color:#123b8d}img{max-width:10
 .breadcrumb{font-size:12px;color:#657a91;padding:23px 0 17px}.breadcrumb a{color:#5e7796;text-decoration:none}.article-layout{display:grid;grid-template-columns:minmax(0,820px) minmax(220px,300px);gap:24px;align-items:start}
 .article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3.5vw,42px);box-shadow:var(--shadow)}
 .article .meta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;color:#688096;font-size:13px}.article h1{font-size:clamp(27px,3.6vw,42px);line-height:1.35;letter-spacing:-.055em;margin:18px 0 14px}
-.article .lead{font-size:17px;font-weight:500;color:#50677c;line-height:1.8}.hero{margin:26px 0 31px}.hero img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:13px;background:#e7ecf1}.hero figcaption{font-size:12px;color:#6a7f95;margin-top:9px}.hero figcaption a{color:inherit}
+.article .lead{font-size:17px;font-weight:500;color:#50677c;line-height:1.8}.hero,.article-photo{margin:26px 0 31px}.hero img,.article-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:13px;background:#e7ecf1}.hero figcaption,.article-photo figcaption{font-size:12px;color:#6a7f95;margin-top:9px}.hero figcaption a,.article-photo figcaption a{color:inherit}
 .article h2{font-size:24px;letter-spacing:-.04em;margin:36px 0 13px;scroll-margin-top:30px;line-height:1.45}.article h3{font-size:18px;letter-spacing:-.025em;line-height:1.5;margin:0 0 7px}
 .article p{line-height:1.9;margin:10px 0;color:#30485f}
 .article .toc{background:#f5f8fc;border:1px solid #e5edf5;border-radius:13px;padding:20px 23px;margin:24px 0}.toc strong{display:block;font-size:15px;margin-bottom:8px}.toc ul{margin:0;padding-left:20px}.toc a{font-size:13px;color:#345875;text-decoration:none}
@@ -177,10 +177,10 @@ def article(post,lang,posts):
         h+='<li><h3>'+E(heading)+'</h3><p>'+E(body)+'</p>'
         if i<len(extra):
             photo=extra[i]
-            h+='<figure class="hero">'+image_tag(post,lang,photo=photo)+'<figcaption>'+E(photo['caption'][lang])+' · <a href="'+E(photo['source'])+'" target="_blank" rel="noopener noreferrer">'+label(lang,'사진 출처','Photo source')+'</a></figcaption></figure>'
+            h+='<figure class="article-photo">'+image_tag(post,lang,photo=photo)+'<figcaption>'+E(photo['caption'][lang])+' · <a href="'+E(photo['source'])+'" target="_blank" rel="noopener noreferrer">'+label(lang,'사진 출처','Photo source')+'</a></figcaption></figure>'
         h+='</li>'
     for photo in extra[len(d['steps']):]:
-        h+='<li><figure class="hero">'+image_tag(post,lang,photo=photo)+'<figcaption>'+E(photo['caption'][lang])+' · <a href="'+E(photo['source'])+'" target="_blank" rel="noopener noreferrer">'+label(lang,'사진 출처','Photo source')+'</a></figcaption></figure></li>'
+        h+='<li><figure class="article-photo">'+image_tag(post,lang,photo=photo)+'<figcaption>'+E(photo['caption'][lang])+' · <a href="'+E(photo['source'])+'" target="_blank" rel="noopener noreferrer">'+label(lang,'사진 출처','Photo source')+'</a></figcaption></figure></li>'
     h+='</ol></section><section><h2 id="alternative">'+E(toc[2][1])+'</h2><div class="box"><p>'+E(d['alternative'])+'</p></div></section>'
     if post['toolURLs'][lang]:
         h+='<aside class="cta"><h2>'+label(lang,'작업이 많다면 무료 도구도 활용해 보세요','An optional free browser tool')+'</h2>'

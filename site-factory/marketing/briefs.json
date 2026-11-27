@@ -205,6 +205,17 @@
         "copy": "Compare two grocery packages using the same currency and quantity unit, including per-ounce and per-item comparisons."
       },
       "channels": []
+    },
+    "discount-coupon-calculator": {
+      "ko": {
+        "title": "할인쿠폰 실결제 비교기",
+        "copy": "정률 할인과 정액 쿠폰, 배송비 및 확인된 추가 비용을 반영해 두 상품의 결제액을 비교합니다."
+      },
+      "en": {
+        "title": "Discount and Coupon Calculator",
+        "copy": "Compare two checkout totals using explicit percentage discounts, fixed coupons and entered shipping or extra charges."
+      },
+      "channels": []
     }
   }
 }
