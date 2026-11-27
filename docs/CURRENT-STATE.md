@@ -1,3 +1,13 @@
+# 2026-11-27 소비자 웹앱 1차 발행 검증
+
+- PR 28 squash merge: 0175dadd5dda46c976cb3bad6fd301dd1d315bad. 10개 한영 도구 소스, 9개 계산 예제 회귀, PDF 소스 구문 검사. PDF 압축의 실제 문서 처리는 아직 미검증.
+- 실제 배포 완료: 단위가격 비교 계산기, 할인쿠폰 실결제 비교기 및 각 한국어·영어 기사 4개. 나머지 8개 도구는 approved=false, reviewed blog gate 유지. 나머지 16개 선정 기사와 각 도구의 연계 가이드·사진 검수는 미완료. 발행 수량을 실제 배포 수와 혼동하지 않음.
+- PR 검증 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/45921431343 success, 실제 브라우저 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/45921431298 success, BLOG_BROWSER_SUMMARY failed=0. 최초 빌드 실패는 고유 도구 아이콘 누락, 이후 브라우저 QA 실패는 운영 절대 주소를 미배포 로컬 미리보기에 사용한 문제 및 기존 사진 ALT 5건 길이 부족. 아이콘 추가·미리보기 에셋 경로·ALT 보완 후 재검사 성공. 기존 사진·2열 레이아웃 유지.
+- main 자동 배포 https://github.com/ghfmf1-coder/my-daily-life/actions/runs/45921528682 completed/success: 84개 Python 검사 및 기존 JS 회귀 통과, toolbox-hub와 toolbox-admin만 배포. 신규 Pages 프로젝트 없음.
+- 실제 운영 8개 URL의 HTTP 200과 자기 canonical, 웹앱 폼, 기사별 3장 본문 사진, 신규 sitemap 항목 확인. 기사 4개 본문에 12개 고유 Unsplash 사진 ID, 기존 blog-media 등록 ID와 중복 없음. 한영별 3~6장과 ID 중복 차단 규칙 신규 적용. 이미지의 의미상 유사성 전체 자동 보증은 아님.
+- Supabase public.toolbox_public_site_sources 조회에서 두 신규 site_id 및 운영 URL 확인. 방문 실적과 D1 갱신 및 최신 검색엔진 색인 상태는 미확인. 과거 동기화 오류 해결을 이번 배포로 주장하지 않음.
+- 남은 발행 큐와 제한 사항: site-factory/ops/consumer-release-20261127.md. 새 유료 인프라 도입 없음.
+
 # 긴급 복구 진행 기록 — 2026-11-26 KST
 
 - 실제 원천: 지정 실패 실행 45709427833, 45709427293 및 기존 색인 검사 45543084281 재사용.
