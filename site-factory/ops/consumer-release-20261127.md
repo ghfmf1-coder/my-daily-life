@@ -1,0 +1,3 @@
+# 2026-11-27 consumer tools release staging
+
+Ten bilingual source implementations. All initially unapproved; the reviewed blog gate remains enabled. No public deployment claim. Nine computation fixtures and PDF syntax checks are supplied. PDF rasterization requires real browser QA with sample documents, output verification, and library availability. Do not approve a tool before linked guide and photo review. The image renderer currently shares a single photo per pair; migrate new editorial content to separate language-specific photo sets, preserving existing layout and existing published article media. No generated illustrations or recycled photo assets.

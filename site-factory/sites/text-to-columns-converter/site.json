@@ -1,0 +1,17 @@
+{
+  "slug": "text-to-columns-converter",
+  "project": "tb-text-to-columns-converter",
+  "title": "엑셀 텍스트 열 분리 도구",
+  "description": "붙여넣은 텍스트를 쉼표·탭·공백으로 분리해 엑셀에 붙여넣기 쉬운 탭 구분 형식으로 바꿉니다.",
+  "approved": false,
+  "deploy_mode": "hub_only",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "generated_en": false,
+  "canonical_url": null,
+  "blog_required": true,
+  "ga4_measurement_id": "G-YHSK49NC2E",
+  "ga4_collection_enabled": true
+}
