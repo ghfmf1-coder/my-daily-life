@@ -1,0 +1,163 @@
+{
+  "slug": "calculate-file-upload-download-time",
+  "type": "tool",
+  "tool": "file-transfer-time-calculator",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "ko": {
+    "title": "파일 업로드 시간 계산하는 법, GB 용량과 Mbps 속도 차이 이해하기",
+    "description": "인터넷 상품의 다운로드 속도가 빠르더라도 클라우드에 대용량 영상을 올리는 시간은 업로드 속도에 좌우됩니다. GB와 Mbps는 바이트와 비트를 사용하므로 단위를 통일해야 합니다.",
+    "problem": "인터넷 상품의 다운로드 속도가 빠르더라도 클라우드에 대용량 영상을 올리는 시간은 업로드 속도에 좌우됩니다. GB와 Mbps는 바이트와 비트를 사용하므로 단위를 통일해야 합니다.",
+    "steps": [
+      [
+        "전송할 파일의 실제 크기 확인하기",
+        "파일 속성에서 크기와 단위를 확인합니다. 십진 MB와 GB인지 이진 MiB와 GiB인지 구분하고 여러 파일을 보낼 경우 전체 용량을 합산합니다."
+      ],
+      [
+        "실제로 측정한 전송속도 사용하기",
+        "보내는 작업에는 업로드 속도를 사용하고 받는 작업에는 다운로드 속도를 사용합니다. 파일 크기를 비트 단위로 바꾼 다음 초당 비트 속도로 나눕니다."
+      ],
+      [
+        "계산 시간과 실제 환경 비교하기",
+        "계산은 입력 속도가 전송 중 일정하다는 조건을 전제로 합니다. 무선 연결 불안정, 서버 제한, 다른 트래픽과 연결 중단이 발생하면 완료 시각이 달라집니다."
+      ]
+    ],
+    "alternative": "작은 대표 파일을 실제 목적지에 올리고 걸린 시간을 측정해 유효 전송속도를 확인할 수 있습니다. 동일한 연결 환경에서 대용량 작업 계획을 세우세요.",
+    "toolIntro": "아브레다 계산기는 MB, GB, MiB, GiB와 Mbps를 구분해 일정 속도 조건의 시간을 초, 분, 시간으로 표시합니다.",
+    "limits": "네트워크 혼잡과 암호화 오버헤드, 서버별 속도 제한 및 재시도는 자동 반영하지 않습니다. 전송 완료 시각을 보장하지 않습니다.",
+    "faq": [
+      [
+        "다운로드 속도를 업로드 계산에 써도 되나요?",
+        "두 방향의 속도가 다를 수 있으므로 파일을 보내는 작업에서 측정한 실제 업로드 속도를 사용하는 편이 정확합니다."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Calculate File Upload Time From GB and Mbps",
+    "description": "A large video upload can take longer than an internet provider's advertised download rate suggests. File sizes use bytes while network rates use bits per second, and upload throughput may be considerably slower than download throughput.",
+    "problem": "A large video upload can take longer than an internet provider's advertised download rate suggests. File sizes use bytes while network rates use bits per second, and upload throughput may be considerably slower than download throughput.",
+    "steps": [
+      [
+        "Read the file size and unit",
+        "Check the file manager and distinguish decimal GB and MB from binary GiB and MiB. Include every file if you are planning a batch transfer."
+      ],
+      [
+        "Measure throughput in the correct direction",
+        "Use measured upload speed for outgoing transfers and download speed for incoming transfers. Convert file bytes to bits before dividing by the rate in bits per second."
+      ],
+      [
+        "Account for varying real throughput",
+        "A constant-rate calculation does not capture fluctuations caused by Wi-Fi conditions, server throttling or other users. Use the interval for planning rather than as a guaranteed completion time."
+      ]
+    ],
+    "alternative": "Transfer a smaller representative file to the same destination and measure the elapsed time. This gives a practical throughput measurement for comparable conditions.",
+    "toolIntro": "ABREDA converts decimal or binary file size and an entered Mbps rate into theoretical seconds, minutes and hours.",
+    "limits": "The tool cannot detect network overhead, service-side limits, retransmission or interrupted connections. A short speed test may not represent a long transfer.",
+    "faq": [
+      [
+        "Why is Mbps different from MB per second?",
+        "Mbps counts millions of bits per second. MB per second counts millions of bytes per second. One byte contains eight bits, so the units must be converted."
+      ]
+    ]
+  },
+  "media": {
+    "category": "knowledge",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1702895742107-35bebf49ce8b?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-router-on-a-table-o-qB6ikmn8w",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+        "en": "A close up of a router on a table"
+      },
+      "caption": {
+        "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+        "en": "A close up of a router on a table"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1702895742107-35bebf49ce8b?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-close-up-of-a-router-on-a-table-o-qB6ikmn8w",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+            "en": "A close up of a router on a table"
+          },
+          "caption": {
+            "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+            "en": "A close up of a router on a table"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1606905418909-a1fab8cea661?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/white-and-black-usb-cable-2H06IWVVpiQ",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "흰색과 검은색 데이터 연결용 USB 케이블",
+            "en": "White and black usb cable"
+          },
+          "caption": {
+            "ko": "흰색과 검은색 데이터 연결용 USB 케이블",
+            "en": "White and black usb cable"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1544985562-128e7b377a21?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/red-ethernet-tester-_fQ6zg_McEU",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "붉은색 이더넷 연결 상태 측정 장비",
+            "en": "Red ethernet tester"
+          },
+          "caption": {
+            "ko": "붉은색 이더넷 연결 상태 측정 장비",
+            "en": "Red ethernet tester"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1604005366301-e01a1e6bc1d8?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/9wnAhRYdDzc",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "검은색과 파란색으로 이루어진 USB 케이블",
+            "en": "Black and blue usb cable"
+          },
+          "caption": {
+            "ko": "검은색과 파란색으로 이루어진 USB 케이블",
+            "en": "Black and blue usb cable"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1680992046615-065f58bcb4d8?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-close-up-of-a-rack-of-computer-equipment-eqd0f78u9nI",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "서버 랙에 설치된 컴퓨터 장비의 가까운 모습",
+            "en": "A close up of a rack of computer equipment"
+          },
+          "caption": {
+            "ko": "서버 랙에 설치된 컴퓨터 장비의 가까운 모습",
+            "en": "A close up of a rack of computer equipment"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1792419766010-a562c6622ec0?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/green-fiber-optic-cable-with-connectors-al1DNjs29is",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "연결 단자가 달린 녹색 광섬유 케이블",
+            "en": "Green fiber optic cable with connectors"
+          },
+          "caption": {
+            "ko": "연결 단자가 달린 녹색 광섬유 케이블",
+            "en": "Green fiber optic cable with connectors"
+          }
+        }
+      ]
+    }
+  }
+}

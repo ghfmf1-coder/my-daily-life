@@ -24,7 +24,7 @@ class ConsumerTools(unittest.TestCase):
     def test_approved_tools_and_localized_photo_sets(self):
         from blog_articles import load
         from blog_magazine import photo_set
-        released={'unit-price-calculator','discount-coupon-calculator'}
+        released={s['slug'] for s in CASES}|{'pdf-compressor'}
         selected=[p for p in load() if p.get('tool') in released]
         self.assertEqual({p['tool'] for p in selected},released)
         ids=[]
@@ -45,5 +45,5 @@ class ConsumerTools(unittest.TestCase):
                     self.assertIn('https://abreda.com/'+prefix+'tools/'+post['tool']+'/',sitemap)
             for spec in CASES:
                 if spec['slug'] not in released:self.assertFalse((out/'tools'/spec['slug']).exists())
-            self.assertFalse((out/'tools/pdf-compressor').exists())
+            self.assertTrue((out/'tools/pdf-compressor/index.html').exists())
         self.assertEqual(len(ids),len(set(ids)))

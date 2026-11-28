@@ -1,0 +1,163 @@
+{
+  "slug": "scale-recipe-servings-ingredients",
+  "type": "tool",
+  "tool": "recipe-serving-calculator",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "ko": {
+    "title": "요리 레시피 2인분을 5인분으로 바꾸는 법, 재료량 비율 계산하기",
+    "description": "가족 수나 손님 수가 바뀌면 레시피의 재료 양을 다시 맞춰야 합니다. 재료를 같은 비율로 바꾸는 것은 출발점이지만 달걀 개수와 양념 및 조리시간은 그대로 비례하지 않을 수 있습니다.",
+    "problem": "가족 수나 손님 수가 바뀌면 레시피의 재료 양을 다시 맞춰야 합니다. 재료를 같은 비율로 바꾸는 것은 출발점이지만 달걀 개수와 양념 및 조리시간은 그대로 비례하지 않을 수 있습니다.",
+    "steps": [
+      [
+        "원래 레시피와 목표 인분 정하기",
+        "원문에서 실제 완성 분량을 확인합니다. 원래 인분과 목표 인분을 적고 목표 인분을 원래 인분으로 나누어 재료를 바꿀 배율을 정합니다."
+      ],
+      [
+        "재료별 수량과 단위를 유지하기",
+        "밀가루의 g, 물의 ml, 달걀 개수처럼 원래 단위를 유지하면서 각각의 수량에 같은 배율을 곱합니다. 컵을 g으로 바꾸려면 재료별 밀도 정보가 필요합니다."
+      ],
+      [
+        "용기 크기와 양념의 양 확인하기",
+        "정수 개수로 사용하는 재료는 실제 계량할 수 있는 방법을 검토합니다. 팬이 작다면 나누어 조리하고 소금과 향신료는 조리 특성에 맞게 조절합니다."
+      ]
+    ],
+    "alternative": "스프레드시트에 재료별 원래 수량을 입력하고 공통 배율을 곱할 수도 있습니다. 원래 단위와 새 수량을 나란히 기록해 확인하세요.",
+    "toolIntro": "아브레다 인분 변환기는 재료 이름과 수량 및 단위를 한 줄씩 입력받아 같은 배율로 계산합니다. 단위 자체를 변환하지 않습니다.",
+    "limits": "조리시간과 온도를 인분과 같은 비율로 늘리면 안 됩니다. 재료 특성, 익힘 정도 및 식품 안전 지침을 따르세요.",
+    "faq": [
+      [
+        "달걀 수량이 소수로 나오면 어떻게 하나요?",
+        "필요하면 달걀을 풀어 무게로 계량할 수 있습니다. 제빵처럼 배합이 중요한 조리에서는 원래 레시피와 결과를 함께 확인하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Scale a Recipe for More Servings Without Changing Ingredient Units",
+    "description": "Scaling a recipe is straightforward for ingredients measured in grams, but a recipe may also specify whole eggs, pinches of salt and a pan size. Multiplying ingredient quantities is only the first step toward a successful larger batch.",
+    "problem": "Scaling a recipe is straightforward for ingredients measured in grams, but a recipe may also specify whole eggs, pinches of salt and a pan size. Multiplying ingredient quantities is only the first step toward a successful larger batch.",
+    "steps": [
+      [
+        "Calculate the ratio from original yield",
+        "Check whether the recipe specifies portions, pieces or finished weight. Divide your desired yield by the original yield and apply the same ratio to measured ingredients."
+      ],
+      [
+        "Preserve the original ingredient units",
+        "Multiply each quantity without changing its unit. Cups and grams measure different properties, so use an ingredient-specific conversion if you need to switch between them."
+      ],
+      [
+        "Check pan capacity and sensitive ingredients",
+        "Make separate batches if your equipment cannot fit the larger amount. Whole eggs, seasoning and cooking time may need practical adjustments; follow the recipe's doneness guidance."
+      ]
+    ],
+    "alternative": "A spreadsheet with ingredient quantities in one column and a scale factor in another can also produce a useful preparation checklist.",
+    "toolIntro": "ABREDA accepts ingredient name, numeric quantity and unit on separate lines and scales each amount in its original unit. It does not convert cups into grams.",
+    "limits": "Increasing the quantity does not establish a new safe cooking time or temperature. Baking in particular can be sensitive to pan size and mixing technique.",
+    "faq": [
+      [
+        "What if the scale factor produces a fractional egg?",
+        "Beat the egg and measure the needed portion by weight if the recipe requires precision. Consider texture and the original formulation before rounding."
+      ]
+    ]
+  },
+  "media": {
+    "category": "daily",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1577048982768-5cb3e7ddfa23?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/assorted-baking-ingredients-on-table-nyiBwAZu4DE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+        "en": "Assorted baking ingredients on table"
+      },
+      "caption": {
+        "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+        "en": "Assorted baking ingredients on table"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1577048982768-5cb3e7ddfa23?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/assorted-baking-ingredients-on-table-nyiBwAZu4DE",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+            "en": "Assorted baking ingredients on table"
+          },
+          "caption": {
+            "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+            "en": "Assorted baking ingredients on table"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1685397166410-0f9f8cf7e25d?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/ingredients-for-a-recipe-laid-out-on-a-counter-tTOLMcg1D_U",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "조리대에 요리 순서에 맞게 준비한 식재료",
+            "en": "Ingredients for a recipe laid out on a counter"
+          },
+          "caption": {
+            "ko": "조리대에 요리 순서에 맞게 준비한 식재료",
+            "en": "Ingredients for a recipe laid out on a counter"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1768204042523-6f778e579402?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/strawberries-in-a-measuring-cup-on-a-scale-vP0GB1-9p3w",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "주방 저울 위의 계량컵에 담긴 딸기",
+            "en": "Strawberries in a measuring cup on a scale"
+          },
+          "caption": {
+            "ko": "주방 저울 위의 계량컵에 담긴 딸기",
+            "en": "Strawberries in a measuring cup on a scale"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1777647262314-58b72a19ffdc?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/white-powder-measured-on-a-digital-scale-u3gMcNvqrnI",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "전자 저울을 이용해 무게를 측정하는 흰색 가루",
+            "en": "White powder measured on a digital scale"
+          },
+          "caption": {
+            "ko": "전자 저울을 이용해 무게를 측정하는 흰색 가루",
+            "en": "White powder measured on a digital scale"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1759965670306-f055ff093752?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/baking-ingredients-and-tools-arranged-on-a-white-surface-KH9iqmoE374",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "흰색 작업대에 배치된 제빵 재료와 조리 도구",
+            "en": "Baking ingredients and tools arranged on a white surface"
+          },
+          "caption": {
+            "ko": "흰색 작업대에 배치된 제빵 재료와 조리 도구",
+            "en": "Baking ingredients and tools arranged on a white surface"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586808777178-8bf146c39bc7?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/clear-glass-measuring-cup-on-white-ceramic-plate-O-wRrxy-evo",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "흰색 세라믹 접시 위에 놓인 투명 유리 계량컵",
+            "en": "Clear glass measuring cup on white ceramic plate"
+          },
+          "caption": {
+            "ko": "흰색 세라믹 접시 위에 놓인 투명 유리 계량컵",
+            "en": "Clear glass measuring cup on white ceramic plate"
+          }
+        }
+      ]
+    }
+  }
+}

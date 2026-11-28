@@ -3,7 +3,7 @@
   "project": "tb-fuel-cost-calculator",
   "title": "자동차 주유비·연비 계산기",
   "description": "이동거리와 실제 연비, 연료 단가를 입력해 예상 사용량 및 거리 기준 주유비를 계산합니다.",
-  "approved": false,
+  "approved": true,
   "deploy_mode": "hub_only",
   "locales": [
     "ko",

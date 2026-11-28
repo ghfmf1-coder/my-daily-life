@@ -1,0 +1,163 @@
+{
+  "slug": "calculate-round-trip-fuel-cost",
+  "type": "tool",
+  "tool": "fuel-cost-calculator",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "ko": {
+    "title": "자동차 왕복 주유비 계산하는 법, 거리·실연비·리터당 가격 기준",
+    "description": "장거리 이동 비용을 비교할 때 공인 연비와 실제 연비에는 차이가 생길 수 있습니다. 주행거리와 최근 실연비, 주유 단가를 같은 단위로 맞추면 연료비를 다른 교통비와 분리할 수 있습니다.",
+    "problem": "장거리 이동 비용을 비교할 때 공인 연비와 실제 연비에는 차이가 생길 수 있습니다. 주행거리와 최근 실연비, 주유 단가를 같은 단위로 맞추면 연료비를 다른 교통비와 분리할 수 있습니다.",
+    "steps": [
+      [
+        "왕복 이동거리와 추가 경로 확인하기",
+        "지도에서 실제 이용할 경로의 전체 거리를 확인합니다. 왕복 이동이라면 돌아오는 거리와 중간에 들르는 곳까지 포함하고 편도 거리만 입력하지 않습니다."
+      ],
+      [
+        "비슷한 조건의 실연비 사용하기",
+        "계기판이나 주유 기록에서 비슷한 조건에 해당하는 km/L 값을 확인합니다. 거리 km를 연비 km/L로 나누면 연료 사용량을 리터로 구할 수 있습니다."
+      ],
+      [
+        "연료 단가와 기타 비용 구분하기",
+        "방문 예정 주유소의 확인된 리터당 가격을 입력합니다. 통행료와 주차비는 별도로 기록하고 정체나 공회전 등 연비가 달라지는 조건도 고려합니다."
+      ]
+    ],
+    "alternative": "가계부에 이동거리와 실제 주유량을 기록하여 자주 가는 경로의 연비를 관리할 수 있습니다. 주유 영수증과 출발 전 가격도 비교하세요.",
+    "toolIntro": "아브레다 주유비 계산기는 이동거리와 입력 연비 및 단가로 연료 사용량과 비용을 계산하며 km/L 및 미국 mpg를 지원합니다.",
+    "limits": "실시간 유가와 도로 상황을 조회하지 않습니다. 운전 조건에 따라 실제 연비가 변하고 통행료, 주차비와 감가상각은 제외됩니다.",
+    "faq": [
+      [
+        "공인 연비를 그대로 입력해도 되나요?",
+        "공인 연비 기준의 조건부 계산은 가능합니다. 실제 지출에 가까운 값을 구하려면 비슷한 주행 조건에서 확인한 실연비를 사용하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Calculate Round-Trip Fuel Costs Using Mileage and Gas Prices",
+    "description": "A road-trip fuel budget depends on distance, fuel economy under comparable driving conditions and the fuel price. Mixing city mileage with highway conditions or US gallons with liters produces misleading results.",
+    "problem": "A road-trip fuel budget depends on distance, fuel economy under comparable driving conditions and the fuel price. Mixing city mileage with highway conditions or US gallons with liters produces misleading results.",
+    "steps": [
+      [
+        "Map the complete round-trip route",
+        "Use the route distance rather than straight-line distance between destinations. Include the return journey and side trips when budgeting the whole outing, keeping the unit consistent."
+      ],
+      [
+        "Use observed fuel economy",
+        "Check recent trip records for comparable conditions. Divide miles by miles per US gallon to get gallons, or kilometers by kilometers per liter to get liters."
+      ],
+      [
+        "Apply fuel price and separate other expenses",
+        "Multiply the fuel quantity by the price in the matching unit. Add parking and tolls separately if comparing driving against another mode of transportation."
+      ]
+    ],
+    "alternative": "Keep receipts and odometer readings to monitor real fuel economy across trips. Actual pump prices and measured fuel consumption provide the best basis for reviewing spending afterward.",
+    "toolIntro": "ABREDA calculates fuel quantity and cost from your supplied distance, efficiency and price. Choose kilometers and liters or miles and US gallons.",
+    "limits": "The calculator does not fetch prices or account for weather, traffic, idling, cargo loads, tolls or depreciation. It does not model electric-vehicle charging costs.",
+    "faq": [
+      [
+        "Should I use highway MPG for a city trip?",
+        "Use observed mileage from a comparable route when available. An official rating is a useful reference but is not a measurement of your actual trip's fuel consumption."
+      ]
+    ]
+  },
+  "media": {
+    "category": "money",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1644246905181-c3753e9a82bd?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-man-pumping-gas-into-his-car-at-a-gas-station-f4UbPVbJcjw",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "주유소에서 자동차에 연료를 넣고 있는 사람",
+        "en": "A man pumping gas into his car at a gas station"
+      },
+      "caption": {
+        "ko": "주유소에서 자동차에 연료를 넣고 있는 사람",
+        "en": "A man pumping gas into his car at a gas station"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1644246905181-c3753e9a82bd?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-man-pumping-gas-into-his-car-at-a-gas-station-f4UbPVbJcjw",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "주유소에서 자동차에 연료를 넣고 있는 사람",
+            "en": "A man pumping gas into his car at a gas station"
+          },
+          "caption": {
+            "ko": "주유소에서 자동차에 연료를 넣고 있는 사람",
+            "en": "A man pumping gas into his car at a gas station"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1727483771218-c1cc488d020c?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-gas-station-with-a-few-gas-pumps-d_Eg3GIi5nE",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "여러 대의 주유기가 설치된 주유소 전경",
+            "en": "A gas station with a few gas pumps"
+          },
+          "caption": {
+            "ko": "여러 대의 주유기가 설치된 주유소 전경",
+            "en": "A gas station with a few gas pumps"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1748761751275-e55a2a29e1bf?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/fuel-pumps-dispensing-diesel-and-petrol-S3kgSuSMH2Q",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "경유와 휘발유를 공급하는 주유기",
+            "en": "Fuel pumps dispensing diesel and petrol"
+          },
+          "caption": {
+            "ko": "경유와 휘발유를 공급하는 주유기",
+            "en": "Fuel pumps dispensing diesel and petrol"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1611807527279-f6ac568cd4f8?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-close-up-of-a-gas-pump-at-a-gas-station-ULJCBY8Tcfg",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "주유소의 연료 주입기를 가까이에서 촬영한 모습",
+            "en": "A close up of a gas pump at a gas station"
+          },
+          "caption": {
+            "ko": "주유소의 연료 주입기를 가까이에서 촬영한 모습",
+            "en": "A close up of a gas pump at a gas station"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1638425637198-f4ebe6ef341a?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-close-up-of-a-gas-pump-with-a-car-in-the-background-KJFoNSi9TBI",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "자동차가 뒤에 보이는 주유기의 가까운 모습",
+            "en": "A close up of a gas pump with a car in the background"
+          },
+          "caption": {
+            "ko": "자동차가 뒤에 보이는 주유기의 가까운 모습",
+            "en": "A close up of a gas pump with a car in the background"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1792019607468-a245943f6d88?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/gas-station-with-silver-car-SDXeyxXkIYo",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "은색 자동차가 정차해 있는 주유소",
+            "en": "Gas station with silver car"
+          },
+          "caption": {
+            "ko": "은색 자동차가 정차해 있는 주유소",
+            "en": "Gas station with silver car"
+          }
+        }
+      ]
+    }
+  }
+}

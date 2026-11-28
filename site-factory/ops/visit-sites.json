@@ -510,6 +510,34 @@
       "origins": [
         "https://abreda.com"
       ]
+    },
+    {
+      "siteId": "tb-dimensional-weight-calculator",
+      "url": "https://abreda.com/tools/dimensional-weight-calculator/",
+      "origins": [
+        "https://abreda.com"
+      ]
+    },
+    {
+      "siteId": "tb-recipe-serving-calculator",
+      "url": "https://abreda.com/tools/recipe-serving-calculator/",
+      "origins": [
+        "https://abreda.com"
+      ]
+    },
+    {
+      "siteId": "tb-file-transfer-time-calculator",
+      "url": "https://abreda.com/tools/file-transfer-time-calculator/",
+      "origins": [
+        "https://abreda.com"
+      ]
+    },
+    {
+      "siteId": "tb-fuel-cost-calculator",
+      "url": "https://abreda.com/tools/fuel-cost-calculator/",
+      "origins": [
+        "https://abreda.com"
+      ]
     }
   ]
 }
