@@ -1,0 +1,193 @@
+{
+  "slug": "2026-winter-deadline-guide",
+  "independent_locales": true,
+  "sources": [
+    {
+      "name": "한국에너지공단 — 2026 에너지바우처 지원안내",
+      "url": "https://www.energyv.or.kr/info/support_info.do",
+      "locale": "ko"
+    },
+    {
+      "name": "한국에너지공단 — 신청안내",
+      "url": "https://www.energyv.or.kr/info/apl_info.do",
+      "locale": "ko"
+    },
+    {
+      "name": "USPS — 2026 Holiday Shipping Deadlines",
+      "url": "https://www.usps.com/holidayshippingdates/",
+      "locale": "en"
+    },
+    {
+      "name": "USPS — November 27, 2026 holiday shipping notice",
+      "url": "https://about.usps.com/newsroom/local-releases/ny/2026/1127-postal-service-prepared-to-deliver-for-2026-holiday-season.htm",
+      "locale": "en"
+    }
+  ],
+  "ko": {
+    "title": "2026 겨울 에너지바우처 신청 방법, 지원 대상과 난방비 사용기간 확인하기",
+    "description": "2026년 에너지바우처의 신청기한, 소득과 세대원 특성 기준, 겨울 요금차감 및 실물카드 사용기간을 한국에너지공단 안내로 확인합니다.",
+    "problem": "겨울 난방비가 부담되는 가구가 에너지바우처를 알아볼 때 신청기한과 사용기한을 혼동하기 쉽습니다. 이 제도는 모든 가구에 지급되는 난방비 할인과 달리 소득기준과 세대원 특성기준을 함께 충족해야 합니다. 전년도에 받았더라도 이사나 가족 구성 변경이 있으면 신청 정보를 확인해야 합니다.",
+    "steps": [
+      [
+        "소득기준과 세대원 특성기준 함께 확인하기",
+        "한국에너지공단의 2026 지원안내에서 생계·의료·주거·교육급여 수급자 여부와 주민등록표상 노인, 영유아, 장애인, 임산부 등 해당 세대 특성기준을 확인합니다. 세부 대상과 제외 조건은 공식 안내에서 확인하세요."
+      ],
+      [
+        "2026년 12월 31일까지 신청 절차 확인하기",
+        "공식 신청기간은 2026년 6월 15일부터 12월 31일까지입니다. 주민등록상 거주지 읍면동 행정복지센터 또는 복지로 온라인 신청 절차를 확인합니다. 연말 시스템 처리에 따른 일시 중단이 안내될 수 있으므로 마감 직전에 미루지 않습니다."
+      ],
+      [
+        "요금차감과 국민행복카드 사용방식 선택하기",
+        "동절기 요금차감 방식은 2026년 10월 1일부터 2027년 5월 31일까지, 실물카드는 2026년 10월 3일부터 2027년 5월 31일까지로 안내되어 있습니다. 이용할 에너지원과 고지서의 고객번호 등 필요한 정보를 확인합니다."
+      ],
+      [
+        "다른 난방 지원과 중복 여부 확인하기",
+        "동절기 긴급복지 연료비나 연탄쿠폰 등 특정 사업은 중복 지원이 제한됩니다. 이미 다른 지원을 받고 있거나 이사한 경우에는 행정복지센터에서 실제 자격과 변경 절차를 확인합니다."
+      ]
+    ],
+    "alternative": "온라인 신청이 어렵거나 거동이 불편하다면 관할 행정복지센터에 본인 또는 대리 신청 방법을 문의하세요. 한국에너지공단 에너지바우처 상담센터에서도 공식 절차를 확인할 수 있습니다.",
+    "toolIntro": "에너지바우처 신청과 수급 판정은 정부의 공식 시스템에서 진행됩니다. 아브레다에는 수급 자격 조회나 신청 대행 기능이 없으므로 공식 안내에 따라 신청하세요.",
+    "limits": "2026년 11월 28일 확인 기준입니다. 신청기한은 이용권 사용기한과 다르며 중복 지원, 세대 구성과 실제 선정 결과에 따라 지원받지 못할 수 있습니다. 이 글은 수급 판정이나 금액을 보장하지 않습니다.",
+    "faq": [
+      [
+        "전년도에 에너지바우처를 받았으면 올해도 자동 적용되나요?",
+        "이사나 세대원 수 변경처럼 정보가 달라지면 신규 신청이 필요할 수 있습니다. 전년도 수급만으로 현재 자격을 확정하지 말고 공식 신청안내와 관할 행정복지센터에서 확인하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "USPS Christmas Shipping Deadlines 2026: When to Mail Packages Before December 25",
+    "description": "Check the USPS recommended 2026 send-by dates for First-Class Mail, Ground Advantage, Priority Mail and Priority Mail Express in the contiguous United States.",
+    "problem": "A holiday gift sent in late December may not arrive by Christmas even when its label says Priority Mail. USPS publishes recommended send-by dates for particular services and destinations. Those dates differ for some regions and international or military mail, and actual delivery depends on acceptance and transit conditions.",
+    "steps": [
+      [
+        "Identify whether your destination is in the contiguous U.S.",
+        "The holiday dates below are for the lower 48 states. USPS publishes separate tables for Alaska, Hawaii, U.S. territories, military and international addresses. Use the destination-specific table rather than applying a domestic recommendation to a different service area."
+      ],
+      [
+        "Record the recommended 2026 domestic send-by dates",
+        "USPS's 2026 guidance lists December 17 for First-Class Mail and Ground Advantage, December 18 for Priority Mail, and December 19 for Priority Mail Express in the contiguous United States. These are recommended mailing dates for expected delivery before December 25, not blanket delivery guarantees."
+      ],
+      [
+        "Check acceptance time and prepare the package",
+        "Confirm the service can accept your package at the selected location, and check that day's acceptance cutoff. Measure and weigh the packed parcel, select the appropriate service and label, and include a complete and readable address. A label purchase alone does not mean USPS has accepted the shipment."
+      ],
+      [
+        "Track the shipment and allow additional time",
+        "Keep the acceptance receipt and tracking information when available. Origin, destination, weather and operational conditions can affect delivery. When a gift must arrive by a particular date, sending before the published recommendation is preferable to relying on the latest date."
+      ]
+    ],
+    "alternative": "Use the USPS shipping date page and the official postage quote or service information for your exact origin and destination. International and military shipments may require customs or service-specific preparation that is not covered by a domestic deadline.",
+    "toolIntro": "USPS is the authoritative source for these dates and delivery terms. ABREDA cannot schedule USPS delivery or guarantee arrival; its practical shipping calculators are only aids for preparing package measurements.",
+    "limits": "The dates were checked against USPS's 2026 holiday guidance and November 27 notice on November 28, 2026. They are recommendations for the specified region and service. Actual delivery can differ, and other destinations follow their own published dates.",
+    "faq": [
+      [
+        "Is December 19 a guaranteed Christmas delivery deadline?",
+        "No. It is the recommended send-by date for Priority Mail Express in the contiguous United States in the 2026 holiday guidance. Confirm the exact service terms, acceptance time and destination with USPS."
+      ]
+    ]
+  },
+  "type": "information",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "media": {
+    "category": "daily",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1601914697928-0b536e76d048?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-and-black-water-heater-SYdhFwICWJU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "실내에서 사용되는 흰색과 검은색 온수 가열 장치",
+        "en": "White and black water heater"
+      },
+      "caption": {
+        "ko": "실내에서 사용되는 흰색과 검은색 온수 가열 장치",
+        "en": "White and black water heater"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1601914697928-0b536e76d048?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/white-and-black-water-heater-SYdhFwICWJU",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "실내에서 사용되는 흰색과 검은색 온수 가열 장치",
+            "en": "White and black water heater"
+          },
+          "caption": {
+            "ko": "실내에서 사용되는 흰색과 검은색 온수 가열 장치",
+            "en": "White and black water heater"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1728581665815-cab04c5e75f4?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-radiator-and-a-window-in-a-room-DZLIg71vfrU",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "창문 아래에 난방용 라디에이터가 설치된 공간",
+            "en": "A radiator and a window in a room"
+          },
+          "caption": {
+            "ko": "창문 아래에 난방용 라디에이터가 설치된 공간",
+            "en": "A radiator and a window in a room"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1686916057395-7277599ac1c5?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-room-with-a-large-window-and-a-radiator-ZHGvS9orV-w",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "큰 창문과 난방 라디에이터가 있는 실내 공간",
+            "en": "A room with a large window and a radiator"
+          },
+          "caption": {
+            "ko": "큰 창문과 난방 라디에이터가 있는 실내 공간",
+            "en": "A room with a large window and a radiator"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1785352829423-fdd2fad33e17?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-blue-usps-mailbox-stands-among-green-bushes-and-plants-7wlw6RQdB2c",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "녹색 관목 옆에 설치된 파란색 미국 우편함",
+            "en": "A blue usps mailbox stands among green bushes and plants"
+          },
+          "caption": {
+            "ko": "녹색 관목 옆에 설치된 파란색 미국 우편함",
+            "en": "A blue usps mailbox stands among green bushes and plants"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1709054622660-562a14bcfd76?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-blue-mailbox-sitting-on-the-side-of-a-road-NYTa57zrmQ0",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "도로 옆에 설치된 파란색 우편물 수거함",
+            "en": "A blue mailbox sitting on the side of a road"
+          },
+          "caption": {
+            "ko": "도로 옆에 설치된 파란색 우편물 수거함",
+            "en": "A blue mailbox sitting on the side of a road"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1545591841-4a97f1da8d1f?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/youve-got-mail-printed-pack-BPxkU4uPq6Y",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "우편물이라는 문구가 인쇄된 배송 포장물",
+            "en": "You've got mail-printed pack"
+          },
+          "caption": {
+            "ko": "우편물이라는 문구가 인쇄된 배송 포장물",
+            "en": "You've got mail-printed pack"
+          }
+        }
+      ]
+    }
+  }
+}
