@@ -544,6 +544,19 @@
         "ko": "흰색 작업대에 배치된 제빵 재료와 조리 도구",
         "en": "Baking ingredients and tools arranged on a white surface"
       }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1586808777178-8bf146c39bc7?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/clear-glass-measuring-cup-on-white-ceramic-plate-O-wRrxy-evo",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "흰색 세라믹 접시 위에 놓인 투명 유리 계량컵",
+        "en": "Clear glass measuring cup on white ceramic plate"
+      },
+      "caption": {
+        "ko": "흰색 세라믹 접시 위에 놓인 투명 유리 계량컵",
+        "en": "Clear glass measuring cup on white ceramic plate"
+      }
     }
   ],
   "transfer": [
@@ -623,6 +636,166 @@
       "caption": {
         "ko": "연결 단자가 달린 녹색 광섬유 케이블",
         "en": "Green fiber optic cable with connectors"
+      }
+    }
+  ],
+  "power": [
+    {
+      "url": "https://images.unsplash.com/photo-1775318254436-6187ef011190?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-portable-heater-with-a-kettle-on-top-sA1F57ip6UU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "주전자와 함께 놓인 이동식 난방 기구",
+        "en": "A portable heater with a kettle on top"
+      },
+      "caption": {
+        "ko": "주전자와 함께 놓인 이동식 난방 기구",
+        "en": "A portable heater with a kettle on top"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1633596879450-e98a1a4d0c80?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-heater-in-the-dark-7DrlKDr4Srw",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "어두운 공간에서 난방 기구를 가까이 촬영한 사진",
+        "en": "A close up of a heater in the dark"
+      },
+      "caption": {
+        "ko": "어두운 공간에서 난방 기구를 가까이 촬영한 사진",
+        "en": "A close up of a heater in the dark"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1565049981953-379c9c2a5d48?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/black-male-plug-in-front-of-electric-socket-exfrR9KkzlE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "전기 콘센트 앞에 놓인 검은색 전원 플러그",
+        "en": "Black male plug in front of electric socket"
+      },
+      "caption": {
+        "ko": "전기 콘센트 앞에 놓인 검은색 전원 플러그",
+        "en": "Black male plug in front of electric socket"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1669726320997-c20c02c662d7?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-bed-with-a-large-headboard-NEjlmppwZ80",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "전기 난방기가 있는 침실의 침대 주변 모습",
+        "en": "A bed with a large headboard"
+      },
+      "caption": {
+        "ko": "전기 난방기가 있는 침실의 침대 주변 모습",
+        "en": "A bed with a large headboard"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1727797208736-6efdc1088f81?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-room-with-a-chair-and-a-heater-PeQaDfJwkXU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "의자와 난방기가 놓여 있는 실내 공간",
+        "en": "A room with a chair and a heater"
+      },
+      "caption": {
+        "ko": "의자와 난방기가 놓여 있는 실내 공간",
+        "en": "A room with a chair and a heater"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1792975212072-7dcfd53a201b?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/digital-thermostat-on-red-tiled-wall-rJmjEOLOGXg",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "붉은 타일 벽에 설치되어 있는 디지털 온도 조절기",
+        "en": "Digital thermostat on red tiled wall"
+      },
+      "caption": {
+        "ko": "붉은 타일 벽에 설치되어 있는 디지털 온도 조절기",
+        "en": "Digital thermostat on red tiled wall"
+      }
+    }
+  ],
+  "pdf": [
+    {
+      "url": "https://images.unsplash.com/photo-1731834450872-c3ccbb46424c?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-printer-sitting-on-top-of-a-table-next-to-a-pile-of-papers-EARzQxHhpaM",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "종이 문서 더미 옆에 놓인 사무용 프린터",
+        "en": "A printer sitting on top of a table next to a pile of papers"
+      },
+      "caption": {
+        "ko": "종이 문서 더미 옆에 놓인 사무용 프린터",
+        "en": "A printer sitting on top of a table next to a pile of papers"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1721830834983-f111ad63dbf4?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-person-is-pressing-a-button-on-a-printer-j7cOdWrbKUI",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "사무용 프린터의 버튼을 손으로 누르는 사람",
+        "en": "A person is pressing a button on a printer"
+      },
+      "caption": {
+        "ko": "사무용 프린터의 버튼을 손으로 누르는 사람",
+        "en": "A person is pressing a button on a printer"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1586281380426-f644f2dc6ada?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-printer-paper-beside-silver-macbook-j2tExQL-OyA",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "은색 노트북 옆에 놓인 흰색 종이 문서",
+        "en": "White printer paper beside silver macbook"
+      },
+      "caption": {
+        "ko": "은색 노트북 옆에 놓인 흰색 종이 문서",
+        "en": "White printer paper beside silver macbook"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1650696868612-4b836291b323?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-white-printer-on-a-table-QH_SAEYJW8Y",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 놓인 흰색 사무용 프린터",
+        "en": "A white printer on a table"
+      },
+      "caption": {
+        "ko": "테이블 위에 놓인 흰색 사무용 프린터",
+        "en": "A white printer on a table"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1617329620609-a66fc78590b8?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-printer-paper-with-photos-t6ns82uSL18",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "사진이 인쇄된 여러 장의 흰색 종이",
+        "en": "White printer paper with photos"
+      },
+      "caption": {
+        "ko": "사진이 인쇄된 여러 장의 흰색 종이",
+        "en": "White printer paper with photos"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1586364800739-bed6bc729c7b?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-printer-paper-beside-black-laptop-computer-jUF9CRChIAs",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "검은색 노트북 컴퓨터 옆에 놓인 종이 문서",
+        "en": "White printer paper beside black laptop computer"
+      },
+      "caption": {
+        "ko": "검은색 노트북 컴퓨터 옆에 놓인 종이 문서",
+        "en": "White printer paper beside black laptop computer"
       }
     }
   ]
