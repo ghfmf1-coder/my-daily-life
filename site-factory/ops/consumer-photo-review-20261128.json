@@ -158,5 +158,165 @@
         "en": "A person working on a laptop"
       }
     }
+  ],
+  "heic": [
+    {
+      "url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-using-phone-and-laptop-gUIJ0YszPig",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "휴대전화와 노트북 컴퓨터를 함께 사용하는 사람",
+        "en": "Person using phone and laptop"
+      },
+      "caption": {
+        "ko": "휴대전화와 노트북 컴퓨터를 함께 사용하는 사람",
+        "en": "Person using phone and laptop"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1697890668305-dda208bbf2e4?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/gros-plan-dun-telephone-portable-pres-dun-ordinateur-portable-3SWwqKKe-VE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "노트북 가까이에 놓인 휴대전화를 보여주는 사진",
+        "en": "A close up of a cell phone near a laptop"
+      },
+      "caption": {
+        "ko": "노트북 가까이에 놓인 휴대전화를 보여주는 사진",
+        "en": "A close up of a cell phone near a laptop"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/smartphone-and-laptop-workspace-xsGxhtAsfSA",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "스마트폰과 노트북이 놓여 있는 작업 공간",
+        "en": "Smartphone and laptop workspace"
+      },
+      "caption": {
+        "ko": "스마트폰과 노트북이 놓여 있는 작업 공간",
+        "en": "Smartphone and laptop workspace"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1573164574230-db1d5e960238?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-using-smartphone-and-macbook-UTw3j_aoIKM",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "스마트폰과 맥북을 함께 이용하는 사람",
+        "en": "Person using smartphone and MacBook"
+      },
+      "caption": {
+        "ko": "스마트폰과 맥북을 함께 이용하는 사람",
+        "en": "Person using smartphone and MacBook"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-using-both-laptop-and-smartphone-tLZhFRLj6nY",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "노트북과 스마트폰을 동시에 사용하는 사람",
+        "en": "Person using both laptop and smartphone"
+      },
+      "caption": {
+        "ko": "노트북과 스마트폰을 동시에 사용하는 사람",
+        "en": "Person using both laptop and smartphone"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1584997629379-c93406839511?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-holding-white-iphone-5-c-hMv_eRKuaL4",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "흰색 아이폰을 손으로 들고 있는 사람",
+        "en": "Person holding white iphone 5 c"
+      },
+      "caption": {
+        "ko": "흰색 아이폰을 손으로 들고 있는 사람",
+        "en": "Person holding white iphone 5 c"
+      }
+    }
+  ],
+  "fuel": [
+    {
+      "url": "https://images.unsplash.com/photo-1644246905181-c3753e9a82bd?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-man-pumping-gas-into-his-car-at-a-gas-station-f4UbPVbJcjw",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "주유소에서 자동차에 연료를 넣고 있는 사람",
+        "en": "A man pumping gas into his car at a gas station"
+      },
+      "caption": {
+        "ko": "주유소에서 자동차에 연료를 넣고 있는 사람",
+        "en": "A man pumping gas into his car at a gas station"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1727483771218-c1cc488d020c?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-gas-station-with-a-few-gas-pumps-d_Eg3GIi5nE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "여러 대의 주유기가 설치된 주유소 전경",
+        "en": "A gas station with a few gas pumps"
+      },
+      "caption": {
+        "ko": "여러 대의 주유기가 설치된 주유소 전경",
+        "en": "A gas station with a few gas pumps"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1748761751275-e55a2a29e1bf?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/fuel-pumps-dispensing-diesel-and-petrol-S3kgSuSMH2Q",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "경유와 휘발유를 공급하는 주유기",
+        "en": "Fuel pumps dispensing diesel and petrol"
+      },
+      "caption": {
+        "ko": "경유와 휘발유를 공급하는 주유기",
+        "en": "Fuel pumps dispensing diesel and petrol"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1611807527279-f6ac568cd4f8?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-gas-pump-at-a-gas-station-ULJCBY8Tcfg",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "주유소의 연료 주입기를 가까이에서 촬영한 모습",
+        "en": "A close up of a gas pump at a gas station"
+      },
+      "caption": {
+        "ko": "주유소의 연료 주입기를 가까이에서 촬영한 모습",
+        "en": "A close up of a gas pump at a gas station"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1638425637198-f4ebe6ef341a?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-gas-pump-with-a-car-in-the-background-KJFoNSi9TBI",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "자동차가 뒤에 보이는 주유기의 가까운 모습",
+        "en": "A close up of a gas pump with a car in the background"
+      },
+      "caption": {
+        "ko": "자동차가 뒤에 보이는 주유기의 가까운 모습",
+        "en": "A close up of a gas pump with a car in the background"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1792019607468-a245943f6d88?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/gas-station-with-silver-car-SDXeyxXkIYo",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "은색 자동차가 정차해 있는 주유소",
+        "en": "Gas station with silver car"
+      },
+      "caption": {
+        "ko": "은색 자동차가 정차해 있는 주유소",
+        "en": "Gas station with silver car"
+      }
+    }
   ]
 }
