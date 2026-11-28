@@ -81,8 +81,10 @@ def head(lang,post=None):
     meta='<!doctype html><html lang="'+lang+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
     meta+='<meta name="robots" content="index,follow,max-image-preview:large"><title>'+E(title+' | ABREDA')+'</title>'
     meta+='<meta name="description" content="'+E(desc)+'"><meta name="theme-color" content="#0d2e47">'
-    meta+='<link rel="canonical" href="'+E(url)+'"><link rel="alternate" hreflang="ko" href="'+E(ko)+'">'
-    meta+='<link rel="alternate" hreflang="en" href="'+E(en)+'"><link rel="alternate" hreflang="x-default" href="'+E(ko)+'">'
+    meta+='<link rel="canonical" href="'+E(url)+'">'
+    if not post or not post.get('independent_locales'):
+        meta+='<link rel="alternate" hreflang="ko" href="'+E(ko)+'">'
+        meta+='<link rel="alternate" hreflang="en" href="'+E(en)+'"><link rel="alternate" hreflang="x-default" href="'+E(ko)+'">'
     meta+='<meta property="og:site_name" content="ABREDA"><meta property="og:type" content="'+('website' if info else 'article')+'">'
     meta+='<meta property="og:title" content="'+E(title)+'"><meta property="og:description" content="'+E(desc)+'">'
     meta+='<meta property="og:url" content="'+E(url)+'"><meta name="twitter:card" content="summary_large_image">'
@@ -156,6 +158,7 @@ def related(posts,current):
     return ([by_slug[s] for s in ranked]+same)[:3]
 def article(post,lang,posts):
     d=post[lang];ko=lang=='ko';found=related(posts,post)
+    sources=[ref for ref in post.get('sources',[]) if ref.get('locale',lang)==lang]
     h=head(lang,post)+'<body>'+mast(lang)+'<main class="wrap">'
     h+='<div class="breadcrumb"><a href="'+('/' if ko else '/en/')+'">'+label(lang,'홈','Home')+'</a> / <a href="'+href(lang)+'">'+label(lang,'매거진','Magazine')+'</a> / '+E(cat_name(post,lang))+'</div>'
     h+='<div class="article-layout"><article class="article"><header><div class="meta"><span class="cat">'+E(cat_name(post,lang))+'</span><time datetime="'+E(post['published'])+'">'+E(post['published'])+'</time><span>'+label(lang,'아브레다 콘텐츠','ABREDA Editorial')+'</span></div>'
@@ -166,7 +169,7 @@ def article(post,lang,posts):
     h+='<figure class="hero">'+image_tag(post,lang,is_hero=True)+'<figcaption>'+E(image['caption'][lang])+' · '
     h+='<a href="'+E(image['source'])+'" rel="noopener noreferrer" target="_blank">'+label(lang,'사진 출처: Unsplash 원본','Photo source: Unsplash original')+'</a></figcaption></figure>'
     toc=[('problem',label(lang,'무엇이 문제인가요?','What is the problem?')),('steps',label(lang,'순서대로 해결하기','Step-by-step solution')),('alternative',label(lang,'다른 해결 방법','Alternative method')),('limits',label(lang,'해결되지 않는 경우','Known limitations')),('faq',label(lang,'자주 묻는 질문','Frequently asked questions'))]
-    if post.get('sources'):toc.append(('sources',label(lang,'공식 참고자료','Primary sources')))
+    if sources:toc.append(('sources',label(lang,'공식 참고자료','Primary sources')))
     h+='<nav class="toc" aria-label="'+label(lang,'목차','Table of contents')+'"><strong>'+label(lang,'이 글의 내용','On this page')+'</strong><ul>'
     for anchor,title in toc:h+='<li><a href="#'+anchor+'">'+E(title)+'</a></li>'
     h+='</ul></nav>'
@@ -189,13 +192,17 @@ def article(post,lang,posts):
     h+='<section><h2 id="faq">'+E(toc[4][1])+'</h2>'
     for q,a in d['faq']:h+='<div class="faq"><strong>'+E(q)+'</strong><p>'+E(a)+'</p></div>'
     h+='</section>'
-    if post.get('sources'):
+    if sources:
         h+='<section><h2 id="sources">'+label(lang,'참고한 공식 원천 자료','Official primary sources')+'</h2>'
         h+='<p>'+label(lang,'다음 기관의 안내 내용을 확인해 작성했습니다. 상세 규정은 원문을 확인하세요.','This article uses the official references below; consult them for the full guidance.')+'</p><ul class="sources">'
-        for ref in post['sources']:h+='<li><a href="'+E(ref['url'])+'" target="_blank" rel="noopener noreferrer">'+E(ref['name'])+'</a></li>'
+        for ref in sources:h+='<li><a href="'+E(ref['url'])+'" target="_blank" rel="noopener noreferrer">'+E(ref['name'])+'</a></li>'
         h+='</ul></section>'
     h+='<div class="article-bottom"><a href="'+href(lang)+'">← '+label(lang,'블로그 전체 글','All magazine articles')+'</a>'
-    h+='<a href="'+href('en' if ko else 'ko',post['slug'])+'" hreflang="'+('en' if ko else 'ko')+'">'+label(lang,'English version','한국어 버전')+' →</a></div>'
+    other='en' if ko else 'ko'
+    if post.get('independent_locales'):
+        h+='<a href="'+href(other)+'">'+label(lang,'English articles','한국어 글 목록')+' →</a></div>'
+    else:
+        h+='<a href="'+href(other,post['slug'])+'" hreflang="'+other+'">'+label(lang,'English version','한국어 버전')+' →</a></div>'
     h+='</article><aside class="sidebar" aria-label="'+label(lang,'관련 콘텐츠','Related content')+'"><div class="side-panel"><h2>'+label(lang,'이 글과 관련된 이야기','Related reading')+'</h2><div class="mini">'
     for p in found:
         h+='<a href="'+href(lang,p['slug'])+'">'+image_tag(p,lang)+'<span>'+E(p[lang]['title'])+'</span></a>'

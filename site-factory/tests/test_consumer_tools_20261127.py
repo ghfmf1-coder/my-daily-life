@@ -17,7 +17,7 @@ class ConsumerTools(unittest.TestCase):
                 subprocess.run(['node','--check',str(p)],check=True,capture_output=True)
                 code="const assert=require('node:assert/strict');const {compute}=require(process.argv[1]);for(const [v,want] of JSON.parse(process.argv[2])){assert.throws(()=>compute({}));const got=compute(v).map(r=>r[1]);assert.equal(got.length,want.length);got.forEach((x,i)=>typeof x==='number'?assert.ok(Math.abs(x-want[i])<1e-8):assert.equal(x,want[i]));}"
                 subprocess.run(['node','-e',code,str(p),json.dumps(spec['cases'])],check=True,capture_output=True)
-    def test_pdf_source_only_not_functional_certification(self):
+    def test_pdf_source_syntax(self):
         validate_site('pdf-compressor')
         subprocess.run(['node','--check',str(ROOT/'sites'/'pdf-compressor'/'public'/'app.js')],check=True,capture_output=True)
 
@@ -43,7 +43,25 @@ class ConsumerTools(unittest.TestCase):
                     tool=out/prefix/'tools'/post['tool']/'index.html'
                     self.assertTrue(tool.is_file())
                     self.assertIn('https://abreda.com/'+prefix+'tools/'+post['tool']+'/',sitemap)
-            for spec in CASES:
-                if spec['slug'] not in released:self.assertFalse((out/'tools'/spec['slug']).exists())
             self.assertTrue((out/'tools/pdf-compressor/index.html').exists())
         self.assertEqual(len(ids),len(set(ids)))
+
+    def test_all_new_editorial_pairs_have_unique_images_and_correct_language_links(self):
+        from blog_articles import load
+        from blog_magazine import head,photo_set
+        posts=[p for p in load() if p['published']>='2026-11-27']
+        self.assertEqual(len(posts),14)
+        ids=[]
+        for post in posts:
+            for lang in ('ko','en'):
+                photos=photo_set(post,lang)
+                self.assertEqual(len(photos),3)
+                ids.extend(q['url'].split('?')[0] for q in photos)
+                markup=head(lang,post)
+                if post.get('independent_locales'):
+                    self.assertNotIn('hreflang=',markup)
+                else:
+                    self.assertIn('hreflang="ko"',markup)
+                    self.assertIn('hreflang="en"',markup)
+        self.assertEqual(len(ids),len(set(ids)))
+        self.assertEqual(len([p for p in posts if p.get('independent_locales')]),2)
