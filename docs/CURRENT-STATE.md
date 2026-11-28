@@ -1,3 +1,11 @@
+# 2026-11-28 소비자 웹앱·블로그 전체 발행 검증 완료
+
+- PR 29 squash merge e2eb313115a22805cd0d656cfd3aa0cc1dae887d. 1차 2개에 이어 잔여 8개 앱을 공개, 총 10개 한영 앱(20개 URL). 선정 기사 한영 각 10개(정보성 7, 화제성 3) 모두 공개. 기존 앱별 reviewed blog gate 준수를 위해 별도 연계 가이드 한영 각 4개도 발행하여 이번 묶음 전체 28개 기사(1차 4개 포함).
+- 최초 테스트는 숫자로 시작하는 신규 기사 slug 2개 때문에 실패. 미발행 주소만 winter-deadline-guide-2026 및 year-end-tax-preparation-2026으로 수정. 후속 5개 PR 검사 모두 success. Python 85개 검사, CSV·자막·동의 회귀 통과. Chromium QA 46101797766: BLOG_BROWSER_SUMMARY failed=0, newPhotoCount=84. PDF_BROWSER_VERIFIED ko/en: 동일 합성 2쪽 스캔 문서 1845907 bytes → 559214 bytes, 출력 PDF 재열기·페이지 수/크기·잘못된 파일 거부 검증. PDF는 이미지 재압축 방식으로 검색 텍스트층과 문서 기능 손실 안내, 20MB/50쪽 및 페이지 픽셀 제한 유지.
+- main 배포 46101934650 completed/success, matrix toolbox-hub/toolbox-admin만. 실제 운영 도구 20 URL 및 기사 28 URL 모두 HTTP 200·자기 canonical 확인. 도구 폼 20개와 기사별 본문 사진 3장 확인. 기존/신규 원본 사진 ID 중복 차단, 84개 신규 원본 ID 고유, 기존 2열 모바일 레이아웃 유지. Unsplash 원본 출처/ALT 검수. 사진 픽셀 기반 유사·중복 검사 및 모든 이미지 렌더링 실측은 별도 미실시.
+- 실제 sitemap.xml HTTP 200, loc 298개 모두 고유, 이번 묶음 48개 주소 전부 포함. 한국/미국 세금·겨울 마감 기사처럼 독립 주제는 상호 hreflang 제거 및 해당 국가의 공식 출처만 표시. Google setup 46102018138 success: abreda.com 사이트맵 already_submitted, lastDownloaded 2026-11-26, errors/warnings 0. Naver 46102068643 success: abreda.com 298 URL IndexNow HTTP 200 received. 접수/등록과 실제 색인은 별개.
+- Supabase public.toolbox_public_site_sources 실제 읽기에서 10개 site_id와 대표 URL 모두 확인. 방문 실적, D1/GSC 최신 동기화 및 신규 검색 색인은 이 배포 검증에서 확정하지 않음. 새 Pages 프로젝트/유료 인프라/Work 사용 없음. 기존 기록 및 다른 서비스 보존.
+
 # 2026-11-27 소비자 웹앱 1차 발행 검증
 
 - PR 28 squash merge: 0175dadd5dda46c976cb3bad6fd301dd1d315bad. 10개 한영 도구 소스, 9개 계산 예제 회귀, PDF 소스 구문 검사. PDF 압축의 실제 문서 처리는 아직 미검증.
