@@ -1,89 +1,69 @@
 {
-  "slug": "electric-blanket-heater-kwh-electricity-cost",
+  "slug": "calculate-heater-electricity-use",
+  "type": "tool",
   "tool": "appliance-energy-calculator",
+  "status": "reviewed",
+  "published": "2026-11-28",
   "ko": {
     "title": "전기장판 소비전력으로 하루·한 달 전기 사용량 계산하는 법",
-    "description": "전기장판 정격 소비전력(W)을 kWh로 바꾸고 실제 사용시간과 전력량 단가를 이용해 사용량을 비교하는 방법입니다. 누진요금과 온도조절에 따른 차이도 살펴봅니다.",
-    "problem": "전기장판이나 전기히터의 제품 표시에는 소비전력이 와트 단위로 적혀 있지만 전기요금 고지서는 사용량을 kWh 단위로 보여줍니다. 온도조절기가 작동하면서 전원을 껐다 켜는 제품은 정격 소비전력만 곱한 값과 실제 계량기 수치가 다를 수 있습니다. 소비전력과 전기요금을 분리해서 확인하는 것이 중요합니다.",
+    "description": "전기장판에 표시된 소비전력은 순간 전력이고 고지서의 사용량은 에너지입니다. 온도 조절로 전원이 반복적으로 켜지고 꺼지면 정격전력을 계속 적용한 값과 실제 측정값이 다릅니다.",
+    "problem": "전기장판에 표시된 소비전력은 순간 전력이고 고지서의 사용량은 에너지입니다. 온도 조절로 전원이 반복적으로 켜지고 꺼지면 정격전력을 계속 적용한 값과 실제 측정값이 다릅니다.",
     "steps": [
       [
-        "제품 표시에서 정격 소비전력을 찾기",
-        "전기장판 본체나 조절기, 사용설명서에서 소비전력 단위를 확인합니다. 공급 전압인 V와 소비전력인 W는 서로 다른 값입니다. 여러 난방 단계가 있는 제품은 단계별 소비전력이나 제품 정격을 구분하여 기록합니다."
+        "제품 라벨의 소비전력 확인하기",
+        "전기장판이나 히터의 라벨에서 W 단위 소비전력을 확인합니다. 온도 단계별 정보가 있다면 해당 단계의 정격을 살펴봅니다."
       ],
       [
-        "하루 사용량을 kWh 단위로 바꾸기",
-        "와트 단위 소비전력에 작동 시간을 곱하고 천으로 나누면 해당 시간의 전력량을 kWh로 표현할 수 있습니다. 이 식은 입력한 소비전력이 그 시간 동안 유지된다는 조건의 계산입니다. 한 달 동안 같은 사용 패턴이라면 사용일수를 추가로 반영합니다."
+        "작동 시간을 kWh로 환산하기",
+        "소비전력 W에 하루 작동 시간을 곱하고 1000으로 나누면 하루 kWh입니다. 여기에 사용 일수를 곱해 기간 사용량을 구합니다."
       ],
       [
-        "온도조절 제품은 실제 측정량을 우선하기",
-        "전기장판은 설정 온도에 도달하면 소비전력이 달라질 수 있습니다. 정격 전력과 연결 시간만으로 실제 사용량을 확정하지 마세요. 사용 환경에 적합한 정격의 전력량 측정 장비가 있다면 제조사 안전 지침에 따라 실제 kWh를 확인합니다."
-      ],
-      [
-        "전기요금 청구액과 단순 전력비를 구분하기",
-        "고지서의 전력량 요금 단가는 전체 사용량에 적용되는 누진구간이나 계약종별에 따라 다를 수 있습니다. 특정 단가로 곱한 전력비는 비교용이며 기본요금, 세금, 기타 요금 항목까지 포함한 청구액이 아닙니다."
+        "고지서 요금과 측정값 구별하기",
+        "사용량에 입력 단가를 곱합니다. 누진제와 기본요금은 별도로 확인하고 정격에 맞는 측정기가 있다면 실제 누적 kWh를 활용하세요."
       ]
     ],
-    "alternative": "한국전력의 전기요금 조회 안내와 실제 고지서를 이용해 전체 가구 사용량을 함께 확인하세요. 특정 기기 사용 전후의 계량 기록을 비교하면 정격 전력만으로 계산할 때보다 실제 사용량에 접근할 수 있습니다.",
-    "toolIntro": "아브레다 가전제품 전력사용량 계산기는 입력한 소비전력, 하루 작동시간과 일수를 바탕으로 kWh를 표시하고 직접 입력한 단가를 곱합니다. 최신 요금표를 자동 적용하지 않습니다.",
-    "limits": "자동 온도조절, 대기전력, 실제 사용시간 변화 및 누진요금은 단순 계산에 반영되지 않습니다. 난방기기의 안전한 설치와 사용 시간은 제조사 설명서를 따르고 계산 결과로 안전성을 판단하지 마세요.",
+    "alternative": "전력 측정기에 표시된 누적 kWh를 사용하면 온도 조절과 대기전력을 포함한 실제 소비량을 확인할 수 있습니다. 공급자의 공식 요금표를 참고하세요.",
+    "toolIntro": "아브레다는 소비전력과 사용시간, 사용 일수 및 입력 단가를 바탕으로 계산합니다. 고지서 전체 요금을 산출하지 않습니다.",
+    "limits": "정격전력은 실제 평균전력이 아닐 수 있습니다. 누진 구간, 시간대별 단가, 기본요금과 세금은 자동 반영되지 않습니다.",
     "faq": [
       [
-        "전기장판을 오래 연결해 두면 정격 소비전력만큼 계속 쓰나요?",
-        "정격 전력으로 계속 가열되는 조건이 아니라면 실제 소비전력은 달라집니다. 온도조절기 작동과 제품 특성을 고려하고 안전한 측정 장비의 누적 전력량을 확인하세요."
-      ],
-      [
-        "계산기의 전력비가 한전 고지서와 다른 이유는 무엇인가요?",
-        "계산기는 입력한 단가와 기기 전력량만 곱합니다. 전체 가구 사용량에 따른 누진요금, 기본요금, 세금 및 기타 요금은 별도로 적용될 수 있습니다."
+        "켜 둔 시간 전체를 입력해도 되나요?",
+        "정격전력으로 계속 동작하는 조건의 계산은 가능합니다. 온도 조절로 작동이 멈추면 실측 kWh를 우선하세요."
       ]
     ]
   },
   "en": {
     "title": "How to Calculate the Electricity Cost of Running a Space Heater",
-    "description": "Turn a portable heater's watt rating and operating time into daily or monthly kWh, then use your actual electricity rate to compare running costs.",
-    "problem": "A space heater's watt rating describes the rate of energy use, not the amount charged by a utility each month. A thermostatically controlled heater may cycle after the room reaches its target temperature. To understand the cost of heating a room, distinguish the rated input, actual run time, metered consumption and tariff.",
+    "description": "A heater's nameplate wattage is power, not the energy shown on a utility bill. Thermostats may turn heating elements off while an appliance remains plugged in, so rated power is best used for comparing operating scenarios.",
+    "problem": "A heater's nameplate wattage is power, not the energy shown on a utility bill. Thermostats may turn heating elements off while an appliance remains plugged in, so rated power is best used for comparing operating scenarios.",
     "steps": [
       [
-        "Find the watt rating for the selected heat setting",
-        "Read the nameplate and the manufacturer's instructions rather than using a generic wattage from another heater. A device may have different power levels. Watts express power; volts describe the supply voltage and cannot be substituted for watts in an energy calculation."
+        "Find the operating power rating",
+        "Read the appliance label or manual. If low and high heat settings have different ratings, identify the relevant one instead of treating all settings as full power."
       ],
       [
-        "Convert the operating period into kilowatt-hours",
-        "Multiply power in watts by operating hours and divide by one thousand to get kilowatt-hours. For repeated identical periods, multiply by the number of days. The EIA explains this distinction between power and energy; actual consumption is measured over time."
+        "Convert operating hours into energy",
+        "Multiply watts by hours of actual operation and divide by one thousand to obtain kilowatt-hours. Multiply daily energy by the number of days in the billing period."
       ],
       [
-        "Account for thermostat cycling and measure safely",
-        "Do not equate the number of hours a heater is plugged in with hours of full-power heating. If a suitable energy meter is explicitly rated for the heater and its manufacturer permits the setup, read cumulative kWh. Observe the heater's electrical and fire-safety instructions instead of using an unsuitable adapter or extension."
-      ],
-      [
-        "Read the applicable electricity tariff",
-        "Find the rate on your own bill or utility website. The energy-only cost is consumption multiplied by the entered rate. Time-of-use periods, tiered rates and fixed charges mean a total bill may need a different calculation."
+        "Apply the applicable energy rate",
+        "Use the electricity price from your utility bill. For a heater that cycles, a suitably rated energy meter provides measured consumption rather than a maximum-power calculation."
       ]
     ],
-    "alternative": "Use your utility's interval consumption data, where available, to compare actual periods with the heater running and not running. Other household loads and changes in weather can affect that comparison, so isolate the heater with an appropriately rated method when possible.",
-    "toolIntro": "ABREDA Appliance Energy Calculator converts watts and operating time into kWh and optionally multiplies the result by a rate you enter. It does not look up your address or apply a utility's tariff automatically.",
-    "limits": "A constant-power calculation is not a meter reading or a prediction of your whole utility bill. Do not use the calculation to decide whether an outlet, extension cable or electrical circuit can safely carry the heater's current.",
+    "alternative": "Use the utility consumption portal or a compatible meter to compare readings. Account for other appliances if examining whole-home consumption.",
+    "toolIntro": "ABREDA converts watts and hours to daily and period kWh, then applies the electricity price you enter. No live tariff lookup is performed.",
+    "limits": "Standing charges, taxes, time-of-use pricing and tiered tariffs are excluded. Follow the heater manufacturer's safety instructions.",
     "faq": [
       [
-        "Why is the rated wattage calculation different from my energy meter?",
-        "The thermostat, fan speed or selected heat setting may change the average power during use. A cumulative meter measures actual energy over the interval, whereas the simple formula assumes the entered power is maintained."
-      ],
-      [
-        "Does the calculator include time-of-use electricity prices?",
-        "No. It multiplies energy by one entered rate. If a utility applies different rates at different hours, calculate each measured period using its own rate and account for other bill items separately."
+        "Does a thermostat heater always use rated watts?",
+        "No. The heating element may cycle as room temperature changes. Measured energy over the relevant period is more informative than the maximum rating."
       ]
     ]
   },
-  "type": "tool",
-  "status": "reviewed",
-  "published": "2026-11-28",
   "sources": [
     {
-      "name": "한국전력공사 — 가전 소비전력 (2023)",
-      "url": "https://home.kepco.co.kr/kepco/front/html/WZ/2023_09_10/sub3_6.html"
-    },
-    {
-      "name": "U.S. EIA — Measuring electricity",
-      "url": "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php"
+      "name": "Official reference",
+      "url": "https://www.energy.gov/energysaver/estimating-appliance-and-home-electronic-energy-use"
     }
   ],
   "media": {

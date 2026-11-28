@@ -3,7 +3,7 @@
   "project": "tb-business-days-calculator",
   "title": "영업일·근무일 계산기",
   "description": "시작일과 종료일 사이의 평일을 계산하고 직접 입력한 공휴일 및 휴무일을 제외합니다.",
-  "approved": false,
+  "approved": true,
   "deploy_mode": "hub_only",
   "locales": [
     "ko",

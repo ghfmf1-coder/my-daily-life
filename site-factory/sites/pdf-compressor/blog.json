@@ -1,0 +1,169 @@
+{
+  "slug": "reduce-scanned-pdf-size",
+  "type": "tool",
+  "tool": "pdf-compressor",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "ko": {
+    "title": "스캔한 PDF 용량이 너무 클 때 파일 크기를 줄이는 방법",
+    "description": "스캔 문서는 페이지가 큰 이미지로 저장되어 첨부 제한을 초과할 수 있습니다. 검색 가능한 PDF를 이미지로 다시 만들면 글자 검색과 서명 검증을 잃을 수 있으므로 종류를 먼저 확인해야 합니다.",
+    "problem": "스캔 문서는 페이지가 큰 이미지로 저장되어 첨부 제한을 초과할 수 있습니다. 검색 가능한 PDF를 이미지로 다시 만들면 글자 검색과 서명 검증을 잃을 수 있으므로 종류를 먼저 확인해야 합니다.",
+    "steps": [
+      [
+        "원본의 검색과 전자서명 확인하기",
+        "PDF에서 문장을 선택하거나 검색할 수 있는지 확인합니다. 전자서명과 링크 또는 입력 양식이 필요하다면 이를 보존하는 도구를 선택합니다."
+      ],
+      [
+        "해상도와 JPEG 품질 조절하기",
+        "이미지 문서는 해상도와 JPEG 품질을 조절해 새 파일로 저장할 수 있습니다. 작은 글자와 도장이 중요한 경우 높은 품질부터 결과를 검사합니다."
+      ],
+      [
+        "결과 파일을 원본과 직접 비교하기",
+        "저장한 파일의 실제 크기와 페이지 개수를 확인하고 모든 페이지를 열어 봅니다. 용량이 줄지 않거나 흐려졌다면 품질을 조절하거나 원본을 유지합니다."
+      ]
+    ],
+    "alternative": "Acrobat의 스캔 최적화 기능을 사용하거나 스캐너 설정을 바꾸어 다시 스캔할 수 있습니다. 전송 제한만 문제라면 수신 기관이 허용하는 공유 링크도 고려하세요.",
+    "toolIntro": "아브레다 압축기는 DPI와 JPEG 품질에 맞춰 새 이미지 PDF를 만듭니다. 원본과 결과 바이트 수를 비교하고 원본을 변경하지 않습니다.",
+    "limits": "OCR 텍스트층, 링크, 양식, 접근성 태그와 전자서명이 사라집니다. 20MB 및 50쪽 제한이 있으며 결과 용량이 더 커질 수도 있습니다.",
+    "faq": [
+      [
+        "전자서명을 압축 후에도 유지할 수 있나요?",
+        "이 방식은 새 PDF를 만들기 때문에 원본 서명 검증을 보존하지 못합니다. 서명된 문서는 원본을 유지하고 제출 방법을 문의하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Reduce the Size of a Scanned PDF for Email Attachments",
+    "description": "Scanned receipts and contracts may exceed an email attachment limit because each page is an image. Before reducing resolution, determine whether searchable text, form fields, links or signatures must survive the transfer.",
+    "problem": "Scanned receipts and contracts may exceed an email attachment limit because each page is an image. Before reducing resolution, determine whether searchable text, form fields, links or signatures must survive the transfer.",
+    "steps": [
+      [
+        "Identify features that must survive",
+        "Open the original and try searching for a word or selecting a sentence. Inspect form and signature panels if they matter. Rasterization is unsuitable when those features must be preserved."
+      ],
+      [
+        "Adjust image resolution and quality",
+        "For an image-based copy, select a resolution and compression setting. Inspect small print, handwriting and stamps at readable size, using a higher setting if necessary."
+      ],
+      [
+        "Compare the actual saved document",
+        "Open the output separately, compare its size and page count with the original, and inspect each page in order. Do not submit an unreadable document merely because it is labeled compressed."
+      ]
+    ],
+    "alternative": "Acrobat provides scan optimization settings that balance quality and size. Alternatively, rescan or use a permitted file-sharing method if feature preservation matters more than attachment size.",
+    "toolIntro": "ABREDA creates a new image-based PDF using your chosen DPI and JPEG quality, reporting actual original and output sizes. It is intended for scanned copies.",
+    "limits": "Rasterization removes searchable text, links, forms, signatures and accessibility structure. Input is limited to 20 MB and 50 pages; large pages and encrypted files may fail.",
+    "faq": [
+      [
+        "Will the output always be smaller?",
+        "No. An already optimized scan can be smaller than a newly rasterized copy. Compare the measured output size and clarity before using it."
+      ]
+    ]
+  },
+  "sources": [
+    {
+      "name": "Official reference",
+      "url": "https://helpx.adobe.com/ca/acrobat/desktop/create-documents/scan-documents-to-pdfs/scanned-pdf-settings.html"
+    }
+  ],
+  "media": {
+    "category": "document",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1731834450872-c3ccbb46424c?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-printer-sitting-on-top-of-a-table-next-to-a-pile-of-papers-EARzQxHhpaM",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "종이 문서 더미 옆에 놓인 사무용 프린터",
+        "en": "A printer sitting on top of a table next to a pile of papers"
+      },
+      "caption": {
+        "ko": "종이 문서 더미 옆에 놓인 사무용 프린터",
+        "en": "A printer sitting on top of a table next to a pile of papers"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1731834450872-c3ccbb46424c?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-printer-sitting-on-top-of-a-table-next-to-a-pile-of-papers-EARzQxHhpaM",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "종이 문서 더미 옆에 놓인 사무용 프린터",
+            "en": "A printer sitting on top of a table next to a pile of papers"
+          },
+          "caption": {
+            "ko": "종이 문서 더미 옆에 놓인 사무용 프린터",
+            "en": "A printer sitting on top of a table next to a pile of papers"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1721830834983-f111ad63dbf4?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-person-is-pressing-a-button-on-a-printer-j7cOdWrbKUI",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "사무용 프린터의 버튼을 손으로 누르는 사람",
+            "en": "A person is pressing a button on a printer"
+          },
+          "caption": {
+            "ko": "사무용 프린터의 버튼을 손으로 누르는 사람",
+            "en": "A person is pressing a button on a printer"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586281380426-f644f2dc6ada?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/white-printer-paper-beside-silver-macbook-j2tExQL-OyA",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "은색 노트북 옆에 놓인 흰색 종이 문서",
+            "en": "White printer paper beside silver macbook"
+          },
+          "caption": {
+            "ko": "은색 노트북 옆에 놓인 흰색 종이 문서",
+            "en": "White printer paper beside silver macbook"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1650696868612-4b836291b323?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-white-printer-on-a-table-QH_SAEYJW8Y",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "테이블 위에 놓인 흰색 사무용 프린터",
+            "en": "A white printer on a table"
+          },
+          "caption": {
+            "ko": "테이블 위에 놓인 흰색 사무용 프린터",
+            "en": "A white printer on a table"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1617329620609-a66fc78590b8?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/white-printer-paper-with-photos-t6ns82uSL18",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "사진이 인쇄된 여러 장의 흰색 종이",
+            "en": "White printer paper with photos"
+          },
+          "caption": {
+            "ko": "사진이 인쇄된 여러 장의 흰색 종이",
+            "en": "White printer paper with photos"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586364800739-bed6bc729c7b?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/white-printer-paper-beside-black-laptop-computer-jUF9CRChIAs",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "검은색 노트북 컴퓨터 옆에 놓인 종이 문서",
+            "en": "White printer paper beside black laptop computer"
+          },
+          "caption": {
+            "ko": "검은색 노트북 컴퓨터 옆에 놓인 종이 문서",
+            "en": "White printer paper beside black laptop computer"
+          }
+        }
+      ]
+    }
+  }
+}

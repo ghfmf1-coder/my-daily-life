@@ -1,89 +1,69 @@
 {
-  "slug": "excel-split-cell-text-comma-space-columns",
+  "slug": "split-excel-text-into-columns",
+  "type": "tool",
   "tool": "text-to-columns-converter",
+  "status": "reviewed",
+  "published": "2026-11-28",
   "ko": {
     "title": "엑셀 한 셀에 있는 글자를 쉼표와 공백 기준으로 나누는 방법",
-    "description": "엑셀 데이터의 텍스트 나누기 기능, TEXTSPLIT 함수, 탭 구분 변환으로 한 셀에 붙은 값들을 여러 열에 나누는 방법을 설명합니다.",
-    "problem": "거래 내역이나 이름 목록을 복사했을 때 쉼표와 공백이 포함된 문자열이 한 셀에 몰리는 경우가 있습니다. 단순히 쉼표를 모두 바꾸면 주소나 상품명처럼 쉼표가 실제 내용에 포함된 값도 잘못 분리될 수 있습니다. 앞자리 영이나 날짜 자동 변환까지 확인해야 합니다.",
+    "description": "주소록이나 주문 정보를 복사하면 여러 항목이 한 셀에 들어가기도 합니다. 단순 쉼표 분리는 주소 안의 쉼표까지 잘라내고 엑셀 자동 변환은 품목 코드 앞자리 0을 없앨 수 있습니다.",
+    "problem": "주소록이나 주문 정보를 복사하면 여러 항목이 한 셀에 들어가기도 합니다. 단순 쉼표 분리는 주소 안의 쉼표까지 잘라내고 엑셀 자동 변환은 품목 코드 앞자리 0을 없앨 수 있습니다.",
     "steps": [
       [
-        "원본 데이터의 실제 구분자를 확인하기",
-        "한 줄을 복사하여 쉼표, 탭, 연속 공백 중 무엇으로 각 항목이 구분되는지 살펴봅니다. 큰따옴표로 묶인 CSV 문자열은 내부 쉼표가 하나의 값에 속할 수 있습니다. 공백이 포함된 사람 이름이나 주소를 공백 기준으로 분리하면 원래 의미가 깨집니다."
+        "원본의 구분 기호부터 확인하기",
+        "쉼표, 탭 또는 연속 공백 중 실제 열을 나누는 기호를 확인합니다. 주소 안에 쉼표가 들어 있다면 큰따옴표로 묶인 필드인지 살펴봅니다."
       ],
       [
-        "엑셀 텍스트 나누기의 미리보기 이용하기",
-        "원본 열을 선택하고 데이터 탭의 텍스트 나누기 기능에서 구분 기호를 선택합니다. 결과가 들어갈 옆 열에 기존 데이터가 있는지 확인하고 다른 빈 위치를 지정합니다. 상품 코드나 우편번호는 텍스트 형식을 선택하여 앞자리 영이 유지되도록 확인합니다."
+        "엑셀 텍스트 나누기 실행하기",
+        "대상 열을 선택하고 데이터 탭의 텍스트 나누기에서 구분 기호를 지정합니다. 미리보기를 확인하고 기존 데이터가 덮어써지지 않도록 합니다."
       ],
       [
-        "탭 구분 결과로 복사하여 붙여넣기",
-        "원본 문자열을 분리한 뒤 탭으로 구분된 결과를 스프레드시트의 빈 영역에 붙여넣을 수 있습니다. 앞자리 영이나 날짜처럼 자동 형식 변환이 문제가 되는 값은 텍스트로 가져옵니다. 첫 줄과 중간 줄, 빈 항목이 있는 행을 원본과 비교합니다."
-      ],
-      [
-        "지원되는 엑셀에서 TEXTSPLIT 사용하기",
-        "Microsoft의 TEXTSPLIT 함수는 지정한 구분자로 텍스트를 나누는 수식 방식입니다. 사용 중인 엑셀 버전에서 함수가 지원되는지 확인하고 결과가 펼쳐질 영역에 다른 값이 없는지 살펴봅니다."
+        "식별번호와 수식 해석 확인하기",
+        "우편번호나 상품 코드의 앞자리 0을 유지하려면 가져올 열을 텍스트로 지정합니다. 신뢰할 수 없는 값이 수식으로 해석되지 않도록 주의합니다."
       ]
     ],
-    "alternative": "엑셀 자체의 텍스트 나누기 마법사를 쓰면 별도 서비스 없이 작업할 수 있습니다. 실제 줄바꿈이나 큰따옴표를 포함한 복잡한 CSV는 전용 CSV 가져오기 기능을 이용하세요.",
-    "toolIntro": "아브레다 엑셀 텍스트 열 분리 도구는 쉼표, 탭, 연속 공백 모드를 제공합니다. 쉼표 모드에서는 한 줄 안의 따옴표로 감싼 쉼표를 처리하며 결과는 탭으로 구분합니다.",
-    "limits": "줄바꿈이 포함된 인용 CSV 필드는 지원하지 않으며, 탭 구분 결과 안에 탭 문자가 포함된 값도 거부합니다. 신뢰할 수 없는 텍스트를 붙여넣으면 수식으로 실행될 수 있으므로 스프레드시트에서 텍스트로 가져오세요.",
+    "alternative": "지원되는 엑셀 버전에서는 TEXTSPLIT 함수로 값을 여러 셀에 펼칠 수 있습니다. 기존 데이터가 없는 출력 범위를 확보한 뒤 사용하세요.",
+    "toolIntro": "아브레다 도구는 여러 줄을 쉼표, 탭 또는 공백으로 분리해 탭 구분 결과를 제공합니다. CSV 큰따옴표는 한 줄 안에서 처리합니다.",
+    "limits": "여러 줄에 걸친 따옴표 CSV 필드나 셀 내부 탭은 지원하지 않습니다. 엑셀 자동 형 변환과 수식 실행을 차단하지 않으므로 대상 셀을 직접 관리해야 합니다.",
     "faq": [
       [
-        "주소에 쉼표가 들어 있을 때도 나눌 수 있나요?",
-        "쉼표가 있는 주소 전체를 큰따옴표로 감싼 정상적인 한 줄 CSV라면 쉼표 모드에서 하나의 값으로 처리합니다. 따옴표가 불완전하거나 줄바꿈을 포함하면 전용 가져오기 기능을 사용하세요."
-      ],
-      [
-        "텍스트 나누기 후 상품 코드의 앞자리 영이 사라지는 이유는 무엇인가요?",
-        "엑셀이 코드를 숫자로 자동 해석할 수 있기 때문입니다. 원래 코드를 보관하고 결과를 붙이기 전에 해당 열을 텍스트로 설정하거나 가져오기 형식을 텍스트로 지정하세요."
+        "주소 안의 쉼표도 무조건 나뉘나요?",
+        "쉼표 모드에서는 큰따옴표 안의 쉼표가 유지됩니다. 따옴표가 여러 줄에 걸치면 정식 CSV 가져오기 기능을 사용하세요."
       ]
     ]
   },
   "en": {
     "title": "How to Split Text Into Separate Columns in Excel Using Commas or Spaces",
-    "description": "Turn pasted records into spreadsheet columns with Excel's Text to Columns wizard, TEXTSPLIT, or a tab-separated result while protecting identifiers and quoted values.",
-    "problem": "A contact export or report copied into one spreadsheet column may contain delimiters that are also meaningful inside the data. Splitting a mailing address on every space or a product title on every comma can silently corrupt the record. Choose the separator based on the data format, not on what makes the screen look tidier.",
+    "description": "Pasted contacts or order exports can arrive as a single spreadsheet column. Splitting every comma can break quoted addresses, while spreadsheet type conversion can remove leading zeros from identifiers.",
+    "problem": "Pasted contacts or order exports can arrive as a single spreadsheet column. Splitting every comma can break quoted addresses, while spreadsheet type conversion can remove leading zeros from identifiers.",
     "steps": [
       [
-        "Inspect the delimiter and a few difficult records",
-        "Look at records containing a quoted field, an empty value and a multiword label. A comma inside double quotes may be part of the field rather than a boundary. Choose tab, comma, or whitespace based on the source convention, and keep the original export for comparison."
+        "Inspect the actual field separator",
+        "Determine whether commas, tabs or repeated whitespace separate the fields. Preserve a quoted field containing a comma rather than treating the punctuation as a new boundary."
       ],
       [
-        "Use the native Excel wizard on a spare worksheet",
-        "Select the source column, open Data and the Text to Columns command, then choose the appropriate delimiter. Examine the preview before committing. Set an empty destination and select a text format for postal codes, account references or identifiers that should retain leading zeroes."
+        "Use Excel's import preview",
+        "Select the source column and open Text to Columns from the Data tab in a supported desktop version. Choose a delimiter and destination without overwriting neighboring data."
       ],
       [
-        "Paste tab-separated columns and verify empty cells",
-        "If Excel is unavailable at the splitting stage, convert your lines to tab-separated text and paste into an empty spreadsheet range. Review column counts for rows with missing values. Spreadsheet applications may convert dates or numbers automatically; import untrusted fields as text and inspect them before use."
-      ],
-      [
-        "Consider a formula when the source will change",
-        "On versions supporting TEXTSPLIT, a formula can split the contents of a cell into adjacent output cells. Ensure the spill area is clear. This is useful for a worksheet that must update when the source changes, but it is not a replacement for a complete CSV import parser."
+        "Preserve codes and review untrusted values",
+        "Set postal codes or identifiers to Text when importing. Values beginning with formula markers can be interpreted as formulas, so handle untrusted data carefully."
       ]
     ],
-    "alternative": "For CSV files containing line breaks within quotes, use Excel's CSV import or another full parser. The simple Text to Columns operation is often enough for a list with a consistent delimiter and no embedded newlines.",
-    "toolIntro": "ABREDA Text to Columns Converter accepts pasted lines and returns tab-separated text. Comma mode recognizes a quoted comma and doubled quotes within a single line; whitespace mode combines consecutive spaces into one separator.",
-    "limits": "The tool does not sanitize spreadsheet formulas or support multiline quoted CSV fields. If values contain literal tabs that would make the output ambiguous, the conversion stops rather than silently creating extra columns.",
+    "alternative": "On versions supporting TEXTSPLIT, a formula can distribute values into adjacent cells. Make sure the spill area is empty and check the available options.",
+    "toolIntro": "ABREDA converts pasted lines to TSV output. Comma mode recognizes quoted fields within one line, whitespace mode collapses repeated spaces, and tab mode preserves empty cells.",
+    "limits": "Multiline quoted CSV records and embedded tab characters are unsupported. The converter does not sanitize formulas or prevent automatic spreadsheet type conversion.",
     "faq": [
       [
-        "Will a quoted comma inside a company name create another column?",
-        "Not in the converter's comma mode if the field is properly enclosed in double quotes on one line. Unbalanced quotation marks are rejected, and a full CSV importer is needed for fields containing newlines."
-      ],
-      [
-        "Can TEXTSPLIT replace a complete CSV import?",
-        "No. TEXTSPLIT splits text using specified delimiters, whereas a CSV import must interpret quotation rules, record boundaries and column types. Choose the import method for complex records or identifiers."
+        "Why did a product code lose its leading zero?",
+        "Excel may have interpreted the identifier as a number. Reimport the original with the destination column set to Text instead of trying to recover lost digits."
       ]
     ]
   },
-  "type": "tool",
-  "status": "reviewed",
-  "published": "2026-11-28",
   "sources": [
     {
-      "name": "Microsoft Support — Split text into columns",
+      "name": "Official reference",
       "url": "https://support.microsoft.com/en-us/excel/distribute-the-contents-of-a-cell-into-adjacent-columns"
-    },
-    {
-      "name": "Microsoft Support — TEXTSPLIT",
-      "url": "https://support.microsoft.com/en-us/excel/functions/textsplit-function"
     }
   ],
   "media": {

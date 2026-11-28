@@ -216,6 +216,50 @@
         "copy": "Compare two checkout totals using explicit percentage discounts, fixed coupons and entered shipping or extra charges."
       },
       "channels": []
+    },
+    "business-days-calculator": {
+      "ko": {
+        "title": "영업일·근무일 계산기",
+        "copy": "직접 입력한 휴무일과 시작일 포함 여부에 따라 평일 수를 표시합니다. 국가별 공휴일은 자동으로 조회하지 않습니다."
+      },
+      "en": {
+        "title": "How to Calculate Business Days Between Two Dates Excluding Weekends and Holidays",
+        "copy": "ABREDA counts weekdays and manually supplied closures separately. It does not automatically maintain national holiday calendars."
+      },
+      "channels": []
+    },
+    "appliance-energy-calculator": {
+      "ko": {
+        "title": "가전제품 전력사용량 계산기",
+        "copy": "아브레다는 소비전력과 사용시간, 사용 일수 및 입력 단가를 바탕으로 계산합니다. 고지서 전체 요금을 산출하지 않습니다."
+      },
+      "en": {
+        "title": "How to Calculate the Electricity Cost of Running a Space Heater",
+        "copy": "ABREDA converts watts and hours to daily and period kWh, then applies the electricity price you enter. No live tariff lookup is performed."
+      },
+      "channels": []
+    },
+    "text-to-columns-converter": {
+      "ko": {
+        "title": "엑셀 텍스트 열 분리 도구",
+        "copy": "아브레다 도구는 여러 줄을 쉼표, 탭 또는 공백으로 분리해 탭 구분 결과를 제공합니다. CSV 큰따옴표는 한 줄 안에서 처리합니다."
+      },
+      "en": {
+        "title": "How to Split Text Into Separate Columns in Excel Using Commas or Spaces",
+        "copy": "ABREDA converts pasted lines to TSV output. Comma mode recognizes quoted fields within one line, whitespace mode collapses repeated spaces, and tab mode preserves empty cells."
+      },
+      "channels": []
+    },
+    "pdf-compressor": {
+      "ko": {
+        "title": "스캔 PDF 용량 줄이기",
+        "copy": "아브레다 압축기는 DPI와 JPEG 품질에 맞춰 새 이미지 PDF를 만듭니다. 원본과 결과 바이트 수를 비교하고 원본을 변경하지 않습니다."
+      },
+      "en": {
+        "title": "How to Reduce the Size of a Scanned PDF for Email Attachments",
+        "copy": "ABREDA creates a new image-based PDF using your chosen DPI and JPEG quality, reporting actual original and output sizes. It is intended for scanned copies."
+      },
+      "channels": []
     }
   }
 }

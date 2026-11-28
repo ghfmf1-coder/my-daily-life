@@ -482,6 +482,34 @@
       "origins": [
         "https://tb-worktime-analyzer.pages.dev"
       ]
+    },
+    {
+      "siteId": "tb-business-days-calculator",
+      "url": "https://abreda.com/tools/business-days-calculator/",
+      "origins": [
+        "https://abreda.com"
+      ]
+    },
+    {
+      "siteId": "tb-appliance-energy-calculator",
+      "url": "https://abreda.com/tools/appliance-energy-calculator/",
+      "origins": [
+        "https://abreda.com"
+      ]
+    },
+    {
+      "siteId": "tb-text-to-columns-converter",
+      "url": "https://abreda.com/tools/text-to-columns-converter/",
+      "origins": [
+        "https://abreda.com"
+      ]
+    },
+    {
+      "siteId": "tb-pdf-compressor",
+      "url": "https://abreda.com/tools/pdf-compressor/",
+      "origins": [
+        "https://abreda.com"
+      ]
     }
   ]
 }
