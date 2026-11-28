@@ -1,65 +1,83 @@
 {
-  "slug": "scale-recipe-servings-ingredients",
-  "type": "tool",
+  "slug": "scale-recipe-ingredients-for-different-servings",
   "tool": "recipe-serving-calculator",
-  "status": "reviewed",
-  "published": "2026-11-28",
   "ko": {
-    "title": "요리 레시피 2인분을 5인분으로 바꾸는 법, 재료량 비율 계산하기",
-    "description": "가족 수나 손님 수가 바뀌면 레시피의 재료 양을 다시 맞춰야 합니다. 재료를 같은 비율로 바꾸는 것은 출발점이지만 달걀 개수와 양념 및 조리시간은 그대로 비례하지 않을 수 있습니다.",
-    "problem": "가족 수나 손님 수가 바뀌면 레시피의 재료 양을 다시 맞춰야 합니다. 재료를 같은 비율로 바꾸는 것은 출발점이지만 달걀 개수와 양념 및 조리시간은 그대로 비례하지 않을 수 있습니다.",
+    "title": "요리 레시피 2인분을 4인분으로 바꾸는 법, 재료별 계량 쉽게 하기",
+    "description": "레시피의 원래 인분과 원하는 인분을 이용해 재료의 수량을 환산하고 달걀, 양념, 조리시간을 따로 조절하는 방법입니다.",
+    "problem": "한 사람을 위한 레시피를 가족 식사나 여러 끼의 식사 준비에 사용하려면 재료 수량을 다시 계산해야 합니다. 원래 분량을 확인하지 않고 재료만 늘리면 필요한 양과 달라집니다. 양념의 맛이나 조리시간까지 단순히 같은 비율로 늘릴 수 있는 것은 아닙니다.",
     "steps": [
       [
-        "원래 레시피와 목표 인분 정하기",
-        "원문에서 실제 완성 분량을 확인합니다. 원래 인분과 목표 인분을 적고 목표 인분을 원래 인분으로 나누어 재료를 바꿀 배율을 정합니다."
+        "원래 인분과 재료 단위를 각각 기록하기",
+        "레시피에서 완성 분량과 각 재료의 수량을 확인합니다. 그램, 밀리리터, 컵, 개 등 단위는 그대로 적고 재료의 밀도를 확인하지 않은 상태에서 무게와 부피를 서로 바꾸지 않습니다."
       ],
       [
-        "재료별 수량과 단위를 유지하기",
-        "밀가루의 g, 물의 ml, 달걀 개수처럼 원래 단위를 유지하면서 각각의 수량에 같은 배율을 곱합니다. 컵을 g으로 바꾸려면 재료별 밀도 정보가 필요합니다."
+        "원하는 인분을 원래 인분으로 나누기",
+        "필요한 인분을 원래 인분으로 나눈 값을 배율로 사용합니다. 각 재료 수량에 배율을 곱한 뒤 원래 단위를 유지합니다. 작은 분량은 사용할 저울과 계량스푼의 정밀도를 고려합니다."
       ],
       [
-        "용기 크기와 양념의 양 확인하기",
-        "정수 개수로 사용하는 재료는 실제 계량할 수 있는 방법을 검토합니다. 팬이 작다면 나누어 조리하고 소금과 향신료는 조리 특성에 맞게 조절합니다."
+        "정수 재료와 양념을 따로 조절하기",
+        "달걀처럼 개수로 쓰는 재료의 분량을 나눌 때에는 레시피 특성을 확인합니다. 소금과 매운 양념은 맛을 고려해 조절하고 계산된 양과 실제로 사용한 양을 구분합니다."
+      ],
+      [
+        "조리 도구 용량과 식품 안전 확인하기",
+        "팬에 담기는 두께와 열 전달이 달라지므로 조리시간을 재료량과 같은 배율로 늘리지 않습니다. 병조림 등 보존식품은 검증된 레시피의 재료 비율과 처리 방법을 따라야 합니다."
       ]
     ],
-    "alternative": "스프레드시트에 재료별 원래 수량을 입력하고 공통 배율을 곱할 수도 있습니다. 원래 단위와 새 수량을 나란히 기록해 확인하세요.",
-    "toolIntro": "아브레다 인분 변환기는 재료 이름과 수량 및 단위를 한 줄씩 입력받아 같은 배율로 계산합니다. 단위 자체를 변환하지 않습니다.",
-    "limits": "조리시간과 온도를 인분과 같은 비율로 늘리면 안 됩니다. 재료 특성, 익힘 정도 및 식품 안전 지침을 따르세요.",
+    "alternative": "스프레드시트의 수량 열에 동일한 배율을 곱하고 단위 열을 그대로 두어도 됩니다. 조리 도구가 작은 경우 원래 레시피를 나눠 여러 번 만드는 방법도 있습니다.",
+    "toolIntro": "아브레다 레시피 인분 변환기는 원래 인분과 원하는 인분, 재료 이름·수량·단위 목록을 받아 환산 수량과 배율을 보여줍니다. 단위 변환 기능은 없습니다.",
+    "limits": "단순 비례 계산만 지원하며 식품 보존, 발효, 굽기처럼 정확한 배합과 온도가 중요한 작업의 안전이나 결과를 보장하지 않습니다.",
     "faq": [
       [
-        "달걀 수량이 소수로 나오면 어떻게 하나요?",
-        "필요하면 달걀을 풀어 무게로 계량할 수 있습니다. 제빵처럼 배합이 중요한 조리에서는 원래 레시피와 결과를 함께 확인하세요."
+        "인분을 늘리면 조리시간도 같은 비율로 늘려야 하나요?",
+        "아닙니다. 팬의 크기, 재료 두께와 가열 방식에 따라 조리시간이 달라집니다. 원래 레시피의 완료 기준과 식품 안전 지침을 확인하세요."
       ]
     ]
   },
   "en": {
-    "title": "How to Scale a Recipe for More Servings Without Changing Ingredient Units",
-    "description": "Scaling a recipe is straightforward for ingredients measured in grams, but a recipe may also specify whole eggs, pinches of salt and a pan size. Multiplying ingredient quantities is only the first step toward a successful larger batch.",
-    "problem": "Scaling a recipe is straightforward for ingredients measured in grams, but a recipe may also specify whole eggs, pinches of salt and a pan size. Multiplying ingredient quantities is only the first step toward a successful larger batch.",
+    "title": "How to Scale a Recipe for More or Fewer Servings Without Changing Ingredient Units",
+    "description": "Adjust a recipe yield with a serving multiplier and learn which ingredient and cooking decisions must be handled separately.",
+    "problem": "A recipe written for a small batch may need to feed a family or a group. Multiplying ingredients by the desired yield divided by the original yield is the arithmetic part. Pan dimensions, whole eggs, seasonings and cooking time may require recipe-specific adjustments.",
     "steps": [
       [
-        "Calculate the ratio from original yield",
-        "Check whether the recipe specifies portions, pieces or finished weight. Divide your desired yield by the original yield and apply the same ratio to measured ingredients."
+        "List the original yield and ingredient quantities",
+        "Read the serving count and record each ingredient in its original unit, whether grams, cups or teaspoons. Keeping units separate avoids confusing a count of items with a volume or weight measurement."
       ],
       [
-        "Preserve the original ingredient units",
-        "Multiply each quantity without changing its unit. Cups and grams measure different properties, so use an ingredient-specific conversion if you need to switch between them."
+        "Apply a single serving ratio to the measured amounts",
+        "Divide the target servings by the original servings and multiply the numerical amount of each ingredient by that ratio. Retain the unit and use an appropriately precise measuring device for small quantities rather than rounding every result indiscriminately."
       ],
       [
-        "Check pan capacity and sensitive ingredients",
-        "Make separate batches if your equipment cannot fit the larger amount. Whole eggs, seasoning and cooking time may need practical adjustments; follow the recipe's doneness guidance."
+        "Review ingredients that do not scale conveniently",
+        "A fractional egg or a large quantity of a potent seasoning may need adjustment for the particular recipe. Keep the calculated list as a reference and record intentional changes instead of treating every calculated amount as compulsory."
+      ],
+      [
+        "Check equipment and food-safety requirements",
+        "A larger batch can change the depth of food and heat transfer. Make separate batches if the pan is too small. Do not casually change ingredient proportions or processing times in a tested home-canning recipe."
       ]
     ],
-    "alternative": "A spreadsheet with ingredient quantities in one column and a scale factor in another can also produce a useful preparation checklist.",
-    "toolIntro": "ABREDA accepts ingredient name, numeric quantity and unit on separate lines and scales each amount in its original unit. It does not convert cups into grams.",
-    "limits": "Increasing the quantity does not establish a new safe cooking time or temperature. Baking in particular can be sensitive to pan size and mixing technique.",
+    "alternative": "Apply the multiplier in a spreadsheet and retain a separate unit column. For a sensitive baking recipe or a preparation that depends on a particular pan size, consider making multiple original-sized batches instead.",
+    "toolIntro": "ABREDA Recipe Serving Calculator accepts an original and target serving count plus one name, quantity, unit record per line. It reports the multiplier and the revised quantities in their original units.",
+    "limits": "The tool does not convert cups to grams, assess allergens or determine cooking time. Food-preservation and other controlled recipes require validated instructions and cannot be safely redesigned with a simple multiplier.",
     "faq": [
       [
-        "What if the scale factor produces a fractional egg?",
-        "Beat the egg and measure the needed portion by weight if the recipe requires precision. Consider texture and the original formulation before rounding."
+        "Can I double the oven time when doubling a recipe?",
+        "No. Equipment, food thickness and the intended doneness determine cooking time. Follow the recipe's preparation and safety instructions, using separate batches when necessary."
       ]
     ]
   },
+  "type": "tool",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "sources": [
+    {
+      "name": "Penn State Extension — Ingredient Substitutions in a Pinch",
+      "url": "https://extension.psu.edu/ingredient-substitutions-in-a-pinch"
+    },
+    {
+      "name": "Penn State Extension — What Can You Change in a Canning Recipe?",
+      "url": "https://extension.psu.edu/what-can-you-change-in-a-canning-recipe"
+    }
+  ],
   "media": {
     "category": "daily",
     "image": {

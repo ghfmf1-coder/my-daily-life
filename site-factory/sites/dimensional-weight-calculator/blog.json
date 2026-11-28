@@ -1,65 +1,79 @@
 {
-  "slug": "calculate-parcel-dimensional-weight",
-  "type": "tool",
+  "slug": "calculate-parcel-dimensional-weight-before-shipping",
   "tool": "dimensional-weight-calculator",
-  "status": "reviewed",
-  "published": "2026-11-28",
   "ko": {
-    "title": "해외 택배 부피무게 계산하는 법, 실측 무게와 배송비 기준 비교하기",
-    "description": "가벼운 옷이나 완충재가 많은 상품은 실제 무게보다 상자가 차지하는 공간 때문에 배송비가 높아질 수 있습니다. 운송사별 환산계수와 반올림 기준을 확인해야 합니다.",
-    "problem": "가벼운 옷이나 완충재가 많은 상품은 실제 무게보다 상자가 차지하는 공간 때문에 배송비가 높아질 수 있습니다. 운송사별 환산계수와 반올림 기준을 확인해야 합니다.",
+    "title": "해외택배 부피무게 계산하는 법, 박스 실측 무게와 배송비 비교하기",
+    "description": "포장한 상자의 외부 치수와 무게를 측정하고 운송사의 환산계수를 이용해 부피무게와 실제 무게를 비교하는 방법입니다.",
+    "problem": "가볍지만 큰 상자에 상품을 담으면 실제 무게로 예상한 배송비와 다른 금액이 청구될 수 있습니다. 부피무게는 화물 크기를 운송사의 환산계수로 무게 단위에 대응시키는 방식입니다. 운송 서비스마다 계산과 올림 규칙이 다를 수 있습니다.",
     "steps": [
       [
-        "완전히 포장한 상자의 치수 재기",
-        "제품 자체가 아니라 완충재를 넣고 봉한 상자의 가로와 세로 및 높이를 측정합니다. 돌출된 부분은 운송사의 측정 규칙을 확인합니다."
+        "봉인한 상자의 외부 치수 측정하기",
+        "빈 상자의 내부가 아니라 포장 완료 상태에서 가장 돌출된 부분을 포함해 가로, 세로, 높이를 센티미터로 측정합니다. 불규칙한 형태의 상자는 운송사의 별도 측정 기준을 확인합니다."
       ],
       [
-        "서비스별 부피 환산계수 확인하기",
-        "세 치수를 cm로 곱한 뒤 해당 서비스가 지정한 cm³/kg 환산계수로 나눕니다. 다른 운송사에서 확인한 계수를 그대로 적용하지 않습니다."
+        "배송 서비스에 맞는 환산계수 확인하기",
+        "DHL의 공식 무게 안내에는 상자 부피를 환산계수로 나누는 방법이 제시되어 있습니다. 실제 예약할 서비스와 단위 체계에 맞는 계수를 확인하세요. 모든 택배사가 같은 계수를 쓰지는 않습니다."
       ],
       [
-        "실측 무게와 과금 기준 비교하기",
-        "완성된 포장을 저울에 올려 실측 무게를 확인합니다. 부피무게와 실측 무게 중 큰 값을 적용하는 서비스라면 큰 쪽을 확인한 뒤 올림 규칙을 적용합니다."
+        "실제 무게와 부피무게를 같은 단위로 비교하기",
+        "세 치수를 곱한 부피를 환산계수로 나누어 킬로그램 단위의 부피무게를 구합니다. 저울로 측정한 실제 무게와 비교한 뒤 서비스에서 더 큰 값을 과금 무게로 사용하는지 확인합니다."
+      ],
+      [
+        "예약 화면에서 추가 비용까지 확인하기",
+        "중량과 치수를 일정 단위로 올리거나 규격 초과, 원거리 지역 등의 추가 요금이 적용될 수 있습니다. 공식 견적에 실측 치수와 무게를 입력하고 최종 비용을 비교합니다."
       ]
     ],
-    "alternative": "운송사 공식 견적 계산기나 접수 창구에서 실제 포장 치수와 무게를 전달하여 요금을 확인하세요. 규격 초과 비용도 별도로 확인합니다.",
-    "toolIntro": "아브레다 계산기는 cm 단위 치수와 직접 입력한 환산계수로 부피무게를 계산하고 실측 무게와 비교합니다.",
-    "limits": "운송사의 요금과 규격 제한을 자동 조회하지 않습니다. 올림과 추가 수수료는 제외하며 실제 접수 측정값과 차이가 날 수 있습니다.",
+    "alternative": "포장 크기를 바꾼 뒤 실제 외부 치수를 다시 측정하여 직접 계산할 수 있습니다. 최종 배송비는 운송사의 공식 견적 화면에서 확인하는 편이 정확합니다.",
+    "toolIntro": "아브레다 택배 부피무게 계산기는 센티미터, 킬로그램과 입력한 환산계수를 이용해 부피무게와 실제 무게 중 큰 값을 표시합니다. 운임 조회 기능은 없습니다.",
+    "limits": "운송사별 치수 및 중량 올림, 규격 제한과 할증은 자동 반영하지 않습니다. 실제 측정과 예약 조건이 달라지면 결과도 달라질 수 있습니다.",
     "faq": [
       [
-        "택배 부피 환산계수는 모두 같은가요?",
-        "운송사 및 서비스별로 다를 수 있습니다. 접수할 서비스의 공식 안내에서 확인한 값을 직접 입력해야 합니다."
+        "부피무게 환산계수는 모든 택배에서 같은가요?",
+        "아닙니다. 운송사와 서비스, 측정 단위에 맞는 환산계수를 이용해야 합니다. 인치 기준 계수를 센티미터 입력에 섞지 마세요."
       ]
     ]
   },
   "en": {
-    "title": "How to Calculate Parcel Dimensional Weight Before Booking Shipping",
-    "description": "A lightweight parcel can be expensive when the packaging occupies a large amount of cargo space. Dimensional pricing compares space with actual scale weight, using a divisor and rounding rules specified by the carrier.",
-    "problem": "A lightweight parcel can be expensive when the packaging occupies a large amount of cargo space. Dimensional pricing compares space with actual scale weight, using a divisor and rounding rules specified by the carrier.",
+    "title": "How to Calculate Dimensional Weight for a Shipping Box Before Booking a Carrier",
+    "description": "Compare dimensional and scale weight using the dimensions of a sealed parcel and the divisor for your specific shipping service.",
+    "problem": "A bulky package filled with lightweight goods may occupy more vehicle space than its scale weight suggests. Some shipping services therefore rate the parcel by dimensional weight. A measurement of the empty carton or an unrelated carrier's divisor can lead to an incorrect comparison.",
     "steps": [
       [
-        "Measure the finished outer package",
-        "Seal the box with its protective material before measuring. Record the outermost dimensions, including protrusions when the carrier requires them, rather than measuring the product alone."
+        "Measure the packed parcel rather than the empty carton",
+        "Seal the box first and measure its external length, width and height. Follow the carrier's instructions for irregular shapes or bulges. Use centimeters for a divisor expressed in cubic centimeters per kilogram."
       ],
       [
-        "Use the selected service's divisor",
-        "Multiply length, width and height in centimeters, then divide by the carrier's cubic-centimeters-per-kilogram divisor. Do not mix units or copy a divisor from an unrelated service."
+        "Check the divisor for the exact booked service",
+        "DHL's official weight guidance describes dimensional weight as package volume divided by a volumetric divisor. Metric and imperial conventions differ, and another carrier may use a different divisor or rating rule."
       ],
       [
-        "Compare scale weight with dimensional weight",
-        "Weigh the completed parcel and compare the result with dimensional weight. Where the larger value is charged, check rounding, tariff bands and potential size or handling surcharges."
+        "Calculate the preliminary chargeable weight",
+        "Multiply the three metric dimensions and divide by the metric divisor. Compare the resulting kilograms with the scale reading. If the service uses the higher weight, this is its preliminary basis before any required rounding."
+      ],
+      [
+        "Obtain a real quote after checking size restrictions",
+        "Consult the carrier's price screen for weight increments, maximum dimensions and any surcharges. A smaller box may reduce dimensional weight, but adequate protection is still necessary for a safe shipment."
       ]
     ],
-    "alternative": "Use the carrier's official shipping quote with the final measurements. A confirmed counter measurement or service quotation is more authoritative than a generic estimate.",
-    "toolIntro": "ABREDA calculates dimensional weight in kilograms from the measurements and divisor you enter, then compares it with actual weight before carrier rounding.",
-    "limits": "The tool cannot quote postage, identify service-specific restrictions or predict adjustments after the carrier measures the parcel.",
+    "alternative": "If your destination and service are already known, use the carrier's quote tool directly. A separate comparison is useful for evaluating multiple packaging options before selecting a service.",
+    "toolIntro": "ABREDA Dimensional Weight Calculator accepts dimensions in centimeters, scale weight in kilograms and your entered divisor. It displays volume, dimensional weight and the greater of the two weights before rounding.",
+    "limits": "It does not provide postage, know carrier-specific increments or enforce package-size limits. Confirm the divisor and units and obtain an official quote before buying a shipping label.",
     "faq": [
       [
-        "Can I use the same divisor for every carrier?",
-        "No. Verify the published rule for the exact service and destination. A different divisor can change the weight used for billing."
+        "Can I use a metric dimensional divisor with inches?",
+        "No. Use centimeters and kilograms with a metric divisor, or a separate calculation using the appropriate imperial divisor and units. Mixing the two creates an invalid result."
       ]
     ]
   },
+  "type": "tool",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "sources": [
+    {
+      "name": "DHL — About Weight",
+      "url": "https://dct.dhl.com/help"
+    }
+  ],
   "media": {
     "category": "daily",
     "image": {
@@ -68,7 +82,7 @@
       "credit": "Unsplash",
       "alt": {
         "ko": "운송과 포장에 사용하는 여러 개의 종이 상자",
-        "en": "Cardboard box lot"
+        "en": "A collection of cardboard boxes ready for packing"
       },
       "caption": {
         "ko": "운송과 포장에 사용하는 여러 개의 종이 상자",
@@ -83,7 +97,7 @@
           "credit": "Unsplash",
           "alt": {
             "ko": "운송과 포장에 사용하는 여러 개의 종이 상자",
-            "en": "Cardboard box lot"
+            "en": "A collection of cardboard boxes ready for packing"
           },
           "caption": {
             "ko": "운송과 포장에 사용하는 여러 개의 종이 상자",
@@ -159,11 +173,5 @@
         }
       ]
     }
-  },
-  "sources": [
-    {
-      "name": "DHL — About Weight",
-      "url": "https://dct.dhl.com/help"
-    }
-  ]
+  }
 }
