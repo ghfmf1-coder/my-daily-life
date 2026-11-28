@@ -1,18 +1,169 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-27T08:45:44+00:00",
-  "status": "pass",
+  "checkedAt": "2026-11-28T03:18:18+00:00",
+  "status": "fail",
   "summary": {
-    "sites": 55,
-    "sitePassed": 55,
+    "sites": 63,
+    "sitePassed": 62,
     "siteWarnings": 0,
-    "siteFailed": 0,
-    "browserPassed": 9,
+    "siteFailed": 1,
+    "browserPassed": 10,
     "browserFailed": 0,
     "sourceTestsPassed": true,
-    "issues": 0
+    "issues": 1
   },
   "sites": [
+    {
+      "slug": "appliance-energy-calculator",
+      "name": "가전제품 전력사용량 계산기",
+      "url": "https://abreda.com/tools/appliance-energy-calculator/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 344ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "가전제품 전력사용량 계산기 | ABREDA"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "전기장판·히터·가전제품의 소비전력과 사용시간으로 kWh 및 직접 입력한 단가 기준 전력비를 계산합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/appliance-energy-calculator/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/appliance-energy-calculator/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/appliance-energy-calculator/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 292ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Appliance Energy Calculator | ABREDA"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Convert appliance watts and hours of use into daily and period energy consumption, with an optional cost calcu"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/appliance-energy-calculator/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/appliance-energy-calculator/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/appliance-energy-calculator/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 533 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 145 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 25164 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 298"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_appliance-energy-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1894 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_appliance-energy-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1894 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
     {
       "slug": "aquarium-water-lab",
       "name": "수족관 수질 분석실",
@@ -23,7 +174,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 325ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -63,7 +214,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -154,7 +305,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 115ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -194,7 +345,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -254,12 +405,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -305,7 +456,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -345,7 +496,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -405,12 +556,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -462,6 +613,157 @@
       "failures": []
     },
     {
+      "slug": "business-days-calculator",
+      "name": "영업일·근무일 계산기",
+      "url": "https://abreda.com/tools/business-days-calculator/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "영업일·근무일 계산기 | ABREDA"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "시작일과 종료일 사이의 평일을 계산하고 직접 입력한 공휴일 및 휴무일을 제외합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/business-days-calculator/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/business-days-calculator/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/business-days-calculator/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Business Days Calculator | ABREDA"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Count weekdays between two dates, excluding holidays you enter. Choose whether the first day counts; the last "
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/business-days-calculator/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/business-days-calculator/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/business-days-calculator/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 533 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 145 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 25164 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 298"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_business-days-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2343 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_business-days-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2343 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
       "slug": "camera-lens-check",
       "name": "중고 카메라 렌즈 검수",
       "url": "https://tb-camera-lens-check.pages.dev/",
@@ -471,7 +773,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 353ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -511,7 +813,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 48ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -602,7 +904,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 134ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 211ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -642,7 +944,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 112ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -733,7 +1035,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -773,7 +1075,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -833,12 +1135,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -889,7 +1191,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 133ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -929,7 +1231,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1020,7 +1322,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 335ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1060,7 +1362,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1151,7 +1453,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 80ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 457ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1191,7 +1493,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1282,7 +1584,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1322,7 +1624,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1443,7 +1745,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 42ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1483,7 +1785,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1543,12 +1845,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -1599,7 +1901,7 @@
         {
           "check": "page_internal",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 508ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1661,6 +1963,157 @@
       "failures": []
     },
     {
+      "slug": "dimensional-weight-calculator",
+      "name": "택배 부피무게 계산기",
+      "url": "https://abreda.com/tools/dimensional-weight-calculator/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 136ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "택배 부피무게 계산기 | ABREDA"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "상자 가로·세로·높이와 실측 무게, 운송사 부피무게 환산계수를 입력해 과금 기준 무게를 비교합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/dimensional-weight-calculator/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/dimensional-weight-calculator/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/dimensional-weight-calculator/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 125ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Dimensional Weight Calculator | ABREDA"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Compare actual package weight with dimensional weight using box dimensions in centimeters and a carrier diviso"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/dimensional-weight-calculator/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/dimensional-weight-calculator/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/dimensional-weight-calculator/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 533 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 145 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 25164 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 298"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_dimensional-weight-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1937 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_dimensional-weight-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1937 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
       "slug": "discount-coupon-calculator",
       "name": "할인쿠폰 실결제 비교기",
       "url": "https://abreda.com/tools/discount-coupon-calculator/",
@@ -1670,7 +2123,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1710,7 +2163,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1770,12 +2223,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -1821,7 +2274,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -1861,7 +2314,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -1921,12 +2374,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -1968,6 +2421,308 @@
       "failures": []
     },
     {
+      "slug": "file-transfer-time-calculator",
+      "name": "파일 전송시간 계산기",
+      "url": "https://abreda.com/tools/file-transfer-time-calculator/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 140ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "파일 전송시간 계산기 | ABREDA"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "파일 용량(MB·GB·MiB·GiB)과 실제 전송속도(Mbps)를 입력해 이론적인 전송시간을 계산합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/file-transfer-time-calculator/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/file-transfer-time-calculator/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/file-transfer-time-calculator/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "File Transfer Time Calculator | ABREDA"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Calculate theoretical file transfer time from a file size in MB, GB, MiB or GiB and a measured upload or downl"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/file-transfer-time-calculator/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/file-transfer-time-calculator/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/file-transfer-time-calculator/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 533 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 145 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 25164 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 298"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_file-transfer-time-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1921 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_file-transfer-time-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1921 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "fuel-cost-calculator",
+      "name": "자동차 주유비·연비 계산기",
+      "url": "https://abreda.com/tools/fuel-cost-calculator/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "자동차 주유비·연비 계산기 | ABREDA"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "이동거리와 실제 연비, 연료 단가를 입력해 예상 사용량 및 거리 기준 주유비를 계산합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/fuel-cost-calculator/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/fuel-cost-calculator/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/fuel-cost-calculator/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 127ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Fuel Cost Calculator | ABREDA"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Calculate fuel use and travel cost using distance, actual fuel economy and the fuel price you enter. Supports "
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/fuel-cost-calculator/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/fuel-cost-calculator/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/fuel-cost-calculator/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 533 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 145 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 25164 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 298"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_fuel-cost-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1819 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_fuel-cost-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1819 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
       "slug": "gem-photo-inspection",
       "name": "보석·원석 외관 검수",
       "url": "https://tb-gem-photo-inspection.pages.dev/",
@@ -1977,7 +2732,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2017,7 +2772,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2108,7 +2863,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 47ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2148,7 +2903,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2208,12 +2963,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2264,7 +3019,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2304,7 +3059,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 50ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2364,12 +3119,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2420,7 +3175,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2460,7 +3215,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2520,12 +3275,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2586,7 +3341,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2626,7 +3381,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2686,12 +3441,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -2737,7 +3492,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 356ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 418ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2777,7 +3532,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2868,7 +3623,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -2908,7 +3663,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -2999,7 +3754,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 69ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3039,7 +3794,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 82ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 84ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3099,12 +3854,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3195,7 +3950,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3255,12 +4010,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3306,7 +4061,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 167ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3346,7 +4101,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3457,7 +4212,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 75ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 47ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3497,7 +4252,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3557,12 +4312,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3608,7 +4363,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3648,7 +4403,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3708,12 +4463,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -3764,7 +4519,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 400ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3804,7 +4559,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 83ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -3906,6 +4661,157 @@
       "failures": []
     },
     {
+      "slug": "pdf-compressor",
+      "name": "스캔 PDF 용량 줄이기",
+      "url": "https://abreda.com/tools/pdf-compressor/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "스캔 PDF 용량 줄이기 | ABREDA"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "스캔한 PDF를 이미지로 다시 렌더링해 해상도와 JPEG 화질을 조절하고 원본 크기와 비교합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/pdf-compressor/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/pdf-compressor/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/pdf-compressor/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 137ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Scanned PDF Compressor | ABREDA"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Rasterize scanned PDF pages at a chosen resolution and JPEG quality, then compare the actual output size again"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/pdf-compressor/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/pdf-compressor/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/pdf-compressor/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 533 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 145 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 25164 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 298"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_pdf-compressor_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2804 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_pdf-compressor_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2804 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
       "slug": "pdf-page-workshop",
       "name": "PDF 페이지 수리점",
       "url": "https://abreda.com/tools/pdf-page-workshop/",
@@ -3915,7 +4821,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 70ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -3955,7 +4861,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4015,12 +4921,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4071,7 +4977,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4111,7 +5017,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 48ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4171,12 +5077,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4227,7 +5133,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 49ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 88ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4267,7 +5173,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 44ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4327,12 +5233,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4374,6 +5280,159 @@
       "failures": []
     },
     {
+      "slug": "recipe-serving-calculator",
+      "name": "요리 레시피 인분 변환기",
+      "url": "https://abreda.com/tools/recipe-serving-calculator/",
+      "type": "public",
+      "status": "fail",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 113ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "요리 레시피 인분 변환기 | ABREDA"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "fail",
+          "detail": "원래 인분과 원하는 인분을 입력하고 여러 재료의 수량을 같은 비율로 변환합니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/recipe-serving-calculator/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/recipe-serving-calculator/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/recipe-serving-calculator/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 122ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Recipe Serving Calculator | ABREDA"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Scale ingredient quantities from the original recipe yield to a new serving count, preserving the unit you ent"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/recipe-serving-calculator/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/recipe-serving-calculator/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/recipe-serving-calculator/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 533 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 145 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 25164 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 298"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_recipe-serving-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2001 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_recipe-serving-calculator_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2001 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": [
+        "meta_description_ko: 원래 인분과 원하는 인분을 입력하고 여러 재료의 수량을 같은 비율로 변환합니다."
+      ]
+    },
+    {
       "slug": "recurring-payment-finder",
       "name": "숨은 정기결제 탐지기",
       "url": "https://abreda.com/tools/recurring-payment-finder/",
@@ -4383,7 +5442,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4423,7 +5482,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 71ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4483,12 +5542,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4539,7 +5598,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 42ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 49ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4579,7 +5638,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 90ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4639,12 +5698,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4695,7 +5754,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 66ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -4735,7 +5794,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 68ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4795,12 +5854,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -4886,7 +5945,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 43ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 135ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -4946,12 +6005,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -5002,7 +6061,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 65ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5042,7 +6101,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 64ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 45ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5102,12 +6161,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -5158,7 +6217,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 60ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5198,7 +6257,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 41ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5258,12 +6317,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -5314,7 +6373,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 114ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 383ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5354,7 +6413,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5445,7 +6504,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 490ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 78ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5485,7 +6544,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 130ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5576,7 +6635,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 93ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 224ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5616,7 +6675,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 63ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5707,7 +6766,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 43ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5747,7 +6806,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -5807,12 +6866,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -5863,7 +6922,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 86ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 343ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -5903,7 +6962,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 47ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 61ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -6014,7 +7073,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 48ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 72ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -6054,7 +7113,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 43ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -6114,12 +7173,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -6165,7 +7224,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 51ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 53ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -6205,7 +7264,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 49ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 76ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -6265,12 +7324,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -6296,6 +7355,157 @@
           "check": "script_tools_text-diff-checker_app.js",
           "status": "pass",
           "detail": "HTTP 200, 862 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        }
+      ],
+      "warnings": [],
+      "failures": []
+    },
+    {
+      "slug": "text-to-columns-converter",
+      "name": "엑셀 텍스트 열 분리 도구",
+      "url": "https://abreda.com/tools/text-to-columns-converter/",
+      "type": "public",
+      "status": "pass",
+      "checks": [
+        {
+          "check": "page_ko",
+          "status": "pass",
+          "detail": "HTTP 200, 103ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_ko",
+          "status": "pass",
+          "detail": "엑셀 텍스트 열 분리 도구 | ABREDA"
+        },
+        {
+          "check": "meta_description_ko",
+          "status": "pass",
+          "detail": "붙여넣은 텍스트를 쉼표·탭·공백으로 분리해 엑셀에 붙여넣기 쉬운 탭 구분 형식으로 바꿉니다."
+        },
+        {
+          "check": "html_lang_ko",
+          "status": "pass",
+          "detail": "expected ko; got ko"
+        },
+        {
+          "check": "index_directive_ko",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/text-to-columns-converter/"
+        },
+        {
+          "check": "hreflang_ko_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/text-to-columns-converter/"
+        },
+        {
+          "check": "hreflang_ko_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/text-to-columns-converter/"
+        },
+        {
+          "check": "page_en",
+          "status": "pass",
+          "detail": "HTTP 200, 126ms, text/html; charset=utf-8"
+        },
+        {
+          "check": "title_en",
+          "status": "pass",
+          "detail": "Text to Columns Converter | ABREDA"
+        },
+        {
+          "check": "meta_description_en",
+          "status": "pass",
+          "detail": "Split pasted lines by commas, tabs or whitespace into tab-separated columns for spreadsheets. Quoted CSV field"
+        },
+        {
+          "check": "html_lang_en",
+          "status": "pass",
+          "detail": "expected en; got en"
+        },
+        {
+          "check": "index_directive_en",
+          "status": "pass",
+          "detail": "(meta robots unspecified)"
+        },
+        {
+          "check": "canonical_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/text-to-columns-converter/"
+        },
+        {
+          "check": "hreflang_en_ko",
+          "status": "pass",
+          "detail": "https://abreda.com/tools/text-to-columns-converter/"
+        },
+        {
+          "check": "hreflang_en_en",
+          "status": "pass",
+          "detail": "https://abreda.com/en/tools/text-to-columns-converter/"
+        },
+        {
+          "check": "icon_favicon.ico",
+          "status": "pass",
+          "detail": "HTTP 200, 16958 bytes"
+        },
+        {
+          "check": "svg_favicon.svg",
+          "status": "pass",
+          "detail": "HTTP 200, 533 bytes"
+        },
+        {
+          "check": "text_robots.txt",
+          "status": "pass",
+          "detail": "HTTP 200, 145 bytes"
+        },
+        {
+          "check": "robots_publicity",
+          "status": "pass",
+          "detail": "crawlable public"
+        },
+        {
+          "check": "sitemap_sitemap.xml",
+          "status": "pass",
+          "detail": "HTTP 200, 25164 bytes"
+        },
+        {
+          "check": "sitemap_content",
+          "status": "pass",
+          "detail": "entries: 298"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_text-to-columns-converter_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2474 bytes"
+        },
+        {
+          "check": "script_toolbox-public-traffic.js",
+          "status": "pass",
+          "detail": "HTTP 200, 1431 bytes"
+        },
+        {
+          "check": "script_toolbox-ga4.js",
+          "status": "pass",
+          "detail": "HTTP 200, 5627 bytes"
+        },
+        {
+          "check": "script_tools_text-to-columns-converter_app.js",
+          "status": "pass",
+          "detail": "HTTP 200, 2474 bytes"
         },
         {
           "check": "script_toolbox-public-traffic.js",
@@ -6332,7 +7542,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 108ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -6372,7 +7582,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 111ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -6432,12 +7642,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -6472,22 +7682,22 @@
         {
           "check": "text_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21173 bytes"
+          "detail": "HTTP 200, 24613 bytes"
         },
         {
           "check": "rss_feed.xml",
           "status": "pass",
-          "detail": "53 valid RSS entries"
+          "detail": "61 valid RSS entries"
         },
         {
           "check": "text_en_feed.xml",
           "status": "pass",
-          "detail": "HTTP 200, 20375 bytes"
+          "detail": "HTTP 200, 23827 bytes"
         },
         {
           "check": "rss_en_feed.xml",
           "status": "pass",
-          "detail": "53 valid RSS entries"
+          "detail": "61 valid RSS entries"
         }
       ],
       "warnings": [],
@@ -6503,7 +7713,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 47ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 46ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -6543,7 +7753,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 49ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -6603,12 +7813,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -6654,7 +7864,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 46ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 59ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -6694,7 +7904,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 41ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 45ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -6754,12 +7964,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -6805,7 +8015,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 55ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 43ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -6845,7 +8055,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 73ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 42ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -6905,12 +8115,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -6956,7 +8166,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 104ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -6996,7 +8206,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 50ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -7087,7 +8297,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 369ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -7127,7 +8337,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 52ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 62ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -7218,7 +8428,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 143ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 342ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -7258,7 +8468,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 57ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 85ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -7349,7 +8559,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 45ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 58ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -7389,7 +8599,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 42ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 43ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -7449,12 +8659,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -7505,7 +8715,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 91ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 81ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -7545,7 +8755,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 67ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 79ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -7636,7 +8846,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 131ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 46ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -7676,7 +8886,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 74ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 49ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -7736,12 +8946,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -7787,7 +8997,7 @@
         {
           "check": "page_ko",
           "status": "pass",
-          "detail": "HTTP 200, 54ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
         },
         {
           "check": "title_ko",
@@ -7827,7 +9037,7 @@
         {
           "check": "page_en",
           "status": "pass",
-          "detail": "HTTP 200, 77ms, text/html; charset=utf-8"
+          "detail": "HTTP 200, 56ms, text/html; charset=utf-8"
         },
         {
           "check": "title_en",
@@ -7887,12 +9097,12 @@
         {
           "check": "sitemap_sitemap.xml",
           "status": "pass",
-          "detail": "HTTP 200, 21882 bytes"
+          "detail": "HTTP 200, 25164 bytes"
         },
         {
           "check": "sitemap_content",
           "status": "pass",
-          "detail": "entries: 258"
+          "detail": "entries: 298"
         },
         {
           "check": "script_toolbox-ga4.js",
@@ -7941,7 +9151,7 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Local chapter and plot thread functions",
-      "elapsedMs": 296
+      "elapsedMs": 330
     },
     {
       "name": "English plot planner",
@@ -7949,7 +9159,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English chapter and character saved locally on mobile",
-      "elapsedMs": 213
+      "elapsedMs": 243
     },
     {
       "name": "Korean manuscript",
@@ -7965,7 +9175,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "English phrase search and repetition detection",
-      "elapsedMs": 263
+      "elapsedMs": 230
     },
     {
       "name": "Korean CSV merger",
@@ -7989,7 +9199,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Cloudflare Access authentication gate visible",
-      "elapsedMs": 190
+      "elapsedMs": 729
     },
     {
       "name": "Toolbox hub search",
@@ -7997,7 +9207,7 @@
       "device": "mobile",
       "status": "pass",
       "detail": "Curated live site directory with working search",
-      "elapsedMs": 174
+      "elapsedMs": 200
     },
     {
       "name": "Technical deployment smoke",
@@ -8005,10 +9215,23 @@
       "device": "desktop",
       "status": "pass",
       "detail": "Deployment-check JavaScript functional",
-      "elapsedMs": 160
+      "elapsedMs": 259
+    },
+    {
+      "name": "GA4 sanitized query and successful tool completion",
+      "url": "https://abreda.com/tools/jsonl-validator/?tb_debug=1&utm_source=qa&token=QA_PRIVATE&q=QA_SEARCH#qa-anchor",
+      "device": "desktop",
+      "status": "pass",
+      "detail": "page_view and tool_complete accepted; debug only; query/hash absent; one pageview",
+      "elapsedMs": 5723
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "scope": "recipe-serving-calculator",
+      "details": "meta_description_ko: 원래 인분과 원하는 인분을 입력하고 여러 재료의 수량을 같은 비율로 변환합니다."
+    }
+  ],
   "scope": "Factory registry + Haruhankan; private manual-only records excluded",
   "definitions": {
     "pass": "Checks passed (not a guarantee of no defects)",
