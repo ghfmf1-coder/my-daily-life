@@ -3,7 +3,7 @@
   "project": "tb-file-transfer-time-calculator",
   "title": "파일 전송시간 계산기",
   "description": "파일 용량(MB·GB·MiB·GiB)과 실제 전송속도(Mbps)를 입력해 이론적인 전송시간을 계산합니다.",
-  "approved": false,
+  "approved": true,
   "deploy_mode": "hub_only",
   "locales": [
     "ko",

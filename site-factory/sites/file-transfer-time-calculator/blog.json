@@ -1,0 +1,177 @@
+{
+  "slug": "calculate-file-upload-download-time-mbps",
+  "tool": "file-transfer-time-calculator",
+  "sources": [
+    {
+      "name": "NIST — Binary prefixes and byte definitions",
+      "url": "https://pml.nist.gov/cuu/Units/binary.html"
+    }
+  ],
+  "ko": {
+    "title": "인터넷 속도로 파일 업로드·다운로드 시간 계산하는 법, Mbps와 MB 차이",
+    "description": "파일 용량과 실제 전송 속도의 단위를 구분하고 업로드와 다운로드에 필요한 시간을 계산하는 방법을 설명합니다.",
+    "problem": "인터넷 상품에 적힌 다운로드 속도만으로 대용량 동영상의 업로드 시간을 계산하면 실제 작업 계획과 맞지 않을 수 있습니다. 파일 용량은 바이트 단위로 표시되지만 네트워크 속도는 초당 비트 단위로 표시되는 경우가 많아 단위를 맞춰야 합니다.",
+    "steps": [
+      [
+        "파일 속성에서 용량 단위 확인하기",
+        "보낼 파일의 크기를 확인합니다. MB와 GB는 십진 단위이고 MiB와 GiB는 이진 단위이므로 파일 관리 프로그램에서 사용한 기준을 확인합니다. 여러 파일을 전송한다면 실제 합계 용량을 사용합니다."
+      ],
+      [
+        "업로드와 다운로드 속도를 별도로 측정하기",
+        "전송 방향에 맞는 속도를 확인합니다. 영상이나 사진을 보내는 작업에서는 업로드 속도를, 서버에서 받는 작업에서는 다운로드 속도를 사용합니다. Mbps와 MB/s는 같은 수치가 아닙니다."
+      ],
+      [
+        "비트로 환산하여 전송시간 계산하기",
+        "파일 용량을 바이트로 환산한 다음 비트로 바꾸고 초당 전송 가능한 비트 수로 나눕니다. NIST의 단위 안내에서 바이트와 비트의 관계 및 이진 접두어를 확인할 수 있습니다. 전송 속도가 일정하다는 조건의 이론값입니다."
+      ],
+      [
+        "실제 전송에서 차이가 나는 원인 확인하기",
+        "전송이 시작되면 서버 제한, 네트워크 혼잡, 프로토콜 처리 및 파일 수에 따른 부가 시간이 발생할 수 있습니다. 실제 진행률이나 전송 기록을 확인하고 중요한 제출은 여유 시간을 확보합니다."
+      ]
+    ],
+    "alternative": "이미 전송을 시작한 파일이라면 사용하는 프로그램의 남은 시간 표시를 확인하세요. 속도와 진행률이 계속 변하는 환경에서는 계산된 이론값보다 실제 전송 기록이 유용합니다.",
+    "toolIntro": "아브레다 파일 전송시간 계산기는 파일 크기와 MB·GB·MiB·GiB 단위, 실제 Mbps를 입력받아 초·분·시간을 표시합니다. 인터넷 속도를 직접 측정하는 도구는 아닙니다.",
+    "limits": "계산은 일정한 전송 속도와 연속 전송을 전제로 합니다. 서버의 업로드 제한, 무선 연결 품질, 암호화와 재전송이 포함되지 않으므로 완료 시각을 보장하지 않습니다.",
+    "faq": [
+      [
+        "다운로드 속도가 빠르면 업로드도 같은 시간에 끝나나요?",
+        "아닙니다. 인터넷 상품의 업로드와 다운로드 속도가 다를 수 있습니다. 실제 전송 방향에 맞는 속도를 입력하고 작업 중 진행 상황을 확인하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Calculate File Upload or Download Time From Mbps and File Size",
+    "description": "Convert file sizes in decimal or binary units to bits, use the correct measured transfer speed, and understand why a real upload may take longer.",
+    "problem": "A fast advertised internet plan does not tell you how long a large video backup will take to upload. File sizes are usually described in bytes, while connection speed is expressed in bits per second. The direction of the transfer, the unit conventions and the available throughput matter more than the plan's marketing label.",
+    "steps": [
+      [
+        "Record the actual file size and its unit",
+        "Use the file's properties or the total size of the batch. Decimal megabytes and gigabytes differ from their binary MiB and GiB counterparts. NIST documents the distinction between decimal and binary prefixes; preserve the unit reported by your source."
+      ],
+      [
+        "Choose a speed that matches the transfer direction",
+        "Use measured upload throughput for sending a backup and download throughput for receiving a file. Mbps is megabits per second, not megabytes per second. Check the measurement unit before placing the number into a calculator."
+      ],
+      [
+        "Divide total bits by effective bits per second",
+        "Convert the source quantity into bytes and then bits, and divide by the selected speed expressed in bits per second. The result describes continuous transfer at the entered throughput. Convert seconds to minutes or hours for a readable scheduling reference."
+      ],
+      [
+        "Compare the theoretical duration with the real application",
+        "Once the transfer begins, watch the actual progress and throughput. A remote service can impose its own speed limit, and network contention, protocol overhead, retries and a batch of small files may increase the elapsed time."
+      ]
+    ],
+    "alternative": "Use the file-transfer application's observed throughput and remaining-time display once the transfer is running. A calculation from a speed test is helpful for planning but cannot replace the actual transfer log.",
+    "toolIntro": "ABREDA File Transfer Time Calculator accepts MB, GB, MiB or GiB and a measured speed in Mbps. It returns a theoretical duration in seconds, minutes and hours without transmitting the file.",
+    "limits": "The calculator assumes continuous transfer at the supplied speed. It does not test the connection, know remote-server quotas or model interruptions, retransmission and overhead. Leave additional time for a deadline.",
+    "faq": [
+      [
+        "Why is a file upload slower than my calculated transfer time?",
+        "The actual effective upload throughput may be lower than the speed entered, or the receiving service may impose a limit. Connection contention, retries and protocol overhead also affect elapsed time."
+      ]
+    ]
+  },
+  "type": "tool",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "media": {
+    "category": "document",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1702895742107-35bebf49ce8b?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-router-on-a-table-o-qB6ikmn8w",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+        "en": "A close up of a router on a table"
+      },
+      "caption": {
+        "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+        "en": "A close up of a router on a table"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1702895742107-35bebf49ce8b?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-close-up-of-a-router-on-a-table-o-qB6ikmn8w",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+            "en": "A close up of a router on a table"
+          },
+          "caption": {
+            "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+            "en": "A close up of a router on a table"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1606905418909-a1fab8cea661?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/white-and-black-usb-cable-2H06IWVVpiQ",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "흰색과 검은색 데이터 연결용 USB 케이블",
+            "en": "White and black usb cable"
+          },
+          "caption": {
+            "ko": "흰색과 검은색 데이터 연결용 USB 케이블",
+            "en": "White and black usb cable"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1544985562-128e7b377a21?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/red-ethernet-tester-_fQ6zg_McEU",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "붉은색 이더넷 연결 상태 측정 장비",
+            "en": "Red ethernet tester"
+          },
+          "caption": {
+            "ko": "붉은색 이더넷 연결 상태 측정 장비",
+            "en": "Red ethernet tester"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1604005366301-e01a1e6bc1d8?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/9wnAhRYdDzc",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "검은색과 파란색으로 이루어진 USB 케이블",
+            "en": "Black and blue usb cable"
+          },
+          "caption": {
+            "ko": "검은색과 파란색으로 이루어진 USB 케이블",
+            "en": "Black and blue usb cable"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1680992046615-065f58bcb4d8?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-close-up-of-a-rack-of-computer-equipment-eqd0f78u9nI",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "서버 랙에 설치된 컴퓨터 장비의 가까운 모습",
+            "en": "A close up of a rack of computer equipment"
+          },
+          "caption": {
+            "ko": "서버 랙에 설치된 컴퓨터 장비의 가까운 모습",
+            "en": "A close up of a rack of computer equipment"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1792419766010-a562c6622ec0?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/green-fiber-optic-cable-with-connectors-al1DNjs29is",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "연결 단자가 달린 녹색 광섬유 케이블",
+            "en": "Green fiber optic cable with connectors"
+          },
+          "caption": {
+            "ko": "연결 단자가 달린 녹색 광섬유 케이블",
+            "en": "Green fiber optic cable with connectors"
+          }
+        }
+      ]
+    }
+  }
+}

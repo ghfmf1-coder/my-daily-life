@@ -1,0 +1,177 @@
+{
+  "slug": "calculate-parcel-dimensional-weight-before-shipping",
+  "tool": "dimensional-weight-calculator",
+  "ko": {
+    "title": "해외택배 부피무게 계산하는 법, 박스 실측 무게와 배송비 비교하기",
+    "description": "포장한 상자의 외부 치수와 무게를 측정하고 운송사의 환산계수를 이용해 부피무게와 실제 무게를 비교하는 방법입니다.",
+    "problem": "가볍지만 큰 상자에 상품을 담으면 실제 무게로 예상한 배송비와 다른 금액이 청구될 수 있습니다. 부피무게는 화물 크기를 운송사의 환산계수로 무게 단위에 대응시키는 방식입니다. 운송 서비스마다 계산과 올림 규칙이 다를 수 있습니다.",
+    "steps": [
+      [
+        "봉인한 상자의 외부 치수 측정하기",
+        "빈 상자의 내부가 아니라 포장 완료 상태에서 가장 돌출된 부분을 포함해 가로, 세로, 높이를 센티미터로 측정합니다. 불규칙한 형태의 상자는 운송사의 별도 측정 기준을 확인합니다."
+      ],
+      [
+        "배송 서비스에 맞는 환산계수 확인하기",
+        "DHL의 공식 무게 안내에는 상자 부피를 환산계수로 나누는 방법이 제시되어 있습니다. 실제 예약할 서비스와 단위 체계에 맞는 계수를 확인하세요. 모든 택배사가 같은 계수를 쓰지는 않습니다."
+      ],
+      [
+        "실제 무게와 부피무게를 같은 단위로 비교하기",
+        "세 치수를 곱한 부피를 환산계수로 나누어 킬로그램 단위의 부피무게를 구합니다. 저울로 측정한 실제 무게와 비교한 뒤 서비스에서 더 큰 값을 과금 무게로 사용하는지 확인합니다."
+      ],
+      [
+        "예약 화면에서 추가 비용까지 확인하기",
+        "중량과 치수를 일정 단위로 올리거나 규격 초과, 원거리 지역 등의 추가 요금이 적용될 수 있습니다. 공식 견적에 실측 치수와 무게를 입력하고 최종 비용을 비교합니다."
+      ]
+    ],
+    "alternative": "포장 크기를 바꾼 뒤 실제 외부 치수를 다시 측정하여 직접 계산할 수 있습니다. 최종 배송비는 운송사의 공식 견적 화면에서 확인하는 편이 정확합니다.",
+    "toolIntro": "아브레다 택배 부피무게 계산기는 센티미터, 킬로그램과 입력한 환산계수를 이용해 부피무게와 실제 무게 중 큰 값을 표시합니다. 운임 조회 기능은 없습니다.",
+    "limits": "운송사별 치수 및 중량 올림, 규격 제한과 할증은 자동 반영하지 않습니다. 실제 측정과 예약 조건이 달라지면 결과도 달라질 수 있습니다.",
+    "faq": [
+      [
+        "부피무게 환산계수는 모든 택배에서 같은가요?",
+        "아닙니다. 운송사와 서비스, 측정 단위에 맞는 환산계수를 이용해야 합니다. 인치 기준 계수를 센티미터 입력에 섞지 마세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Calculate Dimensional Weight for a Shipping Box Before Booking a Carrier",
+    "description": "Compare dimensional and scale weight using the dimensions of a sealed parcel and the divisor for your specific shipping service.",
+    "problem": "A bulky package filled with lightweight goods may occupy more vehicle space than its scale weight suggests. Some shipping services therefore rate the parcel by dimensional weight. A measurement of the empty carton or an unrelated carrier's divisor can lead to an incorrect comparison.",
+    "steps": [
+      [
+        "Measure the packed parcel rather than the empty carton",
+        "Seal the box first and measure its external length, width and height. Follow the carrier's instructions for irregular shapes or bulges. Use centimeters for a divisor expressed in cubic centimeters per kilogram."
+      ],
+      [
+        "Check the divisor for the exact booked service",
+        "DHL's official weight guidance describes dimensional weight as package volume divided by a volumetric divisor. Metric and imperial conventions differ, and another carrier may use a different divisor or rating rule."
+      ],
+      [
+        "Calculate the preliminary chargeable weight",
+        "Multiply the three metric dimensions and divide by the metric divisor. Compare the resulting kilograms with the scale reading. If the service uses the higher weight, this is its preliminary basis before any required rounding."
+      ],
+      [
+        "Obtain a real quote after checking size restrictions",
+        "Consult the carrier's price screen for weight increments, maximum dimensions and any surcharges. A smaller box may reduce dimensional weight, but adequate protection is still necessary for a safe shipment."
+      ]
+    ],
+    "alternative": "If your destination and service are already known, use the carrier's quote tool directly. A separate comparison is useful for evaluating multiple packaging options before selecting a service.",
+    "toolIntro": "ABREDA Dimensional Weight Calculator accepts dimensions in centimeters, scale weight in kilograms and your entered divisor. It displays volume, dimensional weight and the greater of the two weights before rounding.",
+    "limits": "It does not provide postage, know carrier-specific increments or enforce package-size limits. Confirm the divisor and units and obtain an official quote before buying a shipping label.",
+    "faq": [
+      [
+        "Can I use a metric dimensional divisor with inches?",
+        "No. Use centimeters and kilograms with a metric divisor, or a separate calculation using the appropriate imperial divisor and units. Mixing the two creates an invalid result."
+      ]
+    ]
+  },
+  "type": "tool",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "sources": [
+    {
+      "name": "DHL — About Weight",
+      "url": "https://dct.dhl.com/help"
+    }
+  ],
+  "media": {
+    "category": "daily",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1513672494107-cd9d848a383e?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/cardboard-box-lot-fyaTq-fIlro",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "운송과 포장에 사용하는 여러 개의 종이 상자",
+        "en": "A collection of cardboard boxes ready for packing"
+      },
+      "caption": {
+        "ko": "운송과 포장에 사용하는 여러 개의 종이 상자",
+        "en": "Cardboard box lot"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1513672494107-cd9d848a383e?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/cardboard-box-lot-fyaTq-fIlro",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "운송과 포장에 사용하는 여러 개의 종이 상자",
+            "en": "A collection of cardboard boxes ready for packing"
+          },
+          "caption": {
+            "ko": "운송과 포장에 사용하는 여러 개의 종이 상자",
+            "en": "Cardboard box lot"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1794230751711-5f5c2222ab9e?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/person-loading-boxes-into-blue-van-SnQFBHazLK8",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "푸른색 배송 차량에 상자를 싣고 있는 사람",
+            "en": "Person loading boxes into blue van"
+          },
+          "caption": {
+            "ko": "푸른색 배송 차량에 상자를 싣고 있는 사람",
+            "en": "Person loading boxes into blue van"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1620455800201-7f00aeef12ed?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/delivery-person-loading-cardboard-boxes-a85IYeAXgxU",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "종이 배송 상자를 차량에 싣는 배송 담당자",
+            "en": "Delivery person loading cardboard boxes"
+          },
+          "caption": {
+            "ko": "종이 배송 상자를 차량에 싣는 배송 담당자",
+            "en": "Delivery person loading cardboard boxes"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1758351507026-71ad3645cb43?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/cardboard-box-sealed-with-red-fragile-tape-RqZ-xGRnCYI",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "취급 주의 표시가 있는 붉은 테이프로 봉한 상자",
+            "en": "Cardboard box sealed with red fragile tape"
+          },
+          "caption": {
+            "ko": "취급 주의 표시가 있는 붉은 테이프로 봉한 상자",
+            "en": "Cardboard box sealed with red fragile tape"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1626253934161-08cfea22e968?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/brown-and-white-cardboard-box-g2oHJrqcJlQ",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "갈색과 흰색으로 된 배송용 종이 상자",
+            "en": "Brown and white cardboard box"
+          },
+          "caption": {
+            "ko": "갈색과 흰색으로 된 배송용 종이 상자",
+            "en": "Brown and white cardboard box"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1617909517433-b38d5b21629b?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/brown-cardboard-boxes-on-yellow-table-YqPN_7HP5bs",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "노란색 작업대 위에 놓인 갈색 종이 상자",
+            "en": "Brown cardboard boxes on yellow table"
+          },
+          "caption": {
+            "ko": "노란색 작업대 위에 놓인 갈색 종이 상자",
+            "en": "Brown cardboard boxes on yellow table"
+          }
+        }
+      ]
+    }
+  }
+}

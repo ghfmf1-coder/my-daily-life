@@ -3,7 +3,7 @@
   "project": "tb-pdf-compressor",
   "title": "스캔 PDF 용량 줄이기",
   "description": "이미지 중심 PDF 페이지를 선택한 해상도와 JPEG 화질로 다시 저장하고 원본 용량과 비교합니다.",
-  "approved": false,
+  "approved": true,
   "deploy_mode": "hub_only",
   "locales": [
     "ko",

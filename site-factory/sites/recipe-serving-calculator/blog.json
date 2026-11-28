@@ -1,0 +1,181 @@
+{
+  "slug": "scale-recipe-ingredients-for-different-servings",
+  "tool": "recipe-serving-calculator",
+  "ko": {
+    "title": "요리 레시피 2인분을 4인분으로 바꾸는 법, 재료별 계량 쉽게 하기",
+    "description": "레시피의 원래 인분과 원하는 인분을 이용해 재료의 수량을 환산하고 달걀, 양념, 조리시간을 따로 조절하는 방법입니다.",
+    "problem": "한 사람을 위한 레시피를 가족 식사나 여러 끼의 식사 준비에 사용하려면 재료 수량을 다시 계산해야 합니다. 원래 분량을 확인하지 않고 재료만 늘리면 필요한 양과 달라집니다. 양념의 맛이나 조리시간까지 단순히 같은 비율로 늘릴 수 있는 것은 아닙니다.",
+    "steps": [
+      [
+        "원래 인분과 재료 단위를 각각 기록하기",
+        "레시피에서 완성 분량과 각 재료의 수량을 확인합니다. 그램, 밀리리터, 컵, 개 등 단위는 그대로 적고 재료의 밀도를 확인하지 않은 상태에서 무게와 부피를 서로 바꾸지 않습니다."
+      ],
+      [
+        "원하는 인분을 원래 인분으로 나누기",
+        "필요한 인분을 원래 인분으로 나눈 값을 배율로 사용합니다. 각 재료 수량에 배율을 곱한 뒤 원래 단위를 유지합니다. 작은 분량은 사용할 저울과 계량스푼의 정밀도를 고려합니다."
+      ],
+      [
+        "정수 재료와 양념을 따로 조절하기",
+        "달걀처럼 개수로 쓰는 재료의 분량을 나눌 때에는 레시피 특성을 확인합니다. 소금과 매운 양념은 맛을 고려해 조절하고 계산된 양과 실제로 사용한 양을 구분합니다."
+      ],
+      [
+        "조리 도구 용량과 식품 안전 확인하기",
+        "팬에 담기는 두께와 열 전달이 달라지므로 조리시간을 재료량과 같은 배율로 늘리지 않습니다. 병조림 등 보존식품은 검증된 레시피의 재료 비율과 처리 방법을 따라야 합니다."
+      ]
+    ],
+    "alternative": "스프레드시트의 수량 열에 동일한 배율을 곱하고 단위 열을 그대로 두어도 됩니다. 조리 도구가 작은 경우 원래 레시피를 나눠 여러 번 만드는 방법도 있습니다.",
+    "toolIntro": "아브레다 레시피 인분 변환기는 원래 인분과 원하는 인분, 재료 이름·수량·단위 목록을 받아 환산 수량과 배율을 보여줍니다. 단위 변환 기능은 없습니다.",
+    "limits": "단순 비례 계산만 지원하며 식품 보존, 발효, 굽기처럼 정확한 배합과 온도가 중요한 작업의 안전이나 결과를 보장하지 않습니다.",
+    "faq": [
+      [
+        "인분을 늘리면 조리시간도 같은 비율로 늘려야 하나요?",
+        "아닙니다. 팬의 크기, 재료 두께와 가열 방식에 따라 조리시간이 달라집니다. 원래 레시피의 완료 기준과 식품 안전 지침을 확인하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Scale a Recipe for More or Fewer Servings Without Changing Ingredient Units",
+    "description": "Adjust a recipe yield with a serving multiplier and learn which ingredient and cooking decisions must be handled separately.",
+    "problem": "A recipe written for a small batch may need to feed a family or a group. Multiplying ingredients by the desired yield divided by the original yield is the arithmetic part. Pan dimensions, whole eggs, seasonings and cooking time may require recipe-specific adjustments.",
+    "steps": [
+      [
+        "List the original yield and ingredient quantities",
+        "Read the serving count and record each ingredient in its original unit, whether grams, cups or teaspoons. Keeping units separate avoids confusing a count of items with a volume or weight measurement."
+      ],
+      [
+        "Apply a single serving ratio to the measured amounts",
+        "Divide the target servings by the original servings and multiply the numerical amount of each ingredient by that ratio. Retain the unit and use an appropriately precise measuring device for small quantities rather than rounding every result indiscriminately."
+      ],
+      [
+        "Review ingredients that do not scale conveniently",
+        "A fractional egg or a large quantity of a potent seasoning may need adjustment for the particular recipe. Keep the calculated list as a reference and record intentional changes instead of treating every calculated amount as compulsory."
+      ],
+      [
+        "Check equipment and food-safety requirements",
+        "A larger batch can change the depth of food and heat transfer. Make separate batches if the pan is too small. Do not casually change ingredient proportions or processing times in a tested home-canning recipe."
+      ]
+    ],
+    "alternative": "Apply the multiplier in a spreadsheet and retain a separate unit column. For a sensitive baking recipe or a preparation that depends on a particular pan size, consider making multiple original-sized batches instead.",
+    "toolIntro": "ABREDA Recipe Serving Calculator accepts an original and target serving count plus one name, quantity, unit record per line. It reports the multiplier and the revised quantities in their original units.",
+    "limits": "The tool does not convert cups to grams, assess allergens or determine cooking time. Food-preservation and other controlled recipes require validated instructions and cannot be safely redesigned with a simple multiplier.",
+    "faq": [
+      [
+        "Can I double the oven time when doubling a recipe?",
+        "No. Equipment, food thickness and the intended doneness determine cooking time. Follow the recipe's preparation and safety instructions, using separate batches when necessary."
+      ]
+    ]
+  },
+  "type": "tool",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "sources": [
+    {
+      "name": "Penn State Extension — Ingredient Substitutions in a Pinch",
+      "url": "https://extension.psu.edu/ingredient-substitutions-in-a-pinch"
+    },
+    {
+      "name": "Penn State Extension — What Can You Change in a Canning Recipe?",
+      "url": "https://extension.psu.edu/what-can-you-change-in-a-canning-recipe"
+    }
+  ],
+  "media": {
+    "category": "daily",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1577048982768-5cb3e7ddfa23?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/assorted-baking-ingredients-on-table-nyiBwAZu4DE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+        "en": "Assorted baking ingredients on table"
+      },
+      "caption": {
+        "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+        "en": "Assorted baking ingredients on table"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1577048982768-5cb3e7ddfa23?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/assorted-baking-ingredients-on-table-nyiBwAZu4DE",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+            "en": "Assorted baking ingredients on table"
+          },
+          "caption": {
+            "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+            "en": "Assorted baking ingredients on table"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1685397166410-0f9f8cf7e25d?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/ingredients-for-a-recipe-laid-out-on-a-counter-tTOLMcg1D_U",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "조리대에 요리 순서에 맞게 준비한 식재료",
+            "en": "Ingredients for a recipe laid out on a counter"
+          },
+          "caption": {
+            "ko": "조리대에 요리 순서에 맞게 준비한 식재료",
+            "en": "Ingredients for a recipe laid out on a counter"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1768204042523-6f778e579402?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/strawberries-in-a-measuring-cup-on-a-scale-vP0GB1-9p3w",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "주방 저울 위의 계량컵에 담긴 딸기",
+            "en": "Strawberries in a measuring cup on a scale"
+          },
+          "caption": {
+            "ko": "주방 저울 위의 계량컵에 담긴 딸기",
+            "en": "Strawberries in a measuring cup on a scale"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1777647262314-58b72a19ffdc?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/white-powder-measured-on-a-digital-scale-u3gMcNvqrnI",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "전자 저울을 이용해 무게를 측정하는 흰색 가루",
+            "en": "White powder measured on a digital scale"
+          },
+          "caption": {
+            "ko": "전자 저울을 이용해 무게를 측정하는 흰색 가루",
+            "en": "White powder measured on a digital scale"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1759965670306-f055ff093752?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/baking-ingredients-and-tools-arranged-on-a-white-surface-KH9iqmoE374",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "흰색 작업대에 배치된 제빵 재료와 조리 도구",
+            "en": "Baking ingredients and tools arranged on a white surface"
+          },
+          "caption": {
+            "ko": "흰색 작업대에 배치된 제빵 재료와 조리 도구",
+            "en": "Baking ingredients and tools arranged on a white surface"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1586808777178-8bf146c39bc7?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/clear-glass-measuring-cup-on-white-ceramic-plate-O-wRrxy-evo",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "흰색 세라믹 접시 위에 놓인 투명 유리 계량컵",
+            "en": "Clear glass measuring cup on white ceramic plate"
+          },
+          "caption": {
+            "ko": "흰색 세라믹 접시 위에 놓인 투명 유리 계량컵",
+            "en": "Clear glass measuring cup on white ceramic plate"
+          }
+        }
+      ]
+    }
+  }
+}

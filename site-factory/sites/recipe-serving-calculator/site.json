@@ -3,7 +3,7 @@
   "project": "tb-recipe-serving-calculator",
   "title": "요리 레시피 인분 변환기",
   "description": "원래 인분과 원하는 인분을 입력하고 여러 재료의 수량을 같은 비율로 변환합니다.",
-  "approved": false,
+  "approved": true,
   "deploy_mode": "hub_only",
   "locales": [
     "ko",

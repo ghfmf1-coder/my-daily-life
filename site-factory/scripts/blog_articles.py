@@ -100,6 +100,13 @@ def load():
             if not en:raise ValueError('English article lacks an actual matching English tool: '+tool)
             links={'ko':ko,'en':en}
             tools.add(tool)
+        if p.get('independent_locales'):
+            if kind!='information':
+                raise ValueError('Independent locale content must be informational: '+slug)
+            if not all(any(r.get('locale')==lang for r in p['sources']) for lang in ('ko','en')):
+                raise ValueError('Independent locale content requires primary sources for each language: '+slug)
+            if any(r.get('locale') not in ('ko','en') for r in p['sources']):
+                raise ValueError('Independent locale source must specify language: '+slug)
         date=p.get('published')
         if not isinstance(date,str):raise ValueError('Publication date required for '+slug)
         published_date=dt.date.fromisoformat(date)

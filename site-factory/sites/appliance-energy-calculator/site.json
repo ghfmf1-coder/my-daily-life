@@ -3,7 +3,7 @@
   "project": "tb-appliance-energy-calculator",
   "title": "가전제품 전력사용량 계산기",
   "description": "전기장판·히터·가전제품의 소비전력과 사용시간으로 kWh 및 직접 입력한 단가 기준 전력비를 계산합니다.",
-  "approved": false,
+  "approved": true,
   "deploy_mode": "hub_only",
   "locales": [
     "ko",

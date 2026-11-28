@@ -1,0 +1,962 @@
+{
+  "business": [
+    {
+      "url": "https://images.unsplash.com/photo-1787062421080-4c62991048c3?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/planner-with-monthly-calendar-pages-Tc7Tprdad1Q",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "월별 달력 페이지가 펼쳐진 일정 관리 수첩",
+        "en": "Planner with monthly calendar pages"
+      },
+      "caption": {
+        "ko": "월별 달력 페이지가 펼쳐진 일정 관리 수첩",
+        "en": "Planner with monthly calendar pages"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1787062421059-21067143ac41?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/calendar-page-with-monthly-schedule-V9mqu9e75qA",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "월간 일정이 표시된 종이 달력 페이지",
+        "en": "Calendar page with monthly schedule"
+      },
+      "caption": {
+        "ko": "월간 일정이 표시된 종이 달력 페이지",
+        "en": "Calendar page with monthly schedule"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1665808282962-9bd99d7fe3f6?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-calendar-and-scissors-on-a-table-QfOQSM8nXCo",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "책상 위에 놓인 종이 달력과 가위",
+        "en": "A calendar and scissors on a table"
+      },
+      "caption": {
+        "ko": "책상 위에 놓인 종이 달력과 가위",
+        "en": "A calendar and scissors on a table"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1553034710-47f9e03ff808?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-calendar-oWpartNqAnM",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "날짜를 확인할 수 있는 흰색 종이 달력",
+        "en": "White paper calendar for checking dates"
+      },
+      "caption": {
+        "ko": "날짜를 확인할 수 있는 흰색 종이 달력",
+        "en": "White paper calendar for checking dates"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1738854710700-4756d25bfdc6?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-wooden-easel-with-a-calendar-on-top-of-it-AqkPhfAgx10",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "나무 받침대 위에 세워 둔 탁상 달력",
+        "en": "A wooden easel holding a calendar"
+      },
+      "caption": {
+        "ko": "나무 받침대 위에 세워 둔 탁상 달력",
+        "en": "A wooden easel holding a calendar"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1769596722510-b92780d03424?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-calendar-and-vase-sit-on-a-wooden-desk-rjEyCqESNTk",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "나무 책상에 놓인 달력과 작은 화병",
+        "en": "A calendar and vase on a wooden desk"
+      },
+      "caption": {
+        "ko": "나무 책상에 놓인 달력과 작은 화병",
+        "en": "A calendar and vase on a wooden desk"
+      }
+    }
+  ],
+  "excel": [
+    {
+      "url": "https://images.unsplash.com/photo-1625296276397-3bc8839c688f?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/black-and-silver-laptop-computer-2H-R-INJ3ts",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "업무용으로 사용하는 검은색과 은색 노트북 컴퓨터",
+        "en": "Black and silver laptop computer"
+      },
+      "caption": {
+        "ko": "업무용으로 사용하는 검은색과 은색 노트북 컴퓨터",
+        "en": "Black and silver laptop computer"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1600267165477-6d4cc741b379?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-using-black-laptop-computer-59yRYIHWtzY",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "검은색 노트북을 사용해 작업하는 사람",
+        "en": "Person using a black laptop computer"
+      },
+      "caption": {
+        "ko": "검은색 노트북을 사용해 작업하는 사람",
+        "en": "Person using a black laptop computer"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-using-macbook-pro-744oGeqpxPQ",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "맥북 프로 노트북을 사용하고 있는 사람",
+        "en": "Person working on a MacBook Pro"
+      },
+      "caption": {
+        "ko": "맥북 프로 노트북을 사용하고 있는 사람",
+        "en": "Person working on a MacBook Pro"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1593697972373-87ea6fe88af3?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/macbook-pro-on-white-table-lDEK8m_Lqlk",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "흰색 책상 위에 놓인 맥북 프로 노트북",
+        "en": "MacBook Pro on a white table"
+      },
+      "caption": {
+        "ko": "흰색 책상 위에 놓인 맥북 프로 노트북",
+        "en": "MacBook Pro on a white table"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1790614108104-337c880ec536?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/laptop-and-smartphone-analytics-workspace-vlILZQL3sV0",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "노트북과 스마트폰을 활용하는 데이터 작업 공간",
+        "en": "Laptop and smartphone analytics workspace"
+      },
+      "caption": {
+        "ko": "노트북과 스마트폰을 활용하는 데이터 작업 공간",
+        "en": "Laptop and smartphone analytics workspace"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1664575198263-269a022d6e14?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-person-working-on-the-laptop-qtpt4WGlz3Y",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "노트북 컴퓨터를 사용해 업무를 하는 사람",
+        "en": "A person working on a laptop"
+      },
+      "caption": {
+        "ko": "노트북 컴퓨터를 사용해 업무를 하는 사람",
+        "en": "A person working on a laptop"
+      }
+    }
+  ],
+  "heic": [
+    {
+      "url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-using-phone-and-laptop-gUIJ0YszPig",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "휴대전화와 노트북 컴퓨터를 함께 사용하는 사람",
+        "en": "Person using phone and laptop"
+      },
+      "caption": {
+        "ko": "휴대전화와 노트북 컴퓨터를 함께 사용하는 사람",
+        "en": "Person using phone and laptop"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1697890668305-dda208bbf2e4?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/gros-plan-dun-telephone-portable-pres-dun-ordinateur-portable-3SWwqKKe-VE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "노트북 가까이에 놓인 휴대전화를 보여주는 사진",
+        "en": "A close up of a cell phone near a laptop"
+      },
+      "caption": {
+        "ko": "노트북 가까이에 놓인 휴대전화를 보여주는 사진",
+        "en": "A close up of a cell phone near a laptop"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/smartphone-and-laptop-workspace-xsGxhtAsfSA",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "스마트폰과 노트북이 놓여 있는 작업 공간",
+        "en": "Smartphone and laptop workspace"
+      },
+      "caption": {
+        "ko": "스마트폰과 노트북이 놓여 있는 작업 공간",
+        "en": "Smartphone and laptop workspace"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1573164574230-db1d5e960238?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-using-smartphone-and-macbook-UTw3j_aoIKM",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "스마트폰과 맥북을 함께 이용하는 사람",
+        "en": "Person using smartphone and MacBook"
+      },
+      "caption": {
+        "ko": "스마트폰과 맥북을 함께 이용하는 사람",
+        "en": "Person using smartphone and MacBook"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-using-both-laptop-and-smartphone-tLZhFRLj6nY",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "노트북과 스마트폰을 동시에 사용하는 사람",
+        "en": "Person using both laptop and smartphone"
+      },
+      "caption": {
+        "ko": "노트북과 스마트폰을 동시에 사용하는 사람",
+        "en": "Person using both laptop and smartphone"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1584997629379-c93406839511?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-holding-white-iphone-5-c-hMv_eRKuaL4",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "흰색 아이폰을 손으로 들고 있는 사람",
+        "en": "Person holding white iphone 5 c"
+      },
+      "caption": {
+        "ko": "흰색 아이폰을 손으로 들고 있는 사람",
+        "en": "Person holding white iphone 5 c"
+      }
+    }
+  ],
+  "fuel": [
+    {
+      "url": "https://images.unsplash.com/photo-1644246905181-c3753e9a82bd?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-man-pumping-gas-into-his-car-at-a-gas-station-f4UbPVbJcjw",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "주유소에서 자동차에 연료를 넣고 있는 사람",
+        "en": "A man pumping gas into his car at a gas station"
+      },
+      "caption": {
+        "ko": "주유소에서 자동차에 연료를 넣고 있는 사람",
+        "en": "A man pumping gas into his car at a gas station"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1727483771218-c1cc488d020c?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-gas-station-with-a-few-gas-pumps-d_Eg3GIi5nE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "여러 대의 주유기가 설치된 주유소 전경",
+        "en": "A gas station with a few gas pumps"
+      },
+      "caption": {
+        "ko": "여러 대의 주유기가 설치된 주유소 전경",
+        "en": "A gas station with a few gas pumps"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1748761751275-e55a2a29e1bf?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/fuel-pumps-dispensing-diesel-and-petrol-S3kgSuSMH2Q",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "경유와 휘발유를 공급하는 주유기",
+        "en": "Fuel pumps dispensing diesel and petrol"
+      },
+      "caption": {
+        "ko": "경유와 휘발유를 공급하는 주유기",
+        "en": "Fuel pumps dispensing diesel and petrol"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1611807527279-f6ac568cd4f8?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-gas-pump-at-a-gas-station-ULJCBY8Tcfg",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "주유소의 연료 주입기를 가까이에서 촬영한 모습",
+        "en": "A close up of a gas pump at a gas station"
+      },
+      "caption": {
+        "ko": "주유소의 연료 주입기를 가까이에서 촬영한 모습",
+        "en": "A close up of a gas pump at a gas station"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1638425637198-f4ebe6ef341a?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-gas-pump-with-a-car-in-the-background-KJFoNSi9TBI",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "자동차가 뒤에 보이는 주유기의 가까운 모습",
+        "en": "A close up of a gas pump with a car in the background"
+      },
+      "caption": {
+        "ko": "자동차가 뒤에 보이는 주유기의 가까운 모습",
+        "en": "A close up of a gas pump with a car in the background"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1792019607468-a245943f6d88?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/gas-station-with-silver-car-SDXeyxXkIYo",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "은색 자동차가 정차해 있는 주유소",
+        "en": "Gas station with silver car"
+      },
+      "caption": {
+        "ko": "은색 자동차가 정차해 있는 주유소",
+        "en": "Gas station with silver car"
+      }
+    }
+  ],
+  "pokemon": [
+    {
+      "url": "https://images.unsplash.com/photo-1613771404784-3a5686aa2be3?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/pokemon-trading-cards-scattered-collection-TWCnHKKhqSo",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "여러 장의 포켓몬 트레이딩 카드가 펼쳐진 모습",
+        "en": "Pokemon trading cards scattered collection"
+      },
+      "caption": {
+        "ko": "여러 장의 포켓몬 트레이딩 카드가 펼쳐진 모습",
+        "en": "Pokemon trading cards scattered collection"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1685570436942-974c06113586?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-card-on-a-table-yrq38iuLwAs",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 놓인 수집용 카드를 가까이 촬영한 모습",
+        "en": "A close up of a card on a table"
+      },
+      "caption": {
+        "ko": "테이블 위에 놓인 수집용 카드를 가까이 촬영한 모습",
+        "en": "A close up of a card on a table"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1630116635227-cc2abf6b6add?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-holding-pokemon-trading-card-q5ZoczTknYI",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "포켓몬 트레이딩 카드를 손에 들고 있는 사람",
+        "en": "Person holding pokemon trading card"
+      },
+      "caption": {
+        "ko": "포켓몬 트레이딩 카드를 손에 들고 있는 사람",
+        "en": "Person holding pokemon trading card"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1616196334218-caffdc9b2317?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/yellow-green-and-red-trading-card-hbsL-YB2BkQ",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "노란색과 녹색과 붉은색이 있는 트레이딩 카드",
+        "en": "Yellow green and red trading card"
+      },
+      "caption": {
+        "ko": "노란색과 녹색과 붉은색이 있는 트레이딩 카드",
+        "en": "Yellow green and red trading card"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1696382447518-589582d4c8c6?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-bunch-of-pokemon-cards-laying-on-the-ground-9GEyQRi5J7s",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "바닥에 펼쳐 놓은 여러 장의 포켓몬 카드",
+        "en": "A bunch of pokemon cards laying on the ground"
+      },
+      "caption": {
+        "ko": "바닥에 펼쳐 놓은 여러 장의 포켓몬 카드",
+        "en": "A bunch of pokemon cards laying on the ground"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1611931960487-4932667079f1?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/pokemon-trading-card-on-gray-textile-OB756zZDYi0",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "회색 천 위에 놓인 포켓몬 트레이딩 카드",
+        "en": "Pokemon trading card on gray textile"
+      },
+      "caption": {
+        "ko": "회색 천 위에 놓인 포켓몬 트레이딩 카드",
+        "en": "Pokemon trading card on gray textile"
+      }
+    }
+  ],
+  "shipping": [
+    {
+      "url": "https://images.unsplash.com/photo-1513672494107-cd9d848a383e?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/cardboard-box-lot-fyaTq-fIlro",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "운송과 포장에 사용하는 여러 개의 종이 상자",
+        "en": "Cardboard box lot"
+      },
+      "caption": {
+        "ko": "운송과 포장에 사용하는 여러 개의 종이 상자",
+        "en": "Cardboard box lot"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1794230751711-5f5c2222ab9e?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/person-loading-boxes-into-blue-van-SnQFBHazLK8",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "푸른색 배송 차량에 상자를 싣고 있는 사람",
+        "en": "Person loading boxes into blue van"
+      },
+      "caption": {
+        "ko": "푸른색 배송 차량에 상자를 싣고 있는 사람",
+        "en": "Person loading boxes into blue van"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1620455800201-7f00aeef12ed?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/delivery-person-loading-cardboard-boxes-a85IYeAXgxU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "종이 배송 상자를 차량에 싣는 배송 담당자",
+        "en": "Delivery person loading cardboard boxes"
+      },
+      "caption": {
+        "ko": "종이 배송 상자를 차량에 싣는 배송 담당자",
+        "en": "Delivery person loading cardboard boxes"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1758351507026-71ad3645cb43?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/cardboard-box-sealed-with-red-fragile-tape-RqZ-xGRnCYI",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "취급 주의 표시가 있는 붉은 테이프로 봉한 상자",
+        "en": "Cardboard box sealed with red fragile tape"
+      },
+      "caption": {
+        "ko": "취급 주의 표시가 있는 붉은 테이프로 봉한 상자",
+        "en": "Cardboard box sealed with red fragile tape"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1626253934161-08cfea22e968?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/brown-and-white-cardboard-box-g2oHJrqcJlQ",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "갈색과 흰색으로 된 배송용 종이 상자",
+        "en": "Brown and white cardboard box"
+      },
+      "caption": {
+        "ko": "갈색과 흰색으로 된 배송용 종이 상자",
+        "en": "Brown and white cardboard box"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1617909517433-b38d5b21629b?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/brown-cardboard-boxes-on-yellow-table-YqPN_7HP5bs",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "노란색 작업대 위에 놓인 갈색 종이 상자",
+        "en": "Brown cardboard boxes on yellow table"
+      },
+      "caption": {
+        "ko": "노란색 작업대 위에 놓인 갈색 종이 상자",
+        "en": "Brown cardboard boxes on yellow table"
+      }
+    }
+  ],
+  "recipe": [
+    {
+      "url": "https://images.unsplash.com/photo-1577048982768-5cb3e7ddfa23?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/assorted-baking-ingredients-on-table-nyiBwAZu4DE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+        "en": "Assorted baking ingredients on table"
+      },
+      "caption": {
+        "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+        "en": "Assorted baking ingredients on table"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1685397166410-0f9f8cf7e25d?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/ingredients-for-a-recipe-laid-out-on-a-counter-tTOLMcg1D_U",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "조리대에 요리 순서에 맞게 준비한 식재료",
+        "en": "Ingredients for a recipe laid out on a counter"
+      },
+      "caption": {
+        "ko": "조리대에 요리 순서에 맞게 준비한 식재료",
+        "en": "Ingredients for a recipe laid out on a counter"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1768204042523-6f778e579402?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/strawberries-in-a-measuring-cup-on-a-scale-vP0GB1-9p3w",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "주방 저울 위의 계량컵에 담긴 딸기",
+        "en": "Strawberries in a measuring cup on a scale"
+      },
+      "caption": {
+        "ko": "주방 저울 위의 계량컵에 담긴 딸기",
+        "en": "Strawberries in a measuring cup on a scale"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1777647262314-58b72a19ffdc?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-powder-measured-on-a-digital-scale-u3gMcNvqrnI",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "전자 저울을 이용해 무게를 측정하는 흰색 가루",
+        "en": "White powder measured on a digital scale"
+      },
+      "caption": {
+        "ko": "전자 저울을 이용해 무게를 측정하는 흰색 가루",
+        "en": "White powder measured on a digital scale"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1759965670306-f055ff093752?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/baking-ingredients-and-tools-arranged-on-a-white-surface-KH9iqmoE374",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "흰색 작업대에 배치된 제빵 재료와 조리 도구",
+        "en": "Baking ingredients and tools arranged on a white surface"
+      },
+      "caption": {
+        "ko": "흰색 작업대에 배치된 제빵 재료와 조리 도구",
+        "en": "Baking ingredients and tools arranged on a white surface"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1586808777178-8bf146c39bc7?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/clear-glass-measuring-cup-on-white-ceramic-plate-O-wRrxy-evo",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "흰색 세라믹 접시 위에 놓인 투명 유리 계량컵",
+        "en": "Clear glass measuring cup on white ceramic plate"
+      },
+      "caption": {
+        "ko": "흰색 세라믹 접시 위에 놓인 투명 유리 계량컵",
+        "en": "Clear glass measuring cup on white ceramic plate"
+      }
+    }
+  ],
+  "transfer": [
+    {
+      "url": "https://images.unsplash.com/photo-1702895742107-35bebf49ce8b?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-router-on-a-table-o-qB6ikmn8w",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+        "en": "A close up of a router on a table"
+      },
+      "caption": {
+        "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+        "en": "A close up of a router on a table"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1606905418909-a1fab8cea661?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-and-black-usb-cable-2H06IWVVpiQ",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "흰색과 검은색 데이터 연결용 USB 케이블",
+        "en": "White and black usb cable"
+      },
+      "caption": {
+        "ko": "흰색과 검은색 데이터 연결용 USB 케이블",
+        "en": "White and black usb cable"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1544985562-128e7b377a21?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/red-ethernet-tester-_fQ6zg_McEU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "붉은색 이더넷 연결 상태 측정 장비",
+        "en": "Red ethernet tester"
+      },
+      "caption": {
+        "ko": "붉은색 이더넷 연결 상태 측정 장비",
+        "en": "Red ethernet tester"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1604005366301-e01a1e6bc1d8?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/9wnAhRYdDzc",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "검은색과 파란색으로 이루어진 USB 케이블",
+        "en": "Black and blue usb cable"
+      },
+      "caption": {
+        "ko": "검은색과 파란색으로 이루어진 USB 케이블",
+        "en": "Black and blue usb cable"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1680992046615-065f58bcb4d8?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-rack-of-computer-equipment-eqd0f78u9nI",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "서버 랙에 설치된 컴퓨터 장비의 가까운 모습",
+        "en": "A close up of a rack of computer equipment"
+      },
+      "caption": {
+        "ko": "서버 랙에 설치된 컴퓨터 장비의 가까운 모습",
+        "en": "A close up of a rack of computer equipment"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1792419766010-a562c6622ec0?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/green-fiber-optic-cable-with-connectors-al1DNjs29is",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "연결 단자가 달린 녹색 광섬유 케이블",
+        "en": "Green fiber optic cable with connectors"
+      },
+      "caption": {
+        "ko": "연결 단자가 달린 녹색 광섬유 케이블",
+        "en": "Green fiber optic cable with connectors"
+      }
+    }
+  ],
+  "power": [
+    {
+      "url": "https://images.unsplash.com/photo-1775318254436-6187ef011190?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-portable-heater-with-a-kettle-on-top-sA1F57ip6UU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "주전자와 함께 놓인 이동식 난방 기구",
+        "en": "A portable heater with a kettle on top"
+      },
+      "caption": {
+        "ko": "주전자와 함께 놓인 이동식 난방 기구",
+        "en": "A portable heater with a kettle on top"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1633596879450-e98a1a4d0c80?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-heater-in-the-dark-7DrlKDr4Srw",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "어두운 공간에서 난방 기구를 가까이 촬영한 사진",
+        "en": "A close up of a heater in the dark"
+      },
+      "caption": {
+        "ko": "어두운 공간에서 난방 기구를 가까이 촬영한 사진",
+        "en": "A close up of a heater in the dark"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1565049981953-379c9c2a5d48?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/black-male-plug-in-front-of-electric-socket-exfrR9KkzlE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "전기 콘센트 앞에 놓인 검은색 전원 플러그",
+        "en": "Black male plug in front of electric socket"
+      },
+      "caption": {
+        "ko": "전기 콘센트 앞에 놓인 검은색 전원 플러그",
+        "en": "Black male plug in front of electric socket"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1669726320997-c20c02c662d7?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-bed-with-a-large-headboard-NEjlmppwZ80",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "전기 난방기가 있는 침실의 침대 주변 모습",
+        "en": "A bed with a large headboard"
+      },
+      "caption": {
+        "ko": "전기 난방기가 있는 침실의 침대 주변 모습",
+        "en": "A bed with a large headboard"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1727797208736-6efdc1088f81?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-room-with-a-chair-and-a-heater-PeQaDfJwkXU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "의자와 난방기가 놓여 있는 실내 공간",
+        "en": "A room with a chair and a heater"
+      },
+      "caption": {
+        "ko": "의자와 난방기가 놓여 있는 실내 공간",
+        "en": "A room with a chair and a heater"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1792975212072-7dcfd53a201b?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/digital-thermostat-on-red-tiled-wall-rJmjEOLOGXg",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "붉은 타일 벽에 설치되어 있는 디지털 온도 조절기",
+        "en": "Digital thermostat on red tiled wall"
+      },
+      "caption": {
+        "ko": "붉은 타일 벽에 설치되어 있는 디지털 온도 조절기",
+        "en": "Digital thermostat on red tiled wall"
+      }
+    }
+  ],
+  "pdf": [
+    {
+      "url": "https://images.unsplash.com/photo-1731834450872-c3ccbb46424c?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-printer-sitting-on-top-of-a-table-next-to-a-pile-of-papers-EARzQxHhpaM",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "종이 문서 더미 옆에 놓인 사무용 프린터",
+        "en": "A printer sitting on top of a table next to a pile of papers"
+      },
+      "caption": {
+        "ko": "종이 문서 더미 옆에 놓인 사무용 프린터",
+        "en": "A printer sitting on top of a table next to a pile of papers"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1721830834983-f111ad63dbf4?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-person-is-pressing-a-button-on-a-printer-j7cOdWrbKUI",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "사무용 프린터의 버튼을 손으로 누르는 사람",
+        "en": "A person is pressing a button on a printer"
+      },
+      "caption": {
+        "ko": "사무용 프린터의 버튼을 손으로 누르는 사람",
+        "en": "A person is pressing a button on a printer"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1586281380426-f644f2dc6ada?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-printer-paper-beside-silver-macbook-j2tExQL-OyA",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "은색 노트북 옆에 놓인 흰색 종이 문서",
+        "en": "White printer paper beside silver macbook"
+      },
+      "caption": {
+        "ko": "은색 노트북 옆에 놓인 흰색 종이 문서",
+        "en": "White printer paper beside silver macbook"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1650696868612-4b836291b323?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-white-printer-on-a-table-QH_SAEYJW8Y",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 놓인 흰색 사무용 프린터",
+        "en": "A white printer on a table"
+      },
+      "caption": {
+        "ko": "테이블 위에 놓인 흰색 사무용 프린터",
+        "en": "A white printer on a table"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1617329620609-a66fc78590b8?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-printer-paper-with-photos-t6ns82uSL18",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "사진이 인쇄된 여러 장의 흰색 종이",
+        "en": "White printer paper with photos"
+      },
+      "caption": {
+        "ko": "사진이 인쇄된 여러 장의 흰색 종이",
+        "en": "White printer paper with photos"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1586364800739-bed6bc729c7b?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-printer-paper-beside-black-laptop-computer-jUF9CRChIAs",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "검은색 노트북 컴퓨터 옆에 놓인 종이 문서",
+        "en": "White printer paper beside black laptop computer"
+      },
+      "caption": {
+        "ko": "검은색 노트북 컴퓨터 옆에 놓인 종이 문서",
+        "en": "White printer paper beside black laptop computer"
+      }
+    }
+  ],
+  "tax": [
+    {
+      "url": "https://images.unsplash.com/photo-1625225233840-695456021cde?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/black-calculator-beside-black-pen-on-white-printer-paper-I3HPUolh5hA",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "흰색 문서 위에 놓인 검은색 계산기와 펜",
+        "en": "Black calculator beside black pen on white printer paper"
+      },
+      "caption": {
+        "ko": "흰색 문서 위에 놓인 검은색 계산기와 펜",
+        "en": "Black calculator beside black pen on white printer paper"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1648201637025-1c77b9be3013?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-calculator-and-a-pen-sitting-on-top-of-a-piece-of-paper-Vs6ip7fsld8",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "종이 문서 위에 계산기와 펜을 준비한 모습",
+        "en": "A calculator and a pen sitting on top of a piece of paper"
+      },
+      "caption": {
+        "ko": "종이 문서 위에 계산기와 펜을 준비한 모습",
+        "en": "A calculator and a pen sitting on top of a piece of paper"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1761821170104-ccd3e3e21318?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/desk-with-papers-calculator-and-pens-bZqitd_ae0A",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "서류와 계산기와 필기구가 놓인 업무용 책상",
+        "en": "Desk with papers, calculator, and pens"
+      },
+      "caption": {
+        "ko": "서류와 계산기와 필기구가 놓인 업무용 책상",
+        "en": "Desk with papers, calculator, and pens"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1772588627488-cd80adbe891d?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/tax-forms-with-calculator-and-pen-on-dark-surface-7edddu99-8Q",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "어두운 작업대에 놓인 세금 신고 양식과 계산기",
+        "en": "Tax forms with calculator and pen on dark surface"
+      },
+      "caption": {
+        "ko": "어두운 작업대에 놓인 세금 신고 양식과 계산기",
+        "en": "Tax forms with calculator and pen on dark surface"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1554224155-a1487473ffd9?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/coffee-mug-near-open-folder-with-tax-withholding-paper-wgcUx0kR1ps",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "원천징수 관련 서류가 있는 펼친 파일과 커피잔",
+        "en": "Coffee mug near open folder with tax withholding paper"
+      },
+      "caption": {
+        "ko": "원천징수 관련 서류가 있는 펼친 파일과 커피잔",
+        "en": "Coffee mug near open folder with tax withholding paper"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1768839721776-038d3070721e?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/us-dollar-bills-and-a-calculator-on-blue-background-y1vS_aBALGc",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "푸른 배경 위에 놓인 미국 달러 지폐와 계산기",
+        "en": "Us dollar bills and a calculator on blue background"
+      },
+      "caption": {
+        "ko": "푸른 배경 위에 놓인 미국 달러 지폐와 계산기",
+        "en": "Us dollar bills and a calculator on blue background"
+      }
+    }
+  ],
+  "winter": [
+    {
+      "url": "https://images.unsplash.com/photo-1601914697928-0b536e76d048?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-and-black-water-heater-SYdhFwICWJU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "실내에서 사용되는 흰색과 검은색 온수 가열 장치",
+        "en": "White and black water heater"
+      },
+      "caption": {
+        "ko": "실내에서 사용되는 흰색과 검은색 온수 가열 장치",
+        "en": "White and black water heater"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1728581665815-cab04c5e75f4?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-radiator-and-a-window-in-a-room-DZLIg71vfrU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "창문 아래에 난방용 라디에이터가 설치된 공간",
+        "en": "A radiator and a window in a room"
+      },
+      "caption": {
+        "ko": "창문 아래에 난방용 라디에이터가 설치된 공간",
+        "en": "A radiator and a window in a room"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1686916057395-7277599ac1c5?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-room-with-a-large-window-and-a-radiator-ZHGvS9orV-w",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "큰 창문과 난방 라디에이터가 있는 실내 공간",
+        "en": "A room with a large window and a radiator"
+      },
+      "caption": {
+        "ko": "큰 창문과 난방 라디에이터가 있는 실내 공간",
+        "en": "A room with a large window and a radiator"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1785352829423-fdd2fad33e17?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-blue-usps-mailbox-stands-among-green-bushes-and-plants-7wlw6RQdB2c",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "녹색 관목 옆에 설치된 파란색 미국 우편함",
+        "en": "A blue usps mailbox stands among green bushes and plants"
+      },
+      "caption": {
+        "ko": "녹색 관목 옆에 설치된 파란색 미국 우편함",
+        "en": "A blue usps mailbox stands among green bushes and plants"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1709054622660-562a14bcfd76?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-blue-mailbox-sitting-on-the-side-of-a-road-NYTa57zrmQ0",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "도로 옆에 설치된 파란색 우편물 수거함",
+        "en": "A blue mailbox sitting on the side of a road"
+      },
+      "caption": {
+        "ko": "도로 옆에 설치된 파란색 우편물 수거함",
+        "en": "A blue mailbox sitting on the side of a road"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1545591841-4a97f1da8d1f?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/youve-got-mail-printed-pack-BPxkU4uPq6Y",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "우편물이라는 문구가 인쇄된 배송 포장물",
+        "en": "You've got mail-printed pack"
+      },
+      "caption": {
+        "ko": "우편물이라는 문구가 인쇄된 배송 포장물",
+        "en": "You've got mail-printed pack"
+      }
+    }
+  ]
+}

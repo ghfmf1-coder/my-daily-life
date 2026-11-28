@@ -216,6 +216,94 @@
         "copy": "Compare two checkout totals using explicit percentage discounts, fixed coupons and entered shipping or extra charges."
       },
       "channels": []
+    },
+    "business-days-calculator": {
+      "ko": {
+        "title": "영업일·근무일 계산기",
+        "copy": "직접 입력한 휴무일과 시작일 포함 여부에 따라 평일 수를 표시합니다. 국가별 공휴일은 자동으로 조회하지 않습니다."
+      },
+      "en": {
+        "title": "How to Calculate Business Days Between Two Dates Excluding Weekends and Holidays",
+        "copy": "ABREDA counts weekdays and manually supplied closures separately. It does not automatically maintain national holiday calendars."
+      },
+      "channels": []
+    },
+    "appliance-energy-calculator": {
+      "ko": {
+        "title": "가전제품 전력사용량 계산기",
+        "copy": "아브레다는 소비전력과 사용시간, 사용 일수 및 입력 단가를 바탕으로 계산합니다. 고지서 전체 요금을 산출하지 않습니다."
+      },
+      "en": {
+        "title": "How to Calculate the Electricity Cost of Running a Space Heater",
+        "copy": "ABREDA converts watts and hours to daily and period kWh, then applies the electricity price you enter. No live tariff lookup is performed."
+      },
+      "channels": []
+    },
+    "text-to-columns-converter": {
+      "ko": {
+        "title": "엑셀 텍스트 열 분리 도구",
+        "copy": "아브레다 도구는 여러 줄을 쉼표, 탭 또는 공백으로 분리해 탭 구분 결과를 제공합니다. CSV 큰따옴표는 한 줄 안에서 처리합니다."
+      },
+      "en": {
+        "title": "How to Split Text Into Separate Columns in Excel Using Commas or Spaces",
+        "copy": "ABREDA converts pasted lines to TSV output. Comma mode recognizes quoted fields within one line, whitespace mode collapses repeated spaces, and tab mode preserves empty cells."
+      },
+      "channels": []
+    },
+    "pdf-compressor": {
+      "ko": {
+        "title": "스캔 PDF 용량 줄이기",
+        "copy": "아브레다 압축기는 DPI와 JPEG 품질에 맞춰 새 이미지 PDF를 만듭니다. 원본과 결과 바이트 수를 비교하고 원본을 변경하지 않습니다."
+      },
+      "en": {
+        "title": "How to Reduce the Size of a Scanned PDF for Email Attachments",
+        "copy": "ABREDA creates a new image-based PDF using your chosen DPI and JPEG quality, reporting actual original and output sizes. It is intended for scanned copies."
+      },
+      "channels": []
+    },
+    "dimensional-weight-calculator": {
+      "ko": {
+        "title": "택배 부피무게 계산기",
+        "copy": "아브레다 계산기는 cm 단위 치수와 직접 입력한 환산계수로 부피무게를 계산하고 실측 무게와 비교합니다."
+      },
+      "en": {
+        "title": "How to Calculate Parcel Dimensional Weight Before Booking Shipping",
+        "copy": "ABREDA calculates dimensional weight in kilograms from the measurements and divisor you enter, then compares it with actual weight before carrier rounding."
+      },
+      "channels": []
+    },
+    "recipe-serving-calculator": {
+      "ko": {
+        "title": "요리 레시피 인분 변환기",
+        "copy": "아브레다 인분 변환기는 재료 이름과 수량 및 단위를 한 줄씩 입력받아 같은 배율로 계산합니다. 단위 자체를 변환하지 않습니다."
+      },
+      "en": {
+        "title": "How to Scale a Recipe for More Servings Without Changing Ingredient Units",
+        "copy": "ABREDA accepts ingredient name, numeric quantity and unit on separate lines and scales each amount in its original unit. It does not convert cups into grams."
+      },
+      "channels": []
+    },
+    "file-transfer-time-calculator": {
+      "ko": {
+        "title": "파일 전송시간 계산기",
+        "copy": "아브레다 계산기는 MB, GB, MiB, GiB와 Mbps를 구분해 일정 속도 조건의 시간을 초, 분, 시간으로 표시합니다."
+      },
+      "en": {
+        "title": "How to Calculate File Upload Time From GB and Mbps",
+        "copy": "ABREDA converts decimal or binary file size and an entered Mbps rate into theoretical seconds, minutes and hours."
+      },
+      "channels": []
+    },
+    "fuel-cost-calculator": {
+      "ko": {
+        "title": "자동차 주유비·연비 계산기",
+        "copy": "아브레다 주유비 계산기는 이동거리와 입력 연비 및 단가로 연료 사용량과 비용을 계산하며 km/L 및 미국 mpg를 지원합니다."
+      },
+      "en": {
+        "title": "How to Calculate Round-Trip Fuel Costs Using Mileage and Gas Prices",
+        "copy": "ABREDA calculates fuel quantity and cost from your supplied distance, efficiency and price. Choose kilometers and liters or miles and US gallons."
+      },
+      "channels": []
     }
   }
 }

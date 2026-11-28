@@ -1,0 +1,169 @@
+{
+  "slug": "calculate-heater-electricity-use",
+  "type": "tool",
+  "tool": "appliance-energy-calculator",
+  "status": "reviewed",
+  "published": "2026-11-28",
+  "ko": {
+    "title": "전기장판 소비전력으로 하루·한 달 전기 사용량 계산하는 법",
+    "description": "전기장판에 표시된 소비전력은 순간 전력이고 고지서의 사용량은 에너지입니다. 온도 조절로 전원이 반복적으로 켜지고 꺼지면 정격전력을 계속 적용한 값과 실제 측정값이 다릅니다.",
+    "problem": "전기장판에 표시된 소비전력은 순간 전력이고 고지서의 사용량은 에너지입니다. 온도 조절로 전원이 반복적으로 켜지고 꺼지면 정격전력을 계속 적용한 값과 실제 측정값이 다릅니다.",
+    "steps": [
+      [
+        "제품 라벨의 소비전력 확인하기",
+        "전기장판이나 히터의 라벨에서 W 단위 소비전력을 확인합니다. 온도 단계별 정보가 있다면 해당 단계의 정격을 살펴봅니다."
+      ],
+      [
+        "작동 시간을 kWh로 환산하기",
+        "소비전력 W에 하루 작동 시간을 곱하고 1000으로 나누면 하루 kWh입니다. 여기에 사용 일수를 곱해 기간 사용량을 구합니다."
+      ],
+      [
+        "고지서 요금과 측정값 구별하기",
+        "사용량에 입력 단가를 곱합니다. 누진제와 기본요금은 별도로 확인하고 정격에 맞는 측정기가 있다면 실제 누적 kWh를 활용하세요."
+      ]
+    ],
+    "alternative": "전력 측정기에 표시된 누적 kWh를 사용하면 온도 조절과 대기전력을 포함한 실제 소비량을 확인할 수 있습니다. 공급자의 공식 요금표를 참고하세요.",
+    "toolIntro": "아브레다는 소비전력과 사용시간, 사용 일수 및 입력 단가를 바탕으로 계산합니다. 고지서 전체 요금을 산출하지 않습니다.",
+    "limits": "정격전력은 실제 평균전력이 아닐 수 있습니다. 누진 구간, 시간대별 단가, 기본요금과 세금은 자동 반영되지 않습니다.",
+    "faq": [
+      [
+        "켜 둔 시간 전체를 입력해도 되나요?",
+        "정격전력으로 계속 동작하는 조건의 계산은 가능합니다. 온도 조절로 작동이 멈추면 실측 kWh를 우선하세요."
+      ]
+    ]
+  },
+  "en": {
+    "title": "How to Calculate the Electricity Cost of Running a Space Heater",
+    "description": "A heater's nameplate wattage is power, not the energy shown on a utility bill. Thermostats may turn heating elements off while an appliance remains plugged in, so rated power is best used for comparing operating scenarios.",
+    "problem": "A heater's nameplate wattage is power, not the energy shown on a utility bill. Thermostats may turn heating elements off while an appliance remains plugged in, so rated power is best used for comparing operating scenarios.",
+    "steps": [
+      [
+        "Find the operating power rating",
+        "Read the appliance label or manual. If low and high heat settings have different ratings, identify the relevant one instead of treating all settings as full power."
+      ],
+      [
+        "Convert operating hours into energy",
+        "Multiply watts by hours of actual operation and divide by one thousand to obtain kilowatt-hours. Multiply daily energy by the number of days in the billing period."
+      ],
+      [
+        "Apply the applicable energy rate",
+        "Use the electricity price from your utility bill. For a heater that cycles, a suitably rated energy meter provides measured consumption rather than a maximum-power calculation."
+      ]
+    ],
+    "alternative": "Use the utility consumption portal or a compatible meter to compare readings. Account for other appliances if examining whole-home consumption.",
+    "toolIntro": "ABREDA converts watts and hours to daily and period kWh, then applies the electricity price you enter. No live tariff lookup is performed.",
+    "limits": "Standing charges, taxes, time-of-use pricing and tiered tariffs are excluded. Follow the heater manufacturer's safety instructions.",
+    "faq": [
+      [
+        "Does a thermostat heater always use rated watts?",
+        "No. The heating element may cycle as room temperature changes. Measured energy over the relevant period is more informative than the maximum rating."
+      ]
+    ]
+  },
+  "sources": [
+    {
+      "name": "Official reference",
+      "url": "https://www.energy.gov/energysaver/estimating-appliance-and-home-electronic-energy-use"
+    }
+  ],
+  "media": {
+    "category": "daily",
+    "image": {
+      "url": "https://images.unsplash.com/photo-1775318254436-6187ef011190?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-portable-heater-with-a-kettle-on-top-sA1F57ip6UU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "주전자와 함께 놓인 이동식 난방 기구",
+        "en": "A portable heater with a kettle on top"
+      },
+      "caption": {
+        "ko": "주전자와 함께 놓인 이동식 난방 기구",
+        "en": "A portable heater with a kettle on top"
+      }
+    },
+    "photos": {
+      "ko": [
+        {
+          "url": "https://images.unsplash.com/photo-1775318254436-6187ef011190?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-portable-heater-with-a-kettle-on-top-sA1F57ip6UU",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "주전자와 함께 놓인 이동식 난방 기구",
+            "en": "A portable heater with a kettle on top"
+          },
+          "caption": {
+            "ko": "주전자와 함께 놓인 이동식 난방 기구",
+            "en": "A portable heater with a kettle on top"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1633596879450-e98a1a4d0c80?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-close-up-of-a-heater-in-the-dark-7DrlKDr4Srw",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "어두운 공간에서 난방 기구를 가까이 촬영한 사진",
+            "en": "A close up of a heater in the dark"
+          },
+          "caption": {
+            "ko": "어두운 공간에서 난방 기구를 가까이 촬영한 사진",
+            "en": "A close up of a heater in the dark"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1565049981953-379c9c2a5d48?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/black-male-plug-in-front-of-electric-socket-exfrR9KkzlE",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "전기 콘센트 앞에 놓인 검은색 전원 플러그",
+            "en": "Black male plug in front of electric socket"
+          },
+          "caption": {
+            "ko": "전기 콘센트 앞에 놓인 검은색 전원 플러그",
+            "en": "Black male plug in front of electric socket"
+          }
+        }
+      ],
+      "en": [
+        {
+          "url": "https://images.unsplash.com/photo-1669726320997-c20c02c662d7?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-bed-with-a-large-headboard-NEjlmppwZ80",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "전기 난방기가 있는 침실의 침대 주변 모습",
+            "en": "A bed with a large headboard"
+          },
+          "caption": {
+            "ko": "전기 난방기가 있는 침실의 침대 주변 모습",
+            "en": "A bed with a large headboard"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1727797208736-6efdc1088f81?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/a-room-with-a-chair-and-a-heater-PeQaDfJwkXU",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "의자와 난방기가 놓여 있는 실내 공간",
+            "en": "A room with a chair and a heater"
+          },
+          "caption": {
+            "ko": "의자와 난방기가 놓여 있는 실내 공간",
+            "en": "A room with a chair and a heater"
+          }
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1792975212072-7dcfd53a201b?auto=format&fit=crop&w=1400&q=78",
+          "source": "https://unsplash.com/photos/digital-thermostat-on-red-tiled-wall-rJmjEOLOGXg",
+          "credit": "Unsplash",
+          "alt": {
+            "ko": "붉은 타일 벽에 설치되어 있는 디지털 온도 조절기",
+            "en": "Digital thermostat on red tiled wall"
+          },
+          "caption": {
+            "ko": "붉은 타일 벽에 설치되어 있는 디지털 온도 조절기",
+            "en": "Digital thermostat on red tiled wall"
+          }
+        }
+      ]
+    }
+  }
+}
