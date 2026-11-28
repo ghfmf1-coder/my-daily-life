@@ -478,5 +478,152 @@
         "en": "Brown cardboard boxes on yellow table"
       }
     }
+  ],
+  "recipe": [
+    {
+      "url": "https://images.unsplash.com/photo-1577048982768-5cb3e7ddfa23?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/assorted-baking-ingredients-on-table-nyiBwAZu4DE",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+        "en": "Assorted baking ingredients on table"
+      },
+      "caption": {
+        "ko": "테이블 위에 준비해 놓은 여러 가지 제빵 재료",
+        "en": "Assorted baking ingredients on table"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1685397166410-0f9f8cf7e25d?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/ingredients-for-a-recipe-laid-out-on-a-counter-tTOLMcg1D_U",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "조리대에 요리 순서에 맞게 준비한 식재료",
+        "en": "Ingredients for a recipe laid out on a counter"
+      },
+      "caption": {
+        "ko": "조리대에 요리 순서에 맞게 준비한 식재료",
+        "en": "Ingredients for a recipe laid out on a counter"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1768204042523-6f778e579402?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/strawberries-in-a-measuring-cup-on-a-scale-vP0GB1-9p3w",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "주방 저울 위의 계량컵에 담긴 딸기",
+        "en": "Strawberries in a measuring cup on a scale"
+      },
+      "caption": {
+        "ko": "주방 저울 위의 계량컵에 담긴 딸기",
+        "en": "Strawberries in a measuring cup on a scale"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1777647262314-58b72a19ffdc?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-powder-measured-on-a-digital-scale-u3gMcNvqrnI",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "전자 저울을 이용해 무게를 측정하는 흰색 가루",
+        "en": "White powder measured on a digital scale"
+      },
+      "caption": {
+        "ko": "전자 저울을 이용해 무게를 측정하는 흰색 가루",
+        "en": "White powder measured on a digital scale"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1759965670306-f055ff093752?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/baking-ingredients-and-tools-arranged-on-a-white-surface-KH9iqmoE374",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "흰색 작업대에 배치된 제빵 재료와 조리 도구",
+        "en": "Baking ingredients and tools arranged on a white surface"
+      },
+      "caption": {
+        "ko": "흰색 작업대에 배치된 제빵 재료와 조리 도구",
+        "en": "Baking ingredients and tools arranged on a white surface"
+      }
+    }
+  ],
+  "transfer": [
+    {
+      "url": "https://images.unsplash.com/photo-1702895742107-35bebf49ce8b?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-router-on-a-table-o-qB6ikmn8w",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+        "en": "A close up of a router on a table"
+      },
+      "caption": {
+        "ko": "테이블 위에 놓인 인터넷 공유기의 가까운 모습",
+        "en": "A close up of a router on a table"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1606905418909-a1fab8cea661?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/white-and-black-usb-cable-2H06IWVVpiQ",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "흰색과 검은색 데이터 연결용 USB 케이블",
+        "en": "White and black usb cable"
+      },
+      "caption": {
+        "ko": "흰색과 검은색 데이터 연결용 USB 케이블",
+        "en": "White and black usb cable"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1544985562-128e7b377a21?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/red-ethernet-tester-_fQ6zg_McEU",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "붉은색 이더넷 연결 상태 측정 장비",
+        "en": "Red ethernet tester"
+      },
+      "caption": {
+        "ko": "붉은색 이더넷 연결 상태 측정 장비",
+        "en": "Red ethernet tester"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1604005366301-e01a1e6bc1d8?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/9wnAhRYdDzc",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "검은색과 파란색으로 이루어진 USB 케이블",
+        "en": "Black and blue usb cable"
+      },
+      "caption": {
+        "ko": "검은색과 파란색으로 이루어진 USB 케이블",
+        "en": "Black and blue usb cable"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1680992046615-065f58bcb4d8?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-rack-of-computer-equipment-eqd0f78u9nI",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "서버 랙에 설치된 컴퓨터 장비의 가까운 모습",
+        "en": "A close up of a rack of computer equipment"
+      },
+      "caption": {
+        "ko": "서버 랙에 설치된 컴퓨터 장비의 가까운 모습",
+        "en": "A close up of a rack of computer equipment"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1792419766010-a562c6622ec0?auto=format&fit=crop&w=1400&q=78",
+      "source": "https://unsplash.com/photos/green-fiber-optic-cable-with-connectors-al1DNjs29is",
+      "credit": "Unsplash",
+      "alt": {
+        "ko": "연결 단자가 달린 녹색 광섬유 케이블",
+        "en": "Green fiber optic cable with connectors"
+      },
+      "caption": {
+        "ko": "연결 단자가 달린 녹색 광섬유 케이블",
+        "en": "Green fiber optic cable with connectors"
+      }
+    }
   ]
 }
