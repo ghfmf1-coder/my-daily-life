@@ -690,6 +690,23 @@ def prepare(slug: str, out: Path) -> tuple[dict, str]:
         integrate(out,data)
         from seo_quality import improve_hub
         improve_hub(out)
+        # AdSense ownership verification: only the public ABREDA hub, including
+        # generated bilingual tools and articles, after all HTML generation.
+        adsense_tag = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/'
+                       'adsbygoogle.js?client=ca-pub-1802341703309961" crossorigin="anonymous"></script>')
+        for page in out.rglob('*.html'):
+            if any(part in {'admin', 'private'} for part in page.relative_to(out).parts):
+                continue
+            markup = page.read_text(encoding='utf-8')
+            if re.search(r'<meta\b[^>]*\bname=["\']robots["\'][^>]*\bnoindex\b[^>]*>', markup, re.I):
+                continue
+            if 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' in markup:
+                if markup.count(adsense_tag) != 1:
+                    raise SiteError(f'Unexpected AdSense configuration: {page}')
+                continue
+            markup, count = re.subn(r'</head\s*>', lambda m: adsense_tag + '\n' + m.group(0), markup, count=1, flags=re.I)
+            if count:
+                page.write_text(markup, encoding='utf-8')
     elif slug in BY_SLUG or slug == 'toolbox-admin':
         from hub_domains import rewrite_links
         for file in out.rglob('*'):
